@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Paperclip, Send } from "lucide-react"
 import { AuthDialog } from "@/components/auth-dialog"
@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer"
 const PLATFORM_LOGOS = [
   {
     name: "Shopify",
-    url: "https://cdn.brandfetch.io/idpKX136kp/theme/dark/idu8FJi_SM.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    url: "https://cdn3.iconfinder.com/data/icons/transparent-on-dark-grey/500/icon-02-1024.png",
   },
   {
     name: "Instagram",
@@ -23,7 +23,7 @@ const PLATFORM_LOGOS = [
   },
   {
     name: "Facebook",
-    url: "https://cdn.brandfetch.io/idJFz6sAsl/id7IxffEDM.svg?c=1dxbfHSJFAPEGdCLU4o5B",
+    url: "https://cdn3.iconfinder.com/data/icons/transparent-on-dark-grey/500/icon-02-512.png",
   },
   {
     name: "Reddit",
@@ -37,6 +37,7 @@ const PLATFORM_LOGOS = [
 
 export default function Page() {
   const [isAuthDialogOpen, setIsAuthDialogOpen] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
 
   return (
     <div className="min-h-screen bg-[#18181B] text-[#E0E0E0] antialiased">
@@ -69,8 +70,16 @@ export default function Page() {
         {/* Command Input */}
         <div className="relative mb-12">
           <div className="relative h-[140px] rounded-xl bg-[#09090B] border border-white/10">
-            <div className="absolute left-4 top-4 text-gray-400">How can Dezygn help you today</div>
-            <div className="absolute bottom-4 left-4">
+            <input
+              ref={inputRef}
+              type="text"
+              placeholder="How can Dezygn help you today"
+              className="absolute left-4 top-4 w-[80%] bg-transparent text-gray-400 outline-none placeholder:text-gray-400"
+            />
+            <div 
+              className="absolute bottom-4 left-4 cursor-pointer hover:opacity-80"
+              onClick={() => setIsAuthDialogOpen(true)}
+            >
               <Paperclip className="h-5 w-5 text-gray-400" />
             </div>
             <Button
@@ -126,9 +135,7 @@ export default function Page() {
       </main>
 
       <AuthDialog isOpen={isAuthDialogOpen} onClose={() => setIsAuthDialogOpen(false)} />
-
       <Footer />
     </div>
   )
 }
-

@@ -1,16 +1,23 @@
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { Metadata } from "next"
+import { Metadata, Viewport } from "next"
 
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 })
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+}
+
 export const metadata: Metadata = {
   title: "Dezygn",
   description: "What do you want to design today?",
-  viewport: "width=device-width, initial-scale=1",
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: "Dezygn",
     description: "What do you want to design today?",
