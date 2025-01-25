@@ -53,11 +53,18 @@ export default function Page() {
           />
         </Link>
         <div className="flex items-center gap-4">
-          <Button variant="ghost" className="text-gray-300 hover:text-gray-200 hover:bg-[#27272A]" asChild>
-            <Link href="https://chat.dezygn.com/auth">Sign In</Link>
+          <Button 
+            variant="ghost" 
+            className="text-gray-300 hover:text-gray-200 hover:bg-[#27272A]"
+            onClick={() => setIsAuthDialogOpen(true)}
+          >
+            Sign In
           </Button>
-          <Button className="bg-gradient-to-r from-[#aa1fbd] to-[#3a6ad9] hover:opacity-90 text-white" asChild>
-            <Link href="https://chat.dezygn.com/auth">Get Started</Link>
+          <Button 
+            className="bg-gradient-to-r from-[#aa1fbd] to-[#3a6ad9] hover:opacity-90 text-white"
+            onClick={() => setIsAuthDialogOpen(true)}
+          >
+            Get Started
           </Button>
         </div>
       </header>
