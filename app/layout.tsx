@@ -3,6 +3,7 @@ import "./globals.css"
 import { Metadata, Viewport } from "next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import Script from "next/script"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,9 +42,19 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.className}>
       <body>
-        <div className="bg-yellow-100 text-center p-2 text-gray-800">
-          We are updating Dezygn landing page to V3 this week-end. You can still access <a href="https://my.dezygn.com" className="underline font-medium">V2 here</a>
-        </div>
+        <Script id="intercom-settings" strategy="afterInteractive">
+          {`
+            window.intercomSettings = {
+              api_base: "https://api-iam.intercom.io",
+              app_id: "iqtdthxx",
+            };
+          `}
+        </Script>
+        <Script id="intercom-script" strategy="afterInteractive">
+          {`
+            (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/iqtdthxx';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+          `}
+        </Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

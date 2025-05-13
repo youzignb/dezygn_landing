@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Task
-Checking and running the project to verify its functionality.
+Updating the landing page with requested changes.
 
 ## Recent Changes
 - Initial project setup with Next.js
@@ -13,6 +13,9 @@ Checking and running the project to verify its functionality.
   - Footer
 - Setup of UI component system
 - Theme implementation
+- Removed announcement bar
+- Added Intercom script to layout.tsx
+- Removed "docs" and "contact" links from the footer
 
 ## Next Steps
 1. Verify all dependencies are installed

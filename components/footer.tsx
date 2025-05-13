@@ -10,18 +10,9 @@ export function Footer() {
           <a href="/terms" className="hover:text-gray-300 transition-colors">
             Terms
           </a>
-          <span className="text-gray-600">|</span>
-          <a href="/docs" className="hover:text-gray-300 transition-colors">
-            Docs
-          </a>
-          <span className="text-gray-600">|</span>
-          <a href="/contact" className="hover:text-gray-300 transition-colors">
-            Contact
-          </a>
         </div>
         <div>Made with 🍺, 🍟 and ❤️ in Belgium</div>
       </div>
     </footer>
   )
 }
-
