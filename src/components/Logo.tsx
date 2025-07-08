@@ -1,4 +1,5 @@
 import { Sparkles } from 'lucide-react';
+import dezignIcon from '../assets/images/logos/dezygn-icon.png';
 
 interface LogoProps {
   variant?: 'default' | 'light' | 'dark';
@@ -61,7 +62,7 @@ const Logo = ({
     return (
       <div className={`flex items-center ${config.container} ${className}`}>
         <img 
-          src="/src/assets/images/logos/dezygn-icon.png"
+          src={dezignIcon}
           alt="Dezygn Logo"
           className={`${size === 'sm' ? 'w-6 h-6' : size === 'md' ? 'w-8 h-8' : 'w-12 h-12'} object-contain`}
         />

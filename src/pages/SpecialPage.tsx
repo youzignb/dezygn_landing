@@ -54,6 +54,25 @@ import pocketStudio from '../assets/images/toolkit-features/pocketStudio.png';
 import teamSpace from '../assets/images/toolkit-features/TeamSpace.png';
 import instaShare from '../assets/images/toolkit-features/instashare.png';
 
+// Made with Dezygn images
+import lelaModelBeach from '../assets/images/made-with-dezygn/lela-model-beach.png';
+import lelaGridProductMockups from '../assets/images/made-with-dezygn/lela-grid-of-product-mockups.png';
+import gridInstagramContent from '../assets/images/made-with-dezygn/grid-of-instagram-social-media-content.png';
+import lelaSuncreamTable from '../assets/images/made-with-dezygn/lela-suncream-on-table.jpeg';
+import brandIdentityResearch from '../assets/images/made-with-dezygn/brand-identity-research.png';
+import lelaSocialMediaPost from '../assets/images/made-with-dezygn/lela-social-media-post-with-text.png';
+import kidTeddybearFunfair from '../assets/images/made-with-dezygn/kid-holding-teddybear-funfair.png';
+import soapPebblesAd from '../assets/images/made-with-dezygn/soap-on-pebbles-ad.png';
+import lelaGrid9Poses from '../assets/images/made-with-dezygn/lela-grid-of-9-poses-for-model.png';
+import posterBabyShop from '../assets/images/made-with-dezygn/poster-for-baby-shop.png';
+import modelTshirtLogo from '../assets/images/made-with-dezygn/model-wearing-tshirt-with-logo.png';
+import catTableVegetables from '../assets/images/made-with-dezygn/cat-table-vegetables.png';
+import lelaSuncreamHand from '../assets/images/made-with-dezygn/lela-suncream-in-hand.png';
+import youngWomanJeans from '../assets/images/made-with-dezygn/young-woman-in-jeans.png';
+import lelaSocialMediaPost2 from '../assets/images/made-with-dezygn/lela-social-media-post-with-text-2.png';
+import squareAdDezygn from '../assets/images/made-with-dezygn/square-ad-for-dezyg.png';
+import lelaSuncreamWomanHolding from '../assets/images/made-with-dezygn/lela-suncream-womain-holding-in-hand.png';
+
 // Timer Component
 function CountdownTimer({ className = "" }: { className?: string }) {
   // Calculate time until Thursday July 17th, 2025
@@ -1132,7 +1151,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-model-beach.png"
+                  src={lelaModelBeach}
                   alt="Model at beach created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1146,7 +1165,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-grid-of-product-mockups.png"
+                  src={lelaGridProductMockups}
                   alt="Product mockups grid created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1160,7 +1179,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/grid-of-instagram-social-media-content.png"
+                  src={gridInstagramContent}
                   alt="Instagram social media content grid created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1174,7 +1193,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-suncream-on-table.jpeg"
+                  src={lelaSuncreamTable}
                   alt="Suncream product photography created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1189,7 +1208,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/brand-identity-research.png"
+                  src={brandIdentityResearch}
                   alt="Brand identity research created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1203,7 +1222,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-social-media-post-with-text.png"
+                  src={lelaSocialMediaPost}
                   alt="Social media post with text created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1217,7 +1236,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/kid-holding-teddybear-funfair.png"
+                  src={kidTeddybearFunfair}
                   alt="Kid with teddy bear at funfair created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1231,7 +1250,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/soap-on-pebbles-ad.png"
+                  src={soapPebblesAd}
                   alt="Soap advertisement created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1246,7 +1265,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-grid-of-9-poses-for-model.png"
+                  src={lelaGrid9Poses}
                   alt="Model poses grid created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1260,7 +1279,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/poster-for-baby-shop.png"
+                  src={posterBabyShop}
                   alt="Baby shop poster created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1274,7 +1293,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/model-wearing-tshirt-with-logo.png"
+                  src={modelTshirtLogo}
                   alt="Model wearing branded t-shirt created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1288,7 +1307,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/cat-table-vegetables.png"
+                  src={catTableVegetables}
                   alt="Cat with vegetables on table created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1303,7 +1322,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-suncream-in-hand.png"
+                  src={lelaSuncreamHand}
                   alt="Suncream in hand product shot created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1317,7 +1336,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/young-woman-in-jeans.png"
+                  src={youngWomanJeans}
                   alt="Young woman in jeans created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1331,7 +1350,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-social-media-post-with-text-2.png"
+                  src={lelaSocialMediaPost2}
                   alt="Social media post with text created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1345,7 +1364,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/square-ad-for-dezyg.png"
+                  src={squareAdDezygn}
                   alt="Square advertisement created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -1359,7 +1378,7 @@ function SpecialPage() {
             <div className="break-inside-avoid mb-6">
               <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02]">
                 <img 
-                  src="/src/assets/images/made-with-dezygn/lela-suncream-womain-holding-in-hand.png"
+                  src={lelaSuncreamWomanHolding}
                   alt="Woman holding suncream created with Dezygn"
                   className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
                 />

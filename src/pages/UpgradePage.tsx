@@ -3,6 +3,33 @@ import { Check, Clock, Star, ArrowRight, HelpCircle, Shield } from 'lucide-react
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
+// Real World Demos - Animate
+import animateOriginal from '../assets/images/real-world-demos/animate/original_image-of-model-crossing-hands-wearing-tshirt.png';
+import animateVideo from '../assets/images/real-world-demos/animate/animated_image-of-model-showing-off-tshirt.mp4';
+
+// Real World Demos - Lipsync
+import lipsyncOriginal from '../assets/images/real-world-demos/lipsync/original-model-holding-selfie-camera.png';
+import lipsyncVideo from '../assets/images/real-world-demos/lipsync/animation-with-voiceover-model-talking-to-camera.mp4';
+
+// Real World Demos - Brand DNA
+import brandDnaOriginal1 from '../assets/images/real-world-demos/brand-dna/original1.png';
+import brandDnaOriginal2 from '../assets/images/real-world-demos/brand-dna/original2.png';
+import brandDnaOriginal3 from '../assets/images/real-world-demos/brand-dna/original3.png';
+import brandDnaOriginal4 from '../assets/images/real-world-demos/brand-dna/original4.png';
+import galleryAntartica from '../assets/images/real-world-demos/brand-dna/gallery-antartica.jpg';
+import galleryBeach from '../assets/images/real-world-demos/brand-dna/gallery-beach.jpg';
+import galleryMountain from '../assets/images/real-world-demos/brand-dna/gallery-mountain.jpg';
+import galleryParis from '../assets/images/real-world-demos/brand-dna/gallery-paris.jpg';
+import galleryPool from '../assets/images/real-world-demos/brand-dna/gallery-pool.jpg';
+import galleryRuins from '../assets/images/real-world-demos/brand-dna/gallery-ruins.jpg';
+import gallerySahara from '../assets/images/real-world-demos/brand-dna/gallery-sahara.jpg';
+import galleryStreetfood from '../assets/images/real-world-demos/brand-dna/gallery-streetfood.jpg';
+import galleryStudio from '../assets/images/real-world-demos/brand-dna/gallery-studio.jpg';
+import galleryTimesquare from '../assets/images/real-world-demos/brand-dna/gallery-timesquare.jpg';
+import galleryVenice from '../assets/images/real-world-demos/brand-dna/gallery-venice.jpg';
+import galleryMountainVideo from '../assets/images/real-world-demos/brand-dna/gallery-mountain-video.mp4';
+import galleryPoolVideo from '../assets/images/real-world-demos/brand-dna/gallery-pool-video.mp4';
+
 function UpgradePage() {
   const [tooltipVisible, setTooltipVisible] = useState<string | null>(null);
 
@@ -1431,7 +1458,7 @@ function UpgradePage() {
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/animate/original_image-of-model-crossing-hands-wearing-tshirt.png" 
+                      src={animateOriginal} 
                       alt="Original model image" 
                       className="w-full h-auto"
                     />
@@ -1447,11 +1474,11 @@ function UpgradePage() {
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 aspect-[9/16]">
                     <video 
-                      src="/src/assets/images/real-world-demos/animate/animated_image-of-model-showing-off-tshirt.mp4" 
+                      src={animateVideo} 
                       controls 
                       muted 
                       className="w-full h-full object-cover"
-                      poster="/src/assets/images/real-world-demos/animate/original_image-of-model-crossing-hands-wearing-tshirt.png"
+                      poster={animateOriginal}
                     />
                   </div>
                 </div>
@@ -1470,7 +1497,7 @@ function UpgradePage() {
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/lipsync/original-model-holding-selfie-camera.png" 
+                      src={lipsyncOriginal} 
                       alt="Original model with camera" 
                       className="w-full h-auto"
                     />
@@ -1486,11 +1513,11 @@ function UpgradePage() {
                   </div>
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-blue-500/30 aspect-square">
                     <video 
-                      src="/src/assets/images/real-world-demos/lipsync/animation-with-voiceover-model-talking-to-camera.mp4" 
+                      src={lipsyncVideo} 
                       controls 
                       muted 
                       className="w-full h-full object-cover"
-                      poster="/src/assets/images/real-world-demos/lipsync/original-model-holding-selfie-camera.png"
+                      poster={lipsyncOriginal}
                     />
                   </div>
                 </div>
@@ -1545,28 +1572,28 @@ function UpgradePage() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-emerald-500/30">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/original1.png" 
+                      src={brandDnaOriginal1} 
                       alt="Training image 1" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-emerald-500/30">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/original2.png" 
+                      src={brandDnaOriginal2} 
                       alt="Training image 2" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-emerald-500/30">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/original3.png" 
+                      src={brandDnaOriginal3} 
                       alt="Training image 3" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-emerald-500/30">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/original4.png" 
+                      src={brandDnaOriginal4} 
                       alt="Training image 4" 
                       className="w-full h-auto"
                     />
@@ -1594,77 +1621,77 @@ function UpgradePage() {
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-antartica.jpg" 
+                      src={galleryAntartica} 
                       alt="Character in Antarctica" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-beach.jpg" 
+                      src={galleryBeach} 
                       alt="Character at beach" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-mountain.jpg" 
+                      src={galleryMountain} 
                       alt="Character in mountains" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-paris.jpg" 
+                      src={galleryParis} 
                       alt="Character in Paris" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-pool.jpg" 
+                      src={galleryPool} 
                       alt="Character at pool" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-ruins.jpg" 
+                      src={galleryRuins} 
                       alt="Character at ruins" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-sahara.jpg" 
+                      src={gallerySahara} 
                       alt="Character in Sahara" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-streetfood.jpg" 
+                      src={galleryStreetfood} 
                       alt="Character with street food" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-studio.jpg" 
+                      src={galleryStudio} 
                       alt="Character in studio" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-timesquare.jpg" 
+                      src={galleryTimesquare} 
                       alt="Character in Times Square" 
                       className="w-full h-auto"
                     />
                   </div>
                   <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                     <img 
-                      src="/src/assets/images/real-world-demos/brand-dna/gallery-venice.jpg" 
+                      src={galleryVenice} 
                       alt="Character in Venice" 
                       className="w-full h-auto"
                     />
@@ -1698,7 +1725,7 @@ function UpgradePage() {
                         </div>
                         <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                           <img 
-                            src="/src/assets/images/real-world-demos/brand-dna/gallery-mountain.jpg" 
+                            src={galleryMountain} 
                             alt="Original mountain image" 
                             className="w-full h-auto"
                           />
@@ -1721,7 +1748,7 @@ function UpgradePage() {
                       </div>
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 aspect-video">
                         <video 
-                          src="/src/assets/images/real-world-demos/brand-dna/gallery-mountain-video.mp4" 
+                          src={galleryMountainVideo} 
                           controls 
                           muted 
                           className="w-full h-full object-cover"
@@ -1749,7 +1776,7 @@ function UpgradePage() {
                         </div>
                         <div className="relative rounded-xl overflow-hidden shadow-xl border border-white/20">
                           <img 
-                            src="/src/assets/images/real-world-demos/brand-dna/gallery-pool.jpg" 
+                            src={galleryPool} 
                             alt="Original pool image" 
                             className="w-full h-auto"
                           />
@@ -1772,7 +1799,7 @@ function UpgradePage() {
                       </div>
                       <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-purple-500/30 aspect-video">
                         <video 
-                          src="/src/assets/images/real-world-demos/brand-dna/gallery-pool-video.mp4" 
+                          src={galleryPoolVideo} 
                           controls 
                           muted 
                           className="w-full h-full object-cover"
