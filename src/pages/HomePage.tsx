@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, ExternalLink, ChevronDown } from 'lucide-react';
 import Logo from '../components/Logo';

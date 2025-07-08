@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Check, X, Sparkles, Users, Zap, Building, User, Palette, ExternalLink, HelpCircle, MessageCircle } from 'lucide-react';
+import { Check, Sparkles, Users, Zap, Building, User, Palette, ExternalLink, HelpCircle, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
@@ -8,7 +8,7 @@ const PricingPage = () => {
   const [isLegacy, setIsLegacy] = useState(false);
   const [tooltipVisible, setTooltipVisible] = useState('');
 
-  const showTooltip = (feature) => setTooltipVisible(feature);
+  const showTooltip = (feature: string) => setTooltipVisible(feature);
   const hideTooltip = () => setTooltipVisible('');
 
   const tooltips = {

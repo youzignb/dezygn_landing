@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Check, Clock, Users, Zap, Shield, Star, ArrowRight, Play, Lock } from 'lucide-react';
+import { ChevronDown, Check, Clock, Users, Zap, Shield, Star, ArrowRight, Lock } from 'lucide-react';
 import Logo from '../components/Logo';
 
 // Import job images
