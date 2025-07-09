@@ -3,6 +3,7 @@ import HomePage from './pages/HomePage';
 import SpecialPage from './pages/SpecialPage';
 import PricingPage from './pages/PricingPage';
 import ReportPage from './pages/ReportPage';
+import ReportDownloadPage from './pages/ReportDownloadPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import UpgradePage from './pages/UpgradePage';
@@ -16,6 +17,7 @@ function App() {
         <Route path="/special" element={<SpecialPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/report" element={<ReportPage />} />
+        <Route path="/report-download" element={<ReportDownloadPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/upgrade" element={<UpgradePage />} />

@@ -14,7 +14,6 @@ const ReportPage = () => {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-gray-600 hover:text-purple-600 transition">Home</Link>
-            <Link to="/special" className="text-gray-600 hover:text-purple-600 transition">Special</Link>
             <Link to="/pricing" className="text-gray-600 hover:text-purple-600 transition">Pricing</Link>
             <Link to="/report" className="text-gray-900 font-bold hover:text-purple-600 transition">Report</Link>
             <a 
@@ -61,15 +60,13 @@ const ReportPage = () => {
 
               {/* Download Button */}
               <div className="text-center">
-                <a
-                  href="https://claude.ai/public/artifacts/5d85b80c-6994-468f-a030-39bf75f0bf63"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/report-download"
                   className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xl px-12 py-6 rounded-full font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
                   <Download className="w-6 h-6" />
                   Download Free Report
-                </a>
+                </Link>
                 <p className="text-gray-600 mt-3 text-sm">No email required :)</p>
               </div>
             </div>
