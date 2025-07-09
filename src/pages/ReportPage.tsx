@@ -61,7 +61,7 @@ const ReportPage = () => {
               {/* Download Button */}
               <div className="text-center">
                 <Link
-                  to="/report-download"
+                  to="/state-of-ai"
                   className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xl px-12 py-6 rounded-full font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
                 >
                   <Download className="w-6 h-6" />

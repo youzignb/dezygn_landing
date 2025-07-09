@@ -17,7 +17,7 @@ function App() {
         <Route path="/special" element={<SpecialPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/report" element={<ReportPage />} />
-        <Route path="/report-download" element={<ReportDownloadPage />} />
+        <Route path="/state-of-ai" element={<ReportDownloadPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/upgrade" element={<UpgradePage />} />
