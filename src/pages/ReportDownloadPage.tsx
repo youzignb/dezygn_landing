@@ -1115,7 +1115,8 @@ Start your transformation today: https://dezygn.com/start
       <section className="py-16 px-4 bg-gradient-to-br from-purple-600 via-purple-700 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-black mb-6">
-            This Report Shows the Future. Dezygn 4.0 Delivers It.
+            This Report Shows the Future.
+            <span className="block text-purple-100">Dezygn 4.0 Delivers It.</span>
           </h2>
           
           <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
