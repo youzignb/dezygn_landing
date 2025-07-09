@@ -624,52 +624,15 @@ Start your transformation today: https://dezygn.com/start
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight mb-6 animate-slide-up stagger-1">
-              The Most Comprehensive Analysis of
+              While Others Debate,
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600">
-                AI's Impact on Creative Work
+                We Analyzed
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-8 animate-slide-up stagger-2">
-              Based on real market data from <span className="font-bold text-purple-600">1,050+ job postings</span> across major freelance platforms
+            <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-4xl mx-auto mb-12 animate-slide-up stagger-2">
+              We analyzed <span className="font-bold text-purple-600">1,050 real job postings</span> to see how the creative industry has transformed in just 12 months. The results reveal a complete shift in how design work gets done.
             </p>
-            
-            <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto mb-12 animate-slide-up stagger-3">
-              <p className="text-lg text-gray-700 leading-relaxed">
-                While the creative industry debates AI's future, we analyzed actual job postings to reveal what's happening right now. This report uncovers the fastest-growing opportunities, declining markets, and exact pricing data that creative professionals need to succeed in 2025.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6 mt-6 text-sm">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>First-of-its-kind analysis of real job market data</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>1,050+ actual job postings from Upwork, Fiverr, and other platforms</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <span>Reveals specific pricing, demand levels, and growth rates</span>
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Shows which creative skills are exploding and declining</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Includes real client briefs and budget examples</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <span>Data-driven insights, not speculation</span>
-                  </div>
-                </div>
-              </div>
-            </div>
 
             {/* Key Stats Grid */}
             <div className="grid md:grid-cols-4 gap-6 mb-12">
