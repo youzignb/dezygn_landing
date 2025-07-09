@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, TrendingUp, DollarSign, Clock, Users, Zap, ArrowRight, BarChart3, Target, Play, Camera, Smartphone, Palette, X, Download, Check, Mail, FileText, Star, ExternalLink } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronDown, TrendingUp, Clock, Users, Zap, ArrowRight, Target, Play, Camera, Smartphone, Palette, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
@@ -16,7 +16,7 @@ function ReportDownloadPage() {
 
   // Animate stats on load
   useEffect(() => {
-    const animateValue = (start, end, duration, key) => {
+    const animateValue = (start: number, end: number, duration: number, key: string) => {
       const startTime = Date.now();
       const timer = setInterval(() => {
         const elapsed = Date.now() - startTime;
@@ -1091,7 +1091,7 @@ Start your transformation today: https://dezygn.com/start
             </div>
             
             <div className="space-y-6">
-              {jobSamples[selectedJobType]?.map((job, idx) => (
+              {jobSamples[selectedJobType as keyof typeof jobSamples]?.map((job, idx) => (
                 <div key={idx} className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-6 border border-purple-100">
                   <div className="flex justify-between items-start mb-4">
                     <h4 className="text-xl font-bold text-gray-900">{job.title}</h4>
