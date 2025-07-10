@@ -80,16 +80,18 @@ export default async function handler(request) {
 
     const pollData = await pollResponse.json();
     console.log('📊 Gumloop poll response:', {
-      status: pollData.status,
+      state: pollData.state,
       hasOutputs: !!pollData.outputs,
+      outputsKeys: pollData.outputs ? Object.keys(pollData.outputs) : [],
+      finished_ts: pollData.finished_ts,
       timestamp: new Date().toISOString()
     });
 
-    // Return the current status
+    // Return the current status using correct Gumloop API fields
     const response = {
-      status: pollData.status || 'running',
-      completed: pollData.status === 'completed',
-      failed: pollData.status === 'failed',
+      status: pollData.state || 'RUNNING',
+      completed: pollData.state === 'DONE',
+      failed: pollData.state === 'FAILED' || pollData.state === 'TERMINATED',
       outputs: pollData.outputs || null
     };
 
