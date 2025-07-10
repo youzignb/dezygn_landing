@@ -122,16 +122,23 @@ function AuditPage() {
 
       console.log('📄 Parsing successful response...');
       const data = await response.json();
-      console.log('✅ Analysis completed successfully:', {
+      console.log('✅ Pipeline started, received:', {
         hasData: !!data,
         dataKeys: data ? Object.keys(data) : [],
-        score: data?.score,
-        businessType: data?.businessType
+        run_id: data?.run_id,
+        status: data?.status
       });
 
-      setAnalysisResults(data);
-      setIsAnalyzing(false);
-      setAnalysisComplete(true);
+      // Check if we got a run_id (pipeline started) or final results
+      if (data.run_id && data.status === 'started') {
+        console.log('🔄 Starting client-side polling for run_id:', data.run_id);
+        await pollForResults(data.run_id);
+      } else {
+        // Direct results (shouldn't happen with new flow but keeping for safety)
+        setAnalysisResults(data);
+        setIsAnalyzing(false);
+        setAnalysisComplete(true);
+      }
       
     } catch (error: any) {
       console.error('💥 Analysis error:', {
@@ -149,6 +156,75 @@ function AuditPage() {
     setAnalysisComplete(false);
     setAnalysisResults(null);
     setError(null);
+  };
+
+  const pollForResults = async (runId: string) => {
+    const maxAttempts = 12; // 12 attempts * 15 seconds = 3 minutes max
+    const pollInterval = 15000; // 15 seconds
+    
+    console.log('🔄 Starting client-side polling:', { runId, maxAttempts, pollInterval });
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      console.log(`📊 Polling attempt ${attempt}/${maxAttempts} for run_id: ${runId}`);
+      
+      try {
+        // Wait before polling (except first attempt)
+        if (attempt > 1) {
+          await new Promise(resolve => setTimeout(resolve, pollInterval));
+        } else {
+          // Wait 10 seconds before first poll to give pipeline time to start
+          await new Promise(resolve => setTimeout(resolve, 10000));
+        }
+        
+        const pollResponse = await fetch('/api/poll-results', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ run_id: runId })
+        });
+
+        if (!pollResponse.ok) {
+          console.log(`❌ Poll attempt ${attempt} failed:`, pollResponse.status);
+          continue;
+        }
+
+        const pollData = await pollResponse.json();
+        console.log(`📊 Poll attempt ${attempt} response:`, {
+          status: pollData.status,
+          completed: pollData.completed,
+          failed: pollData.failed,
+          hasOutputs: !!pollData.outputs
+        });
+
+        if (pollData.completed && pollData.outputs) {
+          console.log('✅ Pipeline completed! Setting results');
+          setAnalysisResults(pollData.outputs);
+          setIsAnalyzing(false);
+          setAnalysisComplete(true);
+          return;
+        }
+
+        if (pollData.failed) {
+          console.log('❌ Pipeline failed');
+          throw new Error('Analysis pipeline failed');
+        }
+
+        console.log(`⏳ Pipeline still running (${pollData.status}), continuing to poll...`);
+        
+      } catch (pollError: any) {
+        console.log(`❌ Error during poll attempt ${attempt}:`, pollError.message);
+        
+        // If this is the last attempt, throw the error
+        if (attempt === maxAttempts) {
+          throw pollError;
+        }
+      }
+    }
+
+    // If we get here, polling timed out
+    console.log('⏰ Polling timed out after maximum attempts');
+    throw new Error('Analysis timed out after 3 minutes. Please try again.');
   };
 
   const getImpactColor = (impact: string) => {
