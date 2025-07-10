@@ -228,15 +228,15 @@ function SpecialPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            <span className="text-sm font-medium text-gray-700">Transform your creativity into income</span>
+            <span className="text-sm font-medium text-gray-700">The AI Creative Revolution That's Minting New Millionaires</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight">
-            <span className="block text-gray-900">How to Make Your First</span>
+            <span className="block text-gray-900">The AI Creative Revolution</span>
             <span className="relative inline-block mt-2">
               <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600">
-                $1,500 on Upwork
+                That's Minting New Millionaires
               </span>
               <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
                 <path d="M2 10C50 2 100 2 150 10C200 2 250 2 298 10" stroke="url(#gradient)" strokeWidth="3" strokeLinecap="round"/>
@@ -248,11 +248,13 @@ function SpecialPage() {
                 </defs>
               </svg>
             </span>
-            <span className="block text-gray-900 mt-2">in the Next 30 Days</span>
+            <span className="block text-gray-900 mt-2">(While 88% of People Still Don't Know It Exists)</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Even if you've never designed anything professionally in your life
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+            296 new AI design jobs posted every single day at $360 average...
+            and only 12% of creatives have figured out how to claim them.
+            <span className="block mt-2 font-bold text-purple-600">This window closes fast.</span>
           </p>
           
           {/* YouTube Video Embed */}
@@ -278,16 +280,16 @@ function SpecialPage() {
               }}
               className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg px-10 py-5 rounded-full font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <span>Get Dezygn 4.0 Now</span>
+              <span>Claim Your Early Mover Advantage</span>
               <span className="text-xl">→</span>
               <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
             </button>
             
             <div className="flex items-center gap-2 text-sm text-gray-600">
-              <span className="font-medium text-purple-600">Just $49 One-Time</span>
+              <span className="font-medium text-purple-600">Get in before the window closes</span>
               <span>•</span>
               <span className="line-through opacity-60">$49/month</span>
-              <span className="bg-green-100 text-green-700 px-2 py-0.5 rounded-full text-xs font-bold">SAVE 92%</span>
+              <span className="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-bold">Limited Time</span>
             </div>
           </div>
           
@@ -312,10 +314,10 @@ function SpecialPage() {
                 ))}
               </div>
               
-              {/* User Count */}
+              {/* Market Data */}
               <div className="text-left">
-                <p className="text-sm font-bold text-gray-900">230,123+</p>
-                <p className="text-xs text-gray-600">Happy Users</p>
+                <p className="text-sm font-bold text-gray-900">214,495+ Users</p>
+                <p className="text-xs text-gray-600">Since 2014</p>
               </div>
               
               {/* 5 Star Rating */}
@@ -328,7 +330,7 @@ function SpecialPage() {
             
             <div className="flex items-center gap-2">
               <Shield className="w-5 h-5 text-green-600" />
-              <span className="text-sm font-medium text-gray-700">365-Day Guarantee</span>
+              <span className="text-sm font-medium text-gray-700">365-Day Opportunity Window</span>
             </div>
           </div>
         </div>
@@ -336,15 +338,15 @@ function SpecialPage() {
         {/* Floating UI Elements for Visual Interest */}
         <div className="absolute top-20 left-10 bg-white rounded-2xl shadow-lg p-4 transform rotate-3 hidden lg:block animate-float">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <p className="text-sm font-medium">New thumbnail job: $30</p>
+            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <p className="text-sm font-medium">New thumbnail job posted 2 min ago: $35</p>
           </div>
         </div>
         
         <div className="absolute bottom-20 right-10 bg-white rounded-2xl shadow-lg p-4 transform -rotate-3 hidden lg:block animate-float-reverse animation-delay-2000">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-            <p className="text-sm font-medium">Jane earned $450 today</p>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+            <p className="text-sm font-medium">Virtual staging project: $300 (claimed in 4 min)</p>
           </div>
         </div>
       </section>
@@ -356,13 +358,13 @@ function SpecialPage() {
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-purple-100 text-purple-700 rounded-full px-4 py-2 text-sm font-semibold mb-4">
               <Zap className="w-4 h-4" />
-              <span>Start Making Money Today</span>
+              <span>Capitalize on the Opportunity</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-black mb-4">
-              Your 3-Step Money Machine
+              Your 3-Step Early Mover Advantage
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From zero to profit in less time than it takes to watch a Netflix episode
+              Claim your share of 892 new AI design jobs posted this week
             </p>
           </div>
           
@@ -445,21 +447,21 @@ function SpecialPage() {
                   <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">💵</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Get Paid on Repeat</h3>
+                  <h3 className="text-xl font-bold mb-3">Dominate While Others Debate</h3>
                   <p className="text-white/90 mb-4">
-                    Deliver in minutes what others take hours to create. Charge premium prices.
+                    Deliver in minutes what others take hours to create. Claim jobs while 88% are still figuring it out.
                   </p>
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                     <div className="text-2xl font-bold font-mono">
-                      $<span className="animate-pulse">1,500</span>
+                      <span className="animate-pulse">67%</span>
                     </div>
-                    <p className="text-sm text-white/70">Average monthly earnings</p>
+                    <p className="text-sm text-white/70">Adoption by Q4 2025</p>
                   </div>
                 </div>
                 
                 {/* Money Badge */}
                 <div className="absolute -bottom-3 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-lg">
-                  💰 $25-40/job
+                  ⚡ Window Closing
                 </div>
               </div>
             </div>
@@ -468,10 +470,10 @@ function SpecialPage() {
           {/* Bottom CTA */}
           <div className="mt-16 text-center">
             <p className="text-2xl font-bold text-gray-900 mb-2">
-              Ready to turn 5 minutes of work into $40 payments?
+              Ready to claim your share of the AI creative revolution?
             </p>
             <p className="text-lg text-gray-600 mb-8">
-              Join thousands already earning with Dezygn
+              Every day you wait, 296 more jobs get claimed by early movers
             </p>
             <button 
               onClick={() => {
@@ -480,7 +482,7 @@ function SpecialPage() {
               }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
-              <span>Start Making Money Now</span>
+              <span>Get In Before It's Too Late</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>
@@ -504,8 +506,8 @@ function SpecialPage() {
             </div>
             
             <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">$10,000/Month</span>
-              <br />Opportunity Hiding in Plain Sight
+              The <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">Early Mover</span>
+              <br />Advantage Window Is Open
             </h2>
           </div>
 
@@ -518,17 +520,17 @@ function SpecialPage() {
             </div>
             
             <div className="relative z-10 text-center">
-              <p className="text-xl mb-4 opacity-90">Right now, someone just posted:</p>
+              <p className="text-xl mb-4 opacity-90">The market data shows:</p>
               <div className="text-5xl md:text-7xl font-black mb-4">
-                $25 - $100
+                296 Jobs
               </div>
-              <p className="text-2xl mb-6">for a single YouTube thumbnail</p>
+              <p className="text-2xl mb-6">posted daily (156% year-over-year growth)</p>
               
               {/* Live Updates Ticker */}
               <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-4 max-w-2xl mx-auto">
                 <div className="flex items-center justify-center gap-4">
                   <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                  <p className="text-lg font-medium">New job posted 2 minutes ago • 3 more coming in next 10 min</p>
+                  <p className="text-lg font-medium">Only 12% adoption rate • Window closes when it hits 67%</p>
                 </div>
               </div>
             </div>
@@ -538,35 +540,35 @@ function SpecialPage() {
           <div className="bg-white rounded-3xl shadow-xl p-8 mb-16 border border-gray-100">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h3 className="text-3xl font-bold mb-4">The Math That Changes Everything</h3>
+                <h3 className="text-3xl font-bold mb-4">The Opportunity Window That Changes Everything</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">⏱️</span>
+                      <span className="text-2xl">📊</span>
                     </div>
                     <div>
-                      <p className="font-bold text-xl">5 minutes of work</p>
-                      <p className="text-gray-600">Average time with Dezygn</p>
+                      <p className="font-bold text-xl">Week 1 (2024): 32 jobs/day</p>
+                      <p className="text-gray-600">When AI design started</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">💵</span>
+                      <span className="text-2xl">🚀</span>
                     </div>
                     <div>
-                      <p className="font-bold text-xl">$100 payment</p>
-                      <p className="text-gray-600">For design work</p>
+                      <p className="font-bold text-xl">Week 1 (2025): 296 jobs/day</p>
+                      <p className="text-gray-600">The explosion is happening</p>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4">
                     <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">🚀</span>
+                      <span className="text-2xl">⚡</span>
                     </div>
                     <div>
-                      <p className="font-bold text-xl">$150-300/hour</p>
-                      <p className="text-gray-600">Realistic earning potential</p>
+                      <p className="font-bold text-xl">Your competition: 12%</p>
+                      <p className="text-gray-600">Early adopters (that's your window)</p>
                     </div>
                   </div>
                 </div>
@@ -575,17 +577,17 @@ function SpecialPage() {
               {/* Visual Representation */}
               <div className="relative">
                 <div className="bg-gradient-to-br from-purple-100 to-blue-100 rounded-3xl p-8 text-center">
-                  <p className="text-sm text-gray-600 mb-2">This happens</p>
+                  <p className="text-sm text-gray-600 mb-2">By year end</p>
                   <p className="text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 mb-2">
-                    EVERY
+                    67%
                   </p>
-                  <div className="text-4xl font-bold mb-2">4.5 minutes</div>
-                  <p className="text-sm text-gray-600">All day. Every day.</p>
+                  <div className="text-4xl font-bold mb-2">adoption rate</div>
+                  <p className="text-sm text-gray-600">That's when the window closes.</p>
                 </div>
                 
-                {/* Floating money icons */}
-                <div className="absolute -top-4 -right-4 text-4xl animate-float">💰</div>
-                <div className="absolute -bottom-4 -left-4 text-4xl animate-float animation-delay-2000">💸</div>
+                {/* Floating icons */}
+                <div className="absolute -top-4 -right-4 text-4xl animate-float">⚡</div>
+                <div className="absolute -bottom-4 -left-4 text-4xl animate-float animation-delay-2000">🚀</div>
               </div>
             </div>
           </div>
@@ -600,20 +602,20 @@ function SpecialPage() {
               </div>
               <h3 className="text-3xl md:text-4xl font-black mb-4">
                 <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  And It's Not Just Thumbnails...
+                  20+ Job Categories That Didn't Exist 12 Months Ago
                 </span>
               </h3>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Discover the full spectrum of opportunities waiting for you
+                The same window that made early Amazon sellers and crypto investors rich
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: '🏠', title: 'Real Estate Agents', desc: 'Virtual staging', price: '$300-500', color: 'from-orange-500 to-red-500', bgColor: 'bg-orange-100' },
-                { icon: '🎥', title: 'Companies', desc: 'AI avatar videos', price: '$2,000+', color: 'from-purple-500 to-pink-500', bgColor: 'bg-purple-100' },
-                { icon: '📸', title: 'E-commerce', desc: 'Product photos', price: '$150-500', color: 'from-blue-500 to-cyan-500', bgColor: 'bg-blue-100' },
-                { icon: '📱', title: 'Small Business', desc: 'Social content', price: '$500-2K/mo', color: 'from-green-500 to-emerald-500', bgColor: 'bg-green-100' }
+                { icon: '🏠', title: 'Virtual Staging', desc: 'Real estate agents', price: '47 jobs daily', color: 'from-orange-500 to-red-500', bgColor: 'bg-orange-100' },
+                { icon: '🎥', title: 'AI Avatar Videos', desc: 'Corporate training', price: '23 jobs daily', color: 'from-purple-500 to-pink-500', bgColor: 'bg-purple-100' },
+                { icon: '📸', title: 'Product Photos', desc: 'E-commerce sellers', price: '89 jobs daily', color: 'from-blue-500 to-cyan-500', bgColor: 'bg-blue-100' },
+                { icon: '📱', title: 'Social Content', desc: 'Small business', price: '137 jobs daily', color: 'from-green-500 to-emerald-500', bgColor: 'bg-green-100' }
               ].map((item, idx) => (
                 <div key={idx} className="group relative">
                   <div className="absolute -inset-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl blur-sm"
@@ -3080,7 +3082,7 @@ function SpecialPage() {
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-6xl font-black mb-6">
               My 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600"> Iron-Clad Money-Back </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-600"> Opportunity Window </span>
               Guarantee
             </h2>
           </div>
@@ -3098,17 +3100,17 @@ function SpecialPage() {
 
                 {/* Main Promise */}
                 <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-                  Use Dezygn 4.0 for the next 365 days.
+                  Use Dezygn for 365 days to capitalize on this opportunity.
                 </p>
 
                 <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
-                  If at any point you think this wasn't worth your money…
+                  If you don't agree this is the biggest creative opportunity shift in a decade…
                 </p>
 
                 {/* The Guarantee */}
                 <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl p-8 text-white mb-8">
                   <p className="text-2xl md:text-3xl font-bold mb-4">
-                    I'll refund your money right away.
+                    I'll refund every penny, no questions asked.
                   </p>
                 </div>
 
@@ -3228,9 +3230,9 @@ function SpecialPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-3">I'm Betting on YOU</h3>
                 <p className="text-gray-700 leading-relaxed">
-                  I've been where you are. I know what it's like to doubt yourself. 
-                  That's why I'm making this guarantee so ridiculously strong. 
-                  I believe in you, and I'm backing it up with my own money. 
+                  I've watched every major market shift of the past decade. 
+                  This AI creative revolution is the biggest opportunity I've seen since the early days of e-commerce. 
+                  I'm so confident this window exists that I'm backing it up with my own money. 
                   You literally have nothing to lose and everything to gain.
                 </p>
                 <p className="mt-4 font-bold text-purple-600">
@@ -3431,9 +3433,9 @@ function SpecialPage() {
 
           {/* Final Urgency */}
           <div className="bg-gradient-to-r from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-3xl p-6 text-center border border-red-500/30">
-            <p className="text-xl font-bold mb-2">⚠️ Warning: When the timer hits zero...</p>
-            <p className="text-lg">The price jumps to $49/month ($588/year) FOREVER</p>
-            <p className="text-gray-300 mt-2">This legacy offer will never be available again</p>
+            <p className="text-xl font-bold mb-2">⚠️ Warning: When adoption hits 67%...</p>
+            <p className="text-lg">The early mover advantage disappears FOREVER</p>
+            <p className="text-gray-300 mt-2">Same pattern as crypto, Amazon FBA, and dropshipping</p>
           </div>
         </div>
       </section>
@@ -3706,13 +3708,13 @@ function SpecialPage() {
           {/* Final Message Card */}
           <div className="bg-gradient-to-r from-gray-800/80 to-gray-900/80 backdrop-blur-sm border border-white/20 rounded-3xl p-10 shadow-2xl">
             <div className="text-center">
-              <p className="text-xl font-bold text-yellow-400 mb-4">P.S. - The Math is Simple</p>
+              <p className="text-xl font-bold text-yellow-400 mb-4">P.S. - The Window is Closing</p>
               <p className="text-lg text-white/90 leading-relaxed">
-                78% of design jobs on Upwork can be completed in under 5 minutes with Dezygn. 
-                At an average of $188 per job, you only need <span className="font-black text-yellow-400">ONE client to 3X your investment</span>. 
+                296 new AI jobs are posted every single day. Early movers are claiming them while 88% of people are still debating if AI is real. 
+                <span className="font-black text-yellow-400">Every day you wait, more pioneers claim their stake</span>. 
               </p>
               <p className="text-2xl font-black text-red-400 mt-6">
-                What are you waiting for?
+                Don't let this opportunity pass you by.
               </p>
             </div>
           </div>

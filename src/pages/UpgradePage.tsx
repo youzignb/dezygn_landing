@@ -161,7 +161,7 @@ function UpgradePage() {
             What If You Could 10X Your Output...
           </h1>
           <h1 className="text-4xl md:text-6xl font-black bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-12 leading-tight">
-            And Learn EXACTLY How to Land $5,000/Month Clients?
+            And Unlock AI Video + Character Consistency That Others Can't Create?
           </h1>
 
           {/* Video with Glassmorphism */}
@@ -187,7 +187,7 @@ function UpgradePage() {
               }}
               className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg px-10 py-5 rounded-full font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
-              <span>See Founders Subscription Plans</span>
+              <span>Unlock Premium Job Categories</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
             </button>
@@ -206,22 +206,22 @@ function UpgradePage() {
         {/* Floating UI Elements for Visual Interest */}
         <div className="absolute top-20 left-10 bg-white rounded-2xl shadow-lg p-4 transform rotate-3 hidden lg:block animate-float">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            <p className="text-sm font-medium">Sarah earned $2,000 today!</p>
+            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+            <p className="text-sm font-medium">Premium video project secured!</p>
           </div>
         </div>
         
         <div className="absolute bottom-20 right-10 bg-white rounded-2xl shadow-lg p-4 transform -rotate-3 hidden lg:block animate-float-reverse animation-delay-2000">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-            <p className="text-sm font-medium">New client: $500/month retainer</p>
+            <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+            <p className="text-sm font-medium">Brand DNA client loves the consistency</p>
           </div>
         </div>
 
         <div className="absolute top-1/2 right-16 bg-white rounded-2xl shadow-lg p-4 transform rotate-1 hidden lg:block animate-float animation-delay-4000">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
-            <p className="text-sm font-medium">Brand DNA job: +$300</p>
+            <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse"></div>
+            <p className="text-sm font-medium">Advanced features = competitive edge</p>
           </div>
         </div>
       </section>
@@ -281,13 +281,13 @@ function UpgradePage() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-2">Success Creates Momentum</h3>
-                    <p className="text-xl text-gray-600">One satisfied client becomes your growth catalyst</p>
+                    <h3 className="text-3xl md:text-4xl font-black text-gray-900 mb-2">Advanced Features = Premium Territory</h3>
+                    <p className="text-xl text-gray-600">While others compete on price, you compete on capabilities they don't have</p>
                   </div>
                 </div>
                 <div className="bg-gradient-to-r from-blue-50/80 to-indigo-50/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-200/50">
                   <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
-                    YouTube creators value consistency above everything else = guaranteed repeat business
+                    YouTube creators pay premium for advanced features like Brand DNA and video creation that basic tools can't deliver
                   </p>
                 </div>
               </div>
@@ -812,7 +812,7 @@ function UpgradePage() {
                   </div>
                   <div className="flex-1">
                     <blockquote className="text-2xl md:text-3xl text-emerald-900 leading-relaxed mb-8 font-medium italic">
-                      "I was stuck at <span className="font-black text-red-600">$500/month</span> doing static thumbnails. Added video capability, same client now pays me <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-green-600">$2,500/month</span> for animated thumbnails with consistent characters. Same effort, <span className="font-black text-emerald-700">5X the money</span>."
+                      "I was limited to basic static work until I unlocked video capabilities. Now I create animated content with consistent characters that my clients love. <span className="font-black text-emerald-700">Same effort, premium results they can't get anywhere else</span>."
                     </blockquote>
                     <div className="flex items-center gap-4">
                       <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-full flex items-center justify-center text-white text-xl font-black shadow-lg">
@@ -835,9 +835,9 @@ function UpgradePage() {
             <div className="group relative inline-block">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 rounded-full blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
               <div className="relative inline-flex items-center gap-6 bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 text-white px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105">
-                <span className="text-2xl md:text-3xl font-black">The math is simple:</span>
+                <span className="text-2xl md:text-3xl font-black">The advantage is clear:</span>
                 <div className="bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full border border-white/30">
-                  <span className="text-xl md:text-2xl font-black">Video + Consistency = Premium Prices</span>
+                  <span className="text-xl md:text-2xl font-black">Video + Consistency = Premium Territory</span>
                 </div>
               </div>
             </div>
@@ -880,7 +880,7 @@ function UpgradePage() {
             </h2>
             
             <p className="text-2xl md:text-3xl text-gray-600 mb-6 max-w-5xl mx-auto leading-relaxed">
-              These <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">pro-level features</span> separate the $50/month creators from the $5,000/month agencies
+              These <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">pro-level features</span> separate basic creators from premium agencies
             </p>
           </div>
 
@@ -954,8 +954,8 @@ function UpgradePage() {
                       <span className="text-xl">💰</span>
                     </div>
                     <div className="flex-1">
-                      <p className="font-bold text-lg text-amber-800">Charge $500+ for "Brand Packages"</p>
-                      <p className="text-amber-600 text-sm">YouTube channels pay $2,000/month for this alone</p>
+                      <p className="font-bold text-lg text-amber-800">Create AI videos and maintain perfect character consistency across all content</p>
+                      <p className="text-amber-600 text-sm">The premium service that separates pros from amateurs</p>
                     </div>
                   </div>
                 </div>
@@ -970,7 +970,7 @@ function UpgradePage() {
                     <div className="relative z-10">
                       <p className="font-bold text-lg mb-2">💪 Real Success Story:</p>
                       <p className="text-emerald-100 text-lg">
-                        One user landed a <span className="font-black text-white text-2xl">$3,500/month retainer</span> using ONLY Brand DNA
+                        One user secured a <span className="font-black text-white text-2xl">premium ongoing contract</span> using ONLY Brand DNA consistency
                       </p>
                     </div>
                   </div>
@@ -1040,7 +1040,7 @@ function UpgradePage() {
                     </div>
                     <div className="flex-1">
                       <p className="font-bold text-lg text-amber-800">Create 20+ videos/day effortlessly</p>
-                      <p className="text-amber-600 text-sm">What agencies charge $500/video for</p>
+                      <p className="text-amber-600 text-sm">Premium video content that basic tools can't create</p>
                     </div>
                   </div>
                 </div>
@@ -1055,7 +1055,7 @@ function UpgradePage() {
                     <div className="relative z-10">
                       <p className="font-bold text-lg mb-2">🔥 Market Reality:</p>
                       <p className="text-blue-100 text-lg">
-                        Companies are paying <span className="font-black text-white text-2xl">$2,000-5,000</span> for simple AI spokesperson videos
+                        Companies need <span className="font-black text-white text-2xl">AI spokesperson videos</span> but most tools can't deliver professional quality
                       </p>
                     </div>
                   </div>
@@ -1070,8 +1070,8 @@ function UpgradePage() {
               <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 via-indigo-600 to-pink-600 rounded-full blur-lg opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
               <div className="relative inline-flex items-center gap-6 bg-white/90 backdrop-blur-xl border border-white/60 rounded-full px-12 py-6 shadow-xl hover:shadow-2xl transition-all duration-500">
                 <span className="text-2xl md:text-3xl font-black text-gray-900">Brand DNA + Video =</span>
-                <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">$10K+/month</span>
-                <span className="text-2xl md:text-3xl font-black text-gray-900">potential</span>
+                <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-green-600">Premium</span>
+                <span className="text-2xl md:text-3xl font-black text-gray-900">capabilities</span>
               </div>
             </div>
           </div>
