@@ -87,6 +87,24 @@ export default async function handler(request) {
       timestamp: new Date().toISOString()
     });
 
+    // 🕵️‍♂️ FORENSIC DEBUGGING - Let's catch the data red-handed!
+    console.log('🔍 Raw pollData.outputs:', pollData.outputs);
+    console.log('🔍 Type of outputs:', typeof pollData.outputs);
+    console.log('🚨 OUTPUTS DEBUG:', {
+      exists: !!pollData.outputs,
+      keys: Object.keys(pollData.outputs || {}),
+      firstKey: pollData.outputs?.['Brand Analysis']?.substring(0, 100) + '...',
+      type: typeof pollData.outputs
+    });
+
+    // Test JSON serialization
+    try {
+      const serialized = JSON.stringify(pollData.outputs);
+      console.log('✅ Outputs serialization successful, length:', serialized.length);
+    } catch (error) {
+      console.error('❌ Outputs serialization failed:', error);
+    }
+
     // Return the current status using correct Gumloop API fields
     const response = {
       status: pollData.state || 'RUNNING',
@@ -95,6 +113,7 @@ export default async function handler(request) {
       outputs: pollData.outputs || null
     };
 
+    console.log('🔍 Final response before return:', JSON.stringify(response, null, 2));
     console.log('✅ Returning poll response:', {
       status: response.status,
       completed: response.completed,
