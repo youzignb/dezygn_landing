@@ -8,6 +8,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import UpgradePage from './pages/UpgradePage';
 import SuccessPage from './pages/SuccessPage';
+import AuditPage from './pages/AuditPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/upgrade" element={<UpgradePage />} />
         <Route path="/success" element={<SuccessPage />} />
+        <Route path="/audit" element={<AuditPage />} />
       </Routes>
     </Router>
   );
