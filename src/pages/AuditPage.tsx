@@ -199,10 +199,28 @@ function AuditPage() {
 
         if (pollData.completed && pollData.outputs) {
           console.log('✅ Pipeline completed! Setting results');
-          setAnalysisResults(pollData.outputs);
-          setIsAnalyzing(false);
-          setAnalysisComplete(true);
-          return;
+          
+          // Parse the JSON string from Gumloop outputs
+          try {
+            const brandAnalysisJson = pollData.outputs['Brand Analysis'];
+            console.log('🔍 Raw Brand Analysis JSON string:', brandAnalysisJson);
+            
+            const parsedResults = JSON.parse(brandAnalysisJson);
+            console.log('✅ Parsed analysis results:', {
+              score: parsedResults.score,
+              businessType: parsedResults.businessType,
+              totalKeys: Object.keys(parsedResults).length
+            });
+            
+            setAnalysisResults(parsedResults);
+            setIsAnalyzing(false);
+            setAnalysisComplete(true);
+            return;
+            
+          } catch (parseError) {
+            console.error('❌ Failed to parse Brand Analysis JSON:', parseError);
+            throw new Error('Failed to parse analysis results');
+          }
         }
 
         if (pollData.failed) {
