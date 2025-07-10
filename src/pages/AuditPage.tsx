@@ -290,6 +290,7 @@ function AuditPage() {
               </div>
             </div>
             <h3 className="text-2xl font-black text-gray-900 mb-4">Analyzing {websiteUrl}...</h3>
+            <p className="text-gray-600 mb-6">This typically takes 1-2 minutes for a comprehensive analysis</p>
             <div className="space-y-3 max-w-md mx-auto">
               {[
                 'Capturing website visuals...',
@@ -299,7 +300,7 @@ function AuditPage() {
                 'Comparing with industry standards...'
               ].map((step, idx) => (
                 <div key={idx} className="flex items-center gap-3 text-gray-600">
-                  <div className={`w-2 h-2 rounded-full bg-purple-600 ${idx <= 1 ? 'animate-pulse' : 'opacity-30'}`}></div>
+                  <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></div>
                   <span>{step}</span>
                 </div>
               ))}

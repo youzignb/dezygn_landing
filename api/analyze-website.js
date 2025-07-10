@@ -97,21 +97,75 @@ export default async function handler(request) {
       throw new Error(`Gumloop API error: ${gumloopResponse.status} - ${errorText}`);
     }
 
-    const data = await gumloopResponse.json();
-    console.log('✅ Gumloop response received:', {
-      hasData: !!data,
-      dataKeys: Object.keys(data || {}),
+    const pipelineStartData = await gumloopResponse.json();
+    console.log('✅ Gumloop pipeline started:', {
+      run_id: pipelineStartData.run_id,
+      saved_item_id: pipelineStartData.saved_item_id,
       timestamp: new Date().toISOString()
     });
+
+    // Now poll for results
+    const runId = pipelineStartData.run_id;
+    const maxAttempts = 12; // 12 attempts * 15 seconds = 3 minutes max
+    const pollInterval = 15000; // 15 seconds
     
-    console.log('✅ Returning successful response to client');
-    return new Response(JSON.stringify(data), {
-      status: 200,
-      headers: {
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
-      },
-    });
+    console.log('🔄 Starting to poll for results:', { runId, maxAttempts, pollInterval });
+
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+      console.log(`📊 Polling attempt ${attempt}/${maxAttempts} for run_id: ${runId}`);
+      
+      // Wait before polling
+      await new Promise(resolve => setTimeout(resolve, pollInterval));
+      
+      try {
+        const pollResponse = await fetch(
+          `https://api.gumloop.com/api/v1/get_pl_run?run_id=${runId}&user_id=nwu3TTmHaTNYcwsuIVPPjGBGp752`,
+          {
+            headers: {
+              'Authorization': `Bearer ${process.env.GUMLOOP_KEY}`
+            }
+          }
+        );
+
+        if (!pollResponse.ok) {
+          console.log(`❌ Poll attempt ${attempt} failed:`, pollResponse.status);
+          continue;
+        }
+
+        const pollData = await pollResponse.json();
+        console.log(`📊 Poll attempt ${attempt} response:`, {
+          status: pollData.status,
+          hasOutputs: !!pollData.outputs,
+          timestamp: new Date().toISOString()
+        });
+
+        // Check if pipeline is complete
+        if (pollData.status === 'completed' && pollData.outputs) {
+          console.log('✅ Pipeline completed! Returning results');
+          return new Response(JSON.stringify(pollData.outputs), {
+            status: 200,
+            headers: {
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*',
+            },
+          });
+        }
+
+        if (pollData.status === 'failed') {
+          console.log('❌ Pipeline failed:', pollData);
+          throw new Error('Analysis pipeline failed');
+        }
+
+        console.log(`⏳ Pipeline still running (${pollData.status}), continuing to poll...`);
+        
+      } catch (pollError) {
+        console.log(`❌ Error during poll attempt ${attempt}:`, pollError.message);
+      }
+    }
+
+    // If we get here, polling timed out
+    console.log('⏰ Polling timed out after maximum attempts');
+    throw new Error('Analysis timed out. Please try again.');
     
   } catch (error) {
     console.error('💥 Analysis error:', {
