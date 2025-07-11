@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Globe, Zap, Check, AlertCircle, ArrowRight, Sparkles, TrendingUp, Palette, Image, ChevronRight, Eye, Download, Share2, RefreshCw, Target, Layers, Loader2, ExternalLink } from 'lucide-react';
+import { Globe, Zap, Check, AlertCircle, ArrowRight, Sparkles, TrendingUp, Palette, Image, Download, Share2, RefreshCw, Target, Layers, Loader2, ExternalLink } from 'lucide-react';
 import Logo from '../components/Logo';
 
 function AuditPage() {
