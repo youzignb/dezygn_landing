@@ -32,7 +32,7 @@ const PricingPage = () => {
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <Link to="/" className="text-gray-600 hover:text-purple-600 transition">Home</Link>
-            <Link to="/special" className="text-gray-600 hover:text-purple-600 transition">Special</Link>
+            <Link to="/audit" className="text-gray-600 hover:text-purple-600 transition">Audit</Link>
             <Link to="/pricing" className="text-gray-900 font-bold hover:text-purple-600 transition">Pricing</Link>
             <Link to="/report" className="text-gray-600 hover:text-purple-600 transition">Report</Link>
             <a 
