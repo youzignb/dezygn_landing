@@ -448,12 +448,26 @@ function AuditPage() {
                 <Palette className="w-5 h-5 text-purple-500" />
                 Brand Identity Detected
               </h4>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4">
                 <div>
                   <p className="text-sm text-gray-500 mb-2">Primary Color</p>
                   <div className="flex items-center gap-2">
                     <div className="w-8 h-8 rounded-lg border-2 border-gray-200" style={{backgroundColor: analysisResults.primary_color}}></div>
                     <span className="font-mono text-sm">{analysisResults.primary_color}</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-2">Secondary Color</p>
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg border-2 border-gray-200" style={{backgroundColor: analysisResults.secondary_color}}></div>
+                    <span className="font-mono text-sm">{analysisResults.secondary_color}</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-2">Background Color</p>
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg border-2 border-gray-200" style={{backgroundColor: analysisResults.background_color}}></div>
+                    <span className="font-mono text-sm">{analysisResults.background_color}</span>
                   </div>
                 </div>
                 <div>
@@ -474,6 +488,20 @@ function AuditPage() {
                       ></div>
                     </div>
                     <span className="text-sm font-bold">{analysisResults.aiReadyScore}%</span>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Additional Brand Details */}
+              <div className="mt-6 pt-6 border-t">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">Core Values</p>
+                    <p className="text-sm font-medium">{analysisResults.core_values}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-gray-500 mb-2">Key Visual Elements</p>
+                    <p className="text-sm font-medium">{analysisResults.key_visual_elements}</p>
                   </div>
                 </div>
               </div>
