@@ -375,9 +375,12 @@ Visit: https://dezygn.com`;
 
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-6 py-12">
-        {/* New Analysis Button - only show when analysis is complete */}
+        {/* Business Name and New Analysis Button - only show when analysis is complete */}
         {analysisComplete && (
-          <div className="flex justify-end mb-8">
+          <div className="flex justify-between items-center mb-8">
+            <h2 className="text-3xl font-black text-gray-900">
+              {analysisResults.name}
+            </h2>
             <button 
               onClick={resetAnalysis}
               className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg font-medium text-gray-700 transition-all"
@@ -495,11 +498,8 @@ Visit: https://dezygn.com`;
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-gray-900 mb-1">
-                      {analysisResults.name}
-                    </h3>
-                    <p className="text-sm text-gray-500 mb-1">
                       Dezygn Opportunity Score
-                    </p>
+                    </h3>
                     <p className="text-gray-600">
                       <span className="font-bold text-purple-600">{analysisResults.businessType}</span>
                     </p>
@@ -514,7 +514,7 @@ Visit: https://dezygn.com`;
                     className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg font-medium text-gray-700 transition-all"
                   >
                     <Download className="w-4 h-4" />
-                    Download Report
+                    Download
                   </button>
                   <button 
                     onClick={shareReport}
