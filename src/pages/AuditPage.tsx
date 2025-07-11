@@ -419,8 +419,11 @@ function AuditPage() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-black text-gray-900 mb-1">
-                      Dezygn Opportunity Score
+                      {analysisResults.name}
                     </h3>
+                    <p className="text-sm text-gray-500 mb-1">
+                      Dezygn Opportunity Score
+                    </p>
                     <p className="text-gray-600">
                       <span className="font-bold text-purple-600">{analysisResults.businessType}</span>
                     </p>
@@ -801,7 +804,7 @@ function AuditPage() {
                           Turn 1 design into 20+ assets
                         </h5>
                         <p className="text-gray-600 text-sm">
-                          Dezygn's AI automatically adapts your content for every platform and format
+                          Dezygn's AI specializes in {analysisResults.industry} visual content
                         </p>
                       </div>
                     </div>
