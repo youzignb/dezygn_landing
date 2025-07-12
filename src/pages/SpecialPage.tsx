@@ -228,16 +228,15 @@ function SpecialPage() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            <span className="text-sm font-medium text-gray-700">The AI Creative Revolution That's Minting New Millionaires</span>
+            <span className="text-sm font-medium text-gray-700">"The $38 Million AI Creative Revolution Happening Right Under Your Nose"</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-5xl md:text-7xl font-black mb-6 leading-[1.1] tracking-tight">
-            <span className="block text-gray-900">The AI Creative Revolution</span>
+            <span className="block text-gray-900">The <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600">$38 Million</span> AI Creative</span>
+            <span className="block text-gray-900"><span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600">Revolution</span> Happening Right</span>
             <span className="relative inline-block mt-2">
-              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600">
-                That's Minting New Millionaires
-              </span>
+              <span className="relative z-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-500 to-blue-600">Under Your Nose</span>
               <svg className="absolute -bottom-2 left-0 w-full" height="12" viewBox="0 0 300 12" fill="none">
                 <path d="M2 10C50 2 100 2 150 10C200 2 250 2 298 10" stroke="url(#gradient)" strokeWidth="3" strokeLinecap="round"/>
                 <defs>
@@ -248,12 +247,10 @@ function SpecialPage() {
                 </defs>
               </svg>
             </span>
-            <span className="block text-gray-900 mt-2">(While 88% of People Still Don't Know It Exists)</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-            296 new AI design jobs posted every single day at $360 average...
-            and only 12% of creatives have figured out how to claim them.
+            296 jobs posted daily at $360 average. 12% claiming them. 88% still "researching".
             <span className="block mt-2 font-bold text-purple-600">This window closes fast.</span>
           </p>
           
