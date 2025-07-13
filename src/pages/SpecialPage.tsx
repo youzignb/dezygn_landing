@@ -3387,11 +3387,89 @@ function SpecialPage() {
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
                 <span>FusionCanvas™ ($197 value)</span>
               </div>
+              <div className="flex items-center gap-3">
+                <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                <span>Dezygn Audit Tool™ ($297 value)</span>
+              </div>
             </div>
             <div className="text-center pt-6 border-t border-white/20">
               <p className="text-lg mb-2">Total Platform Value: <span className="font-bold">$1,829</span></p>
-              <p className="text-lg">+ Legacy Bonuses: <span className="font-bold text-yellow-400">$1,794</span></p>
-              <p className="text-3xl font-bold mt-4">Total Value: <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-400">$3,126</span></p>
+              <p className="text-lg">+ Legacy Bonuses: <span className="font-bold text-yellow-400">$2,091</span></p>
+              <p className="text-3xl font-bold mt-4">Total Value: <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-pink-400">$3,423</span></p>
+            </div>
+          </div>
+
+          {/* Exclusive Bonus Section - Dezygn Audit Tool */}
+          <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 backdrop-blur-sm rounded-3xl p-8 mb-12 border border-purple-500/30">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-full text-sm font-bold mb-4">
+                <span>🎁</span>
+                <span>EXCLUSIVE BONUS</span>
+              </div>
+              <h3 className="text-3xl font-bold mb-4">Dezygn Audit Tool™</h3>
+              <p className="text-xl text-gray-300 mb-6">Instantly analyze any website and uncover hidden design opportunities worth thousands</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              <div className="space-y-4">
+                <h4 className="text-lg font-bold text-yellow-400 mb-3">This AI-powered audit tool:</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1">•</span>
+                    <span>Scores websites on visual consistency and brand coherence (0-100 score)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1">•</span>
+                    <span>Identifies 3 high-impact quick wins with specific Dezygn features to fix them</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1">•</span>
+                    <span>Detects brand colors, typography, and visual elements automatically</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1">•</span>
+                    <span>Reveals competitive gaps in your industry</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1">•</span>
+                    <span>Suggests content multiplication opportunities (turn 1 design into 20+ assets)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400 mt-1">•</span>
+                    <span>Provides downloadable reports to share with clients or teams</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <h4 className="text-lg font-bold text-blue-400 mb-3">Perfect for:</h4>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400">✓</span>
+                    <span>Agencies pitching new clients (show them what they're missing)</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400">✓</span>
+                    <span>Freelancers identifying upsell opportunities</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400">✓</span>
+                    <span>Business owners improving their own sites</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-400">✓</span>
+                    <span>Anyone wanting to understand modern design standards</span>
+                  </div>
+                </div>
+                
+                <div className="bg-black/30 rounded-xl p-4 mt-6">
+                  <p className="text-sm text-gray-400 mb-2">Regular Price:</p>
+                  <p className="text-2xl font-bold text-gray-500 line-through mb-2">$297/month</p>
+                  <p className="text-sm text-yellow-400 font-bold">Your Price Today:</p>
+                  <p className="text-3xl font-bold text-green-400">FREE</p>
+                  <p className="text-sm text-gray-400">(included in Pro Stack)</p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -3409,7 +3487,7 @@ function SpecialPage() {
             </a>
                           <p className="mt-4 text-lg">
               Only <span className="font-bold text-yellow-400">$49</span> One-Time 
-              <span className="text-gray-400 ml-2">(Save $3,057)</span>
+              <span className="text-gray-400 ml-2">(Save $3,374)</span>
             </p>
           </div>
 
