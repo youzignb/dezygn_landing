@@ -73,6 +73,9 @@ import lelaSocialMediaPost2 from '../assets/images/made-with-dezygn/lela-social-
 import squareAdDezygn from '../assets/images/made-with-dezygn/square-ad-for-dezyg.png';
 import lelaSuncreamWomanHolding from '../assets/images/made-with-dezygn/lela-suncream-womain-holding-in-hand.png';
 
+// Audit Tool
+import dezygn_audit from '../assets/images/audit/dezygn_audit.png';
+
 // Timer Component
 function CountdownTimer({ className = "" }: { className?: string }) {
   // Calculate time until Thursday July 17th, 2025
@@ -3408,6 +3411,16 @@ function SpecialPage() {
               </div>
               <h3 className="text-3xl font-bold mb-4">Dezygn Audit Tool™</h3>
               <p className="text-xl text-gray-300 mb-6">Instantly analyze any website and uncover hidden design opportunities worth thousands</p>
+            </div>
+            
+            {/* Audit Feature Screenshot */}
+            <div className="mb-8 max-w-3xl mx-auto">
+              <img 
+                src={dezygn_audit}
+                alt="Dezygn Audit Tool interface showing website analysis"
+                className="w-full rounded-2xl shadow-2xl border border-purple-500/30"
+                style={{ minWidth: '600px', minHeight: '600px', objectFit: 'cover' }}
+              />
             </div>
             
             <div className="grid md:grid-cols-2 gap-6 mb-8">
