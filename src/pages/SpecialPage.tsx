@@ -78,9 +78,9 @@ import dezygn_audit from '../assets/images/audit/dezygn_audit.png';
 
 // Timer Component
 function CountdownTimer({ className = "" }: { className?: string }) {
-  // Calculate time until Thursday July 17th, 2025
+  // Calculate time until Friday July 18th, 2025
   const getTimeUntilJuly8 = () => {
-    const targetDate = new Date('2025-07-17T23:59:59');
+    const targetDate = new Date('2025-07-18T23:59:59');
     const now = new Date();
     const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
     return timeDiff;
