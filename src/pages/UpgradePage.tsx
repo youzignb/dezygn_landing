@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Check, Clock, Star, ArrowRight, HelpCircle, Shield } from 'lucide-react';
+import { useEffect } from 'react';
+import { Check, Clock, Star, ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
@@ -31,8 +31,6 @@ import galleryMountainVideo from '../assets/images/real-world-demos/brand-dna/ga
 import galleryPoolVideo from '../assets/images/real-world-demos/brand-dna/gallery-pool-video.mp4';
 
 function UpgradePage() {
-  const [tooltipVisible, setTooltipVisible] = useState<string | null>(null);
-  
   // Proof Pixel Script
   useEffect(() => {
     // Load Proof Pixel
@@ -48,9 +46,6 @@ function UpgradePage() {
       }
     };
   }, []);
-
-  const showTooltip = (id: string) => setTooltipVisible(id);
-  const hideTooltip = () => setTooltipVisible(null);
 
   // Add custom styles for animations
   const customStyles = `
