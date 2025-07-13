@@ -1,4 +1,4 @@
-import { Check, Mail, Key, Info, Copy, ExternalLink } from 'lucide-react';
+import { Check, Key, Info, Copy, ExternalLink } from 'lucide-react';
 import Logo from '../components/Logo';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
@@ -170,6 +170,10 @@ export default function SuccessPage() {
           </div>
         </div>
       </footer>
+      
+      {/* PROOF PIXEL */}
+      <script src="https://cdn.useproof.com/proof.js?acc=LHjP4hYhKheR2q4Uvyjk1JhPUDC3" async></script>
+      {/* END PROOF PIXEL */}
     </div>
   );
 }

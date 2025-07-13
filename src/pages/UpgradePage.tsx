@@ -2620,7 +2620,7 @@ function UpgradePage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Freelancer Plan */}
             <div className="group relative">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
@@ -2703,6 +2703,11 @@ function UpgradePage() {
                   <div className="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
                     <Check className="w-5 h-5 text-green-400" />
                     <span className="text-white font-medium">Monthly Template Updates</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30">
+                    <Check className="w-5 h-5 text-indigo-400" />
+                    <span className="text-white font-medium">FREE ConversionZign Access</span>
+                    <span className="text-xs text-indigo-400 font-bold">($249 value)</span>
                   </div>
                 </div>
 
@@ -2800,6 +2805,11 @@ function UpgradePage() {
                     <span className="text-white font-medium">Custom Template Requests</span>
                     <span className="text-xs text-emerald-400 font-bold">(EXCLUSIVE!)</span>
                   </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30">
+                    <Check className="w-5 h-5 text-indigo-400" />
+                    <span className="text-white font-medium">FREE ConversionZign Access</span>
+                    <span className="text-xs text-indigo-400 font-bold">($249 value)</span>
+                  </div>
                 </div>
 
                 <a href="https://dezygn.checkoutpage.com/get-even-more-from-dezygn" className="w-full bg-gradient-to-r from-orange-600 to-red-600 text-white py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 mb-4 block text-center">
@@ -2808,6 +2818,88 @@ function UpgradePage() {
                 
                 <p className="text-center text-sm text-gray-400">
                   Perfect for: Building a real agency with 30+ clients
+                </p>
+              </div>
+            </div>
+
+            {/* ConversionZign Plan */}
+            <div className="group relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-3 rounded-b-2xl font-bold text-sm shadow-lg z-10">
+                🎨 DONE-FOR-YOU
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-85 transition-opacity"></div>
+              <div className="relative bg-gray-800/50 backdrop-blur-sm border-2 border-indigo-500/50 rounded-3xl p-8 pt-12 hover:border-indigo-400/70 transition-all hover:shadow-2xl">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-12 h-12 bg-indigo-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">✨</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-black text-white">ConversionZign</h3>
+                    <p className="text-gray-300">We do everything for you</p>
+                  </div>
+                </div>
+                
+                <div className="mb-8">
+                  <div className="text-center mb-4">
+                    <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-2">
+                      CUSTOM
+                    </div>
+                    <div className="text-lg text-indigo-300 font-bold">Quote-based pricing</div>
+                  </div>
+                  <div className="text-center bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
+                    <div className="flex items-baseline justify-center gap-3 mb-2">
+                      <span className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                        Starting at $297
+                      </span>
+                    </div>
+                    <div className="text-sm text-gray-400">
+                      Per project - includes everything
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mb-8">
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30">
+                    <Check className="w-5 h-5 text-indigo-400" />
+                    <span className="text-white font-medium">Complete project management</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30">
+                    <Check className="w-5 h-5 text-indigo-400" />
+                    <span className="text-white font-medium">Professional designers & AI experts</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30">
+                    <Check className="w-5 h-5 text-indigo-400" />
+                    <span className="text-white font-medium">White-label delivery to your clients</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-xl border border-indigo-500/30">
+                    <Check className="w-5 h-5 text-indigo-400" />
+                    <span className="text-white font-medium">You keep 100% of client fees</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-xl border border-yellow-500/30">
+                    <Check className="w-5 h-5 text-yellow-400" />
+                    <span className="text-white font-medium">Perfect for busy agencies</span>
+                    <span className="text-xs text-yellow-400 font-bold">(Scale without hiring)</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
+                    <Check className="w-5 h-5 text-green-400" />
+                    <span className="text-white font-medium">48-hour turnaround</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-white/5 rounded-xl border border-white/10">
+                    <Check className="w-5 h-5 text-green-400" />
+                    <span className="text-white font-medium">Unlimited revisions</span>
+                  </div>
+                  <div className="flex items-center gap-3 p-3 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-xl border border-emerald-500/30">
+                    <Check className="w-5 h-5 text-emerald-400" />
+                    <span className="text-white font-medium">100% satisfaction guarantee</span>
+                  </div>
+                </div>
+
+                <a href="https://conversionzign.com" className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 mb-4 block text-center">
+                  Get a custom quote →
+                </a>
+                
+                <p className="text-center text-sm text-gray-400">
+                  Perfect for: Agencies who want to focus on sales, not production
                 </p>
               </div>
             </div>
@@ -3021,6 +3113,611 @@ function UpgradePage() {
         </div>
       </section>
 
+      {/* ConversionZign Bonus Section */}
+      <section className="py-24 px-6 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-40 right-20 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+          <div className="absolute bottom-40 left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-reverse"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm border border-indigo-500/30 rounded-full px-8 py-4 text-sm font-bold mb-6">
+              <span className="text-2xl">🎁</span>
+              <span className="text-indigo-300 font-bold text-lg">EXCLUSIVE BONUS</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-black mb-6">
+              FREE ConversionZign Access
+              <span className="block text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mt-2">
+                Included with Every Dezygn Plan ($249 Value)
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Turn your ideas into high-converting landing pages with AI-powered blueprints
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="space-y-6">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                <h3 className="text-2xl font-bold mb-4 flex items-center gap-3">
+                  <span className="text-3xl">🚀</span>
+                  Your AI-Powered Guide to High-Converting Landing Pages
+                </h3>
+                <p className="text-gray-300 mb-4">
+                  ConversionZign is your intelligent assistant that transforms ideas into actionable landing page blueprints. No more staring at blank screens or wondering what to write!
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-400 mt-0.5" />
+                    <span>Create sales pages, one-pagers, and thank you pages in minutes</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-400 mt-0.5" />
+                    <span>Copy any successful website design with AI analysis</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-400 mt-0.5" />
+                    <span>Get conversion-optimized copy and layout suggestions</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <Check className="w-5 h-5 text-green-400 mt-0.5" />
+                    <span>Export to your favorite builders and marketing tools</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30">
+                <h4 className="text-xl font-bold mb-6 text-center">What You Get with ConversionZign</h4>
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+                    <span className="font-semibold">Monthly Landing Pages</span>
+                    <span className="text-indigo-400 font-bold">50-100 pages</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-white/5 rounded-xl">
+                    <span className="font-semibold">Regular Price</span>
+                    <span className="text-gray-400 line-through">$29-$249/month</span>
+                  </div>
+                  <div className="flex items-center justify-between p-4 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl border border-green-500/30">
+                    <span className="font-semibold">Your Price</span>
+                    <span className="text-green-400 font-bold text-xl">FREE Forever</span>
+                  </div>
+                </div>
+                <p className="text-center text-sm text-gray-400 mt-6">
+                  That's up to $2,988/year in savings!
+                </p>
+              </div>
+
+              <div className="text-center">
+                <p className="text-lg text-indigo-300 font-semibold mb-4">
+                  Ready to create landing pages that convert?
+                </p>
+                <a href="https://dezygn.checkoutpage.com/get-even-more-from-dezygn" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                  <span>Claim Your Free ConversionZign Access</span>
+                  <span className="text-xl">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* VEO3 Video Section */}
+      <section className="py-24 px-6 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 right-40 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float"></div>
+          <div className="absolute bottom-20 left-40 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-float-reverse"></div>
+          <div className="absolute inset-0 opacity-5">
+            <div className="absolute inset-0" style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grid-gradient' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234F46E5;stop-opacity:0.1' /%3E%3Cstop offset='100%25' style='stop-color:%237C3AED;stop-opacity:0.1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0h100v100H0z' fill='url(%23grid-gradient)'/%3E%3Cpath d='M0 50h100M50 0v100' stroke='rgba(255,255,255,0.05)' stroke-width='0.5'/%3E%3C/svg%3E")`,
+              backgroundSize: '100px 100px'
+            }}></div>
+          </div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-8 py-4 text-sm font-bold mb-6">
+              <span className="text-2xl">🎬</span>
+              <span className="text-blue-300 font-bold text-lg">WORLD'S MOST ADVANCED AI VIDEO MODEL</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-black mb-6">
+              Go Viral with VEO3
+              <span className="block text-3xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mt-2">
+                Create Videos That Get Millions of Views
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              The same AI technology behind viral Yeti and Penguin videos that are taking over social media. 
+              Generate professional videos with perfect audio sync that captivate audiences.
+            </p>
+          </div>
+
+          {/* Benefits Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-blue-500/50 transition-all">
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold mb-3">Go Viral Instantly</h3>
+              <p className="text-gray-300">
+                Join the viral sensation - Yeti and penguin meme videos are hitting millions of views across all platforms
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all">
+              <div className="text-4xl mb-4">🎵</div>
+              <h3 className="text-xl font-bold mb-3">Perfect Audio Sync</h3>
+              <p className="text-gray-300">
+                VEO3 is the only model that generates video and audio simultaneously for perfect synchronization
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-pink-500/50 transition-all">
+              <div className="text-4xl mb-4">💎</div>
+              <h3 className="text-xl font-bold mb-3">Professional Quality</h3>
+              <p className="text-gray-300">
+                Create stunning videos that rival professional productions - no filming, no editing, just pure AI magic
+              </p>
+            </div>
+          </div>
+
+          {/* Video Examples Section */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-center mb-8">
+              See What's Possible with VEO3
+            </h3>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Video 1 */}
+              <div className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-blue-500/50 transition-all">
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="text-6xl mb-4">🎬</div>
+                      <p className="text-sm text-gray-300 font-semibold">Viral Yeti Dancing</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <a href="https://www.youtube.com/watch?v=-UW6nMGN2Bw" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group-hover:text-blue-400 transition-colors">
+                    <span className="font-semibold">Watch Example →</span>
+                    <span className="text-xs text-gray-400">2.1M views</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Video 2 */}
+              <div className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all">
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-pink-600/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="text-6xl mb-4">🐧</div>
+                      <p className="text-sm text-gray-300 font-semibold">Penguin Adventures</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <a href="https://www.youtube.com/watch?v=McFChYae6p8" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group-hover:text-purple-400 transition-colors">
+                    <span className="font-semibold">Watch Example →</span>
+                    <span className="text-xs text-gray-400">3.5M views</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Video 3 */}
+              <div className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-pink-500/50 transition-all">
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-pink-600/20 to-orange-600/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="text-6xl mb-4">🎭</div>
+                      <p className="text-sm text-gray-300 font-semibold">Character Animation</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <a href="https://www.youtube.com/watch?v=FcCF-bRa1uY" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group-hover:text-pink-400 transition-colors">
+                    <span className="font-semibold">Watch Example →</span>
+                    <span className="text-xs text-gray-400">1.8M views</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Video 4 */}
+              <div className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-green-500/50 transition-all">
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-600/20 to-blue-600/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="text-6xl mb-4">🎪</div>
+                      <p className="text-sm text-gray-300 font-semibold">Epic Yeti Compilation</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <a href="https://www.youtube.com/watch?v=j4CT5dZe8ZA" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group-hover:text-green-400 transition-colors">
+                    <span className="font-semibold">Watch Example →</span>
+                    <span className="text-xs text-gray-400">5.2M views</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* Video 5 */}
+              <div className="group relative bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-yellow-500/50 transition-all md:col-span-2 lg:col-span-1">
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-600/20 to-red-600/20"></div>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <div className="text-6xl mb-4">🔥</div>
+                      <p className="text-sm text-gray-300 font-semibold">Viral Dance Moves</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-4">
+                  <a href="https://www.youtube.com/watch?v=-UW6nMGN2Bw" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between group-hover:text-yellow-400 transition-colors">
+                    <span className="font-semibold">Watch Example →</span>
+                    <span className="text-xs text-gray-400">4.7M views</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <div className="inline-block bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30">
+              <h3 className="text-2xl font-bold mb-4">
+                Ready to Create Your First Viral Video?
+              </h3>
+              <p className="text-gray-300 mb-6 max-w-2xl">
+                Join thousands of creators using VEO3 to generate content that captivates millions. 
+                No filming, no editing, just pure creative freedom.
+              </p>
+              <a href="https://dezygn.checkoutpage.com/get-even-more-from-dezygn" className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <span className="text-xl">Start Creating Viral Videos</span>
+                <span className="text-2xl">🚀</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-24 px-6 bg-gradient-to-br from-gray-50 via-purple-50/30 to-blue-50/30 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 right-20 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-reverse"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-purple-500/20 rounded-full px-8 py-4 text-sm font-bold mb-6">
+              <span className="text-2xl">❓</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 text-lg">FREQUENTLY ASKED QUESTIONS</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6">
+              Got Questions? <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600">We've Got Answers</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Everything you need to know about Dezygn's plans and features
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {/* FAQ 1 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                What's the difference between Dezygn and ConversionZign?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Dezygn is our self-service AI design platform where you create everything yourself using our tools. ConversionZign is our done-for-you service where our team of designers and AI experts handle your projects from start to finish. Think of Dezygn as your creative toolkit, and ConversionZign as your creative team.
+              </p>
+            </div>
+
+            {/* FAQ 2 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                Can I upgrade or downgrade my plan anytime?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Absolutely! You can upgrade to a higher plan instantly and see the changes immediately. When downgrading, the change takes effect at your next billing cycle. Your founder's discount is locked in forever, regardless of which plan you choose.
+              </p>
+            </div>
+
+            {/* FAQ 3 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                What happens after my 7-day free trial?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> After your 7-day free trial, you'll be automatically enrolled in your chosen plan at the founder's price (30% off regular pricing). You can cancel anytime during the trial with no charges. If you continue, you'll keep this special pricing forever - even if we raise prices in the future.
+              </p>
+            </div>
+
+            {/* FAQ 4 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                Do unused credits roll over to the next month?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Monthly subscription credits don't roll over - they refresh each billing cycle. However, any credits you purchase separately (credit packs) never expire and can be used anytime. This gives you flexibility to handle both regular work and sudden client rushes.
+              </p>
+            </div>
+
+            {/* FAQ 5 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                What's included in Brand DNA training?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Brand DNA training lets you upload 20 images of any logo, character, product, or person to create a custom AI model. This ensures 100% consistency across all your designs. You get 5 trainings/month on Freelancer or 10/month on Agency, plus dedicated Zoom support to ensure perfect results. Each training creates a permanent model you can use unlimited times.
+              </p>
+            </div>
+
+            {/* FAQ 6 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                How does the Triple Money Back Guarantee work?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> We're so confident in our system that if you follow our AI Agency Academy training and use Dezygn consistently for 365 days, and don't make at least 3X your investment back, we'll refund you 3X what you paid us. That's right - we'll pay YOU for trying. This isn't just a guarantee, it's our commitment to your success.
+              </p>
+            </div>
+
+            {/* FAQ 7 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                Can I use Dezygn designs for commercial projects?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Yes! Everything you create with Dezygn comes with full commercial rights. You own 100% of your creations and can use them for client work, sell them, or use them in any commercial project. There are no additional licensing fees or royalties - create once, profit forever.
+              </p>
+            </div>
+
+            {/* FAQ 8 */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                What's the difference between monthly credits and credit packs?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Monthly credits come with your subscription (500 for Freelancer, 1,500 for Agency) and refresh each month. Credit packs are one-time purchases that never expire - perfect for busy periods or large projects. You can stack them with your monthly credits for maximum flexibility. Plus, the more credits you buy at once, the more you save (up to 33% off).
+              </p>
+            </div>
+
+            {/* FAQ 9 - Cancel Subscription */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                Can I cancel my subscription at any time?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Yes! You're in full control. Simply go to Settings, click on "Manage Subscription", and you can upgrade, downgrade, or cancel your subscription whenever you want. There are no long-term contracts or cancellation fees - you're always in charge of your account.
+              </p>
+            </div>
+
+            {/* FAQ 10 - Additional Credits Pricing */}
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg border border-purple-100 hover:shadow-xl transition-shadow">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-start gap-3">
+                <span className="text-purple-600">Q:</span>
+                How much do additional credits cost?
+              </h3>
+              <p className="text-gray-600 leading-relaxed">
+                <span className="font-semibold text-purple-600">A:</span> Need more credits? We offer flexible credit packs: 5,000 credits for $99, 12,000 credits for $199 (save 20%), or 30,000 credits for $399 (save 33%). These credits never expire and stack with your monthly allowance. Perfect for busy periods or large projects!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Credit Packs Section */}
+      <section id="credit-packs" className="py-24 px-6 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23fff' stroke-width='0.5' opacity='0.3'%3E%3Cpath d='M0 30h60M30 0v60M0 0l60 60M60 0L0 60'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '60px 60px'
+          }}></div>
+        </div>
+
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-full px-8 py-4 text-sm font-semibold mb-6">
+              <span className="text-2xl">💎</span>
+              <span className="text-yellow-300 font-bold text-lg">NEED MORE CREDITS?</span>
+            </div>
+            
+            <h2 className="text-4xl md:text-6xl font-black mb-6">
+              Boost Your Creative Power
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Running out of credits? Stock up with our credit packs and save up to 33%
+            </p>
+
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 max-w-2xl mx-auto mb-12">
+              <h3 className="text-xl font-bold mb-4">💡 Credit Usage Guide</h3>
+              <div className="grid md:grid-cols-3 gap-6 text-left">
+                <div>
+                  <div className="text-yellow-400 font-bold mb-2">Images</div>
+                  <div className="text-sm text-gray-300">1 credit = 1 image</div>
+                </div>
+                <div>
+                  <div className="text-orange-400 font-bold mb-2">Videos</div>
+                  <div className="text-sm text-gray-300">10 credits = 1 video</div>
+                </div>
+                <div>
+                  <div className="text-red-400 font-bold mb-2">Brand DNA</div>
+                  <div className="text-sm text-gray-300">100 credits = 1 training</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {/* Starter Pack */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-600 to-gray-700 rounded-3xl blur-xl opacity-50 group-hover:opacity-75 transition-opacity"></div>
+              <div className="relative bg-gray-800/50 backdrop-blur-sm border border-gray-600/50 rounded-3xl p-8 hover:border-gray-500/70 transition-all hover:shadow-2xl">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-black text-white mb-2">Starter Pack</h3>
+                  <p className="text-gray-400">Perfect for small projects</p>
+                </div>
+                
+                <div className="text-center mb-8">
+                  <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-gray-400 to-gray-300 mb-2">
+                    5,000
+                  </div>
+                  <div className="text-lg text-gray-400">credits</div>
+                  <div className="text-3xl font-bold text-white mt-4">$99</div>
+                  <div className="text-sm text-gray-400 mt-2">$0.0198 per credit</div>
+                </div>
+
+                <div className="space-y-3 mb-8 text-sm">
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>5,000 images</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>500 videos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>50 Brand DNA trainings</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>Never expires</span>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gray-600 text-white py-3 rounded-xl font-bold hover:bg-gray-500 transition-all">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+
+            {/* Pro Pack */}
+            <div className="group relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-2 rounded-b-xl font-bold text-sm shadow-lg z-10">
+                SAVE 20%
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-85 transition-opacity"></div>
+              <div className="relative bg-gray-800/50 backdrop-blur-sm border-2 border-green-500/50 rounded-3xl p-8 pt-12 hover:border-green-400/70 transition-all hover:shadow-2xl">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-black text-white mb-2">Pro Pack</h3>
+                  <p className="text-gray-400">Most popular choice</p>
+                </div>
+                
+                <div className="text-center mb-8">
+                  <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400 mb-2">
+                    12,000
+                  </div>
+                  <div className="text-lg text-gray-400">credits</div>
+                  <div className="text-3xl font-bold text-white mt-4">$199</div>
+                  <div className="text-sm text-gray-400 mt-2">
+                    <span className="line-through">$238</span>
+                    <span className="text-green-400 ml-2">$0.0166 per credit</span>
+                  </div>
+                </div>
+
+                <div className="space-y-3 mb-8 text-sm">
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>12,000 images</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>1,200 videos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>120 Brand DNA trainings</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>Never expires</span>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 rounded-xl font-bold hover:shadow-xl transform hover:scale-105 transition-all">
+                  Buy Now - Best Value
+                </button>
+              </div>
+            </div>
+
+            {/* Studio Pack */}
+            <div className="group relative">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-b-xl font-bold text-sm shadow-lg z-10">
+                SAVE 33%
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-85 transition-opacity"></div>
+              <div className="relative bg-gray-800/50 backdrop-blur-sm border-2 border-purple-500/50 rounded-3xl p-8 pt-12 hover:border-purple-400/70 transition-all hover:shadow-2xl">
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-black text-white mb-2">Studio Pack</h3>
+                  <p className="text-gray-400">For power users</p>
+                </div>
+                
+                <div className="text-center mb-8">
+                  <div className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-2">
+                    30,000
+                  </div>
+                  <div className="text-lg text-gray-400">credits</div>
+                  <div className="text-3xl font-bold text-white mt-4">$399</div>
+                  <div className="text-sm text-gray-400 mt-2">
+                    <span className="line-through">$594</span>
+                    <span className="text-purple-400 ml-2">$0.0133 per credit</span>
+                  </div>
+                </div>
+
+                <div className="space-y-3 mb-8 text-sm">
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>30,000 images</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>3,000 videos</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>300 Brand DNA trainings</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-300">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span>Never expires</span>
+                  </div>
+                </div>
+
+                <button className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-bold hover:shadow-xl transform hover:scale-105 transition-all">
+                  Buy Now - Maximum Savings
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 backdrop-blur-sm text-white px-12 py-6 rounded-2xl shadow-xl border border-yellow-500/30">
+              <div className="text-4xl">🎯</div>
+              <div>
+                <div className="text-xl font-bold">Pro Tip: Buy in bulk and save!</div>
+                <div className="text-yellow-200">Credits never expire - stock up during busy seasons</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="px-6 py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
         <div className="max-w-6xl mx-auto">
@@ -3038,6 +3735,10 @@ function UpgradePage() {
           </div>
         </div>
       </footer>
+      
+      {/* PROOF PIXEL */}
+      <script src="https://cdn.useproof.com/proof.js?acc=LHjP4hYhKheR2q4Uvyjk1JhPUDC3" async></script>
+      {/* END PROOF PIXEL */}
     </div>
   );
 }
