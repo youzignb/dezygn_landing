@@ -3246,8 +3246,7 @@ function SpecialPage() {
             </p>
             <button 
               onClick={() => {
-                const element = document.getElementById('cta');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
               }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
@@ -3774,8 +3773,7 @@ function SpecialPage() {
           <div className="mb-12">
             <button 
               onClick={() => {
-                const element = document.getElementById('cta');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
               }}
               className="group relative inline-flex items-center gap-4 bg-gradient-to-r from-yellow-500 to-red-500 text-white text-2xl px-12 py-6 rounded-full font-black shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 mb-6"
             >
