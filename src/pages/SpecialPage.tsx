@@ -205,8 +205,7 @@ function SpecialPage() {
           {/* Button Right */}
           <button 
             onClick={() => {
-              const element = document.getElementById('cta');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
+              window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
             }}
             className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap"
           >
@@ -275,8 +274,7 @@ function SpecialPage() {
           <div className="flex flex-col items-center gap-4">
             <button 
               onClick={() => {
-                const element = document.getElementById('cta');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
               }}
               className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-lg px-10 py-5 rounded-full font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
@@ -477,8 +475,7 @@ function SpecialPage() {
             </p>
             <button 
               onClick={() => {
-                const element = document.getElementById('cta');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
+                window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
               }}
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             >
@@ -1404,7 +1401,7 @@ function SpecialPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="https://chat.dezygn.com" 
+                  href="https://dezygn.checkoutpage.com/dezygn-legacy-upgrade" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
