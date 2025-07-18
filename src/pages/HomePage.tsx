@@ -127,12 +127,12 @@ const HomePage = () => {
                           Unavailable
                         </span>
                       </div>
-                      <Link
-                        to="/legacy"
+                      <a
+                        href="https://chat.dezygn.com/legacy"
                         className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700 hover:text-white transition-colors"
                       >
                         Dezygn v4 Upgrade
-                      </Link>
+                      </a>
                     </div>
                   )}
                 </div>

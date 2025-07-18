@@ -3690,7 +3690,7 @@ function SpecialPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">I bought Dezygn 1.0, 2.0, zSuite or Branding App in the past?</h3>
-                      <p className="text-gray-600 leading-relaxed">If you are one of our early supporters, you can see if you qualify for extra credits at <a href="https://dezygn.com/legacy" className="text-rose-600 underline hover:text-rose-700">https://dezygn.com/legacy</a>. We still advise you to purchase this upgrade for the unlimited brands, unlimited members, the instashare white label and the 500 bonus credits!</p>
+                      <p className="text-gray-600 leading-relaxed">If you are one of our early supporters, you can see if you qualify for extra credits at <a href="https://chat.dezygn.com/legacy" className="text-rose-600 underline hover:text-rose-700">https://chat.dezygn.com/legacy</a>. We still advise you to purchase this upgrade for the unlimited brands, unlimited members, the instashare white label and the 500 bonus credits!</p>
                     </div>
                     <div className="w-8 h-8 bg-rose-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-rose-200 transition-colors">
                       <ChevronDown className="w-4 h-4 text-rose-600 transform rotate-180" />
