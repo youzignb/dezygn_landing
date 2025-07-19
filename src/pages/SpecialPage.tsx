@@ -78,9 +78,9 @@ import dezygn_audit from '../assets/images/audit/dezygn_audit.png';
 
 // Timer Component
 function CountdownTimer({ className = "" }: { className?: string }) {
-  // Calculate time until Friday July 18th, 2025
+  // Calculate time until Saturday July 19th, 2025
   const getTimeUntilJuly8 = () => {
-    const targetDate = new Date('2025-07-18T23:59:59');
+    const targetDate = new Date('2025-07-19T23:59:59');
     const now = new Date();
     const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
     return timeDiff;
@@ -199,7 +199,7 @@ function SpecialPage() {
           
           {/* Text Middle */}
           <p className="font-semibold text-center flex-1 mx-4">
-            Legacy pricing ends soon → then $49/month forever
+            Late Bird Extension, Last Call Then One-Time Offer Is GONE!
           </p>
           
           {/* Button Right */}
