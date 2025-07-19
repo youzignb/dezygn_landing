@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Check, Clock, Star, ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
@@ -29,6 +29,59 @@ import galleryTimesquare from '../assets/images/real-world-demos/brand-dna/galle
 import galleryVenice from '../assets/images/real-world-demos/brand-dna/gallery-venice.jpg';
 import galleryMountainVideo from '../assets/images/real-world-demos/brand-dna/gallery-mountain-video.mp4';
 import galleryPoolVideo from '../assets/images/real-world-demos/brand-dna/gallery-pool-video.mp4';
+
+// Timer Component
+function CountdownTimer({ className = "" }: { className?: string }) {
+  // Calculate time until Saturday July 19th, 2025
+  const getTimeUntilJuly8 = () => {
+    const targetDate = new Date('2025-07-19T23:59:59');
+    const now = new Date();
+    const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
+    return timeDiff;
+  };
+  
+  const [timeLeft, setTimeLeft] = useState(getTimeUntilJuly8());
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeUntilJuly8());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+  
+  const days = Math.floor(timeLeft / 86400);
+  const hours = Math.floor((timeLeft % 86400) / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
+  const seconds = timeLeft % 60;
+
+  return (
+    <div className={`inline-flex items-center gap-1 ${className}`}>
+      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
+        <span className="font-mono text-lg font-bold text-white">
+          {days.toString().padStart(2, '0')}
+        </span>
+      </div>
+      <span className="text-white/80 font-bold">:</span>
+      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
+        <span className="font-mono text-lg font-bold text-white">
+          {hours.toString().padStart(2, '0')}
+        </span>
+      </div>
+      <span className="text-white/80 font-bold">:</span>
+      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
+        <span className="font-mono text-lg font-bold text-white">
+          {minutes.toString().padStart(2, '0')}
+        </span>
+      </div>
+      <span className="text-white/80 font-bold">:</span>
+      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
+        <span className="font-mono text-lg font-bold text-white">
+          {seconds.toString().padStart(2, '0')}
+        </span>
+      </div>
+    </div>
+  );
+}
 
 function UpgradePage() {
   // Proof Pixel Script
@@ -108,15 +161,17 @@ function UpgradePage() {
       {/* Scarcity Bar */}
       <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
+          {/* Timer Left */}
           <div className="flex items-center gap-3">
-            <Clock className="w-5 h-5 text-white/80" />
-            <span className="font-semibold">🎁 FREE 7-Day Trial + 30% Founders Discount</span>
+            <CountdownTimer />
           </div>
           
+          {/* Text Middle */}
           <p className="font-semibold text-center flex-1 mx-4">
-            Get everything FREE for 7 days, then lock in founder's pricing
+            LAST CHANCE FOR FREE 7 DAY TRIAL
           </p>
           
+          {/* Button Right */}
           <button 
             onClick={() => {
               const element = document.getElementById('pricing');
