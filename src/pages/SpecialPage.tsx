@@ -102,26 +102,26 @@ function CountdownTimer({ className = "" }: { className?: string }) {
 
   return (
     <div className={`inline-flex items-center gap-1 ${className}`}>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
           {days.toString().padStart(2, '0')}
         </span>
       </div>
-      <span className="text-white/80 font-bold">:</span>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
+      <span className="text-yellow-300 font-bold animate-pulse">:</span>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
           {hours.toString().padStart(2, '0')}
         </span>
       </div>
-      <span className="text-white/80 font-bold">:</span>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
+      <span className="text-yellow-300 font-bold animate-pulse">:</span>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
           {minutes.toString().padStart(2, '0')}
         </span>
       </div>
-      <span className="text-white/80 font-bold">:</span>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
+      <span className="text-yellow-300 font-bold animate-pulse">:</span>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
           {seconds.toString().padStart(2, '0')}
         </span>
       </div>
@@ -189,7 +189,7 @@ function SpecialPage() {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
       {/* Scarcity Bar */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 sticky top-0 z-50">
+      <div className="bg-red-600 text-white py-3 px-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           {/* Timer Left */}
           <div className="flex items-center gap-3">
@@ -207,7 +207,7 @@ function SpecialPage() {
             onClick={() => {
               window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
             }}
-            className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap"
+            className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold hover:bg-yellow-300 transition whitespace-nowrap"
           >
             Secure Deal →
           </button>

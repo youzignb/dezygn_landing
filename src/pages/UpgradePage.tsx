@@ -159,7 +159,7 @@ function UpgradePage() {
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
       {/* Scarcity Bar */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 sticky top-0 z-50">
+      <div className="bg-red-600 text-white py-3 px-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           {/* Timer Left */}
           <div className="flex items-center gap-3">
