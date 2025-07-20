@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Check, Star, ArrowRight, Shield, Users, X, TrendingUp, Award, Globe, Sparkles, ChevronDown, Play, Target, CheckCircle, Clock, Zap, BookOpen, FileSearch, Gift, AlertCircle, DollarSign } from 'lucide-react';
+import { Check, Star, ArrowRight, Shield, Users, X, TrendingUp, Award, Globe, Sparkles, ChevronDown, Play, Target, CheckCircle, Clock, Zap, BookOpen, FileSearch, Gift, AlertCircle, DollarSign, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
@@ -142,20 +142,28 @@ function LandingPage() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <Logo variant="light" />
-            <div className="flex items-center gap-4">
-              <Link 
-                to="/pricing" 
-                className="text-white/80 hover:text-white transition-colors hidden md:block"
-              >
+            <Link to="/">
+              <Logo variant="light" />
+            </Link>
+            <div className="hidden md:flex items-center gap-8">
+              <Link to="/audit" className="text-white/80 hover:text-white transition-colors">
+                Audit
+              </Link>
+              <Link to="/pricing" className="text-white/80 hover:text-white transition-colors">
                 Pricing
               </Link>
-              <Link
-                to="/pricing"
-                className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:opacity-90 transition-opacity"
-              >
-                Start Free Trial
+              <Link to="/report" className="text-white/80 hover:text-white transition-colors">
+                Report
               </Link>
+              <a 
+                href="https://chat.dezygn.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
+              >
+                Login
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -1070,45 +1078,64 @@ function LandingPage() {
 
       {/* Footer */}
       <footer className="bg-black/30 backdrop-blur-sm border-t border-white/20 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <Logo className="text-white mb-4" />
-              <p className="text-white/60 text-sm">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
+            <div className="flex flex-col items-center md:items-start">
+              <Logo variant="light" size="md" />
+              <p className="text-white/60 text-sm mt-4 text-center md:text-left">
                 The AI creative platform that turns ideas into income.
               </p>
             </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Product</h4>
-              <ul className="space-y-2 text-white/60">
-                <li><Link to="/pricing" className="hover:text-white transition-colors">Pricing</Link></li>
-                <li><a href="#features" className="hover:text-white transition-colors">Features</a></li>
-                <li><a href="#testimonials" className="hover:text-white transition-colors">Testimonials</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Company</h4>
-              <ul className="space-y-2 text-white/60">
-                <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
-                <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#careers" className="hover:text-white transition-colors">Careers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-white/60">
-                <li><Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
-                <li><Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link></li>
-              </ul>
+            
+            <div className="flex flex-col md:flex-row gap-6 md:gap-12 text-center md:text-left">
+              <Link to="/privacy" className="text-white/80 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-white/80 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <a 
+                href="mailto:support@youzign.com" 
+                className="text-white/80 hover:text-white transition-colors"
+              >
+                Contact Support
+              </a>
+              
+              <div className="relative group">
+                <button className="text-white/80 hover:text-white transition-colors inline-flex items-center gap-1">
+                  Legacy customers
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                <div className="absolute right-0 bottom-full mb-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-700">
+                  <a 
+                    href="https://dezygn.glide.page" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors rounded-t-lg"
+                  >
+                    Dezygn v1
+                  </a>
+                  <div className="relative">
+                    <span className="block px-4 py-3 text-gray-500 cursor-not-allowed">
+                      Dezygn v2
+                    </span>
+                    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-gray-700 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap">
+                      Unavailable
+                    </div>
+                  </div>
+                  <a 
+                    href="https://chat.dezygn.com/legacy"
+                    className="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors rounded-b-lg"
+                  >
+                    Dezygn v4 Upgrade
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-white/60 text-sm">© 2025 Dezygn. All rights reserved.</p>
-            <div className="flex items-center gap-4 mt-4 md:mt-0">
-              <Globe className="w-5 h-5 text-white/60" />
-              <span className="text-white/60 text-sm">Available worldwide</span>
-            </div>
+          <div className="border-t border-white/20 mt-8 pt-8 text-center">
+            <p className="text-white/60 text-sm">© 2025 Youzign SPRL. All rights reserved.</p>
           </div>
         </div>
       </footer>
