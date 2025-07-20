@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, TrendingUp, Clock, Users, Zap, ArrowRight, Target, Play, Camera, Smartphone, Palette, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Layout from '../components/Layout';
 
 function ReportDownloadPage() {
   const [animatedStats, setAnimatedStats] = useState({
