@@ -10,12 +10,24 @@ import TermsPage from './pages/TermsPage';
 import UpgradePage from './pages/UpgradePage';
 import SuccessPage from './pages/SuccessPage';
 import AuditPage from './pages/AuditPage';
+import AboutPage from './pages/AboutPage';
+import FAQPage from './pages/FAQPage';
+import ContactPage from './pages/ContactPage';
+import HelpPage from './pages/HelpPage';
+import FeaturesPage from './pages/FeaturesPage';
+import AccessibilityPage from './pages/AccessibilityPage';
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/faq" element={<FAQPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/help" element={<HelpPage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/accessibility" element={<AccessibilityPage />} />
         <Route path="/special" element={<SpecialPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/report" element={<ReportPage />} />

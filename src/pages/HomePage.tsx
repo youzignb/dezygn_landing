@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Check, Star, ArrowRight, Shield, Users, X, TrendingUp, Award, Sparkles, ChevronDown, Play, Target, CheckCircle, Zap, BookOpen, FileSearch, Gift, AlertCircle, DollarSign, ExternalLink } from 'lucide-react';
+import { Check, Star, ArrowRight, Shield, Users, X, TrendingUp, Award, Sparkles, ChevronDown, Play, Target, CheckCircle, Zap, BookOpen, FileSearch, Gift, AlertCircle, DollarSign } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Logo from '../components/Logo';
+import Layout from '../components/Layout';
 
 // Import key visual assets from existing pages
 import hyperVisionEngine from '../assets/images/toolkit-features/hypervision_engine.png';
@@ -86,37 +86,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link to="/">
-              <Logo variant="light" />
-            </Link>
-            <div className="hidden md:flex items-center gap-8">
-              <Link to="/audit" className="text-white/80 hover:text-white transition-colors">
-                Audit
-              </Link>
-              <Link to="/pricing" className="text-white/80 hover:text-white transition-colors">
-                Pricing
-              </Link>
-              <Link to="/report" className="text-white/80 hover:text-white transition-colors">
-                Report
-              </Link>
-              <a 
-                href="https://chat.dezygn.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300"
-              >
-                Login
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <Layout>
 
       {/* Hero Section with Market Opportunity */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -131,29 +101,29 @@ function LandingPage() {
               
               {/* Main Headline */}
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-                Turn Design Jobs Into<br />
+                Turn Creative Jobs Into<br />
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Recurring Revenue</span>
               </h1>
               
               {/* Subheadline with Market Data */}
               <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-                320 new design jobs posted daily. Average value: $360. Only 12% of people are taking action. 
-                67% adoption predicted by Q4 2025. The window for early movers closes fast.
+                320 new creative jobs posted daily. Video work pays 3.6x more than static design ($688 vs $188 average). 
+                Only 12% have video capabilities. 67% adoption predicted by Q4 2025.
               </p>
 
               {/* Market Opportunity Stats */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto mb-12">
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <div className="text-3xl font-bold text-purple-400">$38M</div>
-                  <div className="text-sm text-white/70">Annual market opportunity</div>
+                  <div className="text-3xl font-bold text-purple-400">$688</div>
+                  <div className="text-sm text-white/70">Average video job value</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <div className="text-3xl font-bold text-blue-400">78%</div>
-                  <div className="text-sm text-white/70">Jobs compatible with AI</div>
+                  <div className="text-3xl font-bold text-blue-400">43%</div>
+                  <div className="text-sm text-white/70">Premium jobs require video</div>
                 </div>
                 <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                   <div className="text-3xl font-bold text-green-400">5 min</div>
-                  <div className="text-sm text-white/70">Average delivery time</div>
+                  <div className="text-sm text-white/70">Video creation time</div>
                 </div>
               </div>
               
@@ -286,13 +256,13 @@ function LandingPage() {
               <img src={skincare1} alt="Product Photography" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-white">Product Photography</h3>
-                  <span className="text-green-400 font-bold">$280/job</span>
+                  <h3 className="text-xl font-semibold text-white">Product Demo Videos</h3>
+                  <span className="text-green-400 font-bold">$800/job</span>
                 </div>
-                <p className="text-white/70 mb-4">Transform basic product shots into premium e-commerce imagery</p>
+                <p className="text-white/70 mb-4">Turn static products into engaging video demonstrations with AI models</p>
                 <div className="flex items-center gap-2 text-sm text-purple-400">
                   <TrendingUp className="w-4 h-4" />
-                  <span>89 jobs posted daily</span>
+                  <span>67 jobs posted daily</span>
                 </div>
               </div>
             </div>
@@ -302,13 +272,13 @@ function LandingPage() {
               <img src={thumbnail1} alt="YouTube Thumbnails" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-white">YouTube Thumbnails</h3>
-                  <span className="text-green-400 font-bold">$150/job</span>
+                  <h3 className="text-xl font-semibold text-white">AI Spokesperson Videos</h3>
+                  <span className="text-green-400 font-bold">$1,200/job</span>
                 </div>
-                <p className="text-white/70 mb-4">Create click-worthy thumbnails that boost view counts</p>
+                <p className="text-white/70 mb-4">Turn portraits into talking brand ambassadors with perfect lipsync</p>
                 <div className="flex items-center gap-2 text-sm text-purple-400">
                   <TrendingUp className="w-4 h-4" />
-                  <span>156 jobs posted daily</span>
+                  <span>43 jobs posted daily</span>
                 </div>
               </div>
             </div>
@@ -318,42 +288,62 @@ function LandingPage() {
               <img src={fashion1} alt="Social Media Content" className="w-full h-48 object-cover" />
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-xl font-semibold text-white">Social Content</h3>
-                  <span className="text-green-400 font-bold">$200/job</span>
+                  <h3 className="text-xl font-semibold text-white">Brand Video Content</h3>
+                  <span className="text-green-400 font-bold">$600/job</span>
                 </div>
-                <p className="text-white/70 mb-4">Design scroll-stopping posts for Instagram, TikTok & more</p>
+                <p className="text-white/70 mb-4">Create consistent character videos for social media campaigns</p>
                 <div className="flex items-center gap-2 text-sm text-purple-400">
                   <TrendingUp className="w-4 h-4" />
-                  <span>234 jobs posted daily</span>
+                  <span>89 jobs posted daily</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Success Formula */}
-          <div className="mt-12 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-white mb-4">The Simple Math of Success</h3>
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-white">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400">3</div>
-                  <div className="text-sm">Clients/week</div>
+          <div className="mt-12 space-y-6">
+            <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-white mb-2">Static Design Math</h3>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-white mb-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-purple-400">5</div>
+                    <div className="text-sm">Jobs/week</div>
+                  </div>
+                  <span className="text-xl">×</span>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-blue-400">$200</div>
+                    <div className="text-sm">Average job</div>
+                  </div>
+                  <span className="text-xl">=</span>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-400">$4,000</div>
+                    <div className="text-sm">Per month</div>
+                  </div>
                 </div>
-                <span className="text-2xl">×</span>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-400">$200</div>
-                  <div className="text-sm">Average job</div>
+              </div>
+            </div>
+            
+            <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 backdrop-blur-sm rounded-2xl p-8 border border-green-400/30">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold text-white mb-2">Add Video = Premium Territory</h3>
+                <div className="flex flex-col md:flex-row items-center justify-center gap-4 text-white mb-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-400">3</div>
+                    <div className="text-sm">Video jobs/week</div>
+                  </div>
+                  <span className="text-xl">×</span>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-emerald-400">$800</div>
+                    <div className="text-sm">Average video job</div>
+                  </div>
+                  <span className="text-xl">=</span>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-yellow-400">$9,600</div>
+                    <div className="text-sm">Per month</div>
+                  </div>
                 </div>
-                <span className="text-2xl">×</span>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400">4</div>
-                  <div className="text-sm">Weeks</div>
-                </div>
-                <span className="text-2xl">=</span>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-400">$2,400</div>
-                  <div className="text-sm">Per month</div>
-                </div>
+                <p className="text-green-400 font-semibold">Video capabilities = 2.4x revenue increase</p>
               </div>
             </div>
           </div>
@@ -387,16 +377,16 @@ function LandingPage() {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="text-3xl font-bold text-green-400 mb-2">Month 3</div>
-              <div className="text-white font-semibold mb-2">$2,700</div>
-              <p className="text-white/70 text-sm">9 clients + premium projects</p>
-              <p className="text-green-400 text-sm mt-2">Video & Brand DNA work</p>
+              <div className="text-white font-semibold mb-2">$6,800</div>
+              <p className="text-white/70 text-sm">6 clients + video projects</p>
+              <p className="text-green-400 text-sm mt-2">AI spokesperson videos</p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 relative">
               <div className="absolute -top-2 -right-2 bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold">GOAL</div>
               <div className="text-3xl font-bold text-yellow-400 mb-2">Month 6</div>
-              <div className="text-white font-semibold mb-2">$10,000+</div>
-              <p className="text-white/70 text-sm">Retainer clients</p>
-              <p className="text-green-400 text-sm mt-2">Full creative agency</p>
+              <div className="text-white font-semibold mb-2">$15,000+</div>
+              <p className="text-white/70 text-sm">Video retainer clients</p>
+              <p className="text-green-400 text-sm mt-2">Premium video agency</p>
             </div>
           </div>
         </div>
@@ -629,20 +619,28 @@ function LandingPage() {
             <div>
               <div className="inline-flex items-center gap-2 bg-green-500/20 rounded-full px-4 py-2 mb-4">
                 <Play className="w-4 h-4 text-green-400" />
-                <span className="text-green-400 font-semibold">Game Changer</span>
+                <span className="text-green-400 font-semibold">Premium Revenue Driver</span>
               </div>
               <h3 className="text-3xl font-bold text-white mb-4">AI Video Generation</h3>
               <p className="text-xl text-white/80 mb-6">
-                Turn any image into engaging video content. From product demos to social media stories, create motion that sells without learning complex video software.
+                While others deliver static designs, you create animated spokespersons, product demos, and brand videos. Video work pays 3.6x more and unlocks $500-2000+ projects.
               </p>
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-black/30 rounded-lg p-3 border border-white/20">
-                  <div className="text-green-400 font-semibold mb-1">Animate</div>
-                  <p className="text-sm text-white/70">Bring products to life</p>
+                  <div className="text-green-400 font-semibold mb-1">Product Demos</div>
+                  <p className="text-sm text-white/70">$800 average value</p>
                 </div>
                 <div className="bg-black/30 rounded-lg p-3 border border-white/20">
-                  <div className="text-blue-400 font-semibold mb-1">Lipsync</div>
-                  <p className="text-sm text-white/70">Make characters speak</p>
+                  <div className="text-blue-400 font-semibold mb-1">AI Spokespersons</div>
+                  <p className="text-sm text-white/70">$1,200 average value</p>
+                </div>
+                <div className="bg-black/30 rounded-lg p-3 border border-white/20">
+                  <div className="text-purple-400 font-semibold mb-1">Brand Videos</div>
+                  <p className="text-sm text-white/70">$600 average value</p>
+                </div>
+                <div className="bg-black/30 rounded-lg p-3 border border-white/20">
+                  <div className="text-yellow-400 font-semibold mb-1">Course Content</div>
+                  <p className="text-sm text-white/70">$2,500+ retainers</p>
                 </div>
               </div>
               <Link
@@ -1025,70 +1023,7 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black/30 backdrop-blur-sm border-t border-white/20 py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-            <div className="flex flex-col items-center md:items-start">
-              <Logo variant="light" size="md" />
-              <p className="text-white/60 text-sm mt-4 text-center md:text-left">
-                The AI creative platform that turns ideas into income.
-              </p>
-            </div>
-            
-            <div className="flex flex-col md:flex-row gap-6 md:gap-12 text-center md:text-left">
-              <Link to="/privacy" className="text-white/80 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-white/80 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <a 
-                href="mailto:support@youzign.com" 
-                className="text-white/80 hover:text-white transition-colors"
-              >
-                Contact Support
-              </a>
-              
-              <div className="relative group">
-                <button className="text-white/80 hover:text-white transition-colors inline-flex items-center gap-1">
-                  Legacy customers
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-                <div className="absolute right-0 bottom-full mb-2 w-48 bg-gray-800 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-700">
-                  <a 
-                    href="https://dezygn.glide.page" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors rounded-t-lg"
-                  >
-                    Dezygn v1
-                  </a>
-                  <div className="relative">
-                    <span className="block px-4 py-3 text-gray-500 cursor-not-allowed">
-                      Dezygn v2
-                    </span>
-                    <div className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2 py-1 bg-gray-700 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap">
-                      Unavailable
-                    </div>
-                  </div>
-                  <a 
-                    href="https://chat.dezygn.com/legacy"
-                    className="block px-4 py-3 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors rounded-b-lg"
-                  >
-                    Dezygn v4 Upgrade
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="border-t border-white/20 mt-8 pt-8 text-center">
-            <p className="text-white/60 text-sm">© 2025 Youzign SPRL. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </Layout>
   );
 }
 

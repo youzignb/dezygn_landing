@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Globe, Zap, Check, AlertCircle, ArrowRight, Sparkles, TrendingUp, Palette, Image, Download, Share2, RefreshCw, Target, Layers, Loader2, ExternalLink } from 'lucide-react';
-import Logo from '../components/Logo';
+import { Globe, Zap, Check, AlertCircle, ArrowRight, Sparkles, TrendingUp, Palette, Image, Download, Share2, RefreshCw, Target, Layers, Loader2 } from 'lucide-react';
+import Layout from '../components/Layout';
 
 function AuditPage() {
   const [websiteUrl, setWebsiteUrl] = useState('');
@@ -345,32 +344,9 @@ Visit: https://dezygn.com`;
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50/30 to-blue-50/30">
-      <style dangerouslySetInnerHTML={{ __html: customStyles }} />
-      
-      {/* Navigation */}
-      <nav className="relative z-50 px-6 py-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/">
-            <Logo variant="default" size="md" />
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-gray-600 hover:text-purple-600 transition">Home</Link>
-            <Link to="/audit" className="text-gray-900 font-bold hover:text-purple-600 transition">Audit</Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-purple-600 transition">Pricing</Link>
-            <Link to="/report" className="text-gray-600 hover:text-purple-600 transition">Report</Link>
-            <a 
-              href="https://chat.dezygn.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-bold hover:shadow-lg transition-all duration-300"
-            >
-              Login
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      </nav>
+    <Layout>
+      <div className="min-h-screen">
+        <style dangerouslySetInnerHTML={{ __html: customStyles }} />
       
 
       {/* Main Content */}
@@ -378,12 +354,12 @@ Visit: https://dezygn.com`;
         {/* Business Name and New Analysis Button - only show when analysis is complete */}
         {analysisComplete && (
           <div className="flex justify-between items-center mb-8">
-            <h2 className="text-3xl font-black text-gray-900">
+            <h2 className="text-3xl font-black text-white">
               {analysisResults.name}
             </h2>
             <button 
               onClick={resetAnalysis}
-              className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg font-medium text-gray-700 transition-all"
+              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg font-medium text-white transition-all"
             >
               <RefreshCw className="w-4 h-4" />
               New Analysis
@@ -395,11 +371,11 @@ Visit: https://dezygn.com`;
           /* URL Input Form */
           <div className="text-center pt-16">
             <div className="mb-8">
-              <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+              <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
                 Get Your
                 <span className="gradient-text"> Dezygn Score</span>
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-white/80 max-w-2xl mx-auto">
                 Let Dezygn identify design and content opportunities to grow your business
               </p>
             </div>
@@ -408,13 +384,13 @@ Visit: https://dezygn.com`;
               <div className="gradient-border">
                 <div className="gradient-border-inner">
                   <div className="flex items-center gap-3 mb-6">
-                    <Globe className="w-6 h-6 text-gray-400" />
+                    <Globe className="w-6 h-6 text-white/60" />
                     <input
                       type="text"
                       value={websiteUrl}
                       onChange={(e) => setWebsiteUrl(e.target.value)}
                       placeholder="Enter website URL (e.g., example.com)"
-                      className="flex-1 text-lg outline-none bg-transparent placeholder:text-gray-400"
+                      className="flex-1 text-lg outline-none bg-transparent placeholder:text-gray-400 text-gray-900"
                       required
                     />
                   </div>
@@ -433,7 +409,7 @@ Visit: https://dezygn.com`;
                     Analyze Website
                   </button>
                   
-                  <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-500">
+                  <div className="mt-6 flex items-center justify-center gap-4 text-sm text-gray-600">
                     <div className="flex items-center gap-2">
                       <Check className="w-4 h-4 text-green-500" />
                       <span>100% Private</span>
@@ -462,8 +438,8 @@ Visit: https://dezygn.com`;
                 <Loader2 className="w-16 h-16 text-white animate-spin" />
               </div>
             </div>
-            <h3 className="text-2xl font-black text-gray-900 mb-4">Analyzing {websiteUrl}...</h3>
-            <p className="text-gray-600 mb-6">This typically takes 1-2 minutes for a comprehensive analysis</p>
+            <h3 className="text-2xl font-black text-white mb-4">Analyzing {websiteUrl}...</h3>
+            <p className="text-white/70 mb-6">This typically takes 1-2 minutes for a comprehensive analysis</p>
             <div className="space-y-3 max-w-md mx-auto">
               {[
                 'Capturing website visuals...',
@@ -472,7 +448,7 @@ Visit: https://dezygn.com`;
                 'Identifying content opportunities...',
                 'Comparing with industry standards...'
               ].map((step, idx) => (
-                <div key={idx} className="flex items-center gap-3 text-gray-600">
+                <div key={idx} className="flex items-center gap-3 text-white/60">
                   <div className="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></div>
                   <span>{step}</span>
                 </div>
@@ -898,15 +874,8 @@ Visit: https://dezygn.com`;
         )}
       </div>
 
-      {/* Footer */}
-      <footer className="mt-20 px-6 py-8 bg-white border-t">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-sm text-gray-600">
-            Dezygn Audit analyzes visual opportunities using AI. Results are suggestions based on industry best practices.
-          </p>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

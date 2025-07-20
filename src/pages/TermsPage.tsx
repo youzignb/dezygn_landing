@@ -1,33 +1,8 @@
-import { Link } from 'react-router-dom';
-import { ExternalLink } from 'lucide-react';
-import Logo from '../components/Logo';
+import Layout from '../components/Layout';
 
 const TermsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-purple-50/30 to-blue-50/30">
-      {/* Navigation */}
-      <nav className="relative z-50 px-6 py-6">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link to="/">
-            <Logo variant="default" size="md" />
-          </Link>
-          <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-gray-600 hover:text-purple-600 transition">Home</Link>
-            <Link to="/special" className="text-gray-600 hover:text-purple-600 transition">Special</Link>
-            <Link to="/pricing" className="text-gray-600 hover:text-purple-600 transition">Pricing</Link>
-            <Link to="/report" className="text-gray-600 hover:text-purple-600 transition">Report</Link>
-            <a 
-              href="https://chat.dezygn.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-bold hover:shadow-lg transition-all duration-300"
-            >
-              Login
-              <ExternalLink className="w-4 h-4" />
-            </a>
-          </div>
-        </div>
-      </nav>
+    <Layout variant="light">
 
       <div className="max-w-4xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-black text-gray-900 mb-8">Terms of Service</h1>
@@ -206,34 +181,7 @@ const TermsPage = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="px-6 py-16 bg-gradient-to-br from-gray-900 via-purple-900 to-blue-900">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex items-center gap-8">
-              <Logo variant="light" size="md" />
-              <div className="flex flex-col sm:flex-row gap-6 text-white/70">
-                <Link to="/privacy" className="hover:text-white transition-colors">
-                  Privacy Policy
-                </Link>
-                <Link to="/terms" className="text-white font-bold">
-                  Terms of Service
-                </Link>
-                <a 
-                  href="mailto:support@youzign.com" 
-                  className="hover:text-white transition-colors"
-                >
-                  Contact Support
-                </a>
-              </div>
-            </div>
-            <div className="text-white/50 text-sm">
-              © 2025 Youzign SPRL. All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </Layout>
   );
 };
 

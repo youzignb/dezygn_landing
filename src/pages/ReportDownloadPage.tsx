@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, TrendingUp, Clock, Users, Zap, ArrowRight, Target, Play, Camera, Smartphone, Palette, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Logo from '../components/Logo';
+import Layout from '../components/Layout';
 
 function ReportDownloadPage() {
   const [animatedStats, setAnimatedStats] = useState({
@@ -577,12 +577,11 @@ Start your transformation today: https://dezygn.com/start
         .stagger-4 { animation-delay: 0.4s; }
       `}</style>
       
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-sm border-b border-purple-200">
-        <div className="max-w-7xl mx-auto px-4 py-4">
+      {/* Report Header */}
+      <div className="bg-white/80 backdrop-blur-sm border-b border-purple-200 py-4">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Logo variant="default" size="md" />
               <h1 className="text-2xl font-black text-gray-900">State of AI Creative Work</h1>
             </div>
             <div className="flex items-center gap-4">
@@ -606,7 +605,7 @@ Start your transformation today: https://dezygn.com/start
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Hero Section */}
       <section className="relative py-24 px-4 overflow-hidden">
@@ -1125,8 +1124,8 @@ Start your transformation today: https://dezygn.com/start
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="px-6 py-8 bg-gray-900 text-white">
+      {/* Report Footer */}
+      <div className="px-6 py-8 bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-6">
@@ -1147,7 +1146,7 @@ Start your transformation today: https://dezygn.com/start
             </div>
           </div>
         </div>
-      </footer>
+      </div>
 
       {/* Job Samples Modal */}
       {showJobSamples && (
