@@ -107,8 +107,7 @@ function LandingPage() {
               
               {/* Subheadline with Market Data */}
               <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-                320 new creative jobs posted daily. Video work pays 3.6x more than static design ($688 vs $188 average). 
-                Only 12% have video capabilities. 67% adoption predicted by Q4 2025.
+                What others can't create, you deliver in minutes. 296 jobs posted daily at $360 average—but only 12% are claiming them while 88% keep "researching." Brand DNA™ and video capabilities unlock the premium work that separates pros from amateurs.
               </p>
 
               {/* Market Opportunity Stats */}

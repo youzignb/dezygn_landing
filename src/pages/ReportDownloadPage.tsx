@@ -550,7 +550,7 @@ Start your transformation today: https://dezygn.com/start
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-purple-50/30 to-blue-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/50 to-gray-900">
       <style>{`
         @keyframes slideUp {
           from { opacity: 0; transform: translateY(30px); }
