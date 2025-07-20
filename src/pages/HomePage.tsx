@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Check, Star, ArrowRight, Shield, Users, X, TrendingUp, Award, Globe, Sparkles, ChevronDown, Play, Target, CheckCircle, Clock, Zap, BookOpen, FileSearch, Gift, AlertCircle, DollarSign, ExternalLink } from 'lucide-react';
+import { Check, Star, ArrowRight, Shield, Users, X, TrendingUp, Award, Sparkles, ChevronDown, Play, Target, CheckCircle, Zap, BookOpen, FileSearch, Gift, AlertCircle, DollarSign, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
 
@@ -77,57 +77,6 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-// Countdown Timer Component
-function CountdownTimer() {
-  const getTimeUntilDeadline = () => {
-    const targetDate = new Date('2025-07-19T23:59:59');
-    const now = new Date();
-    const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
-    return timeDiff;
-  };
-  
-  const [timeLeft, setTimeLeft] = useState(getTimeUntilDeadline());
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(getTimeUntilDeadline());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-  
-  const days = Math.floor(timeLeft / 86400);
-  const hours = Math.floor((timeLeft % 86400) / 3600);
-  const minutes = Math.floor((timeLeft % 3600) / 60);
-  const seconds = timeLeft % 60;
-
-  return (
-    <div className="inline-flex items-center gap-1">
-      <div className="bg-black/50 backdrop-blur-sm rounded px-2 py-1">
-        <span className="font-mono text-sm font-bold text-white">
-          {days.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white/80 text-sm font-bold">:</span>
-      <div className="bg-black/50 backdrop-blur-sm rounded px-2 py-1">
-        <span className="font-mono text-sm font-bold text-white">
-          {hours.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white/80 text-sm font-bold">:</span>
-      <div className="bg-black/50 backdrop-blur-sm rounded px-2 py-1">
-        <span className="font-mono text-sm font-bold text-white">
-          {minutes.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white/80 text-sm font-bold">:</span>
-      <div className="bg-black/50 backdrop-blur-sm rounded px-2 py-1">
-        <span className="font-mono text-sm font-bold text-white">
-          {seconds.toString().padStart(2, '0')}
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function LandingPage() {
   const [isVisible, setIsVisible] = useState(false);
