@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
+import HomeArchivePage from './pages/HomeArchivePage';
 import SpecialPage from './pages/SpecialPage';
 import PricingPage from './pages/PricingPage';
 import ReportPage from './pages/ReportPage';
@@ -22,6 +23,7 @@ function App() {
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
         <Route path="/upgrade" element={<UpgradePage />} />
+        <Route path="/home-archive" element={<HomeArchivePage />} />
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/audit" element={<AuditPage />} />
       </Routes>
