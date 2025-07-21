@@ -16,6 +16,7 @@ import ContactPage from './pages/ContactPage';
 import HelpPage from './pages/HelpPage';
 import FeaturesPage from './pages/FeaturesPage';
 import AccessibilityPage from './pages/AccessibilityPage';
+import V1AccessPage from './pages/V1AccessPage';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/home-archive" element={<HomeArchivePage />} />
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/audit" element={<AuditPage />} />
+        <Route path="/v1" element={<V1AccessPage />} />
       </Routes>
     </Router>
   );
