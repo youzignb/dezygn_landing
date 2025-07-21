@@ -130,9 +130,6 @@ export default function V1AccessPage() {
                         follow this link
                       </a>.
                     </p>
-                    <p className="text-sm text-gray-600">
-                      If you already upgraded, you can simply click on the Login link at the top of this page.
-                    </p>
                   </div>
                 </div>
               </div>
