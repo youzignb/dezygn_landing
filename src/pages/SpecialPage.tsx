@@ -78,19 +78,19 @@ import dezygn_audit from '../assets/images/audit/dezygn_audit.png';
 
 // Timer Component
 function CountdownTimer({ className = "" }: { className?: string }) {
-  // Calculate time until Saturday July 19th, 2025
-  const getTimeUntilJuly8 = () => {
-    const targetDate = new Date('2025-07-19T23:59:59');
+  // Calculate time until Friday July 25th, 2025
+  const getTimeUntilJuly25 = () => {
+    const targetDate = new Date('2025-07-25T00:00:00');
     const now = new Date();
     const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
     return timeDiff;
   };
   
-  const [timeLeft, setTimeLeft] = useState(getTimeUntilJuly8());
+  const [timeLeft, setTimeLeft] = useState(getTimeUntilJuly25());
   
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTimeUntilJuly8());
+      setTimeLeft(getTimeUntilJuly25());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
@@ -199,7 +199,7 @@ function SpecialPage() {
           
           {/* Text Middle */}
           <p className="font-semibold text-center flex-1 mx-4">
-            Late Bird Extension, Last Call Then One-Time Offer Is GONE!
+            One-Time Special Offer for Youzign & Groove Users - No Recurring!
           </p>
           
           {/* Button Right */}
@@ -286,7 +286,7 @@ function SpecialPage() {
             <div className="flex items-center gap-2 text-sm text-gray-600">
               <span className="font-medium text-purple-600">Get in before the window closes</span>
               <span>•</span>
-              <span className="line-through opacity-60">$49/month</span>
+              <span className="line-through opacity-60">$149/month</span>
               <span className="bg-red-100 text-red-700 px-2 py-0.5 rounded-full text-xs font-bold">Limited Time</span>
             </div>
           </div>
@@ -3283,7 +3283,7 @@ function SpecialPage() {
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 bg-red-500/20 backdrop-blur-sm border border-red-500/50 rounded-full px-6 py-3 mb-8">
               <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-              <span className="text-lg font-bold">SPECIAL LEGACY PRICING EXPIRES IN <CountdownTimer className="font-mono" /></span>
+              <span className="text-lg font-bold">One-Time Special Offer for Youzign & Groove Users - No Recurring! EXPIRES IN <CountdownTimer className="font-mono" /></span>
               <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
             </div>
             
@@ -3305,16 +3305,16 @@ function SpecialPage() {
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center justify-between text-gray-500 line-through">
                     <span>Monthly subscription</span>
-                    <span className="text-xl">$49/month</span>
+                    <span className="text-xl">$149/month</span>
                   </div>
                   <div className="flex items-center justify-between text-gray-500 line-through">
                     <span>Annual subscription</span>
-                    <span className="text-xl">$499/year</span>
+                    <span className="text-xl">$1,788/year</span>
                   </div>
                 </div>
                 <div className="text-center">
                   <p className="text-gray-500">Total First Year Cost</p>
-                  <p className="text-3xl font-bold text-gray-400 line-through">$588</p>
+                  <p className="text-3xl font-bold text-gray-400 line-through">$1,788</p>
                 </div>
               </div>
             </div>
@@ -3329,7 +3329,7 @@ function SpecialPage() {
                 <h3 className="text-2xl font-bold mb-4 text-yellow-300">Your Legacy Price</h3>
                 <div className="text-center mb-6">
                   <p className="text-xl mb-2">One-Time Payment</p>
-                  <div className="text-7xl font-black text-white mb-2">$49</div>
+                  <div className="text-7xl font-black text-white mb-2">$149</div>
                   <p className="text-lg text-yellow-300">Forever Access</p>
                 </div>
                 <div className="space-y-2">
@@ -3495,8 +3495,8 @@ function SpecialPage() {
               <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-20 transition-opacity"></div>
             </a>
                           <p className="mt-4 text-lg">
-              Only <span className="font-bold text-yellow-400">$49</span> One-Time 
-              <span className="text-gray-400 ml-2">(Save $3,374)</span>
+              Only <span className="font-bold text-yellow-400">$149</span> One-Time 
+              <span className="text-gray-400 ml-2">(Save $3,433)</span>
             </p>
           </div>
 
@@ -3588,7 +3588,7 @@ function SpecialPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 pr-8">Why should I buy this offer?</h3>
-                      <p className="text-gray-600 leading-relaxed">Because after today, Dezygn 4.0 costs $49/MONTH. Forever. This is your only chance to get lifetime access for a one-time $49, plus $1,794 in bonuses that will never be offered again. You're literally saving $3,554.</p>
+                      <p className="text-gray-600 leading-relaxed">Because after today, Dezygn 4.0 costs $149/MONTH. Forever. This is your only chance to get lifetime access for a one-time $149, plus $1,794 in bonuses that will never be offered again. You're literally saving $3,433.</p>
                     </div>
                     <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-green-200 transition-colors">
                       <ChevronDown className="w-4 h-4 text-green-600 transform rotate-180" />
@@ -3672,7 +3672,7 @@ function SpecialPage() {
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-bold mb-3 pr-8">Is this really a one-time payment?</h3>
-                      <p className="text-gray-600 leading-relaxed">Yes! This is a special thank you to our legacy users. You pay $49 once and get lifetime access to Dezygn 4.0, including all future updates to the core image generation features. No hidden fees, no subscriptions, no surprises. This offer expires when the timer hits zero.</p>
+                      <p className="text-gray-600 leading-relaxed">Yes! This is a special thank you to our legacy users. You pay $149 once and get lifetime access to Dezygn 4.0, including all future updates to the core image generation features. No hidden fees, no subscriptions, no surprises. This offer expires when the timer hits zero.</p>
                     </div>
                     <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:bg-indigo-200 transition-colors">
                       <ChevronDown className="w-4 h-4 text-indigo-600 transform rotate-180" />
@@ -3783,8 +3783,8 @@ function SpecialPage() {
             </button>
             
             <div className="space-y-2">
-              <p className="text-2xl font-black text-yellow-400">Just $49 One-Time + $1,794 in Bonuses</p>
-              <p className="text-white/80 text-lg">Remember: When the timer hits zero, it's $49/month forever</p>
+              <p className="text-2xl font-black text-yellow-400">Just $149 One-Time + $1,794 in Bonuses</p>
+              <p className="text-white/80 text-lg">Remember: When the timer hits zero, it's $149/month forever</p>
             </div>
           </div>
           
