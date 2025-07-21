@@ -120,15 +120,15 @@ export default function V1AccessPage() {
                   <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
                     <h3 className="font-bold text-gray-900 mb-2">Want to upgrade?</h3>
                     <p className="text-sm text-gray-700 mb-3">
-                      To upgrade your account to the latest version of Dezygn, follow this link: 
+                      To update your account to the latest version of Dezygn, 
                       <a 
                         href="https://chat.dezygn.com/legacy" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="text-purple-600 hover:text-purple-800 font-medium ml-1"
                       >
-                        https://chat.dezygn.com/legacy
-                      </a>
+                        follow this link
+                      </a>.
                     </p>
                     <p className="text-sm text-gray-600">
                       If you already upgraded, you can simply click on the Login link at the top of this page.
