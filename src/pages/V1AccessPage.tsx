@@ -118,7 +118,7 @@ export default function V1AccessPage() {
                   </p>
                   
                   <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
-                    <h3 className="font-bold text-gray-900 mb-2">Want to upgrade?</h3>
+                    <h3 className="font-bold text-gray-900 mb-2">Free Upgrade Available for v1 Clients</h3>
                     <p className="text-sm text-gray-700 mb-3">
                       To update your account to the latest version of Dezygn, 
                       <a 
