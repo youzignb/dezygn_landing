@@ -130,6 +130,17 @@ export default function V1AccessPage() {
                         follow this link
                       </a>.
                     </p>
+                    <p className="text-sm text-gray-700">
+                      For more information, check our 
+                      <a 
+                        href="https://intercom.help/dezygn/en/articles/11802071-faq-dezygn-4-0-credits-for-appsumo-legacy-customers" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 font-medium ml-1"
+                      >
+                        FAQ for v1 clients
+                      </a>.
+                    </p>
                   </div>
                 </div>
               </div>
