@@ -112,10 +112,28 @@ export default function V1AccessPage() {
                   {isScriptLoaded ? 'Submit' : 'Loading...'}
                 </button>
                 
-                <div className="mt-8 pt-6 border-t border-gray-100">
+                <div className="mt-8 pt-6 border-t border-gray-100 space-y-4">
                   <p className="text-sm text-gray-600">
                     Your v1 images are tagged with your email address. Enter the email you used with Dezygn v1 to access your image library.
                   </p>
+                  
+                  <div className="bg-purple-50 border border-purple-200 rounded-xl p-4">
+                    <h3 className="font-bold text-gray-900 mb-2">Want to upgrade?</h3>
+                    <p className="text-sm text-gray-700 mb-3">
+                      To upgrade your account to the latest version of Dezygn, follow this link: 
+                      <a 
+                        href="https://chat.dezygn.com/legacy" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-purple-600 hover:text-purple-800 font-medium ml-1"
+                      >
+                        https://chat.dezygn.com/legacy
+                      </a>
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      If you already upgraded, you can simply click on the Login link at the top of this page.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
