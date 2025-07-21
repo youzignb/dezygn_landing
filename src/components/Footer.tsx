@@ -106,15 +106,12 @@ export default function Footer() {
                 </button>
                 <div className="absolute left-0 bottom-full mb-2 w-56 bg-gray-800/95 backdrop-blur-sm rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-700">
                   <div className="p-2">
-                    <a 
-                      href="https://dezygn.glide.page" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
+                    <Link 
+                      to="/v1"
                       className="flex items-center gap-2 px-3 py-2 text-gray-300 hover:bg-gray-700 hover:text-white transition-colors rounded text-sm"
                     >
                       Dezygn v1
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
+                    </Link>
                     <div className="relative">
                       <span className="flex items-center gap-2 px-3 py-2 text-gray-500 cursor-not-allowed text-sm">
                         Dezygn v2
