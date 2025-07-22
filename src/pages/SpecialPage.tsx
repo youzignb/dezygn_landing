@@ -80,7 +80,7 @@ import dezygn_audit from '../assets/images/audit/dezygn_audit.png';
 function CountdownTimer({ className = "" }: { className?: string }) {
   // Calculate time until Friday July 25th, 2025
   const getTimeUntilJuly25 = () => {
-    const targetDate = new Date('2025-07-25T00:00:00');
+    const targetDate = new Date('2025-07-25T23:59:59-05:00');
     const now = new Date();
     const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
     return timeDiff;
@@ -189,7 +189,7 @@ function SpecialPage() {
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
       {/* Scarcity Bar */}
-      <div className="bg-red-600 text-white py-3 px-4 sticky top-0 z-50">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
           {/* Timer Left */}
           <div className="flex items-center gap-3">
@@ -207,7 +207,7 @@ function SpecialPage() {
             onClick={() => {
               window.open('https://dezygn.checkoutpage.com/dezygn-legacy-upgrade', '_blank');
             }}
-            className="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold hover:bg-yellow-300 transition whitespace-nowrap"
+            className="bg-white text-purple-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap"
           >
             Secure Deal →
           </button>

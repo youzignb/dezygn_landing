@@ -34,7 +34,7 @@ import galleryPoolVideo from '../assets/images/real-world-demos/brand-dna/galler
 function CountdownTimer({ className = "" }: { className?: string }) {
   // Calculate time until Saturday July 19th, 2025
   const getTimeUntilJuly8 = () => {
-    const targetDate = new Date('2025-07-19T23:59:59');
+    const targetDate = new Date('2025-07-25T23:59:59-05:00');
     const now = new Date();
     const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
     return timeDiff;
@@ -159,16 +159,15 @@ function UpgradePage() {
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
       {/* Scarcity Bar */}
-      <div className="bg-red-600 text-white py-3 px-4 sticky top-0 z-50">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-4 sticky top-0 z-50">
         <div className="flex items-center justify-between max-w-6xl mx-auto">
-          {/* Timer Left */}
           <div className="flex items-center gap-3">
-            <CountdownTimer />
+            <Clock className="w-5 h-5 text-white/80" />
+            <span className="font-semibold">🎁 FREE 7-Day Trial + 30% Founders Discount</span>
           </div>
           
-          {/* Text Middle */}
           <p className="font-semibold text-center flex-1 mx-4">
-            LAST CHANCE FOR FREE 7 DAY TRIAL
+            Get everything FREE for 7 days, then lock in founder's pricing
           </p>
           
           {/* Button Right */}
