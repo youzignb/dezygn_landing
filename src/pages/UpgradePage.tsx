@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Check, Clock, Star, ArrowRight, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
@@ -30,58 +30,6 @@ import galleryVenice from '../assets/images/real-world-demos/brand-dna/gallery-v
 import galleryMountainVideo from '../assets/images/real-world-demos/brand-dna/gallery-mountain-video.mp4';
 import galleryPoolVideo from '../assets/images/real-world-demos/brand-dna/gallery-pool-video.mp4';
 
-// Timer Component
-function CountdownTimer({ className = "" }: { className?: string }) {
-  // Calculate time until Saturday July 19th, 2025
-  const getTimeUntilJuly8 = () => {
-    const targetDate = new Date('2025-07-25T23:59:59-05:00');
-    const now = new Date();
-    const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
-    return timeDiff;
-  };
-  
-  const [timeLeft, setTimeLeft] = useState(getTimeUntilJuly8());
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(getTimeUntilJuly8());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-  
-  const days = Math.floor(timeLeft / 86400);
-  const hours = Math.floor((timeLeft % 86400) / 3600);
-  const minutes = Math.floor((timeLeft % 3600) / 60);
-  const seconds = timeLeft % 60;
-
-  return (
-    <div className={`inline-flex items-center gap-1 ${className}`}>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
-          {days.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white/80 font-bold">:</span>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
-          {hours.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white/80 font-bold">:</span>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
-          {minutes.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white/80 font-bold">:</span>
-      <div className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/30">
-        <span className="font-mono text-lg font-bold text-white">
-          {seconds.toString().padStart(2, '0')}
-        </span>
-      </div>
-    </div>
-  );
-}
 
 function UpgradePage() {
   // Proof Pixel Script
