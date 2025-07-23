@@ -117,29 +117,7 @@ Video work pays 3.6x more than static design ($688 vs $188 average). Only 12% of
     {
       category: 'pricing',
       question: 'What do the different pricing plans include?',
-      answer: `STARTER ($49/month):
-• Core AI design tools
-• 3 brands, 5 team members
-• 100 AI generations/month
-• Basic templates and workflows
-
-PRO ($97/month):
-• Everything in Starter
-• Unlimited brands and team members
-• AI Video generation (Animate + Lipsync)
-• Brand DNA character consistency
-• 500 AI generations/month
-• Priority support
-
-AGENCY ($197/month):
-• Everything in Pro
-• White-label delivery system
-• Advanced automation tools
-• 1,500 AI generations/month
-• Custom integrations
-• Dedicated success manager
-
-All plans include the AI Creative Agency Academy ($4,997 value) and website audit tool ($297/month value).`
+      answer: `We offer flexible pricing plans to match your needs and goals. Visit our pricing page at /pricing to see all available plans with current features and pricing details.`
     },
     {
       category: 'pricing',

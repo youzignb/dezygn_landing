@@ -476,7 +476,6 @@ function LandingPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white mb-2">AI Creative Agency Academy™</h3>
-                  <div className="text-purple-400 font-semibold mb-4">Value: $4,997</div>
                   <p className="text-white/80 mb-4">
                     Complete $0-to-$10K roadmap with step-by-step video training and done-for-you templates.
                   </p>
@@ -535,7 +534,6 @@ function LandingPage() {
 
           <div className="bg-black/30 backdrop-blur-sm rounded-2xl p-8 border border-white/20 text-center">
             <div className="text-3xl font-bold text-white mb-2">Total Value: $7,288</div>
-            <div className="text-xl text-white/80 mb-6">Your Investment Today: <span className="text-green-400 font-bold">Just $49</span></div>
             <Link
               to="/pricing"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-2xl"
@@ -923,7 +921,7 @@ function LandingPage() {
             />
             <FAQItem 
               question="What if I don't have clients yet?"
-              answer="We include the AI Creative Agency Academy ($4,997 value) free with your subscription. It shows you exactly how to find clients, price your services, and scale to $10K/month."
+              answer="We include the AI Creative Agency Academy free with your subscription. It shows you exactly how to find clients, price your services, and scale to $10K/month."
             />
             <FAQItem 
               question="Can I really make money with this?"
