@@ -78,19 +78,19 @@ import dezygn_audit from '../assets/images/audit/dezygn_audit.png';
 
 // Timer Component
 function CountdownTimer({ className = "" }: { className?: string }) {
-  // Calculate time until Friday July 25th, 2025
-  const getTimeUntilJuly25 = () => {
-    const targetDate = new Date('2025-07-25T23:59:59-05:00');
+  // Calculate time until Monday July 28th, 2025
+  const getTimeUntilJuly28 = () => {
+    const targetDate = new Date('2025-07-28T23:59:59-05:00');
     const now = new Date();
     const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
     return timeDiff;
   };
   
-  const [timeLeft, setTimeLeft] = useState(getTimeUntilJuly25());
+  const [timeLeft, setTimeLeft] = useState(getTimeUntilJuly28());
   
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft(getTimeUntilJuly25());
+      setTimeLeft(getTimeUntilJuly28());
     }, 1000);
     return () => clearInterval(timer);
   }, []);
