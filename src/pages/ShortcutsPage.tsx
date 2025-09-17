@@ -11,22 +11,23 @@ declare global {
   }
 }
 
-// Video clip URLs (using direct paths instead of imports)
-const betterDesignsVideo = '/assets/updates/shortcuts/video-clips/better-designs.mp4';
-const betterTextVideo = '/assets/updates/shortcuts/video-clips/better-text.mp4';
-const betterAdherenceVideo = '/assets/updates/shortcuts/video-clips/better-adherence.mp4';
-const betterImageEditingVideo = '/assets/updates/shortcuts/video-clips/better-image-editing.mp4';
-const recipesVideo = '/assets/updates/shortcuts/video-clips/recipes.mp4';
-const instantAvatarsVideo = '/assets/updates/shortcuts/video-clips/instant-avatars.mp4';
-const collageVideo = '/assets/updates/shortcuts/video-clips/collage.mp4';
-const templatesVideo = '/assets/updates/shortcuts/video-clips/templates.mp4';
-const dezygnEyeVideo = '/assets/updates/shortcuts/video-clips/dezygn-eye.mp4';
-const variationsVideo = '/assets/updates/shortcuts/video-clips/variations.mp4';
-const ingredientsPanelVideo = '/assets/updates/shortcuts/video-clips/ingredients-panel.mp4';
-const studioFastVideo = '/assets/updates/shortcuts/video-clips/studio-fast.mp4';
-const studioSceneVideo = '/assets/updates/shortcuts/video-clips/studio-scene-from-frame.mp4';
-const ugcAdVideo = '/assets/updates/shortcuts/video-clips/ugc-ad.mov';
-const betterTrainingVideo = '/assets/updates/shortcuts/video-clips/better-training.mp4';
+// Video clip URLs (hosted on Supabase CDN)
+const baseVideoUrl = 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/admin-assets/marketing/shortcuts-update/';
+const betterDesignsVideo = `${baseVideoUrl}better-designs.mp4`;
+const betterTextVideo = `${baseVideoUrl}better-text.mp4`;
+const betterAdherenceVideo = `${baseVideoUrl}better-adherence.mp4`;
+const betterImageEditingVideo = `${baseVideoUrl}better-image-editing.mp4`;
+const recipesVideo = `${baseVideoUrl}recipes.mp4`;
+const instantAvatarsVideo = `${baseVideoUrl}instant-avatars.mp4`;
+const collageVideo = `${baseVideoUrl}collage.mp4`;
+const templatesVideo = `${baseVideoUrl}templates.mp4`;
+const dezygnEyeVideo = `${baseVideoUrl}dezygn-eye.mp4`;
+const variationsVideo = `${baseVideoUrl}variations.mp4`;
+const ingredientsPanelVideo = `${baseVideoUrl}ingredients-panel.mp4`;
+const studioFastVideo = `${baseVideoUrl}studio-fast.mp4`;
+const studioSceneVideo = `${baseVideoUrl}studio-scene-from-frame.mp4`;
+const ugcAdVideo = `${baseVideoUrl}ugc-ad.mov`;
+const betterTrainingVideo = `${baseVideoUrl}better-training.mp4`;
 
 // Image URLs - Better Designs
 const bagWoman = '/assets/updates/shortcuts/images/better-designs/bag-and-woman.jpg';
