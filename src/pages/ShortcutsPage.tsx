@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Check, Clock, Users, Zap, Shield, Star, ArrowRight, Lock, Plus, Minus, ExternalLink, Sparkles, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Clock, Users, Zap, Shield, Plus, Minus, ExternalLink, Sparkles, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Logo from '../components/Logo';
@@ -52,13 +52,8 @@ import textInfographics from '/assets/updates/shortcuts/images/better-text-fidel
 // Import images - Recipes
 import recipeOptionsBook from '/assets/updates/shortcuts/images/recipes/recipe-options-book-cover.png';
 import recipeResultBook from '/assets/updates/shortcuts/images/recipes/recipe-result-book-cover.jpg';
-import recipeResultCar from '/assets/updates/shortcuts/images/recipes/recipe-result-logo-mockup-on-car.jpg';
-import recipeResultMousepad from '/assets/updates/shortcuts/images/recipes/recipe-result-logo-mockup-on-mousepad.jpg';
 import recipeResultProduct from '/assets/updates/shortcuts/images/recipes/recipe-result-product-in-scene.jpg';
-import recipeResultWebsite from '/assets/updates/shortcuts/images/recipes/recipe-result-website-screenshot-in-macbook.jpg';
 import recipeSettingsBook from '/assets/updates/shortcuts/images/recipes/recipe-settings-book-cover.png';
-import recipeSettingsLogo from '/assets/updates/shortcuts/images/recipes/recipe-settings-logo-mockup-.png';
-import recipeSettingsProduct from '/assets/updates/shortcuts/images/recipes/recipe-settings-product-in-scene.png';
 
 // Import images - Instant Avatars
 import instantAvatarExample from '/assets/updates/shortcuts/images/instant-avatars/instant-avatar-example-woman-in-9-poses.png';
@@ -75,7 +70,6 @@ import template1Result from '/assets/updates/shortcuts/images/templates/template
 import template1Selection from '/assets/updates/shortcuts/images/templates/template-1-selection.png';
 import template1Settings from '/assets/updates/shortcuts/images/templates/template-1-settings.png';
 import template2Result from '/assets/updates/shortcuts/images/templates/template-2-result.jpg';
-import template2Selection from '/assets/updates/shortcuts/images/templates/template-2-selection.png';
 
 // Import images - Dezygn Eye
 import dezygnEyeHero from '/assets/updates/shortcuts/images/dezygn-eye/dezygn-eye-hero.jpg';
@@ -98,118 +92,6 @@ import betterChatbot from '/assets/updates/shortcuts/images/training/better-chat
 import newAcademy from '/assets/updates/shortcuts/images/training/new-academy-training.png';
 import newArticles from '/assets/updates/shortcuts/images/training/new-articles-in-helpdesk.png';
 
-// Timer Component
-function CountdownTimer({ className = "" }: { className?: string }) {
-  // Calculate time until Friday September 20th, 2025 11:59 AM EST
-  const getTimeUntilSeptember20 = () => {
-    const targetDate = new Date('2025-09-20T11:59:00-05:00');
-    const now = new Date();
-    const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
-    return timeDiff;
-  };
-  
-  const [timeLeft, setTimeLeft] = useState(getTimeUntilSeptember20());
-  
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(getTimeUntilSeptember20());
-    }, 1000);
-    return () => clearInterval(timer);
-  }, []);
-  
-  const days = Math.floor(timeLeft / 86400);
-  const hours = Math.floor((timeLeft % 86400) / 3600);
-  const minutes = Math.floor((timeLeft % 3600) / 60);
-  const seconds = timeLeft % 60;
-
-  return (
-    <div className={`inline-flex items-center gap-1 ${className}`}>
-      <span className="text-white font-semibold text-lg mr-3">Special discount and free trial expires in:</span>
-      <div className="bg-white rounded-md px-2 py-1 shadow-sm">
-        <span className="font-mono text-lg font-bold text-gray-800">
-          {days.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white text-sm">days</span>
-      <span className="text-white/70 font-medium">:</span>
-      <div className="bg-white rounded-md px-2 py-1 shadow-sm">
-        <span className="font-mono text-lg font-bold text-gray-800">
-          {hours.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white text-sm">hours</span>
-      <span className="text-white/70 font-medium">:</span>
-      <div className="bg-white rounded-md px-2 py-1 shadow-sm">
-        <span className="font-mono text-lg font-bold text-gray-800">
-          {minutes.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white text-sm">minutes</span>
-      <span className="text-white/70 font-medium">:</span>
-      <div className="bg-white rounded-md px-2 py-1 shadow-sm">
-        <span className="font-mono text-lg font-bold text-gray-800">
-          {seconds.toString().padStart(2, '0')}
-        </span>
-      </div>
-      <span className="text-white text-sm">seconds</span>
-    </div>
-  );
-}
-
-// Feature Section Component
-interface FeatureSectionProps {
-  title: string;
-  description: string;
-  video?: string;
-  images?: string[];
-  reverse?: boolean;
-}
-
-function FeatureSection({ title, description, video, images, reverse = false }: FeatureSectionProps) {
-  return (
-    <div className="mb-32">
-      {/* Main content row with text and video/placeholder */}
-      <div className={`grid ${video ? 'lg:grid-cols-2' : 'lg:grid-cols-1'} gap-12 items-center mb-12`}>
-        {/* Text Column */}
-        <div className={`space-y-4 ${video && reverse ? 'lg:order-2' : ''} ${!video ? 'max-w-3xl mx-auto text-center' : ''}`}>
-          <h3 className="text-4xl font-bold text-gray-900">{title}</h3>
-          <p className="text-xl text-gray-600 leading-relaxed">{description}</p>
-        </div>
-        
-        {/* Video Column */}
-        {video && (
-          <div className={`${reverse ? 'lg:order-1' : ''}`}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <video
-                src={video}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        )}
-      </div>
-      
-      {/* Image Gallery Row */}
-      {images && images.length > 0 && (
-        <div className={`grid ${images.length === 1 ? 'grid-cols-1 max-w-3xl mx-auto' : images.length === 2 ? 'grid-cols-2' : images.length === 4 ? 'grid-cols-2 lg:grid-cols-4' : 'grid-cols-2 lg:grid-cols-3'} gap-6`}>
-          {images.map((img, idx) => (
-            <div key={idx} className="relative rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src={img}
-                alt={`${title} example ${idx + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
-  );
-}
 
 // FAQ Item Component
 interface FAQItemProps {
