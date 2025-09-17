@@ -12,21 +12,21 @@ declare global {
 }
 
 // Import video clips
-import betterDesignsVideo from '/assets/updates/shortcuts/video-clips/better-designs.mp4';
-import betterTextVideo from '/assets/updates/shortcuts/video-clips/better-text.mp4';
-import betterAdherenceVideo from '/assets/updates/shortcuts/video-clips/better-adherence.mp4';
-import betterImageEditingVideo from '/assets/updates/shortcuts/video-clips/better-image-editing.mp4';
-import recipesVideo from '/assets/updates/shortcuts/video-clips/recipes.mp4';
-import instantAvatarsVideo from '/assets/updates/shortcuts/video-clips/instant-avatars.mp4';
-import collageVideo from '/assets/updates/shortcuts/video-clips/collage.mp4';
-import templatesVideo from '/assets/updates/shortcuts/video-clips/templates.mp4';
-import dezygnEyeVideo from '/assets/updates/shortcuts/video-clips/dezygn-eye.mp4';
-import variationsVideo from '/assets/updates/shortcuts/video-clips/variations.mp4';
-import ingredientsPanelVideo from '/assets/updates/shortcuts/video-clips/ingredients-panel.mp4';
-import studioFastVideo from '/assets/updates/shortcuts/video-clips/studio-fast.mp4';
-import studioSceneVideo from '/assets/updates/shortcuts/video-clips/studio-scene-from-frame.mp4';
-import ugcAdVideo from '/assets/updates/shortcuts/video-clips/ugc-ad.mov';
-import betterTrainingVideo from '/assets/updates/shortcuts/video-clips/better-training.mp4';
+import betterDesignsVideo from '/assets/updates/shortcuts/video-clips/better-designs.mp4?url';
+import betterTextVideo from '/assets/updates/shortcuts/video-clips/better-text.mp4?url';
+import betterAdherenceVideo from '/assets/updates/shortcuts/video-clips/better-adherence.mp4?url';
+import betterImageEditingVideo from '/assets/updates/shortcuts/video-clips/better-image-editing.mp4?url';
+import recipesVideo from '/assets/updates/shortcuts/video-clips/recipes.mp4?url';
+import instantAvatarsVideo from '/assets/updates/shortcuts/video-clips/instant-avatars.mp4?url';
+import collageVideo from '/assets/updates/shortcuts/video-clips/collage.mp4?url';
+import templatesVideo from '/assets/updates/shortcuts/video-clips/templates.mp4?url';
+import dezygnEyeVideo from '/assets/updates/shortcuts/video-clips/dezygn-eye.mp4?url';
+import variationsVideo from '/assets/updates/shortcuts/video-clips/variations.mp4?url';
+import ingredientsPanelVideo from '/assets/updates/shortcuts/video-clips/ingredients-panel.mp4?url';
+import studioFastVideo from '/assets/updates/shortcuts/video-clips/studio-fast.mp4?url';
+import studioSceneVideo from '/assets/updates/shortcuts/video-clips/studio-scene-from-frame.mp4?url';
+import ugcAdVideo from '/assets/updates/shortcuts/video-clips/ugc-ad.mov?url';
+import betterTrainingVideo from '/assets/updates/shortcuts/video-clips/better-training.mp4?url';
 
 // Import images - Better Designs
 import bagWoman from '/assets/updates/shortcuts/images/better-designs/bag-and-woman.jpg';
