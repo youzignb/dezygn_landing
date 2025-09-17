@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import HomePage from './pages/HomePage';
 import HomeArchivePage from './pages/HomeArchivePage';
 import SpecialPage from './pages/SpecialPage';
+import ShortcutsPage from './pages/ShortcutsPage';
 import PricingPage from './pages/PricingPage';
 import ReportPage from './pages/ReportPage';
 import ReportDownloadPage from './pages/ReportDownloadPage';
@@ -20,7 +22,8 @@ import V1AccessPage from './pages/V1AccessPage';
 
 function App() {
   return (
-    <Router>
+    <HelmetProvider>
+      <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/accessibility" element={<AccessibilityPage />} />
         <Route path="/special" element={<SpecialPage />} />
+        <Route path="/shortcuts" element={<ShortcutsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/report" element={<ReportPage />} />
         <Route path="/state-of-ai" element={<ReportDownloadPage />} />
@@ -42,6 +46,7 @@ function App() {
         <Route path="/v1" element={<V1AccessPage />} />
       </Routes>
     </Router>
+    </HelmetProvider>
   );
 }
 
