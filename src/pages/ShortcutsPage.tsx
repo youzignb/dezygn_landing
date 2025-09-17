@@ -11,86 +11,86 @@ declare global {
   }
 }
 
-// Import video clips
-import betterDesignsVideo from '/assets/updates/shortcuts/video-clips/better-designs.mp4?url';
-import betterTextVideo from '/assets/updates/shortcuts/video-clips/better-text.mp4?url';
-import betterAdherenceVideo from '/assets/updates/shortcuts/video-clips/better-adherence.mp4?url';
-import betterImageEditingVideo from '/assets/updates/shortcuts/video-clips/better-image-editing.mp4?url';
-import recipesVideo from '/assets/updates/shortcuts/video-clips/recipes.mp4?url';
-import instantAvatarsVideo from '/assets/updates/shortcuts/video-clips/instant-avatars.mp4?url';
-import collageVideo from '/assets/updates/shortcuts/video-clips/collage.mp4?url';
-import templatesVideo from '/assets/updates/shortcuts/video-clips/templates.mp4?url';
-import dezygnEyeVideo from '/assets/updates/shortcuts/video-clips/dezygn-eye.mp4?url';
-import variationsVideo from '/assets/updates/shortcuts/video-clips/variations.mp4?url';
-import ingredientsPanelVideo from '/assets/updates/shortcuts/video-clips/ingredients-panel.mp4?url';
-import studioFastVideo from '/assets/updates/shortcuts/video-clips/studio-fast.mp4?url';
-import studioSceneVideo from '/assets/updates/shortcuts/video-clips/studio-scene-from-frame.mp4?url';
-import ugcAdVideo from '/assets/updates/shortcuts/video-clips/ugc-ad.mov?url';
-import betterTrainingVideo from '/assets/updates/shortcuts/video-clips/better-training.mp4?url';
+// Video clip URLs (using direct paths instead of imports)
+const betterDesignsVideo = '/assets/updates/shortcuts/video-clips/better-designs.mp4';
+const betterTextVideo = '/assets/updates/shortcuts/video-clips/better-text.mp4';
+const betterAdherenceVideo = '/assets/updates/shortcuts/video-clips/better-adherence.mp4';
+const betterImageEditingVideo = '/assets/updates/shortcuts/video-clips/better-image-editing.mp4';
+const recipesVideo = '/assets/updates/shortcuts/video-clips/recipes.mp4';
+const instantAvatarsVideo = '/assets/updates/shortcuts/video-clips/instant-avatars.mp4';
+const collageVideo = '/assets/updates/shortcuts/video-clips/collage.mp4';
+const templatesVideo = '/assets/updates/shortcuts/video-clips/templates.mp4';
+const dezygnEyeVideo = '/assets/updates/shortcuts/video-clips/dezygn-eye.mp4';
+const variationsVideo = '/assets/updates/shortcuts/video-clips/variations.mp4';
+const ingredientsPanelVideo = '/assets/updates/shortcuts/video-clips/ingredients-panel.mp4';
+const studioFastVideo = '/assets/updates/shortcuts/video-clips/studio-fast.mp4';
+const studioSceneVideo = '/assets/updates/shortcuts/video-clips/studio-scene-from-frame.mp4';
+const ugcAdVideo = '/assets/updates/shortcuts/video-clips/ugc-ad.mov';
+const betterTrainingVideo = '/assets/updates/shortcuts/video-clips/better-training.mp4';
 
-// Import images - Better Designs
-import bagWoman from '/assets/updates/shortcuts/images/better-designs/bag-and-woman.jpg';
-import bagMultiple from '/assets/updates/shortcuts/images/better-designs/bag-multiple-angles.jpg';
-import bagOriginal from '/assets/updates/shortcuts/images/better-designs/bag-original.png';
+// Image URLs - Better Designs
+const bagWoman = '/assets/updates/shortcuts/images/better-designs/bag-and-woman.jpg';
+const bagMultiple = '/assets/updates/shortcuts/images/better-designs/bag-multiple-angles.jpg';
+const bagOriginal = '/assets/updates/shortcuts/images/better-designs/bag-original.png';
 
-// Import images - Better Prompt Adherence
-import ingredientsUsed from '/assets/updates/shortcuts/images/better-prompt-adherence/ingredient-used-collage-of-accessories.png';
-import promptAdherence from '/assets/updates/shortcuts/images/better-prompt-adherence/prompt.png';
-import resultManWithCar from '/assets/updates/shortcuts/images/better-prompt-adherence/result-man-standing-in-front-of-car-with-accessories.png';
+// Image URLs - Better Prompt Adherence
+const ingredientsUsed = '/assets/updates/shortcuts/images/better-prompt-adherence/ingredient-used-collage-of-accessories.png';
+const promptAdherence = '/assets/updates/shortcuts/images/better-prompt-adherence/prompt.png';
+const resultManWithCar = '/assets/updates/shortcuts/images/better-prompt-adherence/result-man-standing-in-front-of-car-with-accessories.png';
 
-// Import images - Better Image Editing
-import manGoldenOriginal from '/assets/updates/shortcuts/images/better-image-editing/man-with-golden-retriever-original.jpg';
-import manMountainTransformed from '/assets/updates/shortcuts/images/better-image-editing/man-with-mountain-dog-transformed.jpg';
-import editingPrompt from '/assets/updates/shortcuts/images/better-image-editing/prompt.png';
+// Image URLs - Better Image Editing
+const manGoldenOriginal = '/assets/updates/shortcuts/images/better-image-editing/man-with-golden-retriever-original.jpg';
+const manMountainTransformed = '/assets/updates/shortcuts/images/better-image-editing/man-with-mountain-dog-transformed.jpg';
+const editingPrompt = '/assets/updates/shortcuts/images/better-image-editing/prompt.png';
 
-// Import images - Better Text Fidelity
-import text4Lines from '/assets/updates/shortcuts/images/better-text-fidelity/4-lines-of-text.png';
-import text11Lines from '/assets/updates/shortcuts/images/better-text-fidelity/11-lines-of-text.png';
-import text20Lines from '/assets/updates/shortcuts/images/better-text-fidelity/20-lines-of-text.png';
-import textInfographics from '/assets/updates/shortcuts/images/better-text-fidelity/better-text-infographics.jpg';
+// Image URLs - Better Text Fidelity
+const text4Lines = '/assets/updates/shortcuts/images/better-text-fidelity/4-lines-of-text.png';
+const text11Lines = '/assets/updates/shortcuts/images/better-text-fidelity/11-lines-of-text.png';
+const text20Lines = '/assets/updates/shortcuts/images/better-text-fidelity/20-lines-of-text.png';
+const textInfographics = '/assets/updates/shortcuts/images/better-text-fidelity/better-text-infographics.jpg';
 
-// Import images - Recipes
-import recipeOptionsBook from '/assets/updates/shortcuts/images/recipes/recipe-options-book-cover.png';
-import recipeResultBook from '/assets/updates/shortcuts/images/recipes/recipe-result-book-cover.jpg';
-import recipeResultProduct from '/assets/updates/shortcuts/images/recipes/recipe-result-product-in-scene.jpg';
-import recipeSettingsBook from '/assets/updates/shortcuts/images/recipes/recipe-settings-book-cover.png';
+// Image URLs - Recipes
+const recipeOptionsBook = '/assets/updates/shortcuts/images/recipes/recipe-options-book-cover.png';
+const recipeResultBook = '/assets/updates/shortcuts/images/recipes/recipe-result-book-cover.jpg';
+const recipeResultProduct = '/assets/updates/shortcuts/images/recipes/recipe-result-product-in-scene.jpg';
+const recipeSettingsBook = '/assets/updates/shortcuts/images/recipes/recipe-settings-book-cover.png';
 
-// Import images - Instant Avatars
-import instantAvatarExample from '/assets/updates/shortcuts/images/instant-avatars/instant-avatar-example-woman-in-9-poses.png';
-import instantAvatarResult from '/assets/updates/shortcuts/images/instant-avatars/instant-avatar-result.png';
+// Image URLs - Instant Avatars
+const instantAvatarExample = '/assets/updates/shortcuts/images/instant-avatars/instant-avatar-example-woman-in-9-poses.png';
+const instantAvatarResult = '/assets/updates/shortcuts/images/instant-avatars/instant-avatar-result.png';
 
-// Import images - Collage
-import collageExample from '/assets/updates/shortcuts/images/collage/collage-example.png';
-import collagePromptImg from '/assets/updates/shortcuts/images/collage/collage-prompt.png';
-import collageResult from '/assets/updates/shortcuts/images/collage/collage-result.jpg';
-import collageSettings from '/assets/updates/shortcuts/images/collage/collage-settings.png';
+// Image URLs - Collage
+const collageExample = '/assets/updates/shortcuts/images/collage/collage-example.png';
+const collagePromptImg = '/assets/updates/shortcuts/images/collage/collage-prompt.png';
+const collageResult = '/assets/updates/shortcuts/images/collage/collage-result.jpg';
+const collageSettings = '/assets/updates/shortcuts/images/collage/collage-settings.png';
 
-// Import images - Templates
-import template1Result from '/assets/updates/shortcuts/images/templates/template-1-result.jpg';
-import template1Selection from '/assets/updates/shortcuts/images/templates/template-1-selection.png';
-import template1Settings from '/assets/updates/shortcuts/images/templates/template-1-settings.png';
-import template2Result from '/assets/updates/shortcuts/images/templates/template-2-result.jpg';
+// Image URLs - Templates
+const template1Result = '/assets/updates/shortcuts/images/templates/template-1-result.jpg';
+const template1Selection = '/assets/updates/shortcuts/images/templates/template-1-selection.png';
+const template1Settings = '/assets/updates/shortcuts/images/templates/template-1-settings.png';
+const template2Result = '/assets/updates/shortcuts/images/templates/template-2-result.jpg';
 
-// Import images - Dezygn Eye
-import dezygnEyeHero from '/assets/updates/shortcuts/images/dezygn-eye/dezygn-eye-hero.jpg';
+// Image URLs - Dezygn Eye
+const dezygnEyeHero = '/assets/updates/shortcuts/images/dezygn-eye/dezygn-eye-hero.jpg';
 
-// Import images - Variations
-import variationsResult1 from '/assets/updates/shortcuts/images/variations/variations-result-1.png';
-import variationsResult2 from '/assets/updates/shortcuts/images/variations/variations-results-2.png';
-import variationsSettings from '/assets/updates/shortcuts/images/variations/variations-settings.png';
+// Image URLs - Variations
+const variationsResult1 = '/assets/updates/shortcuts/images/variations/variations-result-1.png';
+const variationsResult2 = '/assets/updates/shortcuts/images/variations/variations-results-2.png';
+const variationsSettings = '/assets/updates/shortcuts/images/variations/variations-settings.png';
 
-// Import images - Ingredients Panel
-import ingredientsSettings from '/assets/updates/shortcuts/images/ingredients-panel/ingredients-settings.png';
-import ingredientsPanel from '/assets/updates/shortcuts/images/ingredients-panel/ingredients-panel.png';
+// Image URLs - Ingredients Panel
+const ingredientsSettings = '/assets/updates/shortcuts/images/ingredients-panel/ingredients-settings.png';
+const ingredientsPanel = '/assets/updates/shortcuts/images/ingredients-panel/ingredients-panel.png';
 
-// Import images - Studio
-import ugcAdCreating from '/assets/updates/shortcuts/images/ugc-ad/ugc-ad-creating-in-dezygn-studio.png';
-import ugcAdWomanProduct from '/assets/updates/shortcuts/images/ugc-ad/ugc-ad-woman-plus-product-image.png';
+// Image URLs - Studio
+const ugcAdCreating = '/assets/updates/shortcuts/images/ugc-ad/ugc-ad-creating-in-dezygn-studio.png';
+const ugcAdWomanProduct = '/assets/updates/shortcuts/images/ugc-ad/ugc-ad-woman-plus-product-image.png';
 
-// Import images - Training
-import betterChatbot from '/assets/updates/shortcuts/images/training/better-chatbot.png';
-import newAcademy from '/assets/updates/shortcuts/images/training/new-academy-training.png';
-import newArticles from '/assets/updates/shortcuts/images/training/new-articles-in-helpdesk.png';
+// Image URLs - Training
+const betterChatbot = '/assets/updates/shortcuts/images/training/better-chatbot.png';
+const newAcademy = '/assets/updates/shortcuts/images/training/new-academy-training.png';
+const newArticles = '/assets/updates/shortcuts/images/training/new-articles-in-helpdesk.png';
 
 
 // FAQ Item Component
