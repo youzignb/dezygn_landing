@@ -93,6 +93,59 @@ const betterChatbot = '/assets/updates/shortcuts/images/training/better-chatbot.
 const newAcademy = '/assets/updates/shortcuts/images/training/new-academy-training.png';
 const newArticles = '/assets/updates/shortcuts/images/training/new-articles-in-helpdesk.png';
 
+// Timer Component
+function CountdownTimer({ className = "" }: { className?: string }) {
+  // Calculate time until Sunday September 28th, 2025 2am EST
+  const getTimeUntilSeptember28 = () => {
+    const targetDate = new Date('2025-09-28T02:00:00-05:00'); // 2am EST on Sep 28
+    const now = new Date();
+    const timeDiff = Math.max(0, Math.floor((targetDate.getTime() - now.getTime()) / 1000));
+    return timeDiff;
+  };
+  
+  const [timeLeft, setTimeLeft] = useState(getTimeUntilSeptember28());
+  
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(getTimeUntilSeptember28());
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+  
+  const days = Math.floor(timeLeft / 86400);
+  const hours = Math.floor((timeLeft % 86400) / 3600);
+  const minutes = Math.floor((timeLeft % 3600) / 60);
+  const seconds = timeLeft % 60;
+
+  return (
+    <div className={`inline-flex items-center gap-1 ${className}`}>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
+          {days.toString().padStart(2, '0')}
+        </span>
+      </div>
+      <span className="text-yellow-300 font-bold animate-pulse">:</span>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
+          {hours.toString().padStart(2, '0')}
+        </span>
+      </div>
+      <span className="text-yellow-300 font-bold animate-pulse">:</span>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
+          {minutes.toString().padStart(2, '0')}
+        </span>
+      </div>
+      <span className="text-yellow-300 font-bold animate-pulse">:</span>
+      <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-lg px-2 py-1 border border-yellow-300/50 shadow-lg">
+        <span className="font-mono text-lg font-bold text-black">
+          {seconds.toString().padStart(2, '0')}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 
 // FAQ Item Component
 interface FAQItemProps {
@@ -378,6 +431,33 @@ function ShortcutsPage() {
           </a>
         </div>
       </nav>
+
+      {/* Announcement Bar */}
+      <div className="bg-gradient-to-r from-red-600 to-red-700 text-white py-3 px-4 sticky top-0 z-50">
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
+          {/* Timer Left */}
+          <div className="flex items-center gap-3">
+            <Clock className="w-5 h-5 text-white/80" />
+            <CountdownTimer />
+          </div>
+          
+          {/* Text Middle */}
+          <p className="font-semibold text-center flex-1 mx-4">
+            Late Bird Final Extension: DEAL ENDS SOON!
+          </p>
+          
+          {/* Button Right */}
+          <button 
+            onClick={() => {
+              const pricingSection = document.getElementById('pricing');
+              pricingSection?.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-white text-red-600 px-4 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition whitespace-nowrap"
+          >
+            Get Started →
+          </button>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-purple-50">
