@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { Users, TrendingUp, Award, Sparkles, ArrowRight, Heart, Zap, Target, Globe } from 'lucide-react';
+import { Users, TrendingUp, Award, Sparkles, Heart, Zap, Target, Globe } from 'lucide-react';
 import Layout from '../components/Layout';
 
 function AboutPage() {

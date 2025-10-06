@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ChevronDown, ExternalLink, Mail } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import Logo from './Logo';
 
 export default function Footer() {

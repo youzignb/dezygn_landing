@@ -1,38 +1,9 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, MessageCircle, Clock, Globe, ExternalLink, Send, CheckCircle, MapPin, Users } from 'lucide-react';
+import { MessageCircle, Clock, Globe, ExternalLink, CheckCircle, MapPin, Users } from 'lucide-react';
 import Layout from '../components/Layout';
 
 function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    type: 'general'
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  if (isSubmitted) {
+  if (false) {
     return (
       <Layout>
         <div className="min-h-screen bg-white flex items-center justify-center px-4">
