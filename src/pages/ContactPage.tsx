@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MessageCircle, Clock, Globe, ExternalLink, CheckCircle, MapPin, Users } from 'lucide-react';
+import { MessageCircle, Clock, Globe, ExternalLink, CheckCircle, MapPin, Users, Mail } from 'lucide-react';
 import Layout from '../components/Layout';
 
 function ContactPage() {
