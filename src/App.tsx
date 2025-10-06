@@ -19,6 +19,7 @@ import HelpPage from './pages/HelpPage';
 import FeaturesPage from './pages/FeaturesPage';
 import AccessibilityPage from './pages/AccessibilityPage';
 import V1AccessPage from './pages/V1AccessPage';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/landing" element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />

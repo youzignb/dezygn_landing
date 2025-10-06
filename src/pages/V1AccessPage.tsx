@@ -48,7 +48,7 @@ export default function V1AccessPage() {
           cloud_name: CLOUD_NAME,
           api_key: API_KEY,
           search: {
-            expression: `tags="${email}"`
+            expression: `email=${email}`
           },
           multiple: true,
           inline_container: null

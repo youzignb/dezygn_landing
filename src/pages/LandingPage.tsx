@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { ArrowRight, Check, Minus, Plus, Shield, Users, Zap, DollarSign, Star, Award, X } from 'lucide-react';
+import { ArrowRight, Check, ExternalLink, Minus, Plus, Shield, Users, Zap, Play, DollarSign, Star, Award, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
 
@@ -29,7 +30,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
-function HomePage() {
+function LandingPage() {
   return (
     <Layout>
       <Helmet>
@@ -360,13 +361,13 @@ function HomePage() {
 
           {/* CTA below steps */}
           <div className="mt-20 text-center">
-            <a
-              href="https://dezygn.checkoutpage.com/dezygn-yearly"
+            <Link
+              to="/pricing"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl"
             >
               Start Your Journey Today
               <ArrowRight className="w-6 h-6" />
-            </a>
+            </Link>
             <p className="text-gray-500 mt-4">Get your first client in 14 days</p>
           </div>
         </div>
@@ -632,15 +633,15 @@ function HomePage() {
                   </li>
                 </ul>
 
-                <a
-                  href="https://dezygn.checkoutpage.com/dezygn-yearly"
+                <Link
+                  to="/pricing"
                   className="group/btn block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-xl"
                 >
                   <span className="flex items-center justify-center gap-2">
                     Start Free Trial
                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -714,15 +715,15 @@ function HomePage() {
                   </li>
                 </ul>
 
-                <a
-                  href="https://dezygn.checkoutpage.com/dezygn-yearly"
+                <Link
+                  to="/pricing"
                   className="group/btn block w-full text-center bg-gray-900 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-gray-800 hover:shadow-2xl hover:scale-105 transition-all duration-300 shadow-lg"
                 >
                   <span className="flex items-center justify-center gap-2">
                     Start Free Trial
                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -805,13 +806,13 @@ function HomePage() {
           </p>
 
           {/* CTA Button */}
-          <a
-            href="https://dezygn.checkoutpage.com/dezygn-yearly"
+          <Link
+            to="/pricing"
             className="group inline-flex items-center gap-4 bg-white text-purple-600 px-14 py-7 rounded-3xl font-black text-2xl hover:shadow-2xl hover:scale-110 transition-all duration-300 shadow-2xl mb-12"
           >
             Start Free Trial
             <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
-          </a>
+          </Link>
 
           {/* Trust indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-12">
@@ -846,4 +847,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default LandingPage;
