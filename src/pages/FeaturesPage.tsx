@@ -14,7 +14,8 @@ import {
   Grid3x3,
   Globe,
   Eye,
-  RefreshCw
+  RefreshCw,
+  Scale
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
@@ -105,6 +106,11 @@ const features: Feature[] = [
     title: "One-Click Regenerate",
     summary: "Instantly create new variations with a single click for rapid iteration",
     icon: Eye
+  },
+  {
+    title: "Comparison Mode",
+    summary: "Compare your original product photo side-by-side with AI-generated results at full resolution for pixel-perfect accuracy",
+    icon: Scale
   }
 ];
 
