@@ -94,42 +94,83 @@ function LandingPage() {
 
       {/* Trust Bar */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="relative">
-            {/* Quote marks decoration */}
-            <div className="absolute -top-6 -left-4 text-purple-200 text-8xl font-serif leading-none opacity-50">"</div>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Milan's Testimonial */}
+            <div className="relative">
+              {/* Quote marks decoration */}
+              <div className="absolute -top-6 -left-4 text-purple-200 text-8xl font-serif leading-none opacity-50">"</div>
 
-            <div className="relative bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-12 md:p-16 border-2 border-purple-200 shadow-lg">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                {/* Avatar */}
-                <div className="flex-shrink-0 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full blur-xl opacity-50"></div>
-                  <img
-                    src="https://www.upwork.com/profile-portraits/c1C0jvfaaxrjRXgvxDIOAUm3bMhbJjqqIeoMek_2TTijZyaSfWbFRsXirPIBSDnBAF"
-                    alt="Milan - Freelance Product Designer"
-                    className="relative w-24 h-24 rounded-full border-4 border-white shadow-2xl object-cover"
-                  />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
-                    <Check className="w-4 h-4 text-white" />
+              <div className="relative bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl p-12 md:p-16 border-2 border-purple-200 shadow-lg">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  {/* Avatar */}
+                  <div className="flex-shrink-0 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full blur-xl opacity-50"></div>
+                    <img
+                      src="https://www.upwork.com/profile-portraits/c1C0jvfaaxrjRXgvxDIOAUm3bMhbJjqqIeoMek_2TTijZyaSfWbFRsXirPIBSDnBAF"
+                      alt="Milan - Freelance Product Designer"
+                      className="relative w-24 h-24 rounded-full border-4 border-white shadow-2xl object-cover"
+                    />
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 text-center md:text-left">
+                    <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      "Just landed a <span className="relative inline-block">
+                        <span className="text-green-600">$2,000+</span>
+                        <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 100 6" preserveAspectRatio="none">
+                          <path d="M0 3 Q25 0, 50 3 T100 3" stroke="#10b981" strokeWidth="3" fill="none" strokeLinecap="round"/>
+                        </svg>
+                      </span> product photography contract using Dezygn."
+                    </p>
+                    <div className="flex items-center justify-center md:justify-start gap-3">
+                      <p className="text-lg font-bold text-gray-900">— Milan</p>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                {/* Content */}
-                <div className="flex-1 text-center md:text-left">
-                  <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
-                    "Just landed a <span className="relative inline-block">
-                      <span className="text-green-600">$2,000+</span>
-                      <svg className="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 100 6" preserveAspectRatio="none">
-                        <path d="M0 3 Q25 0, 50 3 T100 3" stroke="#10b981" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      </svg>
-                    </span> product photography contract using Dezygn."
-                  </p>
-                  <div className="flex items-center justify-center md:justify-start gap-3">
-                    <p className="text-lg font-bold text-gray-900">— Milan</p>
-                    <div className="flex items-center gap-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                      ))}
+            {/* Gerard's Testimonial */}
+            <div className="relative">
+              {/* Quote marks decoration */}
+              <div className="absolute -top-6 -left-4 text-purple-200 text-8xl font-serif leading-none opacity-50">"</div>
+
+              <div className="relative bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-12 md:p-16 border-2 border-green-200 shadow-lg">
+                <div className="flex flex-col md:flex-row items-center gap-8">
+                  {/* Avatar */}
+                  <div className="flex-shrink-0 relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full blur-xl opacity-50"></div>
+                    <img
+                      src="https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/admin-assets/marketing/landing/gerard-testimonial-dezygn.webp"
+                      alt="Gerard"
+                      className="relative w-24 h-24 rounded-full border-4 border-white shadow-2xl object-cover"
+                    />
+                    <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
+                      <Check className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="flex-1 text-center md:text-left">
+                    <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 leading-tight">
+                      "The speed is ridiculous. I created a month's worth of social media graphics in the time it usually takes me to decide what to order for lunch."
+                    </p>
+                    <div className="flex items-center justify-center md:justify-start gap-3">
+                      <p className="text-lg font-bold text-gray-900">— Gerard</p>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
