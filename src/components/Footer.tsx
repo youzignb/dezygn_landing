@@ -68,7 +68,7 @@ export default function Footer() {
                 Help Desk
               </a>
               <a
-                href="mailto:support@youzign.com"
+                href="mailto:support@dezygn.com"
                 className="block text-gray-400 hover:text-white transition-colors"
               >
                 Email Support
@@ -126,7 +126,7 @@ export default function Footer() {
 
             {/* Company Details */}
             <div className="text-center">
-              <span className="text-sm text-gray-400">© 2025 Youzign SPRL. All rights reserved.</span>
+              <span className="text-sm text-gray-400">© 2025 Wosho LLC. All rights reserved.</span>
             </div>
           </div>
         </div>

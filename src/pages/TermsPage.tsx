@@ -15,18 +15,19 @@ const TermsPage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>
             <p className="text-gray-700">
-              By accessing or using Dezygn services provided by Youzign SPRL, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+              By accessing or using Dezygn services provided by Wosho LLC, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
             </p>
           </section>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Company Information</h2>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <p className="font-bold">Youzign SPRL</p>
-              <p>16 rue de la Glaciere</p>
-              <p>1060 Saint-Gilles</p>
-              <p>Belgium</p>
-              <p>Email: <a href="mailto:support@youzign.com" className="text-purple-600 hover:underline">support@youzign.com</a></p>
+              <p className="font-bold">Wosho LLC</p>
+              <p>1209 Mountain Road Pl NE, Suite R</p>
+              <p>Albuquerque, NM 87110</p>
+              <p>United States</p>
+              <p>Phone: <a href="tel:+19789868669" className="text-purple-600 hover:underline">(978) 986-8669</a></p>
+              <p>Email: <a href="mailto:support@dezygn.com" className="text-purple-600 hover:underline">support@dezygn.com</a></p>
             </div>
           </section>
 
@@ -157,7 +158,7 @@ const TermsPage = () => {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Governing Law</h2>
             <p className="text-gray-700">
-              These terms are governed by Belgian law. Any disputes will be resolved in the courts of Belgium.
+              These terms are governed by the laws of the State of New Mexico, United States. Any disputes will be resolved in the courts of New Mexico.
             </p>
           </section>
 
@@ -174,8 +175,9 @@ const TermsPage = () => {
               For questions about these Terms of Service, please contact us:
             </p>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <p>Email: <a href="mailto:support@youzign.com" className="text-purple-600 hover:underline">support@youzign.com</a></p>
-              <p>Address: 16 rue de la Glaciere, 1060 Saint-Gilles, Belgium</p>
+              <p>Email: <a href="mailto:support@dezygn.com" className="text-purple-600 hover:underline">support@dezygn.com</a></p>
+              <p>Phone: <a href="tel:+19789868669" className="text-purple-600 hover:underline">(978) 986-8669</a></p>
+              <p>Address: 1209 Mountain Road Pl NE, Suite R, Albuquerque, NM 87110, United States</p>
             </div>
           </section>
         </div>

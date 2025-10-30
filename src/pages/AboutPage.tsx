@@ -120,7 +120,7 @@ function AboutPage() {
                 <h3 className="text-2xl font-bold text-gray-900">The Beginning</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                Founded as Youzign, we started with a simple belief: design should be accessible to everyone.
+                We started with a simple belief: design should be accessible to everyone.
                 Our first platform helped over 200,000 entrepreneurs create professional graphics without design experience.
               </p>
             </div>
@@ -133,7 +133,7 @@ function AboutPage() {
                 <h3 className="text-2xl font-bold text-gray-900">The Evolution</h3>
               </div>
               <p className="text-gray-600 leading-relaxed">
-                We saw an opportunity to help creators work faster and earn more. We evolved Youzign into Dezygn,
+                We saw an opportunity to help creators work faster and earn more. We evolved our platform into Dezygn,
                 combining our decade of experience with new technology to solve real creator problems.
               </p>
             </div>

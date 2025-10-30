@@ -18,11 +18,12 @@ const PrivacyPage = () => {
               This Privacy Policy is provided by:
             </p>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <p className="font-bold">Youzign SPRL</p>
-              <p>16 rue de la Glaciere</p>
-              <p>1060 Saint-Gilles</p>
-              <p>Belgium</p>
-              <p>Email: <a href="mailto:support@youzign.com" className="text-purple-600 hover:underline">support@youzign.com</a></p>
+              <p className="font-bold">Wosho LLC</p>
+              <p>1209 Mountain Road Pl NE, Suite R</p>
+              <p>Albuquerque, NM 87110</p>
+              <p>United States</p>
+              <p>Phone: <a href="tel:+19789868669" className="text-purple-600 hover:underline">(978) 986-8669</a></p>
+              <p>Email: <a href="mailto:support@dezygn.com" className="text-purple-600 hover:underline">support@dezygn.com</a></p>
             </div>
           </section>
 
@@ -124,8 +125,9 @@ const PrivacyPage = () => {
               If you have questions about this Privacy Policy or our data practices, please contact us:
             </p>
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <p>Email: <a href="mailto:support@youzign.com" className="text-purple-600 hover:underline">support@youzign.com</a></p>
-              <p>Address: 16 rue de la Glaciere, 1060 Saint-Gilles, Belgium</p>
+              <p>Email: <a href="mailto:support@dezygn.com" className="text-purple-600 hover:underline">support@dezygn.com</a></p>
+              <p>Phone: <a href="tel:+19789868669" className="text-purple-600 hover:underline">(978) 986-8669</a></p>
+              <p>Address: 1209 Mountain Road Pl NE, Suite R, Albuquerque, NM 87110, United States</p>
             </div>
           </section>
         </div>
