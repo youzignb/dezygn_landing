@@ -1,500 +1,201 @@
 import { useState } from 'react';
-import { Check, Users, Zap, Building, HelpCircle, MessageCircle } from 'lucide-react';
-import Layout from '../components/Layout';
+import { Check, Zap, Users, Building } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import HeaderV3 from '../components/HeaderV3';
+import FooterV3 from '../components/FooterV3';
 
 const PricingPage = () => {
-  const [billingCycle, setBillingCycle] = useState('monthly');
-  const [tooltipVisible, setTooltipVisible] = useState('');
-
-  const showTooltip = (feature: string) => setTooltipVisible(feature);
-  const hideTooltip = () => setTooltipVisible('');
-
-  const tooltips = {
-    credits: "1 credit = 1 image generation. Create stunning visuals for your clients.",
-    brandDNA: "Train AI to recognize your client's logos, faces, and brand styles. Others charge $20-50 per training.",
-    brands: "Import and manage client brand assets (logos, colors, fonts) for consistent designs.",
-    campaigns: "Organize your work into client projects and campaigns for better workflow.",
-    team: "Collaborate with team members and share credits across your workspace.",
-    whiteLabel: "Share work with clients under your own branding - no Dezygn watermarks.",
-    academy: "Complete training program to build a profitable AI creative agency business.",
-    support: "Get priority WhatsApp support for faster issue resolution."
-  };
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly');
 
   return (
-    <Layout>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900/50 to-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-32">
+    <div className="h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-hidden flex flex-col">
+      <Helmet>
+        <title>Pricing - Simple Plans | Dezygn</title>
+      </Helmet>
+
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap');
+        
+        .pricing-card {
+          background: rgba(26, 26, 26, 0.4);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.05);
+          transition: all 0.2s ease-out;
+        }
+        
+        .pricing-card:hover {
+          background: rgba(26, 26, 26, 0.7);
+          border-color: rgba(168, 85, 247, 0.3);
+          transform: translateY(-2px);
+        }
+
+        .text-gradient {
+          background: linear-gradient(to right, #a855f7, #60a5fa);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      `}</style>
+
+      <HeaderV3 />
+
+      {/* Main Content */}
+      <main className="flex-1 flex flex-col items-center px-4 sm:px-6 lg:px-8 pt-24 pb-8 max-w-7xl mx-auto w-full">
+        
         {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            Simple, Transparent Pricing
+        <div className="text-center mb-12 shrink-0">
+          <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase text-purple-400 mb-3">
+            <span className="w-1 h-1 rounded-full bg-purple-500 animate-pulse"></span>
+            Simple Plans
+          </div>
+          <h1 className="font-black text-3xl md:text-5xl text-white mb-3 tracking-tight">
+            Simple, Transparent <span className="text-gradient">Pricing</span>
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Built for freelancers and agencies who make money with AI
-          </p>
           
-          {/* Billing Toggle */}
-          <div className="inline-flex items-center bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-2 shadow-2xl">
+          {/* Toggle */}
+          <div className="inline-flex items-center bg-white/5 rounded-full p-1 border border-white/10">
             <button
               onClick={() => setBillingCycle('monthly')}
-              className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
-                billingCycle === 'monthly' 
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-2xl opacity-90' 
-                  : 'text-white/80 hover:text-white'
-              }`}
+              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all ${billingCycle === 'monthly' ? 'bg-white text-black' : 'text-gray-400 hover:text-white'}`}
             >
               Monthly
             </button>
             <button
               onClick={() => setBillingCycle('yearly')}
-              className={`px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 ${
-                billingCycle === 'yearly' 
-                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-2xl opacity-90' 
-                  : 'text-white/80 hover:text-white'
-              }`}
+              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all flex items-center gap-2 ${billingCycle === 'yearly' ? 'bg-white text-black' : 'text-gray-400 hover:text-white'}`}
             >
-              Yearly
-              <span className="ml-2 text-green-400 text-sm">Save 25%</span>
+              Yearly <span className="text-[10px] text-green-600 bg-green-100 px-1.5 rounded-full">Save 25%</span>
             </button>
           </div>
         </div>
 
+        {/* Cards Grid */}
+        <div className="grid md:grid-cols-3 gap-4 w-full max-w-5xl h-auto items-stretch">
 
-        {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-20">
-          {/* Freelancer Plan */}
-          <div className="group relative bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-            <div className="relative p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-purple-400" />
-                </div>
-                <h3 className="text-3xl font-bold text-white">Freelancer</h3>
+          {/* Pro */}
+          <div className="pricing-card rounded-2xl p-6 flex flex-col relative">
+            <div className="mb-4">
+              <div className="w-10 h-10 rounded-lg bg-purple-500/20 flex items-center justify-center mb-3 text-purple-400">
+                <Zap className="w-5 h-5" />
               </div>
-              
-              <p className="text-white/70 mb-6 text-lg">
-                Perfect for solo creators serving 10-15 clients
-              </p>
-              
-              <div className="mb-8">
-                <span className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
-                  $79
-                </span>
-                <span className="text-white/70 text-xl font-medium">/month</span>
-                {billingCycle === 'yearly' && (
-                  <p className="text-green-400 font-bold mt-2 text-base">
-                    $711/year (3 months free)
-                  </p>
-                )}
-              </div>
-              
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-4 rounded-lg font-semibold text-lg shadow-2xl hover:opacity-90 transition-opacity duration-300 mb-8">
-                Get Started
-              </button>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-400 mt-0.5" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <div className="flex-1">
-                      <p className="font-bold text-white">500 credits/month</p>
-                      <p className="text-sm text-white/60">
-                        Create 500 images or 50 videos
-                      </p>
-                    </div>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('credits')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'credits' && (
-                        <div className="absolute right-0 top-5 bg-gray-900/90 backdrop-blur-sm text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.credits}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-400 mt-0.5" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <div className="flex-1">
-                      <p className="font-bold text-white">5 Brand DNA™ trainings/month</p>
-                      <p className="text-sm text-white/60">
-                        Train logos & faces for consistency
-                      </p>
-                    </div>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('brandDNA')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'brandDNA' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.brandDNA}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">10 brands</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('brands')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'brands' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.brands}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">100 campaigns</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('campaigns')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'campaigns' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.campaigns}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">3 team members</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('team')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'team' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.team}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">All templates</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">White label client sharing</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('whiteLabel')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'whiteLabel' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.whiteLabel}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="font-bold text-white flex-1">AI Creative Agency Academy</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('academy')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'academy' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.academy}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-lg font-bold text-white">Pro</h3>
+              <p className="text-xs text-gray-400 mt-1">For solo creators & freelancers</p>
             </div>
+
+            <div className="mb-6">
+              <div className="flex items-baseline gap-1">
+                <span className="text-3xl font-black text-white">${billingCycle === 'yearly' ? '39' : '49'}</span>
+                <span className="text-sm text-gray-500">/mo</span>
+              </div>
+              {billingCycle === 'yearly' && <p className="text-[10px] text-green-400 mt-1">Billed $468/yr (2 months free)</p>}
+            </div>
+
+            <div className="space-y-2.5 mb-6 flex-1">
+              <Feature text="Perfect for 2-3 clients" highlight />
+              <Feature text="~300 images/month" />
+              <Feature text="5 Brands" />
+              <Feature text="1 Team seat" />
+              <Feature text="Commercial Usage" />
+              <Feature text="Standard Support" />
+            </div>
+
+            <a href="https://cal.com/bertrand-6hbdyx/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="w-full py-2.5 rounded-lg border border-white/20 hover:bg-white hover:text-black text-sm font-bold transition-all text-center">
+              Book Demo
+            </a>
           </div>
 
-          {/* Agency Plan */}
-          <div className="group relative bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-purple-400/50 hover:border-purple-400 transition-all duration-300 hover:scale-105">
-            <div className="absolute -top-4 -right-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-6 py-2 rounded-2xl text-sm font-bold shadow-lg">
+          {/* Plus (Highlighted) */}
+          <div className="pricing-card rounded-2xl p-6 flex flex-col relative border-purple-500/30 bg-purple-900/10">
+            <div className="absolute top-0 right-0 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl rounded-tr-xl">
               POPULAR
             </div>
-            
-            <div className="relative p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-6 h-6 text-purple-400" />
-                </div>
-                <h3 className="text-3xl font-bold text-white">Agency</h3>
+            <div className="mb-4">
+              <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center mb-3 text-blue-400">
+                <Users className="w-5 h-5" />
               </div>
-              
-              <p className="text-white/70 mb-6 text-lg">
-                Scale your business with 30+ clients
-              </p>
-              
-              <div className="mb-8">
-                <span className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
-                  $159
-                </span>
-                <span className="text-white/70 text-xl font-medium">/month</span>
-                {billingCycle === 'yearly' && (
-                  <p className="text-green-400 font-bold mt-2 text-base">
-                    $1,431/year (3 months free)
-                  </p>
-                )}
-              </div>
-              
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-4 rounded-lg font-semibold text-lg shadow-2xl hover:opacity-90 transition-opacity duration-300 mb-8">
-                Get Started
-              </button>
-              
-              <div className="space-y-3">
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-400 mt-0.5" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <div className="flex-1">
-                      <p className="font-bold text-white">1,500 credits/month</p>
-                      <p className="text-sm text-white/60">
-                        Create 1,500 images or 150 videos
-                      </p>
-                    </div>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('credits')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Check className="w-5 h-5 text-green-400 mt-0.5" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <div className="flex-1">
-                      <p className="font-bold text-white">10 Brand DNA™ trainings/month</p>
-                      <p className="text-sm text-white/60">
-                        Perfect for multiple client brands
-                      </p>
-                    </div>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('brandDNA')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">Unlimited brands</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('brands')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">Unlimited campaigns</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('campaigns')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="font-bold text-white flex-1">Unlimited team members</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('team')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">All templates</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="text-white flex-1">White label client sharing</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('whiteLabel')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <p className="font-bold text-white flex-1">AI Creative Agency Academy</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('academy')}
-                        onMouseLeave={hideTooltip}
-                      />
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <div className="flex items-center gap-2 flex-1">
-                    <MessageCircle className="w-4 h-4 text-green-500" />
-                    <p className="font-bold text-white flex-1">Priority Support</p>
-                    <div className="relative">
-                      <HelpCircle 
-                        className="w-3 h-3 text-white/40 cursor-help" 
-                        onMouseEnter={() => showTooltip('support')}
-                        onMouseLeave={hideTooltip}
-                      />
-                      {tooltipVisible === 'support' && (
-                        <div className="absolute right-0 top-5 bg-gray-900 text-white text-xs p-3 rounded-lg shadow-lg z-50 w-56">
-                          {tooltips.support}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-lg font-bold text-white">Plus</h3>
+              <p className="text-xs text-gray-400 mt-1">For growing agencies</p>
             </div>
+
+            <div className="mb-6">
+              <div className="flex items-baseline gap-1">
+                <span className="text-3xl font-black text-white">${billingCycle === 'yearly' ? '79' : '99'}</span>
+                <span className="text-sm text-gray-500">/mo</span>
+              </div>
+              {billingCycle === 'yearly' && <p className="text-[10px] text-green-400 mt-1">Billed $948/yr (2 months free)</p>}
+            </div>
+
+            <div className="space-y-2.5 mb-6 flex-1">
+              <Feature text="Handle 5-10 clients" highlight />
+              <Feature text="~800 images/month" highlight />
+              <Feature text="25 Brands" />
+              <Feature text="10 Team seats" />
+              <Feature text="White Label Sharing" />
+              <Feature text="Private Discord Community" />
+              <Feature text="AI Photography Training" />
+              <Feature text="Priority Support" />
+            </div>
+
+            <a href="https://cal.com/bertrand-6hbdyx/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="w-full py-2.5 rounded-lg bg-white text-black hover:bg-gray-200 text-sm font-bold transition-all text-center shadow-lg shadow-purple-900/20">
+              Book Demo
+            </a>
           </div>
 
-          {/* Enterprise Plan */}
-          <div className="group relative bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-            <div className="relative p-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Building className="w-6 h-6 text-purple-400" />
-                </div>
-                <h3 className="text-3xl font-bold text-white">Enterprise</h3>
+          {/* Max */}
+          <div className="pricing-card rounded-2xl p-6 flex flex-col relative">
+            <div className="mb-4">
+              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center mb-3 text-blue-400">
+                <Building className="w-5 h-5" />
               </div>
-              
-              <p className="text-white/70 mb-6 text-lg">
-                Custom solutions for large organizations
-              </p>
-              
-              <div className="mb-8">
-                <span className="text-5xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
-                  $999+
-                </span>
-                <span className="text-white/70 text-xl font-medium">/month</span>
-              </div>
-              
-              <button className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-4 rounded-lg font-semibold text-lg shadow-2xl hover:opacity-90 transition-opacity duration-300 mb-8">
-                Get in Touch
-              </button>
-              
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Custom credit allocation</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Unlimited Brand DNA™ trainings</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Unlimited brands & campaigns</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Unlimited team members</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Custom integrations</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">API access</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Dedicated account manager</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">SLA guarantee</p>
-                </div>
-                
-                <div className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-green-400" />
-                  <p className="text-white">Priority support</p>
-                </div>
-              </div>
+              <h3 className="text-lg font-bold text-white">Max</h3>
+              <p className="text-xs text-gray-400 mt-1">For high-volume teams</p>
             </div>
+
+            <div className="mb-6">
+              <div className="flex items-baseline gap-1">
+                <span className="text-3xl font-black text-white">${billingCycle === 'yearly' ? '249' : '299'}</span>
+                <span className="text-sm text-gray-500">/mo</span>
+              </div>
+              {billingCycle === 'yearly' && <p className="text-[10px] text-green-400 mt-1">Billed $2,988/yr (2 months free)</p>}
+            </div>
+
+            <div className="space-y-2.5 mb-6 flex-1">
+              <Feature text="Unlimited clients" highlight />
+              <Feature text="~2,500+ images/month" highlight />
+              <Feature text="Unlimited Brands" />
+              <Feature text="Unlimited Team seats" />
+              <Feature text="Everything in Plus" />
+              <Feature text="Live Weekly Classes" />
+              <Feature text="API Access" />
+              <Feature text="Dedicated Support" />
+            </div>
+
+            <a href="https://cal.com/bertrand-6hbdyx/30min?overlayCalendar=true" target="_blank" rel="noopener noreferrer" className="w-full py-2.5 rounded-lg border border-white/20 hover:bg-white hover:text-black text-sm font-bold transition-all text-center">
+              Book Demo
+            </a>
           </div>
+
         </div>
 
-      </div>
-      </div>
+        {/* Onboarding Callout */}
+        <div className="mt-6 text-center">
+          <p className="text-xs text-gray-500">
+            Need hands-on help? Ask about <span className="text-purple-400">Done-With-You Onboarding</span>
+          </p>
+        </div>
 
-    </Layout>
+      </main>
+      <FooterV3 className="fixed bottom-0 left-0" />
+    </div>
   );
 };
+
+const Feature = ({ text, highlight = false }: { text: string, highlight?: boolean }) => (
+  <div className="flex items-center gap-2">
+    <div className={`flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center ${highlight ? 'bg-green-500/20 text-green-400' : 'bg-white/5 text-gray-400'}`}>
+      <Check size={10} strokeWidth={3} />
+    </div>
+    <span className={`text-xs ${highlight ? 'text-white font-medium' : 'text-gray-400'}`}>{text}</span>
+  </div>
+);
 
 export default PricingPage;

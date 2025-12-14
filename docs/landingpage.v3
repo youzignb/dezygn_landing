@@ -1,0 +1,224 @@
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Sparkles, Menu, X, Command, MessageSquare, Layers, Wand2 } from 'lucide-react';
+
+const App = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [inputValue, setInputValue] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  // Simple animation hook for the floating elements
+  const [offset, setOffset] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOffset((prev) => (prev + 1) % 360);
+    }, 50);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-[#0d0d0d] text-[#f4f4f0] font-sans selection:bg-[#d2a378] selection:text-black overflow-x-hidden">
+      {/* Import Fonts */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+        
+        .font-serif-display {
+          font-family: 'Instrument Serif', serif;
+        }
+        
+        .animated-gradient {
+          background: linear-gradient(120deg, #d2a378 0%, #bd8c63 50%, #d2a378 100%);
+          background-size: 200% 200%;
+          animation: gradient 5s ease infinite;
+        }
+
+        @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+        }
+
+        .float-animation {
+          animation: float 6s ease-in-out infinite;
+        }
+        
+        .float-animation-delayed {
+          animation: float 6s ease-in-out 3s infinite;
+        }
+
+        @keyframes float {
+          0% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+          100% { transform: translateY(0px); }
+        }
+      `}</style>
+
+      {/* Navigation */}
+      <nav className="fixed w-full z-50 px-6 py-6 md:px-12 flex justify-between items-center mix-blend-difference text-white">
+        <div className="flex items-center gap-2 group cursor-pointer">
+          <div className="relative w-8 h-8 flex items-center justify-center">
+            <Sparkles className="w-6 h-6 text-[#d2a378] group-hover:rotate-12 transition-transform duration-500" strokeWidth={1.5} />
+          </div>
+          <span className="font-serif-display text-2xl tracking-wide pt-1">Dezygn</span>
+        </div>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+          <a href="#" className="hover:text-white transition-colors">Meet Dezygn</a>
+          <a href="#" className="hover:text-white transition-colors">Manifesto</a>
+          <a href="#" className="hover:text-white transition-colors">Pricing</a>
+          <button className="px-5 py-2 rounded-full border border-white/20 hover:bg-white hover:text-black transition-all duration-300">
+            Sign In
+          </button>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X /> : <Menu />}
+        </button>
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-[#0d0d0d] z-40 flex flex-col items-center justify-center gap-8 text-2xl font-serif-display animate-in fade-in duration-200">
+          <a href="#" className="hover:text-[#d2a378]">Meet Dezygn</a>
+          <a href="#" className="hover:text-[#d2a378]">Manifesto</a>
+          <a href="#" className="hover:text-[#d2a378]">Pricing</a>
+        </div>
+      )}
+
+      {/* Main Content Grid */}
+      <main className="relative min-h-screen flex flex-col md:flex-row items-center justify-center pt-24 md:pt-0">
+        
+        {/* Left Column: Text & Input */}
+        <div className="w-full md:w-1/2 px-6 md:px-16 lg:px-24 flex flex-col justify-center z-10 mb-12 md:mb-0">
+          
+          <div className="space-y-6 max-w-xl mx-auto md:mx-0">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-[#d2a378] mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#d2a378] animate-pulse"></span>
+              v2.0 Now Live
+            </div>
+
+            <h1 className="font-serif-display text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-[#f4f4f0]">
+              Design that <br />
+              <span className="italic text-[#d2a378]">thinks.</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-gray-400 font-light max-w-md">
+              Meet your new AI Creative Director.
+            </p>
+
+            {/* Chat Input Container */}
+            <div className={`
+              mt-8 relative group rounded-2xl bg-[#1a1a1a] border transition-all duration-300
+              ${isFocused ? 'border-[#d2a378]/50 shadow-[0_0_30px_-10px_rgba(210,163,120,0.15)]' : 'border-white/10 hover:border-white/20'}
+            `}>
+              <div className="absolute top-4 left-4 text-gray-500">
+                <Command className="w-5 h-5" />
+              </div>
+              
+              <textarea 
+                className="w-full bg-transparent text-lg p-4 pl-12 pr-14 min-h-[140px] resize-none outline-none text-[#f4f4f0] placeholder:text-gray-600 font-light"
+                placeholder="Describe your dream landing page..."
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onFocus={() => setIsFocused(true)}
+                onBlur={() => setIsFocused(false)}
+              />
+
+              <div className="absolute bottom-4 left-4 flex gap-3 text-gray-600">
+                <button className="hover:text-[#d2a378] transition-colors" title="Upload Reference">
+                   <Layers className="w-5 h-5" />
+                </button>
+                <button className="hover:text-[#d2a378] transition-colors" title="Style Guide">
+                   <Wand2 className="w-5 h-5" />
+                </button>
+              </div>
+
+              <button 
+                className={`
+                  absolute bottom-3 right-3 p-3 rounded-xl flex items-center justify-center transition-all duration-300
+                  ${inputValue.length > 0 ? 'bg-[#d2a378] text-black translate-y-0 opacity-100' : 'bg-white/10 text-gray-500 translate-y-1 opacity-50 cursor-not-allowed'}
+                `}
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-6 text-sm text-gray-500 font-medium pt-4">
+              <span>Used by teams at</span>
+              <div className="flex gap-4 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                {/* Simple shapes as placeholder logos */}
+                <div className="h-4 w-12 bg-current rounded-sm"></div>
+                <div className="h-4 w-12 bg-current rounded-sm"></div>
+                <div className="h-4 w-12 bg-current rounded-sm"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column: Visual Composition */}
+        <div className="w-full md:w-1/2 h-[50vh] md:h-screen relative overflow-hidden bg-[#151515] md:rounded-l-[3rem] border-l border-t border-white/5">
+          
+          {/* Abstract Background Texture */}
+          <div className="absolute inset-0 opacity-20" 
+               style={{
+                 backgroundImage: `radial-gradient(circle at 50% 50%, #d2a378 1px, transparent 1px)`,
+                 backgroundSize: '40px 40px'
+               }}>
+          </div>
+
+          {/* Floating Elements Composition */}
+          <div className="absolute inset-0 flex items-center justify-center perspective-1000">
+            
+            {/* Element 1: The "Canvas" */}
+            <div className="float-animation relative w-64 h-80 md:w-80 md:h-96 bg-[#1a1a1a] rounded-xl border border-white/10 shadow-2xl rotate-[-6deg] hover:rotate-0 transition-transform duration-700 z-10 overflow-hidden group">
+              <div className="h-8 border-b border-white/5 flex items-center px-4 gap-2">
+                <div className="w-2 h-2 rounded-full bg-red-500/50"></div>
+                <div className="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                <div className="w-2 h-2 rounded-full bg-green-500/50"></div>
+              </div>
+              <div className="p-6 space-y-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-[#d2a378] to-amber-700/20 mb-6"></div>
+                <div className="h-4 w-3/4 bg-white/10 rounded"></div>
+                <div className="h-4 w-1/2 bg-white/10 rounded"></div>
+                <div className="h-32 w-full bg-white/5 rounded mt-4 border border-dashed border-white/10 flex items-center justify-center text-xs text-gray-600">
+                  Thinking...
+                </div>
+              </div>
+              
+              {/* Scanline effect */}
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#d2a378]/5 to-transparent h-[20%] w-full animate-[scan_3s_ease-in-out_infinite]" />
+            </div>
+
+            {/* Element 2: The "Palette" */}
+            <div className="float-animation-delayed absolute right-10 md:right-20 top-1/4 w-40 h-48 bg-[#222] rounded-lg border border-white/10 shadow-xl rotate-[12deg] z-0 blur-[1px] opacity-60">
+               <div className="p-4 grid grid-cols-2 gap-2">
+                 <div className="aspect-square rounded bg-[#d2a378]"></div>
+                 <div className="aspect-square rounded bg-[#bd8c63]"></div>
+                 <div className="aspect-square rounded bg-[#8a684b]"></div>
+                 <div className="aspect-square rounded bg-[#1a1a1a] border border-white/10"></div>
+               </div>
+            </div>
+
+            {/* Element 3: Code Snippet */}
+            <div className="absolute left-10 md:left-20 bottom-1/4 w-48 h-auto p-4 bg-black/80 backdrop-blur-md rounded-lg border border-white/10 shadow-xl rotate-[-3deg] z-20 font-mono text-[10px] text-green-400/80 leading-relaxed pointer-events-none select-none">
+              {`> initiating_core\n> context: creative\n> mood: elegant\n> generating...`}
+              <span className="inline-block w-2 h-4 bg-green-400/80 ml-1 animate-pulse"></span>
+            </div>
+
+            {/* Decorative Glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#d2a378] rounded-full blur-[120px] opacity-10 pointer-events-none"></div>
+
+          </div>
+        </div>
+      </main>
+
+      {/* Subtle Footer Note */}
+      <footer className="absolute bottom-6 left-0 w-full md:w-1/2 text-center text-gray-700 text-xs pointer-events-none">
+        Press Enter to send • Shift + Enter for new line
+      </footer>
+    </div>
+  );
+};
+
+export default App;

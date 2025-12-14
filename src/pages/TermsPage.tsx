@@ -1,42 +1,60 @@
-import Layout from '../components/Layout';
+import HeaderV3 from '../components/HeaderV3';
+import FooterV3 from '../components/FooterV3';
 
 const TermsPage = () => {
-  return (
-    <Layout variant="light">
 
-      <div className="max-w-4xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-black text-gray-900 mb-8">Terms of Service</h1>
+  return (
+    <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white flex flex-col">
+      {/* Styles */}
+      <style>{`
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap');
         
-        <div className="prose prose-lg max-w-none">
-          <p className="text-gray-600 mb-8">
+        .prose-invert {
+          color: #d1d5db;
+        }
+        .prose-invert h1, .prose-invert h2, .prose-invert h3 {
+          color: white;
+        }
+        .prose-invert strong {
+          color: white;
+        }
+      `}</style>
+
+      <HeaderV3 />
+
+      {/* Main Content */}
+      <main className="flex-1 px-4 sm:px-6 lg:px-8 pt-24 pb-12 max-w-4xl mx-auto w-full">
+        <h1 className="text-4xl font-black text-white mb-8 tracking-tight">Terms of Service</h1>
+        
+        <div className="prose prose-invert prose-sm md:prose-base max-w-none space-y-8">
+          <p className="text-gray-400">
             <strong>Effective Date:</strong> January 1, 2025
           </p>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>
-            <p className="text-gray-700">
+          <section>
+            <h2 className="text-2xl font-bold mb-4">1. Agreement to Terms</h2>
+            <p>
               By accessing or using Dezygn services provided by Wosho LLC, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
             </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Company Information</h2>
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <p className="font-bold">Wosho LLC</p>
-              <p>1209 Mountain Road Pl NE, Suite R</p>
-              <p>Albuquerque, NM 87110</p>
-              <p>United States</p>
-              <p>Phone: <a href="tel:+19789868669" className="text-purple-600 hover:underline">(978) 986-8669</a></p>
-              <p>Email: <a href="mailto:support@dezygn.com" className="text-purple-600 hover:underline">support@dezygn.com</a></p>
+          <section>
+            <h2 className="text-2xl font-bold mb-4">2. Company Information</h2>
+            <div className="bg-white/5 rounded-xl p-6 border border-white/10 backdrop-blur-sm">
+              <p className="font-bold text-white">Wosho LLC</p>
+              <p className="text-gray-400">1209 Mountain Road Pl NE, Suite R</p>
+              <p className="text-gray-400">Albuquerque, NM 87110</p>
+              <p className="text-gray-400">United States</p>
+              <p className="mt-2">Email: <a href="mailto:support@dezygn.com" className="text-purple-400 hover:text-purple-300">support@dezygn.com</a></p>
             </div>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Description of Service</h2>
-            <p className="text-gray-700 mb-4">
+          <section>
+            <h2 className="text-2xl font-bold mb-4">3. Description of Service</h2>
+            <p className="mb-4">
               Dezygn is an AI-powered design platform that enables users to create visual content including images, videos, and designs. Our services include:
             </p>
-            <ul className="list-disc pl-6 text-gray-700">
+            <ul className="list-disc pl-6 space-y-2 text-gray-400">
               <li>AI-powered image and video generation</li>
               <li>Brand DNA™ training for consistent branding</li>
               <li>Template libraries and design tools</li>
@@ -45,15 +63,15 @@ const TermsPage = () => {
             </ul>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">4. User Accounts</h2>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Account Creation</h3>
-            <p className="text-gray-700 mb-4">
+          <section>
+            <h2 className="text-2xl font-bold mb-4">4. User Accounts</h2>
+            <h3 className="text-lg font-bold text-white mt-6 mb-3">Account Creation</h3>
+            <p>
               You must provide accurate and complete information when creating an account. You are responsible for maintaining the security of your account credentials.
             </p>
             
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Account Responsibilities</h3>
-            <ul className="list-disc pl-6 text-gray-700">
+            <h3 className="text-lg font-bold text-white mt-6 mb-3">Account Responsibilities</h3>
+            <ul className="list-disc pl-6 space-y-2 text-gray-400">
               <li>You are responsible for all activities under your account</li>
               <li>You must notify us immediately of any security breach</li>
               <li>You may not share your account with others</li>
@@ -61,129 +79,56 @@ const TermsPage = () => {
             </ul>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Acceptable Use</h2>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Permitted Uses</h3>
-            <p className="text-gray-700 mb-4">
-              You may use our services for lawful business and personal purposes, including creating marketing materials, social media content, and other visual designs.
+          <section>
+            <h2 className="text-2xl font-bold mb-4">5. Acceptable Use</h2>
+            <p className="mb-4">
+              You may use our services for lawful business and personal purposes. You agree not to:
             </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Prohibited Uses</h3>
-            <ul className="list-disc pl-6 text-gray-700">
-              <li>Creating content that infringes intellectual property rights</li>
-              <li>Generating harmful, illegal, or offensive material</li>
-              <li>Attempting to reverse engineer our AI models</li>
-              <li>Using the service to compete with us directly</li>
-              <li>Violating any applicable laws or regulations</li>
-              <li>Creating deepfakes or misleading content without proper disclosure</li>
+            <ul className="list-disc pl-6 space-y-2 text-gray-400">
+              <li>Create content that infringes intellectual property rights</li>
+              <li>Generate harmful, illegal, or offensive material</li>
+              <li>Attempt to reverse engineer our AI models</li>
+              <li>Use the service to compete with us directly</li>
+              <li>Violate any applicable laws or regulations</li>
             </ul>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Intellectual Property</h2>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Your Content</h3>
-            <p className="text-gray-700 mb-4">
-              You retain ownership of content you upload for Brand DNA™ training and other inputs. You grant us a license to use this content solely to provide our services.
-            </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Generated Content</h3>
-            <p className="text-gray-700 mb-4">
-              You own the rights to content generated using our platform, subject to these terms and applicable law. However, you are responsible for ensuring your use complies with all relevant laws and third-party rights.
-            </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Our Platform</h3>
-            <p className="text-gray-700">
-              Our platform, AI models, and underlying technology remain our property. You may not copy, modify, or create derivative works of our platform.
+          <section>
+            <h2 className="text-2xl font-bold mb-4">6. Intellectual Property</h2>
+            <div className="grid gap-6 md:grid-cols-2">
+              <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                <h3 className="text-lg font-bold text-white mb-2">Your Content</h3>
+                <p className="text-sm text-gray-400">
+                  You retain ownership of content you upload. You grant us a license to use this content solely to provide our services.
+                </p>
+              </div>
+              <div className="bg-white/5 p-6 rounded-xl border border-white/10">
+                <h3 className="text-lg font-bold text-white mb-2">Generated Content</h3>
+                <p className="text-sm text-gray-400">
+                  You own the rights to content generated using our platform, subject to these terms and applicable law.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-4">7. Payment & Cancellation</h2>
+            <p className="mb-4">
+              Subscription fees are billed in advance. You may cancel your subscription at any time, effective at the end of your current billing period. Fees are non-refundable except as required by law.
             </p>
           </section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Payment and Billing</h2>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Subscription Fees</h3>
-            <p className="text-gray-700 mb-4">
-              Subscription fees are billed in advance on a monthly or annual basis. All fees are non-refundable except as required by law.
-            </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Price Changes</h3>
-            <p className="text-gray-700 mb-4">
-              We may change our pricing with 30 days' notice. Changes will not affect your current billing cycle.
-            </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Payment Methods</h3>
-            <p className="text-gray-700">
-              We accept major credit cards and other payment methods as displayed during checkout. You authorize us to charge your payment method for all fees.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Cancellation and Termination</h2>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Your Right to Cancel</h3>
-            <p className="text-gray-700 mb-4">
-              You may cancel your subscription at any time. Cancellation will be effective at the end of your current billing period.
-            </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Our Right to Terminate</h3>
-            <p className="text-gray-700">
-              We may suspend or terminate your account for violations of these terms, non-payment, or other reasons with appropriate notice.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Service Availability</h2>
-            <p className="text-gray-700">
-              We strive to maintain high service availability but cannot guarantee uninterrupted access. We may perform maintenance that temporarily affects service availability.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Disclaimers and Limitation of Liability</h2>
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Service Disclaimers</h3>
-            <p className="text-gray-700 mb-4">
-              Our services are provided "as is" without warranties of any kind. We do not guarantee the accuracy, completeness, or suitability of generated content.
-            </p>
-            
-            <h3 className="text-xl font-bold text-gray-800 mb-3">Limitation of Liability</h3>
-            <p className="text-gray-700">
-              To the maximum extent permitted by law, our liability is limited to the amount you paid for the services in the preceding 12 months.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Indemnification</h2>
-            <p className="text-gray-700">
-              You agree to indemnify and hold us harmless from claims arising from your use of our services, violation of these terms, or infringement of third-party rights.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Governing Law</h2>
-            <p className="text-gray-700">
+          <section>
+            <h2 className="text-2xl font-bold mb-4">8. Governing Law</h2>
+            <p>
               These terms are governed by the laws of the State of New Mexico, United States. Any disputes will be resolved in the courts of New Mexico.
             </p>
           </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">13. Changes to Terms</h2>
-            <p className="text-gray-700">
-              We may update these terms periodically. We will notify you of significant changes and your continued use constitutes acceptance of the updated terms.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">14. Contact Information</h2>
-            <p className="text-gray-700 mb-4">
-              For questions about these Terms of Service, please contact us:
-            </p>
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <p>Email: <a href="mailto:support@dezygn.com" className="text-purple-600 hover:underline">support@dezygn.com</a></p>
-              <p>Phone: <a href="tel:+19789868669" className="text-purple-600 hover:underline">(978) 986-8669</a></p>
-              <p>Address: 1209 Mountain Road Pl NE, Suite R, Albuquerque, NM 87110, United States</p>
-            </div>
-          </section>
         </div>
-      </div>
+      </main>
 
-    </Layout>
+      <FooterV3 className="border-t border-white/5" />
+    </div>
   );
 };
 

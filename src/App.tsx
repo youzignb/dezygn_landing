@@ -20,14 +20,28 @@ import FeaturesPage from './pages/FeaturesPage';
 import AccessibilityPage from './pages/AccessibilityPage';
 import V1AccessPage from './pages/V1AccessPage';
 import LandingPage from './pages/LandingPage';
+import LandingPageNew from './pages/LandingPageNew';
+import LandingPageV3 from './pages/LandingPageV3';
+import PromptographyPage from './pages/PromptographyPage';
+import BusinessPage from './pages/BusinessPage';
+import AgencyPage from './pages/AgencyPage';
+import CaseStudiesPage from './pages/CaseStudiesPage';
 
 function App() {
   return (
     <HelmetProvider>
       <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<LandingPageV3 />} />
+        <Route path="/home-old" element={<HomePage />} />
         <Route path="/landing" element={<LandingPage />} />
+        <Route path="/landing-new" element={<LandingPageNew />} />
+        <Route path="/v3" element={<LandingPageV3 />} />
+        <Route path="/landing-v3" element={<LandingPageV3 />} />
+        <Route path="/business" element={<BusinessPage />} />
+        <Route path="/agency" element={<AgencyPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
+        <Route path="/promptography" element={<PromptographyPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
