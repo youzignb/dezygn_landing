@@ -67,7 +67,7 @@ const AwaVisualization = () => {
   // Manage Node Active State
   useEffect(() => {
     if (activeStage === 1) {
-      const timeouts: NodeJS.Timeout[] = [];
+      const timeouts: ReturnType<typeof setTimeout>[] = [];
       setActiveNodeIds([]); 
 
       nodes.forEach((node, idx) => {
