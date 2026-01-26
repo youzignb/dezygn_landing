@@ -257,12 +257,12 @@ export default function HeaderV3() {
             </div>
           ))}
 
-          <Link
-            to="/pricing"
+          <a
+            href="#pricing"
             className="px-3.5 py-2 rounded-lg hover:text-white hover:bg-white/5 transition-colors"
           >
             Pricing
-          </Link>
+          </a>
 
           <div className="w-px h-5 bg-white/10 mx-2" />
 
@@ -273,13 +273,13 @@ export default function HeaderV3() {
             Sign In
           </a>
 
-          <Link
-            to="/pricing"
+          <a
+            href="https://chat.dezygn.com/login"
             className="ml-2 flex items-center gap-1.5 px-5 py-2 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors duration-200"
           >
             Get Started
             <ArrowRight className="w-3.5 h-3.5" />
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -335,13 +335,13 @@ export default function HeaderV3() {
               </div>
             ))}
 
-            <Link
-              to="/pricing"
+            <a
+              href="#pricing"
               onClick={closeMobile}
               className="px-4 py-3.5 text-lg font-medium text-gray-300 hover:text-white transition-colors rounded-lg hover:bg-white/5"
             >
               Pricing
-            </Link>
+            </a>
 
             <div className="border-t border-white/10 mt-4 pt-4 flex flex-col gap-3">
               <a
@@ -350,14 +350,14 @@ export default function HeaderV3() {
               >
                 Sign In
               </a>
-              <Link
-                to="/pricing"
+              <a
+                href="https://chat.dezygn.com/login"
                 onClick={closeMobile}
                 className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
               >
                 Get Started
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
