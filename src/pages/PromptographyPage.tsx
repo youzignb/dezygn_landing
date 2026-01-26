@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { ArrowRight, Check, Minus, Plus, Shield, Users, Zap, X, Layers, PlayCircle, Sparkles, Search, Target, Star, AlertTriangle, Wrench, Compass, Eye, FileText, Dna, FlaskConical, Palette, Camera } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
+import retainerImage from '../assets/images/630:m-retainer.png';
 
 // FAQ Item Component
 function FAQItem({ question, answer }: { question: string; answer: string }) {
@@ -390,6 +391,8 @@ function PromptographyPage() {
                    So I started applying for the jobs myself. At first, I landed small gigs — $100 here, $300 there. But I kept refining the system.
                  </div>
 
+                 <img src={retainerImage} alt="$630/month retainer milestone" className="rounded-xl border border-white/10 shadow-lg my-8" />
+
                  <p className="text-slate-400 leading-relaxed mb-6">
                    And soon, I turned it into a <strong className="text-white">$630/month retainer</strong> — just to deliver 12 polished images per month. That’s $52 an image. On repeat.
                  </p>
@@ -690,61 +693,61 @@ function PromptographyPage() {
                 <PlayCircle className="w-4 h-4 text-purple-400" />
                 <span className="text-purple-300 font-bold text-sm">THE CURRICULUM</span>
               </div>
-            <h2 className="text-4xl font-extrabold text-white mb-4">6 Weeks of Mastery</h2>
-            <p className="text-xl text-slate-400">Live + Recorded Deep Dives</p>
+            <h2 className="text-4xl font-extrabold text-white mb-4">4 Weeks of Mastery</h2>
+            <p className="text-xl text-slate-400">Starting January 5th — Live + Recorded Deep Dives</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Left: Module List */}
             <div className="space-y-6 relative z-10">
-              {/* Module 1 */}
+              {/* Module 1: The Story */}
               <div className="group bg-white/5 rounded-2xl p-8 shadow-lg border border-white/10 hover:shadow-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-xl font-black text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors">01</div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Foundation (Visual Syntax)</h3>
-                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">Stop guessing. Learn the 6-layer formula that governs every commercial image.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Story</h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">Your belief builder. My journey from zero Upwork reviews to $640/month retainers. Why AI photography, why now, why this works.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Module 2 */}
+              {/* Module 2: The Skill */}
               <div className="group bg-white/5 rounded-2xl p-8 shadow-lg border border-white/10 hover:shadow-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-xl font-black text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors">02</div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Prep Work (Garbage In, Garbage Out)</h3>
-                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">80% of the work happens before the prompt. Learn how to deconstruct client briefs.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Skill</h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">Visual Syntax. The formula. Accuracy, realism, branding. Image transfer. The workflows (Fixer, Builder, Architect). This is the CRAFT.</p>
                   </div>
                 </div>
               </div>
 
-              {/* Module 3 */}
+              {/* Module 3: The Clients */}
               <div className="group bg-white/5 rounded-2xl p-8 shadow-lg border border-white/10 hover:shadow-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-xl font-black text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors">03</div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Money Workflows</h3>
-                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">Master "The Fixer", "The Builder", and "The Architect" workflows.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Clients</h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">Where to find them (Upwork, 840+ jobs/week). How to win them (free sample strategy). The outreach, the keywords, the 5-a-day system.</p>
                   </div>
                 </div>
               </div>
 
-               {/* Module 4 */}
+               {/* Module 4: The Delivery */}
                <div className="group bg-white/5 rounded-2xl p-8 shadow-lg border border-white/10 hover:shadow-purple-500/10 hover:border-purple-500/30 transition-all duration-300 hover:-translate-y-1">
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center text-xl font-black text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors">04</div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Business (Getting Paid)</h3>
-                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">Turn your skills into invoices. Pricing models and delivery pipelines.</p>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">The Delivery</h3>
+                    <p className="text-slate-400 mb-4 leading-relaxed group-hover:text-slate-300">How to price ($25-50/image, retainer model). How to deliver (the last 1%, upscaling, polish). How to KEEP them and turn one-offs into $500/month retainers.</p>
                   </div>
                 </div>
               </div>

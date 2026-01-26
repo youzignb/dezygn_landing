@@ -23,6 +23,7 @@ import LandingPage from './pages/LandingPage';
 import LandingPageNew from './pages/LandingPageNew';
 import LandingPageV3 from './pages/LandingPageV3';
 import PromptographyPage from './pages/PromptographyPage';
+import PromptographyPageV2 from './pages/PromptographyPageV2';
 import BusinessPage from './pages/BusinessPage';
 import AgencyPage from './pages/AgencyPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
@@ -42,6 +43,7 @@ function App() {
         <Route path="/agency" element={<AgencyPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
         <Route path="/promptography" element={<PromptographyPage />} />
+        <Route path="/secrets" element={<PromptographyPageV2 />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
