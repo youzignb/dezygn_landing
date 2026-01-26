@@ -1,41 +1,106 @@
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 interface FooterV3Props {
   className?: string;
 }
 
-const FooterV3 = ({ className = "" }: FooterV3Props) => {
+const FOOTER_COLUMNS = [
+  {
+    heading: 'Product',
+    links: [
+      { label: 'Features', to: '/features' },
+      { label: 'Pricing', to: '/pricing' },
+      { label: 'Shot Types', to: '/shot-types' },
+      { label: 'Course', to: '/course' },
+      { label: 'Community', to: '/community' },
+    ],
+  },
+  {
+    heading: 'Use Cases',
+    links: [
+      { label: 'Golf Brands', to: '/use-cases/golf-brands' },
+      { label: 'Skincare', to: '/use-cases/skincare' },
+      { label: 'Supplements', to: '/use-cases/supplements' },
+      { label: 'Agencies', to: '/industries/agencies' },
+      { label: 'Freelancers', to: '/industries/freelancers' },
+      { label: 'View All', to: '/use-cases' },
+    ],
+  },
+  {
+    heading: 'Resources',
+    links: [
+      { label: 'Guides', to: '/resources' },
+      { label: 'Blog', to: '/blog' },
+      { label: 'Glossary', to: '/glossary' },
+      { label: 'Help Center', to: 'https://intercom.help/dezygn/en/', external: true },
+      { label: 'Compare', to: '/compare' },
+    ],
+  },
+  {
+    heading: 'Company',
+    links: [
+      { label: 'About', to: '/about' },
+      { label: 'Contact', to: '/contact' },
+      { label: 'Privacy', to: '/privacy' },
+      { label: 'Terms', to: '/terms' },
+    ],
+  },
+] as const;
+
+const FooterV3 = ({ className = '' }: FooterV3Props) => {
   return (
-    <footer className={`w-full px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] text-gray-600 z-40 ${className}`}>
-      
-      {/* Left: Copyright */}
-      <div className="flex items-center gap-4">
-        <span className="font-medium">© 2025 Wosho LLC</span>
-        <span className="hidden md:inline text-gray-800">•</span>
-        <span className="hidden md:inline">Albuquerque, NM</span>
-      </div>
+    <footer className={`bg-[#050507] border-t border-white/5 ${className}`}>
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        {/* Column grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
+          {FOOTER_COLUMNS.map((col) => (
+            <div key={col.heading}>
+              <h4 className="text-white font-semibold text-sm uppercase tracking-widest mb-4">
+                {col.heading}
+              </h4>
+              <ul className="flex flex-col">
+                {col.links.map((link) => (
+                  <li key={link.to} className="mb-2.5">
+                    {'external' in link && link.external ? (
+                      <a
+                        href={link.to}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.to}
+                        className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
 
-      {/* Center: Links */}
-      <div className="flex items-center gap-6">
-        <Link to="/privacy" className="hover:text-gray-400 transition-colors">Privacy</Link>
-        <Link to="/terms" className="hover:text-gray-400 transition-colors">Terms</Link>
-        <a 
-          href="https://intercom.help/dezygn/en/" 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="hover:text-gray-400 transition-colors"
-        >
-          Help Desk
-        </a>
-      </div>
+        {/* Bottom bar */}
+        <div className="border-t border-white/5 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Left: Logo + tagline */}
+          <div className="flex items-center gap-3">
+            <Logo variant="light" size="sm" showText={false} />
+            <span className="text-sm text-gray-500">
+              AI Photography Suite for Agencies &amp; Freelancers
+            </span>
+          </div>
 
-      {/* Right: Status */}
-      <div className="hidden md:flex items-center gap-2">
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-        </span>
-        <span>Systems Normal</span>
+          {/* Right: Copyright */}
+          <span className="text-sm text-gray-600">
+            &copy; 2026 Wosho LLC &middot; All rights reserved
+          </span>
+        </div>
       </div>
     </footer>
   );
