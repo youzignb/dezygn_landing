@@ -717,35 +717,6 @@ const LandingPageV3 = () => {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 9.5: A WORD FROM THE FOUNDER */}
-      {/* ============================================ */}
-      <section className="relative bg-[#050507] py-24 md:py-32">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0">
-              <img
-                src="/bertrand-profile.png"
-                alt="Bertrand — Founder of Dezygn"
-                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-purple-500/30"
-              />
-            </div>
-            <div className="flex-1 text-center md:text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-4">
-                A Word From The Founder
-              </div>
-              <blockquote className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-                "I created Dezygn because I needed a tool to help me serve my own AI lifestyle and product photography clients. Every feature you see was built because I needed it myself — brand import, the studio, comparison mode, client sharing. Then I realized other designers and agencies needed the same thing. So I packaged everything — the tool, the course, the SOPs, the community — into one place. This isn't some Silicon Valley startup guessing what creatives need. This is built by someone doing the work, every single day."
-              </blockquote>
-              <div>
-                <p className="text-white font-semibold">Bertrand</p>
-                <p className="text-gray-500 text-sm">Founder of Dezygn • AI Photography Agency Owner</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============================================ */}
       {/* SECTION 10: PRICING */}
       {/* ============================================ */}
       <section className="relative bg-black py-24 md:py-32">
@@ -900,6 +871,35 @@ const LandingPageV3 = () => {
                 )}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* A WORD FROM THE FOUNDER */}
+      {/* ============================================ */}
+      <section className="relative bg-black py-24 md:py-32">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex-shrink-0">
+              <img
+                src="/bertrand-profile.png"
+                alt="Bertrand — Founder of Dezygn"
+                className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-2 border-purple-500/30"
+              />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-4">
+                A Word From The Founder
+              </div>
+              <blockquote className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                "I created Dezygn because I needed a tool to help me serve my own AI lifestyle and product photography clients. Every feature you see was built because I needed it myself — brand import, the studio, comparison mode, client sharing. Then I realized other designers and agencies needed the same thing. So I packaged everything — the tool, the course, the SOPs, the community — into one place. This isn't some Silicon Valley startup guessing what creatives need. This is built by someone doing the work, every single day."
+              </blockquote>
+              <div>
+                <p className="text-white font-semibold">Bertrand</p>
+                <p className="text-gray-500 text-sm">Founder of Dezygn • AI Photography Agency Owner</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
