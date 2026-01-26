@@ -102,16 +102,18 @@ const LandingPageV3 = () => {
           <div className="space-y-6 max-w-xl mx-auto md:mx-0">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-              v2.0 Now Live
+              The AI Photography Platform
             </div>
 
-            <h1 className="font-black text-6xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight text-white">
-              Design that <br />
-              <span className="italic bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">thinks.</span>
+            <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white">
+              Create professional e‑commerce photography with AI.{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
+                Build a profitable agency.
+              </span>
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-400 font-light max-w-md">
-              Meet <strong>AWA</strong>. The AI Creative Director that plans, verifies, and executes on brand.
+              Dezygn is the all‑in‑one platform for AI product photographers — creative suite, certification course, agency playbook, and community.
             </p>
 
             {/* Chat Input Container */}
