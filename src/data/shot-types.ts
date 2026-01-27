@@ -4,6 +4,8 @@ export interface ShotType {
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
+  image: string;
+  imageAlt: string;
   definition: string;
   whenToUse: string[];
   howDezygn: string;
@@ -21,6 +23,8 @@ export const shotTypes: ShotType[] = [
       "Create stunning lifestyle product photos with AI. Place your products in real-world settings — kitchens, desks, outdoor scenes — without a single photoshoot.",
     heroHeadline:
       "Put Your Products Where They Belong — In Your Customer's Life",
+    image: "/images/seo/shot-types/lifestyle.webp",
+    imageAlt: "Lifestyle product photography example showing everyday items styled in real-world home settings",
     definition:
       "Lifestyle photography places your product in a real-world context — on a kitchen counter, in a gym bag, on a bedside table. It answers the question every shopper silently asks: 'What does this look like in my life?' Unlike studio shots, lifestyle images build an emotional bridge between the product and the buyer by showing it in use, in situ, in the wild.",
     whenToUse: [
@@ -68,6 +72,8 @@ export const shotTypes: ShotType[] = [
     metaDescription:
       "Generate clean, professional studio product photos with AI. Perfect white backgrounds, controlled lighting, and e-commerce-ready images in minutes.",
     heroHeadline: "Clean. Professional. Pixel-Perfect. No Studio Required.",
+    image: "/images/seo/shot-types/studio.webp",
+    imageAlt: "Studio product photography example with professional lighting on clean white background",
     definition:
       "Studio photography is the backbone of any product catalog — your product, isolated on a clean background with controlled, professional lighting. It's the shot Amazon requires, Shopify recommends, and every marketplace expects. No distractions, no context, just your product presented with clarity and precision so customers can see exactly what they're buying.",
     whenToUse: [
@@ -110,6 +116,8 @@ export const shotTypes: ShotType[] = [
     metaDescription:
       "Create dramatic, high-impact hero product images with AI. Bold lighting, cinematic angles, and scroll-stopping compositions that sell your product.",
     heroHeadline: "The Shot That Sells Your Product Before They Read a Word",
+    image: "/images/seo/shot-types/hero-shots.webp",
+    imageAlt: "Hero shot product photography with dramatic lighting and bold composition for e-commerce",
     definition:
       "A hero shot is the single image that carries your product page, your ad campaign, your homepage banner. It's the dramatic, high-impact photograph designed to make someone stop scrolling and start wanting. Hero shots use cinematic lighting, bold angles, and intentional composition to present your product at its absolute best — not just what it looks like, but what it feels like to own.",
     whenToUse: [
@@ -158,6 +166,8 @@ export const shotTypes: ShotType[] = [
       "Generate beautiful flat lay product arrangements with AI. Birds-eye compositions, curated layouts, and Instagram-ready images without the styling hassle.",
     heroHeadline:
       "Every Product Tells a Story — Flat Lays Tell the Whole Collection",
+    image: "/images/seo/shot-types/flat-lay.webp",
+    imageAlt: "Flat lay product photography example with curated top-down arrangement on styled surface",
     definition:
       "Flat lay photography is a top-down, birds-eye composition where products and props are arranged on a flat surface and photographed from directly above. It's the signature style of Instagram, Pinterest, and editorial brand content. A good flat lay doesn't just show products — it curates a world around them, telling a story through deliberate arrangement, color coordination, and negative space.",
     whenToUse: [
@@ -205,6 +215,8 @@ export const shotTypes: ShotType[] = [
     metaDescription:
       "Generate product photos with AI models — worn, held, or styled on diverse virtual models. No casting calls, no bookings, no day rates.",
     heroHeadline: "Every Product Looks Better on Someone. Now You Don't Need to Book Them.",
+    image: "/images/seo/shot-types/model-shots.webp",
+    imageAlt: "Model shot product photography showing wearable products styled on a person",
     definition:
       "Model photography shows your product being worn, held, or used by a person. It's how fashion, beauty, accessories, and lifestyle brands help customers visualize themselves with the product. In e-commerce, model shots reduce return rates by showing fit, scale, and use — and they drive higher conversion than product-only images because they trigger the brain's mirror neurons: 'That could be me.'",
     whenToUse: [
@@ -248,6 +260,8 @@ export const shotTypes: ShotType[] = [
       "Create authentic, user-generated content style product photos with AI. Casual compositions, natural lighting, phone-camera aesthetic. Scroll-stopping UGC at scale.",
     heroHeadline:
       "The 'Real Person' Look. Generated in Seconds. No Influencers Required.",
+    image: "/images/seo/shot-types/ugc.webp",
+    imageAlt: "UGC-style product photography with authentic casual look for social media marketing",
     definition:
       "UGC-style photography mimics the casual, authentic aesthetic of photos taken by real customers — slightly imperfect composition, natural ambient lighting, a phone-camera look and feel. It's the antithesis of polished studio photography, and that's exactly why it converts. On platforms like TikTok, Instagram Stories, and Meta ads, UGC-style imagery outperforms professional photography because it feels trustworthy, relatable, and native to the feed.",
     whenToUse: [
@@ -296,6 +310,8 @@ export const shotTypes: ShotType[] = [
       "Create compelling before and after product images with AI. Show transformations, results, and impact — perfect for skincare, cleaning, fitness, and home products.",
     heroHeadline:
       "Show the Transformation. Let the Results Do the Selling.",
+    image: "/images/seo/shot-types/before-after.webp",
+    imageAlt: "Before and after product photography comparison showing transformation results",
     definition:
       "Before-and-after photography is the most persuasive format in e-commerce — it visually demonstrates the value of your product by showing a clear transformation. Whether it's a skincare product clearing skin, a cleaning product restoring a surface, or a supplement changing body composition, these side-by-side (or stacked) images let results speak louder than any copywriter ever could. Done right, they're the closest thing to a product demo in a static image.",
     whenToUse: [
@@ -339,6 +355,8 @@ export const shotTypes: ShotType[] = [
       "Generate product scale reference photos with AI. Show exact product size with hands, coins, and everyday objects. Reduce returns caused by size surprises.",
     heroHeadline:
       "Show Them Exactly How Big It Is. Kill the #1 Reason for Returns.",
+    image: "/images/seo/shot-types/scale-shots.webp",
+    imageAlt: "Scale shot product photography with size reference objects for accurate product dimensions",
     definition:
       "Scale photography places your product alongside familiar reference objects — a human hand, a coin, a smartphone, a standard mug — so customers can instantly understand its real-world size. Size misperception is the leading cause of e-commerce returns: 'I didn't realize it was that small' or 'this is way bigger than I expected.' A single well-executed scale shot can cut size-related returns by 20-30% and save you thousands in reverse logistics.",
     whenToUse: [
@@ -382,6 +400,8 @@ export const shotTypes: ShotType[] = [
       "Create professional packaging and unboxing product photos with AI. Showcase boxes, labels, and the full unboxing experience without a single prototype.",
     heroHeadline:
       "The Box Is Part of the Product. Make It Look Like It.",
+    image: "/images/seo/shot-types/packaging.webp",
+    imageAlt: "Packaging product photography showcasing unboxing experience and brand presentation",
     definition:
       "Packaging photography showcases the product's box, label, wrapping, or container as a selling point in its own right. In an era where unboxing videos generate billions of views, how a product arrives matters almost as much as the product itself. Packaging shots cover everything from the outer shipping box to the inner tissue paper to the label design — every touchpoint of the physical experience that customers encounter before they ever use what's inside.",
     whenToUse: [
@@ -425,6 +445,8 @@ export const shotTypes: ShotType[] = [
       "Generate high-resolution close-up product photos with AI. Show textures, stitching, ingredients, and fine details that build buyer confidence.",
     heroHeadline:
       "Zoom In. Show the Quality. Let the Details Close the Sale.",
+    image: "/images/seo/shot-types/detail-close-ups.webp",
+    imageAlt: "Detail close-up product photography highlighting texture materials and craftsmanship",
     definition:
       "Detail and close-up photography captures the textures, materials, craftsmanship, and fine features of a product that aren't visible in standard product shots. The grain of the leather, the precision of the stitching, the shimmer in a skincare formula, the weave of a fabric — these macro-level details are what separate a $20 product from a $200 product in the customer's mind. When shoppers can't touch and feel your product, close-up shots become a proxy for the in-store tactile experience.",
     whenToUse: [

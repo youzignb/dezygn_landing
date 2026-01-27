@@ -56,24 +56,36 @@ const ResourceIndexPage = () => {
               <Link
                 key={resource.slug}
                 to={`/resources/${resource.slug}`}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-purple-500/30 transition-all"
+                className="group bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                    <BookOpen className="w-5 h-5" />
+                {resource.image && (
+                  <img
+                    src={resource.image}
+                    alt={resource.imageAlt}
+                    width={400}
+                    height={267}
+                    loading="lazy"
+                    className="w-full h-48 object-cover"
+                  />
+                )}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                      <BookOpen className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
+                      {resource.title}
+                    </h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
-                    {resource.title}
-                  </h3>
-                </div>
 
-                <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-5">
-                  {resource.heroHeadline}
-                </p>
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-5">
+                    {resource.heroHeadline}
+                  </p>
 
-                <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
-                  <span>Read guide</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
+                    <span>Read guide</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </Link>
             ))}

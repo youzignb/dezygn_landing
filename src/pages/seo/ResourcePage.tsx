@@ -12,6 +12,8 @@ interface Resource {
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
+  image?: string;
+  imageAlt?: string;
   sections: { heading: string; content: string[] }[];
   keyTakeaways: string[];
   relatedResources: string[];
@@ -104,6 +106,19 @@ const ResourcePage = () => {
             <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
               {resource.heroHeadline}
             </h1>
+
+            {resource.image && (
+              <div className="max-w-4xl mt-12">
+                <img
+                  src={resource.image}
+                  alt={resource.imageAlt}
+                  width={800}
+                  height={533}
+                  loading="lazy"
+                  className="w-full rounded-2xl border border-white/10"
+                />
+              </div>
+            )}
           </div>
         </div>
 

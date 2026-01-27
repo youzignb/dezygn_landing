@@ -102,6 +102,19 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
             <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
               {useCase.heroSubheadline}
             </p>
+
+            {useCase.image && (
+              <div className="max-w-4xl mx-auto mt-12">
+                <img
+                  src={useCase.image}
+                  alt={useCase.imageAlt}
+                  width={800}
+                  height={533}
+                  loading="lazy"
+                  className="w-full rounded-2xl border border-white/10"
+                />
+              </div>
+            )}
           </div>
         </section>
 

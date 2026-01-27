@@ -56,40 +56,52 @@ const IndustryIndexPage = () => {
               <Link
                 key={industry.slug}
                 to={`/industries/${industry.slug}`}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-purple-500/30 transition-all"
+                className="group bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all"
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
-                    <Building2 className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
-                    {industry.title}
-                  </h3>
-                </div>
-
-                <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
-                  {industry.heroHeadline}
-                </p>
-
-                {industry.results && industry.results.length > 0 && (
-                  <div className="flex flex-wrap gap-3 mb-4">
-                    {industry.results.slice(0, 3).map((stat) => (
-                      <span
-                        key={stat.label}
-                        className="text-xs bg-white/[0.05] border border-white/10 rounded-full px-3 py-1 text-gray-300"
-                      >
-                        <span className="font-semibold text-purple-300">
-                          {stat.value}
-                        </span>{' '}
-                        {stat.label}
-                      </span>
-                    ))}
-                  </div>
+                {industry.image && (
+                  <img
+                    src={industry.image}
+                    alt={industry.imageAlt}
+                    width={400}
+                    height={267}
+                    loading="lazy"
+                    className="w-full h-48 object-cover"
+                  />
                 )}
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                      <Building2 className="w-5 h-5" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white group-hover:text-purple-300 transition-colors">
+                      {industry.title}
+                    </h3>
+                  </div>
 
-                <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
-                  <span>Learn more</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <p className="text-gray-400 text-sm leading-relaxed line-clamp-2 mb-4">
+                    {industry.heroHeadline}
+                  </p>
+
+                  {industry.results && industry.results.length > 0 && (
+                    <div className="flex flex-wrap gap-3 mb-4">
+                      {industry.results.slice(0, 3).map((stat) => (
+                        <span
+                          key={stat.label}
+                          className="text-xs bg-white/[0.05] border border-white/10 rounded-full px-3 py-1 text-gray-300"
+                        >
+                          <span className="font-semibold text-purple-300">
+                            {stat.value}
+                          </span>{' '}
+                          {stat.label}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
+                    <span>Learn more</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </Link>
             ))}

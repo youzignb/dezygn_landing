@@ -18,6 +18,8 @@ interface Industry {
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
+  image?: string;
+  imageAlt?: string;
   intro: string;
   painPoints: { title: string; description: string }[];
   howDezygn: { title: string; description: string }[];
@@ -99,6 +101,19 @@ const IndustryPage = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight max-w-4xl">
             {industry.heroHeadline}
           </h1>
+
+          {industry.image && (
+            <div className="max-w-4xl mt-12">
+              <img
+                src={industry.image}
+                alt={industry.imageAlt}
+                width={800}
+                height={533}
+                loading="lazy"
+                className="w-full rounded-2xl border border-white/10"
+              />
+            </div>
+          )}
         </section>
 
         {/* Intro */}

@@ -4,6 +4,8 @@ export interface Industry {
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
+  image: string;
+  imageAlt: string;
   intro: string;
   painPoints: { title: string; description: string }[];
   howDezygn: { title: string; description: string }[];
@@ -21,6 +23,8 @@ export const industries: Industry[] = [
       "Generate studio-quality product photos for your e-commerce store in minutes. 2,500 credits/month for ~500 images. No studio, no photographer, no delays.",
     heroHeadline:
       "Studio-Quality Product Photos for Every SKU, Every Season, Every Channel",
+    image: "/images/seo/industries/ecommerce.webp",
+    imageAlt: "AI product photography for e-commerce brands showing catalog imagery at scale",
     intro: `E-commerce brands live and die by their product imagery. Studies consistently show that 75% of online shoppers rely on product photos when making purchase decisions, and listings with high-quality lifestyle imagery see conversion rates 2-3x higher than those with basic white-background shots alone. Yet most e-commerce brands are trapped in an expensive cycle of booking studios, hiring photographers, coordinating samples, and waiting weeks for edited deliverables.
 
 The challenge compounds as your catalog grows. A brand with 200 SKUs needs thousands of images across product pages, collection banners, social ads, email campaigns, and seasonal promotions. Each channel has its own aspect ratios, styling expectations, and creative requirements. Refreshing imagery for a spring campaign or a Black Friday sale means repeating the entire production pipeline from scratch.
@@ -97,6 +101,8 @@ Dezygn eliminates this bottleneck entirely. With AI-powered product photography 
       "Create Amazon-compliant product photos, infographics, and A+ Content images with AI. Meet every listing requirement and consistently win the buy box.",
     heroHeadline:
       "Amazon-Ready Product Images That Meet Every Requirement and Win the Buy Box",
+    image: "/images/seo/industries/amazon-sellers.webp",
+    imageAlt: "AI product photography optimized for Amazon marketplace listing requirements",
     intro: `Selling on Amazon means operating inside one of the most visually competitive marketplaces on earth. Your main image must meet strict technical requirements: pure white background (RGB 255,255,255), the product filling at least 85% of the frame, minimum 1000x1000 pixel resolution, and no text overlays, watermarks, or additional props. Get any of these wrong and your listing gets suppressed, costing you visibility and sales every day it stays down.
 
 But compliance is just the floor. To actually win clicks and conversions, you need a full image stack: a compliant hero image, 2-3 lifestyle images showing the product in use, 1-2 infographic images highlighting key features and dimensions, and A+ Content modules with comparison charts and brand story visuals. Top sellers on Amazon invest $2,000-$5,000 per ASIN in professional photography and graphic design to build these image stacks, and they repeat the process for every product variation and seasonal update.
@@ -167,6 +173,8 @@ Dezygn gives Amazon sellers the ability to produce this entire image stack from 
       "Generate on-brand product photos optimized for Shopify themes, collection pages, and mobile shopping. Lifestyle imagery that converts browsers to buyers.",
     heroHeadline:
       "Product Photography That Makes Your Shopify Store Look Like a Premium Brand",
+    image: "/images/seo/industries/shopify-stores.webp",
+    imageAlt: "AI-generated product photography tailored for Shopify store themes and layouts",
     intro: `Shopify powers over 4 million online stores, and the platform's visual-first design philosophy means your product photography is your storefront. Unlike marketplaces where listings follow a rigid template, Shopify gives you complete creative control. Your homepage hero banner, collection page grids, product detail pages, and announcement bars all depend on cohesive, high-quality imagery that tells your brand story.
 
 This creative freedom is also a challenge. Popular Shopify themes like Dawn, Prestige, and Impact are designed around specific image aspect ratios and layout patterns. A product photo that looks great on a product detail page may get awkwardly cropped on a collection grid or look washed out on a mobile screen. Brands need multiple versions of every product image: square crops for grids, wide banners for collections, vertical orientations for mobile product pages, and lifestyle scenes for homepage storytelling sections.
@@ -243,6 +251,8 @@ Dezygn handles the complexity of Shopify-specific image production. Import your 
       "Transform low-quality supplier photos into premium lifestyle imagery. Test products faster with AI-generated product photography. No samples needed.",
     heroHeadline:
       "Turn Supplier Photos Into Premium Product Imagery Without Ever Touching the Product",
+    image: "/images/seo/industries/dropshipping.webp",
+    imageAlt: "AI product photography for dropshipping businesses creating unique brand imagery",
     intro: `Dropshipping is built on speed. You find a trending product, list it in your store, run ads, and validate demand before committing inventory. But there is a fundamental problem at the core of this model: you never physically handle the product. Your only visual assets are whatever the supplier provides, typically a handful of poorly lit photos shot on a cluttered factory floor with inconsistent color accuracy and Chinese text watermarks.
 
 These supplier images are conversion killers. Shoppers have been trained by premium DTC brands to expect lifestyle photography, clean backgrounds, and aspirational contexts. When your product page features the same generic supplier shots that 50 other dropshippers are using, you have zero visual differentiation. Your ad creative looks identical to competitors, your landing page fails to build trust, and your return rates climb because customers receive products that look nothing like what they expected.
@@ -318,6 +328,8 @@ Dezygn solves the dropshipping photography problem at its root. Upload a supplie
       "Scale product photography output across client accounts. Maintain unique brand guidelines per client. White-label AI photography for agencies.",
     heroHeadline:
       "Deliver Premium Product Photography Across Every Client Account Without Scaling Your Team",
+    image: "/images/seo/industries/agencies.webp",
+    imageAlt: "AI product photography workflow for creative and e-commerce agencies managing client catalogs",
     intro: `Creative and e-commerce agencies are caught in a structural tension: clients expect faster turnaround, higher volume, and more creative variety, but hiring additional photographers, retouchers, and art directors does not scale linearly with revenue. A single product photography project for a mid-size e-commerce brand requires coordinating samples, booking studio time, managing a shoot day, and running 2-3 rounds of retouching. Multiply that by 8-12 active client accounts and your production team is permanently behind schedule.
 
 The brand consistency challenge adds another layer of complexity. Each client has distinct brand guidelines: specific lighting moods, color palettes, prop styling preferences, and background treatments. A lifestyle shot that is perfect for your organic skincare client would be completely wrong for your premium electronics brand. Your team needs to context-switch between brand worlds multiple times per day, and mistakes are expensive both in reshoot costs and client trust.
@@ -394,6 +406,8 @@ Dezygn gives agencies a scalable production layer that sits beneath their creati
       "Expand your product photography services with AI. Deliver more concepts, faster revisions, and higher-volume output without booking extra studio time.",
     heroHeadline:
       "Deliver 10x the Creative Output Without 10x the Studio Hours",
+    image: "/images/seo/industries/freelancers.webp",
+    imageAlt: "AI-powered product photography tools for freelance photographers and creative professionals",
     intro: `Freelance product photographers face a ceiling that no amount of hustle can break through: there are only so many hours in a day to shoot, edit, and deliver. A typical freelance product photography workflow involves 2-4 hours of setup and shooting per product, followed by 1-2 hours of retouching per final image. At that rate, a single freelancer can realistically deliver 30-50 finished images per week while still handling client communication, invoicing, and business development.
 
 The market is also shifting beneath freelancers' feet. E-commerce clients who used to budget $200-$500 per product for professional photography are now seeing AI-generated alternatives and asking why they should pay studio rates. Lowering prices to compete starts a race to the bottom. Refusing to adapt means losing clients to cheaper alternatives that are increasingly good enough for most use cases.

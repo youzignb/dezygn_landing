@@ -4,6 +4,8 @@ export interface Resource {
   metaTitle: string;
   metaDescription: string;
   heroHeadline: string;
+  image: string;
+  imageAlt: string;
   sections: { heading: string; content: string[] }[];
   keyTakeaways: string[];
   relatedResources: string[];
@@ -21,6 +23,8 @@ export const resources: Resource[] = [
       "Learn how to use AI for product photography: tools, workflows, quality benchmarks, and when to combine AI with traditional shoots for best results.",
     heroHeadline:
       "AI Product Photography: Everything You Need to Know to Get Studio-Quality Images Without a Studio",
+    image: "/images/seo/resources/ai-product-photography-guide.webp",
+    imageAlt: "Complete guide to AI product photography covering tools workflows and best practices",
     sections: [
       {
         heading: "The Current Landscape of AI Product Photography",
@@ -90,6 +94,8 @@ export const resources: Resource[] = [
       "Discover the Visual Syntax framework — a systematic method for composing AI product photos using structured scene elements, lighting, and angles.",
     heroHeadline:
       "Visual Syntax: Stop Guessing with Prompts and Start Composing Product Images Systematically",
+    image: "/images/seo/resources/visual-syntax.webp",
+    imageAlt: "Visual Syntax framework diagram for composing AI-generated product images",
     sections: [
       {
         heading: "What Visual Syntax Is and Why It Exists",
@@ -159,6 +165,8 @@ export const resources: Resource[] = [
       "See the data: how product photography impacts conversion rates, return rates, and brand perception. Calculate the real ROI of investing in better images.",
     heroHeadline:
       "Product Photography ROI: The Numbers Behind Why Better Images Mean More Revenue",
+    image: "/images/seo/resources/ecommerce-photography-roi.webp",
+    imageAlt: "ROI analysis chart comparing traditional and AI e-commerce product photography costs",
     sections: [
       {
         heading: "The Data on Product Images and Conversion Rates",
@@ -228,6 +236,8 @@ export const resources: Resource[] = [
       "A practical pricing guide for AI photography agencies and freelancers. Learn cost structures, markup strategies, and how to package services profitably.",
     heroHeadline:
       "Pricing AI Product Photography Services: Cost Structure, Packages, and Communicating Value",
+    image: "/images/seo/resources/ai-photography-pricing.webp",
+    imageAlt: "Pricing guide for AI product photography services with rate comparison breakdown",
     sections: [
       {
         heading: "Understanding Your True Cost Structure",
@@ -305,6 +315,8 @@ export const resources: Resource[] = [
       "Step-by-step guide to launching an AI photography agency: niche selection, portfolio building, client acquisition, pricing, workflow, and scaling strategies.",
     heroHeadline:
       "Starting an AI Product Photography Agency: From First Client to Scalable Business",
+    image: "/images/seo/resources/start-ai-photography-agency.webp",
+    imageAlt: "Step-by-step guide to launching an AI product photography agency business",
     sections: [
       {
         heading: "Choosing Your Niche and Positioning",
@@ -382,6 +394,8 @@ export const resources: Resource[] = [
       "Optimize your Shopify product images for speed, SEO, and conversions. Covers image specs, theme compatibility, mobile optimization, and collection pages.",
     heroHeadline:
       "Shopify Product Photography: How to Optimize Every Image for Speed, SEO, and Sales",
+    image: "/images/seo/resources/shopify-product-photography.webp",
+    imageAlt: "Shopify product photography optimization guide showing listing image best practices",
     sections: [
       {
         heading: "Shopify Image Requirements and Best Practices",
@@ -459,6 +473,8 @@ export const resources: Resource[] = [
       "Learn the psychology and tactics behind high-converting product photography. Covers hero images, lifestyle vs studio, A/B testing, and trust signals.",
     heroHeadline:
       "Conversion Photography: The Psychology and Tactics Behind Product Photos That Actually Sell",
+    image: "/images/seo/resources/conversion-photography.webp",
+    imageAlt: "Product photography techniques that increase e-commerce conversion rates",
     sections: [
       {
         heading: "The Psychology of Product Photography",
@@ -528,6 +544,8 @@ export const resources: Resource[] = [
       "Learn how to keep AI-generated product images on-brand. Covers brand guidelines for AI, color consistency, style transfer, prompt libraries, and QC workflows.",
     heroHeadline:
       "Brand Consistency in the Age of AI: How to Keep Every Generated Image On-Brand",
+    image: "/images/seo/resources/brand-consistency-ai.webp",
+    imageAlt: "Maintaining brand visual consistency across AI-generated product photography",
     sections: [
       {
         heading: "Why Brand Consistency Matters More with AI",

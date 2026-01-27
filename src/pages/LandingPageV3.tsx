@@ -98,20 +98,19 @@ const LandingPageV3 = () => {
         <div className="w-full max-w-3xl px-6 flex flex-col items-center text-center z-10">
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-8">
-            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-            The #1 AI Photography Agency Suite
+            ● BUILT FOR THE CREATIVE EYE, POWERED BY AI
           </div>
 
           <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white mb-6">
-            We help creative agencies sell{' '}
+            The Operating System for{' '}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
-              accurate, realistic and on‑brand
-            </span>{' '}
-            AI Product & Lifestyle Photography Services to eCom Businesses
+              AI Photography Agencies
+            </span>
+            .
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mb-10">
-            The all‑in‑one platform for AI product photographers — creative suite, certification course, agency playbook, and community.
+            Stop selling "AI slop" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
           </p>
 
           <Link
@@ -244,24 +243,154 @@ const LandingPageV3 = () => {
                 icon: Globe,
                 title: 'Import Your Brand',
                 desc: 'One click. Paste any URL. Brand identity extracted.',
+                visual: (
+                  <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
+                    <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-white/20" />
+                      <span className="text-[10px] text-gray-500 ml-3">Brand Import</span>
+                    </div>
+                    <div className="p-4 grid gap-3">
+                      <div className="flex items-center gap-2">
+                        <div className="flex-1 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center px-3 text-xs text-gray-400">
+                          https://
+                          <span className="text-gray-300 ml-1">brand.com</span>
+                        </div>
+                        <div className="h-8 px-3 rounded-lg bg-purple-500/20 border border-purple-500/30 text-xs text-purple-300 flex items-center">
+                          Import
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2">
+                        <div className="rounded-lg border border-white/10 bg-white/[0.03] p-2">
+                          <div className="text-[10px] text-gray-500 mb-2">Logo</div>
+                          <div className="h-10 rounded-md bg-gradient-to-br from-purple-500/40 to-blue-400/30" />
+                        </div>
+                        <div className="rounded-lg border border-white/10 bg-white/[0.03] p-2">
+                          <div className="text-[10px] text-gray-500 mb-2">Colors</div>
+                          <div className="flex gap-1">
+                            {['#A855F7', '#22D3EE', '#F472B6', '#111827'].map((color) => (
+                              <span
+                                key={color}
+                                className="w-5 h-5 rounded-md border border-white/10"
+                                style={{ backgroundColor: color }}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                        <div className="rounded-lg border border-white/10 bg-white/[0.03] p-2">
+                          <div className="text-[10px] text-gray-500 mb-2">Fonts</div>
+                          <div className="h-3 rounded bg-white/10 mb-2" />
+                          <div className="h-3 w-3/4 rounded bg-white/10" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
               {
                 step: '02',
                 icon: MessageSquare,
                 title: 'Launch a Chat',
                 desc: 'Create a chat per campaign. Your AI creative director Awa is ready.',
+                visual: (
+                  <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
+                    <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
+                      <div className="w-3 h-3 rounded-full bg-purple-500/40" />
+                      <span className="text-[10px] text-gray-500">Campaign Chat</span>
+                    </div>
+                    <div className="p-4 grid gap-3">
+                      <div className="flex justify-end">
+                        <div className="max-w-[75%] rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-xs text-gray-300">
+                          Create 6 hero images for the new launch.
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <div className="w-6 h-6 rounded-full bg-purple-500/30" />
+                        <div className="flex-1">
+                          <div className="rounded-xl bg-white/[0.03] border border-white/10 px-3 py-2 text-xs text-gray-300">
+                            I will pull your brand kit and draft 3 styles. Running tools now.
+                          </div>
+                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
+                            Tool call: brand_profile.extract(brand_url)
+                          </div>
+                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
+                            Tool call: moodboard.build(style="hero")
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
               {
                 step: '03',
                 icon: Package,
                 title: 'Import Your Products',
                 desc: 'Paste Shopify URL. All assets imported instantly.',
+                visual: (
+                  <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
+                    <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
+                      <span className="text-[10px] text-gray-500">Import Products</span>
+                    </div>
+                    <div className="p-4">
+                      <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                        <div className="text-[10px] text-gray-500 mb-2">Shopify URL</div>
+                        <div className="flex items-center gap-2">
+                          <div className="flex-1 h-7 rounded-md bg-white/5 border border-white/10" />
+                          <div className="h-7 px-3 rounded-md bg-purple-500/20 border border-purple-500/30 text-[10px] text-purple-300 flex items-center">
+                            Import
+                          </div>
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-3 gap-2 mt-3">
+                        {[1, 2, 3, 4, 5, 6].map((item) => (
+                          <div
+                            key={item}
+                            className="h-12 rounded-lg bg-white/[0.04] border border-white/10 flex items-center justify-center text-[10px] text-gray-500"
+                          >
+                            SKU {item}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+                        <div className="h-full w-3/4 bg-gradient-to-r from-purple-500/60 to-blue-400/60" />
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
               {
                 step: '04',
                 icon: Sparkles,
                 title: 'Generate & Deliver',
                 desc: 'Tell Awa what you need. Review in Studio. Share with clients.',
+                visual: (
+                  <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
+                    <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
+                      <span className="text-[10px] text-gray-500">Studio Review</span>
+                      <span className="text-[10px] text-green-400">Approved</span>
+                    </div>
+                    <div className="p-4 grid grid-cols-3 gap-2">
+                      {[1, 2, 3].map((item) => (
+                        <div
+                          key={item}
+                          className="h-20 rounded-lg bg-white/[0.04] border border-white/10"
+                        />
+                      ))}
+                      <div className="col-span-3 rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="text-[10px] text-gray-500">Selected Image</div>
+                          <div className="flex items-center gap-2">
+                            <span className="px-2 py-1 rounded-md text-[10px] bg-green-500/20 text-green-300 border border-green-500/30">Approve</span>
+                            <span className="px-2 py-1 rounded-md text-[10px] bg-white/5 text-gray-300 border border-white/10">Share</span>
+                          </div>
+                        </div>
+                        <div className="h-16 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-400/20 border border-white/10" />
+                      </div>
+                    </div>
+                  </div>
+                ),
               },
             ].map((item) => (
               <div
@@ -276,9 +405,7 @@ const LandingPageV3 = () => {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{item.title}</h3>
                 <p className="text-gray-400 mb-6">{item.desc}</p>
-                <div className="w-full aspect-video rounded-xl bg-[#111] border border-white/5 flex items-center justify-center text-gray-600 text-sm">
-                  [SCREENSHOT]
-                </div>
+                {item.visual}
               </div>
             ))}
           </div>
@@ -304,6 +431,36 @@ const LandingPageV3 = () => {
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Dezygn isn't just software. It's a complete system to launch and grow your AI photography agency — tool, course, community, and business resources included.
             </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto mb-16">
+            <div className="relative rounded-3xl border border-white/10 bg-[#0a0a0a] p-6 md:p-10">
+              <div className="absolute inset-6 rounded-[26px] border border-white/5 pointer-events-none" />
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {[
+                  { title: 'The Tool', subtitle: 'AI Creative Suite', icon: Sparkles },
+                  { title: 'The Training', subtitle: 'Conversion System', icon: GraduationCap },
+                  { title: 'The Community', subtitle: 'Agency Network', icon: Users },
+                ].map((item) => (
+                  <div key={item.title} className="relative rounded-2xl border border-white/10 bg-black/50 p-5 text-center">
+                    <div className="w-10 h-10 mx-auto mb-3 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                      <item.icon className="w-5 h-5" />
+                    </div>
+                    <p className="text-white font-semibold text-sm mb-1">{item.title}</p>
+                    <p className="text-xs text-gray-500">{item.subtitle}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6 flex items-center justify-center gap-3 text-xs text-gray-400">
+                <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5">Tool</span>
+                <span className="text-purple-400">×</span>
+                <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5">Training</span>
+                <span className="text-purple-400">×</span>
+                <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5">Community</span>
+                <span className="text-purple-400">=</span>
+                <span className="px-3 py-1 rounded-full border border-white/10 bg-purple-500/10 text-purple-300">Dezygn</span>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -422,36 +579,125 @@ const LandingPageV3 = () => {
                 icon: Layers,
                 title: 'Visual Syntax Foundation',
                 outcome: 'Master the 6-ingredient framework to deconstruct any image and recreate it with AI.',
+                visual: (
+                  <div className="w-full rounded-xl border border-white/10 bg-black/40 p-4">
+                    <div className="text-[10px] text-gray-500 mb-2">Visual Syntax</div>
+                    <div className="grid grid-cols-3 gap-2 mb-3">
+                      {[1, 2, 3].map((item) => (
+                        <div key={item} className="h-8 rounded-lg bg-white/5 border border-white/10" />
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {['lighting', 'surface', 'props', 'angle', 'mood', 'color'].map((chip) => (
+                        <span
+                          key={chip}
+                          className="px-2 py-1 rounded-full text-[10px] bg-white/5 border border-white/10 text-gray-400"
+                        >
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ),
               },
               {
                 num: '02',
                 icon: FileText,
                 title: 'The Client Workflow',
                 outcome: 'From intake form to final delivery — QC process, feedback calls, revision management.',
+                visual: (
+                  <div className="w-full rounded-xl border border-white/10 bg-black/40 p-4">
+                    <div className="text-[10px] text-gray-500 mb-2">Workflow</div>
+                    <div className="space-y-2">
+                      {['Intake', 'Brand DNA', 'Drafts', 'Review', 'Delivery'].map((step, idx) => (
+                        <div key={step} className="flex items-center gap-2">
+                          <span className={`w-2 h-2 rounded-full ${idx < 3 ? 'bg-purple-400' : 'bg-white/10'}`} />
+                          <div className="h-2 flex-1 rounded bg-white/10" />
+                          <span className="text-[10px] text-gray-500">{step}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ),
               },
               {
                 num: '03',
                 icon: Camera,
                 title: 'Studio Shots',
                 outcome: 'Packshots, hero shots, detail close-ups, and sizing guides that sell products.',
+                visual: (
+                  <div className="w-full rounded-xl border border-white/10 bg-black/40 p-4">
+                    <div className="text-[10px] text-gray-500 mb-2">Studio Set</div>
+                    <div className="grid grid-cols-3 gap-2">
+                      {[1, 2, 3].map((item) => (
+                        <div
+                          key={item}
+                          className="h-12 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-400/20 border border-white/10"
+                        />
+                      ))}
+                    </div>
+                    <div className="mt-3 h-2 rounded-full bg-white/10 overflow-hidden">
+                      <div className="h-full w-2/3 bg-gradient-to-r from-purple-500/60 to-blue-400/60" />
+                    </div>
+                  </div>
+                ),
               },
               {
                 num: '04',
                 icon: Target,
                 title: 'Conversion Shots',
                 outcome: 'Comparison charts, trust cards, ingredient spotlights — the images that drive purchases.',
+                visual: (
+                  <div className="w-full rounded-xl border border-white/10 bg-black/40 p-4">
+                    <div className="text-[10px] text-gray-500 mb-2">Conversion Assets</div>
+                    <div className="grid grid-cols-2 gap-2 mb-3">
+                      <div className="h-10 rounded-lg bg-white/5 border border-white/10" />
+                      <div className="h-10 rounded-lg bg-white/5 border border-white/10" />
+                    </div>
+                    <div className="h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-between px-2">
+                      <span className="text-[10px] text-gray-500">Trust Score</span>
+                      <span className="text-[10px] text-green-400">+38%</span>
+                    </div>
+                  </div>
+                ),
               },
               {
                 num: '05',
                 icon: Image,
                 title: 'Lifestyle & UGC Shots',
                 outcome: 'Action shots, hand scale, proof shots, and transformation images that build trust.',
+                visual: (
+                  <div className="w-full rounded-xl border border-white/10 bg-black/40 p-4">
+                    <div className="text-[10px] text-gray-500 mb-2">Lifestyle Board</div>
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="h-14 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-400/10 border border-white/10" />
+                      <div className="h-14 rounded-lg bg-gradient-to-br from-purple-500/20 to-blue-400/10 border border-white/10" />
+                      <div className="h-10 rounded-lg bg-white/5 border border-white/10 col-span-2" />
+                    </div>
+                  </div>
+                ),
               },
               {
                 num: '06',
                 icon: Award,
                 title: 'Portfolio & Certification',
                 outcome: 'Submit a graded portfolio. Get certified. Stand out from every other AI tool user.',
+                visual: (
+                  <div className="w-full rounded-xl border border-white/10 bg-black/40 p-4">
+                    <div className="text-[10px] text-gray-500 mb-2">Certification</div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-full bg-purple-500/20 border border-purple-500/30" />
+                      <div className="flex-1 space-y-1">
+                        <div className="h-2 rounded bg-white/10" />
+                        <div className="h-2 w-2/3 rounded bg-white/10" />
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 text-[10px] text-green-400">
+                      <span className="w-2 h-2 rounded-full bg-green-400" />
+                      Portfolio graded: 94/100
+                    </div>
+                  </div>
+                ),
               },
             ].map((mod) => (
               <div
@@ -464,6 +710,7 @@ const LandingPageV3 = () => {
                   </div>
                   <span className="text-xs font-mono text-gray-600 tracking-widest">MODULE {mod.num}</span>
                 </div>
+                <div className="mb-5">{mod.visual}</div>
                 <h3 className="text-lg font-bold text-white mb-3">{mod.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{mod.outcome}</p>
               </div>
@@ -483,18 +730,86 @@ const LandingPageV3 = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { icon: Target, title: 'Niche Selection Kit', desc: 'Profitable niches, revenue criteria, market sizing' },
-                { icon: Image, title: 'Portfolio Builder', desc: 'Fast AI portfolio build process — look established from day 1' },
-                { icon: FileText, title: 'Profile & Website Templates', desc: 'Upwork profile copy, website templates ready to use' },
-                { icon: DollarSign, title: 'Pricing & Offer Framework', desc: 'Per-image pricing, retainer structures, foot-in-the-door method' },
-                { icon: Search, title: 'Lead Generation System', desc: 'LLM-powered lead finding, Apollo walkthrough, qualification criteria' },
-                { icon: Mail, title: 'Outreach & Client Management', desc: '"Free lifestyle shot" approach, Upwork method, upsell path' },
+                {
+                  icon: Target,
+                  title: 'Niche Selection Kit',
+                  desc: 'Profitable niches, revenue criteria, market sizing',
+                  visual: (
+                    <div className="h-10 rounded-lg bg-white/5 border border-white/10 grid grid-cols-3 gap-1 p-2">
+                      {['golf', 'gym', 'toys'].map((chip) => (
+                        <span key={chip} className="rounded bg-black/40 text-[10px] text-gray-400 flex items-center justify-center">
+                          {chip}
+                        </span>
+                      ))}
+                    </div>
+                  ),
+                },
+                {
+                  icon: Image,
+                  title: 'Portfolio Builder',
+                  desc: 'Fast AI portfolio build process — look established from day 1',
+                  visual: (
+                    <div className="h-10 rounded-lg bg-white/5 border border-white/10 grid grid-cols-4 gap-1 p-1">
+                      {[1, 2, 3, 4].map((item) => (
+                        <div key={item} className="rounded bg-gradient-to-br from-purple-500/20 to-blue-400/10" />
+                      ))}
+                    </div>
+                  ),
+                },
+                {
+                  icon: FileText,
+                  title: 'Profile & Website Templates',
+                  desc: 'Upwork profile copy, website templates ready to use',
+                  visual: (
+                    <div className="h-10 rounded-lg bg-white/5 border border-white/10 p-2 space-y-1">
+                      <div className="h-2 rounded bg-white/10" />
+                      <div className="h-2 w-3/4 rounded bg-white/10" />
+                      <div className="h-2 w-1/2 rounded bg-white/10" />
+                    </div>
+                  ),
+                },
+                {
+                  icon: DollarSign,
+                  title: 'Pricing & Offer Framework',
+                  desc: 'Per-image pricing, retainer structures, foot-in-the-door method',
+                  visual: (
+                    <div className="h-10 rounded-lg bg-white/5 border border-white/10 p-2 flex items-center justify-between text-[10px] text-gray-400">
+                      <span>$49 / image</span>
+                      <span className="text-green-400">retainer</span>
+                    </div>
+                  ),
+                },
+                {
+                  icon: Search,
+                  title: 'Lead Generation System',
+                  desc: 'LLM-powered lead finding, Apollo walkthrough, qualification criteria',
+                  visual: (
+                    <div className="h-10 rounded-lg bg-white/5 border border-white/10 p-2 flex items-center gap-2">
+                      <div className="h-5 w-5 rounded bg-purple-500/20 border border-purple-500/30" />
+                      <div className="h-2 flex-1 rounded bg-white/10" />
+                    </div>
+                  ),
+                },
+                {
+                  icon: Mail,
+                  title: 'Outreach & Client Management',
+                  desc: '"Free lifestyle shot" approach, Upwork method, upsell path',
+                  visual: (
+                    <div className="h-10 rounded-lg bg-white/5 border border-white/10 p-2 flex items-center justify-between text-[10px] text-gray-400">
+                      <span>Pitch sent</span>
+                      <span className="text-purple-300">reply 12%</span>
+                    </div>
+                  ),
+                },
               ].map((bonus, i) => (
-                <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-white/[0.02] border border-white/5">
-                  <bonus.icon className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-white text-sm font-medium mb-1">{bonus.title}</p>
-                    <p className="text-gray-500 text-xs leading-relaxed">{bonus.desc}</p>
+                <div key={i} className="p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                  <div className="mb-3">{bonus.visual}</div>
+                  <div className="flex items-start gap-3">
+                    <bonus.icon className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-white text-sm font-medium mb-1">{bonus.title}</p>
+                      <p className="text-gray-500 text-xs leading-relaxed">{bonus.desc}</p>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -523,6 +838,62 @@ const LandingPageV3 = () => {
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               Everything I'm learning as I grow my own AI photography agency, I share with you. Real SOPs. Real templates. Real results.
             </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="rounded-3xl border border-white/10 bg-[#0a0a0a] p-6 md:p-10">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-green-400 uppercase mb-2">Momentum Signals</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">Agency Momentum</h3>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1.5 rounded-full text-xs bg-green-500/10 border border-green-500/20 text-green-300">
+                    $12.4k MRR
+                  </span>
+                  <span className="px-3 py-1.5 rounded-full text-xs bg-white/5 border border-white/10 text-gray-300">
+                    6 retainers
+                  </span>
+                  <span className="px-3 py-1.5 rounded-full text-xs bg-white/5 border border-white/10 text-gray-300">
+                    4 new leads
+                  </span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div className="rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <p className="text-xs text-gray-500 mb-3">Monthly Revenue</p>
+                  <div className="h-20 rounded-xl bg-gradient-to-br from-green-500/30 to-emerald-400/10 border border-white/10" />
+                  <div className="mt-3 flex items-center justify-between text-xs text-gray-400">
+                    <span>$8.2k → $12.4k</span>
+                    <span className="text-green-400">+51%</span>
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <p className="text-xs text-gray-500 mb-3">Pipeline</p>
+                  <div className="space-y-2">
+                    {['Discovery', 'Sample Shot', 'Proposal', 'Retainer'].map((stage, idx) => (
+                      <div key={stage} className="flex items-center gap-2">
+                        <span className={`w-2 h-2 rounded-full ${idx < 3 ? 'bg-green-400' : 'bg-white/10'}`} />
+                        <div className="h-2 flex-1 rounded bg-white/10" />
+                        <span className="text-[10px] text-gray-500">{stage}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <p className="text-xs text-gray-500 mb-3">Invoices</p>
+                  <div className="space-y-2">
+                    {['Skincare brand — $1,980', 'Golf accessories — $1,250', 'Pet care — $890'].map((row) => (
+                      <div key={row} className="flex items-center justify-between rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-xs text-gray-300">
+                        <span>{row}</span>
+                        <span className="text-green-400">Paid</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -582,6 +953,54 @@ const LandingPageV3 = () => {
           <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
             You're not doing this alone. Connect with designers and agency owners who are building in the same space.
           </p>
+
+          <div className="max-w-3xl mx-auto mb-12">
+            <div className="rounded-3xl border border-white/10 bg-[#0a0a0a] p-6 md:p-8">
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                <div>
+                  <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-2">Community Feed</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white">Active, Helpful, No Noise</h3>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-gray-300">
+                  <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5">312 members</span>
+                  <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5">24 posts today</span>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <p className="text-xs text-gray-500 mb-3">Top Threads</p>
+                  <div className="space-y-2 text-xs text-gray-300">
+                    <div className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">Rate my studio hero</div>
+                    <div className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">UGC prompt fixes</div>
+                    <div className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">Client feedback call script</div>
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <p className="text-xs text-gray-500 mb-3">Member Spotlight</p>
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-full bg-purple-500/20 border border-purple-500/30" />
+                    <div>
+                      <p className="text-sm text-white">Milan — $2k+ contract</p>
+                      <p className="text-xs text-gray-500">Before/After share</p>
+                    </div>
+                  </div>
+                  <div className="h-16 rounded-xl bg-gradient-to-br from-purple-500/20 to-blue-400/10 border border-white/10" />
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <p className="text-xs text-gray-500 mb-3">Channels</p>
+                  <div className="flex flex-wrap gap-2 text-[10px] text-gray-400">
+                    {['studio', 'conversion', 'lifestyle', 'pricing', 'leads', 'wins'].map((chip) => (
+                      <span key={chip} className="px-2 py-1 rounded-full border border-white/10 bg-white/5">
+                        #{chip}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-3 text-xs text-gray-500">Live critiques weekly</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-3xl mx-auto">
             {[
@@ -859,7 +1278,11 @@ const LandingPageV3 = () => {
                 A Word From The Founder
               </div>
               <blockquote className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-                "I created Dezygn because I needed a tool to help me serve my own AI lifestyle and product photography clients. Every feature you see was built because I needed it myself — brand import, the studio, comparison mode, client sharing. Then I realized other designers and agencies needed the same thing. So I packaged everything — the tool, the course, the SOPs, the community — into one place. This isn't some Silicon Valley startup guessing what creatives need. This is built by someone doing the work, every single day."
+                "Most AI tools are built by engineers who think 'good enough' is fine for brands. It’s not. As a creative agency owner, I know that 'AI hallucinations' and plastic skin don't just look cheap—they kill conversion.
+
+                I built Dezygn for the professionals who refuse to settle. Every feature—from the AWA Design Assistant and the Studio to our Comparison Mode—was forged in the heat of real client deadlines for brands like Trendhim.
+
+                I’ve packaged the software, the SOPs, and the community to give you a defensible edge. We don't just generate images; we engineer assets that sell."
               </blockquote>
               <div>
                 <p className="text-white font-semibold">Bertrand</p>

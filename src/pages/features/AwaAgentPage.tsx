@@ -142,6 +142,146 @@ const AwaAgentPage = () => {
           </a>
         </section>
 
+        <section className="max-w-7xl mx-auto px-6 pb-10">
+          <div className="bg-[#0a0a0a] border border-white/10 rounded-3xl p-6 md:p-10">
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+              <div>
+                <p className="text-xs tracking-[0.3em] text-purple-400 uppercase mb-2">Awa Orchestrator</p>
+                <h3 className="text-2xl md:text-3xl font-bold text-white">Live Creative Command Center</h3>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="px-3 py-1.5 rounded-full text-xs bg-white/5 border border-white/10 text-gray-300">
+                  8 subagents
+                </span>
+                <span className="px-3 py-1.5 rounded-full text-xs bg-white/5 border border-white/10 text-gray-300">
+                  12+ skills
+                </span>
+                <span className="px-3 py-1.5 rounded-full text-xs bg-green-500/10 border border-green-500/20 text-green-300">
+                  all systems ready
+                </span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                    <Brain className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Subagents</p>
+                    <p className="text-xs text-gray-500">Specialized modules Awa routes to</p>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    { icon: Globe, label: 'Brand Analyst', note: 'Extracts identity' },
+                    { icon: Wand2, label: 'Prompt Engineer', note: 'Builds Visual Syntax' },
+                    { icon: Eye, label: 'Vision Critic', note: 'Finds inconsistencies' },
+                    { icon: Search, label: 'Trend Scout', note: 'Finds references' },
+                    { icon: Layers, label: 'Composition Planner', note: 'Maps scene layout' },
+                    { icon: MessageSquare, label: 'Chat Director', note: 'Guides revisions' },
+                    { icon: Shield, label: 'Brand Guardian', note: 'Protects consistency' },
+                    { icon: CheckCircle2, label: 'QA Verifier', note: 'Approves output' },
+                  ].map((agent) => (
+                    <div key={agent.label} className="flex items-center justify-between rounded-xl border border-white/10 bg-black/40 px-3 py-2">
+                      <div className="flex items-center gap-3">
+                        <agent.icon className="w-4 h-4 text-purple-400" />
+                        <span className="text-sm text-gray-200">{agent.label}</span>
+                      </div>
+                      <span className="text-[10px] text-gray-500">{agent.note}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                    <Sparkles className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Active Mission</p>
+                    <p className="text-xs text-gray-500">Campaign: Summer launch</p>
+                  </div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-black/40 p-4 mb-4">
+                  <p className="text-sm text-gray-300 mb-3">
+                    Create 8 hero images for a skincare line. Keep it bright, premium, and on-brand.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {['studio softbox', 'marble surface', 'cool daylight', 'macro texture', 'subtle mist'].map((chip) => (
+                      <span
+                        key={chip}
+                        className="px-2 py-1 rounded-full text-[10px] bg-white/5 border border-white/10 text-gray-400"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  {[
+                    'Tool call: brand_profile.extract(brand_url)',
+                    'Tool call: prompt.enhance(visual_syntax)',
+                    'Tool call: generate.batch(8, 4K)',
+                    'Tool call: vision.verify(brand_score>92)',
+                  ].map((log) => (
+                    <div key={log} className="rounded-lg border border-white/10 bg-black/50 px-3 py-2 text-[11px] text-purple-300">
+                      {log}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-9 h-9 rounded-lg bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+                    <Target className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Skill Stack</p>
+                    <p className="text-xs text-gray-500">Auto-chained in real time</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {[
+                    'Prompt Enhancement',
+                    'Vision Refinement',
+                    'Internet Search',
+                    'Claude Reasoning',
+                    'Brand Memory',
+                    'Composition Planning',
+                    'Creative Strategy',
+                    'Quality Verification',
+                  ].map((skill) => (
+                    <div
+                      key={skill}
+                      className="rounded-lg border border-white/10 bg-black/40 px-3 py-2 text-xs text-gray-300"
+                    >
+                      {skill}
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-4 rounded-2xl border border-white/10 bg-black/50 p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs text-gray-500">Output Preview</span>
+                    <span className="text-xs text-green-400">Brand score: 94</span>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2">
+                    {[1, 2, 3].map((item) => (
+                      <div
+                        key={item}
+                        className="h-16 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-400/20 border border-white/10"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* How Awa Works */}
         <section className="max-w-7xl mx-auto px-6 py-20">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">

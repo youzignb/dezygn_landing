@@ -56,8 +56,19 @@ const UseCaseIndexPage = () => {
               <Link
                 key={useCase.slug}
                 to={`/use-cases/${useCase.slug}`}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-purple-500/30 transition-all"
+                className="group bg-white/[0.03] border border-white/10 rounded-2xl overflow-hidden hover:border-purple-500/30 transition-all"
               >
+                {useCase.image && (
+                  <img
+                    src={useCase.image}
+                    alt={useCase.imageAlt}
+                    width={400}
+                    height={267}
+                    loading="lazy"
+                    className="w-full h-48 object-cover"
+                  />
+                )}
+                <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-purple-300 transition-colors">
                   {useCase.title}
                 </h3>
@@ -84,6 +95,7 @@ const UseCaseIndexPage = () => {
                 <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
                   <span>Learn more</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
                 </div>
               </Link>
             ))}

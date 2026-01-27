@@ -5,6 +5,8 @@ export interface UseCase {
   metaDescription: string;
   heroHeadline: string;
   heroSubheadline: string;
+  image: string;
+  imageAlt: string;
   problem: string[];
   solution: string;
   features: { icon: string; title: string; description: string }[];
@@ -27,6 +29,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Stop Losing Sales to Bad Club Photos",
     heroSubheadline:
       "Golf equipment is one of the hardest product categories to photograph. Reflective metal, intricate grooves, and the need to convey performance — Dezygn handles all of it with AI-generated imagery built for the fairway.",
+    image: "/images/seo/use-cases/golf-brands.webp",
+    imageAlt: "AI-generated golf equipment product photography showing clubs and accessories in a course setting",
     problem: [
       "If you sell golf equipment, you already know the pain. Clubs are made of highly polished metal — chrome, stainless steel, titanium — and every single surface acts like a mirror. A traditional product shoot means hours of adjusting lighting rigs, taping diffusion panels, and still ending up with photos that show the photographer's reflection in the club face. One bad glare across the sweet spot and the entire image is unusable. For a brand releasing a new iron set with 8 clubs, each needing 4-6 angles, that is 40+ individual shots where reflections can ruin everything.",
       "Then there is the detail problem. Golfers are obsessive about specs. They want to see the milling pattern on a putter face, the cavity back design of an iron, the crown texture on a driver. These micro-details require macro photography setups with specialized lenses, focus stacking, and post-processing — easily $200-400 per SKU just for detail shots. Multiply that across a seasonal catalog and you are looking at five figures before you have even shot a single lifestyle image.",
@@ -89,6 +93,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Your Serums Deserve Better Than a Ring Light",
     heroSubheadline:
       "Skincare photography demands a clinical-meets-luxurious feel that most brands struggle to achieve. Dezygn's AI nails the glow, the drip, and the vibe — every single time.",
+    image: "/images/seo/use-cases/skincare.webp",
+    imageAlt: "AI product photography of skincare bottles and serums with soft natural lighting and botanical accents",
     problem: [
       "Skincare photography sits at the intersection of science and luxury, and getting that balance right is deceptively difficult. Your products need to look clinically effective — clean, precise, trustworthy — while simultaneously feeling indulgent and aspirational. That dual mandate means every image has to communicate efficacy and desire at the same time, and most product photographers default to one or the other.",
       "The physical challenges are brutal. Skincare bottles are often transparent or translucent, which means light passes through them in unpredictable ways. A clear serum bottle can look like a glowing gem in one setup and a washed-out ghost in another. Frosted glass diffuses light beautifully but loses all dimension without precise rim lighting. Pump dispensers, dropper caps, and airless packaging each introduce their own shadow and reflection nightmares. And if you sell a line of 20+ SKUs in similar packaging, achieving consistent lighting across all of them requires a photographer who truly specializes in beauty — and those specialists charge $500-1,500 per product.",
@@ -157,6 +163,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Your Supplements Look Legit. Make Your Photos Match.",
     heroSubheadline:
       "The supplement market is crowded and skeptical. Professional product imagery is the fastest way to signal quality and build trust — and Dezygn makes it effortless.",
+    image: "/images/seo/use-cases/supplements.webp",
+    imageAlt: "AI-generated supplement bottle photography with clean backgrounds and trust-building composition",
     problem: [
       "The supplement industry has a trust problem, and your product photography is either helping or hurting. Consumers are bombarded with thousands of supplement brands online, many of which look indistinguishable from each other. When a customer lands on your product page, they make a snap judgment about your brand's legitimacy in under three seconds — and that judgment is almost entirely based on your imagery. Grainy photos, inconsistent lighting, or amateurish backgrounds instantly trigger the 'this looks sketchy' response that kills conversions.",
       "Supplement packaging is deceptively hard to photograph well. Most products come in similar formats — bottles, pouches, tubs, blister packs — with labels that contain dense text, nutrition facts panels, and regulatory information. Getting the label sharp and readable while maintaining attractive lighting on the container itself requires careful balance. Glossy labels reflect studio lights. Matte finishes absorb light and look flat. Metallic inks need specific angles to pop. And the ubiquitous white or black HDPE bottle that 80% of supplements come in is either blown out or lost in shadows without expert lighting.",
@@ -219,6 +227,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Every Facet, Every Sparkle — Without the $2K Photoshoot",
     heroSubheadline:
       "Jewelry is the hardest product category to photograph. Period. Dezygn's AI handles reflections, scale, and sparkle so you can focus on designing beautiful pieces.",
+    image: "/images/seo/use-cases/jewelry.webp",
+    imageAlt: "AI product photography of fine jewelry with reflection-free close-ups highlighting gemstone detail",
     problem: [
       "Ask any product photographer what the most difficult category is, and they will tell you jewelry. The combination of highly reflective metal surfaces, transparent or translucent gemstones, tiny scale, and the need to convey sparkle and luxury creates a perfect storm of photographic challenges. A single ring can take 30-60 minutes to light correctly, and even then, the photographer's hands, camera, and studio are often visible in the reflections. Professional jewelry photographers use specialized equipment — light tents, fiber optic spot lights, anti-reflection sprays, and custom-bent reflector cards — that most general product photographers do not own.",
       "Scale is an equally frustrating challenge. A pair of earrings is two centimeters long, but on your product page it needs to look detailed and substantial. Macro photography captures the detail but requires specialized lenses ($800-2,000), focus stacking (shooting 15-30 frames at slightly different focus points and merging them in software), and post-processing that can take an hour per image. Without this level of effort, your jewelry looks soft, flat, and cheap — the exact opposite of what it is.",
@@ -287,6 +297,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Toy Photos That Make Kids Point and Parents Click",
     heroSubheadline:
       "Toy photography needs to sell to two audiences at once — the child who wants it and the parent who buys it. Dezygn's AI creates images that win both over.",
+    image: "/images/seo/use-cases/toys.webp",
+    imageAlt: "AI-generated toy product photography with colorful playful backgrounds and lifestyle staging",
     problem: [
       "Toy photography serves two masters, and they want completely different things. Kids want to see toys in action — imaginative play scenarios, bright colors, fun environments that spark excitement. Parents want to see build quality, safety features, size relative to their child, and whether the product looks worth the price. Creating images that satisfy both audiences simultaneously requires creative direction that most product photographers are not equipped to provide, because it is fundamentally a marketing problem, not just a photography problem.",
       "The physical challenges compound the creative ones. Toys come in wildly diverse forms — plush animals, building sets with hundreds of pieces, action figures with articulated joints, board games with multiple components, electronic toys with screens and lights. Each category has its own photography requirements. A plush toy needs soft, warm lighting to look huggable. A building set needs to be shown both assembled and as individual pieces. An electronic toy needs to show the screen or lights in action without blowing out the rest of the image. There is no one-size-fits-all setup.",
@@ -349,6 +361,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Great Pet Product Photos. Zero On-Set Zoomies.",
     heroSubheadline:
       "Pet parents buy with their hearts. Your product photos need to trigger that emotional connection — and Dezygn's AI creates pet lifestyle imagery without the chaos of an actual animal on set.",
+    image: "/images/seo/use-cases/pet-products.webp",
+    imageAlt: "AI product photography of pet supplies and accessories in home lifestyle settings",
     problem: [
       "Pet product photography has a fundamental problem: the best images include actual pets, and actual pets are the worst photographic subjects on the planet. Dogs do not hold still. Cats actively resist direction. A golden retriever wearing your new bandana will spend the entire shoot trying to remove it. Professional animal wranglers exist, but they charge $500-1,500 per session, and even then, you are at the mercy of the animal's mood. A full-day shoot with animals might yield 20-30 usable frames — and that is a good day.",
       "The emotional stakes are high in pet product marketing. Pet parents (and that is what they call themselves) are deeply emotional buyers who want to see products on animals that look like their own pets. This means you need diverse representation — different breeds, sizes, coat colors, and ages. A single golden retriever on set does not cut it anymore. Your Chihuahua customers want to see a Chihuahua in that sweater. Your senior dog customers want to see a grey-muzzled lab with that orthopedic bed. This breed diversity requirement multiplies your production costs exponentially.",
@@ -411,6 +425,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Your Gym Gear Deserves More Than a Garage Photo",
     heroSubheadline:
       "Fitness product photography needs to convey strength, quality, and performance. Dezygn's AI generates gym-ready lifestyle and studio shots without renting equipment or studio time.",
+    image: "/images/seo/use-cases/fitness.webp",
+    imageAlt: "AI-generated fitness equipment and activewear product photography in gym and outdoor settings",
     problem: [
       "Fitness product photography has a unique challenge: your products need to look like they perform. A set of dumbbells sitting on a white background communicates nothing about the training experience. A yoga mat rolled up in a studio tells you nothing about how it feels during practice. Fitness consumers buy aspiration — they buy the version of themselves that uses your product — and static product shots fail to deliver that emotional hook. The brands dominating this space use dynamic lifestyle imagery: athletes mid-workout, equipment in a premium gym setting, apparel in motion. But that kind of content requires gym location access, fitness models, and action photography expertise.",
       "The logistics of fitness product photography are particularly punishing. Equipment is heavy — a full rack of dumbbells, a bench, a cable machine. Transporting these to a studio costs hundreds in shipping and handling. Shooting on location at a gym means working around their schedule, dealing with inconsistent lighting (fluorescents, mixed natural light), and clearing the background of other members and equipment. Home gym setups look amateur unless you have a genuinely photogenic space, which most people do not.",
@@ -473,6 +489,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Make Them Hungry Through the Screen",
     heroSubheadline:
       "Food and beverage photography is an art — and a science. Dezygn's AI generates appetite-triggering product imagery that makes customers crave your products before they even read the description.",
+    image: "/images/seo/use-cases/food-beverage.webp",
+    imageAlt: "AI product photography of food and beverage packaging with appetizing styled compositions",
     problem: [
       "Food and beverage product photography exists in a strange middle ground between food photography and product photography, and most photographers are only good at one. Traditional food photography — the kind you see in cookbooks and restaurant marketing — is about making prepared dishes look irresistible. But if you sell packaged food products (sauces, snacks, beverages, meal kits), you need to make the packaging look appealing while also suggesting the delicious experience inside. That dual requirement is a fundamentally different creative challenge.",
       "The physical challenges are significant. Beverage bottles and cans are reflective cylinders — one of the most technically difficult shapes to light in product photography. Getting an even highlight down the side of a bottle without hot spots, while keeping the label readable, while showing the liquid color through glass, while adding condensation for that fresh feel — each of these elements requires dedicated lighting and often separate photographic passes composited in post-production. A single bottle can take 2-3 hours to photograph properly.",
@@ -541,6 +559,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Turn Your Accessories Into Editorial Content",
     heroSubheadline:
       "Fashion accessories need to look styled, aspirational, and on-trend. Dezygn's AI generates editorial-quality imagery that competes with brands 10x your size.",
+    image: "/images/seo/use-cases/fashion-accessories.webp",
+    imageAlt: "AI-generated fashion accessories photography featuring bags watches and sunglasses with editorial styling",
     problem: [
       "Fashion accessories occupy a unique space in e-commerce because they are sold on aspiration more than utility. Nobody needs another pair of sunglasses — they want the feeling that pair of sunglasses projects. This means your product photography cannot just show the product clearly; it needs to create an emotional and aspirational context. The brands winning in accessories — the Coach, Ray-Ban, and Daniel Wellington tier — invest in full editorial shoots with stylists, art directors, models, and location scouts. For an independent or growth-stage brand, competing with that level of visual sophistication on a fraction of the budget feels impossible.",
       "The technical challenges vary wildly across subcategories. Sunglasses are reflective (lenses mirror everything in the environment), have complex curves (frames need specific angles to look flattering), and need to be shown both on a surface and on a face. Watches require macro detail shots of dials, crowns, and caseback engravings while also needing wrist-shot lifestyle images. Bags need to convey size, material texture, and how they look when carried. Scarves and belts need to show drape, pattern, and scale. Each subcategory is essentially its own specialized photography discipline.",
@@ -603,6 +623,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Show Every Piece in Its Perfect Room",
     heroSubheadline:
       "Home decor products live or die by context. Your vase needs to be on a shelf, your throw needs to be on a couch, your art needs to be on a wall. Dezygn generates those rooms for you.",
+    image: "/images/seo/use-cases/home-decor.webp",
+    imageAlt: "AI product photography of home decor items styled in modern interior room settings",
     problem: [
       "Home decor is arguably the most context-dependent product category in all of e-commerce. A ceramic vase on a white background is just a cylinder. That same vase on a mid-century modern credenza in a sunlit living room is a $65 impulse purchase. Customers shopping for home decor are not buying objects — they are buying the feeling of a room, and if your product photography does not show them that feeling, you have already lost the sale. The brands dominating home decor e-commerce (West Elm, CB2, Anthropologie) invest millions in aspirational interior photography. Independent brands need to find a way to compete.",
       "The fundamental challenge is that home decor products need to be shown in rooms, and rooms are expensive to access. Professional interior photography either requires a real home (location fees of $1,000-5,000 per day, plus the risk that the home's existing decor clashes with your products), a photography studio with room sets (even more expensive to rent and style), or virtual staging (which until recently looked obviously fake). Each product ideally needs to be shown in 2-3 different room contexts to appeal to different customer tastes — modern, traditional, bohemian, farmhouse — tripling the production cost.",
@@ -671,6 +693,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Epic Outdoor Shots. Zero Expedition Required.",
     heroSubheadline:
       "Your customers buy adventure. Your product photography needs to sell that promise — and Dezygn generates stunning wilderness imagery without a single trek to the trailhead.",
+    image: "/images/seo/use-cases/outdoor-gear.webp",
+    imageAlt: "AI-generated outdoor gear product photography with rugged nature and adventure backgrounds",
     problem: [
       "Outdoor gear brands face a paradox: the most compelling product imagery happens in the most logistically impossible locations. A tent photographed in a studio tells you nothing about how it looks pitched on a mountain ridge at sunrise. A backpack on a white background does not convey the feeling of summiting a peak with your gear on your back. But actually photographing products in stunning outdoor locations means permits, weather dependency, backcountry logistics, safety considerations, and travel costs that can make a single shoot cost $10,000-25,000.",
       "Weather is the uncontrollable variable that makes outdoor photography a gamble. You plan a two-day shoot at a mountain lake, drive five hours, haul your gear to the location, and the sky is a flat grey overcast that makes everything look dull. Or it rains. Or the wildfire smoke rolls in. Professional outdoor photographers budget 2-3 extra days per shoot for weather contingencies, which doubles accommodation and travel costs. And even with padding, sometimes you just lose — ask any photographer who has been weathered out of a critical shoot three days before a product launch deadline.",
@@ -733,6 +757,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Apple-Level Product Shots Without the Apple Budget",
     heroSubheadline:
       "Electronics consumers expect premium, pixel-perfect imagery. Dezygn's AI generates the clean, modern product photography that tech buyers demand — at a price that makes sense for growing brands.",
+    image: "/images/seo/use-cases/electronics.webp",
+    imageAlt: "AI product photography of consumer electronics with sleek minimalist studio lighting",
     problem: [
       "Consumer electronics photography has been permanently shaped by Apple. Since the original iPhone marketing, tech consumers expect product imagery to be immaculate — perfectly lit, surgically precise, and conveying both the physical beauty and the functional capability of the product. This standard is nearly impossible to achieve without professional equipment, experienced photographers, and extensive post-production. A startup launching a new gadget is compared directly against companies spending millions on product photography, and the visual gap immediately signals 'small player' in a category where trust is everything.",
       "The technical challenges are relentless. Electronics products are a minefield of reflective surfaces — glass screens, polished metal bezels, glossy plastic housings — each requiring dedicated lighting strategies that often conflict with each other. A laptop needs its screen to show content without glare, its aluminum body to have even highlights without hot spots, and its keyboard to be readable without shadows. Achieving all three in a single exposure is physically impossible; professional electronics photography routinely composites 3-5 separate exposures per image.",
@@ -795,6 +821,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Beauty Photography That Actually Converts",
     heroSubheadline:
       "Your lipstick shade needs to be exact. Your palette layout needs to pop. Your brand story needs to shine through every image. Dezygn's AI delivers all three.",
+    image: "/images/seo/use-cases/beauty.webp",
+    imageAlt: "AI-generated beauty product photography with luxurious textures and editorial lighting",
     problem: [
       "Beauty product photography operates under one non-negotiable requirement: color accuracy. When a customer orders 'Sunset Rose' lipstick based on your product photo, the color that arrives needs to match what they saw on screen. This sounds simple but it is an enormous technical challenge. Different lighting setups shift color temperature. Different backgrounds affect perceived color through simultaneous contrast. Camera sensors interpret pigments differently than the human eye. And every screen your customer views the image on has different color calibration. Beauty photographers spend enormous effort on color correction and calibration, often shooting reference color cards alongside products and spending hours in post-production matching hex values.",
       "The diversity of beauty product formats makes photography exponentially complex. A cosmetics brand might sell lipsticks (cylindrical tubes with swatchable tips), eyeshadow palettes (multiple small pans needing individual color accuracy), foundations (pump bottles with skin-matching color stories), powders (compacts with pressed product visible), and tools (brushes, sponges, applicators). Each format has different lighting requirements, optimal angles, and customer expectations. An eyeshadow palette shot from the wrong angle shows shadow instead of pigment. A lipstick bullet photographed under warm light shifts the color two shades. The margin for error is razor thin.",
@@ -863,6 +891,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Beautiful Baby Product Photos. No Crying Required.",
     heroSubheadline:
       "Baby product photography needs to feel warm, safe, and trustworthy — while being incredibly practical to produce. Dezygn's AI delivers both, without the unpredictability of shooting with actual infants.",
+    image: "/images/seo/use-cases/baby-products.webp",
+    imageAlt: "AI product photography of baby products and nursery items in soft pastel lifestyle settings",
     problem: [
       "Baby product photography has a higher emotional bar than almost any other category. Parents are not just buying a product — they are trusting you with their child's safety, comfort, and wellbeing. Every image needs to radiate warmth, safety, and care. If your product photos feel even slightly clinical, cheap, or impersonal, parents scroll past. The brands winning in this space (Snoo, Ergobaby, Lovevery) project a visual identity that is warm, modern, and reassuring — a look that requires professional art direction, not just good photography.",
       "Shooting with babies is the most challenging and unpredictable form of product photography. Infants operate on their own schedule — they sleep, eat, cry, and need diaper changes with no regard for your shooting timeline. Professional baby photography sessions rarely last more than 30 minutes of actual shooting time, with breaks for feeding, soothing, and wardrobe changes. Agencies that provide baby models charge premium rates ($500-1,500 per session), and you need a parent or guardian on set at all times, adding to the logistical complexity. A single productive shoot day might yield usable images for 5-8 products.",
@@ -925,6 +955,8 @@ export const useCases: UseCase[] = [
     heroHeadline: "Sell the Glow, the Scent, the Mood — Through a Photo",
     heroSubheadline:
       "Candle photography needs to sell an invisible product — scent — through a visual medium. Dezygn's AI creates atmospheric imagery that makes customers smell your candles through the screen.",
+    image: "/images/seo/use-cases/candles.webp",
+    imageAlt: "AI-generated candle product photography with warm ambient lighting and cozy home settings",
     problem: [
       "Candles present one of the most paradoxical challenges in product photography: you are trying to sell a sensory experience (scent) through a visual medium (photography). Your customer cannot smell 'Coastal Sage' or 'Warm Vanilla' through their screen, so your imagery has to do the heavy lifting of evoking that scent through visual cues — color, environment, props, lighting, and mood. This is not photography; it is synesthetic storytelling. Most product photographers are not equipped for this level of creative demand, and most candle brands end up with pretty but generic images that fail to communicate their unique fragrance stories.",
       "The technical challenge of photographing lit candles is underappreciated. A burning candle flame is orders of magnitude brighter than the product around it, creating an extreme dynamic range problem. Expose for the flame and the candle body becomes a dark silhouette. Expose for the candle body and the flame is a blown-out white blob. Capturing a warm, natural-looking glow requires careful exposure blending, specialized lighting (dim ambient to preserve the flame's warmth while gently filling the candle body), and post-processing that most photographers charge extra for. And that is just a single-wick candle — multi-wick candles and candles in decorative vessels introduce additional complexity.",

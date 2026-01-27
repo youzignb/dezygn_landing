@@ -47,23 +47,24 @@ function HomePage() {
               <div className="mb-8">
                 <div className="inline-flex items-center gap-2 bg-gray-100 rounded-full px-5 py-2 border border-gray-200">
                   <Zap className="w-4 h-4 text-purple-600" />
-                  <span className="text-sm font-semibold text-gray-700">Start free, get your first client in 14 days</span>
+                  <span className="text-sm font-semibold text-gray-700">● BUILT FOR THE CREATIVE EYE, POWERED BY AI</span>
                 </div>
               </div>
 
               {/* Main Headline with Yellow Highlight */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight">
                 <span className="block text-gray-900">
-                  Professional AI creative work{' '}
+                  The Operating System for{' '}
                   <span className="relative inline-block">
                     <span className="absolute inset-0 bg-yellow-300 -skew-y-2 transform"></span>
-                    <span className="relative z-10 px-2 text-gray-900">in minutes</span>
+                    <span className="relative z-10 px-2 text-gray-900">AI Photography Agencies</span>
                   </span>
+                  .
                 </span>
               </h1>
 
               <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                Complete platform for freelancers. Generate client-ready designs, product photos, and videos with AI. <b>No design experience needed.</b>
+                Stop selling \"AI slop\" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
               </p>
 
               {/* CTA Section */}

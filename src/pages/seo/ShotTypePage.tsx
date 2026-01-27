@@ -94,6 +94,19 @@ const ShotTypePage = () => {
             <p className="text-lg md:text-xl text-gray-400 max-w-3xl leading-relaxed">
               {shotType.definition}
             </p>
+
+            {shotType.image && (
+              <div className="max-w-4xl mt-12">
+                <img
+                  src={shotType.image}
+                  alt={shotType.imageAlt}
+                  width={800}
+                  height={533}
+                  loading="lazy"
+                  className="w-full rounded-2xl border border-white/10"
+                />
+              </div>
+            )}
           </div>
         </section>
 
