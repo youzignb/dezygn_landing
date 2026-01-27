@@ -99,14 +99,15 @@ const LandingPageV3 = () => {
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-            The AI Photography Platform
+            The #1 AI Photography Agency Suite
           </div>
 
           <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white mb-6">
-            Create professional e‑commerce photography with AI.{' '}
+            We help creative agencies sell{' '}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
-              Build a profitable agency.
-            </span>
+              accurate, realistic and on‑brand
+            </span>{' '}
+            AI Product & Lifestyle Photography Services to eCom Businesses
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mb-10">
