@@ -127,30 +127,21 @@ function ContactPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Get Started?
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-10 md:p-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to get started?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
             Jump in and start creating. If you need anything, we're just a chat away.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://app.dezygn.com"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all text-lg"
-            >
-              Start Creating <ArrowRight className="w-5 h-5" />
-            </a>
-            <a
-              href="https://chat.dezygn.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all text-lg"
-            >
-              <MessageCircle className="w-5 h-5" /> Open Chat
-            </a>
-          </div>
+          <a
+            href="https://chat.dezygn.com"
+            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
+          >
+            Get Started
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </section>
 

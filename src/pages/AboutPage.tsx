@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Zap, Target, Camera, TrendingUp, Users, Sparkles } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import HeaderV3 from '../components/HeaderV3';
 import FooterV3 from '../components/FooterV3';
 
@@ -311,29 +310,22 @@ function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Build Your AI Photography Business?
+      <section className="max-w-7xl mx-auto px-6 py-20">
+        <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-10 md:p-16 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to build your AI photography business?
           </h2>
-          <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
             Everything you need — the tools, the training, and the AI assistant — 
             in one platform built by someone who does this for a living.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://app.dezygn.com"
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all text-lg"
-            >
-              Start Creating <ArrowRight className="w-5 h-5" />
-            </a>
-            <Link
-              to="/features"
-              className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all text-lg"
-            >
-              See Features
-            </Link>
-          </div>
+          <a
+            href="https://chat.dezygn.com"
+            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
+          >
+            Get Started
+            <ArrowRight className="w-4 h-4" />
+          </a>
         </div>
       </section>
 
