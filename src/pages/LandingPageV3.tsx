@@ -113,13 +113,13 @@ const LandingPageV3 = () => {
             Stop selling "AI slop" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
           </p>
 
-          <Link
-            to="/pricing"
+          <a
+            href="https://chat.dezygn.com/signup"
             className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group mb-4"
           >
             Start Creating — Risk Free
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </a>
           <p className="text-gray-600 text-sm mb-12">30-day money-back guarantee. Cancel anytime.</p>
 
           {/* Testimonial */}
@@ -1224,12 +1224,12 @@ const LandingPageV3 = () => {
               <span className="text-green-400 text-sm font-medium">30-Day Money-Back Guarantee</span>
             </div>
 
-            <Link
-              to="/pricing"
+            <a
+              href="https://chat.dezygn.com/signup"
               className="block w-full text-center px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg"
             >
-              Start Creating — 30 Day Guarantee
-            </Link>
+              Try it for $1 Only
+            </a>
           </div>
 
           {/* Credit top-ups */}
@@ -1377,13 +1377,13 @@ const LandingPageV3 = () => {
           <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
             Tool. Course. Community. Business resources. Everything you need to build a premium AI photography agency — for $99/month.
           </p>
-          <Link
-            to="/pricing"
+          <a
+            href="https://chat.dezygn.com/signup"
             className="inline-flex items-center gap-2 px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
           >
             Join Dezygn — Risk Free
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
+          </a>
           <p className="mt-4 text-gray-600 text-sm">30-day money-back guarantee. Cancel anytime.</p>
         </div>
       </section>
@@ -1402,12 +1402,12 @@ const LandingPageV3 = () => {
           >
             <h2 className="text-2xl font-bold text-white mb-4">Sign up to continue</h2>
             <p className="text-gray-400 mb-6">Create an account to start generating designs with AWA.</p>
-            <Link
-              to="/pricing"
+            <a
+              href="https://chat.dezygn.com/signup"
               className="inline-block w-full px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-medium rounded-xl transition-colors"
             >
-              View Pricing
-            </Link>
+              Try it for $1 Only
+            </a>
             <button
               className="mt-4 text-gray-500 hover:text-white transition-colors text-sm"
               onClick={() => setShowSignupModal(false)}
