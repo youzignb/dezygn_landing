@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
+import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap, Play, X } from 'lucide-react';
 import HeaderV3 from '../components/HeaderV3';
 import AwaVisualization from '../components/AwaVisualization';
 import FooterV3 from '../components/FooterV3';
@@ -7,6 +7,7 @@ import FooterV3 from '../components/FooterV3';
 const LandingPageV3 = () => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const faqItems = [
     {
@@ -112,13 +113,27 @@ const LandingPageV3 = () => {
             Stop selling "AI slop" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
           </p>
 
-          <a
-            href="https://chat.dezygn.com/signup"
-            className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group mb-4"
-          >
-            Start Creating — Risk Free
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
+            <a
+              href="https://chat.dezygn.com/signup"
+              className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
+            >
+              Start Creating — Risk Free
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </a>
+            <button
+              type="button"
+              onClick={() => setIsVideoOpen(true)}
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-medium transition-colors"
+              aria-haspopup="dialog"
+              aria-expanded={isVideoOpen}
+            >
+              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-500/20 border border-purple-400/40">
+                <Play className="w-4 h-4 text-purple-200" />
+              </span>
+              Watch the walkthrough
+            </button>
+          </div>
           <p className="text-gray-600 text-sm mb-12">30-day money-back guarantee. Cancel anytime.</p>
 
           {/* Testimonial */}
@@ -156,6 +171,40 @@ const LandingPageV3 = () => {
           </div>
         </div>
       </main>
+
+      {isVideoOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Product walkthrough video"
+          onClick={() => setIsVideoOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute top-3 right-3 z-10 inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white"
+              onClick={() => setIsVideoOpen(false)}
+              aria-label="Close video"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            <div className="w-full aspect-video bg-black">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/6BAavTX4Sow?autoplay=1&controls=0&rel=0&modestbranding=1"
+                title="Dezygn walkthrough video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ============================================ */}
       {/* SECTION 2: SOCIAL PROOF BAR */}
