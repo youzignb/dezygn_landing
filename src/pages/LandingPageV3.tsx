@@ -292,31 +292,36 @@ const LandingPageV3 = () => {
                 step: '02',
                 icon: MessageSquare,
                 title: 'Launch a Chat',
-                desc: 'Create a chat per campaign. Your AI creative director Awa is ready.',
+                desc: 'One brand, multiple campaigns. Spin up a chat for each product line or launch.',
                 visual: (
                   <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
                     <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
                       <div className="w-3 h-3 rounded-full bg-purple-500/40" />
-                      <span className="text-[10px] text-gray-500">Campaign Chat</span>
+                      <span className="text-[10px] text-gray-500">Brand: Solé Skin</span>
                     </div>
-                    <div className="p-4 grid gap-3">
-                      <div className="flex justify-end">
-                        <div className="max-w-[75%] rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-xs text-gray-300">
-                          Create 6 hero images for the new launch.
+                    <div className="p-4 grid grid-cols-3 gap-3">
+                      <div className="col-span-1 rounded-xl border border-white/10 bg-black/40 p-3">
+                        <div className="text-[10px] text-gray-500 mb-2">Chats</div>
+                        <div className="space-y-2 text-[10px] text-gray-400">
+                          <div className="rounded-lg border border-white/10 bg-white/5 px-2 py-1">Spring Launch</div>
+                          <div className="rounded-lg border border-purple-500/30 bg-purple-500/10 px-2 py-1 text-purple-200">Hydration Serum</div>
+                          <div className="rounded-lg border border-white/10 bg-white/5 px-2 py-1">UGC Batch</div>
+                          <div className="rounded-lg border border-white/10 bg-white/5 px-2 py-1">Retail PDP</div>
                         </div>
                       </div>
-                      <div className="flex gap-2">
-                        <div className="w-6 h-6 rounded-full bg-purple-500/30" />
-                        <div className="flex-1">
-                          <div className="rounded-xl bg-white/[0.03] border border-white/10 px-3 py-2 text-xs text-gray-300">
-                            I will pull your brand kit and draft 3 styles. Running tools now.
+                      <div className="col-span-2 rounded-xl border border-white/10 bg-white/[0.03] p-3">
+                        <div className="text-[10px] text-gray-500 mb-2">Hydration Serum</div>
+                        <div className="space-y-2">
+                          <div className="rounded-lg bg-white/5 border border-white/10 px-3 py-2 text-[10px] text-gray-300">
+                            Need 4 studio + 2 lifestyle for the serum launch.
                           </div>
-                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
-                            Tool call: brand_profile.extract(brand_url)
+                          <div className="rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
+                            Awa: pulling brand kit + scene styles.
                           </div>
-                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
-                            Tool call: moodboard.build(style="hero")
-                          </div>
+                        </div>
+                        <div className="mt-3 flex items-center gap-2">
+                          <span className="px-2 py-1 rounded-md text-[10px] bg-white/5 text-gray-300 border border-white/10">New Chat</span>
+                          <span className="px-2 py-1 rounded-md text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/30">Duplicate</span>
                         </div>
                       </div>
                     </div>
@@ -363,30 +368,94 @@ const LandingPageV3 = () => {
               {
                 step: '04',
                 icon: Sparkles,
-                title: 'Generate & Deliver',
-                desc: 'Tell Awa what you need. Review in Studio. Share with clients.',
+                title: 'Generate with Intelligence',
+                desc: 'Awa turns your brief into on-brand images using visual reasoning, not guesswork.',
                 visual: (
                   <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
                     <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
-                      <span className="text-[10px] text-gray-500">Studio Review</span>
-                      <span className="text-[10px] text-green-400">Approved</span>
+                      <span className="text-[10px] text-gray-500">Awa Chat</span>
+                      <span className="text-[10px] text-purple-300">Generating</span>
                     </div>
-                    <div className="p-4 grid grid-cols-3 gap-2">
-                      {[1, 2, 3].map((item) => (
-                        <div
-                          key={item}
-                          className="h-20 rounded-lg bg-white/[0.04] border border-white/10"
-                        />
-                      ))}
-                      <div className="col-span-3 rounded-xl border border-white/10 bg-white/[0.03] p-3">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="text-[10px] text-gray-500">Selected Image</div>
-                          <div className="flex items-center gap-2">
-                            <span className="px-2 py-1 rounded-md text-[10px] bg-green-500/20 text-green-300 border border-green-500/30">Approve</span>
-                            <span className="px-2 py-1 rounded-md text-[10px] bg-white/5 text-gray-300 border border-white/10">Share</span>
+                    <div className="p-4 space-y-3">
+                      <div className="flex justify-end">
+                        <div className="max-w-[75%] rounded-xl bg-white/5 border border-white/10 px-3 py-2 text-xs text-gray-300">
+                          Create 6 hero images for the new launch.
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <div className="w-6 h-6 rounded-full bg-purple-500/30" />
+                        <div className="flex-1">
+                          <div className="rounded-xl bg-white/[0.03] border border-white/10 px-3 py-2 text-xs text-gray-300">
+                            I will lock brand tone and lighting. Running tools now.
+                          </div>
+                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
+                            Tool call: prompt.enhance(visual_syntax)
+                          </div>
+                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
+                            Tool call: portrait.skill(light_retouch, skin_realism)
+                          </div>
+                          <div className="mt-2 rounded-lg bg-black/40 border border-white/10 px-3 py-2 text-[10px] text-purple-300">
+                            Tool call: vision.verify(brand_score &gt; 92)
                           </div>
                         </div>
-                        <div className="h-16 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-400/20 border border-white/10" />
+                      </div>
+                    </div>
+                  </div>
+                ),
+              },
+              {
+                step: '05',
+                icon: Eye,
+                title: 'Review in Gallery',
+                desc: 'Inspect full-size images, add notes, and star your top picks.',
+                visual: (
+                  <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
+                    <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
+                      <span className="text-[10px] text-gray-500">Gallery Review</span>
+                      <span className="text-[10px] text-green-400">4★+</span>
+                    </div>
+                    <div className="p-4 grid grid-cols-3 gap-2">
+                      {[1, 2, 3, 4, 5, 6].map((item) => (
+                        <div
+                          key={item}
+                          className="relative h-14 rounded-lg bg-white/[0.04] border border-white/10 overflow-hidden"
+                        >
+                          <div className="absolute top-1 left-1 flex items-center gap-1 rounded-full bg-black/60 px-1.5 py-0.5 text-[9px] text-gray-200">
+                            <span className="text-yellow-400">★</span>
+                            4.8
+                          </div>
+                        </div>
+                      ))}
+                      <div className="col-span-3 rounded-xl border border-white/10 bg-white/[0.03] p-2">
+                        <div className="text-[10px] text-gray-500 mb-1">Note</div>
+                        <div className="h-6 rounded bg-white/5 border border-white/10" />
+                      </div>
+                    </div>
+                  </div>
+                ),
+              },
+              {
+                step: '06',
+                icon: Share2,
+                title: 'Share & Feedback',
+                desc: 'Share with watermark protection and collect client ratings fast.',
+                visual: (
+                  <div className="w-full aspect-video rounded-xl bg-[#0b0b0b] border border-white/10 overflow-hidden">
+                    <div className="h-8 border-b border-white/10 bg-white/[0.02] flex items-center px-3 gap-2">
+                      <span className="text-[10px] text-gray-500">Client Share</span>
+                      <span className="text-[10px] text-purple-300">Watermarked</span>
+                    </div>
+                    <div className="p-4 space-y-3">
+                      <div className="h-16 rounded-lg bg-gradient-to-br from-purple-500/30 to-blue-400/20 border border-white/10 flex items-center justify-center text-[10px] text-white/60">
+                        PREVIEW
+                      </div>
+                      <div className="flex items-center justify-between rounded-lg border border-white/10 bg-white/[0.03] px-3 py-2 text-[10px] text-gray-300">
+                        <span>Client rating</span>
+                        <span className="text-yellow-400">★★★★★</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-1 rounded-md text-[10px] bg-white/5 text-gray-300 border border-white/10">Copy link</span>
+                        <span className="px-2 py-1 rounded-md text-[10px] bg-purple-500/20 text-purple-300 border border-purple-500/30">Send</span>
                       </div>
                     </div>
                   </div>

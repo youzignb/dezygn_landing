@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Users, TrendingUp, Award, Sparkles, Heart, Zap, Target, Globe } from 'lucide-react';
-import Layout from '../components/Layout';
+import { ArrowRight, Zap, Target, Camera, TrendingUp, Users, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import HeaderV3 from '../components/HeaderV3';
+import FooterV3 from '../components/FooterV3';
 
 function AboutPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,227 +12,333 @@ function AboutPage() {
   }, []);
 
   return (
-    <Layout>
+    <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
+      <HeaderV3 />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center relative">
-            <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="inline-flex items-center gap-2 bg-gray-100 rounded-full px-6 py-2 border border-gray-200 mb-6">
-                <Heart className="w-4 h-4 text-red-500 fill-current" />
-                <span className="text-gray-700 text-sm font-medium">Empowering creators since 2014</span>
+      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(120,80,200,0.15),transparent_60%)]" />
+        <div className="max-w-4xl mx-auto relative">
+          <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-full px-5 py-2 border border-white/10 mb-8">
+                <Camera className="w-4 h-4 text-purple-400" />
+                <span className="text-gray-300 text-sm">The story behind Dezygn</span>
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Turning Creativity Into<br />
-                <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Real Income</span>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                From $700K Launch to Rock Bottom.{' '}
+                <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                  Then Back Again.
+                </span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Since 2014, we've been building tools that help freelancers and agencies create professional work faster,
-                empowering creators to build profitable businesses.
+              <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                Dezygn wasn't built in a boardroom. It was built by someone who lost everything, 
+                picked himself up, and decided to do it differently this time.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our <span className="text-purple-600">Mission</span>
-              </h2>
-              <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                We believe creativity should be accessible to everyone, not just those with years of training.
-                Our mission is to democratize professional-quality design and content creation,
-                enabling anyone to build a successful creative business.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <Target className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Empower Creators</h3>
-                    <p className="text-gray-600">Give every creator the tools to compete with professional agencies</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Zap className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Market-Driven Innovation</h3>
-                    <p className="text-gray-600">Build features based on real gig economy demand and what creators actually need</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <Globe className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Global Impact</h3>
-                    <p className="text-gray-600">Create opportunities for creators worldwide, regardless of location</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 border-2 border-gray-200 shadow-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">By The Numbers</h3>
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600">214,495+</div>
-                  <div className="text-sm text-gray-600">Active Users</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-blue-600">11</div>
-                  <div className="text-sm text-gray-600">Years Building</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-green-600">50M+</div>
-                  <div className="text-sm text-gray-600">Designs Created</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-yellow-600">$2.4M+</div>
-                  <div className="text-sm text-gray-600">Creator Earnings/Month</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-purple-600">Story</span>
-            </h2>
-            <p className="text-xl text-gray-600">
-              From a simple idea to a global platform transforming creative careers
-            </p>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto">
+          <div className="space-y-12 text-gray-300 text-lg leading-relaxed">
 
-          <div className="space-y-8">
-            <div className="bg-white rounded-2xl p-8 border-2 border-purple-200 shadow-lg">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">2014</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">The Beginning</h3>
-              </div>
-              <p className="text-gray-600 leading-relaxed">
-                We started with a simple belief: design should be accessible to everyone.
-                Our first platform helped over 200,000 entrepreneurs create professional graphics without design experience.
+            {/* Chapter 1 */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                THE BEGINNING
+              </h2>
+              <p className="mb-4">
+                I started in digital marketing back in 2011. Fresh out of a contract job at Google, 
+                longing to be free. Free to spend time with my family, travel, live on my own terms.
+              </p>
+              <p className="mb-4">
+                So I got hustling. Late nights. Failed attempts. Then I found a coach who taught me 
+                how to build an email list and create products. Within a few months, I was financially free.
+              </p>
+              <p>
+                I started selling digital products — PDFs, resources, marketing tools. 
+                Eventually I got into software. When I was younger I had a small web design agency, 
+                so I knew graphic design. But I hated Photoshop.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 border-2 border-blue-200 shadow-lg">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">2022</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">The Evolution</h3>
+            {/* Chapter 2 */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                THE $700K WEEK
+              </h2>
+              <p className="mb-4">
+                So I conceptualized Youzign — a graphic design tool for everyone. 
+                Hired a developer to build it with me.
+              </p>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 my-6">
+                <p className="text-xl font-semibold text-white">
+                  When Youzign launched in 2015, it grossed $700K in its first week.
+                </p>
+                <p className="text-gray-400 mt-2">A home run from the start.</p>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                We saw an opportunity to help creators work faster and earn more. We evolved our platform into Dezygn,
-                combining our decade of experience with new technology to solve real creator problems.
+              <p className="mb-4">
+                From 2015 to 2020, I branched out. Created 8 more software products. 
+                Hired 15 people. Up to 4 developers at some points. 
+                My overheads ballooned to $40K a month.
+              </p>
+              <p>
+                But here's the thing — I sold lifetime licenses at low prices. 
+                Slowly but surely, the business eroded. I couldn't afford the team. 
+                By 2020 I was down to 6-7 people. And I was competing with Canva. Without the VC money.
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 border-2 border-green-200 shadow-lg">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">2025</span>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Today</h3>
+            {/* Chapter 3 */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                THE HARD YEARS
+              </h2>
+              <p className="mb-4">
+                Then life hit hard. A series of setbacks knocked me down. I went into a long depression 
+                from 2021 to 2025, watching my business crumble to nothing until I was, once again, the only employee. 
+                Doing everything myself.
+              </p>
+              <p>
+                Most people would have walked away. Sometimes I almost did.
+              </p>
+            </div>
+
+            {/* Chapter 4 */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                THE REBUILD
+              </h2>
+              <p className="mb-4">
+                Then vibe coding happened. And I dedicated 2025 to creating the vision I always had — 
+                but this time, I wasn't going to repeat my mistakes.
+              </p>
+              <p className="mb-4">
+                No more building for "everyone." No more competing with billion-dollar companies on their turf. 
+                Youzign was a graphic tool for the masses. Dezygn would be a weapon for freelancers and agencies.
+              </p>
+              <p className="mb-4">
+                But I also realized something: I can't sell a platform for freelancers without 
+                understanding what they go through. So I took my courage in both hands.
+              </p>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 my-6">
+                <p className="text-xl font-semibold text-white mb-3">
+                  I signed up to Upwork. Fresh account. Zero history. Zero reviews.
+                </p>
+                <p className="text-gray-400">
+                  I hadn't sold a service since 2009 when I was a freelance web designer in Manchester. 
+                  But I needed to feel what our users feel.
+                </p>
               </div>
-              <p className="text-gray-600 leading-relaxed">
-                Today, Dezygn helps creators worldwide build profitable businesses with faster, smarter creative tools.
-                We focus on what actually helps creators earn more money.
+            </div>
+
+            {/* Chapter 5 */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                WHAT I FOUND
+              </h2>
+              <p className="mb-4">
+                First gig: $50. Then a couple of $100 jobs. Then a $400 client with a big 
+                e-commerce brand. Then $639/month for 12 images for a French retro eyewear brand.
+              </p>
+              <p className="mb-4">
+                $53 per AI-generated image. Let that sink in.
+              </p>
+              <p className="mb-4">
+                What I found is that there's a massive, unmet need for AI photography 
+                that's actually accurate, realistic, and on-brand. Not slop. Not the kind of images that get 
+                you 2-star reviews on TrustPilot because they don't represent the actual product.
+              </p>
+              <p className="mb-4">
+                Clients keep coming back. I got repeat clients within weeks. Always 5 stars. 
+                Because I invested in the craft — understanding visual syntax, image transfer, 
+                prompt engineering — the hard stuff nobody teaches.
+              </p>
+              <p>
+                Every day, dozens of e-commerce businesses post on Upwork looking for this exact service. 
+                Most can't do it themselves. They tried ChatGPT. They tried Midjourney. 
+                The results weren't good enough. That's where skilled creators come in.
+              </p>
+            </div>
+
+            {/* Chapter 6 */}
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                WHY DEZYGN EXISTS
+              </h2>
+              <p className="mb-4">
+                Dezygn is everything I wish I had when I started freelancing. 
+                The tools, the training, the AI assistant that actually understands photography.
+              </p>
+              <p className="mb-4">
+                I built Awa — the AI Creative Director inside Dezygn — with everything I learned 
+                on the ground. She can think, reason, search the internet, understand your brand, 
+                and create visuals that actually convert. Not perfect yet — she needs steering — 
+                but way above anything else out there.
+              </p>
+              <p>
+                AI Photography is the new web design service. Remember when selling web design 
+                or SEO services was hot? This is the next wave. And the competition is still incredibly low. 
+                The skill ceiling is high enough that it won't be commoditized anytime soon.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Values / What We Believe */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Our <span className="text-purple-600">Values</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              What We Believe
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              The principles that guide everything we do
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+              Built from real experience, not pitch decks
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
-                <Sparkles className="w-6 h-6 text-purple-600" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-purple-500/30 transition-colors">
+              <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
+                <Target className="w-5 h-5 text-purple-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Market-Driven Development</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We build what the gig economy actually demands, adapting our platform to real market needs and creator opportunities.
+              <h3 className="text-lg font-semibold text-white mb-2">Niche Beats Mass</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We tried building for everyone. Lost to Canva. Now we build the best tool for one job: 
+                AI product photography for freelancers and agencies.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-blue-300 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-blue-600" />
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-blue-500/30 transition-colors">
+              <div className="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center mb-4">
+                <Users className="w-5 h-5 text-blue-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">User Success</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Our success is measured by our users' success. Every feature is designed to help creators earn more and work smarter.
+              <h3 className="text-lg font-semibold text-white mb-2">Eat Our Own Cooking</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Our founder freelances on Upwork using Dezygn. Every feature is battle-tested 
+                on real client work before it ships.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-300 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-green-600" />
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-green-500/30 transition-colors">
+              <div className="w-10 h-10 bg-green-500/10 rounded-xl flex items-center justify-center mb-4">
+                <TrendingUp className="w-5 h-5 text-green-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Continuous Growth</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We believe in constant improvement - both for our platform and for individual creators.
+              <h3 className="text-lg font-semibold text-white mb-2">Revenue, Not Vanity</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We measure success by how much money our users make. Not downloads. 
+                Not sign-ups. Real income from real clients.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-yellow-300 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mb-4">
-                <Award className="w-6 h-6 text-yellow-600" />
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-yellow-500/30 transition-colors">
+              <div className="w-10 h-10 bg-yellow-500/10 rounded-xl flex items-center justify-center mb-4">
+                <Zap className="w-5 h-5 text-yellow-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Excellence</h3>
-              <p className="text-gray-600 leading-relaxed">
-                We set the bar high for ourselves and deliver professional-quality tools that creators can rely on.
+              <h3 className="text-lg font-semibold text-white mb-2">Speed Wins Deals</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                5-minute delivery times. Your clients used to wait weeks for studio shoots. 
+                Now you deliver the same day. That's your competitive edge.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-red-300 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-red-600" />
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-pink-500/30 transition-colors">
+              <div className="w-10 h-10 bg-pink-500/10 rounded-xl flex items-center justify-center mb-4">
+                <Sparkles className="w-5 h-5 text-pink-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Speed to Market</h3>
-              <p className="text-gray-600 leading-relaxed">
-                5-minute delivery times that let creators complete more projects and earn more money faster than ever.
+              <h3 className="text-lg font-semibold text-white mb-2">Craft Over Slop</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                Anyone can generate an AI image. Creating one that's accurate, realistic, 
+                and on-brand — that's a skill. We teach it and build tools for it.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-300 hover:shadow-lg transition-all">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                <Target className="w-6 h-6 text-green-600" />
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 hover:border-cyan-500/30 transition-colors">
+              <div className="w-10 h-10 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4">
+                <Camera className="w-5 h-5 text-cyan-400" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Profit Focus</h3>
-              <p className="text-gray-600 leading-relaxed">
-                Every feature is designed to help creators start earning day one with agency-quality output that commands premium rates.
+              <h3 className="text-lg font-semibold text-white mb-2">Bootstrap or Die</h3>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                No VC. No board. One founder, 200K+ users, 11 years of building. 
+                We grow because the product works, not because someone wrote a check.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-    </Layout>
+      {/* By The Numbers */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              By The Numbers
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                11
+              </div>
+              <div className="text-sm text-gray-500 mt-1">Years Building</div>
+            </div>
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                214K+
+              </div>
+              <div className="text-sm text-gray-500 mt-1">Users</div>
+            </div>
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
+                9
+              </div>
+              <div className="text-sm text-gray-500 mt-1">Products Shipped</div>
+            </div>
+            <div className="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                $53
+              </div>
+              <div className="text-sm text-gray-500 mt-1">Per AI Image</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 border-t border-white/5">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Build Your AI Photography Business?
+          </h2>
+          <p className="text-gray-400 text-lg mb-8 max-w-xl mx-auto">
+            Everything you need — the tools, the training, and the AI assistant — 
+            in one platform built by someone who does this for a living.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://app.dezygn.com"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all text-lg"
+            >
+              Start Creating <ArrowRight className="w-5 h-5" />
+            </a>
+            <Link
+              to="/features"
+              className="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 text-white px-8 py-4 rounded-xl font-semibold hover:bg-white/10 transition-all text-lg"
+            >
+              See Features
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <FooterV3 />
+    </div>
   );
 }
 
