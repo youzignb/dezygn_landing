@@ -27,6 +27,11 @@ import PromptographyPageV2 from './pages/PromptographyPageV2';
 import BusinessPage from './pages/BusinessPage';
 import AgencyPage from './pages/AgencyPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
+import CoursePage from './pages/CoursePage';
+import CommunityPage from './pages/CommunityPage';
+import AwaAgentPage from './pages/features/AwaAgentPage';
+import StudioPage from './pages/features/StudioPage';
+import BrandImportPage from './pages/features/BrandImportPage';
 
 // Programmatic SEO pages
 import UseCasePage from './pages/seo/UseCasePage';
@@ -39,6 +44,8 @@ import ResourcePage from './pages/seo/ResourcePage';
 import IndustryPage from './pages/seo/IndustryPage';
 import GlossaryPage from './pages/seo/GlossaryPage';
 import GlossaryIndexPage from './pages/seo/GlossaryIndexPage';
+import ResourceIndexPage from './pages/seo/ResourceIndexPage';
+import IndustryIndexPage from './pages/seo/IndustryIndexPage';
 
 function App() {
   return (
@@ -74,6 +81,11 @@ function App() {
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/audit" element={<AuditPage />} />
         <Route path="/v1" element={<V1AccessPage />} />
+        <Route path="/course" element={<CoursePage />} />
+        <Route path="/community" element={<CommunityPage />} />
+        <Route path="/features/awa" element={<AwaAgentPage />} />
+        <Route path="/features/studio" element={<StudioPage />} />
+        <Route path="/features/brand-import" element={<BrandImportPage />} />
 
         {/* Programmatic SEO routes */}
         <Route path="/use-cases" element={<UseCaseIndexPage />} />
@@ -82,7 +94,9 @@ function App() {
         <Route path="/compare" element={<ComparisonIndexPage />} />
         <Route path="/compare/:slug" element={<ComparisonPage />} />
         <Route path="/alternatives/:slug" element={<AlternativePage />} />
+        <Route path="/resources" element={<ResourceIndexPage />} />
         <Route path="/resources/:slug" element={<ResourcePage />} />
+        <Route path="/industries" element={<IndustryIndexPage />} />
         <Route path="/industries/:slug" element={<IndustryPage />} />
         <Route path="/glossary" element={<GlossaryIndexPage />} />
         <Route path="/glossary/:slug" element={<GlossaryPage />} />
