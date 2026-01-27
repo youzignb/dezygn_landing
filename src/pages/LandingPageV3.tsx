@@ -92,7 +92,7 @@ const LandingPageV3 = () => {
       {/* ============================================ */}
       {/* SECTION 1: HERO */}
       {/* ============================================ */}
-      <main className="relative flex flex-col items-center pt-32 md:pt-40 pb-8">
+      <main className="relative flex flex-col items-center pt-40 md:pt-48 pb-8">
 
         {/* Centered Content */}
         <div className="w-full max-w-3xl px-6 flex flex-col items-center text-center z-10">

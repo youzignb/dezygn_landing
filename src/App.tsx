@@ -7,6 +7,7 @@ import ShortcutsPage from './pages/ShortcutsPage';
 import PricingPage from './pages/PricingPage';
 import ReportPage from './pages/ReportPage';
 import ReportDownloadPage from './pages/ReportDownloadPage';
+import PlaybookPage from './pages/PlaybookPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 import UpgradePage from './pages/UpgradePage';
@@ -73,6 +74,7 @@ function App() {
         <Route path="/shortcuts" element={<ShortcutsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/report" element={<ReportPage />} />
+        <Route path="/playbook" element={<PlaybookPage />} />
         <Route path="/state-of-ai" element={<ReportDownloadPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />

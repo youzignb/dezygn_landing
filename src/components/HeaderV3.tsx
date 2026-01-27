@@ -15,6 +15,7 @@ import {
   Star,
   Zap,
   Gem,
+  Gift,
 } from 'lucide-react';
 import Logo from './Logo';
 
@@ -101,7 +102,8 @@ const RESOURCES_COLUMNS: DropdownColumn[] = [
     items: [
       { label: 'Course', to: '/course', icon: <GraduationCap className="w-4 h-4" /> },
       { label: 'Community', to: '/community', icon: <Users className="w-4 h-4" /> },
-{ label: 'Guides', to: '/resources', icon: <BookOpen className="w-4 h-4" /> },
+      { label: 'Guides', to: '/resources', icon: <BookOpen className="w-4 h-4" /> },
+      { label: 'Free Playbook', to: '/playbook', icon: <Gift className="w-4 h-4" /> },
     ],
   },
   {
@@ -188,9 +190,21 @@ export default function HeaderV3() {
 
   return (
     <>
+      {/* Announcement Bar */}
+      <div className="fixed top-0 w-full z-[60] bg-gradient-to-r from-purple-600 via-purple-500 to-blue-500 px-4 py-2 text-center">
+        <Link
+          to="/playbook"
+          className="inline-flex items-center gap-2 text-white text-sm font-medium hover:opacity-90 transition-opacity"
+        >
+          <span>📘</span>
+          <span><strong>FREE:</strong> The AI Photography Client Playbook — Learn how to land e-commerce clients using personalized AI visuals.</span>
+          <span className="underline underline-offset-2 font-semibold">Get It Free →</span>
+        </Link>
+      </div>
       <nav
         ref={navRef}
         className="fixed w-full z-50 px-6 py-4 md:px-10 flex justify-between items-center bg-[#050507]/80 backdrop-blur-xl border-b border-white/5"
+        style={{ top: '36px' }}
       >
         {/* Logo */}
         <Link
@@ -287,7 +301,7 @@ export default function HeaderV3() {
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-[#050507] z-40 pt-20 px-6 overflow-y-auto animate-in fade-in duration-200">
+        <div className="fixed inset-0 bg-[#050507] z-40 pt-28 px-6 overflow-y-auto animate-in fade-in duration-200">
           <div className="flex flex-col gap-1 max-w-md mx-auto">
             {navItems.map(({ key, label }) => (
               <div key={key}>
