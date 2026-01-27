@@ -11,9 +11,10 @@ const FOOTER_COLUMNS = [
     links: [
       { label: 'Features', to: '/features' },
       { label: 'Pricing', to: '/pricing' },
-      { label: 'Shot Types', to: '/shot-types' },
-      { label: 'Course', to: '/course' },
-      { label: 'Community', to: '/community' },
+      { label: 'Lifestyle Shots', to: '/shot-types/lifestyle' },
+      { label: 'Hero Shots', to: '/shot-types/hero-shots' },
+      { label: 'Studio Shots', to: '/shot-types/studio' },
+      { label: 'UGC Style', to: '/shot-types/ugc' },
     ],
   },
   {
@@ -22,19 +23,21 @@ const FOOTER_COLUMNS = [
       { label: 'Golf Brands', to: '/use-cases/golf-brands' },
       { label: 'Skincare', to: '/use-cases/skincare' },
       { label: 'Supplements', to: '/use-cases/supplements' },
+      { label: 'Jewelry', to: '/use-cases/jewelry' },
       { label: 'Agencies', to: '/industries/agencies' },
       { label: 'Freelancers', to: '/industries/freelancers' },
-      { label: 'View All', to: '/use-cases' },
+      { label: 'View All Use Cases', to: '/use-cases' },
     ],
   },
   {
     heading: 'Resources',
     links: [
-      { label: 'Guides', to: '/resources' },
-      { label: 'Blog', to: '/blog' },
+      { label: 'AI Photography Guide', to: '/resources/ai-product-photography-guide' },
+      { label: 'Start an Agency', to: '/resources/start-ai-photography-agency' },
+      { label: 'Photography ROI', to: '/resources/ecommerce-photography-roi' },
       { label: 'Glossary', to: '/glossary' },
+      { label: 'Compare Tools', to: '/compare' },
       { label: 'Help Center', to: 'https://intercom.help/dezygn/en/', external: true },
-      { label: 'Compare', to: '/compare' },
     ],
   },
   {
@@ -44,6 +47,7 @@ const FOOTER_COLUMNS = [
       { label: 'Contact', to: '/contact' },
       { label: 'Privacy', to: '/privacy' },
       { label: 'Terms', to: '/terms' },
+      { label: 'Accessibility', to: '/accessibility' },
     ],
   },
 ] as const;

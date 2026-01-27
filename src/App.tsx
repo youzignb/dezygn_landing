@@ -28,6 +28,18 @@ import BusinessPage from './pages/BusinessPage';
 import AgencyPage from './pages/AgencyPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
 
+// Programmatic SEO pages
+import UseCasePage from './pages/seo/UseCasePage';
+import UseCaseIndexPage from './pages/seo/UseCaseIndexPage';
+import ShotTypePage from './pages/seo/ShotTypePage';
+import ComparisonPage from './pages/seo/ComparisonPage';
+import ComparisonIndexPage from './pages/seo/ComparisonIndexPage';
+import AlternativePage from './pages/seo/AlternativePage';
+import ResourcePage from './pages/seo/ResourcePage';
+import IndustryPage from './pages/seo/IndustryPage';
+import GlossaryPage from './pages/seo/GlossaryPage';
+import GlossaryIndexPage from './pages/seo/GlossaryIndexPage';
+
 function App() {
   return (
     <HelmetProvider>
@@ -62,6 +74,18 @@ function App() {
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/audit" element={<AuditPage />} />
         <Route path="/v1" element={<V1AccessPage />} />
+
+        {/* Programmatic SEO routes */}
+        <Route path="/use-cases" element={<UseCaseIndexPage />} />
+        <Route path="/use-cases/:slug" element={<UseCasePage />} />
+        <Route path="/shot-types/:slug" element={<ShotTypePage />} />
+        <Route path="/compare" element={<ComparisonIndexPage />} />
+        <Route path="/compare/:slug" element={<ComparisonPage />} />
+        <Route path="/alternatives/:slug" element={<AlternativePage />} />
+        <Route path="/resources/:slug" element={<ResourcePage />} />
+        <Route path="/industries/:slug" element={<IndustryPage />} />
+        <Route path="/glossary" element={<GlossaryIndexPage />} />
+        <Route path="/glossary/:slug" element={<GlossaryPage />} />
       </Routes>
     </Router>
     </HelmetProvider>

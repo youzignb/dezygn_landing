@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import { ArrowRight, Plus, Palette, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
+import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import HeaderV3 from '../components/HeaderV3';
 import AwaVisualization from '../components/AwaVisualization';
 import FooterV3 from '../components/FooterV3';
 
 const LandingPageV3 = () => {
-  const [inputValue, setInputValue] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
@@ -94,102 +92,69 @@ const LandingPageV3 = () => {
       {/* ============================================ */}
       {/* SECTION 1: HERO */}
       {/* ============================================ */}
-      <main className="relative min-h-screen flex flex-col md:flex-row items-center justify-center pt-24 md:pt-0">
+      <main className="relative flex flex-col items-center pt-32 md:pt-40 pb-8">
 
-        {/* Left Column: Text & Input */}
-        <div className="w-full md:w-1/2 px-6 md:px-16 lg:px-24 flex flex-col justify-center z-10 mb-12 md:mb-0">
+        {/* Centered Content */}
+        <div className="w-full max-w-3xl px-6 flex flex-col items-center text-center z-10">
 
-          <div className="space-y-6 max-w-xl mx-auto md:mx-0">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
-              The AI Photography Platform
-            </div>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-8">
+            <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse"></span>
+            The AI Photography Platform
+          </div>
 
-            <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white">
-              Create professional e‑commerce photography with AI.{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
-                Build a profitable agency.
-              </span>
-            </h1>
+          <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white mb-6">
+            Create professional e‑commerce photography with AI.{' '}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
+              Build a profitable agency.
+            </span>
+          </h1>
 
-            <p className="text-xl md:text-2xl text-gray-400 font-light max-w-md">
-              Dezygn is the all‑in‑one platform for AI product photographers — creative suite, certification course, agency playbook, and community.
-            </p>
+          <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mb-10">
+            The all‑in‑one platform for AI product photographers — creative suite, certification course, agency playbook, and community.
+          </p>
 
-            {/* Chat Input Container */}
-            <div className={`
-              mt-8 relative group rounded-2xl bg-[#1a1a1a] border transition-all duration-300
-              ${isFocused ? 'border-purple-500/50 shadow-[0_0_30px_-10px_rgba(168,85,247,0.15)]' : 'border-white/10 hover:border-white/20'}
-            `}>
-              <textarea
-                className="w-full bg-transparent text-lg p-4 pl-4 pr-14 min-h-[140px] resize-none outline-none text-white placeholder:text-gray-600 font-light"
-                placeholder="E.g. Create UGC lifestyle photos for my coffee brand..."
-                value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
+          <Link
+            to="/pricing"
+            className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group mb-4"
+          >
+            Start Creating — Risk Free
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+          <p className="text-gray-600 text-sm mb-12">30-day money-back guarantee. Cancel anytime.</p>
+
+          {/* Testimonial */}
+          <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300 mb-16">
+            <div className="relative flex-shrink-0">
+              <img
+                src="https://www.upwork.com/profile-portraits/c1C0jvfaaxrjRXgvxDIOAUm3bMhbJjqqIeoMek_2TTijZyaSfWbFRsXirPIBSDnBAF"
+                alt="Milan"
+                className="w-12 h-12 rounded-full object-cover border border-white/20"
               />
-
-              <div className="absolute bottom-4 left-4 flex gap-3 text-gray-600">
-                <button
-                  className="hover:text-purple-400 transition-colors"
-                  title="Upload Reference"
-                  onClick={() => setShowSignupModal(true)}
-                >
-                   <Plus className="w-5 h-5" />
-                </button>
-                <button
-                  className="hover:text-purple-400 transition-colors"
-                  title="Style Guide"
-                  onClick={() => setShowSignupModal(true)}
-                >
-                   <Palette className="w-5 h-5" />
-                </button>
+              <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-[#0a0a0a] flex items-center justify-center w-4 h-4">
+                <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </div>
-
-              <button
-                className={`
-                  absolute bottom-3 right-3 p-3 rounded-xl flex items-center justify-center transition-all duration-300
-                  ${inputValue.length > 0 ? 'bg-purple-600 text-white translate-y-0 opacity-100' : 'bg-white/10 text-gray-500 translate-y-1 opacity-50 cursor-not-allowed'}
-                `}
-                onClick={() => inputValue.length > 0 && setShowSignupModal(true)}
-              >
-                <ArrowRight className="w-5 h-5" />
-              </button>
             </div>
-
-            {/* Testimonial */}
-            <div className="mt-8 flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm max-w-lg hover:bg-white/10 transition-colors duration-300">
-              <div className="relative flex-shrink-0">
-                <img
-                  src="https://www.upwork.com/profile-portraits/c1C0jvfaaxrjRXgvxDIOAUm3bMhbJjqqIeoMek_2TTijZyaSfWbFRsXirPIBSDnBAF"
-                  alt="Milan"
-                  className="w-12 h-12 rounded-full object-cover border border-white/20"
-                />
-                <div className="absolute -bottom-1 -right-1 bg-green-500 rounded-full p-0.5 border-2 border-[#0a0a0a] flex items-center justify-center w-4 h-4">
-                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" className="text-white"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <div className="text-left">
+              <div className="flex items-center gap-2 mb-1">
+                <span className="text-white font-medium text-sm">Milan</span>
+                <div className="flex gap-0.5">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 text-yellow-500 fill-yellow-500" />
+                  ))}
                 </div>
               </div>
-              <div>
-                <div className="flex items-center gap-2 mb-1">
-                  <span className="text-white font-medium text-sm">Milan</span>
-                  <div className="flex gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 text-yellow-500 fill-yellow-500" />
-                    ))}
-                  </div>
-                </div>
-                <p className="text-sm text-gray-400 leading-snug">
-                  "Just landed a <span className="text-green-400 font-medium">$2,000+</span> product photography contract using Dezygn."
-                </p>
-              </div>
+              <p className="text-sm text-gray-400 leading-snug">
+                "Just landed a <span className="text-green-400 font-medium">$2,000+</span> product photography contract using Dezygn."
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Right Column: Visual Composition */}
-        <div className="w-full md:w-1/2 h-[50vh] md:h-screen relative overflow-hidden bg-[#0a0a0a] md:rounded-l-[3rem] border-l border-t border-white/5">
-          <AwaVisualization />
+        {/* Awa Visualization — below the fold */}
+        <div className="w-full max-w-4xl mx-auto px-6">
+          <div className="w-full aspect-[16/9] relative overflow-hidden bg-[#0a0a0a] rounded-2xl border border-white/5">
+            <AwaVisualization />
+          </div>
         </div>
       </main>
 

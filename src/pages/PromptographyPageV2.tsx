@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Check, Minus, Plus, Shield, Users, Zap, X, Layers, Sparkles, Search, Target, Star, AlertTriangle, Wrench, Compass, Eye, FileText, Dna, FlaskConical, Palette, Camera, Clock, DollarSign } from 'lucide-react';
+import { ArrowRight, Check, Minus, Plus, Shield, Users, X, Sparkles, Target, Star, AlertTriangle, Camera, Clock, DollarSign } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Layout from '../components/Layout';
 
