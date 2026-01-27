@@ -29,9 +29,9 @@ function AboutPage() {
             <span className="text-sm text-purple-300 font-medium">The story behind Dezygn</span>
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            From $700K Launch to Rock Bottom.{' '}
+            Built by a Freelancer.{' '}
             <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Then Back Again.
+              For Freelancers.
             </span>
           </h1>
           <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
@@ -67,27 +67,20 @@ function AboutPage() {
             {/* Chapter 2 */}
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
-                THE $700K WEEK
+                THE FIRST RUN
               </h2>
               <p className="mb-4">
                 So I conceptualized Youzign — a graphic design tool for everyone.
-                Hired a developer to build it with me.
+                Hired a developer to build it with me. It took off. Over 200,000 users signed up.
               </p>
-              <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 my-6">
-                <p className="text-xl font-semibold text-white">
-                  When Youzign launched in 2015, it grossed $700K in its first week.
-                </p>
-                <p className="text-gray-400 mt-2">A home run from the start.</p>
-              </div>
               <p className="mb-4">
                 From 2015 to 2020, I branched out. Created 8 more software products.
                 Hired 15 people. Up to 4 developers at some points.
-                My overheads ballooned to $40K a month.
               </p>
               <p>
                 But here's the thing — I sold lifetime licenses at low prices.
                 Slowly but surely, the business eroded. I couldn't afford the team.
-                By 2020 I was down to 6-7 people. And I was competing with Canva. Without the VC money.
+                And I was competing with Canva. Without the VC money.
               </p>
             </div>
 
