@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import HeaderV3 from '../components/HeaderV3';
 import AwaVisualization from '../components/AwaVisualization';
 import FooterV3 from '../components/FooterV3';
