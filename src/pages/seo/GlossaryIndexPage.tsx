@@ -138,7 +138,7 @@ const GlossaryIndexPage = () => {
               real-world results — start creating today.
             </p>
             <Link
-              to="/signup"
+              to="https://chat.dezygn.com/signup"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
             >
               Get Started

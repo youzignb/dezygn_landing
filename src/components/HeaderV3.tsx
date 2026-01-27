@@ -264,14 +264,14 @@ export default function HeaderV3() {
           <div className="w-px h-5 bg-white/10 mx-2" />
 
           <a
-            href="https://chat.dezygn.com/login"
+            href="https://chat.dezygn.com/auth"
             className="px-4 py-2 rounded-full border border-white/15 hover:border-white/30 hover:text-white transition-all duration-200 text-gray-400"
           >
             Sign In
           </a>
 
           <a
-            href="https://chat.dezygn.com/login"
+            href="https://chat.dezygn.com/signup"
             className="ml-2 flex items-center gap-1.5 px-5 py-2 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors duration-200"
           >
             Get Started
@@ -342,13 +342,13 @@ export default function HeaderV3() {
 
             <div className="border-t border-white/10 mt-4 pt-4 flex flex-col gap-3">
               <a
-                href="https://chat.dezygn.com/login"
+                href="https://chat.dezygn.com/auth"
                 className="block text-center px-5 py-3 rounded-full border border-white/15 text-gray-300 hover:text-white hover:border-white/30 transition-all"
               >
                 Sign In
               </a>
               <a
-                href="https://chat.dezygn.com/login"
+                href="https://chat.dezygn.com/signup"
                 onClick={closeMobile}
                 className="flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
               >

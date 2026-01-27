@@ -201,7 +201,7 @@ const IndustryPage = () => {
               stunning product photography in minutes, not days.
             </p>
             <Link
-              to="/signup"
+              to="https://chat.dezygn.com/signup"
               className="inline-flex items-center gap-2 bg-white text-purple-700 font-semibold px-8 py-4 rounded-xl hover:bg-white/90 transition-colors"
             >
               Get Started

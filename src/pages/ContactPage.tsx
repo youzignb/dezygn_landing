@@ -46,7 +46,7 @@ function ContactPage() {
 
             {/* Live Chat */}
             <a
-              href="https://chat.dezygn.com"
+              href="https://chat.dezygn.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-purple-500/30 transition-all text-center"
@@ -151,7 +151,7 @@ function ContactPage() {
               Jump in and start creating. If you need anything, we're just a chat away.
             </p>
             <a
-              href="https://chat.dezygn.com"
+              href="https://chat.dezygn.com/signup"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
             >
               Get Started

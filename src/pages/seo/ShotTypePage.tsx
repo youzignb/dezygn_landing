@@ -183,7 +183,7 @@ const ShotTypePage = () => {
                   lighting, and brand consistency.
                 </p>
                 <Link
-                  to="/signup"
+                  to="https://chat.dezygn.com/signup"
                   className="inline-flex items-center gap-2 bg-white text-purple-600 font-semibold px-8 py-4 rounded-xl hover:bg-gray-100 transition-colors"
                 >
                   Get Started Free

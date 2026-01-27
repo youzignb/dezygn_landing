@@ -175,7 +175,7 @@ const GlossaryPage = () => {
                 Dezygn&apos;s AI Creative Suite.
               </p>
               <a
-                href="https://chat.dezygn.com/login"
+                href="https://chat.dezygn.com/signup"
                 className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-3 rounded-xl transition-colors"
               >
                 Get Started

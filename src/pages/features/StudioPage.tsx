@@ -106,7 +106,7 @@ const StudioPage = () => {
             by rating or chat.
           </p>
           <a
-            href="https://chat.dezygn.com/login"
+            href="https://chat.dezygn.com/signup"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
           >
             Open Studio
@@ -267,7 +267,7 @@ const StudioPage = () => {
               resolution — then deliver only your best work.
             </p>
             <a
-              href="https://chat.dezygn.com/login"
+              href="https://chat.dezygn.com/signup"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
             >
               Get Started

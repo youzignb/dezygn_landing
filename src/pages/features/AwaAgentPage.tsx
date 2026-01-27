@@ -134,7 +134,7 @@ const AwaAgentPage = () => {
             verifies, and executes on brand — every single time.
           </p>
           <a
-            href="https://chat.dezygn.com/login"
+            href="https://chat.dezygn.com/signup"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
           >
             Try Awa Now
@@ -373,7 +373,7 @@ const AwaAgentPage = () => {
               plans, executes, and verifies — so every image is on brand.
             </p>
             <a
-              href="https://chat.dezygn.com/login"
+              href="https://chat.dezygn.com/signup"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
             >
               Get Started

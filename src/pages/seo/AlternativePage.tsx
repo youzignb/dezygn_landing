@@ -218,7 +218,7 @@ const AlternativePage = () => {
               Join thousands of creators and agencies who switched to Dezygn for AI-powered product photography.
             </p>
             <Link
-              to="/signup"
+              to="https://chat.dezygn.com/signup"
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-4 rounded-xl transition-colors"
             >
               Get Started with Dezygn <ArrowRight className="w-5 h-5" />

@@ -201,7 +201,7 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
                 {useCase.cta}
               </p>
               <a
-                href="https://chat.dezygn.com/login"
+                href="https://chat.dezygn.com/signup"
                 className="inline-block bg-white text-purple-700 px-8 py-4 rounded-full font-medium hover:bg-purple-50 transition-colors"
               >
                 Get Started Now

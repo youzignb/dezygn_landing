@@ -421,7 +421,7 @@ function ShortcutsPage() {
             <Logo variant="default" size="md" showText={true} />
           </Link>
           <a 
-            href="https://chat.dezygn.com" 
+            href="https://chat.dezygn.com/signup" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-full font-bold hover:shadow-lg transition-all duration-300"
@@ -3333,7 +3333,7 @@ function ShortcutsPage() {
                     📖 Read Update Article
                   </a>
                   <a
-                    href="https://chat.dezygn.com"
+                    href="https://chat.dezygn.com/signup"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
