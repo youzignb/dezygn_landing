@@ -88,7 +88,7 @@ const IndustryPage = () => {
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span>Industries</span>
+            <Link to="/industries" className="hover:text-white/70 transition-colors">Industries</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-white/70">{industry.title}</span>
           </nav>

@@ -1,216 +1,162 @@
-import {
-  MessageSquare,
-  Sparkles,
-  Wand2,
-  Layers,
-  CheckCircle2,
-  Zap,
-  Globe,
-  Palette,
-  Video,
-  Users,
-  Target
-} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Sparkles, Brain, Image, Globe, Camera, Share2, Video } from 'lucide-react';
 import HeaderV3 from '../components/HeaderV3';
 import FooterV3 from '../components/FooterV3';
 
+const features = [
+  {
+    title: 'Awa AI Creative Director',
+    description: '12+ specialized skills including internet search, prompt enhancement, and vision-based refinement. Powered by Claude reasoning — she plans, verifies, and executes on brand, every time.',
+    icon: Brain,
+    to: '/features/awa',
+    highlights: ['Claude reasoning engine', '12+ creative skills', 'Vision-based refinement', 'Brand-aware generation'],
+  },
+  {
+    title: 'Studio & Gallery',
+    description: 'Full-size image review, rating system, side-by-side comparison mode, and a beautiful gallery to manage all your creations. Filter, sort, and share — built for production workflows.',
+    icon: Image,
+    to: '/features/studio',
+    highlights: ['Comparison mode', 'Rating system', 'Client sharing', 'Watermark protection'],
+  },
+  {
+    title: 'Brand Import',
+    description: 'One-click URL import pulls your full brand identity — colors, fonts, logo, visual style. Every image Dezygn creates stays on-brand without manual setup.',
+    icon: Globe,
+    to: '/features/brand-import',
+    highlights: ['1-click URL import', 'Shopify integration', 'Brand DNA extraction', 'Unlimited brands'],
+  },
+];
+
+const additionalFeatures = [
+  { icon: Camera, title: 'Unlimited Campaigns', description: 'Organize work by product, season, or client. No limits.' },
+  { icon: Share2, title: 'Client Collaboration', description: 'Share pages with watermarks. Clients rate and leave notes directly.' },
+  { icon: Video, title: 'Video Animation', description: 'Turn your AI images into animated product videos. Beta feature.' },
+  { icon: Sparkles, title: '2,500 Credits/Month', description: 'Generate ~500 images monthly. Credits roll over — you never lose them.' },
+];
+
 const FeaturesPage = () => {
-
   return (
-    <div className="h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-hidden flex flex-col">
+    <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
       <Helmet>
-        <title>Features - Meet AWA | Dezygn</title>
+        <title>Features — AI Creative Suite | Dezygn</title>
+        <meta
+          name="description"
+          content="Dezygn's AI Creative Suite: Awa AI Creative Director, Studio & Gallery, Brand Import, and more. Everything you need for professional AI product photography."
+        />
+        <link rel="canonical" href="https://dezygn.com/features" />
       </Helmet>
-
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap');
-        
-        .bento-card {
-          background: rgba(26, 26, 26, 0.4);
-          backdrop-filter: blur(10px);
-          border: 1px solid rgba(255, 255, 255, 0.05);
-          transition: all 0.2s ease-out;
-        }
-        
-        .bento-card:hover {
-          background: rgba(26, 26, 26, 0.7);
-          border-color: rgba(168, 85, 247, 0.3);
-          transform: translateY(-1px);
-        }
-
-        .text-gradient {
-          background: linear-gradient(to right, #a855f7, #60a5fa);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        
-        /* Compact Scrollbar if needed */
-        ::-webkit-scrollbar { width: 0px; }
-      `}</style>
 
       <HeaderV3 />
 
-      {/* Main Content - Flexible Height, Centered */}
-      <main className="flex-1 flex flex-col px-4 sm:px-6 lg:px-8 pt-24 pb-4 max-w-7xl mx-auto w-full">
-        
-        {/* Hero - Compact */}
-        <div className="text-center mb-12 shrink-0">
-          <div className="inline-flex items-center gap-2 px-2 py-0.5 rounded-full bg-white/5 border border-white/10 text-[10px] uppercase text-purple-400 mb-3">
-            <span className="w-1 h-1 rounded-full bg-purple-500 animate-pulse"></span>
-            Meet Awa
-          </div>
-          <h1 className="font-black text-4xl md:text-5xl text-white mb-2 tracking-tight">
-            Your AI Creative <span className="text-gradient">Partner.</span>
-          </h1>
-          <p className="text-sm text-gray-400 max-w-lg mx-auto">
-            Stop wrestling with prompts. Just tell Awa what you need. She plans, creates, and verifies on brand.
-          </p>
+      <main className="pt-24">
+        {/* Breadcrumbs */}
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <nav aria-label="Breadcrumb" className="text-sm text-gray-500">
+            <ol className="flex items-center gap-2">
+              <li>
+                <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
+              </li>
+              <li aria-hidden="true">/</li>
+              <li className="text-gray-300">Features</li>
+            </ol>
+          </nav>
         </div>
 
-        {/* Grid - High Density */}
-        <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-3 gap-3 h-[60vh] min-h-[400px]">
-          
-          {/* 1. Conversational (Large - 2x2) */}
-          <div className="bento-card rounded-2xl p-5 col-span-2 row-span-2 flex flex-col justify-between group relative overflow-hidden">
-            <div className="absolute top-4 right-4 opacity-10 group-hover:opacity-20 transition-opacity">
-              <MessageSquare className="w-32 h-32" />
-            </div>
-            <div>
-              <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center mb-3 text-purple-400">
-                <MessageSquare className="w-4 h-4" />
+        {/* Hero */}
+        <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+            The AI Creative{' '}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Suite
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+            Everything you need to create accurate, realistic, and on-brand AI product photography — from brand import to client delivery.
+          </p>
+        </section>
+
+        {/* Core Feature Cards */}
+        <section className="max-w-7xl mx-auto px-6 py-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {features.map((feature) => (
+              <Link
+                key={feature.to}
+                to={feature.to}
+                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all flex flex-col"
+              >
+                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
+                  <feature.icon className="w-6 h-6" />
+                </div>
+
+                <h2 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors mb-3">
+                  {feature.title}
+                </h2>
+
+                <p className="text-gray-400 leading-relaxed mb-6 flex-grow">
+                  {feature.description}
+                </p>
+
+                <ul className="space-y-2 mb-6">
+                  {feature.highlights.map((h) => (
+                    <li key={h} className="flex items-center gap-2 text-sm text-gray-300">
+                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+                      {h}
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors mt-auto">
+                  <span>Learn more</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Additional Features */}
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <h2 className="text-3xl font-bold text-center mb-12">And more built in</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalFeatures.map((f) => (
+              <div
+                key={f.title}
+                className="bg-white/[0.02] border border-white/5 rounded-xl p-6 text-center"
+              >
+                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 mx-auto mb-4">
+                  <f.icon className="w-5 h-5" />
+                </div>
+                <h3 className="font-semibold text-white mb-2">{f.title}</h3>
+                <p className="text-sm text-gray-500">{f.description}</p>
               </div>
-              <h3 className="text-lg font-bold text-white mb-1">Conversational Design</h3>
-              <p className="text-xs text-gray-400 leading-relaxed max-w-xs">
-                Transforms ideas into pro results. Awa handles the technical complexity so you can focus on direction.
-              </p>
-            </div>
-            <div className="mt-2 p-3 bg-white/5 rounded-lg border border-white/5 text-[10px] font-mono text-gray-300">
-              <span className="text-purple-400">User:</span> "Make it pop more."<br/>
-              <span className="text-green-400">Awa:</span> "Boosting contrast & saturation..."
-            </div>
+            ))}
           </div>
+        </section>
 
-          {/* 2. Generation */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <Sparkles className="w-5 h-5 text-blue-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Generation</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">On-brand product & lifestyle shots.</p>
-            </div>
-          </div>
-
-          {/* 3. Editing */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <Wand2 className="w-5 h-5 text-pink-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Editing</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">13+ types: Inpainting, style transfer & more.</p>
-            </div>
-          </div>
-
-          {/* 4. Vision Verify */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <CheckCircle2 className="w-5 h-5 text-green-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Vision Verify</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Auto-checks quality against your request.</p>
-            </div>
-          </div>
-
-          {/* 5. Memory */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <Zap className="w-5 h-5 text-yellow-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Brand Memory</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Remembers your style & audience forever.</p>
-            </div>
-          </div>
-
-          {/* 6. Composition */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <Layers className="w-5 h-5 text-orange-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Composition</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Blend models + products naturally.</p>
-            </div>
-          </div>
-
-          {/* 7. Web Intel */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <Globe className="w-5 h-5 text-cyan-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Web Intel</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Research concepts & analyze URLs.</p>
-            </div>
-          </div>
-
-          {/* 8. Ingredients */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between">
-            <div className="flex justify-between items-start">
-              <Palette className="w-5 h-5 text-indigo-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Ingredients</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Use logos & refs without manual tagging.</p>
-            </div>
-          </div>
-
-          {/* 9. Video & Studio */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between bg-white/5">
-            <div className="flex justify-between items-start">
-              <Video className="w-5 h-5 text-red-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Video & Studio</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Animation, lipsync & storyboards.</p>
-            </div>
-          </div>
-
-          {/* 10. Team & Share */}
-          <div className="bento-card rounded-2xl p-4 flex flex-col justify-between bg-white/5">
-            <div className="flex justify-between items-start">
-              <Users className="w-5 h-5 text-blue-400" />
-            </div>
-            <div>
-              <h3 className="text-sm font-bold text-white">Team & Share</h3>
-              <p className="text-[10px] text-gray-400 leading-tight mt-1">Workspaces & instant client links.</p>
-            </div>
-          </div>
-
-          {/* 11. Challenge (Wide) */}
-          <div className="bento-card rounded-2xl p-4 col-span-2 flex items-center justify-between bg-gradient-to-r from-purple-900/20 to-blue-900/20 border-purple-500/20">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center">
-                <Target className="w-4 h-4 text-white" />
-              </div>
-              <div>
-                <h3 className="text-sm font-bold text-white">Dezygn Challenge</h3>
-                <p className="text-[10px] text-gray-400">Get your first client in 14 days.</p>
-              </div>
-            </div>
-            <a href="/pricing" className="text-xs bg-white text-black px-4 py-2 rounded-full font-bold hover:bg-gray-200 transition-colors">
-              Start
+        {/* CTA */}
+        <section className="max-w-7xl mx-auto px-6 py-20">
+          <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-10 md:p-16 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              See it in action
+            </h2>
+            <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
+              Start creating studio-quality AI product photography today. $99/month, 30-day money-back guarantee.
+            </p>
+            <a
+              href="https://chat.dezygn.com/login"
+              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4" />
             </a>
           </div>
-
-        </div>
+        </section>
       </main>
-      <FooterV3 className="fixed bottom-0 left-0" />
+
+      <FooterV3 />
     </div>
   );
-}
+};
 
 export default FeaturesPage;

@@ -94,7 +94,7 @@ const ComparisonPage = () => {
               Home
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span>Compare</span>
+            <Link to="/compare" className="hover:text-gray-300 transition-colors">Compare</Link>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-gray-300">
               Dezygn vs {comparison.competitorName}
