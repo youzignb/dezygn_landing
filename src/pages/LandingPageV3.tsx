@@ -44,6 +44,140 @@ const LandingPageV3 = () => {
     },
   ];
 
+  const beforeAfterTestimonials = [
+    {
+      name: 'Bruce',
+      role: 'Cin Chilli / Pickle Sips',
+      quote: 'Replaced a $4,800 shoot with 60-second AI photos.',
+      avatar: 'https://ui-avatars.com/api/?name=Bruce&background=7c3aed&color=fff&size=96',
+      beforeImage: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_8a1bccf4-4749-4154-8dcb-687f20a64851/brand_1ea45d7b-8a62-45b1-b1e3-3eaa5e62bc5c/ebc2fd37-7ffb-4ca3-90d5-cd2a361f8860.jpg',
+      afterImage: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/8a1bccf4-4749-4154-8dcb-687f20a64851/batch_1_processed_1768757815013.png',
+      beforeAlt: 'Cin Chilli drink bottles on shipping boxes',
+      afterAlt: 'Cin Chilli drink bottle lifestyle photo with bokeh lighting',
+    },
+    {
+      name: 'Bart Leger',
+      quote: "I've never had any other application give me such a realistic image on the first try.",
+      avatar: 'https://ndrsl-avatars.s3.us-east-2.amazonaws.com/1758830251268-9652_small.jpg',
+      beforeImage: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_e3c0d46b-706a-4962-9bcd-273c5affc78f/brand_7ba76616-11be-4e40-a4f0-185f10440ca0/f90d82ad-5eff-4041-ac27-f7404349ec76.png',
+      afterImage: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/e3c0d46b-706a-4962-9bcd-273c5affc78f/asset_processed_1758831532776.png',
+      beforeAlt: 'Plain book cover on a neutral background',
+      afterAlt: 'Book cover in an office lifestyle scene with illustrated icons',
+    },
+  ];
+
+  const beforeAfterGallery = [
+    {
+      title: 'Hydrating Cream + Soap',
+      label: 'Hydrating Cream → Lifestyle Shot',
+      ingredients: 'Hydrating cream + Soap',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_011e9b8f-86b3-485d-9ca4-7bca55821db8/17069d3e-27d5-4512-b0c1-c5393ea3b3a3.jpeg',
+          alt: 'Hydrating cream and soap product shot on a neutral surface',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/Lifestyle_photography_of_a_beautiful_Black_woman_edit_1_1764768440322.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Lifestyle photo of a woman using hydrating cream in soft light',
+      },
+    },
+    {
+      title: 'Model Grid',
+      label: 'Ingredient Grid → Lifestyle Shot',
+      ingredients: '2 ingredient grid',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_011e9b8f-86b3-485d-9ca4-7bca55821db8/0f382a6a-1088-49a4-9e09-d6cccecc9d42.png',
+          alt: 'Grid of two ingredient images on a plain background',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/Lifestyle_photography_of_a_beautiful_Black_woman_edit_1_1764768440322.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Lifestyle photo featuring a model with soft studio lighting',
+      },
+    },
+    {
+      title: 'Food Brand Montage',
+      label: 'Ingredient Collage → Styled Food Scene',
+      ingredients: 'Hat, coffee cup, woman, dress, logo',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_42eb0f70-b867-410d-a095-e53177456b88/03a597be-dc61-40ce-b40c-c53059f57003.png',
+          alt: 'Collage of hat, coffee cup, woman, dress, and logo elements',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/asset_processed_1757671696828.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Styled lifestyle scene featuring branded food and wardrobe elements',
+      },
+    },
+    {
+      title: 'Toy Company',
+      label: 'Toy → Hero Product Shot',
+      ingredients: 'Toy',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_26b033da-f51a-4b69-b76e-88ce8171742b/18d42800-e6b8-4491-9ad5-2df3f339e1be.jpeg',
+          alt: 'Toy product snapshot on a flat surface',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/batch_1_processed_1760178844189.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Polished hero shot of a toy with studio lighting',
+      },
+    },
+    {
+      title: 'Jewelry Pendant',
+      label: 'Pendant → Luxe Product Photo',
+      ingredients: 'Pendant',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_eea43bc1-9057-4c2c-b283-9aa06e04abec/7c653366-44ba-4f5b-a68d-4d3dfa96883e.jpeg',
+          alt: 'Pendant photographed on a simple background',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/batch_1_processed_1760443619473.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Luxury product photo of a pendant with dramatic lighting',
+      },
+    },
+    {
+      title: 'Pet Toy (Dog)',
+      label: 'Dog + Toy → Premium Pet Shot',
+      ingredients: 'Dog + Pet toy',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_a3cdd91e-3444-442b-a78c-346178b1fc26/3d10ca9e-eaa6-465e-83d7-4619975ef15a.png',
+          alt: 'Dog reference image used as ingredient',
+        },
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_a3cdd91e-3444-442b-a78c-346178b1fc26/ae81cd32-73c1-4328-8668-337cd123b63c.png',
+          alt: 'Pet toy reference image used as ingredient',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/Professional_luxury_product_photography_editoria_edit_1_1766231190828.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Premium pet product photo featuring a dog with a toy',
+      },
+    },
+    {
+      title: 'Face Cream UGC',
+      label: 'Cream → Authentic UGC Shot',
+      ingredients: 'Cream',
+      beforeImages: [
+        {
+          src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_a3cdd91e-3444-442b-a78c-346178b1fc26/ea755ace-52ce-4cc5-b3de-fc067e7c2929.png',
+          alt: 'Face cream product image on a clean background',
+        },
+      ],
+      afterImage: {
+        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/Authentic_UGC_photography_candid_iPhone_aestheti_edit_2_1766229988496.png?width=1920&height=1920&resize=contain&quality=90',
+        alt: 'Authentic UGC-style photo showing face cream in use',
+      },
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
       {/* Import Fonts */}
@@ -1158,6 +1292,79 @@ const LandingPageV3 = () => {
       </section>
 
       {/* ============================================ */}
+      {/* SECTION 8.5: BEFORE/AFTER GALLERY */}
+      {/* ============================================ */}
+      <section className="relative bg-[#050507] py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-300 mb-6">
+              Visual Proof
+            </div>
+            <h2 className="text-4xl md:text-5xl font-black tracking-tight">
+              See the Transformation
+            </h2>
+            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-4">
+              Real client inputs turned into premium product photography — hover to reveal the full result.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {beforeAfterGallery.map((item) => (
+              <figure
+                key={item.title}
+                className="group bg-[#0a0a0a] border border-white/5 rounded-2xl p-5 shadow-[0_30px_80px_-60px_rgba(168,85,247,0.6)] hover:border-purple-500/30 transition-all duration-300"
+              >
+                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 aspect-[4/3]">
+                  <span className="absolute top-3 left-3 z-10 text-[10px] uppercase tracking-widest bg-white/10 border border-white/10 text-gray-200 px-2 py-1 rounded-full">
+                    Before
+                  </span>
+                  <span className="absolute top-3 right-3 z-10 text-[10px] uppercase tracking-widest bg-purple-500/20 border border-purple-500/30 text-purple-100 px-2 py-1 rounded-full">
+                    After
+                  </span>
+
+                  {item.beforeImages.length > 1 ? (
+                    <div className="grid grid-cols-2 gap-1 w-full h-full">
+                      {item.beforeImages.map((image) => (
+                        <img
+                          key={image.src}
+                          src={image.src}
+                          alt={image.alt}
+                          loading="lazy"
+                          className="w-full h-full object-cover"
+                        />
+                      ))}
+                    </div>
+                  ) : (
+                    <img
+                      src={item.beforeImages[0].src}
+                      alt={item.beforeImages[0].alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  )}
+
+                  <div className="absolute inset-0 overflow-hidden w-1/2 group-hover:w-full transition-all duration-500 ease-out">
+                    <img
+                      src={item.afterImage.src}
+                      alt={item.afterImage.alt}
+                      loading="lazy"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute top-0 bottom-0 left-1/2 group-hover:left-0 w-px bg-white/40 transition-all duration-500 ease-out" />
+                </div>
+
+                <figcaption className="mt-4">
+                  <p className="text-sm text-white font-semibold">{item.label}</p>
+                  <p className="text-xs text-gray-500 mt-1">Ingredients: {item.ingredients}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
       {/* SECTION 9: TESTIMONIALS */}
       {/* ============================================ */}
       <section className="relative bg-[#050507] py-24 md:py-32">
@@ -1166,6 +1373,60 @@ const LandingPageV3 = () => {
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">
               What Our Users Say
             </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 mb-16">
+            {beforeAfterTestimonials.map((item) => (
+              <div
+                key={item.name}
+                className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300"
+              >
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.2em] text-gray-500 mb-4">
+                  <span>What they uploaded</span>
+                  <span className="text-purple-300">What Dezygn created</span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="relative overflow-hidden rounded-xl border border-white/10 bg-black/40">
+                    <span className="absolute top-3 left-3 text-[10px] uppercase tracking-widest bg-white/10 border border-white/10 text-gray-200 px-2 py-1 rounded-full">
+                      Before
+                    </span>
+                    <img
+                      src={item.beforeImage}
+                      alt={item.beforeAlt}
+                      loading="lazy"
+                      className="w-full h-full object-cover aspect-[4/3]"
+                    />
+                  </div>
+                  <div className="relative overflow-hidden rounded-xl border border-purple-500/20 bg-black/40">
+                    <span className="absolute top-3 left-3 text-[10px] uppercase tracking-widest bg-purple-500/20 border border-purple-500/30 text-purple-100 px-2 py-1 rounded-full">
+                      After
+                    </span>
+                    <img
+                      src={item.afterImage}
+                      alt={item.afterAlt}
+                      loading="lazy"
+                      className="w-full h-full object-cover aspect-[4/3]"
+                    />
+                  </div>
+                </div>
+                <div className="flex items-center gap-3 mb-3">
+                  <img
+                    src={item.avatar}
+                    alt={`${item.name} avatar`}
+                    className="w-11 h-11 rounded-full object-cover border border-white/10"
+                  />
+                  <div>
+                    <p className="text-white font-medium text-sm">{item.name}</p>
+                    {item.role && (
+                      <p className="text-gray-500 text-xs">{item.role}</p>
+                    )}
+                  </div>
+                </div>
+                <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  "{item.quote}"
+                </p>
+              </div>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1395,11 +1656,13 @@ const LandingPageV3 = () => {
                 A Word From The Founder
               </div>
               <blockquote className="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
-                "Most AI tools are built by engineers who think 'good enough' is fine for brands. It’s not. As a creative agency owner, I know that 'AI hallucinations' and plastic skin don't just look cheap—they kill conversion.
-
-                I built Dezygn for the professionals who refuse to settle. Every feature—from the AWA Design Assistant and the Studio to our Comparison Mode—was forged in the heat of real client deadlines for brands like Trendhim.
-
-                I’ve packaged the software, the SOPs, and the community to give you a defensible edge. We don't just generate images; we engineer assets that sell."
+                "Most AI tools are built by engineers who think 'good enough' is fine for brands. It’s not. As a creative agency owner, I know that 'AI hallucinations' and plastic skin don't just look cheap—they kill conversion."
+                <br />
+                <br />
+                "I built Dezygn for the professionals who refuse to settle. Every feature—from the AWA Design Assistant and the Studio to our Comparison Mode—was forged in the heat of real client deadlines for brands."
+                <br />
+                <br />
+                "I’ve packaged the software, the SOPs, and the community to give you a defensible edge. We don't just generate images; we engineer assets that sell."
               </blockquote>
               <div>
                 <p className="text-white font-semibold">Bertrand</p>
