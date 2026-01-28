@@ -302,11 +302,11 @@ const LandingPageV3 = () => {
           </div>
 
           <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white mb-6">
-            Turn Your Design Eye Into a $50/Image{' '}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
-              AI Photography Business
+            <span className="block">Turn Your Design Eye</span>
+            <span className="block">Into a Profitable AI</span>
+            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
+              Photography Business
             </span>
-            .
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mb-10">
@@ -331,7 +331,7 @@ const LandingPageV3 = () => {
               <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-500/20 border border-purple-400/40">
                 <Play className="w-4 h-4 text-purple-200" />
               </span>
-              Watch the walkthrough
+              Watch Explainer
             </button>
           </div>
           <p className="text-gray-600 text-sm mb-12">30-day money-back guarantee. Cancel anytime.</p>
@@ -395,7 +395,7 @@ const LandingPageV3 = () => {
             <div className="w-full aspect-video bg-black">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/6BAavTX4Sow?autoplay=1&controls=0&rel=0&modestbranding=1"
+                src="https://www.youtube.com/embed/DuvZ8hk9D0U?autoplay=1&controls=0&rel=0&modestbranding=1"
                 title="Dezygn walkthrough video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
