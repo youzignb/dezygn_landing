@@ -98,13 +98,13 @@ const LandingPageV3 = () => {
         <div className="w-full max-w-3xl px-6 flex flex-col items-center text-center z-10">
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-8">
-            ● BUILT FOR THE CREATIVE EYE, POWERED BY AI
+            ● YOUR CREATIVE EYE + AI = PREMIUM PHOTOGRAPHY BUSINESS
           </div>
 
           <h1 className="font-black text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-white mb-6">
-            The Operating System for{' '}
+            Turn Your Design Eye Into a $50/Image{' '}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-300 to-blue-300">
-              AI Photography Agencies
+              AI Photography Business
             </span>
             .
           </h1>

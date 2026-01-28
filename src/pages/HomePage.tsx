@@ -47,17 +47,17 @@ function HomePage() {
               <div className="mb-8">
                 <div className="inline-flex items-center gap-2 bg-gray-100 rounded-full px-5 py-2 border border-gray-200">
                   <Zap className="w-4 h-4 text-purple-600" />
-                  <span className="text-sm font-semibold text-gray-700">● BUILT FOR THE CREATIVE EYE, POWERED BY AI</span>
+                  <span className="text-sm font-semibold text-gray-700">● YOUR CREATIVE EYE + AI = PREMIUM PHOTOGRAPHY BUSINESS</span>
                 </div>
               </div>
 
               {/* Main Headline with Yellow Highlight */}
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-[1.1] tracking-tight">
                 <span className="block text-gray-900">
-                  The Operating System for{' '}
+                  Turn Your Design Eye Into a $50/Image{' '}
                   <span className="relative inline-block">
                     <span className="absolute inset-0 bg-yellow-300 -skew-y-2 transform"></span>
-                    <span className="relative z-10 px-2 text-gray-900">AI Photography Agencies</span>
+                    <span className="relative z-10 px-2 text-gray-900">AI Photography Business</span>
                   </span>
                   .
                 </span>
