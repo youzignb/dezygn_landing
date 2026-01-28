@@ -68,38 +68,27 @@ const LandingPageV3 = () => {
 
   const beforeAfterGallery = [
     {
-      title: 'Hydrating Cream + Soap',
+      title: 'Hydrating Cream',
       label: 'Hydrating Cream → Lifestyle Shot',
-      ingredients: 'Hydrating cream + Soap',
+      ingredients: 'Hydrating cream + model grid',
       beforeImages: [
         {
           src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_011e9b8f-86b3-485d-9ca4-7bca55821db8/17069d3e-27d5-4512-b0c1-c5393ea3b3a3.jpeg',
           alt: 'Hydrating cream and soap product shot on a neutral surface',
         },
-      ],
-      afterImage: {
-        src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/Lifestyle_photography_of_a_beautiful_Black_woman_edit_1_1764768440322.png?width=1920&height=1920&resize=contain&quality=90',
-        alt: 'Lifestyle photo of a woman using hydrating cream in soft light',
-      },
-    },
-    {
-      title: 'Model Grid',
-      label: 'Ingredient Grid → Lifestyle Shot',
-      ingredients: '2 ingredient grid',
-      beforeImages: [
         {
           src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_011e9b8f-86b3-485d-9ca4-7bca55821db8/0f382a6a-1088-49a4-9e09-d6cccecc9d42.png',
-          alt: 'Grid of two ingredient images on a plain background',
+          alt: 'Model grid used as the second ingredient',
         },
       ],
       afterImage: {
         src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/render/image/public/user-assets/703ed5a3-7c4a-4c89-9df2-0c61727a49ed/Lifestyle_photography_of_a_beautiful_Black_woman_edit_1_1764768440322.png?width=1920&height=1920&resize=contain&quality=90',
-        alt: 'Lifestyle photo featuring a model with soft studio lighting',
+        alt: 'Lifestyle photo of a model using hydrating cream in soft light',
       },
     },
     {
-      title: 'Food Brand Montage',
-      label: 'Ingredient Collage → Styled Food Scene',
+      title: 'Food',
+      label: 'Ingredient Montage → Styled Food Scene',
       ingredients: 'Hat, coffee cup, woman, dress, logo',
       beforeImages: [
         {
@@ -128,7 +117,7 @@ const LandingPageV3 = () => {
       },
     },
     {
-      title: 'Jewelry Pendant',
+      title: 'Jewelry',
       label: 'Pendant → Luxe Product Photo',
       ingredients: 'Pendant',
       beforeImages: [
@@ -145,7 +134,7 @@ const LandingPageV3 = () => {
     {
       title: 'Pet Toy (Dog)',
       label: 'Dog + Toy → Premium Pet Shot',
-      ingredients: 'Dog + Pet toy',
+      ingredients: 'Dog + pet toy',
       beforeImages: [
         {
           src: 'https://vpklpenoffkvztqosbds.supabase.co/storage/v1/object/public/user-assets/public/user_703ed5a3-7c4a-4c89-9df2-0c61727a49ed/brand_a3cdd91e-3444-442b-a78c-346178b1fc26/3d10ca9e-eaa6-465e-83d7-4619975ef15a.png',
@@ -162,7 +151,7 @@ const LandingPageV3 = () => {
       },
     },
     {
-      title: 'Face Cream UGC',
+      title: 'Face Cream (UGC)',
       label: 'Cream → Authentic UGC Shot',
       ingredients: 'Cream',
       beforeImages: [
@@ -177,6 +166,83 @@ const LandingPageV3 = () => {
       },
     },
   ];
+
+  const CompareSlider = ({
+    beforeImages,
+    afterImage,
+  }: {
+    beforeImages: { src: string; alt: string }[];
+    afterImage: { src: string; alt: string };
+  }) => {
+    const [value, setValue] = useState(55);
+
+    return (
+      <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 aspect-[4/3]">
+        <span className="absolute top-3 left-3 z-10 text-[10px] uppercase tracking-widest bg-white/10 border border-white/10 text-gray-200 px-2 py-1 rounded-full">
+          Ingredient
+        </span>
+        <span className="absolute top-3 right-3 z-10 text-[10px] uppercase tracking-widest bg-purple-500/20 border border-purple-500/30 text-purple-100 px-2 py-1 rounded-full">
+          Result
+        </span>
+
+        <div className="absolute inset-0">
+          {beforeImages.length > 1 ? (
+            <div className="grid grid-cols-2 gap-1 w-full h-full">
+              {beforeImages.map((image) => (
+                <img
+                  key={image.src}
+                  src={image.src}
+                  alt={image.alt}
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+              ))}
+            </div>
+          ) : (
+            <img
+              src={beforeImages[0].src}
+              alt={beforeImages[0].alt}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+          )}
+        </div>
+
+        <div
+          className="absolute inset-y-0 right-0 overflow-hidden"
+          style={{ width: `${100 - value}%` }}
+        >
+          <img
+            src={afterImage.src}
+            alt={afterImage.alt}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        <div
+          className="absolute inset-y-0 w-px bg-white/60"
+          style={{ left: `${value}%` }}
+        />
+        <div
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 rounded-full border border-white/30 bg-black/70 text-white text-xs flex items-center justify-center"
+          style={{ left: `${value}%` }}
+        >
+          {'<>'}
+        </div>
+
+        <input
+          type="range"
+          min={0}
+          max={100}
+          value={value}
+          onChange={(event) => setValue(Number(event.target.value))}
+          className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize"
+          aria-label="Compare ingredient and result"
+        />
+      </div>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
@@ -1292,19 +1358,19 @@ const LandingPageV3 = () => {
       </section>
 
       {/* ============================================ */}
-      {/* SECTION 8.5: BEFORE/AFTER GALLERY */}
+      {/* SECTION 8.5: TRANSFORMATION CASE STUDY */}
       {/* ============================================ */}
       <section className="relative bg-[#050507] py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-12 md:mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-300 mb-6">
-              Visual Proof
+              The Dezygn Difference
             </div>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight">
-              See the Transformation
+              Raw Assets In. Client-Ready Photos Out.
             </h2>
             <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mt-4">
-              Real client inputs turned into premium product photography — hover to reveal the full result.
+              Same products. Completely different results.
             </p>
           </div>
 
@@ -1314,49 +1380,10 @@ const LandingPageV3 = () => {
                 key={item.title}
                 className="group bg-[#0a0a0a] border border-white/5 rounded-2xl p-5 shadow-[0_30px_80px_-60px_rgba(168,85,247,0.6)] hover:border-purple-500/30 transition-all duration-300"
               >
-                <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/50 aspect-[4/3]">
-                  <span className="absolute top-3 left-3 z-10 text-[10px] uppercase tracking-widest bg-white/10 border border-white/10 text-gray-200 px-2 py-1 rounded-full">
-                    Before
-                  </span>
-                  <span className="absolute top-3 right-3 z-10 text-[10px] uppercase tracking-widest bg-purple-500/20 border border-purple-500/30 text-purple-100 px-2 py-1 rounded-full">
-                    After
-                  </span>
-
-                  {item.beforeImages.length > 1 ? (
-                    <div className="grid grid-cols-2 gap-1 w-full h-full">
-                      {item.beforeImages.map((image) => (
-                        <img
-                          key={image.src}
-                          src={image.src}
-                          alt={image.alt}
-                          loading="lazy"
-                          className="w-full h-full object-cover"
-                        />
-                      ))}
-                    </div>
-                  ) : (
-                    <img
-                      src={item.beforeImages[0].src}
-                      alt={item.beforeImages[0].alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                  )}
-
-                  <div className="absolute inset-0 overflow-hidden w-1/2 group-hover:w-full transition-all duration-500 ease-out">
-                    <img
-                      src={item.afterImage.src}
-                      alt={item.afterImage.alt}
-                      loading="lazy"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="absolute top-0 bottom-0 left-1/2 group-hover:left-0 w-px bg-white/40 transition-all duration-500 ease-out" />
-                </div>
-
+                <CompareSlider beforeImages={item.beforeImages} afterImage={item.afterImage} />
                 <figcaption className="mt-4">
                   <p className="text-sm text-white font-semibold">{item.label}</p>
-                  <p className="text-xs text-gray-500 mt-1">Ingredients: {item.ingredients}</p>
+                  <p className="text-xs text-gray-500 mt-1">Ingredient(s): {item.ingredients}</p>
                 </figcaption>
               </figure>
             ))}
