@@ -8,6 +8,7 @@ const LandingPageV3 = () => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [activeVideoSrc, setActiveVideoSrc] = useState('https://www.youtube.com/embed/DuvZ8hk9D0U?autoplay=1&controls=0&rel=0&modestbranding=1');
 
   const faqItems = [
     {
@@ -313,6 +314,18 @@ const LandingPageV3 = () => {
             Stop selling "AI slop" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
           </p>
 
+          <div className="w-full max-w-5xl mb-6">
+            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/1jwFnBJu1II?controls=0&rel=0&modestbranding=1"
+                title="Client results video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
             <a
               href="https://chat.dezygn.com/signup"
@@ -321,20 +334,8 @@ const LandingPageV3 = () => {
               Start Creating — Risk Free
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <button
-              type="button"
-              onClick={() => setIsVideoOpen(true)}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-white font-medium transition-colors"
-              aria-haspopup="dialog"
-              aria-expanded={isVideoOpen}
-            >
-              <span className="flex items-center justify-center w-8 h-8 rounded-full bg-purple-500/20 border border-purple-400/40">
-                <Play className="w-4 h-4 text-purple-200" />
-              </span>
-              Watch Explainer
-            </button>
           </div>
-          <p className="text-gray-600 text-sm mb-12">30-day money-back guarantee. Cancel anytime.</p>
+          <div className="mb-12" />
 
           {/* Testimonial */}
           <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300 mb-16">
@@ -395,7 +396,7 @@ const LandingPageV3 = () => {
             <div className="w-full aspect-video bg-black">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/DuvZ8hk9D0U?autoplay=1&controls=0&rel=0&modestbranding=1"
+                src={activeVideoSrc}
                 title="Dezygn walkthrough video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
