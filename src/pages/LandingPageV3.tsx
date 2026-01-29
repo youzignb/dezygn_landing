@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap, Play, X } from 'lucide-react';
+import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
 import HeaderV3 from '../components/HeaderV3';
 import AwaVisualization from '../components/AwaVisualization';
 import FooterV3 from '../components/FooterV3';
@@ -7,8 +7,6 @@ import FooterV3 from '../components/FooterV3';
 const LandingPageV3 = () => {
   const [showSignupModal, setShowSignupModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
-  const [activeVideoSrc, setActiveVideoSrc] = useState('https://www.youtube.com/embed/DuvZ8hk9D0U?autoplay=1&controls=0&rel=0&modestbranding=1');
 
   const faqItems = [
     {
@@ -372,40 +370,6 @@ const LandingPageV3 = () => {
           </div>
         </div>
       </main>
-
-      {isVideoOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm px-4"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Product walkthrough video"
-          onClick={() => setIsVideoOpen(false)}
-        >
-          <div
-            className="relative w-full max-w-4xl bg-[#0a0a0a] border border-white/10 rounded-2xl overflow-hidden"
-            onClick={(event) => event.stopPropagation()}
-          >
-            <button
-              type="button"
-              className="absolute top-3 right-3 z-10 inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white"
-              onClick={() => setIsVideoOpen(false)}
-              aria-label="Close video"
-            >
-              <X className="w-5 h-5" />
-            </button>
-            <div className="w-full aspect-video bg-black">
-              <iframe
-                className="w-full h-full"
-                src={activeVideoSrc}
-                title="Dezygn walkthrough video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* ============================================ */}
       {/* SECTION 2: SOCIAL PROOF BAR */}
