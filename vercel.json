@@ -4,11 +4,6 @@
   "framework": "vite",
   "redirects": [
     {
-      "source": "/r",
-      "destination": "/?utm_source=reddit&utm_medium=profile&utm_campaign=bio",
-      "permanent": false
-    },
-    {
       "source": "/:path*",
       "has": [{"type": "host", "value": "dezygn.com"}],
       "destination": "https://www.dezygn.com/:path*",
