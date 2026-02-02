@@ -286,7 +286,7 @@ const LandingPageV3 = () => {
         }
       `}</style>
 
-      <HeaderV3 />
+      <HeaderV3 signInHref="#pricing" ctaHref="#pricing" />
 
       {/* ============================================ */}
       {/* SECTION 1: HERO */}
@@ -326,7 +326,7 @@ const LandingPageV3 = () => {
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
             <a
-              href="https://chat.dezygn.com/signup"
+              href="#pricing"
               className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
             >
               Start Creating — Risk Free
@@ -1491,7 +1491,7 @@ const LandingPageV3 = () => {
 
             <div className="text-center mb-8">
               <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-3">
-                Dezygn Agency
+                GET DEZYGN TODAY
               </p>
               <div className="flex items-baseline justify-center gap-2">
                 <span className="text-5xl md:text-6xl font-black text-white">$99</span>
@@ -1502,15 +1502,15 @@ const LandingPageV3 = () => {
 
             <ul className="space-y-3 mb-8">
               {[
-                'Dezygn AI Creative Suite (unlimited brands & campaigns)',
-                'Awa AI Creative Director',
-                'Studio, Gallery & Client Sharing',
-                'Video Animation (Beta)',
-                '2,500 credits/month (~500 images)',
-                'The Conversion Photography System (full course)',
-                '6 Agency Business Bonuses (SOPs, templates, lead gen)',
-                'Private Skool Community access',
-                'Priority support',
+                '2,500 credits/month',
+                '~1,250 Nano Banana or ~625 Nano Banana Pro images',
+                'Unlimited use of Awa AI Creative Director',
+                'Full access to course, community, and business resources',
+                'Free 30-min founder strategy call (1-on-1 setup + guidance)',
+                'Keep all images you generate',
+                "2 days before trial ends, we'll email you",
+                'Request a trial extension anytime, no questions asked',
+                'Only $99/month if you choose to continue',
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3 text-gray-300">
                   <Check className="w-4 h-4 text-purple-400 flex-shrink-0" />
@@ -1519,17 +1519,11 @@ const LandingPageV3 = () => {
               ))}
             </ul>
 
-            {/* Guarantee badge */}
-            <div className="flex items-center justify-center gap-2 mb-6 p-3 bg-green-500/5 border border-green-500/20 rounded-xl">
-              <Shield className="w-4 h-4 text-green-400" />
-              <span className="text-green-400 text-sm font-medium">30-Day Money-Back Guarantee</span>
-            </div>
-
             <a
               href="https://chat.dezygn.com/signup"
               className="block w-full text-center px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg"
             >
-              Try it for $1 Only
+              💰 $1 FOR 7 DAYS — FULL ACCESS
             </a>
           </div>
 
@@ -1681,7 +1675,7 @@ const LandingPageV3 = () => {
             Tool. Course. Community. Business resources. Everything you need to build a premium AI photography agency — for $99/month.
           </p>
           <a
-            href="https://chat.dezygn.com/signup"
+            href="#pricing"
             className="inline-flex items-center gap-2 px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
           >
             Join Dezygn — Risk Free
@@ -1706,7 +1700,7 @@ const LandingPageV3 = () => {
             <h2 className="text-2xl font-bold text-white mb-4">Sign up to continue</h2>
             <p className="text-gray-400 mb-6">Create an account to start generating designs with AWA.</p>
             <a
-              href="https://chat.dezygn.com/signup"
+              href="#pricing"
               className="inline-block w-full px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-medium rounded-xl transition-colors"
             >
               Try it for $1 Only
