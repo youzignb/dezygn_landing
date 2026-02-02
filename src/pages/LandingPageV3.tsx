@@ -5,7 +5,6 @@ import AwaVisualization from '../components/AwaVisualization';
 import FooterV3 from '../components/FooterV3';
 
 const LandingPageV3 = () => {
-  const [showSignupModal, setShowSignupModal] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const faqItems = [
@@ -1687,33 +1686,6 @@ const LandingPageV3 = () => {
 
       <FooterV3 />
 
-      {/* Sign Up Modal */}
-      {showSignupModal && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm"
-          onClick={() => setShowSignupModal(false)}
-        >
-          <div
-            className="bg-[#1a1a1a] border border-white/10 rounded-2xl p-8 max-w-sm mx-4 text-center shadow-2xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2 className="text-2xl font-bold text-white mb-4">Sign up to continue</h2>
-            <p className="text-gray-400 mb-6">Create an account to start generating designs with AWA.</p>
-            <a
-              href="#pricing"
-              className="inline-block w-full px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white font-medium rounded-xl transition-colors"
-            >
-              Try it for $1 Only
-            </a>
-            <button
-              className="mt-4 text-gray-500 hover:text-white transition-colors text-sm"
-              onClick={() => setShowSignupModal(false)}
-            >
-              Maybe later
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
