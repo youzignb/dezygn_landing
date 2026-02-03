@@ -14,6 +14,11 @@ interface Resource {
   heroHeadline: string;
   image?: string;
   imageAlt?: string;
+  cta?: {
+    label: string;
+    href: string;
+    subtext?: string;
+  };
   sections: { heading: string; content: string[] }[];
   keyTakeaways: string[];
   relatedResources: string[];
@@ -117,6 +122,35 @@ const ResourcePage = () => {
                   loading="lazy"
                   className="w-full rounded-2xl border border-white/10"
                 />
+              </div>
+            )}
+
+            {resource.cta && (
+              <div className="max-w-4xl mt-10">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                  <div>
+                    <p className="text-xs tracking-[0.3em] uppercase text-purple-300 mb-2">
+                      Masterclass Playlist
+                    </p>
+                    <h2 className="text-2xl font-bold text-white mb-2">
+                      Watch the Full Workflow
+                    </h2>
+                    {resource.cta.subtext && (
+                      <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
+                        {resource.cta.subtext}
+                      </p>
+                    )}
+                  </div>
+                  <a
+                    href={resource.cta.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+                  >
+                    {resource.cta.label}
+                    <ArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
             )}
           </div>

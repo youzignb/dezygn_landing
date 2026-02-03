@@ -6,12 +6,97 @@ export interface Resource {
   heroHeadline: string;
   image: string;
   imageAlt: string;
+  cta?: {
+    label: string;
+    href: string;
+    subtext?: string;
+  };
   sections: { heading: string; content: string[] }[];
   keyTakeaways: string[];
   relatedResources: string[];
 }
 
 export const resources: Resource[] = [
+  // ──────────────────────────────────────────────
+  // ai-lifestyle-product-photography-masterclass
+  // ──────────────────────────────────────────────
+  {
+    slug: "ai-lifestyle-product-photography-masterclass",
+    title: "AI Lifestyle & Product Photography Masterclass",
+    metaTitle:
+      "AI Lifestyle & Product Photography Masterclass — Dezygn Resources",
+    metaDescription:
+      "The complete AI photography workflow used with real clients: briefs, brand identity, Visual Syntax, prompting, quality control, and delivery.",
+    heroHeadline:
+      "The Complete Workflow for AI Product + Lifestyle Photography (Agency Edition)",
+    image: "/images/seo/resources/ai-lifestyle-product-photography-masterclass.jpg",
+    imageAlt:
+      "AI lifestyle and product photography masterclass thumbnail featuring a model holding a skincare product",
+    cta: {
+      label: "Watch the playlist on YouTube",
+      href: "https://www.youtube.com/playlist?list=PLDWnj8EaOunb22xH4H2ges3KNQyDFtpWa",
+      subtext:
+        "Free masterclass playlist covering the full agency workflow end to end.",
+    },
+    sections: [
+      {
+        heading: "What This Masterclass Covers",
+        content: [
+          "This is the full, real-world workflow for creating AI product and lifestyle photography that converts. It walks through how I handle client briefs, translate brand identity into art direction, and create cohesive product + lifestyle image systems that feel like one brand, not two separate shoots.",
+          "You will see the complete process using a real case study (LELA Natural Beauty), including how to reverse engineer reference images, build prompts that stay on-brand, and deliver images a client can approve quickly.",
+        ],
+      },
+      {
+        heading: "Who It Is For",
+        content: [
+          "Graphic designers pivoting into AI product photography, freelancers adding lifestyle imagery to their services, and creative professionals targeting e-commerce brands will get the most value.",
+          "If you are building an AI photography agency, this masterclass is designed to show you exactly how to run projects end-to-end — not just generate nice images.",
+        ],
+      },
+      {
+        heading: "Why Lifestyle Photography Pays",
+        content: [
+          "Product-only shots are increasingly DIY. Lifestyle imagery is not — it requires art direction, model consistency, and a cohesive visual story.",
+          "Lifestyle images drive higher conversion rates and justify premium pricing, making them the highest-leverage skill for AI photography agencies.",
+        ],
+      },
+      {
+        heading: "The 7-Part Workflow",
+        content: [
+          "The masterclass follows a 7-part sequence: understanding the client brief, extracting brand identity, reverse engineering reference imagery, preparing product photos, prompting and iteration, quality control, and client delivery with feedback loops.",
+          "Each step is structured so you can repeat it across multiple clients and build a scalable, professional agency process.",
+        ],
+      },
+      {
+        heading: "Reverse Engineering with Visual Syntax",
+        content: [
+          "Instead of vague prompts, the workflow uses Visual Syntax to break images into controllable components: style, subject, action, scene, camera, and brand.",
+          "This makes your prompts precise, reduces failed generations, and creates consistent results across an entire product line.",
+        ],
+      },
+      {
+        heading: "Preparation, Quality Control, and Delivery",
+        content: [
+          "Great AI outputs start with preparation: high-quality product reference images, clear product specs, and an organized asset structure.",
+          "The masterclass includes a repeatable QC checklist (edges, lighting consistency, color accuracy, proportions) and a clean delivery process that makes client approvals easy.",
+        ],
+      },
+    ],
+    keyTakeaways: [
+      "Lifestyle imagery is the highest-value offering for AI photography agencies because it is harder to DIY and converts better.",
+      "Use a structured workflow (brief → brand identity → references → prompting → QC → delivery) to scale across clients.",
+      "Visual Syntax-style prompting reduces guesswork and keeps your outputs on-brand.",
+      "Preparation matters: clean references and documented product specs prevent accuracy problems later.",
+      "Quality control should check realism, proportions, lighting alignment, and brand consistency before delivery.",
+      "A reliable delivery + feedback loop makes clients trust you and keeps projects moving.",
+    ],
+    relatedResources: [
+      "start-ai-photography-agency",
+      "visual-syntax",
+      "conversion-photography",
+    ],
+  },
+
   // ──────────────────────────────────────────────
   // 1. ai-product-photography-guide
   // ──────────────────────────────────────────────
@@ -610,4 +695,5 @@ export const resources: Resource[] = [
       "conversion-photography",
     ],
   },
+
 ];

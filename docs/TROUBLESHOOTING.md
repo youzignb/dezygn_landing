@@ -15,6 +15,25 @@ Common issues, solutions, and debugging procedures for the website audit tool.
 
 ## 🔧 Environment Issues
 
+### Playbook form shows “Something went wrong” in production
+
+**Symptoms**:
+- `/playbook` form submit fails in production only
+- Local dev works
+- UI shows `Something went wrong. Try again.`
+
+**Root Cause**: Missing Vercel environment variables at build time.
+
+**Required Vars (Vite)**:
+- `VITE_SUPABASE_URL`
+- `VITE_SUPABASE_ANON_KEY` (use **anon/public** key, never service role)
+
+**Fix**:
+1. Vercel Dashboard → Project → Settings → Environment Variables
+2. Add both variables with values from `.env.local` or Supabase API settings
+3. Ensure **Production** is selected (or All Environments if desired)
+4. Redeploy (Vite embeds `VITE_*` at build time)
+
 ### Missing GUMLOOP_KEY
 
 **Symptoms**:
