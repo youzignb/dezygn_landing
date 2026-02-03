@@ -28,6 +28,7 @@ const PlaybookPage = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          Authorization: `Bearer ${supabaseAnonKey}`,
           apikey: supabaseAnonKey,
         },
         body: JSON.stringify({
@@ -39,6 +40,8 @@ const PlaybookPage = () => {
       });
 
       if (!response.ok) {
+        const errorBody = await response.text();
+        console.error('Lead magnet capture failed:', response.status, errorBody);
         throw new Error('Request failed');
       }
 
