@@ -3,26 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import HeaderV3 from '../../components/HeaderV3';
 import FooterV3 from '../../components/FooterV3';
-import { resources } from '../../data/resources';
+import { resources, type Resource } from '../../data/resources';
 import { ArrowRight, ChevronRight, CheckCircle2, BookOpen } from 'lucide-react';
-
-interface Resource {
-  slug: string;
-  title: string;
-  metaTitle: string;
-  metaDescription: string;
-  heroHeadline: string;
-  image?: string;
-  imageAlt?: string;
-  cta?: {
-    label: string;
-    href: string;
-    subtext?: string;
-  };
-  sections: { heading: string; content: string[] }[];
-  keyTakeaways: string[];
-  relatedResources: string[];
-}
 
 function slugifyHeading(heading: string): string {
   return heading
@@ -65,15 +47,78 @@ const ResourcePage = () => {
     .map((relSlug) => (resources as Resource[]).find((r) => r.slug === relSlug))
     .filter((r): r is Resource => r !== undefined);
 
+  const canonicalUrl = `https://dezygn.com/resources/${resource.slug}`;
+  const absoluteImageUrl =
+    resource.image?.startsWith('http')
+      ? resource.image
+      : resource.image
+        ? `https://dezygn.com${resource.image}`
+        : undefined;
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: resource.heroHeadline || resource.title,
+    name: resource.title,
+    description: resource.metaDescription,
+    mainEntityOfPage: canonicalUrl,
+    url: canonicalUrl,
+    ...(absoluteImageUrl ? { image: [absoluteImageUrl] } : {}),
+    ...(resource.publishedAt ? { datePublished: resource.publishedAt } : {}),
+    ...(resource.updatedAt ? { dateModified: resource.updatedAt } : {}),
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dezygn',
+      url: 'https://dezygn.com',
+    },
+  };
+
+  const faqJsonLd =
+    resource.faq && resource.faq.length > 0
+      ? {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: resource.faq.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
+            },
+          })),
+        }
+      : undefined;
+
   return (
     <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white">
       <Helmet>
         <title>{resource.metaTitle}</title>
         <meta name="description" content={resource.metaDescription} />
-        <link
-          rel="canonical"
-          href={`https://dezygn.com/resources/${resource.slug}`}
-        />
+        <link rel="canonical" href={canonicalUrl} />
+
+        <meta property="og:title" content={resource.metaTitle} />
+        <meta property="og:description" content={resource.metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Dezygn" />
+        {absoluteImageUrl && (
+          <>
+            <meta property="og:image" content={absoluteImageUrl} />
+            <meta property="og:image:alt" content={resource.imageAlt} />
+          </>
+        )}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={resource.metaTitle} />
+        <meta name="twitter:description" content={resource.metaDescription} />
+        {absoluteImageUrl && <meta name="twitter:image" content={absoluteImageUrl} />}
+
+        <script type="application/ld+json">
+          {JSON.stringify(articleJsonLd)}
+        </script>
+        {faqJsonLd && (
+          <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+        )}
       </Helmet>
 
       <HeaderV3 />
