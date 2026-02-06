@@ -6,19 +6,21 @@ import FooterV3 from '../components/FooterV3';
 
 const LandingPageV3 = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [roiClients, setRoiClients] = useState(2);
+  const [roiValuePerClient, setRoiValuePerClient] = useState(500);
 
   const faqItems = [
     {
-      q: 'What exactly do I get for $99/month?',
-      a: 'Everything. The Dezygn AI Creative Suite (unlimited brands & campaigns, 2,500 credits/month), the full "Conversion Photography System" course (6 modules + 6 bonuses), access to the private Skool community, and all agency business resources — SOPs, templates, lead generation system, pricing frameworks.',
+      q: 'What do I get with each plan?',
+      a: 'Free gives you 50 credits to try Dezygn. Paid plans include monthly credits (500, 1,000, or 2,500), unlimited use of Awa, and higher tiers include the course, community, business resources, and (Agency) a founder strategy call + priority access to new features.',
     },
     {
       q: 'How many images can I create?',
-      a: '2,500 credits per month, which is approximately 500 images. Credits roll over to the next month, so you never lose what you don\'t use. Need more? Credit top-ups start at $29.',
+      a: 'It depends on your plan. Small Business includes 500 credits/month (~250 Nano Banana or ~125 Nano Banana Pro images). Freelancer includes 1,000 credits/month (~500 Nano Banana or ~250 Nano Banana Pro). Agency includes 2,500 credits/month (~1,250 Nano Banana or ~625 Nano Banana Pro). Free includes 50 credits to try it out. Credits reset monthly on paid plans. Need more? Credit top-ups start at $29.',
     },
     {
-      q: 'Is there a free trial?',
-      a: 'No free trial — but you get a 30-day money-back guarantee. Try everything for a full month. If it\'s not for you, email us for a complete refund. Zero risk.',
+      q: 'Is there a free plan?',
+      a: 'Yes. Start on the Free plan with 50 credits to try Dezygn. If you upgrade to a paid plan, you\'re covered by a 30-day money-back guarantee.',
     },
     {
       q: 'What is Awa?',
@@ -38,9 +40,82 @@ const LandingPageV3 = () => {
     },
     {
       q: 'Do credits roll over?',
-      a: 'Yes. Unused credits roll over to the next month. You never lose what you don\'t use.',
+      a: 'Paid plan credits reset monthly. You keep all images you generate, and you can always add one-time credit top-ups if you need more output.',
     },
   ];
+
+  const pricingTiers = [
+    {
+      name: 'Free',
+      monthlyPrice: 0,
+      price: '$0',
+      oldPrice: null as string | null,
+      save: null as string | null,
+      credits: '50 credits to try it out',
+      images: '~25 Nano Banana or ~12 Nano Banana Pro images',
+      capacity: 'Great for a quick quality check',
+      blurb: 'Try Dezygn and see the quality.',
+      features: ['Unlimited use of Awa AI Creative Director'],
+      featured: false,
+    },
+    {
+      name: 'Small Business',
+      monthlyPrice: 29,
+      price: '$29',
+      oldPrice: '$49',
+      save: 'Save 41%',
+      credits: '500 credits/month',
+      images: '~250 Nano Banana or ~125 Nano Banana Pro images',
+      capacity: 'Best for in-house eCom teams',
+      blurb: 'For e-commerce stores creating their own product images.',
+      features: ['Unlimited use of Awa AI Creative Director', 'Credits reset monthly', 'Cancel anytime'],
+      featured: false,
+    },
+    {
+      name: 'Freelancer',
+      badge: 'Most popular',
+      monthlyPrice: 49,
+      price: '$49',
+      oldPrice: '$89',
+      save: 'Save 45%',
+      credits: '1,000 credits/month',
+      images: '~500 Nano Banana or ~250 Nano Banana Pro images',
+      capacity: 'Enough for 1-2 clients/month',
+      blurb: 'For freelancers who want more volume and support.',
+      features: [
+        'Unlimited use of Awa AI Creative Director',
+        'Course, community, and business resources',
+        'Credits reset monthly',
+      ],
+      featured: true,
+    },
+    {
+      name: 'Agency',
+      monthlyPrice: 99,
+      price: '$99',
+      oldPrice: '$149',
+      save: 'Save 34%',
+      credits: '2,500 credits/month',
+      images: '~1,250 Nano Banana or ~625 Nano Banana Pro images',
+      capacity: 'Enough for 3-4 clients/month',
+      blurb: 'For agencies scaling production and systems.',
+      features: [
+        'Unlimited use of Awa AI Creative Director',
+        'Course, community, and business resources',
+        'Free founder strategy call (1-on-1 setup + guidance)',
+        'Priority access to new features',
+      ],
+      featured: false,
+    },
+  ];
+
+  const roiRecommendedTierName = roiClients <= 0 ? 'Free' : roiClients <= 2 ? 'Freelancer' : 'Agency';
+  const roiRecommendedTier = pricingTiers.find((t) => t.name === roiRecommendedTierName) ?? pricingTiers[0];
+  const roiEstRevenue = roiClients * roiValuePerClient;
+  const roiPlanCost = roiRecommendedTier.monthlyPrice ?? 0;
+  const roiNetAfterPlan = roiEstRevenue - roiPlanCost;
+  const formatUSD = (n: number) =>
+    n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
 
   const beforeAfterTestimonials = [
     {
@@ -307,35 +382,35 @@ const LandingPageV3 = () => {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mb-10">
-            Stop selling "AI slop" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
-          </p>
+	          <p className="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mb-10">
+	            Stop selling "AI slop" and start selling conversion. Use your professional eye to deliver accurate, on-brand product photography that eCom brands actually pay for.
+	          </p>
 
-          <div className="w-full max-w-5xl mb-6">
-            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/1jwFnBJu1II?controls=0&rel=0&modestbranding=1"
-                title="Client results video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
-            <a
-              href="#pricing"
-              className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
-            >
-              Start Creating — Risk Free
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </div>
-          <div className="mb-12" />
+	          <div className="flex flex-col sm:flex-row items-center gap-4 mb-4">
+	            <a
+	              href="https://chat.dezygn.com/signup"
+	              className="inline-flex items-center gap-2 px-10 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
+	            >
+	              Free Signup
+	              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+	            </a>
+	          </div>
+	          <div className="w-full max-w-5xl mb-6">
+	            <div className="aspect-video w-full overflow-hidden rounded-2xl border border-white/10 bg-black">
+	              <iframe
+	                className="w-full h-full"
+	                src="https://www.youtube.com/embed/1jwFnBJu1II?controls=0&rel=0&modestbranding=1"
+	                title="Client results video"
+	                frameBorder="0"
+	                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+	                allowFullScreen
+	              />
+	            </div>
+	          </div>
+	          <div className="mb-12" />
 
-          {/* Testimonial */}
-          <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300 mb-16">
+	          {/* Testimonial */}
+	          <div className="flex items-center gap-4 p-4 bg-white/5 border border-white/10 rounded-xl backdrop-blur-sm hover:bg-white/10 transition-colors duration-300 mb-16">
             <div className="relative flex-shrink-0">
               <img
                 src="https://www.upwork.com/profile-portraits/c1C0jvfaaxrjRXgvxDIOAUm3bMhbJjqqIeoMek_2TTijZyaSfWbFRsXirPIBSDnBAF"
@@ -1475,60 +1550,182 @@ const LandingPageV3 = () => {
       {/* ============================================ */}
       <section id="pricing" className="relative bg-black py-24 md:py-32 scroll-mt-20">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
-              One Plan.{' '}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-300">
-                Everything Included.
-              </span>
-            </h2>
-          </div>
+	          <div className="text-center mb-16">
+	            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+	              Plans for{' '}
+	              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-300">
+	                Every Stage.
+	              </span>
+	            </h2>
+	            <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+	              Start free, then upgrade when you need more volume and support.
+	            </p>
+	          </div>
 
-          {/* Main pricing card */}
-          <div className="max-w-lg mx-auto bg-[#0a0a0a] border border-purple-500/30 rounded-2xl p-10 mb-12 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
+	          {/* ROI calculator */}
+	          <div className="max-w-4xl mx-auto mb-10">
+	            <div className="bg-[#0a0a0a] border border-white/5 rounded-2xl p-7 md:p-8">
+	              <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-6">
+	                <div>
+	                  <p className="text-purple-400 text-xs font-medium tracking-widest uppercase mb-2">ROI Calculator</p>
+	                  <h3 className="text-2xl md:text-3xl font-black tracking-tight text-white">Pick the right plan in 10 seconds</h3>
+	                </div>
+	                <p className="text-gray-400 text-sm max-w-md">
+	                  Slide your client count and monthly value to see the best-fit plan. One client is worth on average $300 to $1500 / month.
+	                </p>
+	              </div>
 
-            <div className="text-center mb-8">
-              <p className="text-purple-400 text-sm font-medium tracking-widest uppercase mb-3">
-                GET DEZYGN TODAY
-              </p>
-              <div className="flex items-baseline justify-center gap-2">
-                <span className="text-5xl md:text-6xl font-black text-white">$99</span>
-                <span className="text-gray-400 text-lg">/month</span>
-              </div>
-              <p className="text-gray-500 text-sm mt-2">or $799/year (save $389)</p>
-            </div>
+	              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+	                <div>
+	                  <label className="block text-sm text-gray-300 mb-2">
+	                    Active clients per month: <span className="text-white font-semibold">{roiClients}</span>
+	                  </label>
+	                  <input
+	                    type="range"
+	                    min={0}
+	                    max={6}
+	                    step={1}
+	                    value={roiClients}
+	                    onChange={(e) => setRoiClients(Number(e.target.value))}
+	                    className="w-full accent-purple-500"
+	                  />
+	                  <div className="flex justify-between text-xs text-gray-600 mt-2">
+	                    <span>0</span>
+	                    <span>6+</span>
+	                  </div>
+	                </div>
 
-            <ul className="space-y-3 mb-8">
-              {[
-                '2,500 credits/month',
-                '~1,250 Nano Banana or ~625 Nano Banana Pro images',
-                'Unlimited use of Awa AI Creative Director',
-                'Full access to course, community, and business resources',
-                'Free 30-min founder strategy call (1-on-1 setup + guidance)',
-                'Keep all images you generate',
-                "2 days before trial ends, we'll email you",
-                'Request a trial extension anytime, no questions asked',
-                'Only $99/month if you choose to continue',
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-3 text-gray-300">
-                  <Check className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                  <span className="text-sm">{item}</span>
-                </li>
-              ))}
-            </ul>
+	                <div>
+	                  <label className="block text-sm text-gray-300 mb-2">
+	                    Avg value per client per month: <span className="text-white font-semibold">{formatUSD(roiValuePerClient)}</span>
+	                  </label>
+	                  <input
+	                    type="range"
+	                    min={100}
+	                    max={2500}
+	                    step={50}
+	                    value={roiValuePerClient}
+	                    onChange={(e) => setRoiValuePerClient(Number(e.target.value))}
+	                    className="w-full accent-purple-500"
+	                  />
+	                  <div className="flex justify-between text-xs text-gray-600 mt-2">
+	                    <span>{formatUSD(100)}</span>
+	                    <span>{formatUSD(2500)}</span>
+	                  </div>
+	                </div>
+	              </div>
 
-            <a
-              href="https://chat.dezygn.com/signup"
-              className="block w-full text-center px-8 py-4 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg"
-            >
-              💰 $1 FOR 7 DAYS — FULL ACCESS
-            </a>
-          </div>
+	              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+	                <div className="rounded-xl bg-black/30 border border-white/10 p-4">
+	                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Est. monthly revenue</p>
+	                  <p className="text-2xl font-black text-white">{formatUSD(roiEstRevenue)}</p>
+	                </div>
+	                <div className="rounded-xl bg-black/30 border border-white/10 p-4">
+	                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Recommended plan</p>
+	                  <p className="text-2xl font-black text-white">{roiRecommendedTierName}</p>
+	                  <p className="text-xs text-gray-500 mt-2">
+	                    {roiRecommendedTierName === 'Freelancer'
+	                      ? 'Typically fits 1-2 clients.'
+	                      : roiRecommendedTierName === 'Agency'
+	                        ? 'Typically fits 3-4 clients.'
+	                        : 'Start here, then upgrade anytime.'}
+	                  </p>
+	                </div>
+	                <div className="rounded-xl bg-black/30 border border-white/10 p-4">
+	                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Net after plan</p>
+	                  <p className="text-2xl font-black text-white">{formatUSD(roiNetAfterPlan)}</p>
+	                  <p className="text-xs text-gray-500 mt-2">
+	                    Plan cost: {formatUSD(roiPlanCost)} / month
+	                  </p>
+	                </div>
+	              </div>
 
-          {/* Credit top-ups */}
-          <div className="text-center mb-8">
-            <p className="text-gray-400 text-sm uppercase tracking-widest">Need more credits?</p>
+	              <p className="text-xs text-gray-600 mt-4">
+	                Note: This is a simple revenue sanity check. If you create images in-house for your own store, Small Business is usually the best fit.
+	              </p>
+	            </div>
+	          </div>
+
+	          {/* Pricing table */}
+	          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+	            {pricingTiers.map((tier) => {
+	              const isRecommended = tier.name === roiRecommendedTierName;
+	              return (
+	              <div
+	                key={tier.name}
+	                className={[
+	                  'relative bg-[#0a0a0a] rounded-2xl p-7 overflow-hidden',
+	                  tier.featured ? 'border border-purple-500/40' : 'border border-white/5',
+	                  isRecommended ? 'ring-2 ring-emerald-400/30' : '',
+	                ].join(' ')}
+	              >
+	                {tier.featured && (
+	                  <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent" />
+	                )}
+
+	                <div className="flex items-start justify-between gap-3 mb-5">
+	                  <div>
+	                    <p className="text-white font-bold text-lg">{tier.name}</p>
+	                    {isRecommended && (
+	                      <div className="inline-flex items-center mt-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
+	                        Best for you
+	                      </div>
+	                    )}
+	                    {tier.badge && (
+	                      <div className="inline-flex items-center mt-2 px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs text-purple-300">
+	                        {tier.badge}
+	                      </div>
+	                    )}
+	                  </div>
+                  {tier.save && (
+                    <div className="px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-gray-300">
+                      {tier.save}
+                    </div>
+                  )}
+                </div>
+
+	                <div className="mb-5">
+	                  <div className="flex items-end gap-2">
+	                    {tier.oldPrice && <span className="text-gray-600 line-through text-sm">{tier.oldPrice}</span>}
+	                    <span className="text-4xl font-black text-white">{tier.price}</span>
+	                    {tier.name !== 'Free' && <span className="text-gray-400 text-sm mb-1">/mo</span>}
+	                  </div>
+	                  <p className="text-gray-400 text-sm mt-3">{tier.credits}</p>
+	                  <p className="text-gray-500 text-xs mt-1">{tier.images}</p>
+	                  {'capacity' in tier && tier.capacity && (
+	                    <p className="text-xs text-gray-400 mt-3">{tier.capacity}</p>
+	                  )}
+	                  <p className="text-gray-400 text-sm mt-4">{tier.blurb}</p>
+	                </div>
+
+	                <ul className="space-y-2 mb-6">
+	                  {tier.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 text-gray-300">
+                      <Check className="w-4 h-4 text-purple-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-sm leading-relaxed">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href="https://chat.dezygn.com/signup"
+                  className={[
+                    'block w-full text-center px-5 py-3.5 rounded-xl font-semibold transition-colors',
+                    tier.featured
+                      ? 'bg-purple-600 hover:bg-purple-500 text-white'
+                      : 'bg-white/5 hover:bg-white/10 text-white border border-white/10',
+                  ].join(' ')}
+	                >
+	                  Get Started Free
+	                </a>
+	              </div>
+	              );
+	            })}
+	          </div>
+
+	          {/* Credit top-ups */}
+	          <div className="text-center mb-8">
+	            <p className="text-gray-400 text-sm uppercase tracking-widest">Need more credits?</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
             {[
@@ -1670,9 +1867,9 @@ const LandingPageV3 = () => {
               Start Delivering Results.
             </span>
           </h2>
-          <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
-            Tool. Course. Community. Business resources. Everything you need to build a premium AI photography agency — for $99/month.
-          </p>
+	          <p className="text-lg text-gray-400 mb-10 max-w-xl mx-auto">
+	            Tool. Course. Community. Business resources. Everything you need to build a premium AI photography agency — starting at $29/month.
+	          </p>
           <a
             href="#pricing"
             className="inline-flex items-center gap-2 px-10 py-5 bg-purple-600 hover:bg-purple-500 text-white font-semibold rounded-xl transition-colors text-lg group"
