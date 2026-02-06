@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
 import HeaderV3 from '../components/HeaderV3';
 import AwaVisualization from '../components/AwaVisualization';
@@ -8,6 +8,7 @@ const LandingPageV3 = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [roiClients, setRoiClients] = useState(2);
   const [roiValuePerClient, setRoiValuePerClient] = useState(500);
+  const [activeExampleId, setActiveExampleId] = useState<string | null>(null);
 
   const faqItems = [
     {
@@ -240,6 +241,40 @@ const LandingPageV3 = () => {
     },
   ];
 
+  const exampleImageIds = Array.from({ length: 29 }, (_, i) => String(i + 1).padStart(4, '0'));
+  const examplePreviewIds = [
+    '0001',
+    '0002',
+    '0003',
+    '0004',
+    '0005',
+    '0006',
+    '0007',
+    '0008',
+    '0009',
+    '0010',
+    '0011',
+    '0012',
+    '0017',
+    '0023',
+    '0028',
+  ];
+
+  const exampleAlt = (id: string) => `Example image created in Dezygn (${Number(id)})`;
+  const exampleSrc = (id: string, size: 640 | 1024) =>
+    `/assets/images/landing-v3/examples/generic-homepage-${id}-${size}.webp`;
+
+  useEffect(() => {
+    if (!activeExampleId) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setActiveExampleId(null);
+    };
+
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, [activeExampleId]);
+
   const CompareSlider = ({
     beforeImages,
     afterImage,
@@ -361,6 +396,41 @@ const LandingPageV3 = () => {
       `}</style>
 
       <HeaderV3 signInHref="#pricing" ctaHref="#pricing" />
+
+      {/* Example lightbox */}
+      {activeExampleId && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Example image preview"
+          onClick={() => setActiveExampleId(null)}
+        >
+          <div
+            className="relative w-full max-w-5xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute -top-12 right-0 text-xs tracking-widest uppercase px-3 py-1.5 rounded-full bg-white/10 border border-white/10 text-gray-200 hover:bg-white/15 transition-colors"
+              onClick={() => setActiveExampleId(null)}
+            >
+              Close
+            </button>
+            <div className="overflow-hidden rounded-2xl border border-white/10 bg-black/50 shadow-[0_40px_140px_-80px_rgba(168,85,247,0.8)]">
+              <img
+                src={exampleSrc(activeExampleId, 1024)}
+                alt={exampleAlt(activeExampleId)}
+                className="w-full h-auto"
+                loading="eager"
+                decoding="async"
+                width={1024}
+                height={1024}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ============================================ */}
       {/* SECTION 1: HERO */}
@@ -764,6 +834,72 @@ const LandingPageV3 = () => {
                 {item.visual}
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============================================ */}
+      {/* SECTION 4.5: PROOF GALLERY */}
+      {/* ============================================ */}
+      <section id="examples" className="relative bg-black py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs tracking-widest uppercase text-purple-400 mb-8">
+              Proof
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6">
+              Real Outputs.{' '}
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-300">
+                Not Mockups.
+              </span>
+            </h2>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              Example images made in Dezygn. Mix of product shots and lifestyle scenes, built for designers and photographers who care about realism.
+            </p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-[11px] tracking-widest uppercase text-gray-400">
+              {['Product', 'Lifestyle', 'UGC', 'Packaging', 'Ads'].map((chip) => (
+                <span key={chip} className="px-3 py-1 rounded-full border border-white/10 bg-white/5">
+                  {chip}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+            {examplePreviewIds.map((id) => (
+              <button
+                key={id}
+                type="button"
+                className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] hover:border-purple-500/30 transition-colors"
+                onClick={() => setActiveExampleId(id)}
+              >
+                <img
+                  src={exampleSrc(id, 640)}
+                  srcSet={`${exampleSrc(id, 640)} 640w, ${exampleSrc(id, 1024)} 1024w`}
+                  sizes="(min-width: 1280px) 18vw, (min-width: 1024px) 20vw, (min-width: 768px) 30vw, 48vw"
+                  alt={exampleAlt(id)}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover aspect-square group-hover:scale-[1.02] transition-transform duration-300"
+                  width={640}
+                  height={640}
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="pointer-events-none absolute bottom-2 left-2 text-[10px] uppercase tracking-widest bg-black/60 border border-white/10 text-gray-200 px-2 py-1 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                  Tap to zoom
+                </div>
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-10 flex items-center justify-center">
+            <a
+              href="#more-examples"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold transition-colors"
+            >
+              See the full set
+              <ChevronRight className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -1426,6 +1562,51 @@ const LandingPageV3 = () => {
                 </figcaption>
               </figure>
             ))}
+          </div>
+
+          <div id="more-examples" className="mt-14">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-6">
+              <div>
+                <p className="text-purple-400 text-xs font-medium tracking-widest uppercase mb-2">More proof</p>
+                <h3 className="text-2xl md:text-3xl font-black tracking-tight text-white">More Example Outputs</h3>
+                <p className="text-gray-400 text-sm md:text-base max-w-2xl mt-2">
+                  Scroll through more real examples. Click any image to inspect details full-size.
+                </p>
+              </div>
+              <a
+                href="#pricing"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-semibold transition-colors"
+              >
+                Start free
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+
+            <div className="-mx-6 px-6 overflow-x-auto">
+              <div className="flex gap-3 pb-2 snap-x snap-mandatory">
+                {exampleImageIds.map((id) => (
+                  <button
+                    key={id}
+                    type="button"
+                    className="snap-start group relative min-w-[220px] sm:min-w-[240px] md:min-w-[260px] overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] hover:border-purple-500/30 transition-colors"
+                    onClick={() => setActiveExampleId(id)}
+                  >
+                    <img
+                      src={exampleSrc(id, 640)}
+                      srcSet={`${exampleSrc(id, 640)} 640w, ${exampleSrc(id, 1024)} 1024w`}
+                      sizes="(min-width: 1024px) 260px, 70vw"
+                      alt={exampleAlt(id)}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover aspect-square group-hover:scale-[1.02] transition-transform duration-300"
+                      width={640}
+                      height={640}
+                    />
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
