@@ -33,6 +33,7 @@ import CommunityPage from './pages/CommunityPage';
 import AwaAgentPage from './pages/features/AwaAgentPage';
 import StudioPage from './pages/features/StudioPage';
 import BrandImportPage from './pages/features/BrandImportPage';
+import RecipesPage from './pages/features/RecipesPage';
 
 // Programmatic SEO pages
 import UseCasePage from './pages/seo/UseCasePage';
@@ -88,6 +89,7 @@ function App() {
         <Route path="/features/awa" element={<AwaAgentPage />} />
         <Route path="/features/studio" element={<StudioPage />} />
         <Route path="/features/brand-import" element={<BrandImportPage />} />
+        <Route path="/features/recipes" element={<RecipesPage />} />
 
         {/* Programmatic SEO routes */}
         <Route path="/use-cases" element={<UseCaseIndexPage />} />

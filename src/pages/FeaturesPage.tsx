@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Sparkles, Brain, Image, Globe, Camera, Share2, Video } from 'lucide-react';
+import { ArrowRight, Sparkles, Brain, Image, Globe, Camera, Share2, Video, ChefHat } from 'lucide-react';
 import HeaderV3 from '../components/HeaderV3';
 import FooterV3 from '../components/FooterV3';
 
@@ -25,6 +25,13 @@ const features = [
     icon: Globe,
     to: '/features/brand-import',
     highlights: ['1-click URL import', 'Shopify integration', 'Brand DNA extraction', 'Unlimited brands'],
+  },
+  {
+    title: 'Recipe Library',
+    description: '268 ready-to-use AI photography templates across 26 categories. Pick a recipe, add your product, and generate studio-quality images — no prompt engineering needed.',
+    icon: ChefHat,
+    to: '/features/recipes',
+    highlights: ['268 templates', '26 product categories', 'One-click generation', 'No prompt writing'],
   },
 ];
 

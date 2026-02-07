@@ -61,6 +61,12 @@ const PRODUCT_COLUMNS: DropdownColumn[] = [
         icon: <Zap className="w-4 h-4" />,
         description: '1-click brand identity & product import',
       },
+      {
+        label: 'Recipe Library',
+        to: '/features/recipes',
+        icon: <Camera className="w-4 h-4" />,
+        description: '268 ready-to-use photography templates',
+      },
     ],
   },
   {
