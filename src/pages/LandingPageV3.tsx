@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap } from 'lucide-react';
+import { ArrowRight, Star, Globe, MessageSquare, Package, Sparkles, Check, ChevronRight, ChevronDown, Shield, BookOpen, GraduationCap, Award, Briefcase, Mail, TrendingUp, HelpCircle, Users, Eye, Camera, Image, Video, Share2, Search, Brain, Layers, Target, FileText, DollarSign, Zap, Calendar } from 'lucide-react';
 import HeaderV3 from '../components/HeaderV3';
 import AwaVisualization from '../components/AwaVisualization';
 import FooterV3 from '../components/FooterV3';
@@ -463,6 +463,15 @@ const LandingPageV3 = () => {
 	            >
 	              Free Signup
 	              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+	            </a>
+	            <a
+	              href="https://cal.com/bertrand-6hbdyx/30min?overlayCalendar=true"
+	              target="_blank"
+	              rel="noopener noreferrer"
+	              className="inline-flex items-center gap-2 px-10 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl transition-colors text-lg group"
+	            >
+	              <Calendar className="w-5 h-5" />
+	              Schedule a Demo
 	            </a>
 	          </div>
 	          <div className="w-full max-w-5xl mb-6">
@@ -1903,6 +1912,18 @@ const LandingPageV3 = () => {
 	              );
 	            })}
 	          </div>
+
+	          <p className="text-center text-gray-400 text-sm mt-6 mb-14">
+	            Want to see how Dezygn can help you grow?{' '}
+	            <a
+	              href="https://cal.com/bertrand-6hbdyx/30min?overlayCalendar=true"
+	              target="_blank"
+	              rel="noopener noreferrer"
+	              className="text-purple-400 hover:text-purple-300 underline underline-offset-2 transition-colors"
+	            >
+	              Book a free demo
+	            </a>
+	          </p>
 
 	          {/* Credit top-ups */}
 	          <div className="text-center mb-8">
