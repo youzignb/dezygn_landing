@@ -1832,7 +1832,6 @@ const LandingPageV3 = () => {
 	          {/* Pricing table */}
 	          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
 	            {pricingTiers.map((tier) => {
-	              const isRecommended = tier.name === roiRecommendedTierName;
 	              return (
 	              <div
 	                key={tier.name}
