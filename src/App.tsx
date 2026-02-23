@@ -48,6 +48,7 @@ import GlossaryPage from './pages/seo/GlossaryPage';
 import GlossaryIndexPage from './pages/seo/GlossaryIndexPage';
 import ResourceIndexPage from './pages/seo/ResourceIndexPage';
 import IndustryIndexPage from './pages/seo/IndustryIndexPage';
+import ApplyPage from './pages/ApplyPage';
 
 function App() {
   return (
@@ -86,6 +87,7 @@ function App() {
         <Route path="/v1" element={<V1AccessPage />} />
         <Route path="/course" element={<CoursePage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/apply" element={<ApplyPage />} />
         <Route path="/features/awa" element={<AwaAgentPage />} />
         <Route path="/features/studio" element={<StudioPage />} />
         <Route path="/features/brand-import" element={<BrandImportPage />} />

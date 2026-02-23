@@ -47,34 +47,7 @@ const LandingPageV3 = () => {
 
   const pricingTiers = [
     {
-      name: 'Free',
-      monthlyPrice: 0,
-      price: '$0',
-      oldPrice: null as string | null,
-      save: null as string | null,
-      credits: '50 credits to try it out',
-      images: '~25 Nano Banana or ~12 Nano Banana Pro images',
-      capacity: 'Great for a quick quality check',
-      blurb: 'Try Dezygn and see the quality.',
-      features: ['Unlimited use of Awa AI Creative Director'],
-      featured: false,
-    },
-    {
-      name: 'Small Business',
-      monthlyPrice: 29,
-      price: '$29',
-      oldPrice: '$49',
-      save: 'Save 41%',
-      credits: '500 credits/month',
-      images: '~250 Nano Banana or ~125 Nano Banana Pro images',
-      capacity: 'Best for in-house eCom teams',
-      blurb: 'For e-commerce stores creating their own product images.',
-      features: ['Unlimited use of Awa AI Creative Director', 'Credits reset monthly', 'Cancel anytime'],
-      featured: false,
-    },
-    {
       name: 'Freelancer',
-      badge: 'Most popular',
       monthlyPrice: 49,
       price: '$49',
       oldPrice: '$89',
@@ -88,10 +61,11 @@ const LandingPageV3 = () => {
         'Course, community, and business resources',
         'Credits reset monthly',
       ],
-      featured: true,
+      featured: false,
     },
     {
       name: 'Agency',
+      badge: 'Most popular',
       monthlyPrice: 99,
       price: '$99',
       oldPrice: '$149',
@@ -106,11 +80,30 @@ const LandingPageV3 = () => {
         'Free founder strategy call (1-on-1 setup + guidance)',
         'Priority access to new features',
       ],
+      featured: true,
+    },
+    {
+      name: 'Enterprise',
+      monthlyPrice: 399,
+      price: '$399',
+      oldPrice: null as string | null,
+      save: null as string | null,
+      credits: '10,000 credits/month',
+      images: '~5,000 Nano Banana or ~2,500 Nano Banana Pro images',
+      capacity: 'Unlimited scale — 10+ clients/month',
+      blurb: 'For high-volume studios and production teams.',
+      features: [
+        'Unlimited use of Awa AI Creative Director',
+        'Course, community, and business resources',
+        'Free founder strategy call (1-on-1 setup + guidance)',
+        'Priority access to new features',
+        'Dedicated onboarding & support',
+      ],
       featured: false,
     },
   ];
 
-  const roiRecommendedTierName = roiClients <= 0 ? 'Free' : roiClients <= 2 ? 'Freelancer' : 'Agency';
+  const roiRecommendedTierName = roiClients <= 2 ? 'Freelancer' : roiClients <= 6 ? 'Agency' : 'Enterprise';
   const roiRecommendedTier = pricingTiers.find((t) => t.name === roiRecommendedTierName) ?? pricingTiers[0];
   const roiEstRevenue = roiClients * roiValuePerClient;
   const roiPlanCost = roiRecommendedTier.monthlyPrice ?? 0;
@@ -1817,8 +1810,8 @@ const LandingPageV3 = () => {
 	                    {roiRecommendedTierName === 'Freelancer'
 	                      ? 'Typically fits 1-2 clients.'
 	                      : roiRecommendedTierName === 'Agency'
-	                        ? 'Typically fits 3-4 clients.'
-	                        : 'Start here, then upgrade anytime.'}
+	                        ? 'Typically fits 3-6 clients.'
+	                        : 'Built for 10+ clients at scale.'}
 	                  </p>
 	                </div>
 	                <div className="rounded-xl bg-black/30 border border-white/10 p-4">
@@ -1831,13 +1824,13 @@ const LandingPageV3 = () => {
 	              </div>
 
 	              <p className="text-xs text-gray-600 mt-4">
-	                Note: This is a simple revenue sanity check. If you create images in-house for your own store, Small Business is usually the best fit.
+	                Note: This is a simple revenue sanity check based on your estimated client volume.
 	              </p>
 	            </div>
 	          </div>
 
 	          {/* Pricing table */}
-	          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
+	          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
 	            {pricingTiers.map((tier) => {
 	              const isRecommended = tier.name === roiRecommendedTierName;
 	              return (
@@ -1846,7 +1839,7 @@ const LandingPageV3 = () => {
 	                className={[
 	                  'relative bg-[#0a0a0a] rounded-2xl p-7 overflow-hidden',
 	                  tier.featured ? 'border border-purple-500/40' : 'border border-white/5',
-	                  isRecommended ? 'ring-2 ring-emerald-400/30' : '',
+	                  '',
 	                ].join(' ')}
 	              >
 	                {tier.featured && (
@@ -1856,11 +1849,6 @@ const LandingPageV3 = () => {
 	                <div className="flex items-start justify-between gap-3 mb-5">
 	                  <div>
 	                    <p className="text-white font-bold text-lg">{tier.name}</p>
-	                    {isRecommended && (
-	                      <div className="inline-flex items-center mt-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs text-emerald-300">
-	                        Best for you
-	                      </div>
-	                    )}
 	                    {tier.badge && (
 	                      <div className="inline-flex items-center mt-2 px-2.5 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs text-purple-300">
 	                        {tier.badge}
