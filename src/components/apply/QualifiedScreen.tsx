@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Cal, { getCalApi } from '@calcom/embed-react';
 import { CheckCircle, CalendarCheck } from 'lucide-react';
+import ResourceLinks from './ResourceLinks';
 
 export default function QualifiedScreen() {
   const [confirmed, setConfirmed] = useState(false);
@@ -80,6 +81,8 @@ export default function QualifiedScreen() {
       >
         Calendar not loading? Book directly here
       </a>
+
+      <ResourceLinks heading="While you wait — free resources to get started" />
     </div>
   );
 }
