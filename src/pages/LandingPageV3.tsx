@@ -66,14 +66,14 @@ const LandingPageV3 = () => {
       featured: true,
     },
     {
-      name: 'Enterprise',
+      name: 'Studio',
       monthlyPrice: 399,
       price: '$399',
       oldPrice: null as string | null,
       save: null as string | null,
       credits: '10,000 credits/month',
       images: '~5,000 Nano Banana or ~2,500 Nano Banana Pro images',
-      capacity: 'Unlimited scale — 10+ clients/month',
+      capacity: 'Unlimited scale — 7+ clients/month',
       blurb: 'For high-volume studios and production teams.',
       features: [
         'Unlimited use of Awa AI Creative Director',
@@ -86,7 +86,7 @@ const LandingPageV3 = () => {
     },
   ];
 
-  const roiRecommendedTierName = roiClients <= 6 ? 'Agency' : 'Enterprise';
+  const roiRecommendedTierName = roiClients <= 6 ? 'Agency' : 'Studio';
   const roiRecommendedTier = pricingTiers.find((t) => t.name === roiRecommendedTierName) ?? pricingTiers[0];
   const roiEstRevenue = roiClients * roiValuePerClient;
   const roiPlanCost = roiRecommendedTier.monthlyPrice ?? 0;
@@ -1749,7 +1749,7 @@ const LandingPageV3 = () => {
 	                  <input
 	                    type="range"
 	                    min={0}
-	                    max={6}
+	                    max={10}
 	                    step={1}
 	                    value={roiClients}
 	                    onChange={(e) => setRoiClients(Number(e.target.value))}
@@ -1757,7 +1757,7 @@ const LandingPageV3 = () => {
 	                  />
 	                  <div className="flex justify-between text-xs text-gray-600 mt-2">
 	                    <span>0</span>
-	                    <span>6+</span>
+	                    <span>10+</span>
 	                  </div>
 	                </div>
 
@@ -1792,7 +1792,7 @@ const LandingPageV3 = () => {
 	                  <p className="text-xs text-gray-500 mt-2">
 	                    {roiRecommendedTierName === 'Agency'
 	                      ? 'Typically fits 3-6 clients.'
-	                      : 'Built for 10+ clients at scale.'}
+	                      : 'Built for 7+ clients at scale.'}
 	                  </p>
 	                </div>
 	                <div className="rounded-xl bg-black/30 border border-white/10 p-4">
@@ -1811,7 +1811,7 @@ const LandingPageV3 = () => {
 	          </div>
 
 	          {/* Pricing table */}
-	          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-14">
+	          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-14 max-w-3xl mx-auto">
 	            {pricingTiers.map((tier) => {
 	              return (
 	              <div
