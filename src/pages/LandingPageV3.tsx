@@ -47,23 +47,6 @@ const LandingPageV3 = () => {
 
   const pricingTiers = [
     {
-      name: 'Freelancer',
-      monthlyPrice: 49,
-      price: '$49',
-      oldPrice: '$89',
-      save: 'Save 45%',
-      credits: '1,000 credits/month',
-      images: '~500 Nano Banana or ~250 Nano Banana Pro images',
-      capacity: 'Enough for 1-2 clients/month',
-      blurb: 'For freelancers who want more volume and support.',
-      features: [
-        'Unlimited use of Awa AI Creative Director',
-        'Course, community, and business resources',
-        'Credits reset monthly',
-      ],
-      featured: false,
-    },
-    {
       name: 'Agency',
       badge: 'Most popular',
       monthlyPrice: 99,
@@ -103,7 +86,7 @@ const LandingPageV3 = () => {
     },
   ];
 
-  const roiRecommendedTierName = roiClients <= 2 ? 'Freelancer' : roiClients <= 6 ? 'Agency' : 'Enterprise';
+  const roiRecommendedTierName = roiClients <= 6 ? 'Agency' : 'Enterprise';
   const roiRecommendedTier = pricingTiers.find((t) => t.name === roiRecommendedTierName) ?? pricingTiers[0];
   const roiEstRevenue = roiClients * roiValuePerClient;
   const roiPlanCost = roiRecommendedTier.monthlyPrice ?? 0;
@@ -1807,11 +1790,9 @@ const LandingPageV3 = () => {
 	                  <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Recommended plan</p>
 	                  <p className="text-2xl font-black text-white">{roiRecommendedTierName}</p>
 	                  <p className="text-xs text-gray-500 mt-2">
-	                    {roiRecommendedTierName === 'Freelancer'
-	                      ? 'Typically fits 1-2 clients.'
-	                      : roiRecommendedTierName === 'Agency'
-	                        ? 'Typically fits 3-6 clients.'
-	                        : 'Built for 10+ clients at scale.'}
+	                    {roiRecommendedTierName === 'Agency'
+	                      ? 'Typically fits 3-6 clients.'
+	                      : 'Built for 10+ clients at scale.'}
 	                  </p>
 	                </div>
 	                <div className="rounded-xl bg-black/30 border border-white/10 p-4">
