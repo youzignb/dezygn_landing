@@ -23,6 +23,7 @@ import V1AccessPage from './pages/V1AccessPage';
 import LandingPage from './pages/LandingPage';
 import LandingPageNew from './pages/LandingPageNew';
 import LandingPageV3 from './pages/LandingPageV3';
+import AipaPage from './pages/AipaPage';
 import PromptographyPage from './pages/PromptographyPage';
 import PromptographyPageV2 from './pages/PromptographyPageV2';
 import BusinessPage from './pages/BusinessPage';
@@ -61,6 +62,7 @@ function App() {
         <Route path="/landing-new" element={<LandingPageNew />} />
         <Route path="/v3" element={<LandingPageV3 />} />
         <Route path="/landing-v3" element={<LandingPageV3 />} />
+        <Route path="/aipa" element={<AipaPage />} />
         <Route path="/business" element={<BusinessPage />} />
         <Route path="/agency" element={<AgencyPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />

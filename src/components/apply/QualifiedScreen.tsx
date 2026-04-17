@@ -1,70 +1,49 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import Cal, { getCalApi } from '@calcom/embed-react';
-import { CheckCircle, CalendarCheck } from 'lucide-react';
+import { CalendarCheck, Send } from 'lucide-react';
 import ResourceLinks from './ResourceLinks';
 
 export default function QualifiedScreen() {
-  const [confirmed, setConfirmed] = useState(false);
-
   useEffect(() => {
-    if (!confirmed) return;
     (async function () {
       const cal = await getCalApi({ namespace: 'launchpad' });
       cal('ui', { hideEventTypeDetails: false, layout: 'month_view' });
     })();
-  }, [confirmed]);
+  }, []);
 
-  // -- Show-up confirmation gate --
-  if (!confirmed) {
-    return (
-      <div className="text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
-          <CheckCircle className="w-8 h-8 text-green-400" />
-        </div>
-
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
-          Nice. Let's talk.
-        </h2>
-        <p className="text-gray-400 text-lg max-w-md mx-auto mb-8">
-          I'd love to hop on a quick 15-minute call to learn more about your
-          situation and see if the Launchpad is a good fit.
-        </p>
-
-        <p className="text-gray-300 text-sm max-w-sm mx-auto mb-8">
-          To respect everyone's time, please confirm you'll show up at your
-          selected time slot.
-        </p>
-
-        <div className="flex flex-col items-center gap-3">
-          <button
-            onClick={() => setConfirmed(true)}
-            className="flex items-center gap-2 px-8 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium transition-colors"
-          >
-            <CalendarCheck className="w-5 h-5" />
-            Yes, I'll be there. Let me book a time.
-          </button>
-
-          <a
-            href="/"
-            className="text-sm text-gray-500 hover:text-gray-300 transition-colors"
-          >
-            I can't commit right now
-          </a>
-        </div>
-      </div>
-    );
-  }
-
-  // -- Cal.com booking --
   return (
     <div className="text-center">
+      {/* Pre-call video gate */}
+      <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 max-w-2xl mx-auto leading-tight">
+        Your call has not been confirmed yet. Please watch this video in full for confirmation.
+      </h2>
+
+      <div className="max-w-3xl mx-auto mb-3">
+        <div
+          className="relative w-full bg-black/40 border border-white/10 rounded-xl overflow-hidden"
+          style={{ paddingBottom: '56.25%', height: 0 }}
+        >
+          <iframe
+            src="https://www.tella.tv/video/vid_cmo2ointn01iz04jl1awr0uko/embed?b=0&title=0&a=1&loop=0&t=0&muted=0&wt=0&o=0"
+            allow="autoplay; fullscreen"
+            allowTransparency
+            title="A.I.P.A. Launchpad — Pre-call briefing"
+            className="absolute top-0 left-0 w-full h-full border-0"
+          />
+        </div>
+      </div>
+      <p className="text-xs text-gray-500 max-w-xl mx-auto mb-12">
+        Once you have watched the video in full and you understand the program and pricing, please book your call.
+      </p>
+
+      {/* Calendar */}
       <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-500/10 border border-green-500/20 mb-6">
         <CalendarCheck className="w-8 h-8 text-green-400" />
       </div>
 
-      <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+      <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
         Pick a time that works for you.
-      </h2>
+      </h3>
       <Cal
         namespace="launchpad"
         calLink="bertrand-6hbdyx/launchpad"
@@ -82,7 +61,20 @@ export default function QualifiedScreen() {
         Calendar not loading? Book directly here
       </a>
 
-      <ResourceLinks heading="While you wait — free resources to get started" />
+      {/* Telegram shortcut */}
+      <div className="mt-10 flex flex-col items-center gap-2">
+        <a
+          href="https://t.me/moonin1984"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#229ED9]/15 border border-[#229ED9]/40 text-[#7ec6e7] hover:text-white hover:bg-[#229ED9]/25 transition-colors text-sm font-medium"
+        >
+          <Send className="w-4 h-4" />
+          Skip the queue — DM me on Telegram
+        </a>
+      </div>
+
+      <ResourceLinks heading="Free resources" />
     </div>
   );
 }

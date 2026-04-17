@@ -2,10 +2,10 @@ import { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, ArrowRight, Loader2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Logo from '../components/Logo';
 import QualifiedScreen from '../components/apply/QualifiedScreen';
 import NotQualifiedScreen from '../components/apply/NotQualifiedScreen';
 import { supabase } from '../lib/supabase';
+import aipaLogo from '../assets/images/logos/aipa-logo.png';
 
 // ---------------------------------------------------------------------------
 // Types & config
@@ -69,17 +69,15 @@ const REVENUE_OPTIONS = [
 ];
 
 const INVESTMENT_OPTIONS = [
-  '$1,000+ available to invest',
+  '$2,000-$5,000 available to invest',
+  '$1,000-$2,000 available to invest',
   '$500-$1,000 available to invest',
   'Less than $500 available',
-  "I'm not ready to invest right now",
 ];
 
 const TIMELINE_OPTIONS = [
-  "Immediately — I'm ready now",
-  'Within the next 2 weeks',
-  'Within the next month',
-  'Just exploring for now',
+  'This cohort (starting first week of May)',
+  'Next cohort (Late summer / Early Fall)',
 ];
 
 const CONFIDENCE_OPTIONS = [
@@ -90,7 +88,8 @@ const CONFIDENCE_OPTIONS = [
 ];
 
 const QUALIFIED_INVESTMENTS = new Set([
-  '$1,000+ available to invest',
+  '$2,000-$5,000 available to invest',
+  '$1,000-$2,000 available to invest',
   '$500-$1,000 available to invest',
 ]);
 
@@ -207,8 +206,8 @@ export default function ApplyPage() {
       <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
         <div className="flex items-center justify-center gap-2 pt-10 pb-6">
           <Link to="/" className="flex items-center gap-2">
-            <Logo variant="light" showText={false} size="sm" />
-            <span className="text-lg font-normal text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Launchpad</span>
+            <img src={aipaLogo} alt="A.I.P.A. Launchpad" className="w-9 h-9 rounded-full" />
+            <span className="text-lg font-normal text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>A.I.P.A. Launchpad</span>
           </Link>
         </div>
         <main className="pb-20 px-6">
@@ -410,8 +409,8 @@ export default function ApplyPage() {
 
       <div className="flex items-center justify-center gap-2 pt-10 pb-6">
         <Link to="/" className="flex items-center gap-2">
-          <Logo variant="light" showText={false} size="sm" />
-          <span className="text-lg font-normal text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>Launchpad</span>
+          <img src={aipaLogo} alt="A.I.P.A. Launchpad" className="w-9 h-9 rounded-full" />
+          <span className="text-lg font-normal text-white" style={{ fontFamily: 'Inter, system-ui, sans-serif' }}>A.I.P.A. Launchpad</span>
         </Link>
       </div>
 

@@ -4,16 +4,16 @@ export default function NotQualifiedScreen() {
   return (
     <div className="text-center">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-        Thanks for your interest.
+        Thanks for your application.
       </h2>
       <p className="text-gray-400 text-lg max-w-lg mx-auto mb-3">
-        The APA Launchpad isn't the right fit for everyone right now, and
-        that's totally fine.
+        Based on your submission, the AIPA Launchpad might not be a good fit
+        at the moment.
       </p>
       <p className="text-gray-400 max-w-lg mx-auto">
-        In the meantime, here are some free resources to help you get started
-        with AI photography on your own. When you're ready to go deeper,
-        we'll be here.
+        I'll keep you updated when I release a self-service course in the
+        future. In the meantime, here are some free resources to help you get
+        started with AI photography.
       </p>
 
       <ResourceLinks />
