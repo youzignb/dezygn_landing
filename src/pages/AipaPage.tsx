@@ -144,25 +144,6 @@ const WEEKS = [
   },
 ];
 
-/* ── Cohort deadline: April 22, 2026 @ 11:59 PM EDT (UTC−4) ── */
-const COHORT_DEADLINE_MS = new Date('2026-04-22T23:59:00-04:00').getTime();
-
-function useCountdown(deadlineMs: number) {
-  const [now, setNow] = useState(() => Date.now());
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  const diff = Math.max(0, deadlineMs - now);
-  return {
-    expired: diff === 0,
-    days: Math.floor(diff / 86_400_000),
-    hours: Math.floor((diff / 3_600_000) % 24),
-    minutes: Math.floor((diff / 60_000) % 60),
-    seconds: Math.floor((diff / 1000) % 60),
-  };
-}
-
 /* ── Fade-up observer hook ── */
 function useFadeUp() {
   const ref = useRef<HTMLDivElement>(null);
@@ -191,7 +172,6 @@ function useFadeUp() {
 const AipaPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const rootRef = useFadeUp();
-  const countdown = useCountdown(COHORT_DEADLINE_MS);
 
   const toggleFaq = useCallback(
     (i: number) => setOpenFaq((prev) => (prev === i ? null : i)),
@@ -254,14 +234,14 @@ const AipaPage = () => {
 
       {/* HERO */}
       <section className="hero">
-        <span className="hero-eyebrow">A.I.P.A. Launchpad™ — Now Enrolling for Spring Cohort</span>
+        <span className="hero-eyebrow">A.I.P.A. Launchpad™ — By Application. Rolling Cohorts.</span>
         <h1>
-          For the Eternal Learner Who's Tried Everything Online — But Still Hasn't Made{' '}
-          <em>Consistent Money</em>
+          My Weird Little AI Side Hustle That's Currently Making Me{' '}
+          <em>$26,838/Year</em> On Just <em>23 Hours A Month</em>…
         </h1>
         <p className="hero-sub">
-          How the Proof-Before-Pitch Method™ lands your first 1–3 paying AI Photography
-          clients in 6 weeks — without a website, portfolio, or months of preparation.
+          And how to ETHICALLY copy my exact system in the next 6 weeks — without cold calling,
+          a portfolio, or being salesy.
         </p>
       </section>
 
@@ -283,10 +263,10 @@ const AipaPage = () => {
       {/* CTA #1 */}
       <section className="cta-block" id="apply">
         <a href="https://www.dezygn.com/apply" className="btn-primary">
-          Apply for the Spring Cohort &rarr;
+          Apply for a Seat &rarr;
         </a>
         <span className="cta-micro">
-          Takes 2 minutes. I review every application personally. No commitment required.
+          Takes 2 minutes. I review every application personally. Payment plans available.
         </span>
       </section>
 
@@ -393,9 +373,9 @@ const AipaPage = () => {
 
           <div className="earnings-grid fade-up">
             {[
-              { amount: '$2,250/m', label: 'From 3 clients' },
-              { amount: '16 hrs', label: 'Work per month' },
-              { amount: '$140/hr', label: 'Effective hourly rate' },
+              { amount: '$2,237/m', label: 'From 3 clients' },
+              { amount: '23 hrs', label: 'Work per month' },
+              { amount: '$97.24/hr', label: 'Effective hourly rate' },
             ].map((e) => (
               <div key={e.label} className="earning-card">
                 <div className="amount">{e.amount}</div>
@@ -419,7 +399,7 @@ const AipaPage = () => {
           <p className="fade-up">
             And I built this quietly. <strong>No cold calls.</strong> No pushy pitches. No
             blasting strangers with spam DMs at 11pm. No chasing. No hustle-bro energy.{' '}
-            <strong>One hour of outreach per day. 16 hours of actual client work per month.</strong>{' '}
+            <strong>One hour of outreach per day. 23 hours of actual client work per month.</strong>{' '}
             A side income that respects my time — and the people I reach out to.
           </p>
           <p className="fade-up">
@@ -514,9 +494,9 @@ const AipaPage = () => {
           {/* CTA after weeks */}
           <div className="cta-block" style={{ background: 'transparent', padding: '40px 0 64px' }}>
             <a href="https://www.dezygn.com/apply" className="btn-primary">
-              Apply for the Spring Cohort &rarr;
+              Apply for a Seat &rarr;
             </a>
-            <span className="cta-micro">15 spots only. Applications reviewed personally.</span>
+            <span className="cta-micro">15 seats per cohort. Applications reviewed personally.</span>
           </div>
 
           {/* WHAT'S INCLUDED */}
@@ -584,9 +564,9 @@ const AipaPage = () => {
           {/* CTA after included */}
           <div className="cta-block" style={{ background: 'transparent', padding: '48px 0 0' }}>
             <a href="https://www.dezygn.com/apply" className="btn-primary">
-              Apply for the Spring Cohort &rarr;
+              Apply for a Seat &rarr;
             </a>
-            <span className="cta-micro">Spring Cohort starts soon. No commitment to apply.</span>
+            <span className="cta-micro">Next cohort opens on a rolling basis. No commitment to apply.</span>
           </div>
 
         </div>
@@ -642,7 +622,7 @@ const AipaPage = () => {
         }}
       >
         <a href="https://www.dezygn.com/apply" className="btn-primary">
-          Apply for the Spring Cohort &rarr;
+          Apply for a Seat &rarr;
         </a>
         <span className="cta-micro">
           Takes 2 minutes. No commitment. I read every application personally.
@@ -653,51 +633,12 @@ const AipaPage = () => {
       <section className="urgency-section">
         <div className="container">
           <span className="section-label">Limited Cohort</span>
-          {countdown.expired ? (
-            <>
-              <h2 className="fade-up">Applications are now closed.</h2>
-              <p className="fade-up">
-                The Spring Cohort window has ended. The next cohort will open soon — drop your
-                email below or check back.
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 className="fade-up">The Spring Cohort is capped at 15 people.</h2>
-              <p className="fade-up">
-                Not as a marketing tactic. Because I'm personally reviewing every member's
-                positioning and pipeline throughout six weeks. Once the 15 spots are filled — or
-                the window closes — applications end. There is no waitlist.
-              </p>
-              <div className="countdown fade-up" role="timer" aria-live="polite">
-                <div className="countdown-label">Applications close in</div>
-                <div className="countdown-grid">
-                  <div className="cd-unit">
-                    <span className="cd-num">{String(countdown.days).padStart(2, '0')}</span>
-                    <span className="cd-lbl">Days</span>
-                  </div>
-                  <div className="cd-sep">:</div>
-                  <div className="cd-unit">
-                    <span className="cd-num">{String(countdown.hours).padStart(2, '0')}</span>
-                    <span className="cd-lbl">Hours</span>
-                  </div>
-                  <div className="cd-sep">:</div>
-                  <div className="cd-unit">
-                    <span className="cd-num">{String(countdown.minutes).padStart(2, '0')}</span>
-                    <span className="cd-lbl">Minutes</span>
-                  </div>
-                  <div className="cd-sep">:</div>
-                  <div className="cd-unit">
-                    <span className="cd-num">{String(countdown.seconds).padStart(2, '0')}</span>
-                    <span className="cd-lbl">Seconds</span>
-                  </div>
-                </div>
-                <div className="countdown-foot">
-                  …or when the 15 spots fill — whichever comes first.
-                </div>
-              </div>
-            </>
-          )}
+          <h2 className="fade-up">Each cohort is capped at 15 people.</h2>
+          <p className="fade-up">
+            Not as a marketing tactic. Because I'm personally reviewing every member's positioning
+            and pipeline throughout six weeks. Once a cohort fills, applications close and the
+            next one opens. No waitlist — just a fresh start.
+          </p>
         </div>
       </section>
 
@@ -734,10 +675,10 @@ const AipaPage = () => {
             it's not — I'll tell you honestly and point you somewhere more useful.
           </p>
           <a href="https://www.dezygn.com/apply" className="btn-primary fade-up">
-            Apply for the Spring Cohort &rarr;
+            Apply for a Seat &rarr;
           </a>
           <span className="cta-micro" style={{ marginTop: 20 }}>
-            Applications close once the 15 Spring Cohort spots are filled.
+            Each cohort closes once 15 seats are filled. Payment plans available.
           </span>
         </div>
       </section>
@@ -1085,43 +1026,6 @@ const AIPA_STYLES = `
   }
   .aipa-page .urgency-section p {
     color: var(--gray-2); max-width: 540px; margin: 0 auto; font-size: 16px; line-height: 1.75;
-  }
-  /* COUNTDOWN */
-  .aipa-page .countdown {
-    max-width: 540px; margin: 36px auto 0; background: var(--surface-2);
-    border: 1px solid var(--border); border-top: 2px solid var(--gold);
-    padding: 28px 24px;
-  }
-  .aipa-page .countdown-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
-    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
-  }
-  .aipa-page .countdown-grid {
-    display: flex; justify-content: center; align-items: flex-start; gap: 8px;
-  }
-  .aipa-page .cd-unit {
-    display: flex; flex-direction: column; align-items: center;
-    min-width: 64px;
-  }
-  .aipa-page .cd-num {
-    font-size: clamp(32px, 5vw, 46px); font-weight: 700; color: var(--white);
-    letter-spacing: -0.02em; line-height: 1; font-variant-numeric: tabular-nums;
-  }
-  .aipa-page .cd-lbl {
-    font-size: 10px; font-weight: 600; letter-spacing: 0.15em;
-    text-transform: uppercase; color: var(--gray-3); margin-top: 10px;
-  }
-  .aipa-page .cd-sep {
-    font-size: clamp(28px, 4vw, 40px); font-weight: 300; color: var(--gray-3);
-    line-height: 1; padding: 0 2px;
-  }
-  .aipa-page .countdown-foot {
-    font-size: 12px; color: var(--gray-2); margin-top: 18px; line-height: 1.55;
-  }
-  @media (max-width: 480px) {
-    .aipa-page .cd-unit { min-width: 52px; }
-    .aipa-page .cd-sep { display: none; }
-    .aipa-page .countdown-grid { gap: 14px; }
   }
 
   /* FAQ */

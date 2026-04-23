@@ -15,7 +15,7 @@ export default function QualifiedScreen() {
     <div className="text-center">
       {/* Pre-call video gate */}
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 max-w-2xl mx-auto leading-tight">
-        Your call has not been confirmed yet. Please watch this video in full for confirmation.
+        Your application isn't confirmed yet. Watch this video in full before booking your call.
       </h2>
 
       <div className="max-w-3xl mx-auto mb-3">

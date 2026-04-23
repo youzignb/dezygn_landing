@@ -76,8 +76,8 @@ const INVESTMENT_OPTIONS = [
 ];
 
 const TIMELINE_OPTIONS = [
-  'This cohort (starting first week of May)',
-  'Next cohort (Late summer / Early Fall)',
+  'ASAP — next available cohort',
+  'Later in 2026 — I’m planning ahead',
 ];
 
 const CONFIDENCE_OPTIONS = [
