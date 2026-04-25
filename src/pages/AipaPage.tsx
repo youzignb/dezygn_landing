@@ -95,7 +95,7 @@ const WEEKS = [
     num: '02',
     title: 'The Outreach Engine',
     items: [
-      'Send 20 Proof-Before-Pitch messages per day for 5 consecutive days',
+      'Send 10 Proof-Before-Pitch messages per day for 5 consecutive days',
       'Track everything with the Outreach Scorecard™',
       'Publish your first niche-relevant LinkedIn post',
     ],
@@ -685,11 +685,20 @@ const AipaPage = () => {
 
       {/* FOOTER */}
       <footer className="aipa-footer">
+        <p className="aipa-footer-disclaimer">
+          Results and income are not guaranteed. Client and income examples are
+          illustrative only; your results will vary based on your own efforts and
+          circumstances.
+        </p>
         <p>
-          &copy; 2025 A.I.P.A. Launchpad™ &middot; Built by Bertrand &middot;{' '}
-          <a href="/privacy" style={{ color: 'var(--gray-3)' }}>
-            Privacy
-          </a>
+          &copy; {new Date().getFullYear()} A.I.P.A. Launchpad™ &middot; Built by Bertrand
+        </p>
+        <p className="aipa-footer-links">
+          <a href="/privacy">Privacy</a>
+          <span aria-hidden="true">·</span>
+          <a href="/terms">Terms</a>
+          <span aria-hidden="true">·</span>
+          <a href="/earnings-disclaimer">Earnings Disclaimer</a>
         </p>
       </footer>
     </div>
@@ -1076,8 +1085,18 @@ const AIPA_STYLES = `
   /* FOOTER */
   .aipa-footer {
     padding: 40px 24px; border-top: 1px solid var(--border); background: var(--surface);
-    text-align: center; font-size: 12px; color: var(--gray-3);
+    text-align: center; font-size: 12px; color: var(--gray-3); line-height: 1.7;
   }
+  .aipa-page .aipa-footer p { margin: 0 0 10px; }
+  .aipa-page .aipa-footer p:last-child { margin-bottom: 0; }
+  .aipa-page .aipa-footer-disclaimer {
+    max-width: 720px; margin: 0 auto 16px; font-style: italic;
+    color: var(--gray-3); font-size: 11px; line-height: 1.7;
+  }
+  .aipa-page .aipa-footer-links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .aipa-page .aipa-footer-links a { color: var(--gray-3); text-decoration: none; }
+  .aipa-page .aipa-footer-links a:hover { color: var(--gold); }
+  .aipa-page .aipa-footer-links span { color: var(--gray-3); opacity: 0.5; }
 
   /* ANIMATIONS */
   .aipa-page .fade-up {

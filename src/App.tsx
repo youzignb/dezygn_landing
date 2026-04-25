@@ -24,6 +24,8 @@ import LandingPage from './pages/LandingPage';
 import LandingPageNew from './pages/LandingPageNew';
 import LandingPageV3 from './pages/LandingPageV3';
 import AipaPage from './pages/AipaPage';
+import EarningsDisclaimerPage from './pages/EarningsDisclaimerPage';
+import CookieBanner from './components/CookieBanner';
 import PromptographyPage from './pages/PromptographyPage';
 import PromptographyPageV2 from './pages/PromptographyPageV2';
 import BusinessPage from './pages/BusinessPage';
@@ -63,6 +65,7 @@ function App() {
         <Route path="/v3" element={<LandingPageV3 />} />
         <Route path="/landing-v3" element={<LandingPageV3 />} />
         <Route path="/aipa" element={<AipaPage />} />
+        <Route path="/earnings-disclaimer" element={<EarningsDisclaimerPage />} />
         <Route path="/business" element={<BusinessPage />} />
         <Route path="/agency" element={<AgencyPage />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
@@ -109,6 +112,7 @@ function App() {
         <Route path="/glossary" element={<GlossaryIndexPage />} />
         <Route path="/glossary/:slug" element={<GlossaryPage />} />
       </Routes>
+      <CookieBanner />
     </Router>
     </HelmetProvider>
   );
