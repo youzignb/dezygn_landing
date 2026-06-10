@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Search, ExternalLink, HelpCircle, Star, Zap, DollarSign, Shield, Video, Palette } from 'lucide-react';
 import HeaderV4 from '../components/HeaderV4';
@@ -393,6 +394,25 @@ We ensure you have everything needed to build a successful creative business.`
 
   return (
     <div className={`${sans} min-h-screen bg-[#F7F5F0] text-[#1A1A1A] antialiased selection:bg-[#8B5CF6]/25`}>
+      <Helmet>
+        <title>Frequently Asked Questions | Dezygn</title>
+        <meta
+          name="description"
+          content="Answers to common questions about Dezygn: getting started, features, pricing, building a creative business, and support."
+        />
+        <link rel="canonical" href="https://dezygn.com/faq" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqs.map((faq) => ({
+              '@type': 'Question',
+              name: faq.question,
+              acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+            })),
+          })}
+        </script>
+      </Helmet>
       <HeaderV4 />
 
       <main>

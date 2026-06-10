@@ -55,6 +55,30 @@ const PricingPage = () => {
     <div className={`${sans} min-h-screen bg-[#F7F5F0] text-[#1A1A1A] antialiased selection:bg-[#8B5CF6]/25`}>
       <Helmet>
         <title>Pricing - Simple Plans | Dezygn</title>
+        <meta
+          name="description"
+          content="Simple, transparent pricing for AI product photography. Agency $99/mo (2,500 credits) or Studio $399/mo (10,000 credits). Start free with 50 credits."
+        />
+        <link rel="canonical" href="https://dezygn.com/pricing" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Product',
+            name: 'Dezygn',
+            description:
+              'AI product photography platform for freelancers, agencies, and e-commerce brands.',
+            brand: { '@type': 'Brand', name: 'Dezygn' },
+            offers: plans.map((plan) => ({
+              '@type': 'Offer',
+              name: `${plan.name} Plan`,
+              price: plan.price.replace('$', ''),
+              priceCurrency: 'USD',
+              description: `${plan.credits} — ${plan.scale}`,
+              url: 'https://dezygn.com/pricing',
+              availability: 'https://schema.org/InStock',
+            })),
+          })}
+        </script>
       </Helmet>
 
       <HeaderV4 />
