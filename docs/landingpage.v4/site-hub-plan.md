@@ -1,6 +1,7 @@
 # Dezygn.com Hub Plan — "The Reference for AI Photography"
 
 **Date:** 2026-06-10
+**Companion docs:** [`style-guide.md`](./style-guide.md) (the v4 paper-and-ink design system) · [`source-material.md`](./source-material.md) (original brief + all IP/source locations)
 **Goal:** When a biz-opp seeker or an AI creative director browses any header/footer link, the reaction is: *"This person actually does this work. This is precise, sharp, well organized."* Every page either demonstrates real expertise (from the AIPA / Conversion Photography System IP) or moves the visitor one step down the funnel.
 
 ---
@@ -125,9 +126,15 @@ Alternatives considered (usable later as content upgrades on specific pages):
 - `lead-magnet-capture` edge function v17 deployed: Resend delivery branches for `visual_syntax_cheatsheet` (PDF email) and `webinar_registration` (confirmation email). Playbook flow untouched. Tested live.
 - All v4 subpages share `v4Theme.tsx` (SEO pages) / `FeaturePageLayout.tsx` (feature pages).
 
-## 9. Remaining backlog (phase 3)
-1. Content rewrites with real IP: shot-types data (Visual Syntax taxonomy), resources pillar guides (§4), use-cases/industries case anchors.
-2. Prerendering/SSG + JSON-LD structured data.
-3. Checkout link for `/client-system` (Stripe Payment Link / JVZoo), then link it from emails/nav.
-4. Webinar date + platform; first live run to the list.
-5. Delete the now-unrouted legacy page files (HomePage, LandingPage, LandingPageNew, SpecialPage, ShortcutsPage, UpgradePage, ReportPage, ReportDownloadPage, PromptographyPage(V2), BusinessPage, AgencyPage, V1AccessPage, HomeArchivePage) once confident.
+## 9. Phase 3 — status as of 2026-06-10 (third pass)
+1. ✅ **Content rewrites with real IP, all done from the private modules** (digested via 4 reader agents over Modules 1-5 + AIPA transcript + Client System doc):
+   - `src/data/shot-types.ts` — all 10 pages rewritten on the Conversion Photography System taxonomy + camera recipes + production rules (2K text rule, output≥input resolution, mid-shot rule, clean-portrait rule, reflective-lighting rule). **2 new pages added:** `/shot-types/brand-atmosphere` (Kaze/Sabae/Ono Castle methodology) and `/shot-types/paparazzi` (Retro Wear campaign).
+   - `src/data/resources.ts` — replaced with the §4 pillar guides: `visual-syntax` (cornerstone, CTA → /#cheatsheet anchor added on homepage), `rd-process` (new), `proof-before-pitch` (new, CTA → /webinar), `ai-photography-pricing`, `start-ai-photography-agency`, `ai-product-photography-guide`; YouTube masterclass entry kept. Each guide has FAQ (renders FAQPage JSON-LD via existing ResourcePage). Dropped slugs 301-style redirect in App.tsx to their replacements.
+   - `src/data/use-cases.ts` — all 15 rewritten with real anchors (golf=Abacus/Fairway session numbers, skincare/candles=My Lela brand world, jewelry=Milan $2k, toys=2-star review story, outdoor=Bounce jacket session, pets=composition-transfer example) + **new `/use-cases/eyewear`** (Kaze/Retro Wear, $700/mo retainer). Invented market stats replaced with real workflow numbers.
+   - `src/data/industries.ts` — all 6 rewritten; freelancers page previews Proof Before Pitch with secondary CTA → /webinar (new optional `secondaryCta` field rendered in IndustryPage); agencies page leads with the Fairway dogfooding story + Andromeda/creative-fatigue angle.
+   - `src/data/glossary.ts` — 9 of his exact terms added: packshot, pdp, comp-card, dedicated-model, brand-world, proof-before-pitch, creative-fatigue, multimodal-anchoring, sequential-pipeline.
+   - Paid IP boundary respected throughout: rate card, Retainer Flip, templates/swipes/SOPs/extraction prompts only teased, never revealed. Public-safe numbers only ($25-150/img, $1k-3k retainers, Milan $2k, Bruce $4.8k, $700/$780 retainers).
+2. ✅ **Prerendering + JSON-LD.** `scripts/prerender.mjs` (puppeteer devDep) runs in `npm run build` after vite: serves dist, snapshots every sitemap URL to `dist/<route>/index.html` (107+ routes, soft-fails to SPA if Chrome unavailable so Vercel can't break). JSON-LD added: Product+Offer on /pricing, FAQPage schema + Helmet on /faq (Article+FAQ on guides already existed). ⚠️ Verify prerender works on Vercel's build image after first deploy — if Chrome won't launch there it logs a warning and ships the SPA shell.
+3. ⏳ Checkout link for `/client-system` (Stripe Payment Link / JVZoo), then link it from emails/nav. **(Bertrand)**
+4. ⏳ Webinar date + platform; first live run to the list. **(Bertrand)**
+5. ✅ Deleted all 15 unrouted legacy page files (incl. CoursePage).
