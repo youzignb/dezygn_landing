@@ -1,50 +1,72 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Sparkles, Brain, Image, Globe, Camera, Share2, Video, ChefHat } from 'lucide-react';
-import HeaderV3 from '../components/HeaderV3';
-import FooterV3 from '../components/FooterV3';
+import { ArrowRight, Brain, ClipboardCheck, GalleryHorizontalEnd, Globe, Image, Mail, MessageSquare, Search } from 'lucide-react';
+import HeaderV4 from '../components/HeaderV4';
+import FooterV4 from '../components/FooterV4';
+import { CtaBand, EditorialTitle, Eyebrow, StartFreeButton, mono, sans } from './features/FeaturePageLayout';
 
 const features = [
   {
-    title: 'Awa AI Creative Director',
-    description: '12+ specialized skills including internet search, prompt enhancement, and vision-based refinement. Powered by Claude reasoning — she plans, verifies, and executes on brand, every time.',
+    title: 'Awa',
+    tag: 'AI Creative Assistant',
+    description: 'Your AI creative assistant, trained in AI photography. Brief her in chat — she writes the prompt, generates, checks quality, and iterates to client-ready.',
     icon: Brain,
     to: '/features/awa',
-    highlights: ['Claude reasoning engine', '12+ creative skills', 'Vision-based refinement', 'Brand-aware generation'],
+  },
+  {
+    title: 'Outreach Factory',
+    tag: 'Visual Cold Email',
+    description: 'Import CSV lead lists, discover each brand’s product, generate personalized proof-of-work visuals, and export an Instantly-ready CSV.',
+    icon: Mail,
+    to: '/features/outreach',
+  },
+  {
+    title: 'Opportunities',
+    tag: 'Upwork Feed',
+    description: 'A daily Upwork scan brings scored AI photography jobs into your studio. Apply, track wins, and never run out of gigs to chase.',
+    icon: Search,
+    to: '/features/opportunities',
+  },
+  {
+    title: 'Concepts',
+    tag: 'Direction Approval',
+    description: 'Share concept directions with reference images on one public link. Clients approve, request tweaks, or pass before production starts.',
+    icon: ClipboardCheck,
+    to: '/features/concepts',
+  },
+  {
+    title: 'Feedback',
+    tag: 'Review Inbox',
+    description: 'Public client review pages with ratings and comments, collected into one inbox that routes feedback back to the source campaign.',
+    icon: MessageSquare,
+    to: '/features/feedback',
+  },
+  {
+    title: 'Recipes',
+    tag: 'Reusable Templates',
+    description: 'Save the prompts, models, ingredients, and parameters that worked — then reuse them on recurring client work in one click.',
+    icon: GalleryHorizontalEnd,
+    to: '/features/recipes',
   },
   {
     title: 'Studio & Gallery',
-    description: 'Full-size image review, rating system, side-by-side comparison mode, and a beautiful gallery to manage all your creations. Filter, sort, and share — built for production workflows.',
+    tag: 'Production Workspace',
+    description: 'Chat, canvas, side-by-side comparison, and a gallery built for selecting winners and sharing them with clients.',
     icon: Image,
     to: '/features/studio',
-    highlights: ['Comparison mode', 'Rating system', 'Client sharing', 'Watermark protection'],
   },
   {
     title: 'Brand Import',
-    description: 'One-click URL import pulls your full brand identity — colors, fonts, logo, visual style. Every image Dezygn creates stays on-brand without manual setup.',
+    tag: 'Client Setup',
+    description: 'Import a client’s brand from their website — logos, colors, and visual style — so every generation starts on-brand.',
     icon: Globe,
     to: '/features/brand-import',
-    highlights: ['1-click URL import', 'Shopify integration', 'Brand DNA extraction', 'Unlimited brands'],
   },
-  {
-    title: 'Recipe Library',
-    description: '268 ready-to-use AI photography templates across 26 categories. Pick a recipe, add your product, and generate studio-quality images — no prompt engineering needed.',
-    icon: ChefHat,
-    to: '/features/recipes',
-    highlights: ['268 templates', '26 product categories', 'One-click generation', 'No prompt writing'],
-  },
-];
-
-const additionalFeatures = [
-  { icon: Camera, title: 'Unlimited Campaigns', description: 'Organize work by product, season, or client. No limits.' },
-  { icon: Share2, title: 'Client Collaboration', description: 'Share pages with watermarks. Clients rate and leave notes directly.' },
-  { icon: Video, title: 'Video Animation', description: 'Turn your AI images into animated product videos. Beta feature.' },
-  { icon: Sparkles, title: '2,500 Credits/Month', description: 'Generate ~500 images monthly. Credits roll over — you never lose them.' },
 ];
 
 const FeaturesPage = () => {
   return (
-    <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white overflow-x-hidden">
+    <div className={`${sans} min-h-screen bg-[#F7F5F0] text-[#1A1A1A] antialiased selection:bg-[#8B5CF6]/25`}>
       <Helmet>
         <title>Features — AI Creative Suite | Dezygn</title>
         <meta
@@ -54,114 +76,61 @@ const FeaturesPage = () => {
         <link rel="canonical" href="https://dezygn.com/features" />
       </Helmet>
 
-      <HeaderV3 />
+      <HeaderV4 />
 
-      <main className="pt-24">
-        {/* Breadcrumbs */}
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <nav aria-label="Breadcrumb" className="text-sm text-gray-500">
-            <ol className="flex items-center gap-2">
-              <li>
-                <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
-              </li>
-              <li aria-hidden="true">/</li>
-              <li className="text-gray-300">Features</li>
-            </ol>
-          </nav>
-        </div>
-
+      <main>
         {/* Hero */}
-        <section className="max-w-7xl mx-auto px-6 py-20 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            The AI Creative{' '}
-            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Suite
-            </span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            Everything you need to create accurate, realistic, and on-brand AI product photography — from brand import to client delivery.
-          </p>
-        </section>
-
-        {/* Core Feature Cards */}
-        <section className="max-w-7xl mx-auto px-6 py-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {features.map((feature) => (
-              <Link
-                key={feature.to}
-                to={feature.to}
-                className="group bg-white/[0.03] border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all flex flex-col"
-              >
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6">
-                  <feature.icon className="w-6 h-6" />
-                </div>
-
-                <h2 className="text-2xl font-bold text-white group-hover:text-purple-300 transition-colors mb-3">
-                  {feature.title}
-                </h2>
-
-                <p className="text-gray-400 leading-relaxed mb-6 flex-grow">
-                  {feature.description}
-                </p>
-
-                <ul className="space-y-2 mb-6">
-                  {feature.highlights.map((h) => (
-                    <li key={h} className="flex items-center gap-2 text-sm text-gray-300">
-                      <div className="w-1.5 h-1.5 rounded-full bg-purple-500" />
-                      {h}
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="flex items-center gap-1.5 text-sm text-purple-400 group-hover:text-purple-300 transition-colors mt-auto">
-                  <span>Learn more</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-
-        {/* Additional Features */}
-        <section className="max-w-7xl mx-auto px-6 py-20">
-          <h2 className="text-3xl font-bold text-center mb-12">And more built in</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalFeatures.map((f) => (
-              <div
-                key={f.title}
-                className="bg-white/[0.02] border border-white/5 rounded-xl p-6 text-center"
-              >
-                <div className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 mx-auto mb-4">
-                  <f.icon className="w-5 h-5" />
-                </div>
-                <h3 className="font-semibold text-white mb-2">{f.title}</h3>
-                <p className="text-sm text-gray-500">{f.description}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="max-w-7xl mx-auto px-6 py-20">
-          <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-10 md:p-16 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              See it in action
-            </h2>
-            <p className="text-gray-400 text-lg max-w-xl mx-auto mb-8">
-              Start creating studio-quality AI product photography today. $99/month, 30-day money-back guarantee.
+        <section className="relative overflow-hidden bg-[#F7F5F0] px-5 pb-14 pt-28 sm:pb-16 sm:pt-32">
+          <div className="relative z-10 mx-auto max-w-3xl text-center">
+            <Eyebrow>Features</Eyebrow>
+            <h1 className="mt-7 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
+              <EditorialTitle text="A Studio OS, Not A Generator." />
+            </h1>
+            <p className="mx-auto mt-6 max-w-2xl text-[15px] leading-7 text-[#6B6459] sm:text-lg sm:leading-8">
+              Everything an AI photography operator needs for client work — finding gigs, pitching prospects, aligning on direction, producing visuals, and collecting feedback — in one workspace.
             </p>
-            <a
-              href="https://chat.dezygn.com/signup"
-              className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-8 py-3.5 rounded-xl transition-colors"
-            >
-              Get Started
-              <ArrowRight className="w-4 h-4" />
-            </a>
+            <div className="mt-9 flex justify-center">
+              <StartFreeButton />
+            </div>
           </div>
         </section>
+
+        {/* Feature card grid */}
+        <section className="bg-[#EDEBE6] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              {features.map((feature, index) => (
+                <Link
+                  key={feature.to}
+                  to={feature.to}
+                  className="group flex flex-col rounded-3xl border border-[#1A1A1A]/10 bg-white p-7 shadow-[0_16px_40px_rgba(26,26,26,0.06)] transition hover:border-[#8B5CF6]/40"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#8B5CF6]/10 text-[#7C3AED]">
+                      <feature.icon className="h-5 w-5" />
+                    </span>
+                    <span className={`${mono} text-xs font-medium text-[#8B867B]`}>{String(index + 1).padStart(2, '0')}</span>
+                  </div>
+                  <p className={`${mono} mt-6 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED]`}>{feature.tag}</p>
+                  <h2 className="mt-2 text-lg font-semibold tracking-tight text-[#1A1A1A]">{feature.title}</h2>
+                  <p className="mt-2.5 flex-grow text-sm leading-6 text-[#6B6459]">{feature.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[#7C3AED]">
+                    Learn more
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <CtaBand
+          headline="See The Whole System In Action."
+          body="From your first gig to your first client review round — start free and run the workflow end to end."
+        />
       </main>
 
-      <FooterV3 />
+      <FooterV4 />
     </div>
   );
 };

@@ -1,23 +1,29 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, Search, ExternalLink, HelpCircle, Star, Zap, DollarSign, Shield, Video, Palette } from 'lucide-react';
-import Layout from '../components/Layout';
+import HeaderV4 from '../components/HeaderV4';
+import FooterV4 from '../components/FooterV4';
+
+const mono = "font-['IBM_Plex_Mono','SFMono-Regular',ui-monospace,monospace]";
+const sans = "font-['Inter','Helvetica_Neue',ui-sans-serif,sans-serif]";
+const serif = "font-['Instrument_Serif',Georgia,serif]";
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 overflow-hidden">
+    <div className="overflow-hidden rounded-3xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left flex justify-between items-start gap-4 p-6 text-white hover:bg-white/5 transition-colors"
+        aria-expanded={isOpen}
+        className="flex w-full items-start justify-between gap-4 p-6 text-left text-[#1A1A1A] transition-colors hover:bg-[#F7F5F0]"
       >
-        <span className="font-semibold text-lg">{question}</span>
-        <ChevronDown className={`w-5 h-5 flex-shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+        <span className="text-lg font-semibold tracking-tight">{question}</span>
+        <ChevronDown className={`h-5 w-5 flex-shrink-0 text-[#8B867B] transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
       {isOpen && (
         <div className="px-6 pb-6">
-          <div className="text-white/80 leading-relaxed whitespace-pre-line">
+          <div className="whitespace-pre-line leading-7 text-[#6B6459]">
             {answer}
           </div>
         </div>
@@ -386,113 +392,124 @@ We ensure you have everything needed to build a successful creative business.`
   });
 
   return (
-    <Layout>
+    <div className={`${sans} min-h-screen bg-[#F7F5F0] text-[#1A1A1A] antialiased selection:bg-[#8B5CF6]/25`}>
+      <HeaderV4 />
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-purple-500/20 backdrop-blur-sm rounded-full px-6 py-2 border border-purple-400/30 mb-6">
-            <HelpCircle className="w-4 h-4 text-purple-400" />
-            <span className="text-white text-sm font-medium">Frequently Asked Questions</span>
+      <main>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden px-5 pb-12 pt-32 sm:pt-40">
+          <span aria-hidden className={`${serif} pointer-events-none absolute -right-4 top-28 hidden rotate-12 text-[120px] italic leading-none text-[#8B5CF6]/15 lg:block`}>
+            ✦
+          </span>
+          <div className="mx-auto max-w-3xl text-center">
+            <p className={`${mono} mb-6 inline-flex -rotate-2 items-center gap-2 rounded-full border border-[#1A1A1A]/10 bg-white px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED] shadow-sm`}>
+              <HelpCircle className="h-3.5 w-3.5" />
+              Frequently Asked Questions
+            </p>
+
+            <h1 className="text-4xl font-semibold leading-[1.05] tracking-tight text-[#1A1A1A] sm:text-6xl">
+              Get Answers <span className={`${serif} italic font-normal text-[#7C3AED]`}>Fast.</span>
+            </h1>
+
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#6B6459]">
+              Everything you need to know about building a successful creative business with Dezygn
+            </p>
+
+            {/* Search Bar */}
+            <div className="relative mx-auto mt-8 max-w-xl">
+              <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#8B867B]" />
+              <input
+                type="text"
+                placeholder="Search for answers..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full rounded-full border border-[#1A1A1A]/12 bg-white py-4 pl-12 pr-4 text-[15px] text-[#1A1A1A] shadow-sm placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
+              />
+            </div>
           </div>
-          
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Get <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Answers</span> Fast
-          </h1>
-          
-          <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-            Everything you need to know about building a successful creative business with Dezygn
-          </p>
+        </section>
 
-          {/* Search Bar */}
-          <div className="relative max-w-xl mx-auto mb-8">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
-            <input
-              type="text"
-              placeholder="Search for answers..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl pl-12 pr-4 py-4 text-white placeholder:text-white/40 focus:outline-none focus:border-purple-400/50 transition-colors"
-            />
-          </div>
-        </div>
-      </section>
+        {/* Main Content */}
+        <section className="px-5 pb-20">
+          <div className="mx-auto max-w-4xl">
+            {/* Category Filter */}
+            <div className="mb-12 flex flex-wrap justify-center gap-3">
+              {categories.map((category) => (
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`${mono} inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium uppercase tracking-[0.08em] transition-all ${
+                    selectedCategory === category.id
+                      ? 'border-[#7C3AED] bg-[#8B5CF6] text-white shadow-md'
+                      : 'border-[#1A1A1A]/12 bg-white text-[#6B6459] hover:border-[#8B5CF6]/40 hover:text-[#1A1A1A]'
+                  }`}
+                >
+                  <category.icon className="h-4 w-4" />
+                  <span className="hidden sm:inline">{category.label}</span>
+                </button>
+              ))}
+            </div>
 
-      {/* Main Content */}
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-3 mb-12 justify-center">
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium transition-all ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg'
-                    : 'bg-white/10 backdrop-blur-sm text-white/80 hover:bg-white/20 border border-white/20'
-                }`}
-              >
-                <category.icon className="w-4 h-4" />
-                <span className="hidden sm:inline">{category.label}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* FAQ Items */}
-          <div className="space-y-4">
-            {filteredFAQs.length > 0 ? (
-              filteredFAQs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                />
-              ))
-            ) : (
-              <div className="text-center py-12">
-                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Search className="w-8 h-8 text-white/40" />
+            {/* FAQ Items */}
+            <div className="space-y-4">
+              {filteredFAQs.length > 0 ? (
+                filteredFAQs.map((faq, index) => (
+                  <FAQItem
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                  />
+                ))
+              ) : (
+                <div className="py-12 text-center">
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border border-[#1A1A1A]/10 bg-white shadow-sm">
+                    <Search className="h-8 w-8 text-[#8B867B]" />
+                  </div>
+                  <p className="text-lg text-[#6B6459]">No questions found matching your search.</p>
+                  <p className={`${mono} mt-2 text-xs text-[#8B867B]`}>Try a different search term or browse all categories.</p>
                 </div>
-                <p className="text-white/60 text-lg">No questions found matching your search.</p>
-                <p className="text-white/40 text-sm mt-2">Try a different search term or browse all categories.</p>
-              </div>
-            )}
+              )}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Still Have Questions CTA */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-blue-900/50 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Still Have Questions?
-          </h2>
-          <p className="text-xl text-white/80 mb-8">
-            Our support team is here to help you succeed with Dezygn
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity shadow-2xl"
-            >
-              Contact Support
-            </Link>
-            <a
-              href="https://chat.dezygn.com/signup"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all border border-white/20"
-            >
-              Live Chat
-              <ExternalLink className="w-4 h-4" />
-            </a>
+        {/* Still Have Questions CTA */}
+        <section className="relative overflow-hidden bg-[#1A1A1A] px-5 py-20 text-[#E8E4DB] sm:py-24">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 [background-image:radial-gradient(rgba(232,228,219,0.06)_1px,transparent_1px)] [background-size:26px_26px]"
+          />
+          <div className="relative z-10 mx-auto max-w-4xl text-center">
+            <h2 className="text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl">
+              Still Have <span className={`${serif} italic font-normal text-[#8B5CF6]`}>Questions?</span>
+            </h2>
+            <p className="mx-auto mt-5 max-w-xl text-lg leading-8 text-[#E8E4DB]/65">
+              Our support team is here to help you succeed with Dezygn
+            </p>
+
+            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <Link
+                to="/contact"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-8 text-[15px] font-semibold text-white transition hover:bg-[#7C3AED]"
+              >
+                Contact Support
+              </Link>
+              <a
+                href="https://chat.dezygn.com/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-[#E8E4DB]/25 px-8 text-[15px] font-semibold text-[#E8E4DB] transition hover:bg-[#2B2B2B]"
+              >
+                Live Chat
+                <ExternalLink className="h-4 w-4" />
+              </a>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </main>
 
-    </Layout>
+      <FooterV4 />
+    </div>
   );
 }
 

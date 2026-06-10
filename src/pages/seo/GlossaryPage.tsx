@@ -1,9 +1,20 @@
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import HeaderV3 from '../../components/HeaderV3';
-import FooterV3 from '../../components/FooterV3';
+import HeaderV4 from '../../components/HeaderV4';
+import FooterV4 from '../../components/FooterV4';
 import { glossaryEntries } from '../../data/glossary';
-import { ArrowRight, ChevronRight, BookOpen } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
+import {
+  pageWrap,
+  eyebrowPill,
+  ctaButton,
+  cardLink,
+  crumbNav,
+  crumbLink,
+  serif,
+  SIGNUP_URL,
+  EditorialTitle,
+} from './v4Theme';
 
 interface GlossaryEntry {
   slug: string;
@@ -30,24 +41,23 @@ const GlossaryPage = () => {
 
   if (!entry) {
     return (
-      <div className="min-h-screen bg-[#050507] text-white">
-        <HeaderV3 />
-        <main className="pt-24">
-          <div className="max-w-4xl mx-auto px-6 py-20 text-center">
-            <h1 className="text-3xl font-bold mb-4">Term Not Found</h1>
-            <p className="text-gray-400 mb-8">
+      <div className={`${pageWrap} flex flex-col`}>
+        <HeaderV4 />
+        <main className="flex flex-1 items-center justify-center px-5 pt-28">
+          <div className="text-center">
+            <h1 className="mb-4 text-3xl font-semibold tracking-tight">
+              <EditorialTitle text="Term Not Found." />
+            </h1>
+            <p className="mb-8 text-[#6B6459]">
               The glossary term you&apos;re looking for doesn&apos;t exist.
             </p>
-            <Link
-              to="/glossary"
-              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-            >
-              <ArrowRight className="w-4 h-4 rotate-180" />
+            <Link to="/glossary" className={ctaButton}>
               Back to Glossary
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </main>
-        <FooterV3 />
+        <FooterV4 />
       </div>
     );
   }
@@ -59,7 +69,7 @@ const GlossaryPage = () => {
     .filter((e): e is GlossaryEntry => e !== undefined);
 
   return (
-    <div className="min-h-screen bg-[#050507] text-white">
+    <div className={pageWrap}>
       <Helmet>
         <title>{entry.metaTitle}</title>
         <meta name="description" content={entry.metaDescription} />
@@ -69,60 +79,59 @@ const GlossaryPage = () => {
         />
       </Helmet>
 
-      <HeaderV3 />
+      <HeaderV4 />
 
-      <main className="pt-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <main className="pt-28">
+        <div className="mx-auto max-w-6xl px-5">
           {/* Breadcrumbs */}
-          <nav className="text-sm text-gray-500 mb-10 flex items-center gap-1.5 flex-wrap">
-            <Link
-              to="/"
-              className="hover:text-gray-300 transition-colors"
-            >
+          <nav className={`${crumbNav} py-6`}>
+            <Link to="/" className={crumbLink}>
               Home
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <Link
-              to="/glossary"
-              className="hover:text-gray-300 transition-colors"
-            >
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/glossary" className={crumbLink}>
               Glossary
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-gray-400">{entry.term}</span>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-[#1A1A1A]">{entry.term}</span>
           </nav>
 
-          <article className="max-w-4xl mx-auto">
+          <article className="mx-auto max-w-4xl pt-4">
             {/* Hero */}
-            <div className="mb-12">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center">
-                  <BookOpen className="w-6 h-6 text-purple-400" />
-                </div>
-                <h1 className="text-4xl md:text-5xl font-bold">
-                  What is {entry.term}?
-                </h1>
-              </div>
+            <div className="relative mb-12">
+              <span
+                aria-hidden
+                className={`${serif} pointer-events-none absolute -right-4 -top-4 hidden rotate-12 text-[100px] italic leading-none text-[#8B5CF6]/15 lg:block`}
+              >
+                ✦
+              </span>
+              <p className={eyebrowPill}>Glossary</p>
+              <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-[#1A1A1A] md:text-5xl">
+                What is{' '}
+                <span className={`${serif} italic font-normal`}>
+                  {entry.term}?
+                </span>
+              </h1>
             </div>
 
             {/* Definition Card */}
-            <div className="bg-purple-500/5 border border-purple-500/20 rounded-2xl p-8 mb-14">
-              <p className="text-lg text-gray-300 leading-relaxed">
+            <div className="mb-14 rounded-3xl border border-[#8B5CF6]/30 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+              <p className="text-lg leading-8 text-[#2B2B2B]">
                 {entry.definition}
               </p>
             </div>
 
             {/* Explanation */}
             <section className="mb-14">
-              <h2 className="text-2xl font-semibold mb-6">
-                Understanding {entry.term}
+              <h2 className="mb-6 text-2xl font-semibold tracking-tight text-[#1A1A1A]">
+                Understanding{' '}
+                <span className={`${serif} italic font-normal`}>
+                  {entry.term}.
+                </span>
               </h2>
               <div className="space-y-5">
                 {entry.explanation.map((paragraph, index) => (
-                  <p
-                    key={index}
-                    className="text-gray-400 leading-relaxed"
-                  >
+                  <p key={index} className="leading-7 text-[#6B6459]">
                     {paragraph}
                   </p>
                 ))}
@@ -131,32 +140,30 @@ const GlossaryPage = () => {
 
             {/* How It Relates */}
             <section className="mb-14">
-              <h2 className="text-2xl font-semibold mb-6">
-                How It Relates to AI Photography
+              <h2 className="mb-6 text-2xl font-semibold tracking-tight text-[#1A1A1A]">
+                <EditorialTitle text="How It Relates to AI Photography." />
               </h2>
-              <p className="text-gray-400 leading-relaxed">
-                {entry.howItRelates}
-              </p>
+              <p className="leading-7 text-[#6B6459]">{entry.howItRelates}</p>
             </section>
 
             {/* Related Terms */}
             {relatedEntries.length > 0 && (
               <section className="mb-14">
-                <h2 className="text-2xl font-semibold mb-6">
-                  Related Terms
+                <h2 className="mb-6 text-2xl font-semibold tracking-tight text-[#1A1A1A]">
+                  <EditorialTitle text="Related Terms." />
                 </h2>
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid gap-4 sm:grid-cols-2">
                   {relatedEntries.map((related) => (
                     <Link
                       key={related.slug}
                       to={`/glossary/${related.slug}`}
-                      className="bg-white/[0.03] border border-white/10 rounded-xl p-5 hover:border-purple-500/30 hover:bg-purple-500/5 transition-all group"
+                      className={`${cardLink} p-5`}
                     >
-                      <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
+                      <h3 className="mb-2 flex items-center gap-2 font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#7C3AED]">
                         {related.term}
-                        <ArrowRight className="w-4 h-4 text-gray-600 group-hover:text-purple-400 transition-colors" />
+                        <ArrowRight className="h-4 w-4 text-[#8B867B] transition-colors group-hover:text-[#7C3AED]" />
                       </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed">
+                      <p className="text-sm leading-6 text-[#6B6459]">
                         {getFirstSentence(related.definition)}
                       </p>
                     </Link>
@@ -166,30 +173,41 @@ const GlossaryPage = () => {
             )}
 
             {/* CTA */}
-            <section className="mb-14 bg-gradient-to-br from-purple-500/10 to-transparent border border-purple-500/20 rounded-2xl p-8 text-center">
-              <h2 className="text-2xl font-semibold mb-3">
-                Start using AI for your product photography
-              </h2>
-              <p className="text-gray-400 mb-6 max-w-lg mx-auto">
-                Turn product photos into conversion-ready visuals with
-                Dezygn&apos;s AI Creative Suite.
-              </p>
-              <a
-                href="https://chat.dezygn.com/signup"
-                className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-3 rounded-xl transition-colors"
-              >
-                Get Started
-                <ArrowRight className="w-4 h-4" />
-              </a>
+            <section className="mb-14">
+              <div className="relative overflow-hidden rounded-[32px] bg-[#7C3AED] p-8 text-center text-white shadow-[0_40px_100px_rgba(124,58,237,0.35)] md:p-12">
+                <span
+                  aria-hidden
+                  className={`${serif} absolute -bottom-10 -right-2 rotate-12 text-[140px] italic leading-none text-white/10`}
+                >
+                  ✦
+                </span>
+                <h2 className="relative z-10 mb-3 text-2xl font-semibold tracking-tight">
+                  Start using AI for your product{' '}
+                  <span className={`${serif} italic font-normal`}>
+                    photography.
+                  </span>
+                </h2>
+                <p className="relative z-10 mx-auto mb-6 max-w-lg leading-7 text-white/75">
+                  Turn product photos into conversion-ready visuals with
+                  Dezygn&apos;s AI Creative Suite.
+                </p>
+                <a
+                  href={SIGNUP_URL}
+                  className="relative z-10 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-9 text-[15px] font-semibold text-[#EDEBE6] transition hover:bg-black"
+                >
+                  Start Free
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </section>
 
             {/* Back to Glossary */}
             <div className="mb-20">
               <Link
                 to="/glossary"
-                className="inline-flex items-center gap-2 text-gray-500 hover:text-purple-400 transition-colors text-sm"
+                className="inline-flex items-center gap-2 text-sm font-medium text-[#6B6459] transition-colors hover:text-[#7C3AED]"
               >
-                <ArrowRight className="w-4 h-4 rotate-180" />
+                <ArrowRight className="h-4 w-4 rotate-180" />
                 Back to full glossary
               </Link>
             </div>
@@ -197,7 +215,7 @@ const GlossaryPage = () => {
         </div>
       </main>
 
-      <FooterV3 />
+      <FooterV4 />
     </div>
   );
 };

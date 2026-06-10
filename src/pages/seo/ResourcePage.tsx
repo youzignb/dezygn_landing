@@ -1,10 +1,23 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import HeaderV3 from '../../components/HeaderV3';
-import FooterV3 from '../../components/FooterV3';
+import HeaderV4 from '../../components/HeaderV4';
+import FooterV4 from '../../components/FooterV4';
 import { resources, type Resource } from '../../data/resources';
 import { ArrowRight, ChevronRight, CheckCircle2, BookOpen } from 'lucide-react';
+import {
+  pageWrap,
+  eyebrowPill,
+  ctaButton,
+  card,
+  cardLink,
+  crumbNav,
+  crumbLink,
+  mono,
+  serif,
+  SIGNUP_URL,
+  EditorialTitle,
+} from './v4Theme';
 
 function slugifyHeading(heading: string): string {
   return heading
@@ -21,24 +34,23 @@ const ResourcePage = () => {
 
   if (!resource) {
     return (
-      <div className="min-h-screen bg-[#050507] text-white font-sans">
-        <HeaderV3 />
-        <main className="pt-24 pb-20">
-          <div className="max-w-7xl mx-auto px-6 text-center py-32">
-            <h1 className="text-4xl font-bold mb-4">Resource Not Found</h1>
-            <p className="text-gray-400 mb-8">
+      <div className={`${pageWrap} flex flex-col`}>
+        <HeaderV4 />
+        <main className="flex flex-1 items-center justify-center px-5 pt-28">
+          <div className="text-center">
+            <h1 className="mb-4 text-3xl font-semibold tracking-tight">
+              <EditorialTitle text="Resource Not Found." />
+            </h1>
+            <p className="mb-8 text-[#6B6459]">
               The resource you are looking for does not exist or has been moved.
             </p>
-            <Link
-              to="/resources"
-              className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-            >
+            <Link to="/resources" className={ctaButton}>
               Browse all resources
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </main>
-        <FooterV3 />
+        <FooterV4 />
       </div>
     );
   }
@@ -90,7 +102,7 @@ const ResourcePage = () => {
       : undefined;
 
   return (
-    <div className="min-h-screen bg-[#050507] text-white font-sans selection:bg-purple-500 selection:text-white">
+    <div className={pageWrap}>
       <Helmet>
         <title>{resource.metaTitle}</title>
         <meta name="description" content={resource.metaDescription} />
@@ -121,67 +133,70 @@ const ResourcePage = () => {
         )}
       </Helmet>
 
-      <HeaderV3 />
+      <HeaderV4 />
 
-      <main className="pt-24 pb-20">
+      <main className="pb-20 pt-28">
         {/* Breadcrumbs */}
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <nav className="flex items-center gap-2 text-sm text-gray-500">
-            <Link to="/" className="hover:text-white transition-colors">
+        <div className="mx-auto max-w-6xl px-5 py-6">
+          <nav className={crumbNav}>
+            <Link to="/" className={crumbLink}>
               Home
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <Link
-              to="/resources"
-              className="hover:text-white transition-colors"
-            >
+            <ChevronRight className="h-3 w-3" />
+            <Link to="/resources" className={crumbLink}>
               Resources
             </Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-gray-300">{resource.title}</span>
+            <ChevronRight className="h-3 w-3" />
+            <span className="text-[#1A1A1A]">{resource.title}</span>
           </nav>
         </div>
 
         {/* Hero */}
-        <div className="max-w-7xl mx-auto px-6 pb-16">
+        <div className="relative mx-auto max-w-6xl px-5 pb-16 pt-4">
+          <span
+            aria-hidden
+            className={`${serif} pointer-events-none absolute -right-4 top-0 hidden rotate-12 text-[120px] italic leading-none text-[#8B5CF6]/15 lg:block`}
+          >
+            ✦
+          </span>
           <div className="max-w-4xl">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
-                <BookOpen className="w-5 h-5 text-purple-400" />
-              </div>
-              <span className="text-sm font-medium text-purple-400 uppercase tracking-wider">
-                Resource Guide
-              </span>
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-bold leading-tight">
-              {resource.heroHeadline}
+            <p className={eyebrowPill}>Resource Guide</p>
+            <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-[#1A1A1A] sm:text-5xl">
+              <EditorialTitle text={resource.heroHeadline} />
             </h1>
 
             {resource.image && (
-              <div className="max-w-4xl mt-12">
-                <img
-                  src={resource.image}
-                  alt={resource.imageAlt}
-                  width={800}
-                  height={533}
-                  loading="lazy"
-                  className="w-full rounded-2xl border border-white/10"
-                />
+              <div className="mt-12 max-w-4xl">
+                <div className="rounded-2xl border border-[#1A1A1A]/10 bg-white p-1.5 shadow-[0_24px_60px_rgba(26,26,26,0.12)] sm:p-2">
+                  <img
+                    src={resource.image}
+                    alt={resource.imageAlt}
+                    width={800}
+                    height={533}
+                    loading="lazy"
+                    className="w-full rounded-[10px]"
+                  />
+                </div>
               </div>
             )}
 
             {resource.cta && (
-              <div className="max-w-4xl mt-10">
-                <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+              <div className="mt-10 max-w-4xl">
+                <div className={`${card} flex flex-col gap-6 md:flex-row md:items-center md:justify-between`}>
                   <div>
-                    <p className="text-xs tracking-[0.3em] uppercase text-purple-300 mb-2">
+                    <p
+                      className={`${mono} mb-2 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED]`}
+                    >
                       Masterclass Playlist
                     </p>
-                    <h2 className="text-2xl font-bold text-white mb-2">
-                      Watch the Full Workflow
+                    <h2 className="mb-2 text-2xl font-semibold tracking-tight text-[#1A1A1A]">
+                      Watch the Full{' '}
+                      <span className={`${serif} italic font-normal`}>
+                        Workflow.
+                      </span>
                     </h2>
                     {resource.cta.subtext && (
-                      <p className="text-gray-400 text-sm leading-relaxed max-w-xl">
+                      <p className="max-w-xl text-sm leading-6 text-[#6B6459]">
                         {resource.cta.subtext}
                       </p>
                     )}
@@ -190,10 +205,10 @@ const ResourcePage = () => {
                     href={resource.cta.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-semibold px-6 py-3 rounded-xl transition-colors"
+                    className={ctaButton}
                   >
                     {resource.cta.label}
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
               </div>
@@ -202,21 +217,21 @@ const ResourcePage = () => {
         </div>
 
         {/* Mobile TOC */}
-        <div className="lg:hidden max-w-7xl mx-auto px-6 mb-10">
-          <div className="bg-white/[0.03] border border-white/10 rounded-xl overflow-hidden">
+        <div className="mx-auto mb-10 max-w-6xl px-5 lg:hidden">
+          <div className="overflow-hidden rounded-2xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
             <button
               onClick={() => setTocOpen(!tocOpen)}
-              className="w-full flex items-center justify-between px-5 py-4 text-sm font-medium text-gray-300"
+              className={`${mono} flex w-full items-center justify-between px-5 py-4 text-[11px] font-medium uppercase tracking-[0.12em] text-[#2B2B2B]`}
             >
               <span>Table of Contents</span>
               <ChevronRight
-                className={`w-4 h-4 transition-transform ${
+                className={`h-4 w-4 transition-transform ${
                   tocOpen ? 'rotate-90' : ''
                 }`}
               />
             </button>
             {tocOpen && (
-              <div className="px-5 pb-4 border-t border-white/10 pt-3">
+              <div className="border-t border-[#1A1A1A]/10 px-5 pb-4 pt-3">
                 <ul className="space-y-1">
                   {resource.sections.map((section) => {
                     const id = slugifyHeading(section.heading);
@@ -225,7 +240,7 @@ const ResourcePage = () => {
                         <a
                           href={`#${id}`}
                           onClick={() => setTocOpen(false)}
-                          className="block py-1.5 text-sm text-gray-500 hover:text-white transition-colors"
+                          className="block py-1.5 text-sm text-[#6B6459] transition-colors hover:text-[#1A1A1A]"
                         >
                           {section.heading}
                         </a>
@@ -236,7 +251,7 @@ const ResourcePage = () => {
                     <a
                       href="#key-takeaways"
                       onClick={() => setTocOpen(false)}
-                      className="block py-1.5 text-sm text-gray-500 hover:text-white transition-colors"
+                      className="block py-1.5 text-sm text-[#6B6459] transition-colors hover:text-[#1A1A1A]"
                     >
                       Key Takeaways
                     </a>
@@ -248,12 +263,14 @@ const ResourcePage = () => {
         </div>
 
         {/* Article Layout */}
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="mx-auto max-w-6xl px-5">
           <div className="lg:flex lg:gap-12">
             {/* Desktop TOC Sidebar */}
-            <aside className="hidden lg:block lg:w-64 flex-shrink-0">
-              <nav className="sticky top-28 bg-white/[0.03] border border-white/10 rounded-xl p-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-gray-400 mb-3 px-2">
+            <aside className="hidden flex-shrink-0 lg:block lg:w-64">
+              <nav className="sticky top-28 rounded-2xl border border-[#1A1A1A]/12 bg-white p-4 shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+                <p
+                  className={`${mono} mb-3 px-2 text-[11px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}
+                >
                   Contents
                 </p>
                 <ul className="space-y-0.5">
@@ -263,7 +280,7 @@ const ResourcePage = () => {
                       <li key={id}>
                         <a
                           href={`#${id}`}
-                          className="block py-1.5 px-2 text-sm text-gray-500 hover:text-white transition-colors rounded-lg hover:bg-white/[0.03]"
+                          className="block rounded-lg px-2 py-1.5 text-sm text-[#6B6459] transition-colors hover:bg-[#F7F5F0] hover:text-[#1A1A1A]"
                         >
                           {section.heading}
                         </a>
@@ -273,7 +290,7 @@ const ResourcePage = () => {
                   <li>
                     <a
                       href="#key-takeaways"
-                      className="block py-1.5 px-2 text-sm text-gray-500 hover:text-white transition-colors rounded-lg hover:bg-white/[0.03]"
+                      className="block rounded-lg px-2 py-1.5 text-sm text-[#6B6459] transition-colors hover:bg-[#F7F5F0] hover:text-[#1A1A1A]"
                     >
                       Key Takeaways
                     </a>
@@ -283,7 +300,7 @@ const ResourcePage = () => {
             </aside>
 
             {/* Article Body */}
-            <article className="flex-1 max-w-4xl">
+            <article className="max-w-4xl flex-1">
               {/* Sections */}
               {resource.sections.map((section, idx) => {
                 const id = slugifyHeading(section.heading);
@@ -294,14 +311,14 @@ const ResourcePage = () => {
                   >
                     <h2
                       id={id}
-                      className="text-2xl font-bold text-white mb-6 mt-0 scroll-mt-32"
+                      className="mb-6 mt-0 scroll-mt-32 text-2xl font-semibold tracking-tight text-[#1A1A1A]"
                     >
                       {section.heading}
                     </h2>
                     {section.content.map((paragraph, pIdx) => (
                       <p
                         key={pIdx}
-                        className="text-gray-400 leading-relaxed text-base mb-5 last:mb-0"
+                        className="mb-5 text-base leading-7 text-[#6B6459] last:mb-0"
                       >
                         {paragraph}
                       </p>
@@ -312,15 +329,15 @@ const ResourcePage = () => {
 
               {/* Key Takeaways */}
               <section id="key-takeaways" className="mb-20 scroll-mt-32">
-                <h2 className="text-2xl font-bold text-white mb-6 mt-0">
-                  Key Takeaways
+                <h2 className="mb-6 mt-0 text-2xl font-semibold tracking-tight text-[#1A1A1A]">
+                  <EditorialTitle text="Key Takeaways." />
                 </h2>
-                <div className="bg-white/[0.03] border border-white/10 rounded-2xl p-8">
+                <div className={card}>
                   <ul className="space-y-4">
                     {resource.keyTakeaways.map((takeaway, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                        <span className="text-gray-300 leading-relaxed">
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#7C3AED]" />
+                        <span className="leading-7 text-[#2B2B2B]">
                           {takeaway}
                         </span>
                       </li>
@@ -331,53 +348,64 @@ const ResourcePage = () => {
 
               {/* CTA Section */}
               <section className="mb-20">
-                <div className="rounded-2xl bg-gradient-to-br from-purple-600 to-purple-800 p-10 text-center">
-                  <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-                    Ready to Put This Into Practice?
+                <div className="relative overflow-hidden rounded-[32px] bg-[#7C3AED] p-10 text-center text-white shadow-[0_40px_100px_rgba(124,58,237,0.35)]">
+                  <span
+                    aria-hidden
+                    className={`${serif} absolute -bottom-12 -right-2 rotate-12 text-[160px] italic leading-none text-white/10`}
+                  >
+                    ✦
+                  </span>
+                  <h2 className="relative z-10 mb-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+                    Ready to Put This Into{' '}
+                    <span className={`${serif} italic font-normal`}>
+                      Practice?
+                    </span>
                   </h2>
-                  <p className="text-purple-100 mb-8 max-w-lg mx-auto leading-relaxed">
+                  <p className="relative z-10 mx-auto mb-8 max-w-lg leading-7 text-white/75">
                     Dezygn gives you the AI creative tools, training, and
                     community to turn these insights into real results for your
                     clients.
                   </p>
-                  <Link
-                    to="https://chat.dezygn.com/signup"
-                    className="inline-flex items-center gap-2 bg-white text-purple-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-gray-100 transition-colors"
+                  <a
+                    href={SIGNUP_URL}
+                    className="relative z-10 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-9 text-[15px] font-semibold text-[#EDEBE6] transition hover:bg-black"
                   >
-                    Get Started
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                    Start Free
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </div>
               </section>
 
               {/* Related Resources */}
               {relatedItems.length > 0 && (
                 <section className="mb-10">
-                  <h2 className="text-2xl font-bold text-white mb-8">
-                    Related Resources
+                  <h2 className="mb-8 text-2xl font-semibold tracking-tight text-[#1A1A1A]">
+                    <EditorialTitle text="Related Resources." />
                   </h2>
-                  <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="grid gap-6 sm:grid-cols-2">
                     {relatedItems.map((related) => (
                       <Link
                         key={related.slug}
                         to={`/resources/${related.slug}`}
-                        className="group block bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-purple-500/30 transition-colors"
+                        className={`${cardLink} block p-6`}
                       >
-                        <div className="flex items-center gap-3 mb-3">
-                          <BookOpen className="w-4 h-4 text-purple-400" />
-                          <span className="text-xs font-medium text-purple-400 uppercase tracking-wider">
+                        <div className="mb-3 flex items-center gap-3">
+                          <BookOpen className="h-4 w-4 text-[#7C3AED]" />
+                          <span
+                            className={`${mono} text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED]`}
+                          >
                             Guide
                           </span>
                         </div>
-                        <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                        <h3 className="mb-2 text-lg font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#7C3AED]">
                           {related.title}
                         </h3>
-                        <p className="text-sm text-gray-500 line-clamp-2">
+                        <p className="text-sm leading-6 text-[#6B6459] line-clamp-2">
                           {related.metaDescription}
                         </p>
-                        <span className="inline-flex items-center gap-1 mt-4 text-sm text-purple-400 group-hover:text-purple-300 transition-colors">
+                        <span className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#7C3AED]">
                           Read guide
-                          <ArrowRight className="w-3.5 h-3.5" />
+                          <ArrowRight className="h-3.5 w-3.5" />
                         </span>
                       </Link>
                     ))}
@@ -389,7 +417,7 @@ const ResourcePage = () => {
         </div>
       </main>
 
-      <FooterV3 />
+      <FooterV4 />
     </div>
   );
 };

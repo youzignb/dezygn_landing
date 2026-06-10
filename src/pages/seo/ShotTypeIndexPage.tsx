@@ -1,30 +1,30 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Building2, ChevronRight } from 'lucide-react';
+import { ArrowRight, Camera, ChevronRight } from 'lucide-react';
 import HeaderV4 from '../../components/HeaderV4';
 import FooterV4 from '../../components/FooterV4';
-import { industries } from '../../data/industries';
+import { shotTypes } from '../../data/shot-types';
 import {
   pageWrap,
   eyebrowPill,
   cardLink,
   crumbNav,
   crumbLink,
-  mono,
   serif,
   SIGNUP_URL,
+  EditorialTitle,
 } from './v4Theme';
 
-const IndustryIndexPage = () => {
+const ShotTypeIndexPage = () => {
   return (
     <div className={pageWrap}>
       <Helmet>
-        <title>AI Product Photography by Industry & Role | Dezygn</title>
+        <title>AI Photography Shot Types | Dezygn</title>
         <meta
           name="description"
-          content="See how Dezygn serves e-commerce brands, Amazon sellers, Shopify stores, agencies, freelancers, and dropshippers with AI-powered product photography."
+          content="Explore every AI photography shot type — lifestyle, studio, hero, model, flat lay, and more. Learn when to use each one and how Dezygn creates them."
         />
-        <link rel="canonical" href="https://dezygn.com/industries" />
+        <link rel="canonical" href="https://dezygn.com/shot-types" />
       </Helmet>
 
       <HeaderV4 />
@@ -37,7 +37,7 @@ const IndustryIndexPage = () => {
               Home
             </Link>
             <ChevronRight className="h-3 w-3" />
-            <span className="text-[#1A1A1A]">Industries</span>
+            <span className="text-[#1A1A1A]">Shot Types</span>
           </nav>
         </div>
 
@@ -50,32 +50,37 @@ const IndustryIndexPage = () => {
             ✦
           </span>
           <div className="mx-auto max-w-3xl">
-            <p className={eyebrowPill}>Industries</p>
+            <p className={eyebrowPill}>
+              <Camera className="h-3.5 w-3.5" />
+              Shot Types
+            </p>
             <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-[#1A1A1A] sm:text-5xl lg:text-6xl">
-              AI Photography by{' '}
-              <span className={`${serif} italic font-normal`}>Industry.</span>
+              <EditorialTitle text="AI Photography Shot Types." />
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#6B6459]">
-              Whether you're an agency, freelancer, or e-commerce brand — Dezygn
-              fits your workflow and scales with you.
+              Shot types are the vocabulary of conversion photography. Each one
+              answers a different question in your customer's head — what it
+              looks like, how it's used, why it belongs in their life. Learn
+              when to reach for each shot, and how Dezygn generates it on
+              demand.
             </p>
           </div>
         </section>
 
-        {/* Industry Grid */}
+        {/* Shot Type Grid */}
         <section className="bg-[#EDEBE6] px-5 py-20 sm:py-24">
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {industries.map((industry) => (
+              {shotTypes.map((shotType) => (
                 <Link
-                  key={industry.slug}
-                  to={`/industries/${industry.slug}`}
+                  key={shotType.slug}
+                  to={`/shot-types/${shotType.slug}`}
                   className={`${cardLink} overflow-hidden`}
                 >
-                  {industry.image && (
+                  {shotType.image && (
                     <img
-                      src={industry.image}
-                      alt={industry.imageAlt}
+                      src={shotType.image}
+                      alt={shotType.imageAlt}
                       width={400}
                       height={267}
                       loading="lazy"
@@ -83,35 +88,12 @@ const IndustryIndexPage = () => {
                     />
                   )}
                   <div className="p-6">
-                    <div className="mb-4 flex items-center gap-3">
-                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
-                        <Building2 className="h-5 w-5" />
-                      </span>
-                      <h3 className="text-xl font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#7C3AED]">
-                        {industry.title}
-                      </h3>
-                    </div>
-
-                    <p className="mb-4 text-sm leading-6 text-[#6B6459] line-clamp-2">
-                      {industry.heroHeadline}
+                    <h3 className="mb-3 text-xl font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#7C3AED]">
+                      {shotType.title}
+                    </h3>
+                    <p className="mb-4 text-sm leading-6 text-[#6B6459] line-clamp-3">
+                      {shotType.definition}
                     </p>
-
-                    {industry.results && industry.results.length > 0 && (
-                      <div className="mb-4 flex flex-wrap gap-2">
-                        {industry.results.slice(0, 3).map((stat) => (
-                          <span
-                            key={stat.label}
-                            className={`${mono} rounded-full border border-[#1A1A1A]/10 bg-[#F7F5F0] px-3 py-1 text-[11px] text-[#6B6459]`}
-                          >
-                            <span className="font-semibold text-[#7C3AED]">
-                              {stat.value}
-                            </span>{' '}
-                            {stat.label}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
                     <div className="flex items-center gap-1.5 text-sm font-medium text-[#7C3AED]">
                       <span>Learn more</span>
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -134,12 +116,12 @@ const IndustryIndexPage = () => {
                 ✦
               </span>
               <h2 className="relative z-10 mb-4 text-3xl font-semibold tracking-tight md:text-4xl">
-                Built for your{' '}
-                <span className={`${serif} italic font-normal`}>business.</span>
+                Master every{' '}
+                <span className={`${serif} italic font-normal`}>shot.</span>
               </h2>
               <p className="relative z-10 mx-auto mb-8 max-w-xl text-lg leading-8 text-white/75">
-                Join agencies and freelancers already using Dezygn to deliver
-                studio-quality AI product photography at scale.
+                From clean studio packshots to lived-in lifestyle scenes —
+                generate every shot type your clients need from one studio.
               </p>
               <a
                 href={SIGNUP_URL}
@@ -158,4 +140,4 @@ const IndustryIndexPage = () => {
   );
 };
 
-export default IndustryIndexPage;
+export default ShotTypeIndexPage;

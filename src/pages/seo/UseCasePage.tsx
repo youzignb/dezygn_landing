@@ -20,11 +20,24 @@ import {
   Users,
   Star,
   ChevronRight,
+  ArrowRight,
 } from 'lucide-react';
-import HeaderV3 from '../../components/HeaderV3';
-import FooterV3 from '../../components/FooterV3';
+import HeaderV4 from '../../components/HeaderV4';
+import FooterV4 from '../../components/FooterV4';
 import { useCases } from '../../data/use-cases';
 import type { UseCase } from '../../data/use-cases';
+import {
+  pageWrap,
+  eyebrowPill,
+  ctaButton,
+  cardLink,
+  crumbNav,
+  crumbLink,
+  mono,
+  serif,
+  SIGNUP_URL,
+  EditorialTitle,
+} from './v4Theme';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Camera,
@@ -53,7 +66,7 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
   );
 
   return (
-    <>
+    <div className={pageWrap}>
       <Helmet>
         <title>{useCase.metaTitle}</title>
         <meta name="description" content={useCase.metaDescription} />
@@ -63,70 +76,75 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
         />
       </Helmet>
 
-      <HeaderV3 />
+      <HeaderV4 />
 
-      <main className="bg-[#050507] text-white pt-24">
+      <main className="pt-28">
         {/* Breadcrumbs */}
-        <nav className="max-w-7xl mx-auto px-6 py-4">
-          <ol className="flex items-center gap-2 text-sm text-gray-400">
+        <nav className="mx-auto max-w-6xl px-5 py-4">
+          <ol className={crumbNav}>
             <li>
-              <Link to="/" className="hover:text-white transition-colors">
+              <Link to="/" className={crumbLink}>
                 Home
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5" />
+              <ChevronRight className="h-3 w-3" />
             </li>
             <li>
-              <Link
-                to="/use-cases"
-                className="hover:text-white transition-colors"
-              >
+              <Link to="/use-cases" className={crumbLink}>
                 Use Cases
               </Link>
             </li>
             <li>
-              <ChevronRight className="w-3.5 h-3.5" />
+              <ChevronRight className="h-3 w-3" />
             </li>
-            <li className="text-white">{useCase.title}</li>
+            <li className="text-[#1A1A1A]">{useCase.title}</li>
           </ol>
         </nav>
 
         {/* Hero */}
-        <section className="relative py-20 px-6 overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-600/10 via-transparent to-purple-500/5 pointer-events-none" />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-6">
-              {useCase.heroHeadline}
+        <section className="relative overflow-hidden px-5 py-16 sm:py-20">
+          <span
+            aria-hidden
+            className={`${serif} pointer-events-none absolute -right-4 top-8 hidden rotate-12 text-[120px] italic leading-none text-[#8B5CF6]/15 lg:block`}
+          >
+            ✦
+          </span>
+          <div className="relative mx-auto max-w-5xl text-center">
+            <p className={eyebrowPill}>Use Case</p>
+            <h1 className="mt-6 text-4xl font-semibold leading-[1.05] tracking-tight text-[#1A1A1A] sm:text-5xl lg:text-6xl">
+              <EditorialTitle text={useCase.heroHeadline} />
             </h1>
-            <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-[#6B6459]">
               {useCase.heroSubheadline}
             </p>
 
             {useCase.image && (
-              <div className="max-w-4xl mx-auto mt-12">
-                <img
-                  src={useCase.image}
-                  alt={useCase.imageAlt}
-                  width={800}
-                  height={533}
-                  loading="lazy"
-                  className="w-full rounded-2xl border border-white/10"
-                />
+              <div className="mx-auto mt-12 max-w-4xl">
+                <div className="rounded-2xl border border-[#1A1A1A]/10 bg-white p-1.5 shadow-[0_24px_60px_rgba(26,26,26,0.12)] sm:p-2">
+                  <img
+                    src={useCase.image}
+                    alt={useCase.imageAlt}
+                    width={800}
+                    height={533}
+                    loading="lazy"
+                    className="w-full rounded-[10px]"
+                  />
+                </div>
               </div>
             )}
           </div>
         </section>
 
         {/* Problem / The Challenge */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10">
-              The Challenge
+        <section className="bg-[#EDEBE6] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="mb-10 text-3xl font-semibold tracking-tight sm:text-4xl">
+              <EditorialTitle text="The Challenge." />
             </h2>
-            <div className="space-y-6 max-w-3xl">
+            <div className="max-w-3xl space-y-6">
               {useCase.problem.map((paragraph, idx) => (
-                <p key={idx} className="text-gray-400 leading-relaxed text-lg">
+                <p key={idx} className="text-lg leading-8 text-[#6B6459]">
                   {paragraph}
                 </p>
               ))}
@@ -135,33 +153,35 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
         </section>
 
         {/* Solution */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10">
-              How Dezygn Solves This
+        <section className="bg-[#F7F5F0] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
+            <h2 className="mb-10 text-3xl font-semibold tracking-tight sm:text-4xl">
+              <EditorialTitle text="How Dezygn Solves This." />
             </h2>
-            <p className="text-gray-400 leading-relaxed text-lg max-w-3xl">
+            <p className="max-w-3xl text-lg leading-8 text-[#6B6459]">
               {useCase.solution}
             </p>
           </div>
         </section>
 
         {/* Features Grid */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <section className="bg-[#EDEBE6] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {useCase.features.map((feature) => {
                 const IconComponent = iconMap[feature.icon] || Sparkles;
                 return (
                   <div
                     key={feature.title}
-                    className="bg-white/[0.03] border border-white/10 rounded-2xl p-6"
+                    className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                   >
-                    <IconComponent className="w-8 h-8 text-purple-500 mb-4" />
-                    <h3 className="text-lg font-semibold mb-2">
+                    <span className="mb-4 grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
+                      <IconComponent className="h-5 w-5" />
+                    </span>
+                    <h3 className="mb-2 text-lg font-semibold text-[#1A1A1A]">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-400 leading-relaxed">
+                    <p className="leading-7 text-[#6B6459]">
                       {feature.description}
                     </p>
                   </div>
@@ -172,18 +192,20 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
         </section>
 
         {/* Stats Bar */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-[#F7F5F0] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
             <div className="flex flex-wrap justify-center gap-6">
               {useCase.stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 text-center min-w-[180px]"
+                  className="min-w-[180px] rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
-                  <p className="text-3xl sm:text-4xl font-bold text-purple-500 mb-2">
+                  <p className={`${serif} mb-2 text-4xl italic tracking-tight text-[#7C3AED] sm:text-5xl`}>
                     {stat.value}
                   </p>
-                  <p className="text-gray-400 text-sm">{stat.label}</p>
+                  <p className={`${mono} text-[11px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -191,45 +213,55 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-10 sm:p-16 text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Ready to Transform Your {useCase.title} Photography?
+        <section className="bg-[#EDEBE6] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
+            <div className="relative overflow-hidden rounded-[32px] bg-[#7C3AED] p-10 text-center text-white shadow-[0_40px_100px_rgba(124,58,237,0.35)] sm:p-16">
+              <span
+                aria-hidden
+                className={`${serif} absolute -left-4 -top-8 rotate-[-12deg] text-[160px] italic leading-none text-white/10`}
+              >
+                ✳
+              </span>
+              <h2 className="relative z-10 mb-6 text-3xl font-semibold tracking-tight sm:text-4xl">
+                Ready to Transform Your {useCase.title}{' '}
+                <span className={`${serif} italic font-normal`}>
+                  Photography?
+                </span>
               </h2>
-              <p className="text-purple-100 text-lg mb-8 max-w-2xl mx-auto">
+              <p className="relative z-10 mx-auto mb-8 max-w-2xl text-lg leading-8 text-white/75">
                 {useCase.cta}
               </p>
               <a
-                href="https://chat.dezygn.com/signup"
-                className="inline-block bg-white text-purple-700 px-8 py-4 rounded-full font-medium hover:bg-purple-50 transition-colors"
+                href={SIGNUP_URL}
+                className="relative z-10 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-9 text-[15px] font-semibold text-[#EDEBE6] transition hover:bg-black"
               >
-                Get Started Now
+                Start Free
+                <ArrowRight className="h-4 w-4" />
               </a>
             </div>
           </div>
         </section>
 
         {/* Related Sections */}
-        <section className="py-20 px-6">
-          <div className="max-w-7xl mx-auto">
+        <section className="bg-[#F7F5F0] px-5 py-20 sm:py-24">
+          <div className="mx-auto max-w-6xl">
             {/* Related Use Cases */}
             {relatedUseCaseData.length > 0 && (
               <div className="mb-16">
-                <h2 className="text-2xl sm:text-3xl font-bold mb-8">
-                  Related Use Cases
+                <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">
+                  <EditorialTitle text="Related Use Cases." />
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                   {relatedUseCaseData.map((related) => (
                     <Link
                       key={related.slug}
                       to={`/use-cases/${related.slug}`}
-                      className="bg-white/[0.03] border border-white/10 rounded-2xl p-6 hover:border-purple-500/40 transition-colors group"
+                      className={`${cardLink} p-6`}
                     >
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-purple-400 transition-colors">
+                      <h3 className="mb-2 text-lg font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#7C3AED]">
                         {related.title}
                       </h3>
-                      <p className="text-gray-400 text-sm line-clamp-2">
+                      <p className="text-sm leading-6 text-[#6B6459] line-clamp-2">
                         {related.heroSubheadline}
                       </p>
                     </Link>
@@ -241,15 +273,15 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
             {/* Related Shot Types */}
             {useCase.relatedShotTypes.length > 0 && (
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold mb-8">
-                  Related Shot Types
+                <h2 className="mb-8 text-2xl font-semibold tracking-tight sm:text-3xl">
+                  <EditorialTitle text="Related Shot Types." />
                 </h2>
                 <div className="flex flex-wrap gap-3">
                   {useCase.relatedShotTypes.map((shotSlug) => (
                     <Link
                       key={shotSlug}
                       to={`/shot-types/${shotSlug}`}
-                      className="bg-white/[0.03] border border-white/10 rounded-full px-5 py-2.5 text-sm text-gray-300 hover:border-purple-500/40 hover:text-purple-400 transition-colors"
+                      className={`${mono} rounded-full border border-[#1A1A1A]/12 bg-white px-5 py-2.5 text-sm text-[#2B2B2B] shadow-sm transition-colors hover:border-[#8B5CF6]/40 hover:text-[#7C3AED]`}
                     >
                       {shotSlug
                         .split('-')
@@ -266,14 +298,14 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
         </section>
       </main>
 
-      <FooterV3 />
-    </>
+      <FooterV4 />
+    </div>
   );
 }
 
 function NotFound() {
   return (
-    <>
+    <div className={pageWrap}>
       <Helmet>
         <title>Use Case Not Found | Dezygn</title>
         <meta
@@ -282,25 +314,24 @@ function NotFound() {
         />
       </Helmet>
 
-      <HeaderV3 />
+      <HeaderV4 />
 
-      <main className="bg-[#050507] text-white pt-24 min-h-screen flex items-center justify-center">
-        <div className="text-center px-6">
-          <h1 className="text-4xl font-bold mb-4">Use Case Not Found</h1>
-          <p className="text-gray-400 mb-8">
+      <main className="flex min-h-screen items-center justify-center pt-28">
+        <div className="px-5 text-center">
+          <h1 className="mb-4 text-4xl font-semibold tracking-tight">
+            <EditorialTitle text="Use Case Not Found." />
+          </h1>
+          <p className="mb-8 text-[#6B6459]">
             The use case you are looking for does not exist.
           </p>
-          <Link
-            to="/use-cases"
-            className="inline-block bg-purple-600 hover:bg-purple-500 text-white px-8 py-4 rounded-full font-medium transition-colors"
-          >
+          <Link to="/use-cases" className={ctaButton}>
             Browse All Use Cases
           </Link>
         </div>
       </main>
 
-      <FooterV3 />
-    </>
+      <FooterV4 />
+    </div>
   );
 }
 
