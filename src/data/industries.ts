@@ -10,470 +10,470 @@ export interface Industry {
   painPoints: { title: string; description: string }[];
   howDezygn: { title: string; description: string }[];
   results: { value: string; label: string }[];
+  secondaryCta?: { label: string; href: string };
   relatedIndustries: string[];
   relatedUseCases: string[];
 }
 
 export const industries: Industry[] = [
+  // ──────────────────────────────────────────────
+  // FREELANCERS (funnel page — previews Proof Before Pitch)
+  // ──────────────────────────────────────────────
+  {
+    slug: "freelancers",
+    title: "Freelancers",
+    metaTitle: "AI Photography for Freelancers — Land Clients With Proof | Dezygn",
+    metaDescription:
+      "How freelancers use Dezygn to land e-commerce clients: send the finished work before the pitch. Real deals — $2k, $4.8k, and monthly retainers — from one mechanism.",
+    heroHeadline: "While Other Freelancers Pitch, You Show Up With the Work Already Done",
+    image: "/images/seo/industries/freelancers.webp",
+    imageAlt: "Freelancer sending a custom AI-generated product visual to a prospective client",
+    intro: `Freelancing's brutal math: on every job board, dozens of people beg for the same project with the same promises. 'I can improve your product imagery' is a claim every competitor also makes, and claims are free — which is why they're worth nothing. The freelancers who win don't make better claims. They skip the claim entirely.
+
+The mechanism is called Proof Before Pitch, and it's how our own agency landed its first clients: instead of emailing a brand to ask for a meeting, you email them a finished deliverable — one custom, AI-generated lifestyle image of their own product, made in their own visual style, attached, free. The prospect opens the email and sees their weakest product photographed better than anything on their site. Gratitude replaces resistance. The image does the selling.
+
+Real outcomes from this exact mechanism: a $2,000 jewelry project, a $4,800 deal that grew from one sample, and monthly retainers of $700 and $780 that started as single cold emails. Not guru numbers — real ones, and that's the point: three or four small retainers is a stable income floor, and the first client is the hardest. Everything after gets easier.`,
+    painPoints: [
+      {
+        title: "You're competing on promises in a sea of promises",
+        description:
+          "Every proposal says 'high quality' and 'fast turnaround.' The client can't evaluate any of it before hiring, so they pick on price — a race you don't want to win.",
+      },
+      {
+        title: "No portfolio, no clients; no clients, no portfolio",
+        description:
+          "The classic cold start. You can't show client work you haven't been hired to do — unless you build spec campaigns and per-prospect proof images, which require no one's permission.",
+      },
+      {
+        title: "Outreach feels like begging, so you stop at 15 attempts",
+        description:
+          "Most freelancers quit before the data exists. A ~1% close rate on cold outreach is normal in B2B — the failure isn't the channel, it's judging it before 100 serious attempts.",
+      },
+      {
+        title: "One-off gigs keep you on the hamster wheel",
+        description:
+          "Project income dies the day you deliver. Without a path to recurring work, every month starts at zero and the feast-famine cycle never ends.",
+      },
+    ],
+    howDezygn: [
+      {
+        title: "Make the proof image in minutes, not hours",
+        description:
+          "Pick a prospect's weakest-photographed product, extract their brand identity, and generate one excellent on-brand lifestyle shot. The whole compressed R&D pass takes about half an hour per prospect — fast enough to run at Rule-of-100 volume.",
+      },
+      {
+        title: "Run outreach as a system with Outreach Factory",
+        description:
+          "Dezygn's Outreach Factory turns the mechanism into a pipeline: lead lists, custom visuals per prospect, and follow-up cadence — so outreach happens on schedule instead of on motivation.",
+      },
+      {
+        title: "Catch problem-aware clients on Upwork",
+        description:
+          "Dezygn's Opportunities feature surfaces relevant Upwork jobs — prospects who already posted the need. Lead your application with a custom mockup and you're the only applicant who showed up with the work.",
+      },
+      {
+        title: "Deliver like an agency from day one",
+        description:
+          "The same Visual Syntax workflow our agency uses on retainer clients — brand identity, dedicated models, scene libraries, structured revisions — so your first client experience reads senior, not solo.",
+      },
+      {
+        title: "Grow gigs into retainers",
+        description:
+          "The natural path is PDP images → ad creative → ongoing social content, suggested when the client is happy. Recurring beats new-logo hunting; the real revenue is in growing clients, not finding them.",
+      },
+    ],
+    results: [
+      { value: "$2k-4.8k", label: "Real first projects landed via Proof Before Pitch" },
+      { value: "$700/mo", label: "Real retainer that started as one cold email" },
+      { value: "100", label: "Outreach attempts before you judge the channel" },
+      { value: "~30 min", label: "To produce one custom proof image per prospect" },
+    ],
+    secondaryCta: { label: "Watch the Free Training", href: "/webinar" },
+    relatedIndustries: ["agencies", "ecommerce"],
+    relatedUseCases: ["golf-brands", "eyewear", "jewelry"],
+  },
+
+  // ──────────────────────────────────────────────
+  // AGENCIES
+  // ──────────────────────────────────────────────
+  {
+    slug: "agencies",
+    title: "Agencies",
+    metaTitle: "AI Product Photography for Agencies | Dezygn",
+    metaDescription:
+      "How agencies run AI photography at retainer scale: calibrated client systems, honest production math, and the creative-fatigue demand wave from Meta's ranking changes.",
+    heroHeadline: "We Run an Agency on This. Here's What That Actually Takes.",
+    image: "/images/seo/industries/agencies.webp",
+    imageAlt: "Agency team reviewing batches of AI-generated client creative",
+    intro: `Dezygn isn't a tool we imagine agencies might use — it's the tool our own agency, Fairway Creatives, delivers client retainers on every month. That changes what this page can honestly tell you: real session times, real approval ratios, real account-growth paths, from paying clients in golf apparel, premium eyewear and e-commerce.
+
+The agency opportunity right now has a structural driver: Meta's ranking increasingly rewards fresh creative variety over single optimized winners, which means every brand running ads burns through creative faster than traditional production replenishes it. Brands need 3-5 variations per campaign, refreshed constantly. A studio shoot takes weeks; ad accounts eat creative weekly. The gap between those two speeds is a service business — managed creative production at scale — and clients pay $1k-3k monthly retainers for someone to own it.
+
+What it takes on the inside is a system, not talent alone: calibrated per-client setups (brand identity, model library, scene library, documented campaign instructions), honest production math, and the unglamorous SOPs — onboarding, structured feedback, delivery — that make good work consistent work.`,
+    painPoints: [
+      {
+        title: "Client creative demand outruns production capacity",
+        description:
+          "Retainer clients expect fresh batches monthly while ad accounts demand weekly variation. Traditional production economics make scale a hiring problem; every new client used to mean new headcount.",
+      },
+      {
+        title: "Every new client means reinventing the process",
+        description:
+          "Without documented systems, each account runs on heroics. Quality varies with who touched it, revision rounds balloon, and the agency can't onboard help because the process lives in someone's head.",
+      },
+      {
+        title: "Revision hell from unstructured feedback",
+        description:
+          "'Can you make it pop more' is not a brief. Unstructured feedback leads to guessing, and guessing leads to the five-round revision spiral that destroys retainer margins.",
+      },
+      {
+        title: "AI competence is now table stakes — and clients know it",
+        description:
+          "Brands ask directly whether you work with AI. Agencies that can't deliver accurate, on-brand AI imagery at volume are competing for a shrinking pool of traditional budgets.",
+      },
+    ],
+    howDezygn: [
+      {
+        title: "Calibrated client systems that compound",
+        description:
+          "Brand identity, dedicated model library, scene library and documented campaign instructions per client. First campaigns take the longest; by the third, a monthly batch is a two-hour session — our real golf-client cadence: 60 images generated, 29 approved, delivered in 2h20m.",
+      },
+      {
+        title: "Plan with honest production math",
+        description:
+          "Real premium-campaign numbers: 137 generations → 27 shortlisted → 12 client-approved. Roughly 10:1 generation-to-approval on new work. Build that into scope and pricing and you'll never miss a deliverable count.",
+      },
+      {
+        title: "Structured feedback that kills revision spirals",
+        description:
+          "Walk clients through deliveries using the six Visual Syntax ingredients as questions. 'I don't love it' becomes 'the scene feels too European for an American golf brand' — a specific, one-round fix that actually happened on our client work.",
+      },
+      {
+        title: "Grow accounts along PDP → Ads → Social",
+        description:
+          "The natural retainer escalation: product pages first, then ad creative (recurring, because fatigue), then always-on social. Suggested at happy moments, never during revisions. The real revenue is in growing accounts, not pitching new ones.",
+      },
+      {
+        title: "White-label delivery under your brand",
+        description:
+          "Client galleries, feedback rounds and final delivery run under your agency's name — Dezygn is the production engine, you own the relationship.",
+      },
+    ],
+    results: [
+      { value: "2h 20m", label: "Real monthly client session: brief to 29 approved images" },
+      { value: "$1k-3k", label: "Working monthly retainer range for AI creative" },
+      { value: "10:1", label: "Honest generation-to-approval planning ratio" },
+      { value: "3-5x", label: "Creative variants per campaign modern ad ranking rewards" },
+    ],
+    relatedIndustries: ["freelancers", "ecommerce"],
+    relatedUseCases: ["golf-brands", "eyewear", "fashion-accessories"],
+  },
+
+  // ──────────────────────────────────────────────
+  // ECOMMERCE
+  // ──────────────────────────────────────────────
   {
     slug: "ecommerce",
     title: "E-Commerce Brands",
     metaTitle: "AI Product Photography for E-Commerce Brands | Dezygn",
     metaDescription:
-      "Generate studio-quality product photos for your e-commerce store in minutes. 2,500 credits/month for ~500 images. No studio, no photographer, no delays.",
-    heroHeadline:
-      "Studio-Quality Product Photos for Every SKU, Every Season, Every Channel",
+      "AI product photography for e-commerce: accurate catalogs, brand-consistent imagery and ad-creative volume — engineered with the workflow a real agency delivers on.",
+    heroHeadline: "Every SKU, Every Season, One Visual System",
     image: "/images/seo/industries/ecommerce.webp",
-    imageAlt: "AI product photography for e-commerce brands showing catalog imagery at scale",
-    intro: `E-commerce brands live and die by their product imagery. Studies consistently show that 75% of online shoppers rely on product photos when making purchase decisions, and listings with high-quality lifestyle imagery see conversion rates 2-3x higher than those with basic white-background shots alone. Yet most e-commerce brands are trapped in an expensive cycle of booking studios, hiring photographers, coordinating samples, and waiting weeks for edited deliverables.
+    imageAlt: "E-commerce catalog imagery generated with consistent AI product photography",
+    intro: `E-commerce brands live and die by product imagery — it's the only contact the customer has with the product before buying. And the demands stack: marketplace-compliant packshots, lifestyle context for the PDP, ad creative that refreshes before fatigue kills performance, seasonal restyles, and consistency across all of it so the store reads as a brand rather than a flea market.
 
-The challenge compounds as your catalog grows. A brand with 200 SKUs needs thousands of images across product pages, collection banners, social ads, email campaigns, and seasonal promotions. Each channel has its own aspect ratios, styling expectations, and creative requirements. Refreshing imagery for a spring campaign or a Black Friday sale means repeating the entire production pipeline from scratch.
+Traditional production answers each demand with the same expensive ritual: book, ship samples, shoot, edit, wait. The AI alternative most brands have tried — typing prompts and hoping — fails for a different reason: inaccurate products, inconsistent style, and imagery that quietly erodes trust. 'Close enough' isn't a style choice; close enough is a refund.
 
-Dezygn eliminates this bottleneck entirely. With AI-powered product photography and the Visual Syntax framework, you can generate consistent, on-brand imagery across your entire catalog in hours instead of weeks. Upload your product shots, set your brand guidelines once, and let Awa, your AI creative director, produce studio-quality lifestyle scenes, flat lays, and detail shots that convert.`,
+Dezygn is the third option: an engineered visual system. Your products anchored by real photos so what ships is what's pictured. Your brand defined once — exact colors, lighting temperature, scene world — and applied to every image. Your catalog, ads and seasonal campaigns produced from that system in hours. It's the same workflow our own agency uses to deliver e-commerce client retainers every month, productized.`,
     painPoints: [
       {
-        title: "Scaling imagery across hundreds of SKUs",
+        title: "Catalog scale makes traditional production unaffordable",
         description:
-          "Every new product needs 6-8 images minimum for a high-converting listing. With a catalog of 200+ SKUs, that is 1,200-1,600 images to produce, edit, and maintain. Traditional photography makes this a months-long, five-figure project.",
+          "Two hundred SKUs at 6-8 images each is over a thousand images to produce and maintain — a months-long five-figure project that's outdated by the next season.",
       },
       {
-        title: "Inconsistent visual identity across product lines",
+        title: "Visual drift across shoots erodes brand trust",
         description:
-          "When you shoot products across multiple sessions, studios, or photographers, your catalog ends up looking like a patchwork. Different lighting temperatures, background textures, and styling choices erode brand trust and make your store look unprofessional.",
+          "Products shot months apart by different setups produce a patchwork storefront — mismatched lighting, angles and tones that customers read, correctly, as inconsistency.",
       },
       {
-        title: "Seasonal and campaign refreshes drain budgets",
+        title: "Ad creative fatigues faster than you can replace it",
         description:
-          "Refreshing hero banners, collection pages, and ad creatives for each season or promotion means re-shooting or re-editing existing products. Most brands skip this entirely because the cost of a new shoot for existing SKUs is hard to justify, leaving stale imagery on their storefront.",
+          "Performance marketing now rewards fresh variation over single winners. The same four heroes rotating for a quarter is a slow leak in your acquisition cost.",
       },
       {
-        title: "No reliable way to A/B test product imagery",
+        title: "DIY AI prompting produces accuracy liabilities",
         description:
-          "You suspect that a lifestyle scene would outperform your current white-background hero image, but producing a variant just for testing costs $500-$1,000 per product. The result: most brands never test their most impactful conversion lever.",
-      },
-      {
-        title: "Long turnaround kills product launch momentum",
-        description:
-          "From sample coordination to final edited deliverables, traditional product photography takes 2-4 weeks. By the time images arrive, the launch window has narrowed, pre-orders have stalled, and competitors have moved first.",
+          "Embellished colors, warped proportions, garbled labels — naive generation creates 'item not as pictured' refunds and reviews. Accuracy is non-negotiable, and prompting alone doesn't deliver it.",
       },
     ],
     howDezygn: [
       {
-        title: "Batch-generate imagery for your entire catalog",
+        title: "Anchor every product to its real photo",
         description:
-          "Upload product photos in bulk, apply your brand's Visual Syntax settings once, and generate 6-8 variations per SKU in minutes. With 2,500 credits per month, you can produce approximately 500 finished images, enough to cover a full catalog refresh every month.",
+          "Products aren't described and guessed — they're transferred from real source images, with materials and dimensions stated. The label stays legible, the proportions stay true, the customer gets what they saw.",
       },
       {
-        title: "Lock in brand consistency with Visual Syntax",
+        title: "Define the brand once, apply it everywhere",
         description:
-          "Define your lighting style, color palette, background preferences, and prop styling once in Dezygn's Visual Syntax framework. Every image generated from that point forward follows the same visual rules, whether it is your first SKU or your five-hundredth.",
+          "Exact hex colors, lighting temperature, scene world and prop families set up as your brand's Visual Syntax. Style, scene and product change per image; brand stays constant — that constancy is what reads as identity.",
       },
       {
-        title: "Generate seasonal variants without re-shooting",
+        title: "Batch the catalog with locked recipes",
         description:
-          "Place the same product in a cozy autumn scene, a bright summer patio, or a minimal holiday setting with a single prompt change. Seasonal refreshes that used to cost thousands now take an afternoon.",
+          "Lock the packshot setup once — 85mm, f/8, high-key, consistent shadow — and run the whole line. Every SKU in identical light, from bestseller to new arrival.",
       },
       {
-        title: "Create unlimited A/B test variants at zero marginal cost",
+        title: "Feed the ad account weekly",
         description:
-          "Generate five different lifestyle contexts for the same product and test them head-to-head. Awa, your AI creative director, can suggest scene variations based on what performs well in your vertical, removing the guesswork from conversion optimization.",
+          "Same accurate product, fresh scenes, models and formats — lifestyle, UGC-style, comparison frames — at the testing volume modern paid social demands.",
       },
       {
-        title: "Same-day turnaround from upload to storefront",
+        title: "Restyle seasons without re-shooting",
         description:
-          "Upload a product image in the morning and have polished, storefront-ready assets by the afternoon. No studio booking, no sample shipping, no retouching queue. Launch products the day you are ready.",
+          "Spring refresh, Black Friday, holiday warmth: scene swaps on the same validated product assets. The campaign calendar stops being a production calendar.",
       },
     ],
     results: [
-      { value: "87%", label: "Reduction in average image production cost per SKU" },
-      { value: "4 hrs", label: "Average time from upload to storefront-ready assets" },
-      { value: "500+", label: "Product images generated per month on a single plan" },
-      { value: "2.4x", label: "Average conversion lift with lifestyle imagery vs. white background" },
+      { value: "2K+", label: "Source/output resolution discipline keeping labels crisp" },
+      { value: "1 system", label: "Brand definition applied across every SKU and channel" },
+      { value: "Hours", label: "From product upload to storefront-ready image set" },
+      { value: "10:1", label: "Honest generation-to-keeper ratio to plan around" },
     ],
     relatedIndustries: ["shopify-stores", "amazon-sellers"],
-    relatedUseCases: ["skincare", "supplements", "fashion-accessories"],
+    relatedUseCases: ["skincare", "supplements", "home-decor"],
   },
+
+  // ──────────────────────────────────────────────
+  // AMAZON SELLERS
+  // ──────────────────────────────────────────────
   {
     slug: "amazon-sellers",
     title: "Amazon Sellers",
     metaTitle: "AI Product Photography for Amazon Sellers | Dezygn",
     metaDescription:
-      "Create Amazon-compliant product photos, infographics, and A+ Content images with AI. Meet every listing requirement and consistently win the buy box.",
-    heroHeadline:
-      "Amazon-Ready Product Images That Meet Every Requirement and Win the Buy Box",
+      "AI product photography for Amazon: compliant white-background mains, accurate listing sets, lifestyle and comparison images that win the buy box battle.",
+    heroHeadline: "Win the Click Without Risking the Listing",
     image: "/images/seo/industries/amazon-sellers.webp",
-    imageAlt: "AI product photography optimized for Amazon marketplace listing requirements",
-    intro: `Selling on Amazon means operating inside one of the most visually competitive marketplaces on earth. Your main image must meet strict technical requirements: pure white background (RGB 255,255,255), the product filling at least 85% of the frame, minimum 1000x1000 pixel resolution, and no text overlays, watermarks, or additional props. Get any of these wrong and your listing gets suppressed, costing you visibility and sales every day it stays down.
+    imageAlt: "Amazon listing image set with compliant white background and lifestyle frames",
+    intro: `Amazon is the most rule-bound, most competitive image environment in e-commerce. The main image must be the product on pure white (RGB 255,255,255), filling roughly 85% of the frame, no props, no text — and it competes in a search grid against fifty near-identical thumbnails. The listing then needs the full supporting cast: lifestyle context, detail close-ups, scale references, packaging shots — the 5-7 images that turn a click into a conversion.
 
-But compliance is just the floor. To actually win clicks and conversions, you need a full image stack: a compliant hero image, 2-3 lifestyle images showing the product in use, 1-2 infographic images highlighting key features and dimensions, and A+ Content modules with comparison charts and brand story visuals. Top sellers on Amazon invest $2,000-$5,000 per ASIN in professional photography and graphic design to build these image stacks, and they repeat the process for every product variation and seasonal update.
+The sellers winning this game treat imagery as an optimization loop, not a one-time cost. They test main-image angles, refresh lifestyle frames, and keep image sets consistent across variations. The sellers losing it are stuck with one old shoot — or worse, with sloppy AI images whose embellished products generate the platform's most lethal outcome: 'item not as pictured' reviews and the return rate that follows.
 
-Dezygn gives Amazon sellers the ability to produce this entire image stack from a single product photo. Generate compliant white-background heroes, contextual lifestyle scenes, and infographic-ready compositions without a studio. Awa understands Amazon's image requirements and can guide you through building a listing that matches what top-performing ASINs look like in your category.`,
+Dezygn is built for the winning loop: marketplace-compliant packshots from a locked recipe, products anchored to real source photos so listings stay honest, and the supporting image set — lifestyle, scale, detail, packaging — produced in batches per SKU.`,
     painPoints: [
       {
-        title: "Amazon's strict main image requirements",
+        title: "Compliance rules with zero tolerance",
         description:
-          "Amazon mandates a pure white background (RGB 255,255,255), product filling 85% of the frame, minimum 1000x1000px resolution, no text or graphics, and specific file format constraints. A single non-compliant image triggers listing suppression, halting sales entirely.",
+          "Pure white background, 85% frame fill, no watermarks, 1000px+ for zoom. Suppressed listings from non-compliant images are revenue turned off overnight.",
       },
       {
-        title: "Building a full image stack per ASIN is expensive",
+        title: "Fifty identical thumbnails, one click",
         description:
-          "A competitive Amazon listing needs 7-9 images: compliant hero, lifestyle shots, infographics with callouts, size/comparison charts, and packaging images. Professional production runs $300-$800 per ASIN, and sellers with 50+ ASINs face $15,000-$40,000 in photography costs alone.",
+          "In the search grid, your main image is your entire marketing budget. A slightly better angle, crisper shadow or cleaner fill is the difference between the click and invisibility.",
       },
       {
-        title: "A+ Content demands ongoing visual investment",
+        title: "Returns and reviews punish image dishonesty",
         description:
-          "Brand-registered sellers need A+ Content (Enhanced Brand Content) with comparison modules, brand story banners, and rich image grids. Creating these assets requires graphic design skills or an agency, adding $200-$500 per ASIN on top of standard photography costs.",
+          "Amazon's flywheel amplifies disappointment: an image that flatters the product into dishonesty produces returns, 'not as pictured' reviews, and ranking decay that outlasts the refund.",
       },
       {
-        title: "Competing listings constantly raise the visual bar",
+        title: "Variation sprawl multiplies image debt",
         description:
-          "Top sellers in every category continuously refresh their imagery with professional lifestyle shots, 3D renders, and video. If your listing looks dated compared to competitors, your click-through rate drops and Amazon's algorithm pushes you further down in search results.",
-      },
-      {
-        title: "Product variations multiply image requirements",
-        description:
-          "A single product in 5 colors and 3 sizes creates 15 child ASINs, each needing its own compliant hero and supporting images. Most sellers either reuse the same images across variations, hurting conversion, or spend weeks producing unique shots for each.",
+          "Every color, size and bundle needs its own consistent image set. A 10-SKU listing family is 50-70 images — and they all have to match.",
       },
     ],
     howDezygn: [
       {
-        title: "Auto-generate Amazon-compliant hero images",
+        title: "Compliant mains from a locked recipe",
         description:
-          "Upload any product photo and Dezygn produces a clean, pure-white-background image that meets Amazon's 85% fill rate, resolution, and format requirements. No Photoshop clipping paths, no manual background removal, no compliance rejections.",
+          "Pure white, even high-key lighting, correct frame fill, natural contact shadow — the packshot recipe configured once and applied identically across every SKU and variation.",
       },
       {
-        title: "Build complete image stacks from one source photo",
+        title: "Accuracy as returns insurance",
         description:
-          "From a single product image, generate lifestyle scenes, in-use contexts, flat lays, and detail crops. Fill all 7-9 image slots with unique, high-quality visuals that tell a complete product story and match what top-performing listings look like.",
+          "Real source anchoring keeps colors, proportions and label text true to the shipped product. The image is a promise the product has to keep — especially on Amazon.",
       },
       {
-        title: "Create A+ Content visuals without a designer",
+        title: "The full conversion set per SKU",
         description:
-          "Generate comparison charts, feature highlight images, and brand story banners optimized for Amazon's A+ Content modules. Awa provides layout suggestions based on high-converting A+ Content patterns in your product category.",
+          "Lifestyle context, hands-as-ruler scale shots, macro details and packaging frames batched per product — the 5-7 image set that converts the click you fought for.",
       },
       {
-        title: "Produce unique imagery for every product variation",
+        title: "Main-image testing without re-shoots",
         description:
-          "Generate color-accurate images for each product variant automatically. Show the blue version in a blue-themed lifestyle scene and the red version in a complementary setting, giving every child ASIN its own visual identity without multiplying your production costs.",
+          "Angle, shadow and framing variants of the compliant main, generated in minutes — feed your A/B tests instead of guessing which thumbnail wins the grid.",
+      },
+      {
+        title: "Variation families that actually match",
+        description:
+          "Every colorway rendered in the identical setup from the same source discipline — listing families that read as one professional brand.",
       },
     ],
     results: [
-      { value: "100%", label: "Amazon main image compliance rate" },
-      { value: "$14", label: "Average cost per complete 7-image listing stack" },
-      { value: "34%", label: "Average click-through rate improvement with lifestyle images" },
+      { value: "255,255,255", label: "Pure white mains, by recipe rather than retouching" },
+      { value: "85%", label: "Frame fill compliance built into the packshot setup" },
+      { value: "5-7", label: "Images per listing produced as one batch" },
+      { value: "≥100px", label: "Source text height keeping labels zoom-proof" },
     ],
     relatedIndustries: ["ecommerce", "dropshipping"],
-    relatedUseCases: ["supplements", "pet-products", "electronics"],
+    relatedUseCases: ["supplements", "electronics", "toys"],
   },
+
+  // ──────────────────────────────────────────────
+  // SHOPIFY STORES
+  // ──────────────────────────────────────────────
   {
     slug: "shopify-stores",
     title: "Shopify Stores",
     metaTitle: "AI Product Photography for Shopify Stores | Dezygn",
     metaDescription:
-      "Generate on-brand product photos optimized for Shopify themes, collection pages, and mobile shopping. Lifestyle imagery that converts browsers to buyers.",
-    heroHeadline:
-      "Product Photography That Makes Your Shopify Store Look Like a Premium Brand",
+      "AI product photography for Shopify: brand-world imagery, conversion-complete PDP sets, and the ad creative volume DTC growth actually requires.",
+    heroHeadline: "Your Store Is Your Brand. Your Images Are Your Store.",
     image: "/images/seo/industries/shopify-stores.webp",
-    imageAlt: "AI-generated product photography tailored for Shopify store themes and layouts",
-    intro: `Shopify powers over 4 million online stores, and the platform's visual-first design philosophy means your product photography is your storefront. Unlike marketplaces where listings follow a rigid template, Shopify gives you complete creative control. Your homepage hero banner, collection page grids, product detail pages, and announcement bars all depend on cohesive, high-quality imagery that tells your brand story.
+    imageAlt: "Shopify storefront with cohesive brand imagery across product pages",
+    intro: `A Shopify store has a freedom Amazon sellers envy and a burden marketplaces carry for everyone else: nothing about your visual presentation is decided for you. The white-background convention, the trust signals, the traffic — all yours to build. Which means your imagery isn't decoration; it's the store's entire credibility, brand and conversion system in one.
 
-This creative freedom is also a challenge. Popular Shopify themes like Dawn, Prestige, and Impact are designed around specific image aspect ratios and layout patterns. A product photo that looks great on a product detail page may get awkwardly cropped on a collection grid or look washed out on a mobile screen. Brands need multiple versions of every product image: square crops for grids, wide banners for collections, vertical orientations for mobile product pages, and lifestyle scenes for homepage storytelling sections.
+The DTC brands that win on Shopify run imagery as a brand world: a consistent visual universe — palette, light, scenes, models — that makes the homepage, collections, PDPs and ads feel like one deliberate place. The ones that struggle have what visitors read instantly as a reseller site: mismatched supplier photos, inconsistent lighting, no world at all.
 
-Dezygn handles the complexity of Shopify-specific image production. Import your brand guidelines, define your visual language through the Visual Syntax framework, and generate assets that are pre-optimized for your specific Shopify theme's layout requirements. From hero banners to product page galleries, every image is consistent, on-brand, and sized correctly for both desktop and mobile experiences.`,
+Dezygn builds the world deliberately. Brand identity extracted and locked — exact colors, scene presets, model direction. Products anchored to real photos for accuracy. PDP sets, collection banners, lifestyle campaigns and the relentless ad creative DTC growth demands, all generated inside the same system. It's the methodology from our agency's real DTC client work, available to your store.`,
     painPoints: [
       {
-        title: "Theme-specific image requirements vary wildly",
+        title: "Supplier photos make your store look like everyone's store",
         description:
-          "Each Shopify theme has different ideal aspect ratios: Dawn expects 1:1 product images but 16:9 hero banners, while Prestige uses 2:3 product grids and full-width lifestyle sections. Using wrong ratios causes awkward cropping, white bars, or blown-up pixelation.",
+          "The same manufacturer images appear on every competitor's site. Without original imagery, the only differentiator left is price — the worst position in DTC.",
       },
       {
-        title: "Collection and homepage imagery needs constant updating",
+        title: "No marketplace trust halo to borrow",
         description:
-          "Your homepage hero, featured collection banners, and announcement bar visuals need regular refreshing to keep your store feeling alive. Most Shopify merchants launch with strong imagery and then let it stagnate because reshooting is too expensive for maintenance updates.",
+          "On your own domain, imagery does the trust work Amazon's brand does for marketplace sellers. Inconsistent or amateur visuals read as risk at checkout.",
       },
       {
-        title: "Product variants need individual lifestyle coverage",
+        title: "Paid traffic burns creative relentlessly",
         description:
-          "A t-shirt in 8 colors or a candle in 4 scents each needs its own styled imagery to help customers visualize their choice. Shopify's variant system supports unique images per option, but most stores reuse the same shots with color swatches, reducing buyer confidence.",
+          "DTC growth runs on Meta and TikTok, and both now reward fresh variation over recycled winners. Creative production is the growth bottleneck nobody budgets for.",
       },
       {
-        title: "Mobile experience demands different image compositions",
+        title: "Theme-quality design, stock-quality photos",
         description:
-          "Over 70% of Shopify traffic is mobile, but most product photos are composed for desktop viewing. Products centered in wide landscape shots get lost on phone screens. Mobile-optimized imagery needs tighter cropping, vertical orientation, and bolder visual impact.",
-      },
-      {
-        title: "DIY photography looks amateur against DTC competitors",
-        description:
-          "Shopify's ecosystem includes polished DTC brands with $50,000 photography budgets. When your phone-shot product images sit next to these competitors in Google Shopping or Instagram ads, the quality gap costs you clicks before shoppers even visit your store.",
+          "A premium theme with mediocre imagery is a suit with bad shoes. The gap between your design standard and your photo standard is visible on every page.",
       },
     ],
     howDezygn: [
       {
-        title: "Generate theme-optimized images in every aspect ratio",
+        title: "Build the brand world once",
         description:
-          "Tell Dezygn which Shopify theme you use, and it generates product images pre-sized for your theme's product grid, hero banner, collection header, and mobile product page layouts. No manual cropping or resizing required.",
+          "Extracted brand identity — palette, light temperature, scene presets, model direction — applied across homepage, collections, PDPs and ads. The cohesion that separates a brand from a reseller.",
       },
       {
-        title: "Refresh homepage and collection visuals on demand",
+        title: "Conversion-complete PDP sets",
         description:
-          "Swap your homepage hero from a summer beach scene to a fall lifestyle setting in minutes. Generate new collection banners, promotional graphics, and announcement bar visuals whenever your marketing calendar demands it, without scheduling a single shoot.",
+          "Hero, lifestyle context, scale reference, detail close-up, packaging — the full answer set for 'what is it, how big, what's it like' generated per product in one batch.",
       },
       {
-        title: "Create unique lifestyle imagery for every variant",
+        title: "Ad creative at testing volume",
         description:
-          "Generate variant-specific product photography automatically. The navy sweater appears in a moody, warm-toned interior while the white version sits in a bright, airy space. Each variant gets its own visual story that helps customers connect with their choice.",
+          "UGC-style frames, lifestyle variations, model rotations — fresh weekly creative for the paid accounts, from the same accurate product assets.",
       },
       {
-        title: "Mobile-first compositions that convert on small screens",
+        title: "Seasonal campaigns without production cycles",
         description:
-          "Awa composes product scenes with mobile viewing in mind: tighter framing, vertical orientations, and high-contrast backgrounds that make products pop on 6-inch screens. Your Shopify store looks premium on the device where most of your customers are shopping.",
+          "The same validated products restaged for spring, BFCM and holiday inside your brand world. Campaign imagery becomes a scene swap, not a shoot.",
       },
       {
-        title: "Import your brand kit for pixel-perfect consistency",
+        title: "Original imagery even for resold products",
         description:
-          "Upload your brand colors, typography references, and existing product photography. Dezygn's brand import feature analyzes your visual identity and ensures every generated image matches your established look, so new imagery blends seamlessly with existing assets.",
+          "If you sell products others also carry, original brand-world imagery is your differentiation — same item, completely different store experience.",
       },
     ],
     results: [
-      { value: "3.1x", label: "Average increase in product page time-on-page with lifestyle imagery" },
-      { value: "28%", label: "Conversion rate improvement on mobile product pages" },
-      { value: "45 min", label: "Average time to generate a full homepage refresh" },
-      { value: "$99", label: "Monthly cost vs. $3,000+ for a traditional product photo shoot" },
+      { value: "1 world", label: "Brand system across homepage, PDPs and ads" },
+      { value: "5-7", label: "Conversion-set images per product, batched" },
+      { value: "Weekly", label: "Ad creative refresh cadence paid growth needs" },
+      { value: "Hours", label: "From new product to full PDP image set" },
     ],
     relatedIndustries: ["ecommerce", "dropshipping"],
-    relatedUseCases: ["candles", "jewelry", "home-decor"],
+    relatedUseCases: ["candles", "fashion-accessories", "beauty"],
   },
+
+  // ──────────────────────────────────────────────
+  // DROPSHIPPING
+  // ──────────────────────────────────────────────
   {
     slug: "dropshipping",
     title: "Dropshipping",
     metaTitle: "AI Product Photography for Dropshipping | Dezygn",
     metaDescription:
-      "Transform low-quality supplier photos into premium lifestyle imagery. Test products faster with AI-generated product photography. No samples needed.",
-    heroHeadline:
-      "Turn Supplier Photos Into Premium Product Imagery Without Ever Touching the Product",
+      "AI product photography for dropshipping: turn supplier photos into original brand imagery — honestly. Differentiate the store without misrepresenting the product.",
+    heroHeadline: "Same Supplier, Different League",
     image: "/images/seo/industries/dropshipping.webp",
-    imageAlt: "AI product photography for dropshipping businesses creating unique brand imagery",
-    intro: `Dropshipping is built on speed. You find a trending product, list it in your store, run ads, and validate demand before committing inventory. But there is a fundamental problem at the core of this model: you never physically handle the product. Your only visual assets are whatever the supplier provides, typically a handful of poorly lit photos shot on a cluttered factory floor with inconsistent color accuracy and Chinese text watermarks.
+    imageAlt: "Supplier product transformed into original branded lifestyle imagery",
+    intro: `Dropshipping's defining problem is that everyone has your product and everyone has your photos. The same supplier images circulate across every competing store, every ad library, every marketplace listing — so the customer's only differentiator is price, and the margin war begins. The stores that escape it do one thing differently: they look like brands. Original imagery, coherent visual identity, professional product presentation — built on top of the same catalog everyone else carries.
 
-These supplier images are conversion killers. Shoppers have been trained by premium DTC brands to expect lifestyle photography, clean backgrounds, and aspirational contexts. When your product page features the same generic supplier shots that 50 other dropshippers are using, you have zero visual differentiation. Your ad creative looks identical to competitors, your landing page fails to build trust, and your return rates climb because customers receive products that look nothing like what they expected.
+There's a right and a wrong way to do that with AI. The wrong way is fantasy: 'enhancing' the product until the image promises something the supplier doesn't ship. In a model where you never touch inventory, image honesty is your only quality control — an embellished render is a guaranteed dispute, and 'item not as pictured' is the review that kills a store that lives on impulse trust.
 
-Dezygn solves the dropshipping photography problem at its root. Upload a supplier photo, even a rough one, and generate premium lifestyle scenes, clean white-background hero shots, and scroll-stopping ad creatives in minutes. Test 10 products in a single afternoon with professional-grade imagery, kill the losers fast, and double down on winners with expanded visual assets. No samples, no waiting, no minimum order quantities.`,
+The right way is what Dezygn does: keep the product accurate — anchored to the real supplier photo, true colors, true proportions — and transform everything around it. Original scenes, brand palette, lifestyle context, model shots, consistent packshots. The product stays honest; the presentation stops being a commodity.`,
     painPoints: [
       {
-        title: "Supplier photos are unusable for a premium storefront",
+        title: "Identical supplier photos across every competitor",
         description:
-          "AliExpress and 1688 supplier images are shot under fluorescent lighting on cluttered backgrounds, often with visible watermarks, inconsistent color temperatures, and Chinese-language packaging. Using these images directly signals low quality and erodes shopper trust instantly.",
+          "Your ad and your competitor's ad show the literal same image. Customers comparison-shop in one tab, and price becomes the only lever left.",
       },
       {
-        title: "No physical access to products for custom photography",
+        title: "Supplier photo quality is a credibility ceiling",
         description:
-          "The entire dropshipping model depends on not holding inventory. Ordering samples for photography adds 2-4 weeks of lead time and $20-$50 per product in shipping costs, making it impractical to photograph the 20-30 products you need to test each month.",
+          "Harsh factory lighting, cluttered backgrounds, watermarks — supplier imagery caps how premium your store can feel no matter what theme you run.",
       },
       {
-        title: "Every competitor uses the same supplier images",
+        title: "Image dishonesty is fatal when you don't control fulfillment",
         description:
-          "When 50 dropshippers sell the same product, they all use the same supplier photos. Shoppers see identical imagery across multiple stores and ads, making it impossible to differentiate your brand or justify a higher price point.",
+          "You can't inspect what ships. If the image over-promises, the dispute is automatic — and chargebacks plus 'not as pictured' reviews end dropshipping stores quickly.",
       },
       {
-        title: "Product testing speed is bottlenecked by creative assets",
+        title: "Testing products needs imagery faster than anyone can shoot",
         description:
-          "A winning dropshipping product has a shelf life of weeks, not months. If it takes you 5 days to produce ad creatives and product page images for each test product, you can only test 4-6 products per month instead of the 20-30 needed to find consistent winners.",
-      },
-      {
-        title: "High return rates from misleading or unclear product imagery",
-        description:
-          "When product images do not accurately represent size, color, or use context, return rates spike to 15-30%. Chargebacks and refunds eat into already thin dropshipping margins, and poor product representation drives negative reviews that tank future sales.",
+          "The model runs on testing many products fast. Commissioning photography per test product is economically absurd; launching with raw supplier photos loses the test before it starts.",
       },
     ],
     howDezygn: [
       {
-        title: "Transform any supplier photo into a premium product image",
+        title: "Original imagery from the supplier source",
         description:
-          "Dezygn's AI extracts the product from even the lowest-quality supplier photo, corrects color accuracy, removes watermarks, and places it in a clean, professional context. A $3 AliExpress product looks like a $60 DTC brand offering.",
+          "The supplier photo becomes the accuracy anchor; Dezygn rebuilds the presentation around it — clean packshots, branded scenes, lifestyle context. Original images, honest product.",
       },
       {
-        title: "Skip the sample and shoot with AI instead",
+        title: "Accuracy discipline as dispute insurance",
         description:
-          "Generate 8-10 product images from a single supplier photo without ever ordering a sample. Produce lifestyle scenes, white-background heroes, scale reference shots, and in-use contexts entirely through AI. Test the product visually before committing a single dollar to inventory.",
+          "True colors, true proportions, no invented features. The conversion-integrity rule — accurate, realistic, on-brand — matters most when you never see the inventory.",
       },
       {
-        title: "Create unique imagery that no competitor has",
+        title: "Launch-ready image sets for product testing",
         description:
-          "While every other dropshipper uses the same supplier photos, your listings feature original lifestyle scenes and branded compositions that set your store apart. Visual differentiation lets you charge higher prices and build repeat customer trust.",
+          "Packshot, lifestyle frame and ad creative per test product in under an hour — test with brand-grade presentation at dropshipping speed.",
       },
       {
-        title: "Test 20+ products per week with same-day creative",
+        title: "A consistent store world across a rotating catalog",
         description:
-          "Generate a complete product page image set and 3-4 ad creative variants in under 30 minutes per product. With 2,500 credits per month, you can produce imagery for 50+ test products while still having capacity for expanded assets on your winners.",
+          "Products come and go; your brand world doesn't. One locked palette, scene system and lighting recipe makes a fast-rotating catalog read as a stable brand.",
       },
       {
-        title: "Show accurate product context to reduce returns",
+        title: "Winning products get the full brand treatment",
         description:
-          "Generate scale-reference images showing the product in a real-world setting: on a desk, in a hand, next to common objects. Customers understand exactly what they are buying, reducing returns driven by size or appearance mismatches.",
+          "When a test wins, scale its imagery: model shots, UGC-style ad batches, seasonal scenes — the full system applied to the products that earn it.",
       },
     ],
     results: [
-      { value: "30 min", label: "Average time from supplier photo to full product page imagery" },
-      { value: "22%", label: "Reduction in return rates with contextual product imagery" },
-      { value: "5x", label: "More products tested per month compared to sample-based photography" },
+      { value: "<1 hr", label: "Supplier photo to launch-ready image set" },
+      { value: "100%", label: "Product accuracy maintained from the supplier source" },
+      { value: "1 world", label: "Consistent brand system over a rotating catalog" },
+      { value: "0", label: "Photoshoots required to test a new product" },
     ],
-    relatedIndustries: ["amazon-sellers", "shopify-stores"],
-    relatedUseCases: ["electronics", "fitness", "toys"],
-  },
-  {
-    slug: "agencies",
-    title: "Creative & E-Commerce Agencies",
-    metaTitle: "AI Product Photography for Agencies | Dezygn",
-    metaDescription:
-      "Scale product photography output across client accounts. Maintain unique brand guidelines per client. White-label AI photography for agencies.",
-    heroHeadline:
-      "Deliver Premium Product Photography Across Every Client Account Without Scaling Your Team",
-    image: "/images/seo/industries/agencies.webp",
-    imageAlt: "AI product photography workflow for creative and e-commerce agencies managing client catalogs",
-    intro: `Creative and e-commerce agencies are caught in a structural tension: clients expect faster turnaround, higher volume, and more creative variety, but hiring additional photographers, retouchers, and art directors does not scale linearly with revenue. A single product photography project for a mid-size e-commerce brand requires coordinating samples, booking studio time, managing a shoot day, and running 2-3 rounds of retouching. Multiply that by 8-12 active client accounts and your production team is permanently behind schedule.
-
-The brand consistency challenge adds another layer of complexity. Each client has distinct brand guidelines: specific lighting moods, color palettes, prop styling preferences, and background treatments. A lifestyle shot that is perfect for your organic skincare client would be completely wrong for your premium electronics brand. Your team needs to context-switch between brand worlds multiple times per day, and mistakes are expensive both in reshoot costs and client trust.
-
-Dezygn gives agencies a scalable production layer that sits beneath their creative strategy. Set up distinct Visual Syntax profiles for each client, import their brand guidelines, and generate on-brand product imagery at a volume that would require a team of 5-6 to match manually. Your strategists and account managers focus on the creative direction while Dezygn and Awa handle the production execution. Deliver work under your own brand with white-label output that clients never see behind the scenes.`,
-    painPoints: [
-      {
-        title: "Production capacity cannot keep pace with client demand",
-        description:
-          "Each client account needs 50-200 product images per month across product pages, ads, email, and social. With 10 clients, that is 500-2,000 images monthly. Hiring photographers and retouchers to meet this volume requires $15,000-$30,000/month in payroll that erodes margins.",
-      },
-      {
-        title: "Maintaining separate brand guidelines per client is error-prone",
-        description:
-          "Your team juggles 8-12 different brand style guides simultaneously. Using the wrong background tone for a client or applying another brand's color grading to a batch of images costs revision cycles and damages the client relationship.",
-      },
-      {
-        title: "Client presentations require speculative creative work",
-        description:
-          "Pitching a new visual direction to a client means producing 5-10 sample images before you even know if the concept will be approved. Agencies absorb $1,000-$3,000 in speculative production costs per pitch, with no guarantee of a green light.",
-      },
-      {
-        title: "Scaling to new clients requires hiring ahead of revenue",
-        description:
-          "Taking on a new account with heavy photography needs means hiring before the revenue is guaranteed. If the client churns in 3 months, you are stuck with excess production capacity and fixed costs that take months to unwind.",
-      },
-      {
-        title: "Turnaround expectations are compressing every quarter",
-        description:
-          "Clients that accepted 2-week delivery timelines now expect 3-5 business days. Rush fees and overtime are cutting into project margins, and agencies that cannot meet these timelines lose accounts to faster competitors or in-house teams.",
-      },
-    ],
-    howDezygn: [
-      {
-        title: "Create isolated Visual Syntax profiles per client",
-        description:
-          "Set up distinct brand profiles for each client account with their specific lighting preferences, color palettes, background styles, and prop guidelines. Switch between client worlds instantly and never accidentally cross-contaminate brand assets.",
-      },
-      {
-        title: "Scale to 2,000+ images per month without hiring",
-        description:
-          "A single Dezygn plan produces approximately 500 images per month. Stack plans across client accounts or allocate credits flexibly to match each client's volume needs. Add a new client's production capacity in minutes, not months.",
-      },
-      {
-        title: "Pitch new creative directions with instant mockups",
-        description:
-          "Generate 10-15 concept images for a client pitch in under an hour. Show the client exactly what a new visual direction looks like with their actual products instead of mood boards and verbal descriptions. Win more pitches with tangible creative proofs.",
-      },
-      {
-        title: "White-label delivery with no Dezygn branding",
-        description:
-          "All generated images are clean, unbranded assets ready for delivery under your agency's name. No watermarks, no metadata traces, no platform branding. Your clients see premium photography from your agency, full stop.",
-      },
-      {
-        title: "Same-day turnaround becomes your competitive advantage",
-        description:
-          "Deliver initial image drafts within hours of receiving product samples or photos. While competitors quote 2-week timelines, your agency promises next-day delivery on standard product photography, winning accounts on speed alone.",
-      },
-    ],
-    results: [
-      { value: "6x", label: "Increase in monthly image output per team member" },
-      { value: "72%", label: "Reduction in speculative pitch production costs" },
-      { value: "< 24 hrs", label: "Average turnaround from brief to first deliverables" },
-      { value: "40%", label: "Improvement in project margins on photography-heavy accounts" },
-    ],
-    relatedIndustries: ["freelancers", "ecommerce"],
-    relatedUseCases: ["beauty", "food-beverage", "outdoor-gear"],
-  },
-  {
-    slug: "freelancers",
-    title: "Freelance Photographers & Creatives",
-    metaTitle: "AI Product Photography for Freelancers | Dezygn",
-    metaDescription:
-      "Expand your product photography services with AI. Deliver more concepts, faster revisions, and higher-volume output without booking extra studio time.",
-    heroHeadline:
-      "Deliver 10x the Creative Output Without 10x the Studio Hours",
-    image: "/images/seo/industries/freelancers.webp",
-    imageAlt: "AI-powered product photography tools for freelance photographers and creative professionals",
-    intro: `Freelance product photographers face a ceiling that no amount of hustle can break through: there are only so many hours in a day to shoot, edit, and deliver. A typical freelance product photography workflow involves 2-4 hours of setup and shooting per product, followed by 1-2 hours of retouching per final image. At that rate, a single freelancer can realistically deliver 30-50 finished images per week while still handling client communication, invoicing, and business development.
-
-The market is also shifting beneath freelancers' feet. E-commerce clients who used to budget $200-$500 per product for professional photography are now seeing AI-generated alternatives and asking why they should pay studio rates. Lowering prices to compete starts a race to the bottom. Refusing to adapt means losing clients to cheaper alternatives that are increasingly good enough for most use cases.
-
-Dezygn is not a replacement for skilled freelancers, it is a force multiplier. Use AI-generated imagery to expand your service offering: deliver initial concepts in hours instead of days, offer unlimited revision rounds without eating into your margins, and take on higher-volume projects that were previously impossible for a solo operator. Position yourself as a creative director who leverages AI tools rather than a photographer competing on hourly rates. The freelancers who thrive will be those who integrate AI into their workflow and charge for creative judgment, not just shutter clicks.`,
-    painPoints: [
-      {
-        title: "Income is capped by billable hours",
-        description:
-          "A freelancer charging $150/hour for shooting and $75/hour for retouching hits a hard ceiling around $8,000-$12,000/month. Taking on more work means longer hours, and there is no leverage: every dollar earned requires your direct time and attention.",
-      },
-      {
-        title: "Clients expect faster turnaround at lower prices",
-        description:
-          "E-commerce clients increasingly compare freelance rates against AI tools and offshore retouching services charging $5-$15 per image. Freelancers who cannot demonstrate clear value above these alternatives face constant downward pricing pressure.",
-      },
-      {
-        title: "Revisions and concept exploration eat unpaid hours",
-        description:
-          "A client asking to see the product in three different background settings means three separate setups or three rounds of compositing. Most freelancers include 1-2 revision rounds in their pricing but absorb 3-5 rounds in practice, destroying effective hourly rates.",
-      },
-      {
-        title: "Building a diverse portfolio requires unpaid spec work",
-        description:
-          "Attracting clients in new verticals, like jewelry, food, or supplements, requires portfolio samples in those categories. Freelancers either shoot spec work for free or turn down inquiries outside their existing portfolio, limiting growth opportunities.",
-      },
-      {
-        title: "Competing with full-service studios as a solo operator",
-        description:
-          "Studios offer end-to-end service: creative direction, multiple shooting styles, same-day editing, and project management. Freelancers competing for the same clients need to match this breadth of service while managing everything alone.",
-      },
-    ],
-    howDezygn: [
-      {
-        title: "Decouple income from hours with AI-assisted delivery",
-        description:
-          "Use Dezygn to generate initial concepts, background variations, and mood explorations in minutes instead of hours. Bill clients for your creative direction and curation while AI handles the production volume. Serve 3x more clients without working 3x the hours.",
-      },
-      {
-        title: "Offer unlimited concepts and revisions as a premium service",
-        description:
-          "Instead of charging per revision, offer clients a premium package with unlimited background and styling variations. Generate 10 options in the time it used to take to produce one. Clients get more choice, you maintain healthy margins, and revision cycles become a profit center.",
-      },
-      {
-        title: "Expand your portfolio into new verticals instantly",
-        description:
-          "Use Dezygn to generate portfolio samples across product categories you have never shot before. Show prospective jewelry clients what their products would look like in your style without investing in spec shoots. Awa's creative direction helps you learn the visual conventions of unfamiliar verticals quickly.",
-      },
-      {
-        title: "Compete with studios by offering full-service packages",
-        description:
-          "Bundle AI-generated product photography with your existing shooting skills to offer comprehensive packages: hero images from your studio, lifestyle variations from Dezygn, and social media crops optimized for every platform. Match studio-level output as a solo operator.",
-      },
-      {
-        title: "Use the course and community to sharpen your edge",
-        description:
-          "Dezygn's bundled course and community connect you with other creatives using AI photography tools professionally. Learn prompting techniques, pricing strategies, and workflow optimizations from freelancers who have already integrated AI into profitable service offerings.",
-      },
-    ],
-    results: [
-      { value: "3.2x", label: "Average increase in monthly client capacity" },
-      { value: "$0", label: "Marginal cost per additional concept or revision variant" },
-      { value: "85%", label: "Reduction in time spent on background and scene variations" },
-      { value: "2x", label: "Average increase in effective hourly rate within 90 days" },
-    ],
-    relatedIndustries: ["agencies", "ecommerce"],
-    relatedUseCases: ["jewelry", "skincare", "baby-products"],
+    relatedIndustries: ["shopify-stores", "amazon-sellers"],
+    relatedUseCases: ["electronics", "pet-products", "fitness"],
   },
 ];
+
+export function getIndustryBySlug(slug: string): Industry | undefined {
+  return industries.find((industry) => industry.slug === slug);
+}

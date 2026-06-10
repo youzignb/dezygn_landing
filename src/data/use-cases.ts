@@ -18,137 +18,129 @@ export interface UseCase {
 
 export const useCases: UseCase[] = [
   // ──────────────────────────────────────────────
-  // 1. GOLF BRANDS
+  // 1. GOLF BRANDS (real client category — Fairway Creatives)
   // ──────────────────────────────────────────────
   {
     slug: "golf-brands",
     title: "Golf Brands",
     metaTitle: "AI Product Photography for Golf Brands | Dezygn",
     metaDescription:
-      "Create stunning golf product photos without fighting metal reflections. Dezygn's AI handles clubs, bags, and apparel — 2,500 shots/month at $99.",
-    heroHeadline: "Stop Losing Sales to Bad Club Photos",
+      "AI product photography for golf apparel and equipment — the exact category our own agency serves. Real client workflows, course scenes, model shots.",
+    heroHeadline: "We Don't Guess at Golf — We Deliver It Every Month",
     heroSubheadline:
-      "Golf equipment is one of the hardest product categories to photograph. Reflective metal, intricate grooves, and the need to convey performance — Dezygn handles all of it with AI-generated imagery built for the fairway.",
+      "Golf is the niche our own agency, Fairway Creatives, serves with monthly creative retainers — apparel, outerwear, and accessories for DTC golf brands. Everything on this page comes from real, delivered client work.",
     image: "/images/seo/use-cases/golf-brands.webp",
-    imageAlt: "AI-generated golf equipment product photography showing clubs and accessories in a course setting",
+    imageAlt: "AI-generated golf apparel photography showing a model on a course in branded outerwear",
     problem: [
-      "If you sell golf equipment, you already know the pain. Clubs are made of highly polished metal — chrome, stainless steel, titanium — and every single surface acts like a mirror. A traditional product shoot means hours of adjusting lighting rigs, taping diffusion panels, and still ending up with photos that show the photographer's reflection in the club face. One bad glare across the sweet spot and the entire image is unusable. For a brand releasing a new iron set with 8 clubs, each needing 4-6 angles, that is 40+ individual shots where reflections can ruin everything.",
-      "Then there is the detail problem. Golfers are obsessive about specs. They want to see the milling pattern on a putter face, the cavity back design of an iron, the crown texture on a driver. These micro-details require macro photography setups with specialized lenses, focus stacking, and post-processing — easily $200-400 per SKU just for detail shots. Multiply that across a seasonal catalog and you are looking at five figures before you have even shot a single lifestyle image.",
-      "Lifestyle photography for golf is its own nightmare. You need access to a course (permit fees, weather dependency, golden-hour timing), models who can actually swing a club convincingly (not just hold it), and the logistical challenge of hauling lighting equipment across 18 holes. Most DTC golf brands end up with either sterile white-background shots that fail to inspire, or amateurish on-course photos that undermine their premium positioning.",
-      "And let us talk about seasonal velocity. The golf industry launches new products on tight cycles — spring releases need to be photographed in winter, limited editions drop with weeks of lead time, and custom colorways multiply your SKU count fast. Traditional photography simply cannot keep pace without blowing your marketing budget wide open.",
+      "Golf brands run on seasonal drops, and the photography pipeline can't keep up. Spring collections need imagery in winter, when the course is brown and the weather is hostile. A traditional shoot means models who can actually look credible in golf kit, course access, weather windows, and weeks of lead time — for a drop that's live for eight weeks.",
+      "The audience makes it harder. Golfers are brand-conscious buyers who know what premium looks like; affluent 45-65 customers in Florida, California and Texas don't respond to obviously fake imagery or generic stock models. The visuals have to say 'this brand belongs at your club' — and most mid-tier golf brands have revenue, decent products, and photography that undersells both.",
+      "And if you're running Meta ads — which working golf brands are — creative fatigue burns through imagery faster than any shoot schedule can replenish it. The brands winning paid social are testing fresh variations weekly, not rotating the same four hero shots for a quarter.",
     ],
     solution:
-      "Dezygn turns golf product photography from a logistical headache into a streamlined creative process. Upload a few reference images of your clubs, bags, or apparel, and our AI handles the rest — generating studio-quality shots with perfect lighting that eliminates reflections, plus lifestyle imagery set on photorealistic course backgrounds without ever leaving your office. Awa, our AI Creative Director, understands the visual language of premium golf brands and automatically suggests compositions that highlight the details golfers care about: face milling, shaft graphics, sole geometry, and alignment aids.\n\nThe Visual Syntax framework lets you define your brand's exact aesthetic — whether that is the clean minimalism of a modern DTC brand or the heritage feel of a classic equipment maker — and apply it consistently across every image. Import your brand colors, fonts, and logo, and Dezygn ensures every shot feels like it belongs in your catalog. With 2,500 credits per month, you can photograph an entire seasonal lineup including hero shots, detail close-ups, lifestyle scenes, and social media crops — all for $99/month instead of $15,000+ per traditional shoot.",
+      "This is the category we know best because we deliver it: Dezygn was built running Fairway Creatives, an AI photography agency whose core clients are golf apparel brands. A real monthly session for a premium Scandinavian-design golf brand runs about two hours twenty minutes — brief review, generation of 60 images across 6 deliverables, gallery review and delivery — and produces 29 approved images. Not a demo. A paying client's monthly package.\n\nThe workflow that makes that possible lives in Dezygn: products anchored by real source images so technical fabrics and brand marks survive generation, dedicated models matched to the brand's actual customer (comp cards across the 40-60 age brackets, clean portraits for compositing), and a course-scene library built once and reused all season. The production rules came from this exact client work — mid-shot framing so the jacket never becomes a speck in a landscape, source angles matched to output angles so material panels render true, 2K sources so logos stay crisp.",
     features: [
       {
-        icon: "Sparkles",
-        title: "Reflection-Free Metal Rendering",
+        icon: "Clock",
+        title: "Drop-Speed Delivery",
         description:
-          "Our AI eliminates the glare and mirror effects that plague traditional club photography, producing clean images that show the true finish of every surface.",
+          "A calibrated monthly session delivers a full content batch in hours. Spring drop imagery in January, with the course in perfect summer light.",
       },
       {
         icon: "Target",
-        title: "Macro Detail Generation",
+        title: "Models Who Belong at the Club",
         description:
-          "Generate ultra-close-up views of club faces, groove patterns, and sole designs without expensive macro lens setups or focus stacking workflows.",
+          "Model briefs written from the brand identity — the right age brackets, the right presence — with comp cards for selection and clean portraits for accurate compositing.",
       },
       {
         icon: "Image",
-        title: "Course Lifestyle Backgrounds",
+        title: "A Course-Scene Library",
         description:
-          "Place your products on photorealistic fairways, greens, and pro-shop settings — no course permits, no weather delays, no golden-hour scrambles.",
+          "Fairways, links coastlines, clubhouse terraces — generated once as standalone scenes in multiple angles with matching light, then reused across every product all season.",
       },
       {
         icon: "Layers",
-        title: "Full-Set Consistency",
+        title: "Technical Fabric Fidelity",
         description:
-          "Shoot an 8-piece iron set or a 14-club bag and get perfectly matched lighting, angles, and color grading across every single image.",
+          "Waterproof shells, ribbed collars, material panels: source-anchored generation with angle matching keeps the construction details that justify premium pricing.",
       },
       {
-        icon: "Clock",
-        title: "Seasonal Speed",
+        icon: "Zap",
+        title: "Ad Volume Without Fatigue",
         description:
-          "Generate launch-ready images for new releases in hours instead of weeks. Hit your spring catalog deadline even if the product ships in February.",
+          "Same product, fresh model, scene and framing variations weekly — the testing volume Meta's ranking now rewards, at a cost per creative a shoot can't touch.",
       },
     ],
     stats: [
-      { value: "$7.1B", label: "U.S. golf equipment market size (2024)" },
-      { value: "34%", label: "Of golfers research gear online before buying" },
-      { value: "2.8x", label: "Higher conversion with lifestyle imagery vs. white background" },
+      { value: "2h 20m", label: "Real client session: brief to 29 approved images" },
+      { value: "50/mo", label: "Creatives delivered on a real golf-brand package" },
+      { value: "60→29", label: "Generated → client-approved in one monthly batch" },
     ],
-    cta: "Start Shooting Your Golf Line Today",
-    relatedUseCases: ["fitness", "outdoor-gear", "fashion-accessories"],
-    relatedShotTypes: ["hero-shots", "detail-close-ups"],
+    cta: "Shoot Your Golf Line the Way Our Agency Does",
+    relatedUseCases: ["outdoor-gear", "fitness", "fashion-accessories"],
+    relatedShotTypes: ["lifestyle", "model-shots", "detail-close-ups"],
   },
 
   // ──────────────────────────────────────────────
-  // 2. SKINCARE
+  // 2. SKINCARE (My Lela anchor)
   // ──────────────────────────────────────────────
   {
     slug: "skincare",
     title: "Skincare",
-    metaTitle: "AI Product Photography for Skincare | Dezygn",
+    metaTitle: "AI Product Photography for Skincare Brands | Dezygn",
     metaDescription:
-      "Capture the glow, texture, and luxury of skincare products with AI photography. No more fighting translucent bottles. Try Dezygn free.",
-    heroHeadline: "Your Serums Deserve Better Than a Ring Light",
+      "AI skincare photography that keeps containers, textures and labels accurate: packshots, UGC application shots, and lifestyle scenes built from a real brand world.",
+    heroHeadline: "Skincare Sells on Texture, Light, and Trust",
     heroSubheadline:
-      "Skincare photography demands a clinical-meets-luxurious feel that most brands struggle to achieve. Dezygn's AI nails the glow, the drip, and the vibe — every single time.",
+      "Frosted glass, dropper caps, cream textures, golden-hour bathrooms — skincare is the most light-sensitive category in e-commerce, and the one where an inaccurate render costs you the customer's trust.",
     image: "/images/seo/use-cases/skincare.webp",
-    imageAlt: "AI product photography of skincare bottles and serums with soft natural lighting and botanical accents",
+    imageAlt: "AI skincare photography showing a serum bottle in soft natural light",
     problem: [
-      "Skincare photography sits at the intersection of science and luxury, and getting that balance right is deceptively difficult. Your products need to look clinically effective — clean, precise, trustworthy — while simultaneously feeling indulgent and aspirational. That dual mandate means every image has to communicate efficacy and desire at the same time, and most product photographers default to one or the other.",
-      "The physical challenges are brutal. Skincare bottles are often transparent or translucent, which means light passes through them in unpredictable ways. A clear serum bottle can look like a glowing gem in one setup and a washed-out ghost in another. Frosted glass diffuses light beautifully but loses all dimension without precise rim lighting. Pump dispensers, dropper caps, and airless packaging each introduce their own shadow and reflection nightmares. And if you sell a line of 20+ SKUs in similar packaging, achieving consistent lighting across all of them requires a photographer who truly specializes in beauty — and those specialists charge $500-1,500 per product.",
-      "Texture photography is another massive gap. Your customers want to see what the product looks like — the viscosity of a serum on a dropper, the whipped consistency of a moisturizer, the grit of an exfoliator. These texture shots (often called swatch shots or smear shots) require food-styling-level precision, disposable backgrounds, and a lot of wasted product. Each texture shot can take 30-45 minutes to set up, shoot, and clean, making them prohibitively expensive at scale.",
-      "Then there is the content treadmill. Between your DTC site, Amazon listings, TikTok Shop, Instagram, email campaigns, and retail partners who each have their own image specs, a single SKU might need 15-20 unique images. Multiply that by a product line of 30 items and you are staring at 500+ images per quarter. No wonder most skincare brands end up recycling the same three photos across every channel.",
+      "Skincare packaging is an optics problem. Frosted glass, translucent serums, metallic dropper caps — every container is an exercise in how light passes through and reflects off materials. Generic AI prompting mangles exactly these properties: the frosted jar renders glossy, the golden serum turns opaque, the label text smears. And a skincare customer comparing your photo to the jar that arrives notices everything.",
+      "The category also runs on people. Application shots, ritual moments, before-the-mirror scenes — skincare conversion imagery needs consistent on-brand models applying real product, in volumes that support both the PDP and a constant ad rotation. Booking that monthly with a traditional shoot is a five-figure habit.",
+      "Meanwhile the brands winning the category publish constantly: PDP refreshes, UGC-style ad creative, seasonal campaigns. Mid-size skincare brands are stuck choosing between stale imagery and unsustainable production costs.",
     ],
     solution:
-      "Dezygn understands skincare at a visual level. Our AI has been trained on the aesthetics that define top-performing beauty brands — the soft diffused lighting, the dewy reflections, the clean negative space, and the textural richness that makes customers reach for their credit card. Upload your product photos or 3D renders and Awa, our AI Creative Director, generates studio-quality imagery that nails the clinical-luxury balance without a single physical photoshoot.\n\nThe Visual Syntax framework lets you lock in your brand's aesthetic DNA — pastel minimalism, bold clinical, earthy organic, whatever your positioning demands — and reproduce it flawlessly across every product and every channel. Need a hero shot for your homepage, a texture close-up for your PDP, a lifestyle flat lay for Instagram, and a clean cutout for Amazon? Generate all four from a single upload. At 2,500 credits per month, you can keep your entire product catalog fresh across every sales channel without ever booking a studio.\n\nPlus, our course and community bundle means you are not just getting a tool — you are getting the strategy behind high-converting skincare imagery. Learn what top brands like Drunk Elephant, Glossier, and Tatcha do differently with their product visuals, and apply those principles directly in Dezygn.",
+      "Dezygn treats skincare the way our agency work does: as a brand-world problem first. One of our reference projects is a Belgian candle-and-skincare brand whose extracted identity — Mediterranean coastal, olive groves, sun-bleached linen, terracotta and sage, golden hour — became the filter for every scene, prop and lighting decision. That's what keeps fifty images across a season looking like one brand instead of fifty prompts.\n\nThe accuracy layer is engineered, not hoped for. Containers are anchored by real product photos and described by what matters: '50ml frosted glass bottle, gold-plated dropper cap, clear golden-toned liquid inside.' Material-true specificity in, accuracy out. Models follow the dedicated-model workflow — brief from the brand identity, comp card selection, clean portraits for compositing — so the same face carries your PDP, your ads and your UGC-style content. And the lighting recipes are matched to the job: high-key studio for catalog, natural window light for ritual scenes, golden hour for the aspirational set.",
     features: [
       {
         icon: "Sparkles",
-        title: "Translucent Bottle Mastery",
+        title: "Material-True Containers",
         description:
-          "Our AI renders transparent and frosted glass with accurate light transmission, refraction, and rim lighting — no more washed-out or overexposed packaging.",
+          "Frosted glass, airless pumps, droppers, cream textures — real source images plus material-specific descriptions keep every container physically honest.",
+      },
+      {
+        icon: "Camera",
+        title: "UGC Application Shots",
+        description:
+          "iPhone-aesthetic, candid application moments — mid-routine, bathroom light, gaze off camera — engineered deliberately for the ad formats that outperform polish.",
       },
       {
         icon: "Palette",
-        title: "Texture & Swatch Generation",
+        title: "A Brand World, Not a Backdrop",
         description:
-          "Generate realistic serum drips, cream swatches, and exfoliator textures without wasting product or spending 45 minutes per shot on setup.",
+          "Scenes built from your extracted brand identity — your geography, your materials, your palette — so the whole catalog coheres like a campaign.",
       },
       {
-        icon: "Brain",
-        title: "Awa Knows Beauty",
+        icon: "Target",
+        title: "One Dedicated Model Across Everything",
         description:
-          "Our AI Creative Director suggests compositions, color palettes, and prop styling informed by what actually converts in the skincare category.",
-      },
-      {
-        icon: "Layers",
-        title: "Full-Line Consistency",
-        description:
-          "Match lighting, shadows, and color grading across your entire product range — from cleansers to serums to SPF — so your brand page looks cohesive.",
-      },
-      {
-        icon: "Globe",
-        title: "Multi-Channel Output",
-        description:
-          "Export images sized and cropped for your DTC site, Amazon, TikTok Shop, Instagram, and retail partners from a single generation session.",
+          "The same brand-matched face on PDP, ads and social, generated from clean portraits so composites land on the first try.",
       },
       {
         icon: "Shield",
-        title: "Claim-Safe Imagery",
+        title: "Honest Claims by Design",
         description:
-          "Generate product images that accurately represent your packaging and formulas — critical for brands navigating FDA and FTC visual advertising guidelines.",
+          "Texture, ritual and lifestyle do the selling — no fabricated skin-results imagery that violates platform policy and customer trust.",
       },
     ],
     stats: [
-      { value: "$190B", label: "Global skincare market projected by 2025" },
-      { value: "73%", label: "Of consumers say product images affect purchase decisions" },
-      { value: "22%", label: "Lower return rates when product images accurately represent the item" },
+      { value: "2K+", label: "Minimum source resolution so label type survives" },
+      { value: "6", label: "Ingredients controlled per image (Visual Syntax)" },
+      { value: "1 face", label: "Dedicated model consistency across the catalog" },
     ],
-    cta: "Make Your Skincare Line Glow",
-    relatedUseCases: ["beauty", "supplements", "candles"],
-    relatedShotTypes: ["hero-shots", "detail-close-ups"],
+    cta: "Build Your Skincare Brand World",
+    relatedUseCases: ["beauty", "candles", "supplements"],
+    relatedShotTypes: ["ugc", "studio", "lifestyle"],
   },
 
   // ──────────────────────────────────────────────
@@ -157,859 +149,883 @@ export const useCases: UseCase[] = [
   {
     slug: "supplements",
     title: "Supplements",
-    metaTitle: "AI Product Photography for Supplements | Dezygn",
+    metaTitle: "AI Product Photography for Supplement Brands | Dezygn",
     metaDescription:
-      "Build trust with professional supplement photography. Dezygn's AI creates clean, compliant product images that convert — 2,500 shots/month for $99.",
-    heroHeadline: "Your Supplements Look Legit. Make Your Photos Match.",
+      "AI supplement photography with accurate bottles, legible labels and lifestyle context. Engineered for the most label-critical category in e-commerce.",
+    heroHeadline: "In Supplements, the Label IS the Product",
     heroSubheadline:
-      "The supplement market is crowded and skeptical. Professional product imagery is the fastest way to signal quality and build trust — and Dezygn makes it effortless.",
+      "Capsule counts, claims, ingredient panels — supplement customers read everything. Photography that garbles a label doesn't just look bad; it reads as untrustworthy in a category built on trust.",
     image: "/images/seo/use-cases/supplements.webp",
-    imageAlt: "AI-generated supplement bottle photography with clean backgrounds and trust-building composition",
+    imageAlt: "AI supplement photography showing a bottle with crisp legible label in a wellness scene",
     problem: [
-      "The supplement industry has a trust problem, and your product photography is either helping or hurting. Consumers are bombarded with thousands of supplement brands online, many of which look indistinguishable from each other. When a customer lands on your product page, they make a snap judgment about your brand's legitimacy in under three seconds — and that judgment is almost entirely based on your imagery. Grainy photos, inconsistent lighting, or amateurish backgrounds instantly trigger the 'this looks sketchy' response that kills conversions.",
-      "Supplement packaging is deceptively hard to photograph well. Most products come in similar formats — bottles, pouches, tubs, blister packs — with labels that contain dense text, nutrition facts panels, and regulatory information. Getting the label sharp and readable while maintaining attractive lighting on the container itself requires careful balance. Glossy labels reflect studio lights. Matte finishes absorb light and look flat. Metallic inks need specific angles to pop. And the ubiquitous white or black HDPE bottle that 80% of supplements come in is either blown out or lost in shadows without expert lighting.",
-      "Lifestyle photography for supplements is another minefield. You need to show your product in context — a protein powder in a gym setting, a sleep supplement on a nightstand, a greens blend in a kitchen — but the imagery cannot make implied health claims. The FDA and FTC scrutinize supplement marketing closely, and a photo that shows an overly fit model next to your product can be interpreted as a before-and-after claim. This regulatory tightrope makes many brands default to boring, clinical imagery that fails to differentiate.",
-      "Scale is the final challenge. Most supplement brands carry 10-30 SKUs across multiple flavors, sizes, and formats. Each needs a primary product image, a label detail shot, lifestyle context, and social-ready crops. At $200-400 per SKU for professional photography, a full catalog refresh runs $5,000-12,000 — money that most growth-stage supplement brands would rather spend on ads or inventory.",
+      "No category punishes sloppy AI imagery faster than supplements. The product is a bottle whose entire surface is information — brand name, formula, capsule count, claims — and text is exactly where careless generation fails loudest. One garbled word on a label in your ad and the customer's takeaway is 'fake product.'",
+      "The format is also repetitive in a way that exposes inconsistency: most supplement brands carry a line of near-identical bottles that differ only in label and accent color. Shot separately over time, the catalog drifts — different lighting, angles, shadows — and the storefront reads as amateur exactly where it needs to read as clinical.",
+      "And supplements live or die on lifestyle context: the morning routine, the gym bag, the kitchen counter. White-background compliance shots don't sell wellness; scenes do. Producing both tracks — clinical catalog plus lifestyle volume for ads — doubles the traditional production bill.",
     ],
     solution:
-      "Dezygn gives supplement brands the visual credibility they need without the cost or complexity of traditional photography. Upload your product or packaging files and our AI generates clean, professional imagery with the precise lighting that makes bottles look premium, labels look sharp, and your brand look established. Awa, our AI Creative Director, understands the visual codes of the supplement space — what makes a brand look trustworthy versus cheap — and guides every composition accordingly.\n\nThe Visual Syntax framework lets you establish and enforce a consistent visual identity across your entire product line. Whether you are a clinical brand with clean white aesthetics or an active lifestyle brand with bold, energetic visuals, Dezygn ensures every image reinforces your positioning. Generate hero shots, ingredient flat lays, lifestyle scenes, and comparison layouts — all while maintaining the visual accuracy that keeps you on the right side of regulatory guidelines.\n\nWith 2,500 credits per month at $99, you can reshoot your entire catalog quarterly, create fresh content for every product launch, and A/B test different visual approaches — all without booking a single studio session. The brand import feature means your exact colors, fonts, and logo treatments are baked into every image automatically.",
+      "Supplement work in Dezygn is built on the production rules that keep text alive. Sources at 2K minimum with label text at least ~100px tall, because the AI cannot add information that isn't in the source. Output resolution matched to input, because rendering a 2K source at 1K output downscales label type into mush — the most common 'AI can't do labels' complaint is actually a settings bug. Real product photos anchor every generation, so the bottle that ships is the bottle in the picture: '120-count amber glass bottle, white safety cap, matte label' — specificity in, accuracy out.\n\nFor the catalog, the packshot recipe is locked once — 85mm, f/8, high-key, consistent contact shadow — and applied across the entire line in one batch, so twelve SKUs look like one brand. For lifestyle, wellness-coded scenes (botanicals, natural wood, morning window light) and brand-matched models cover the ad volume, with honest framing: ritual and routine, not fabricated body-results claims that get ad accounts banned.",
     features: [
       {
         icon: "Shield",
-        title: "Trust-Building Compositions",
+        title: "Label-Legible by Engineering",
         description:
-          "Awa suggests layouts and lighting that signal quality and legitimacy — critical in an industry where consumers are trained to be skeptical.",
+          "The 2K source rule plus output-resolution matching keeps ingredient panels and brand type crisp — the difference between clinical and counterfeit.",
       },
       {
-        icon: "Camera",
-        title: "Label Clarity Engine",
+        icon: "Layers",
+        title: "Whole-Line Consistency",
         description:
-          "Generate images where supplement facts panels, ingredient lists, and certifications are sharp and readable, not blurred or blown out by reflections.",
+          "Lock the packshot recipe once and batch the entire SKU line — identical lighting, angle and shadow from your bestseller to your newest formula.",
       },
       {
         icon: "Image",
-        title: "Compliant Lifestyle Scenes",
+        title: "Wellness Scenes That Convert",
         description:
-          "Place your products in aspirational but regulation-safe contexts — kitchens, desks, gym bags — without implying unsubstantiated health claims.",
+          "Morning counters, gym bags, botanical settings — lifestyle context generated as reusable scenes, matched to your brand palette.",
       },
       {
-        icon: "Package",
-        title: "Multi-Format Support",
+        icon: "Target",
+        title: "Routine Moments With Real People",
         description:
-          "Bottles, pouches, tubs, stick packs, blister packs — Dezygn handles every common supplement packaging format with optimized lighting for each.",
+          "Brand-matched models mid-routine — capsule in hand, shaker on the bench — using action vocabulary that reads authentic instead of staged.",
       },
       {
         icon: "Zap",
-        title: "Flavor Variant Automation",
+        title: "Ad Variations on Demand",
         description:
-          "Launch a new flavor? Generate a full image set in minutes by swapping labels on your existing product template instead of reshooting from scratch.",
+          "Same bottle, fresh contexts weekly. The creative testing volume performance supplements brands need, without a recurring studio bill.",
       },
     ],
     stats: [
-      { value: "$177B", label: "Global dietary supplement market (2024)" },
-      { value: "65%", label: "Of online supplement buyers say photos influence trust" },
-      { value: "3.2x", label: "Higher click-through rate with professional vs. amateur product images" },
+      { value: "≥100px", label: "Critical label text height in the source image" },
+      { value: "1 batch", label: "Full SKU line shot with identical setup" },
+      { value: "2K+", label: "Output resolution for label-sharp deliverables" },
     ],
-    cta: "Build Trust With Better Product Photos",
-    relatedUseCases: ["skincare", "fitness", "food-beverage"],
-    relatedShotTypes: ["studio", "flat-lay"],
+    cta: "Shoot Your Whole Supplement Line This Week",
+    relatedUseCases: ["fitness", "skincare", "food-beverage"],
+    relatedShotTypes: ["studio", "packaging", "lifestyle"],
   },
 
   // ──────────────────────────────────────────────
-  // 4. JEWELRY
+  // 4. JEWELRY (Milan anchor)
   // ──────────────────────────────────────────────
   {
     slug: "jewelry",
     title: "Jewelry",
-    metaTitle: "AI Product Photography for Jewelry | Dezygn",
+    metaTitle: "AI Product Photography for Jewelry Brands | Dezygn",
     metaDescription:
-      "Capture sparkle, detail, and luxury in jewelry product photos without a $2,000 shoot. Dezygn's AI masters reflections and scale — try it free.",
-    heroHeadline: "Every Facet, Every Sparkle — Without the $2K Photoshoot",
+      "AI jewelry photography that respects scale and metal: macro detail, honest sizing, reflective-material lighting. From real client jewelry work.",
+    heroHeadline: "If the Pendant Is 2cm, It Must Look 2cm",
     heroSubheadline:
-      "Jewelry is the hardest product category to photograph. Period. Dezygn's AI handles reflections, scale, and sparkle so you can focus on designing beautiful pieces.",
+      "Jewelry is the category where photography most often over-promises — and where 'smaller than expected' returns eat margins. Accurate scale, honest metal, real sparkle: that's an engineering problem, and it's solvable.",
     image: "/images/seo/use-cases/jewelry.webp",
-    imageAlt: "AI product photography of fine jewelry with reflection-free close-ups highlighting gemstone detail",
+    imageAlt: "AI jewelry photography showing a gold pendant at honest scale with macro detail",
     problem: [
-      "Ask any product photographer what the most difficult category is, and they will tell you jewelry. The combination of highly reflective metal surfaces, transparent or translucent gemstones, tiny scale, and the need to convey sparkle and luxury creates a perfect storm of photographic challenges. A single ring can take 30-60 minutes to light correctly, and even then, the photographer's hands, camera, and studio are often visible in the reflections. Professional jewelry photographers use specialized equipment — light tents, fiber optic spot lights, anti-reflection sprays, and custom-bent reflector cards — that most general product photographers do not own.",
-      "Scale is an equally frustrating challenge. A pair of earrings is two centimeters long, but on your product page it needs to look detailed and substantial. Macro photography captures the detail but requires specialized lenses ($800-2,000), focus stacking (shooting 15-30 frames at slightly different focus points and merging them in software), and post-processing that can take an hour per image. Without this level of effort, your jewelry looks soft, flat, and cheap — the exact opposite of what it is.",
-      "The sparkle problem is real and underappreciated. Diamonds, cubic zirconia, moissanite, and crystal all derive their beauty from how they interact with light — fire, brilliance, and scintillation are literally the value proposition. But a static photograph cannot show the dynamic play of light that makes gemstones captivating in person. Most jewelry photos end up looking dull because the lighting setup optimized for the metal kills the gemstone's sparkle, or vice versa. Getting both to look great simultaneously requires separate lighting passes composited in Photoshop.",
-      "Finally, there is the volume problem. A jewelry brand with 200 SKUs — not unusual for even a mid-size business — needs at minimum 3-5 images per piece (hero, detail, scale on model, lifestyle, alternate angle). That is 800-1,000 images. At $150-300 per image for quality jewelry photography, a full catalog shoot costs $120,000-300,000. Most independent jewelers and DTC brands simply cannot afford this, so they end up with inconsistent, low-quality images that actively lose them sales.",
+      "Jewelry photography lies about size by default. Macro lenses make a 2cm pendant fill the frame like a chandelier, the customer orders, and the unboxing is a disappointment with a return label. In a category with high price-per-gram and emotional purchases, scale dishonesty is the most expensive image mistake you can make.",
+      "Then there's the metal. Polished gold and silver are mirrors; stones are lenses. Traditional jewelry photography is a specialist craft of controlled reflections — and naive AI generation produces metal that looks like plastic and stones with physically impossible sparkle. Customers can't articulate what's wrong, but they feel it, and they don't buy.",
+      "And jewelry needs people. Scale on a body — the chain at a real neckline, the ring on a real hand — is both the size-reference shot and the aspiration shot. Hands and skin are exactly where cheap AI work falls apart.",
     ],
     solution:
-      "Dezygn was built for exactly this kind of challenge. Our AI understands the optical properties of metals, gemstones, and crystals at a fundamental level, generating images with accurate reflections, realistic sparkle, and the kind of luxurious lighting that typically requires a specialist photographer with $50,000 in equipment. Upload reference images of your pieces and Awa, our AI Creative Director, generates studio-quality shots that show every facet, every setting detail, and every surface finish exactly as your customers need to see them.\n\nThe Visual Syntax framework is particularly powerful for jewelry brands because it lets you define the precise mood and aesthetic of your imagery — warm gold tones for vintage-inspired pieces, cool platinum lighting for modern designs, romantic soft-focus for bridal collections. Apply your visual language consistently across your entire catalog so every product page feels like it belongs to the same brand, regardless of whether the piece is a $50 pair of studs or a $5,000 engagement ring.\n\nWith 2,500 credits per month, a 200-SKU jewelry brand can generate a complete catalog refresh — including hero shots, macro details, on-model styling, and lifestyle scenes — for less than the cost of photographing five pieces traditionally. That is not an incremental improvement. That is a category shift.",
+      "One of the first paid projects from our own outreach system was a $2,000 jewelry engagement that started with a single custom lifestyle image sent cold. The workflow it ran on is the one built into Dezygn. Scale is handled as data, not vibes: dimensions documented in product prep ('16-18 inch chain,' 'ring size 7,' 'stone carat weight') and stated in the subject block, with hands and faces as universal scale anchors at honest 50mm perspective for the size-reference image.\n\nMetal gets the reflective-material rule learned on client eyewear and metal work: soft multi-directional studio lighting with fill — never single-direction dramatic light, which buries reflective surfaces in black voids. Specify the metal precisely (14K yellow gold, sterling .925, brushed vs. polished) because finish determines how light behaves. For the hero set, the premium recipe — 85mm, f/1.8, controlled studio — earns the luxury read, and macro detail shots prove the setting work and stone quality that justify the price.",
     features: [
       {
-        icon: "Sparkles",
-        title: "Intelligent Sparkle Rendering",
+        icon: "Target",
+        title: "Honest Scale by Default",
         description:
-          "Our AI simulates the fire, brilliance, and scintillation of gemstones — capturing the dynamic light play that makes stones captivating in real life.",
+          "Documented dimensions plus hand and face anchors at natural perspective — the 'how big is it really' image that prevents the most common jewelry return.",
       },
       {
-        icon: "Target",
-        title: "Macro-Level Detail",
+        icon: "Sparkles",
+        title: "Metal That Reads as Metal",
         description:
-          "Generate tack-sharp close-ups showing prong settings, pave details, engraving, and stone clarity without focus stacking or macro lens setups.",
+          "Soft multi-directional lighting with fill keeps gold, silver and platinum readable — controlled reflections instead of plastic shine or black voids.",
       },
       {
         icon: "Camera",
-        title: "Multi-Metal Accuracy",
+        title: "Macro Proof of Craft",
         description:
-          "Accurate rendering of yellow gold, rose gold, white gold, platinum, sterling silver, and mixed metals with proper color temperature and reflectivity.",
+          "Settings, prongs, pavé and engraving at close-up — the quality-proof shots that close consideration-stage buyers on premium pieces.",
+      },
+      {
+        icon: "Image",
+        title: "On-Body Without the Model Bill",
+        description:
+          "Brand-matched dedicated models wearing your actual pieces, composited from clean portraits so necklines, ears and hands render right.",
       },
       {
         icon: "Layers",
-        title: "Scale Context",
+        title: "Collection Consistency",
         description:
-          "Generate on-hand, on-neck, and on-ear shots that give customers accurate size reference — the number one concern for online jewelry buyers.",
-      },
-      {
-        icon: "Palette",
-        title: "Collection Cohesion",
-        description:
-          "Match lighting, background, and styling across bridal, fashion, fine, and demi-fine collections while maintaining each line's distinct character.",
-      },
-      {
-        icon: "Zap",
-        title: "Variant Speed",
-        description:
-          "Photograph one ring in three metal options, five stone colors, and two finishes? Generate all 30 variants in a single session, not 30 separate shoots.",
+          "One locked recipe across the line — every piece in identical light and shadow, so the collection page looks curated, not aggregated.",
       },
     ],
     stats: [
-      { value: "$57B", label: "U.S. jewelry market revenue (2024)" },
-      { value: "44%", label: "Of jewelry purchases now happen online" },
-      { value: "28%", label: "Average return rate for jewelry — often caused by unmet visual expectations" },
+      { value: "$2,000", label: "Real jewelry project landed with one cold proof image" },
+      { value: "50mm", label: "Honest-perspective lens for the scale-truth shot" },
+      { value: "85mm f/1.8", label: "The premium hero recipe luxury brands use" },
     ],
-    cta: "Photograph Your Collection Like a Luxury Brand",
-    relatedUseCases: ["fashion-accessories", "beauty", "skincare"],
-    relatedShotTypes: ["detail-close-ups", "model-shots"],
+    cta: "Shoot Jewelry That Survives the Unboxing",
+    relatedUseCases: ["eyewear", "fashion-accessories", "beauty"],
+    relatedShotTypes: ["scale-shots", "detail-close-ups", "hero-shots"],
   },
 
   // ──────────────────────────────────────────────
-  // 5. TOYS
+  // 5. EYEWEAR (NEW — Kaze Optics / Retro Wear anchor)
+  // ──────────────────────────────────────────────
+  {
+    slug: "eyewear",
+    title: "Eyewear",
+    metaTitle: "AI Product Photography for Eyewear Brands | Dezygn",
+    metaDescription:
+      "AI eyewear photography from real client campaigns: model shots that fit, titanium-true close-ups, and brand worlds built from actual craft research.",
+    heroHeadline: "Glasses Don't Sell Without a Face",
+    heroSubheadline:
+      "Eyewear is our most documented client category — premium frame brands on monthly retainer. Model shots are the conversion driver, fit accuracy is the craft, and we learned both the expensive way so you don't have to.",
+    image: "/images/seo/use-cases/fashion-accessories.webp",
+    imageAlt: "AI eyewear photography showing premium frames worn by a model with accurate fit",
+    problem: [
+      "Eyewear has the hardest conversion requirement in e-commerce: customers need to see frames on a face before they'll buy, because fit IS the product. Flat packshots don't answer 'will these suit me' — and traditional model shoots for every frame, in every colorway, every season, are exactly the recurring cost that crushes independent frame brands.",
+      "AI doesn't make it automatically easier — eyewear is technically brutal. Frames are thin, reflective, precisely proportioned objects sitting on the most scrutinized part of the human body. Naive generation gets the fit wrong in ways everyone instantly sees: frames too wide, lenses warped, glasses floating above the ears — or sitting above the eyebrows, which is exactly what happened on one of our own client projects when a comp card with sunglasses pushed up on the model's head contaminated every composite. Three hours lost to one dirty source image.",
+      "And premium eyewear can't survive on generic 'aesthetic' imagery. A $300 titanium frame needs a world — craft, materials, place — or it looks like a $30 frame with ambitions.",
+    ],
+    solution:
+      "Eyewear is where Dezygn's workflow has the deepest real-world mileage: premium frame clients on monthly retainer, including a $700/month engagement that started as a single cold-outreach proof image. The model workflow exists because of this category: model briefs from the brand identity, comp cards for selection only, then clean portraits — white background, plain tee, zero accessories — for compositing, because the source image wins over the prompt. Always. With a clean portrait and a clean product image, the glasses sit correctly on the first try; that's the lesson those three lost hours bought.\n\nAccuracy runs deeper than fit. For a Japanese titanium brand, we researched the material itself and how the category's top competitors photograph titanium — angles, reflections, surface treatment — then traced the brand's craft origins to Sabae, Japan's eyewear capital, and built the scene world from that region. Ultra-close product shots used uniform diffused cool studio light so the matte titanium read true. For a Parisian brand, the same system produced the opposite energy: paparazzi flash, café exits, 'never poses for pictures' attitude. Same framework, two completely different brands — that's the point.",
+    features: [
+      {
+        icon: "Eye",
+        title: "Fit-Accurate Model Shots",
+        description:
+          "Clean-portrait compositing puts frames where frames sit: rim below the brows, natural temple gaps, width proportional to the face. The conversion shot, done right.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Material-True Frames",
+        description:
+          "Titanium, acetate, tortoiseshell marbling, gold hinge details — reflective-material lighting and macro recipes that survive close inspection.",
+      },
+      {
+        icon: "Target",
+        title: "Micro-Iteration for Hard Shapes",
+        description:
+          "Narrow profiles and unusual silhouettes that AI keeps 'correcting' get systematic micro-iterations — vary only the shape language until the render matches the frame.",
+      },
+      {
+        icon: "Globe",
+        title: "Brand Worlds From Real Research",
+        description:
+          "Scene libraries built from your brand's actual geography and craft story — the difference between 'Japanese aesthetic' and a world competitors can't copy.",
+      },
+      {
+        icon: "Camera",
+        title: "Campaign Range on One System",
+        description:
+          "Packshots, ultra close-ups, model editorial, paparazzi energy, atmosphere shots — a full 12-image campaign mix from one calibrated setup.",
+      },
+    ],
+    stats: [
+      { value: "$700/mo", label: "Real eyewear retainer, landed with one proof image" },
+      { value: "137→12", label: "Generations → approved finals on a real premium campaign" },
+      { value: "1st try", label: "Composite accuracy with clean portrait + clean product" },
+    ],
+    cta: "Put Your Frames on the Right Faces",
+    relatedUseCases: ["jewelry", "fashion-accessories", "beauty"],
+    relatedShotTypes: ["model-shots", "detail-close-ups", "paparazzi"],
+  },
+
+  // ──────────────────────────────────────────────
+  // 6. TOYS (the 2-star review story)
   // ──────────────────────────────────────────────
   {
     slug: "toys",
     title: "Toys",
-    metaTitle: "AI Product Photography for Toys | Dezygn",
+    metaTitle: "AI Product Photography for Toy Brands | Dezygn",
     metaDescription:
-      "Create vibrant, playful toy product photos that parents and kids love. Dezygn's AI generates lifestyle scenes and studio shots — 2,500/month for $99.",
-    heroHeadline: "Toy Photos That Make Kids Point and Parents Click",
+      "AI toy photography that never over-promises: accurate products, honest scale, playful scenes. The category that taught us why accuracy is non-negotiable.",
+    heroHeadline: "The Image Is a Promise the Toy Has to Keep",
     heroSubheadline:
-      "Toy photography needs to sell to two audiences at once — the child who wants it and the parent who buys it. Dezygn's AI creates images that win both over.",
+      "A toy company once generated AI catalog images that looked better than the product. The review came back: two stars — 'item not as pictured.' That story is why our entire system starts with accuracy.",
     image: "/images/seo/use-cases/toys.webp",
-    imageAlt: "AI-generated toy product photography with colorful playful backgrounds and lifestyle staging",
+    imageAlt: "AI toy photography showing a plush toy at accurate scale in a bright playful scene",
     problem: [
-      "Toy photography serves two masters, and they want completely different things. Kids want to see toys in action — imaginative play scenarios, bright colors, fun environments that spark excitement. Parents want to see build quality, safety features, size relative to their child, and whether the product looks worth the price. Creating images that satisfy both audiences simultaneously requires creative direction that most product photographers are not equipped to provide, because it is fundamentally a marketing problem, not just a photography problem.",
-      "The physical challenges compound the creative ones. Toys come in wildly diverse forms — plush animals, building sets with hundreds of pieces, action figures with articulated joints, board games with multiple components, electronic toys with screens and lights. Each category has its own photography requirements. A plush toy needs soft, warm lighting to look huggable. A building set needs to be shown both assembled and as individual pieces. An electronic toy needs to show the screen or lights in action without blowing out the rest of the image. There is no one-size-fits-all setup.",
-      "Lifestyle photography for toys ideally includes children, and that introduces a whole layer of complexity and cost. Child models require specialized agencies, parental consent, shorter work hours, on-set tutors (for school-age kids), and photographers experienced in getting natural-looking expressions from a six-year-old. A single lifestyle shoot with child models can cost $3,000-8,000 per day, and you might get usable images of 8-12 products in that time. For a toy brand with 50-100 SKUs, the math is devastating.",
-      "Seasonality makes it worse. The toy industry lives and dies by Q4 — roughly 40% of annual sales happen in November and December. That means your product photography needs to be complete by September at the latest, often requiring you to shoot spring and summer products alongside holiday items, creating scheduling nightmares and rushed timelines that sacrifice quality.",
+      "Toys are where AI image embellishment does its most direct damage. Generation naturally 'improves' products — richer colors, finer stitching, better proportions — and a parent unboxing a toy that's visibly worse than the listing photo doesn't write it off as creative license. They write a one-star review and request a refund. The image promised something the physical product didn't deliver.",
+      "Scale matters double here: 'smaller than expected' stings hardest when the recipient is a disappointed child. And the category's buyers — parents — are the most trust-sensitive audience in e-commerce; anything that pattern-matches to 'scammy listing' kills the purchase.",
+      "At the same time, toys genuinely need playful, contextual imagery — kids' rooms, play scenes, gift moments — at seasonal volume, with Q4 making or breaking the year. Traditional shoots with child models are expensive, regulated, and slow.",
     ],
     solution:
-      "Dezygn lets toy brands create both the whimsical, play-oriented imagery that captures kids' imaginations and the clear, detailed product shots that give parents confidence — without the complexity and cost of traditional shoots. Our AI generates vibrant lifestyle scenes that show toys in playful environments (bedrooms, playgrounds, living rooms), complete with realistic lighting and context, while also producing clean studio shots that highlight build quality and included components.\n\nAwa, our AI Creative Director, understands the visual language of the toy industry — bold primary colors, energetic compositions, and the aspirational play scenarios that drive purchase intent. The Visual Syntax framework lets you define your brand's personality (educational and calm, adventurous and exciting, nostalgic and wholesome) and apply it consistently across every product image. Import your brand's color palette and Dezygn ensures your packaging, product, and lifestyle imagery all feel unified.\n\nWith 2,500 credits per month, you can generate complete image sets for your entire holiday lineup by summer, test different creative approaches for your hero products, and create seasonal variations of existing images — turning a summer outdoor shot into a holiday gift-giving scene — all without rebooking a studio.",
+      "Dezygn's accuracy discipline exists because of this category. Every toy is anchored by its real product photo — the AI recreates your product instead of idealizing it — with materials and dimensions stated explicitly so plush stays plush-textured and a 20cm toy looks 20cm. The conversion-integrity test applies to every frame: accurate, realistic, on-brand. 'Close enough' isn't a style choice; close enough is a refund.\n\nAround that honest core, the playful layer is engineered: bright, joyful scene presets (colorful backdrops, playroom settings, gift moments), scale shots with hands as universal references, and packaging shots with the 2K text rule keeping box art legible. For lifestyle context, traces of play — a child's hand reaching in, a bedroom floor scene — read warm without requiring child-model logistics for every image.",
     features: [
       {
-        icon: "Sparkles",
-        title: "Play Scene Generation",
+        icon: "Shield",
+        title: "Anti-Embellishment by Design",
         description:
-          "Create imaginative lifestyle environments — bedrooms, backyards, classrooms — that show your toys in the context of play without hiring child models.",
-      },
-      {
-        icon: "Package",
-        title: "Unboxing & Component Shots",
-        description:
-          "Show what is in the box with organized component layouts, assembled vs. unassembled views, and everything-included shots that set clear expectations.",
+          "Real source anchoring keeps colors, textures and proportions true to the product that ships — the 'item not as pictured' review, prevented at the source.",
       },
       {
         icon: "Target",
-        title: "Scale Reference",
+        title: "Scale a Parent Can Trust",
         description:
-          "Generate images that communicate actual toy size — shown next to familiar objects, hands, or in room settings — reducing the number one cause of toy returns.",
+          "Hands-as-ruler scale shots and stated dimensions answer 'how big is it' before checkout, not after unboxing.",
       },
       {
-        icon: "Palette",
-        title: "Color-Accurate Rendering",
+        icon: "Image",
+        title: "Play Scenes Without the Shoot",
         description:
-          "Vibrant, accurate color reproduction ensures the bright reds, blues, and yellows on your product page match what arrives in the mail.",
+          "Playrooms, gift moments, bedtime scenes — generated as reusable environments in your brand's palette, ready for every seasonal push.",
+      },
+      {
+        icon: "Package",
+        title: "Box Art That Stays Legible",
+        description:
+          "The 2K source rule keeps packaging type and character art crisp — critical for a category where the box is half the gift.",
       },
       {
         icon: "Clock",
-        title: "Seasonal Turnaround",
+        title: "Q4 Volume, January Calm",
         description:
-          "Generate your entire Q4 holiday catalog by summer. Then create Valentine's, Easter, and back-to-school variants without reshooting a single product.",
+          "Holiday campaign imagery produced in batches in hours — gift guides, bundles, seasonal scenes — without betting December on an October shoot.",
       },
     ],
     stats: [
-      { value: "$38B", label: "U.S. toy industry annual revenue" },
-      { value: "40%", label: "Of toy sales happen in Q4 alone" },
-      { value: "58%", label: "Of parents research toys online before purchasing" },
+      { value: "3", label: "Tests every image must pass: accurate, realistic, on-brand" },
+      { value: "100%", label: "Of toy generations anchored to real product photos" },
+      { value: "2K+", label: "Source resolution so packaging art survives" },
     ],
-    cta: "Make Your Toys Irresistible Online",
-    relatedUseCases: ["baby-products", "pet-products", "electronics"],
-    relatedShotTypes: ["lifestyle", "scale-shots"],
+    cta: "Sell the Toy You Actually Ship",
+    relatedUseCases: ["baby-products", "pet-products", "home-decor"],
+    relatedShotTypes: ["scale-shots", "packaging", "lifestyle"],
   },
 
   // ──────────────────────────────────────────────
-  // 6. PET PRODUCTS
+  // 7. PET PRODUCTS
   // ──────────────────────────────────────────────
   {
     slug: "pet-products",
     title: "Pet Products",
-    metaTitle: "AI Product Photography for Pet Products | Dezygn",
+    metaTitle: "AI Product Photography for Pet Brands | Dezygn",
     metaDescription:
-      "Create adorable, high-converting pet product photos without wrangling animals on set. Dezygn's AI generates lifestyle scenes with pets — try it free.",
-    heroHeadline: "Great Pet Product Photos. Zero On-Set Zoomies.",
+      "AI pet product photography with real animals in frame: composition transfer, accurate products, and the emotional imagery that drives the category.",
+    heroHeadline: "The Dog Sells the Toy",
     heroSubheadline:
-      "Pet parents buy with their hearts. Your product photos need to trigger that emotional connection — and Dezygn's AI creates pet lifestyle imagery without the chaos of an actual animal on set.",
+      "Pet imagery converts on emotion — the retriever with the plush toy, the cat in the new bed. Getting a consistent, photogenic animal together with your accurate product used to be the hardest shoot in e-commerce. Now it's a composite.",
     image: "/images/seo/use-cases/pet-products.webp",
-    imageAlt: "AI product photography of pet supplies and accessories in home lifestyle settings",
+    imageAlt: "AI pet photography showing a golden retriever with a plush toy in a bright studio scene",
     problem: [
-      "Pet product photography has a fundamental problem: the best images include actual pets, and actual pets are the worst photographic subjects on the planet. Dogs do not hold still. Cats actively resist direction. A golden retriever wearing your new bandana will spend the entire shoot trying to remove it. Professional animal wranglers exist, but they charge $500-1,500 per session, and even then, you are at the mercy of the animal's mood. A full-day shoot with animals might yield 20-30 usable frames — and that is a good day.",
-      "The emotional stakes are high in pet product marketing. Pet parents (and that is what they call themselves) are deeply emotional buyers who want to see products on animals that look like their own pets. This means you need diverse representation — different breeds, sizes, coat colors, and ages. A single golden retriever on set does not cut it anymore. Your Chihuahua customers want to see a Chihuahua in that sweater. Your senior dog customers want to see a grey-muzzled lab with that orthopedic bed. This breed diversity requirement multiplies your production costs exponentially.",
-      "Product diversity adds another layer of complexity. The pet products category spans food, treats, toys, beds, leashes, collars, apparel, grooming tools, supplements, and accessories — each with different photography requirements. A dog bed needs to look cozy and inviting (warm lighting, lifestyle setting). A leash needs to look durable and functional (outdoor setting, action context). A supplement needs to look trustworthy (clean, clinical). No single photoshoot setup works across these subcategories, meaning you are essentially running multiple productions per catalog.",
-      "And then there is the Amazon problem. Pet products is one of the most competitive categories on Amazon, where your main image needs to be a clean product-on-white shot, but your secondary images need to tell an emotional story with lifestyle context. The brands winning on Amazon have 7-9 images per listing including infographics, lifestyle shots, and comparison charts — content that costs $1,000-2,500 per ASIN to produce professionally.",
+      "Animals are the least directable models in photography. A traditional pet shoot is hours of treats, patience and luck for a handful of usable frames — and if your brand needs the same dog across a whole catalog, you're booking the same animal repeatedly and praying it cooperates. Costs scale with chaos.",
+      "The product accuracy problem still applies underneath the cuteness: pet owners are buying a specific toy, bed, bowl or harness, and the item that arrives has to match the image. Embellished renders earn the same 'not as pictured' reviews here as everywhere else — with an audience that reviews enthusiastically.",
+      "And the category's ad engine runs on emotional volume: fresh dog-and-product creative weekly for Meta, seasonal moments, breed-targeted variations. No shoot schedule keeps up with that appetite.",
     ],
     solution:
-      "Dezygn eliminates the single biggest bottleneck in pet product photography: the animals themselves. Our AI generates photorealistic lifestyle imagery featuring dogs, cats, and other pets in natural settings — wearing your products, using your beds, playing with your toys — without a single animal on set. Choose from a wide range of breeds, sizes, and coat types to match your target customer's pet, and generate images that trigger the emotional connection pet parents need to buy.\n\nAwa, our AI Creative Director, understands what makes pet product imagery convert. It is not just about showing the product — it is about showing the bond between pet and owner, the cozy evening on the couch, the joyful park adventure. The Visual Syntax framework lets you define whether your brand is playful and colorful, premium and minimalist, or natural and earthy, then applies that aesthetic consistently across every product in your line. Import your brand assets and every image automatically includes your visual identity.\n\nWith 2,500 credits per month, you can generate complete Amazon listings for your entire catalog, create breed-specific ad variations, produce seasonal content (holiday, summer, back-to-school), and A/B test different emotional approaches — all for $99/month instead of $25,000+ in annual photography spend.",
+      "Pet work is a showcase for composition transfer — one of the core Visual Syntax techniques, and literally one of our teaching examples: a golden retriever with a plush frog toy, where a reference image defines the layout and the real toy (anchored by its product photo) replaces the original prop. The animal brings the emotion; the source image keeps the product honest; the reference keeps the composition professional.\n\nIn practice that means you can cast the perfect 'brand dog' — breed, coat, expression matched to your customer's pets — and keep it consistent across the entire catalog, in studio sets, lifestyle scenes and seasonal campaigns. Products get the standard accuracy treatment: real sources, stated materials and dimensions, legible packaging via the 2K rule. And the ad rotation gets its volume: same product, different breeds, rooms and moments, generated weekly instead of quarterly.",
     features: [
       {
         icon: "Sparkles",
-        title: "Breed-Specific Lifestyle Scenes",
+        title: "The Perfectly Behaved Brand Dog",
         description:
-          "Generate imagery featuring specific dog breeds, cat breeds, and other pets — no animal wrangler needed, no zoomies, no treat bribery.",
+          "Cast the breed, coat and energy that match your audience — then keep that same animal consistent across every image, no treats required.",
       },
       {
         icon: "Image",
-        title: "Emotional Context",
+        title: "Composition Transfer",
         description:
-          "Show products in heartwarming settings — pets cuddling on beds, playing in parks, dressed up for holidays — that trigger the emotional buying response.",
+          "Use a reference image for the layout, your real product for the prop — the professional pet-photography look without the chaos that usually produces it.",
       },
       {
-        icon: "Layers",
-        title: "Multi-Category Coverage",
+        icon: "Shield",
+        title: "Accurate Products Under the Cuteness",
         description:
-          "From food packaging to fashion accessories to grooming tools, Dezygn adapts lighting and composition to each product subcategory's visual requirements.",
+          "Toys, beds, bowls and harnesses anchored to real source photos, so the emotional image still shows exactly what ships.",
       },
       {
-        icon: "Target",
-        title: "Size & Fit Reference",
+        icon: "Zap",
+        title: "Breed-Targeted Ad Variations",
         description:
-          "Show collars, harnesses, and apparel on appropriately sized animals so customers can gauge fit — reducing the high return rate in pet apparel.",
+          "Same product with a lab, a frenchie, a tabby — audience-matched creative variations that pet-niche media buyers can only dream of shooting.",
       },
       {
-        icon: "Globe",
-        title: "Marketplace-Ready Outputs",
+        icon: "Clock",
+        title: "Seasonal Moments On Schedule",
         description:
-          "Generate images optimized for Amazon, Chewy, and your DTC site in a single session — complete with the white-background hero and lifestyle secondary images each platform demands.",
+          "Holiday sweaters, summer hikes, gotcha-day scenes — campaign imagery batched in hours, timed to the calendar instead of the studio.",
       },
     ],
     stats: [
-      { value: "$150B", label: "U.S. pet industry spending (2024)" },
-      { value: "67%", label: "Of U.S. households own a pet" },
-      { value: "36%", label: "Of pet product returns are due to incorrect size expectations" },
+      { value: "1 dog", label: "Consistent brand animal across the whole catalog" },
+      { value: "10:1", label: "Honest generation-to-approval planning ratio" },
+      { value: "Weekly", label: "Fresh ad creative cadence the category demands" },
     ],
-    cta: "Create Pet Product Photos That Melt Hearts",
-    relatedUseCases: ["toys", "baby-products", "food-beverage"],
-    relatedShotTypes: ["lifestyle", "model-shots"],
+    cta: "Cast Your Brand Dog Today",
+    relatedUseCases: ["toys", "home-decor", "outdoor-gear"],
+    relatedShotTypes: ["lifestyle", "studio", "ugc"],
   },
 
   // ──────────────────────────────────────────────
-  // 7. FITNESS
+  // 8. FITNESS
   // ──────────────────────────────────────────────
   {
     slug: "fitness",
     title: "Fitness",
-    metaTitle: "AI Product Photography for Fitness Products | Dezygn",
+    metaTitle: "AI Product Photography for Fitness Brands | Dezygn",
     metaDescription:
-      "Shoot gym equipment, activewear, and fitness accessories with AI. Dezygn creates action-ready product photos — 2,500 shots/month at $99.",
-    heroHeadline: "Your Gym Gear Deserves More Than a Garage Photo",
+      "AI fitness photography with athletic models in real action: equipment, apparel and supplements shot with credible movement and consistent energy.",
+    heroHeadline: "Fitness Imagery Lives or Dies on the Action",
     heroSubheadline:
-      "Fitness product photography needs to convey strength, quality, and performance. Dezygn's AI generates gym-ready lifestyle and studio shots without renting equipment or studio time.",
+      "A dumbbell on white is a commodity photo. A determined athlete mid-rep with your dumbbell is a brand. The difference is the Action ingredient — and it's directable.",
     image: "/images/seo/use-cases/fitness.webp",
-    imageAlt: "AI-generated fitness equipment and activewear product photography in gym and outdoor settings",
+    imageAlt: "AI fitness photography showing an athletic model using equipment with dynamic energy",
     problem: [
-      "Fitness product photography has a unique challenge: your products need to look like they perform. A set of dumbbells sitting on a white background communicates nothing about the training experience. A yoga mat rolled up in a studio tells you nothing about how it feels during practice. Fitness consumers buy aspiration — they buy the version of themselves that uses your product — and static product shots fail to deliver that emotional hook. The brands dominating this space use dynamic lifestyle imagery: athletes mid-workout, equipment in a premium gym setting, apparel in motion. But that kind of content requires gym location access, fitness models, and action photography expertise.",
-      "The logistics of fitness product photography are particularly punishing. Equipment is heavy — a full rack of dumbbells, a bench, a cable machine. Transporting these to a studio costs hundreds in shipping and handling. Shooting on location at a gym means working around their schedule, dealing with inconsistent lighting (fluorescents, mixed natural light), and clearing the background of other members and equipment. Home gym setups look amateur unless you have a genuinely photogenic space, which most people do not.",
-      "Apparel and accessories require model photography, which means casting, fitting, and directing talent who actually looks fit and can demonstrate exercises with proper form. A model deadlifting with bad form is worse than no model at all — the fitness community will roast your brand on social media. Finding models who are both photogenic and genuinely athletic is expensive ($500-2,000 per day) and competitive to book.",
-      "Scale is the final constraint. Fitness brands typically carry diverse product lines — equipment, apparel, accessories, supplements, digital programs — each requiring different visual treatment. Equipment needs to look industrial and sturdy. Apparel needs to show fit, stretch, and moisture management. Supplements need to look clinical and trustworthy. Creating consistent brand imagery across these subcategories while adapting to each one's visual requirements is a creative direction challenge that most photography teams solve by siloing — and that creates brand fragmentation.",
+      "Fitness products are motion products — resistance bands, dumbbells, apparel, recovery tools all sell on what using them feels like. Static catalog shots communicate none of that, and credible action photography is the most demanding traditional shoot there is: athletic models who actually move correctly, gym locations, sweat-and-light management, and a photographer who can freeze the right rep.",
+      "Form credibility is the silent filter. A fitness audience instantly clocks a model holding a kettlebell wrong or 'stretching' in a physically odd pose — the exact failure mode of lazy AI generation. Wrong form doesn't just look off; it tells your audience the brand doesn't lift.",
+      "And fitness marketing is seasonal and relentless: New Year, summer prep, constant ad refresh against the most creative-hungry ad audiences on Meta and TikTok. The content appetite is weekly; shoot economics are quarterly.",
     ],
     solution:
-      "Dezygn brings the visual intensity that fitness products demand without the logistics that make traditional photography so painful. Our AI generates dynamic gym environment imagery, action-style product shots, and clean studio compositions — placing your dumbbells in a premium gym, your apparel on a fit model mid-movement, and your accessories in workout context — all without leaving your office. Awa, our AI Creative Director, understands the visual codes of fitness marketing: dramatic lighting, dynamic angles, sweat and intensity cues that communicate performance.\n\nThe Visual Syntax framework lets you unify your brand's look across equipment, apparel, and supplements — maintaining a cohesive identity while adapting the visual approach for each subcategory. Define your brand as hard-core and industrial, premium and aspirational, or approachable and inclusive, and Dezygn applies that personality consistently. Import your brand colors and every generated image reinforces your identity.\n\nAt 2,500 credits per month, you can shoot your entire product line in gym settings, generate seasonal campaign imagery (New Year's resolution content, summer body campaigns), create social media content at scale, and produce comparison images that highlight your products' advantages over competitors — all for less than the cost of a single day in a photography studio.",
+      "Dezygn directs fitness imagery through the Action ingredient — the verb, the expression, the interaction — using the same vocabulary system we use on client work: 'performing weightlifting exercise, hands in action position, focused determination' for training frames; 'yoga stretch, peaceful recovery expression' for the cooldown set. Expression is dialed with volume adjectives — focused intensity, quiet determination — because raw emotions render theatrical.\n\nModels come from the athletic archetype with feature-stacked briefs (toned, defined, strong jawline, athletic confidence) matched to your audience, kept consistent across the catalog via the comp-card-then-clean-portrait workflow. Products stay accurate underneath the energy: real source anchoring for equipment geometry, apparel fabric and supplement labels. Scenes — gym floors, home workout corners, outdoor tracks at golden hour — are built once and reused across the season's entire content calendar.",
     features: [
       {
         icon: "Zap",
-        title: "Dynamic Action Shots",
+        title: "Credible Movement, Directed",
         description:
-          "Generate images that show your products in use — mid-lift, mid-run, mid-flow — with the energy and motion that static shots cannot capture.",
-      },
-      {
-        icon: "Image",
-        title: "Gym Environment Scenes",
-        description:
-          "Place your products in photorealistic gym, studio, and outdoor fitness settings without renting space or hauling 500 pounds of equipment across town.",
-      },
-      {
-        icon: "Camera",
-        title: "Material Rendering",
-        description:
-          "Accurate rendering of rubber grips, chrome plates, neoprene wraps, mesh fabrics, and other fitness materials — showing texture and quality up close.",
-      },
-      {
-        icon: "Layers",
-        title: "Cross-Category Consistency",
-        description:
-          "Unify your equipment, apparel, and supplement imagery under one visual system while giving each category the specific treatment it needs.",
+          "Action vocabulary that produces real exercise form — mid-rep, mid-stride, mid-stretch — instead of mannequins awkwardly adjacent to equipment.",
       },
       {
         icon: "Target",
-        title: "Spec Visualization",
+        title: "Athletes Who Match Your Audience",
         description:
-          "Generate comparison images, dimension overlays, and feature callouts that communicate the technical specs fitness buyers obsess over.",
+          "Feature-stacked athletic model briefs — the energy, build and age your customers actually have — consistent across every campaign.",
+      },
+      {
+        icon: "Layers",
+        title: "Equipment Geometry That Holds",
+        description:
+          "Plates, bands, racks and wearables anchored to real sources so specs and proportions survive the dynamic framing.",
+      },
+      {
+        icon: "Image",
+        title: "Train Anywhere Scenes",
+        description:
+          "Gym, garage, park, track — a reusable scene library covering every context your customers train in, lit for energy.",
+      },
+      {
+        icon: "Clock",
+        title: "New Year Volume in December",
+        description:
+          "Seasonal campaign batches generated ahead of the spike — the January creative war chest, built in an afternoon.",
       },
     ],
     stats: [
-      { value: "$96B", label: "Global fitness equipment market (2024)" },
-      { value: "72%", label: "Of fitness purchases are influenced by product imagery" },
-      { value: "4.1x", label: "More engagement on lifestyle fitness imagery vs. plain product shots" },
+      { value: "3 parts", label: "Of every action: verb, expression, interaction" },
+      { value: "1 athlete", label: "Consistent brand model across the catalog" },
+      { value: "Weekly", label: "Ad refresh cadence fitness audiences demand" },
     ],
-    cta: "Power Up Your Fitness Product Photos",
-    relatedUseCases: ["supplements", "golf-brands", "outdoor-gear"],
-    relatedShotTypes: ["lifestyle", "hero-shots"],
+    cta: "Put Your Gear in Motion",
+    relatedUseCases: ["supplements", "outdoor-gear", "golf-brands"],
+    relatedShotTypes: ["lifestyle", "model-shots", "ugc"],
   },
 
   // ──────────────────────────────────────────────
-  // 8. FOOD & BEVERAGE
+  // 9. FOOD & BEVERAGE
   // ──────────────────────────────────────────────
   {
     slug: "food-beverage",
     title: "Food & Beverage",
-    metaTitle: "AI Product Photography for Food & Beverage | Dezygn",
+    metaTitle: "AI Product Photography for Food & Beverage Brands | Dezygn",
     metaDescription:
-      "Make your packaged food and beverage products look irresistible online. Dezygn's AI creates appetite-worthy product photos — 2,500/month for $99.",
-    heroHeadline: "Make Them Hungry Through the Screen",
+      "AI food and beverage photography that plays to AI's strengths: packaging-first accuracy, legible labels, styled scenes — and honesty about where the line is.",
+    heroHeadline: "Lead With the Pack, Style the World Around It",
     heroSubheadline:
-      "Food and beverage photography is an art — and a science. Dezygn's AI generates appetite-triggering product imagery that makes customers crave your products before they even read the description.",
+      "Food is the category where AI realism is least forgiving — so professionals shoot it packaging-first: accurate packs, styled scenes, real ingredient context, and restraint where the uncanny valley still bites.",
     image: "/images/seo/use-cases/food-beverage.webp",
-    imageAlt: "AI product photography of food and beverage packaging with appetizing styled compositions",
+    imageAlt: "AI food and beverage photography showing branded packaging in a styled kitchen scene",
     problem: [
-      "Food and beverage product photography exists in a strange middle ground between food photography and product photography, and most photographers are only good at one. Traditional food photography — the kind you see in cookbooks and restaurant marketing — is about making prepared dishes look irresistible. But if you sell packaged food products (sauces, snacks, beverages, meal kits), you need to make the packaging look appealing while also suggesting the delicious experience inside. That dual requirement is a fundamentally different creative challenge.",
-      "The physical challenges are significant. Beverage bottles and cans are reflective cylinders — one of the most technically difficult shapes to light in product photography. Getting an even highlight down the side of a bottle without hot spots, while keeping the label readable, while showing the liquid color through glass, while adding condensation for that fresh feel — each of these elements requires dedicated lighting and often separate photographic passes composited in post-production. A single bottle can take 2-3 hours to photograph properly.",
-      "Food packaging is equally tricky. Flexible pouches wrinkle unpredictably. Cardboard boxes have sharp edges that create harsh shadows. Clear windows in packaging show the product inside but introduce additional lighting complexity. And if you are photographing unpackaged food items — showing the actual granola, chips, or chocolate — you enter the world of food styling, where professionals use tweezers, spray bottles, and heat guns to make each morsel look perfect. Professional food stylists charge $750-1,500 per day on top of photography costs.",
-      "The content volume required for modern food and beverage e-commerce is staggering. Between your own site, Amazon, Instacart, Walmart Marketplace, specialty retailers, social media, and email marketing, each SKU might need 10-15 unique images across channels. And unlike durable goods, food products have seasonal variants, limited editions, new flavors, and recipe-focused content needs that create a perpetual demand for fresh imagery. Most food brands end up choosing between quality and volume, and neither compromise ends well.",
+      "Food is the most scrutinized subject in photography — humans are evolutionarily expert at spotting wrong food. Naive AI generation of prepared dishes still trips into the uncanny valley, and one waxy-looking close-up can make a real product feel fake. Brands that prompt-and-pray in this category publish exactly the imagery that erodes appetite.",
+      "Meanwhile the actual commercial need is mostly not glamour dishes — it's packaging: pouches, cans, jars, boxes, every surface covered in mandatory text. Nutrition panels, flavor names, claims. Text-dense packaging is precisely where careless generation fails, and in food, a garbled label reads as a counterfeit product.",
+      "Add the volume problem — seasonal flavors, retail line sheets, social content, ad rotations — and food brands face the same production treadmill as everyone else, with a higher realism bar.",
     ],
     solution:
-      "Dezygn makes packaged food and beverage products look as good as the food inside them. Our AI generates studio-quality product shots with perfectly controlled lighting — eliminating the reflection nightmares of bottles and cans, the wrinkle problems of pouches, and the shadow issues of boxes — while also creating appetite-triggering lifestyle scenes that show your products in kitchen, dining, and entertaining contexts. Awa, our AI Creative Director, applies the visual principles of professional food styling — warm color temperatures, shallow depth of field, hero ingredient spotlighting — to your packaged products.\n\nThe Visual Syntax framework lets you define your brand's food photography style: rustic and artisanal, clean and modern, bold and indulgent, or health-forward and fresh. Apply it consistently across every product and every channel. The brand import feature ensures your packaging design, color palette, and brand personality are reflected in every lifestyle scene and composition.\n\nWith 2,500 credits per month, you can generate complete image sets for your entire product line, create seasonal and holiday-themed variations, produce recipe-context imagery showing your products as ingredients, and generate social-ready content that makes followers stop scrolling — all for a fraction of what a single food photography day would cost.",
+      "The professional approach is packaging-first, and it's where Dezygn's accuracy machinery shines. Packs are anchored by real artwork or photography at 2K+, with the format described in material terms — 'stand-up kraft pouch with matte film, full-wrap label,' 'slim aluminum can, glossy finish' — because finish determines light behavior. Output resolution matches input so flavor names and panels stay legible. The pack that ships is the pack in the picture.\n\nAround the accurate pack, scenes do the appetite work: styled kitchen counters, café tables, picnic spreads, ingredient flat lays with raw ingredients as props — real visual context where AI is strong. Beverage pours, condensation and serve moments are directed through the action vocabulary ('mid-sip, quiet joy') and held to the sniff test: if a frame reads even slightly waxy, it doesn't ship. That restraint — leading with pack, scene and ingredients rather than synthetic hero dishes — is what keeps a food brand's AI imagery credible.",
     features: [
       {
-        icon: "Sparkles",
-        title: "Appetite Appeal Engine",
+        icon: "Package",
+        title: "Pack-Accurate by Engineering",
         description:
-          "Our AI applies the visual science of food photography — warm tones, strategic moisture, texture emphasis — to make your packaged products look irresistible.",
-      },
-      {
-        icon: "Camera",
-        title: "Bottle & Can Mastery",
-        description:
-          "Perfect cylindrical lighting with even highlights, readable labels, visible liquid color, and optional condensation — without multi-hour lighting setups.",
+          "Real artwork anchoring, material-true finishes, and the 2K text rule keep every flavor name and panel legible — the line between premium and counterfeit.",
       },
       {
         icon: "Image",
-        title: "Kitchen & Dining Lifestyle",
+        title: "Appetite Scenes That Are Actually Safe",
         description:
-          "Place your products in photorealistic kitchen counters, dining tables, and entertaining settings that create the mealtime context customers need.",
+          "Kitchens, cafés, market tables and ingredient styling — contexts where AI realism is strong, built as reusable scenes in your palette.",
       },
       {
-        icon: "Palette",
-        title: "Ingredient Styling",
+        icon: "Sparkles",
+        title: "Ingredient Flat Lays",
         description:
-          "Generate flat lays and compositions showing your product alongside its key ingredients — farm-fresh produce, premium spices, natural sweeteners — to tell your quality story.",
+          "Raw ingredients as props around the pack — the most credible 'what's inside' storytelling a food brand can run.",
+      },
+      {
+        icon: "Shield",
+        title: "The Sniff-Test Standard",
+        description:
+          "Every frame passes the realism check before delivery. Where prepared-food rendering risks the uncanny valley, the system says no — restraint is a feature.",
       },
       {
         icon: "Layers",
-        title: "Multi-Format Packaging",
+        title: "Flavor-Line Consistency",
         description:
-          "Bottles, cans, pouches, boxes, jars, and tins — each packaging format gets optimized lighting and composition treatment.",
-      },
-      {
-        icon: "Globe",
-        title: "Marketplace Compliance",
-        description:
-          "Generate images that meet the specific requirements of Amazon Fresh, Instacart, Walmart, and specialty grocery platforms — each has different specs.",
+          "Every SKU and seasonal flavor shot in the same locked setup — the shelf-ready consistency retail buyers expect from a line sheet.",
       },
     ],
     stats: [
-      { value: "$1.2T", label: "U.S. food and beverage retail market" },
-      { value: "67%", label: "Of grocery shoppers use online channels at least sometimes" },
-      { value: "25%", label: "Increase in add-to-cart rate with styled food photography vs. plain packaging shots" },
+      { value: "2K+", label: "Pack artwork resolution so labels survive" },
+      { value: "100%", label: "Of frames held to the realism sniff test" },
+      { value: "1 setup", label: "Locked recipe across the full flavor line" },
     ],
-    cta: "Make Your Products Look Delicious",
-    relatedUseCases: ["supplements", "candles", "pet-products"],
-    relatedShotTypes: ["hero-shots", "flat-lay"],
+    cta: "Shoot Your Line, Flavor by Flavor",
+    relatedUseCases: ["supplements", "candles", "home-decor"],
+    relatedShotTypes: ["packaging", "flat-lay", "studio"],
   },
 
   // ──────────────────────────────────────────────
-  // 9. FASHION ACCESSORIES
+  // 10. FASHION & ACCESSORIES
   // ──────────────────────────────────────────────
   {
     slug: "fashion-accessories",
-    title: "Fashion Accessories",
-    metaTitle: "AI Product Photography for Fashion Accessories | Dezygn",
+    title: "Fashion & Accessories",
+    metaTitle: "AI Photography for Fashion & Accessories Brands | Dezygn",
     metaDescription:
-      "Shoot bags, sunglasses, watches, and scarves with AI-powered photography. Dezygn creates editorial-quality images — 2,500/month for $99.",
-    heroHeadline: "Turn Your Accessories Into Editorial Content",
+      "AI fashion and accessories photography: fabric-true garments, editorial energy, dedicated models. From real apparel client work — including its honest limits.",
+    heroHeadline: "Editorial Energy Without the Editorial Budget",
     heroSubheadline:
-      "Fashion accessories need to look styled, aspirational, and on-trend. Dezygn's AI generates editorial-quality imagery that competes with brands 10x your size.",
+      "Bags, eyewear, scarves, jewelry, outerwear — accessories are AI photography's sweet spot. Garment fit is the honest frontier. We work both, from real client campaigns.",
     image: "/images/seo/use-cases/fashion-accessories.webp",
-    imageAlt: "AI-generated fashion accessories photography featuring bags watches and sunglasses with editorial styling",
+    imageAlt: "AI fashion photography showing a model with accessories in an editorial setting",
     problem: [
-      "Fashion accessories occupy a unique space in e-commerce because they are sold on aspiration more than utility. Nobody needs another pair of sunglasses — they want the feeling that pair of sunglasses projects. This means your product photography cannot just show the product clearly; it needs to create an emotional and aspirational context. The brands winning in accessories — the Coach, Ray-Ban, and Daniel Wellington tier — invest in full editorial shoots with stylists, art directors, models, and location scouts. For an independent or growth-stage brand, competing with that level of visual sophistication on a fraction of the budget feels impossible.",
-      "The technical challenges vary wildly across subcategories. Sunglasses are reflective (lenses mirror everything in the environment), have complex curves (frames need specific angles to look flattering), and need to be shown both on a surface and on a face. Watches require macro detail shots of dials, crowns, and caseback engravings while also needing wrist-shot lifestyle images. Bags need to convey size, material texture, and how they look when carried. Scarves and belts need to show drape, pattern, and scale. Each subcategory is essentially its own specialized photography discipline.",
-      "Styling is the hidden cost that kills most accessories brands' photography budgets. An accessory on a white background is forgettable. The same accessory on a marble surface next to a coffee cup and a vintage book becomes an aspirational lifestyle image. But prop styling requires a prop stylist ($300-600 per day), a curated prop collection, and the creative vision to assemble compositions that feel effortless. Without professional styling, accessories imagery either looks clinical and boring or cluttered and amateurish.",
-      "Trend velocity compounds the challenge. Fashion moves fast, and your imagery needs to reflect current visual trends — color stories, composition styles, editing treatments — that shift seasonally. What looked fresh six months ago can look dated today. This means accessories brands need to refresh their visual content far more frequently than brands in other categories, creating a perpetual production cycle that strains both budgets and creative resources.",
+      "Fashion runs on imagery volume like no other category: every drop needs lookbook, PDP, social and ad creative; every colorway multiplies the matrix; and the brand premium lives entirely in art direction. Editorial-grade shoots — the model casting, the locations, the stylist — are exactly what mid-size brands can't afford monthly.",
+      "Accessories have a precision problem AI must respect: a bag's hardware, a scarf's print, a frame's proportions are the product. Generation that 'approximates' a signature print or rounds off a silhouette isn't a style choice — it's misrepresenting the merchandise.",
+      "Garment fit is the category's honest hard part: drape, fit and fabric behavior on a body are subjective, scrutinized, and still the most failure-prone area of AI fashion work. Brands that pretend otherwise ship images that fit-conscious customers don't trust.",
     ],
     solution:
-      "Dezygn puts editorial-quality fashion photography within reach of every accessories brand, regardless of budget. Our AI generates styled, aspirational imagery that includes curated prop compositions, lifestyle context, and the visual sophistication of a professional art direction team. Upload your product photos and Awa, our AI Creative Director, suggests compositions that match current fashion photography trends — knowing when minimalism is in, when maximalism is trending, and how to style your specific products for maximum impact.\n\nThe Visual Syntax framework is essential for accessories brands because it lets you define and enforce a consistent visual identity that adapts to trends without losing brand recognition. Lock in your brand's aesthetic DNA — bohemian, minimalist, streetwear, classic luxury — and Dezygn applies it across every product image, every lifestyle shot, and every social media crop. The brand import feature means your colors, logo, and typography are seamlessly integrated.\n\nWith 2,500 credits per month at $99, you can refresh your product photography seasonally, create trend-responsive social content, generate on-model imagery without model booking fees, and produce the kind of editorial-quality visuals that make customers perceive your brand as a major player — even if you launched last year.",
+      "Our most editorial client work is fashion-adjacent: a Parisian eyewear campaign mixing paparazzi flash shots ('they never pose; if they do, their attitude screams I own the world') with high-fashion frames ('dressed for the kill — bracelets, necklaces, earrings, attitude at the camera'). That range — engineered energy, consistent models, accurate product — is what Dezygn brings to fashion brands.\n\nThe workflow: dedicated models cast from your brand identity via comp cards, composited from clean portraits; garments and accessories described in fashion-accurate terms — exact color names, fabric type, fit and silhouette ('relaxed-fit heavyweight cotton, forest green, dropped shoulders'), because fabric type changes how AI renders drape; and source angle matched to output angle so material panels and prints survive. On apparel honesty: fit-critical garment imagery is run mid-shot with real product anchoring — and where a frame doesn't pass the realism test, it doesn't ship. Accessories — bags, eyewear, jewelry, scarves — carry full campaigns brilliantly, from packshot through paparazzi.",
     features: [
       {
-        icon: "Sparkles",
-        title: "Editorial Styling AI",
-        description:
-          "Awa suggests prop compositions, surface textures, and environmental contexts that transform product shots into aspirational lifestyle imagery.",
-      },
-      {
         icon: "Camera",
-        title: "Multi-Subcategory Expertise",
+        title: "Editorial Range on Demand",
         description:
-          "Specialized rendering for sunglasses (lens reflections), watches (dial detail), bags (material texture), scarves (drape and pattern), and more.",
+          "Paparazzi flash, fashion editorial, quiet luxury stills — campaign energies directed through the Action ingredient, not left to chance.",
       },
       {
-        icon: "Palette",
-        title: "Trend-Responsive Aesthetics",
+        icon: "Target",
+        title: "A Cast of Dedicated Models",
         description:
-          "Generate images that reflect current fashion photography trends — color stories, composition styles, and editing treatments that keep your brand visually current.",
-      },
-      {
-        icon: "Image",
-        title: "On-Model Generation",
-        description:
-          "Show accessories styled on models without booking talent — sunglasses on faces, watches on wrists, bags on shoulders, all photorealistic.",
+          "Faces matched to your customer and kept consistent across drops — the recognizable 'brand model' look of houses ten times your size.",
       },
       {
         icon: "Layers",
-        title: "Collection Storytelling",
+        title: "Fabric-Aware Rendering",
         description:
-          "Generate cohesive visual narratives for seasonal collections — ensuring every piece in a drop looks like it belongs together in the lookbook.",
+          "Fiber, weave, fit and silhouette specified the way fashion people speak — because 'cotton poplin, boxy fit' renders differently than 'shirt.'",
+      },
+      {
+        icon: "Sparkles",
+        title: "Signature Details Preserved",
+        description:
+          "Hardware, prints, marbled acetate, embossing — source-anchored and macro-proofed, so the details that carry the price survive generation.",
+      },
+      {
+        icon: "Zap",
+        title: "Colorway Matrix in an Afternoon",
+        description:
+          "Every color of every style in the same locked setup — the consistency matrix that takes traditional shoots days of changeovers.",
       },
     ],
     stats: [
-      { value: "$82B", label: "U.S. fashion accessories market (2024)" },
-      { value: "3.6x", label: "Higher conversion with lifestyle imagery vs. plain product photos" },
-      { value: "47%", label: "Of accessories buyers say imagery is the primary purchase driver" },
+      { value: "12+1", label: "Approved visuals on a real eyewear campaign (plus video)" },
+      { value: "2x2", label: "Models × products — the scoping that actually ships" },
+      { value: "4 hrs", label: "Real premium campaign session, brief to delivery" },
     ],
-    cta: "Elevate Your Accessories Photography",
-    relatedUseCases: ["jewelry", "beauty", "golf-brands"],
-    relatedShotTypes: ["lifestyle", "flat-lay"],
+    cta: "Direct Your Next Drop Like an Editorial",
+    relatedUseCases: ["eyewear", "jewelry", "golf-brands"],
+    relatedShotTypes: ["paparazzi", "model-shots", "hero-shots"],
   },
 
   // ──────────────────────────────────────────────
-  // 10. HOME DECOR
+  // 11. HOME DECOR
   // ──────────────────────────────────────────────
   {
     slug: "home-decor",
     title: "Home Decor",
-    metaTitle: "AI Product Photography for Home Decor | Dezygn",
+    metaTitle: "AI Product Photography for Home Decor Brands | Dezygn",
     metaDescription:
-      "Show your home decor in beautiful room settings without staging a house. Dezygn's AI creates photorealistic interior scenes — 2,500/month for $99.",
-    heroHeadline: "Show Every Piece in Its Perfect Room",
+      "AI home decor photography: room scenes built to your brand's aesthetic, honest scale in context, and seasonal restyling without re-shooting.",
+    heroHeadline: "Sell the Room, Ship the Object",
     heroSubheadline:
-      "Home decor products live or die by context. Your vase needs to be on a shelf, your throw needs to be on a couch, your art needs to be on a wall. Dezygn generates those rooms for you.",
+      "Nobody buys a vase — they buy how the shelf looks with the vase on it. Home decor is sold by rooms, and rooms are exactly what AI scene-building does best.",
     image: "/images/seo/use-cases/home-decor.webp",
-    imageAlt: "AI product photography of home decor items styled in modern interior room settings",
+    imageAlt: "AI home decor photography showing products styled in a designed interior scene",
     problem: [
-      "Home decor is arguably the most context-dependent product category in all of e-commerce. A ceramic vase on a white background is just a cylinder. That same vase on a mid-century modern credenza in a sunlit living room is a $65 impulse purchase. Customers shopping for home decor are not buying objects — they are buying the feeling of a room, and if your product photography does not show them that feeling, you have already lost the sale. The brands dominating home decor e-commerce (West Elm, CB2, Anthropologie) invest millions in aspirational interior photography. Independent brands need to find a way to compete.",
-      "The fundamental challenge is that home decor products need to be shown in rooms, and rooms are expensive to access. Professional interior photography either requires a real home (location fees of $1,000-5,000 per day, plus the risk that the home's existing decor clashes with your products), a photography studio with room sets (even more expensive to rent and style), or virtual staging (which until recently looked obviously fake). Each product ideally needs to be shown in 2-3 different room contexts to appeal to different customer tastes — modern, traditional, bohemian, farmhouse — tripling the production cost.",
-      "Scale is the ultimate problem for home decor photography. A typical home decor brand carries hundreds of SKUs: throw pillows in 15 colors, candles in 8 scents with different labels, wall art in multiple sizes and frame options, seasonal items that change quarterly. Each SKU needs at least 3-5 images (product-on-white, room context, detail/texture, scale reference, alternate angle). That is easily 1,500-2,500 images per catalog cycle. The math on traditional photography is simply not viable — you are looking at $50,000-100,000 annually just for product images, and that does not include social content or campaign imagery.",
-      "Material and texture photography is critical but underserved. Customers buying home decor online cannot touch your products, so your photography needs to convey texture — the weave of a basket, the glaze of a ceramic, the nap of a velvet pillow, the grain of wood. Capturing these textures convincingly requires specialized macro photography and lighting techniques that add cost and time to every single SKU.",
+      "Home decor's conversion imagery is interiors, and interiors are brutal to produce traditionally: staged rooms, prop sourcing, natural light windows, and a new setup for every aesthetic your catalog spans. A brand selling into both Scandinavian-minimal and rustic-farmhouse customers needs two completely different staged worlds.",
+      "Scale in context is the category's quiet returns problem: a 'large' wall print that turns out poster-sized, a throw that barely covers a cushion. Without rooms for reference, customers guess — and wrong guesses come back in boxes.",
+      "And the merchandising calendar never stops: spring refresh, autumn cozy, holiday — the same SKUs need re-staged worlds four times a year, which is precisely the shoot nobody re-budgets for.",
     ],
     solution:
-      "Dezygn solves home decor's biggest challenge: showing every product in its perfect room without actually needing a room. Our AI generates photorealistic interior scenes — living rooms, bedrooms, kitchens, bathrooms, offices, dining rooms — and places your products naturally within them, complete with proper lighting, shadows, and scale. Your vase sits on a credenza with natural window light streaming across it. Your throw drapes over an armchair with the kind of casual perfection that stylists spend an hour achieving. Your wall art hangs in a gallery wall composition that inspires customers to buy the whole set.\n\nAwa, our AI Creative Director, understands interior design aesthetics and automatically suggests room styles that complement your products — pairing a rustic candle with a farmhouse kitchen, a minimalist sculpture with a modern living room, a bohemian pillow with an eclectic bedroom. The Visual Syntax framework lets you define your brand's interior aesthetic and apply it across your entire catalog, creating the visual cohesion that makes customers browse your site the way they browse a beautifully curated home.\n\nWith 2,500 credits per month, you can generate complete room scenes for every SKU, show products in multiple interior styles, create seasonal vignettes (holiday, spring refresh, cozy fall), and produce the kind of aspirational interior photography that typically requires a six-figure annual production budget — all for $99/month.",
+      "Dezygn builds interiors as engineered scenes using the environment-preset system from our client work: each brand vibe has a coherent material world — minimalist wants pale wood, matte white and negative space; rustic wants reclaimed wood, linen and terracotta; modern wants polished concrete and brushed metal. Your brand identity picks the world; the scene library gets built once in multiple angles with matching light; and every product in the catalog gets staged inside it.\n\nProducts stay honest: real source anchoring for materials and finishes (ceramic vs. glass vs. powder-coated metal render differently because they are different), and room context doubles as the scale reference — the lamp next to a real sofa, the rug under a real table, at natural 50mm perspective. Seasonal restyling becomes a scene swap instead of a shoot: same accurate product, new world, same afternoon.",
     features: [
       {
         icon: "Image",
-        title: "Photorealistic Room Scenes",
+        title: "Rooms Built to Your Aesthetic",
         description:
-          "Generate living rooms, bedrooms, kitchens, and more — with your products naturally placed, properly lit, and realistically shadowed.",
-      },
-      {
-        icon: "Palette",
-        title: "Interior Style Matching",
-        description:
-          "Awa pairs your products with complementary room aesthetics — modern, farmhouse, bohemian, Japandi, maximalist — based on your product's design language.",
-      },
-      {
-        icon: "Layers",
-        title: "Multi-Room Contexts",
-        description:
-          "Show the same product in 2-3 different room styles to appeal to different customer tastes — without staging a single physical space.",
+          "Scene presets matched to your brand world — Scandinavian, rustic, modern, bohemian — generated once, reused across the entire catalog.",
       },
       {
         icon: "Target",
-        title: "Scale & Proportion",
+        title: "Scale Through Context",
         description:
-          "Products are shown at accurate scale relative to furniture and room elements, giving customers a true sense of size before they buy.",
+          "Products staged against sofas, tables and walls at honest perspective — the in-room size reference that prevents the category's silent returns.",
       },
       {
-        icon: "Camera",
-        title: "Texture Rendering",
+        icon: "Sparkles",
+        title: "Material-True Finishes",
         description:
-          "Convey the weave, glaze, grain, and nap of your materials with detail-rich close-ups that let customers 'feel' your products through the screen.",
+          "Matte ceramic, blown glass, woven jute, brushed brass — finish-specific rendering so the texture that arrives matches the texture on screen.",
       },
       {
         icon: "Clock",
-        title: "Seasonal Refreshes",
+        title: "Seasonal Restyles in Hours",
         description:
-          "Transform the same product from a summer-bright living room to a cozy fall vignette to a holiday tablescape — without reshooting anything.",
-      },
-    ],
-    stats: [
-      { value: "$202B", label: "U.S. home furnishings market (2024)" },
-      { value: "77%", label: "Of home decor shoppers say lifestyle photos influence their purchase" },
-      { value: "42%", label: "Reduction in returns when products are shown in realistic room contexts" },
-    ],
-    cta: "Put Your Decor in Its Dream Home",
-    relatedUseCases: ["candles", "baby-products", "jewelry"],
-    relatedShotTypes: ["lifestyle", "detail-close-ups"],
-  },
-
-  // ──────────────────────────────────────────────
-  // 11. OUTDOOR GEAR
-  // ──────────────────────────────────────────────
-  {
-    slug: "outdoor-gear",
-    title: "Outdoor Gear",
-    metaTitle: "AI Product Photography for Outdoor Gear | Dezygn",
-    metaDescription:
-      "Shoot outdoor gear in stunning wilderness settings without leaving your warehouse. Dezygn's AI creates adventure-ready product imagery — try it free.",
-    heroHeadline: "Epic Outdoor Shots. Zero Expedition Required.",
-    heroSubheadline:
-      "Your customers buy adventure. Your product photography needs to sell that promise — and Dezygn generates stunning wilderness imagery without a single trek to the trailhead.",
-    image: "/images/seo/use-cases/outdoor-gear.webp",
-    imageAlt: "AI-generated outdoor gear product photography with rugged nature and adventure backgrounds",
-    problem: [
-      "Outdoor gear brands face a paradox: the most compelling product imagery happens in the most logistically impossible locations. A tent photographed in a studio tells you nothing about how it looks pitched on a mountain ridge at sunrise. A backpack on a white background does not convey the feeling of summiting a peak with your gear on your back. But actually photographing products in stunning outdoor locations means permits, weather dependency, backcountry logistics, safety considerations, and travel costs that can make a single shoot cost $10,000-25,000.",
-      "Weather is the uncontrollable variable that makes outdoor photography a gamble. You plan a two-day shoot at a mountain lake, drive five hours, haul your gear to the location, and the sky is a flat grey overcast that makes everything look dull. Or it rains. Or the wildfire smoke rolls in. Professional outdoor photographers budget 2-3 extra days per shoot for weather contingencies, which doubles accommodation and travel costs. And even with padding, sometimes you just lose — ask any photographer who has been weathered out of a critical shoot three days before a product launch deadline.",
-      "The technical demands are extreme. Outdoor gear comes in materials that are tough to photograph — matte nylon that absorbs light, reflective zippers and buckles that create hot spots, and products that range in scale from a pocket knife to a four-person tent. Shooting in natural environments adds wind (blowing fabric, shaking tripods), variable light (sun moving through clouds), and terrain challenges (uneven ground, limited shooting angles). Many outdoor photographers work with assistants and specialized equipment (sandbag-weighted tripods, portable reflectors, battery-powered strobes) that add crew costs.",
-      "Content variety is increasingly important in this category. Outdoor consumers are savvy — they want to see gear in use, packed down, compared to body proportions, and shown in the specific environment they plan to use it. A winter jacket needs snow. A kayak paddle needs water. Hiking boots need trail. Each product might need 3-4 different environmental contexts, and no single location provides all of them. This means multiple expedition-style shoots per season, each with its own budget, logistics, and weather risks.",
-    ],
-    solution:
-      "Dezygn brings the grandeur of the outdoors to your product photography without any of the logistical nightmares. Our AI generates photorealistic wilderness environments — mountain ridges, forest trails, alpine lakes, desert canyons, coastal cliffs — and places your gear naturally within them, with accurate lighting, shadows, and environmental interaction. Your tent pitched on a granite slab at golden hour. Your backpack on a mossy log beside a stream. Your jacket on a figure standing at a summit overlook. All without leaving your office.\n\nAwa, our AI Creative Director, understands the visual language of outdoor brands — the epic scale, the warm golden-hour tones, the rugged authenticity that outdoor enthusiasts respond to. The Visual Syntax framework lets you define whether your brand is extreme and technical, casual and approachable, or eco-conscious and nature-forward, and applies that personality to every image. Import your brand's color palette and design language, and Dezygn generates images that feel like they came from your own field team.\n\nWith 2,500 credits per month, you can generate product imagery in multiple outdoor environments (mountains, forests, deserts, water), create seasonal content (spring thaw, summer adventure, fall foliage, winter expedition), and produce the aspirational photography that outdoor consumers expect from serious gear brands — all for $99/month instead of $50,000+ in annual expedition photography costs.",
-    features: [
-      {
-        icon: "Image",
-        title: "Wilderness Scene Generation",
-        description:
-          "Place your gear in photorealistic mountains, forests, lakes, deserts, and coastlines — with accurate natural lighting and weather conditions.",
-      },
-      {
-        icon: "Zap",
-        title: "Weather On Demand",
-        description:
-          "Need golden hour? Fresh snow? Morning mist? Dramatic storm clouds? Generate the exact conditions that make your gear look its most compelling.",
-      },
-      {
-        icon: "Camera",
-        title: "Technical Material Rendering",
-        description:
-          "Accurate representation of ripstop nylon, GORE-TEX textures, anodized aluminum, and other technical materials that outdoor consumers evaluate closely.",
-      },
-      {
-        icon: "Target",
-        title: "Pack-Down & Scale Shots",
-        description:
-          "Show your tent packed vs. pitched, your bag loaded vs. empty, and products next to familiar scale references — answering the practical questions outdoor buyers always ask.",
-      },
-      {
-        icon: "Layers",
-        title: "Multi-Season Content",
-        description:
-          "Generate summer, fall, winter, and spring versions of the same product imagery — keeping your catalog seasonally relevant without scheduling four separate expedition shoots.",
-      },
-    ],
-    stats: [
-      { value: "$23B", label: "U.S. outdoor recreation equipment market (2024)" },
-      { value: "81%", label: "Of outdoor gear buyers research products online first" },
-      { value: "3.9x", label: "Higher engagement on adventure-context imagery vs. studio shots" },
-    ],
-    cta: "Take Your Gear Photography Off-Grid",
-    relatedUseCases: ["fitness", "golf-brands", "fashion-accessories"],
-    relatedShotTypes: ["lifestyle", "hero-shots"],
-  },
-
-  // ──────────────────────────────────────────────
-  // 12. ELECTRONICS
-  // ──────────────────────────────────────────────
-  {
-    slug: "electronics",
-    title: "Electronics",
-    metaTitle: "AI Product Photography for Electronics | Dezygn",
-    metaDescription:
-      "Create sleek, modern electronics product photos that compete with Apple-level imagery. Dezygn's AI handles screens, reflections, and specs — try free.",
-    heroHeadline: "Apple-Level Product Shots Without the Apple Budget",
-    heroSubheadline:
-      "Electronics consumers expect premium, pixel-perfect imagery. Dezygn's AI generates the clean, modern product photography that tech buyers demand — at a price that makes sense for growing brands.",
-    image: "/images/seo/use-cases/electronics.webp",
-    imageAlt: "AI product photography of consumer electronics with sleek minimalist studio lighting",
-    problem: [
-      "Consumer electronics photography has been permanently shaped by Apple. Since the original iPhone marketing, tech consumers expect product imagery to be immaculate — perfectly lit, surgically precise, and conveying both the physical beauty and the functional capability of the product. This standard is nearly impossible to achieve without professional equipment, experienced photographers, and extensive post-production. A startup launching a new gadget is compared directly against companies spending millions on product photography, and the visual gap immediately signals 'small player' in a category where trust is everything.",
-      "The technical challenges are relentless. Electronics products are a minefield of reflective surfaces — glass screens, polished metal bezels, glossy plastic housings — each requiring dedicated lighting strategies that often conflict with each other. A laptop needs its screen to show content without glare, its aluminum body to have even highlights without hot spots, and its keyboard to be readable without shadows. Achieving all three in a single exposure is physically impossible; professional electronics photography routinely composites 3-5 separate exposures per image.",
-      "Screen display is a particular nightmare. If you are showing a product with a screen (phones, tablets, laptops, smartwatches, monitors), you need the screen to display content that looks natural and bright while the product body around it is lit for photography. In reality, the screen's self-illumination and the studio lighting operate at completely different color temperatures and intensities. The industry standard is to photograph the product body and screen separately, then composite them in post — a process that requires Photoshop expertise and 30-60 minutes per image.",
-      "Feature visualization adds another layer of complexity. Electronics consumers want to understand what a product does, not just what it looks like. That means you need images showing ports, buttons, and connectivity options at various angles; feature callout overlays; size comparisons with familiar objects; and lifestyle context showing the product in use. Creating this comprehensive visual story for each SKU requires not just photography but art direction, graphic design, and potentially 3D rendering capabilities — a cross-disciplinary production that most small teams cannot staff.",
-    ],
-    solution:
-      "Dezygn brings premium electronics photography to brands that do not have a seven-figure marketing budget. Our AI generates the clean, precise, modern imagery that tech consumers expect — with perfectly controlled reflections, realistic screen displays, and the sophisticated lighting that makes electronics products look premium. Upload your product or CAD renders and Awa, our AI Creative Director, generates studio shots that hold up alongside the biggest names in tech.\n\nThe Visual Syntax framework lets you define your brand's tech aesthetic — whether that is warm and approachable (like Google), minimalist and premium (like Apple), or bold and technical (like Razer) — and apply it consistently across your entire product line. Import your brand design system and every image maintains your visual identity. Generate hero shots, feature angle close-ups, lifestyle usage scenes, and comparison layouts — all from a single set of reference images.\n\nWith 2,500 credits per month at $99, you can create a complete product launch gallery in hours, generate Amazon-optimized listing images that compete with billion-dollar brands, and produce the kind of polished tech imagery that builds consumer confidence — all without hiring a product photographer, retoucher, or 3D artist.",
-    features: [
-      {
-        icon: "Sparkles",
-        title: "Reflection & Glare Control",
-        description:
-          "Our AI masters the reflective surfaces that define electronics — glass, metal, glossy plastic — producing clean images without hot spots or visible studio reflections.",
-      },
-      {
-        icon: "Camera",
-        title: "Screen Content Integration",
-        description:
-          "Show realistic screen displays on phones, tablets, laptops, and watches with proper brightness, color temperature, and viewing angle — no compositing needed.",
-      },
-      {
-        icon: "Target",
-        title: "Feature Angle Shots",
-        description:
-          "Generate precisely angled views that highlight ports, buttons, sensors, and design details — the images that answer technical questions before they are asked.",
-      },
-      {
-        icon: "Brain",
-        title: "Tech Aesthetic Intelligence",
-        description:
-          "Awa understands the visual language of consumer tech and guides every composition toward the premium, modern look that electronics buyers expect.",
-      },
-      {
-        icon: "Layers",
-        title: "Product Family Consistency",
-        description:
-          "Launch a phone, case, charger, and earbuds? Get perfectly matched imagery across every product in the ecosystem.",
-      },
-    ],
-    stats: [
-      { value: "$487B", label: "U.S. consumer electronics market (2024)" },
-      { value: "89%", label: "Of electronics buyers say image quality impacts purchase confidence" },
-      { value: "31%", label: "Higher conversion rates with 6+ product images vs. fewer than 3" },
-    ],
-    cta: "Give Your Tech the Premium Treatment",
-    relatedUseCases: ["toys", "fitness", "outdoor-gear"],
-    relatedShotTypes: ["studio", "detail-close-ups"],
-  },
-
-  // ──────────────────────────────────────────────
-  // 13. BEAUTY
-  // ──────────────────────────────────────────────
-  {
-    slug: "beauty",
-    title: "Beauty",
-    metaTitle: "AI Product Photography for Beauty Products | Dezygn",
-    metaDescription:
-      "Create stunning beauty product photography with AI. Dezygn handles cosmetics, color accuracy, and editorial styling — 2,500 shots/month for $99.",
-    heroHeadline: "Beauty Photography That Actually Converts",
-    heroSubheadline:
-      "Your lipstick shade needs to be exact. Your palette layout needs to pop. Your brand story needs to shine through every image. Dezygn's AI delivers all three.",
-    image: "/images/seo/use-cases/beauty.webp",
-    imageAlt: "AI-generated beauty product photography with luxurious textures and editorial lighting",
-    problem: [
-      "Beauty product photography operates under one non-negotiable requirement: color accuracy. When a customer orders 'Sunset Rose' lipstick based on your product photo, the color that arrives needs to match what they saw on screen. This sounds simple but it is an enormous technical challenge. Different lighting setups shift color temperature. Different backgrounds affect perceived color through simultaneous contrast. Camera sensors interpret pigments differently than the human eye. And every screen your customer views the image on has different color calibration. Beauty photographers spend enormous effort on color correction and calibration, often shooting reference color cards alongside products and spending hours in post-production matching hex values.",
-      "The diversity of beauty product formats makes photography exponentially complex. A cosmetics brand might sell lipsticks (cylindrical tubes with swatchable tips), eyeshadow palettes (multiple small pans needing individual color accuracy), foundations (pump bottles with skin-matching color stories), powders (compacts with pressed product visible), and tools (brushes, sponges, applicators). Each format has different lighting requirements, optimal angles, and customer expectations. An eyeshadow palette shot from the wrong angle shows shadow instead of pigment. A lipstick bullet photographed under warm light shifts the color two shades. The margin for error is razor thin.",
-      "Swatch and texture photography is the backbone of beauty e-commerce, and it is painstaking work. Customers want to see arm swatches, lip swatches, eye looks, and texture close-ups for every shade. A single lipstick line with 20 shades means 20 arm swatches (requiring a model with appropriate skin tone, consistent lighting, and a makeup artist), 20 lip application shots, and 20 product-with-swatch pairings. That is 60 images for one product line. With a professional beauty photographer charging $300-500 per image, a single shade range costs $18,000-30,000 to photograph properly.",
-      "The visual bar in beauty is set by brands with massive production budgets — Fenty, Rare Beauty, Charlotte Tilbury — whose product photography is essentially editorial art direction. Their images tell stories, evoke moods, and create desire through sophisticated compositions, prop styling, and post-production. Independent and DTC beauty brands competing against this level of visual sophistication need either a very talented in-house creative team or an unsustainable photography budget.",
-    ],
-    solution:
-      "Dezygn gives beauty brands the editorial-quality imagery and color precision they need without the five-figure price tag. Our AI generates product shots with calibrated color accuracy, realistic swatch renderings, and the sophisticated art direction that beauty customers expect. Upload your product photos and Awa, our AI Creative Director, applies the visual principles that drive beauty commerce: clean compositions that let color speak, textural close-ups that build desire, and lifestyle context that creates brand affinity.\n\nThe Visual Syntax framework is particularly powerful for beauty brands because it lets you define your brand's precise aesthetic — clinical and scientific, warm and inclusive, bold and editorial, or natural and organic — and reproduce it flawlessly across every SKU and every shade. Import your brand palette and Dezygn generates compositions that complement your products' colors rather than competing with them. Need a hero shot with complementary prop colors, a swatch series on diverse skin tones, and a flat lay for Instagram? Generate all three from the same upload session.\n\nWith 2,500 credits per month, you can photograph new shade launches on day one, generate seasonal campaign imagery, create the kind of aspirational editorial content that builds brand loyalty, and maintain color-consistent product galleries across your entire line — all for $99/month. The course and community bundle teaches you the visual strategies that top beauty brands use, so every image you generate is informed by proven conversion principles.",
-    features: [
-      {
-        icon: "Palette",
-        title: "Color-Calibrated Rendering",
-        description:
-          "Precise color reproduction across lipsticks, eyeshadows, foundations, and powders — ensuring on-screen colors match real-world shades as closely as possible.",
-      },
-      {
-        icon: "Sparkles",
-        title: "Swatch Generation",
-        description:
-          "Create realistic arm swatches, lip applications, and texture close-ups without models, makeup artists, or hours of cleanup between shades.",
-      },
-      {
-        icon: "Brain",
-        title: "Editorial Art Direction",
-        description:
-          "Awa suggests compositions, prop styling, and color stories informed by what converts in beauty e-commerce — turning product shots into editorial content.",
-      },
-      {
-        icon: "Layers",
-        title: "Shade Range Consistency",
-        description:
-          "Photograph 30 shades of foundation or 24 lipstick colors with perfectly matched lighting, backgrounds, and positioning across the entire range.",
-      },
-      {
-        icon: "Camera",
-        title: "Multi-Format Expertise",
-        description:
-          "Optimized photography for every beauty format — tubes, compacts, bottles, palettes, pencils, and tools — each with lighting tuned to its unique challenges.",
-      },
-      {
-        icon: "Globe",
-        title: "Social-First Outputs",
-        description:
-          "Generate Instagram, TikTok, and Pinterest-ready imagery alongside your e-commerce shots — beauty brands need social content at a volume traditional photography cannot sustain.",
-      },
-    ],
-    stats: [
-      { value: "$101B", label: "Global color cosmetics market (2024)" },
-      { value: "85%", label: "Of beauty shoppers say accurate color photos are critical" },
-      { value: "19%", label: "Return rate reduction when product colors match photos accurately" },
-    ],
-    cta: "Make Your Beauty Line Camera-Ready",
-    relatedUseCases: ["skincare", "jewelry", "fashion-accessories"],
-    relatedShotTypes: ["flat-lay", "detail-close-ups"],
-  },
-
-  // ──────────────────────────────────────────────
-  // 14. BABY PRODUCTS
-  // ──────────────────────────────────────────────
-  {
-    slug: "baby-products",
-    title: "Baby Products",
-    metaTitle: "AI Product Photography for Baby Products | Dezygn",
-    metaDescription:
-      "Create warm, trustworthy baby product photos without the chaos of infant photoshoots. Dezygn's AI generates safe, beautiful imagery — try it free.",
-    heroHeadline: "Beautiful Baby Product Photos. No Crying Required.",
-    heroSubheadline:
-      "Baby product photography needs to feel warm, safe, and trustworthy — while being incredibly practical to produce. Dezygn's AI delivers both, without the unpredictability of shooting with actual infants.",
-    image: "/images/seo/use-cases/baby-products.webp",
-    imageAlt: "AI product photography of baby products and nursery items in soft pastel lifestyle settings",
-    problem: [
-      "Baby product photography has a higher emotional bar than almost any other category. Parents are not just buying a product — they are trusting you with their child's safety, comfort, and wellbeing. Every image needs to radiate warmth, safety, and care. If your product photos feel even slightly clinical, cheap, or impersonal, parents scroll past. The brands winning in this space (Snoo, Ergobaby, Lovevery) project a visual identity that is warm, modern, and reassuring — a look that requires professional art direction, not just good photography.",
-      "Shooting with babies is the most challenging and unpredictable form of product photography. Infants operate on their own schedule — they sleep, eat, cry, and need diaper changes with no regard for your shooting timeline. Professional baby photography sessions rarely last more than 30 minutes of actual shooting time, with breaks for feeding, soothing, and wardrobe changes. Agencies that provide baby models charge premium rates ($500-1,500 per session), and you need a parent or guardian on set at all times, adding to the logistical complexity. A single productive shoot day might yield usable images for 5-8 products.",
-      "Safety representation is a non-negotiable concern. Parents examine product images closely for safety cues — is the crib sheet fitted properly? Is the stroller harness secure? Is the toy free of small parts? Your photography needs to show these details clearly and accurately, because misrepresenting a safety feature in an image can create liability issues as well as angry customer reviews. This means every image requires careful product preparation and quality control that adds time and cost to every shot.",
-      "The diversity requirement in baby products is increasingly important. Modern parents want to see babies of different ethnicities, skin tones, and genders in your imagery. This means booking multiple baby models across sessions, multiplying your already complex scheduling and budgeting challenges. And since babies grow out of product stages quickly (newborn, 3-6 months, 6-12 months), you need age-appropriate models for age-specific products — a newborn for swaddles, a crawler for play mats, a toddler for sippy cups. The casting and scheduling logistics alone can consume more time than the actual photography.",
-    ],
-    solution:
-      "Dezygn removes the chaos from baby product photography while preserving the warmth and trust that parents need to see. Our AI generates soft, inviting product imagery — from nursery lifestyle scenes to detailed product close-ups — with the emotional warmth of a professional family photography session and none of the unpredictability of shooting with actual infants. Awa, our AI Creative Director, understands the visual language that resonates with new parents: soft natural lighting, pastel-and-neutral color palettes, and cozy nursery environments that make your products feel like part of a loving home.\n\nThe Visual Syntax framework lets you define your brand's parenting philosophy visually — modern and minimal, warm and traditional, gender-neutral and inclusive, or playful and colorful — and apply it consistently across your entire product line. From strollers to swaddles, pacifiers to play mats, every image reinforces the brand trust that parents are looking for. The brand import feature means your colors and visual identity are reflected in every nursery scene and lifestyle composition.\n\nWith 2,500 credits per month at $99, you can generate complete image sets for your entire catalog — including nursery scenes, product detail shots, scale reference images, and safety feature close-ups — show products across diverse family representations, and create seasonal content (new baby season, holiday gifting, back-to-daycare) without ever wrestling a crying infant into a onesie on set.",
-    features: [
-      {
-        icon: "Shield",
-        title: "Safety-Forward Imagery",
-        description:
-          "Generate images that clearly show safety features — snug crib fits, secure harnesses, age-appropriate designs — building the trust parents need to buy.",
-      },
-      {
-        icon: "Image",
-        title: "Nursery Scene Generation",
-        description:
-          "Place your products in beautiful, photorealistic nursery settings — cribs, changing tables, play areas — with warm natural lighting that feels like home.",
-      },
-      {
-        icon: "Sparkles",
-        title: "Warm Emotional Tone",
-        description:
-          "Our AI applies the soft lighting, gentle colors, and cozy composition that new parents respond to — turning product shots into moments of calm.",
-      },
-      {
-        icon: "Layers",
-        title: "Age-Stage Matching",
-        description:
-          "Show products with age-appropriate contexts — newborn-sized for swaddles, crawler-sized for gates, toddler-sized for cups — without casting models for each stage.",
-      },
-      {
-        icon: "Target",
-        title: "Size & Scale Clarity",
-        description:
-          "Generate images that communicate actual product dimensions relative to cribs, changing tables, and baby proportions — a top purchase concern for parents.",
-      },
-    ],
-    stats: [
-      { value: "$67B", label: "Global baby products market (2024)" },
-      { value: "82%", label: "Of new parents research baby products online" },
-      { value: "37%", label: "Of baby product returns cite 'not as pictured' as the reason" },
-    ],
-    cta: "Create Baby Product Photos Parents Trust",
-    relatedUseCases: ["toys", "pet-products", "home-decor"],
-    relatedShotTypes: ["lifestyle", "scale-shots"],
-  },
-
-  // ──────────────────────────────────────────────
-  // 15. CANDLES
-  // ──────────────────────────────────────────────
-  {
-    slug: "candles",
-    title: "Candles",
-    metaTitle: "AI Product Photography for Candles | Dezygn",
-    metaDescription:
-      "Capture the glow, texture, and mood of your candle brand with AI photography. Dezygn creates atmospheric product images — 2,500/month for $99.",
-    heroHeadline: "Sell the Glow, the Scent, the Mood — Through a Photo",
-    heroSubheadline:
-      "Candle photography needs to sell an invisible product — scent — through a visual medium. Dezygn's AI creates atmospheric imagery that makes customers smell your candles through the screen.",
-    image: "/images/seo/use-cases/candles.webp",
-    imageAlt: "AI-generated candle product photography with warm ambient lighting and cozy home settings",
-    problem: [
-      "Candles present one of the most paradoxical challenges in product photography: you are trying to sell a sensory experience (scent) through a visual medium (photography). Your customer cannot smell 'Coastal Sage' or 'Warm Vanilla' through their screen, so your imagery has to do the heavy lifting of evoking that scent through visual cues — color, environment, props, lighting, and mood. This is not photography; it is synesthetic storytelling. Most product photographers are not equipped for this level of creative demand, and most candle brands end up with pretty but generic images that fail to communicate their unique fragrance stories.",
-      "The technical challenge of photographing lit candles is underappreciated. A burning candle flame is orders of magnitude brighter than the product around it, creating an extreme dynamic range problem. Expose for the flame and the candle body becomes a dark silhouette. Expose for the candle body and the flame is a blown-out white blob. Capturing a warm, natural-looking glow requires careful exposure blending, specialized lighting (dim ambient to preserve the flame's warmth while gently filling the candle body), and post-processing that most photographers charge extra for. And that is just a single-wick candle — multi-wick candles and candles in decorative vessels introduce additional complexity.",
-      "Wax texture and vessel quality are critical but difficult to capture. Premium candle brands invest in distinctive wax textures — smooth soy, crystallized beeswax, terrazzo-style blends — and vessels that are design objects in their own right (hand-thrown ceramics, embossed glass, concrete, recycled materials). Photographing these textures requires macro-level detail and careful lighting that reveals surface character without creating distracting shadows or reflections. Glass vessels are particularly challenging — the same reflection and transparency problems that plague skincare bottles apply here, with the added complexity of wax pooling and wick positioning.",
-      "Scale and volume are the business-level challenge. Candle brands typically carry multiple product lines (single-wick, three-wick, pillar, taper, melts) across 15-40+ scents, with seasonal collections dropping quarterly. Each scent needs a hero product shot, a lifestyle mood shot, and ideally an ingredient/inspiration flat lay. That is 45-120+ images per standard collection, and double or triple that when you include seasonal content. At $150-300 per image for quality candle photography, a single year's content can cost $10,000-30,000 — a significant chunk of a candle brand's marketing budget.",
-    ],
-    solution:
-      "Dezygn helps candle brands do what no product alone can: make customers feel a scent through their eyes. Our AI generates atmospheric, mood-rich imagery that evokes the emotional and sensory experience of each fragrance — placing your 'Coastal Sage' in a sunlit bathroom with eucalyptus sprigs, your 'Warm Vanilla' in a cozy reading nook with soft blankets, and your 'Fresh Linen' in a bright, breezy bedroom. The imagery tells the scent story visually, bridging the gap between screen and sensation.\n\nAwa, our AI Creative Director, understands how to translate fragrance notes into visual compositions. Describe your scent profile and Awa suggests environments, props, lighting, and color palettes that create the sensory bridge your customers need. The Visual Syntax framework lets you define your brand's aesthetic — minimalist and modern, rustic and artisanal, luxurious and moody, or bright and botanical — and apply it with absolute consistency across every candle in every collection. Import your brand assets and every image reinforces your packaging design and brand story.\n\nWith 2,500 credits per month at $99, you can generate complete visual stories for your entire scent library, create seasonal collection imagery (fall spice, holiday evergreen, spring floral, summer citrus), and produce the atmospheric lifestyle content that drives social media sharing and purchase intent — all without burning through your production budget alongside your wicks.",
-    features: [
-      {
-        icon: "Sparkles",
-        title: "Scent-to-Scene Translation",
-        description:
-          "Tell Awa your fragrance notes and get lifestyle scenes that visually evoke the scent — lavender fields for floral, fireside settings for smoky, beach mornings for fresh.",
-      },
-      {
-        icon: "Camera",
-        title: "Perfect Glow Rendering",
-        description:
-          "Our AI captures the warm, natural glow of a lit candle with proper exposure balance — no blown-out flames, no dark vessels, just beautiful candlelight.",
-      },
-      {
-        icon: "Palette",
-        title: "Wax & Vessel Textures",
-        description:
-          "Render the crystalline surface of beeswax, the smooth pour of soy, and the unique character of ceramic, glass, concrete, and metal vessels.",
-      },
-      {
-        icon: "Image",
-        title: "Atmospheric Lifestyle Scenes",
-        description:
-          "Place your candles in moody bathrooms, cozy living rooms, romantic dinner settings, and outdoor patios — the contexts that make candles feel essential.",
+          "Spring light, autumn layers, holiday warmth — re-stage the same SKUs across the merchandising calendar without re-shooting anything.",
       },
       {
         icon: "Layers",
         title: "Collection Cohesion",
         description:
-          "Generate visually unified imagery for seasonal collections — every candle in your 'Winter Lodge' line shares a cohesive visual story while each scent has its own personality.",
-      },
-      {
-        icon: "Clock",
-        title: "Seasonal Speed",
-        description:
-          "Launch a new seasonal collection every quarter with complete imagery — hero shots, lifestyle scenes, and social content — in days instead of weeks.",
+          "Whole collections staged in one consistent world — the curated-showroom feel that makes a store read as a brand instead of a marketplace.",
       },
     ],
     stats: [
-      { value: "$13.7B", label: "U.S. candle market (2024)" },
-      { value: "76%", label: "Of candle purchases are driven by scent, but sold by sight online" },
-      { value: "3.4x", label: "Higher conversion with mood-setting lifestyle images vs. plain product shots" },
+      { value: "8", label: "Brand-vibe environment presets to build from" },
+      { value: "3-4", label: "Angles per scene for full staging flexibility" },
+      { value: "4x/yr", label: "Seasonal restyles without a single re-shoot" },
     ],
-    cta: "Light Up Your Candle Brand's Visual Story",
+    cta: "Stage Your Catalog in Its World",
+    relatedUseCases: ["candles", "food-beverage", "toys"],
+    relatedShotTypes: ["lifestyle", "brand-atmosphere", "flat-lay"],
+  },
+
+  // ──────────────────────────────────────────────
+  // 12. OUTDOOR GEAR (Abacus rain jacket anchor)
+  // ──────────────────────────────────────────────
+  {
+    slug: "outdoor-gear",
+    title: "Outdoor Gear",
+    metaTitle: "AI Product Photography for Outdoor Gear Brands | Dezygn",
+    metaDescription:
+      "AI outdoor gear photography from real client sessions: weather scenes on demand, technical fabric fidelity, and the mid-shot rule that keeps gear visible.",
+    heroHeadline: "Shoot the Storm Without Waiting for One",
+    heroSubheadline:
+      "Rain shells in drizzle, jackets on windswept coasts, gear in golden alpine light — we've delivered exactly these shots for real outerwear clients, on deadline, in any weather.",
+    image: "/images/seo/use-cases/outdoor-gear.webp",
+    imageAlt: "AI outdoor gear photography showing a rain jacket worn in atmospheric drizzle",
+    problem: [
+      "Outdoor gear's whole pitch is performance in conditions — and conditions are unschedulable. A rain jacket needs rain, an insulated shell needs visible cold, trail gear needs trails. Traditional outdoor shoots are expeditions: location logistics, weather windows, gear hauling, and re-shoots when the sky doesn't cooperate.",
+      "The technical details carry the price tag: taped seams, waterproof zips, material panels, hood construction. Generic generation smooths exactly these features away — and an outdoor audience reads spec-level detail the way golfers read club faces.",
+      "There's also a framing trap: epic landscape shots that bury the product. The mountain looks incredible; the $300 jacket is twelve pixels tall. Brand money spent on landscape photography.",
+    ],
+    solution:
+      "This category maps to documented client work: a women's rain jacket session — three deliverables (a confident tee shot in drizzle, an after-rain fairway walk, a waterproof shoulder detail close-up) — ran 1h20 end to end, about 50 minutes of it in product prep. That ratio is the craft: sources filtered for resolution, cropped to signal, angles matched to the intended shots, so the technical fabric renders true.\n\nThe production rules from that work are built into how Dezygn shoots outdoor: mid-shot framing as the default — wide shots are landscape photography; mid-shots are product photography with environment, and the jacket stays the subject. Weather and terrain are scene ingredients: drizzle, coastal wind, alpine dawn, forest trail — generated on demand, in your brand's palette, reusable across the line. Models are cast for credible outdoor energy across realistic age brackets (the comp-card workflow handled 40-60 brackets for our client in one pass), and detail close-ups prove the seam tape and zip construction that justify the spec-sheet price.",
+    features: [
+      {
+        icon: "Image",
+        title: "Weather On Demand",
+        description:
+          "Drizzle, wind, snow light, golden alpine hours — conditions as controllable scene ingredients instead of expedition lottery tickets.",
+      },
+      {
+        icon: "Layers",
+        title: "Technical Construction Fidelity",
+        description:
+          "Source-angle matching and 2K prep keep taped seams, waterproof zips and material panels rendering like the spec sheet reads.",
+      },
+      {
+        icon: "Target",
+        title: "The Mid-Shot Rule",
+        description:
+          "Environment with the product still the hero — the framing discipline from real client sessions that keeps epic from swallowing the gear.",
+      },
+      {
+        icon: "Camera",
+        title: "Trail-Credible Models",
+        description:
+          "Rugged, realistic casting across the age brackets your customers actually occupy — people who look like they use the gear.",
+      },
+      {
+        icon: "Clock",
+        title: "Season-Proof Scheduling",
+        description:
+          "Winter campaign in August, monsoon shots in a drought — launch timing decoupled from meteorology entirely.",
+      },
+    ],
+    stats: [
+      { value: "1h 20m", label: "Real client session: 3 deliverable shots, end to end" },
+      { value: "~50 min", label: "Of that session spent on product prep — the skill" },
+      { value: "3", label: "Comp-card age brackets cast in a single pass" },
+    ],
+    cta: "Shoot Your Gear in Its Element",
+    relatedUseCases: ["golf-brands", "fitness", "fashion-accessories"],
+    relatedShotTypes: ["lifestyle", "detail-close-ups", "model-shots"],
+  },
+
+  // ──────────────────────────────────────────────
+  // 13. ELECTRONICS
+  // ──────────────────────────────────────────────
+  {
+    slug: "electronics",
+    title: "Electronics",
+    metaTitle: "AI Product Photography for Electronics Brands | Dezygn",
+    metaDescription:
+      "AI electronics photography: precise device geometry, controlled reflections on glass and aluminum, and tech-coded scenes that sell the upgrade.",
+    heroHeadline: "Precision Products Deserve Precision Imagery",
+    heroSubheadline:
+      "Electronics buyers compare specs and zoom into ports. The imagery has to be geometrically true, reflection-controlled, and clean enough to feel engineered — because the product is.",
+    image: "/images/seo/use-cases/electronics.webp",
+    imageAlt: "AI electronics photography showing a device with controlled reflections on a clean surface",
+    problem: [
+      "Electronics combine the two hardest rendering problems: precise geometry (a port in the wrong place isn't a style choice, it's a different product) and reflective materials — glass screens, aluminum bodies, glossy plastics that mirror their environment. Naive generation warps both, and tech buyers are exactly the audience that zooms in.",
+      "The category's visual language is also unforgiving: minimal, controlled, clinical-clean. Inconsistent lighting or drifting angles across a product line reads as off-brand in a way lifestyle categories forgive.",
+      "And accessories and gadgets live on marketplace velocity — new SKUs, colorways and bundles shipping constantly, each needing the full image set yesterday, plus lifestyle frames showing the device in a life worth upgrading to.",
+    ],
+    solution:
+      "Electronics in Dezygn run on the documentation recipes: 85mm at f/8, straight-on or precise 3/4, high-key or neutral studio — the technical-catalog look, locked once and batched across the line. Devices are anchored by real source images with exact specifications in the subject block — device type, exact color name ('space gray,' not 'gray'), materials ('aluminum frame, glass back'), ports and controls — because in this category, approximation is misrepresentation.\n\nReflective surfaces get the multi-directional soft lighting rule: fill that keeps screens and metal readable instead of mirrored chaos or black voids. For lifestyle, the modern-tech scene world — urban lofts, clean desks, brushed metal and polished concrete — places devices in the aspirational context that sells upgrades, while UGC-style frames cover the ad rotation. Macro shots document ports, textures and build quality for the spec-checkers.",
+    features: [
+      {
+        icon: "Target",
+        title: "Geometry That Survives Zoom",
+        description:
+          "Real source anchoring plus exact spec language keeps ports, buttons and proportions true — the difference between your product and a hallucinated cousin.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Controlled Glass and Aluminum",
+        description:
+          "Multi-directional fill lighting keeps screens, bezels and metal bodies readable — engineered reflections instead of accidental mirrors.",
+      },
+      {
+        icon: "Layers",
+        title: "Line-Wide Clinical Consistency",
+        description:
+          "One locked technical recipe across every SKU and colorway — the catalog discipline tech brands are judged by.",
+      },
+      {
+        icon: "Image",
+        title: "Desk-Worthy Lifestyle Scenes",
+        description:
+          "Minimal lofts, clean workspaces, modern kitchens — the tech-coded scene world that sells the life around the device.",
+      },
+      {
+        icon: "Camera",
+        title: "Macro Build-Quality Proof",
+        description:
+          "Port arrays, speaker grilles, surface textures at close-up — the detail documentation that converts spec-sheet readers.",
+      },
+    ],
+    stats: [
+      { value: "85mm f/8", label: "The locked technical-catalog recipe" },
+      { value: "100%", label: "Of devices anchored to real source images" },
+      { value: "1 setup", label: "Consistency across every SKU and colorway" },
+    ],
+    cta: "Shoot Your Devices to Spec",
+    relatedUseCases: ["fitness", "home-decor", "outdoor-gear"],
+    relatedShotTypes: ["studio", "detail-close-ups", "lifestyle"],
+  },
+
+  // ──────────────────────────────────────────────
+  // 14. BEAUTY
+  // ──────────────────────────────────────────────
+  {
+    slug: "beauty",
+    title: "Beauty & Cosmetics",
+    metaTitle: "AI Product Photography for Beauty Brands | Dezygn",
+    metaDescription:
+      "AI beauty photography: consistent dedicated models, honest skin, accurate shades and textures — the volume the beauty content machine demands.",
+    heroHeadline: "Beauty Runs on Faces, Volume, and Shade Accuracy",
+    heroSubheadline:
+      "No category consumes more creative or scrutinizes it harder. Consistent models, honest skin texture, true-to-tube shades — at the publishing cadence beauty demands.",
+    image: "/images/seo/use-cases/beauty.webp",
+    imageAlt: "AI beauty photography showing a model with natural skin texture holding a cosmetic product",
+    problem: [
+      "Beauty is the highest-volume content category in e-commerce — daily social, constant ad rotation, launch after launch — and almost all of it needs faces. Model costs scale linearly with that appetite, and switching faces constantly costs the brand recognition that beauty marketing is built on.",
+      "Skin is the realism frontier. Over-smoothed, poreless AI skin is the single most recognizable tell in the category — and it's also exactly what modern beauty consumers have learned to distrust. Plastic skin doesn't just look fake; it contradicts the texture-positive direction the whole industry moved toward.",
+      "Shade accuracy is the returns engine: a foundation or lipstick whose photo reads a shade off generates returns and one-star 'not the color pictured' reviews. Color is not a vibe in beauty; it's the product.",
+    ],
+    solution:
+      "Dezygn's model system was built for categories like this. Dedicated models are cast from your brand identity through comp cards, then kept consistent across months of content via clean-portrait compositing — one recognizable face for the campaign, or a deliberate cast spanning your shade range. Skin is directed honestly: natural texture, real pores, expressions dialed with volume adjectives ('quiet joy,' 'serene confidence') so faces read editorial instead of uncanny.\n\nProducts get the cosmetics-specific accuracy treatment: containers anchored by real photos with material language (frosted glass, airless pump, rose-gold trim), and shades specified as exact color values rather than adjectives — because 'warm nude' means a different thing to every model, and your hex value means one. Application moments — mid-swatch, mid-blend, compact in hand — come from the action vocabulary, and the UGC recipe covers the ad formats that outperform polish in this category.",
+    features: [
+      {
+        icon: "Target",
+        title: "One Face, Whole Campaign",
+        description:
+          "Dedicated models consistent across PDP, social and ads — the brand-recognition asset beauty houses pay agencies to maintain.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Skin That Reads Human",
+        description:
+          "Natural texture and restrained expression direction — engineered against the plastic-skin tell that kills beauty credibility.",
+      },
+      {
+        icon: "Palette",
+        title: "Shade-Exact Color",
+        description:
+          "Exact color values for products and swatches instead of adjectives — the discipline that prevents 'not the color pictured' returns.",
+      },
+      {
+        icon: "Camera",
+        title: "Application Moments On Cue",
+        description:
+          "Mid-swatch, mid-application, compact-in-hand — directed action that shows the product working without a shoot day.",
+      },
+      {
+        icon: "Zap",
+        title: "The Beauty Content Cadence",
+        description:
+          "Launch sets, daily social, UGC ad rotations — generated at the volume the category's algorithm-driven marketing actually requires.",
+      },
+    ],
+    stats: [
+      { value: "1 face", label: "Campaign-long model consistency" },
+      { value: "Hex", label: "Shades specified as values, not adjectives" },
+      { value: "Daily", label: "The content cadence beauty brands sustain" },
+    ],
+    cta: "Cast Your Beauty Campaign",
+    relatedUseCases: ["skincare", "jewelry", "fashion-accessories"],
+    relatedShotTypes: ["ugc", "model-shots", "studio"],
+  },
+
+  // ──────────────────────────────────────────────
+  // 15. BABY PRODUCTS
+  // ──────────────────────────────────────────────
+  {
+    slug: "baby-products",
+    title: "Baby Products",
+    metaTitle: "AI Product Photography for Baby Brands | Dezygn",
+    metaDescription:
+      "AI baby product photography built on trust: accurate products, soft honest light, nursery scenes — without infant-model shoot logistics.",
+    heroHeadline: "The Most Trust-Sensitive Buyer in E-Commerce",
+    heroSubheadline:
+      "Parents buying for a baby scrutinize everything. The imagery has to feel safe, soft and true — and the product that arrives has to match it exactly.",
+    image: "/images/seo/use-cases/baby-products.webp",
+    imageAlt: "AI baby product photography showing a nursery scene in soft natural light",
+    problem: [
+      "No customer evaluates imagery harder than a parent buying for an infant. Anything that pattern-matches to 'cheap listing' — harsh lighting, inconsistent catalogs, slightly-off renders — reads as a safety signal, not an aesthetic one. Trust is the entire purchase.",
+      "Traditional production in this category is uniquely constrained: infant models involve regulation, ethics, scheduling chaos and cost, which is why most small baby brands fall back on flat packshots that sell none of the warmth the category runs on.",
+      "And the products themselves are accuracy-critical: fabrics that touch skin, materials parents check ('organic cotton,' 'BPA-free silicone'), sizes that matter ('0-3 months' has to look 0-3 months). Embellished renders here don't just cause returns — they breach the one thing the brand sells: being trustworthy.",
+    ],
+    solution:
+      "Dezygn shoots baby products on the trust recipe: soft natural window light (the everyday-mom warmth register, never clinical flash), nursery and home scenes in gentle brand palettes, and the wellness-soft camera language — 50mm, natural perspective, honest scale. Products are anchored to real sources with material truth front-loaded: weave texture on the swaddle, the actual silicone finish, stated dimensions so a bassinet looks bassinet-sized next to real furniture.",
+    features: [
+      {
+        icon: "Shield",
+        title: "Accuracy as a Safety Signal",
+        description:
+          "Real source anchoring and material-true rendering — because in this category, an honest image is a trust credential, not just a conversion asset.",
+      },
+      {
+        icon: "Image",
+        title: "Nursery Worlds in Soft Light",
+        description:
+          "Warm, gentle home scenes built to your palette — the visual register parents respond to, without staging a single room.",
+      },
+      {
+        icon: "Target",
+        title: "Scale Parents Can Verify",
+        description:
+          "Products staged against cribs, hands and real furniture at honest perspective — sized expectations set before checkout.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Warmth Without Model Logistics",
+        description:
+          "Lived-in human traces and parent-and-product moments that read warm and real — no infant-model scheduling, ever.",
+      },
+      {
+        icon: "Layers",
+        title: "Catalog-Wide Gentleness",
+        description:
+          "The same soft recipe locked across every SKU — a storefront that feels like one careful brand, which is exactly the pitch.",
+      },
+    ],
+    stats: [
+      { value: "50mm", label: "Honest, natural perspective — the trust lens" },
+      { value: "100%", label: "Material-true rendering on skin-contact products" },
+      { value: "0", label: "Infant-model shoot days required" },
+    ],
+    cta: "Build a Storefront Parents Trust",
+    relatedUseCases: ["toys", "home-decor", "skincare"],
+    relatedShotTypes: ["lifestyle", "scale-shots", "studio"],
+  },
+
+  // ──────────────────────────────────────────────
+  // 16. CANDLES (My Lela anchor)
+  // ──────────────────────────────────────────────
+  {
+    slug: "candles",
+    title: "Candles & Home Fragrance",
+    metaTitle: "AI Product Photography for Candle Brands | Dezygn",
+    metaDescription:
+      "AI candle photography that sells atmosphere: brand worlds, golden-hour scenes, honest flames and wax. Built from a real candle-brand project.",
+    heroHeadline: "You're Not Selling Wax. You're Selling an Evening.",
+    heroSubheadline:
+      "Candles are the purest atmosphere product in e-commerce — bought for the mood they promise. The photography has to deliver that mood, and we've built exactly this brand world for a real candle and skincare brand.",
+    image: "/images/seo/use-cases/candles.webp",
+    imageAlt: "AI candle photography showing a lit candle in a warm Mediterranean-styled scene",
+    problem: [
+      "A candle on white tells the customer nothing that matters. The product is the atmosphere — the golden evening, the ritual, the room it transforms — and atmosphere is exactly what flat e-commerce photography can't deliver. Lifestyle imagery isn't optional in this category; it's the primary driver of purchase decisions, and brands with weak visuals lose sales directly to brands with strong ones.",
+      "Flame and wax are physics problems: real flame behavior, honest wax texture, light falloff in a dim room. Naive AI generation produces sci-fi flames and plastic wax — instantly wrong to anyone who's ever lit a candle.",
+      "And fragrance can't be photographed at all — scent has to be communicated visually, through ingredients, place and palette. 'Fig and sandalwood' needs a world, not a white sweep.",
+    ],
+    solution:
+      "One of our documented brand-world projects is a Belgian candle and skincare brand whose extracted identity became the entire visual system: Mediterranean coastal settings, olive groves, sun-bleached linen, warm terracotta and sage, handcrafted ceramics, golden hour light, relaxed bohemian elegance. Every scene, prop and lighting choice filtered through that world — which is why the imagery reads as a brand, not a mood board.\n\nThat's the candle methodology in Dezygn: extract the brand world, build the scene library (evening interiors, ritual corners, tablescapes — 3-4 angles each, matching light), and stage the accurate product inside it. Vessels are anchored by real photos — amber glass, matte ceramic, label legible via the 2K rule — and scent is translated visually: the fig branch, the sandalwood tones, the ingredients as props in flat lays. Flames and lit scenes are held to the realism sniff test, and golden-hour or candlelit recipes do what they do best here: warm, single-mood atmosphere on a product that isn't reflective.",
+    features: [
+      {
+        icon: "Palette",
+        title: "A Brand World, Documented",
+        description:
+          "The exact methodology from our real candle-brand project: extracted identity → visual world → every image filtered through it.",
+      },
+      {
+        icon: "Image",
+        title: "Evenings You Can Almost Smell",
+        description:
+          "Ritual corners, candlelit dinners, golden-hour interiors — the atmosphere library that sells what the white background can't.",
+      },
+      {
+        icon: "Sparkles",
+        title: "Scent, Translated Visually",
+        description:
+          "Ingredient props, regional palettes, material textures — fragrance notes turned into imagery customers can read at a glance.",
+      },
+      {
+        icon: "Shield",
+        title: "Honest Flames, Honest Wax",
+        description:
+          "Lit scenes held to the realism test — natural flame behavior and true wax texture, never the sci-fi glow that breaks the spell.",
+      },
+      {
+        icon: "Clock",
+        title: "Seasonal Collections in Days",
+        description:
+          "Autumn spice, winter hearth, summer linen — collection worlds restyled per season without restaging a single shelf.",
+      },
+    ],
+    stats: [
+      { value: "1 world", label: "Brand identity driving every scene and prop" },
+      { value: "3-4", label: "Angles per scene in the atmosphere library" },
+      { value: "2K+", label: "Source resolution keeping vessel labels crisp" },
+    ],
+    cta: "Bottle the Atmosphere",
     relatedUseCases: ["skincare", "home-decor", "food-beverage"],
-    relatedShotTypes: ["lifestyle", "detail-close-ups"],
+    relatedShotTypes: ["lifestyle", "brand-atmosphere", "flat-lay"],
   },
 ];
+
+export function getUseCaseBySlug(slug: string): UseCase | undefined {
+  return useCases.find((useCase) => useCase.slug === slug);
+}

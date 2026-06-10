@@ -35,6 +35,7 @@ interface Industry {
   painPoints: { title: string; description: string }[];
   howDezygn: { title: string; description: string }[];
   results: { value: string; label: string }[];
+  secondaryCta?: { label: string; href: string };
   relatedIndustries: string[];
   relatedUseCases: string[];
 }
@@ -252,13 +253,24 @@ const IndustryPage = () => {
                 Join hundreds of professionals already using Dezygn to create
                 stunning product photography in minutes, not days.
               </p>
-              <a
-                href={SIGNUP_URL}
-                className="relative z-10 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-9 text-[15px] font-semibold text-[#EDEBE6] transition hover:bg-black"
-              >
-                Start Free
-                <ArrowRight className="h-4 w-4" />
-              </a>
+              <div className="relative z-10 flex flex-wrap items-center justify-center gap-4">
+                <a
+                  href={SIGNUP_URL}
+                  className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-9 text-[15px] font-semibold text-[#EDEBE6] transition hover:bg-black"
+                >
+                  Start Free
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                {industry.secondaryCta && (
+                  <Link
+                    to={industry.secondaryCta.href}
+                    className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-white/40 px-9 text-[15px] font-semibold text-white transition hover:bg-white/10"
+                  >
+                    {industry.secondaryCta.label}
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         </section>

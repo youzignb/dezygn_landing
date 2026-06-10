@@ -15,476 +15,598 @@ export interface ShotType {
 }
 
 export const shotTypes: ShotType[] = [
+  // ──────────────────────────────────────────────
+  // PACKSHOT (slug kept as "studio" for SEO)
+  // ──────────────────────────────────────────────
+  {
+    slug: "studio",
+    title: "Packshot Photography",
+    metaTitle: "AI Packshot & Studio Product Photography | Dezygn",
+    metaDescription:
+      "Engineer clean, accurate packshots with AI: white background, controlled studio lighting, legible labels, marketplace-ready. The Visual Syntax recipe inside.",
+    heroHeadline: "The Most Boring Shot in Your Catalog Is the One That Does the Selling",
+    image: "/images/seo/shot-types/studio.webp",
+    imageAlt: "Clean AI packshot on white background with soft studio lighting",
+    definition:
+      "The packshot is your product, isolated on a clean background, lit evenly, with nothing else in frame. It's the shot Amazon requires, every marketplace expects, and every product page is built on. It is also where AI photography most often falls apart — because the packshot is a pure accuracy test. There is no scene to hide behind. If the cap is the wrong material, if the label text is mangled, if the proportions are off, the customer sees it instantly. Accuracy is non-negotiable here: an embellished packshot doesn't just look bad, it generates 'item not as pictured' refunds.",
+    whenToUse: [
+      "Marketplace primary images — Amazon requires pure white background (RGB 255,255,255) with the product filling about 85% of the frame, and Walmart and Google Shopping have similar rules",
+      "Product detail pages, where the packshot is the reference image shoppers zoom into before buying",
+      "Catalogs and wholesale line sheets where buyers need to evaluate the product with zero environmental distraction",
+      "Any time you need perfect consistency across a full product line — same angle, same lighting, same shadow on every SKU",
+    ],
+    howDezygn:
+      "In the Visual Syntax framework, the packshot is the shot where Subject does almost all the work. Style is fixed: clean catalog, high-key bright, white or pale neutral background. Action is none. Scene is a lighting decision, not a location. The camera recipe is fixed too: 85mm, f/8 to f/11, straight-on or a slight 3/4 angle — the 'sharp catalog' look where every detail is visible and nothing is hidden.\n\nThat leaves the Subject — and this is where Dezygn does it differently. Instead of describing your product and hoping, you attach the actual product photo and Awa recreates it in the new setup without guessing. The AI doesn't know what your product looks like; if you're vague, it will guess, and its guess won't match reality. A real source image anchors the shape, the materials, the label, the exact colors.\n\nOne rule from real client work that nobody tells you: lighting must match material. Matte products want broad soft light. But if your product is reflective — glasses, jewelry, metal, glass — you must use soft studio lighting with fill from multiple directions. Single-direction lighting creates dark sides that hide details. We learned this the hard way on client eyewear work.",
+    tips: [
+      {
+        title: "Your source image decides your output quality",
+        description:
+          "Garbage in, garbage out. A dark, blurry product photo won't magically become sharp in the output. Use a source at least 2,000px on the long edge, background removed, multiple angles if you have them. If text on the label is blurry when you zoom into the source, it will be worse in the generated image — the AI cannot add information that isn't there.",
+      },
+      {
+        title: "Set output resolution to match or exceed the source",
+        description:
+          "A 2K source rendered at 1K output forces the pipeline to downscale, which blurs fine detail — brand text is always the first casualty. If your labels look consistently wrong, it's a resolution setting, not a prompt problem. Test compositions fast at 1K, then render final deliverables at 2K+.",
+      },
+      {
+        title: "Keep the contact shadow",
+        description:
+          "A product floating on pure white with zero shadow reads as a bad Photoshop cutout. A soft, natural contact shadow grounds the product and makes it feel photographed rather than generated. For glossy surfaces, a subtle reflection adds even more realism.",
+      },
+      {
+        title: "Shoot the whole line in one session",
+        description:
+          "Marketplaces want 5-7 images per product, and a catalog needs identical lighting across every SKU. Define the setup once — lighting, angle, shadow depth — and apply it to the entire line in one batch. Consistency is what makes a catalog look professional, and it's the thing traditional shoots struggle to maintain across days.",
+      },
+      {
+        title: "Reflective product? Soft studio with fill — always",
+        description:
+          "Chrome, glass, polished metal and acetate act like mirrors. Golden hour and single-source dramatic lighting create dark voids on reflective surfaces that hide the product's form. Use a three-point soft setup with fill so the light wraps around the product and every surface stays readable.",
+      },
+    ],
+    relatedShotTypes: ["detail-close-ups", "packaging", "scale-shots"],
+    relatedUseCases: ["supplements", "electronics", "skincare"],
+  },
+
+  // ──────────────────────────────────────────────
+  // LIFESTYLE
+  // ──────────────────────────────────────────────
   {
     slug: "lifestyle",
     title: "Lifestyle Photography",
-    metaTitle: "Lifestyle Photography with AI | Dezygn",
+    metaTitle: "AI Lifestyle Product Photography | Dezygn",
     metaDescription:
-      "Create stunning lifestyle product photos with AI. Place your products in real-world settings — kitchens, desks, outdoor scenes — without a single photoshoot.",
-    heroHeadline:
-      "Put Your Products Where They Belong — In Your Customer's Life",
+      "Engineer lifestyle product photos with AI: real-world scenes, natural light, on-brand environments. How pros build the scene before they place the product.",
+    heroHeadline: "Put the Product in the Customer's Life — Without Renting the Life",
     image: "/images/seo/shot-types/lifestyle.webp",
-    imageAlt: "Lifestyle product photography example showing everyday items styled in real-world home settings",
+    imageAlt: "AI lifestyle product photography showing a product styled in a natural home setting",
     definition:
-      "Lifestyle photography places your product in a real-world context — on a kitchen counter, in a gym bag, on a bedside table. It answers the question every shopper silently asks: 'What does this look like in my life?' Unlike studio shots, lifestyle images build an emotional bridge between the product and the buyer by showing it in use, in situ, in the wild.",
+      "A lifestyle shot places the product in a real-world context — a kitchen counter, a gym bag, a café table — and answers the question every shopper silently asks: 'what does this look like in my life?' It's the workhorse of ads and social because context creates desire in a way isolation can't. It's also the shot where amateurs one-shot everything ('woman in kitchen holding product, professional, beautiful') and get compromises on every element, because the AI has to solve for person, product, pose, environment and lighting simultaneously.",
     whenToUse: [
-      "When launching a new product on Shopify and you need scroll-stopping hero images that show the product in context, not just on a white background",
-      "When building out social media content for Instagram or Pinterest where aspirational, in-context imagery consistently outperforms isolated product shots",
-      "When your product's value proposition depends on environment — a candle on a windowsill hits different than a candle on white seamless",
-      "When you're running paid ads on Meta or TikTok and need thumb-stopping creative that looks native to the feed, not like a catalog",
+      "Paid ads on Meta and TikTok, where in-context creative that looks native to the feed consistently outperforms catalog shots — and where you need constant fresh variations to fight creative fatigue",
+      "Instagram and Pinterest content, where aspirational, in-context imagery is the format",
+      "Secondary PDP images that show scale, context and use after the packshot has done the accuracy work",
+      "Email and landing page heroes where the environment carries the brand story",
     ],
     howDezygn:
-      "Dezygn's AI understands that lifestyle photography is about storytelling, not just placement. When you describe a scene — 'premium protein powder on a granite kitchen counter, morning light, fresh fruit nearby' — Awa, our AI creative director, interprets the mood, lighting direction, depth of field, and environmental details to produce a cohesive image that looks like it came from a professional set.\n\nThe Visual Syntax framework lets you control every layer of the composition. You set the surface material, the background environment, the lighting mood, and the supporting props. Awa then balances these elements so your product remains the focal point while the environment tells the story. No more hiring location scouts or renting Airbnbs for a two-hour shoot.\n\nIf you've imported your brand guidelines — colors, fonts, mood references — Dezygn ensures the lifestyle scenes stay on-brand. Your earth-tone skincare line won't end up in a neon cyberpunk kitchen. The AI learns your visual language and applies it consistently across every scene you generate.",
+      "The professional move is to build the scene before you place the product. In Dezygn, scenes are generated as standalone ingredients — empty, no people, no products, 3-4 angles per location with matching light — and saved to your library. Then the product (anchored by its real photo) and the model are composited in. Complex images are built sequentially, not in one shot. Each step produces a validated asset, so errors get caught early instead of compounding.\n\nThe Visual Syntax recipe for lifestyle: Style is lifestyle/natural — authentic feel, candid moment. Scene is where the work happens, and it should come from your brand identity, not from a generic preset. If the brand world is 'Mediterranean coastal, olive groves, sun-bleached linen, terracotta and sage,' a neon Tokyo alley is jarring — and so is a generic 'modern kitchen.' Camera: 50mm at f/1.8-f/2.8. 50mm is how human eyes perceive space; it feels honest, approachable, real — which is exactly the emotional register lifestyle needs.\n\nLighting is 50% of the equation. Natural window light or golden hour, soft and directional, sells 'real moment.' Get the light wrong and no amount of styling saves the image.",
     tips: [
       {
-        title: "Lead with the environment, not the product",
+        title: "Default to mid-shots, not wide shots",
         description:
-          "The best lifestyle shots let the setting do the heavy lifting. Describe the room, the light, the mood first — then place the product. Awa generates more natural compositions when the environment context comes before the product placement in your prompt.",
+          "Wide shots are landscape photography; mid-shots are product photography with environment. Go wide and the product becomes a small element in a pretty scene. When a brief calls for dramatic environments, frame mid so the storytelling and the product both survive. This rule came out of real apparel client work, where wide 'epic' shots kept burying the jacket.",
       },
       {
-        title: "Match the platform aspect ratio",
+        title: "Build a scene library per client",
         description:
-          "Instagram feed posts perform best at 4:5 (1080x1350), Pinterest wants 2:3 (1000x1500), and Facebook ads thrive at 1:1. Generate your lifestyle shots in the right dimensions from the start — cropping after the fact always kills the composition.",
+          "Generate each location empty, in 3-4 angles with consistent lighting, and name them clearly. Scenes don't involve product or model accuracy, so they can be produced in advance — which means campaign day is composition day, not generation day.",
       },
       {
-        title: "Use the rule of thirds for product placement",
+        title: "Anchor scenes in brand research, not adjectives",
         description:
-          "Place your product at one of the four intersection points on a rule-of-thirds grid. Dead center looks like a catalog. Off-center looks like editorial. Specify placement in your prompt: 'product positioned in the lower-right third of the frame.'",
+          "The difference between $10/image and $100/image lifestyle work is research. For a Japanese eyewear client we traced the brand's craft origins to Sabae, Japan's eyewear capital, and used the surrounding region as the visual universe. You don't need to show the landmark — the research shapes every scene decision and the images stop looking like everyone else's.",
       },
       {
-        title: "Control the depth of field",
+        title: "Golden hour is for matte products and people",
         description:
-          "A shallow depth of field (f/1.8-f/2.8 equivalent) blurs the background and draws the eye to your product. A deeper depth of field (f/8-f/11) keeps the whole scene in focus. Use shallow for single-product hero shots, deep for scenes where the environment matters as much as the product.",
+          "Golden hour is single-direction light. It's beautiful on skin, fabric and ceramics — and it does not work for reflective products. Glass, metal and jewelry need soft multi-directional studio light so their surfaces stay readable. Match the lighting recipe to the material before you fall in love with a mood.",
       },
       {
-        title: "Add one human element",
+        title: "Add one trace of life",
         description:
-          "A hand reaching for the product, a coffee cup half-drunk beside it, a book left open — these small human touches make lifestyle shots feel lived-in rather than staged. You don't need a full model; just a trace of human presence.",
+          "A hand reaching in, a half-finished coffee, an open book — small human traces make a scene feel lived-in instead of staged. You don't need a full model in every lifestyle frame; you need evidence that a person was just there.",
       },
     ],
     relatedShotTypes: ["hero-shots", "model-shots", "ugc"],
-    relatedUseCases: ["home-decor", "candles", "skincare"],
+    relatedUseCases: ["candles", "skincare", "home-decor"],
   },
-  {
-    slug: "studio",
-    title: "Studio Photography",
-    metaTitle: "Studio Photography with AI | Dezygn",
-    metaDescription:
-      "Generate clean, professional studio product photos with AI. Perfect white backgrounds, controlled lighting, and e-commerce-ready images in minutes.",
-    heroHeadline: "Clean. Professional. Pixel-Perfect. No Studio Required.",
-    image: "/images/seo/shot-types/studio.webp",
-    imageAlt: "Studio product photography example with professional lighting on clean white background",
-    definition:
-      "Studio photography is the backbone of any product catalog — your product, isolated on a clean background with controlled, professional lighting. It's the shot Amazon requires, Shopify recommends, and every marketplace expects. No distractions, no context, just your product presented with clarity and precision so customers can see exactly what they're buying.",
-    whenToUse: [
-      "When listing products on Amazon, Walmart, or any marketplace that requires clean white-background images as the primary photo",
-      "When building out your Shopify product catalog and need consistent, professional imagery across hundreds of SKUs",
-      "When creating wholesale or B2B line sheets where buyers need to evaluate the product without environmental distractions",
-      "When you need perfectly consistent lighting and angles across an entire product line for a cohesive brand presentation",
-    ],
-    howDezygn:
-      "Dezygn treats studio photography as a lighting problem, not a background problem. Anyone can slap a product on white — the difference is in how the light wraps around the product, where the shadows fall, and how the reflections behave on different materials. Awa analyzes your product's surface properties — matte, glossy, transparent, metallic — and applies the right lighting setup automatically.\n\nThe Visual Syntax framework gives you granular control over the studio environment. Choose between hard light for dramatic shadows or soft diffused light for even coverage. Specify single-source, two-point, or three-point lighting setups. Control the shadow density and direction. You're essentially directing a virtual photography studio with natural language instead of moving C-stands.\n\nConsistency is where Dezygn really shines for studio work. When you're shooting 50 products for a catalog, every image needs to match — same lighting angle, same shadow depth, same background tone. Set up your studio parameters once, and Dezygn applies them identically across every product. No color drift between morning and afternoon shoots. No inconsistent shadows because someone bumped a light.",
-    tips: [
-      {
-        title: "Amazon's image requirements are non-negotiable",
-        description:
-          "Amazon requires a pure white background (RGB 255, 255, 255), product filling 85% of the frame, no text or watermarks, and minimum 1000px on the longest side for zoom. Generate your studio shots with these specs from the start — post-processing a gray background to pure white always looks off.",
-      },
-      {
-        title: "Match lighting to material",
-        description:
-          "Matte products (fabric, wood) look best with broad, soft light. Glossy products (glass, metal) need carefully positioned light sources to control reflections. Transparent products (bottles, acrylic) need backlight or light from below to show their form. Specify the material in your prompt and let Awa adjust.",
-      },
-      {
-        title: "Shoot all angles in one session",
-        description:
-          "Generate front, back, side, 3/4, and top-down views in a single batch to ensure lighting consistency. Most e-commerce platforms recommend 5-7 images per product. Knock them all out in one generation session rather than coming back to it later.",
-      },
-      {
-        title: "Don't forget the shadow",
-        description:
-          "A product floating on pure white with zero shadow looks like a bad Photoshop job. A soft contact shadow grounds the product and makes it feel real. Dezygn adds natural shadow by default, but you can dial it up or down. A subtle reflection on a glossy surface adds even more realism.",
-      },
-    ],
-    relatedShotTypes: ["hero-shots", "detail-close-ups", "scale-shots"],
-    relatedUseCases: ["supplements", "electronics", "jewelry"],
-  },
+
+  // ──────────────────────────────────────────────
+  // HERO SHOT
+  // ──────────────────────────────────────────────
   {
     slug: "hero-shots",
     title: "Hero Shot Photography",
-    metaTitle: "Hero Shot Photography with AI | Dezygn",
+    metaTitle: "AI Hero Shot Product Photography | Dezygn",
     metaDescription:
-      "Create dramatic, high-impact hero product images with AI. Bold lighting, cinematic angles, and scroll-stopping compositions that sell your product.",
-    heroHeadline: "The Shot That Sells Your Product Before They Read a Word",
+      "Engineer hero shots with AI: 85mm, creamy bokeh, editorial lighting. The camera recipe luxury brands actually use, and how to apply it to your product.",
+    heroHeadline: "The Shot That Sells the Product Before Anyone Reads a Word",
     image: "/images/seo/shot-types/hero-shots.webp",
-    imageAlt: "Hero shot product photography with dramatic lighting and bold composition for e-commerce",
+    imageAlt: "Dramatic AI hero shot with editorial lighting and shallow depth of field",
     definition:
-      "A hero shot is the single image that carries your product page, your ad campaign, your homepage banner. It's the dramatic, high-impact photograph designed to make someone stop scrolling and start wanting. Hero shots use cinematic lighting, bold angles, and intentional composition to present your product at its absolute best — not just what it looks like, but what it feels like to own.",
+      "The hero shot is the statement image — the one at the top of the product page, the campaign visual, the image that has to carry the brand's ambition on its own. Where the packshot's job is accuracy, the hero shot's job is desire. It says 'this subject is special' through lighting, isolation and depth, not through claims. Most products get exactly one hero shot per campaign, which means this is the image where craft is most visible — and where slot-machine prompting is most obvious.",
     whenToUse: [
-      "When designing your homepage or landing page and need a single product image that communicates your entire brand promise above the fold",
-      "When launching a paid ad campaign where you have exactly one frame to convince someone to click — this is that frame",
-      "When preparing for a product launch and need the signature image for press kits, social announcements, and email headers",
-      "When your product page needs a primary image that does more than inform — it needs to persuade",
+      "The first image on your own product page (marketplaces still want the white-background packshot first)",
+      "Campaign launches, homepage banners and landing page heroes where one image sets the tone",
+      "Top-of-funnel ads where you need a scroll-stopper that still looks premium, not clickbait",
+      "Email headers and lookbook covers for product drops",
     ],
     howDezygn:
-      "Hero shots are where Dezygn's prompt engineering really pays off. Awa understands cinematic language — you can describe a shot the way a photographer or director would. 'Low angle, dramatic rim lighting, dark moody background with a single warm accent light' isn't just a description; it's a lighting blueprint that Awa translates into a photorealistic composition.\n\nThe Visual Syntax framework is designed for exactly this kind of creative control. Layer your prompt with foreground elements, mid-ground product placement, and background atmosphere. Specify the camera angle (low angle for power, eye-level for approachability, overhead for design). Control the color temperature, the contrast ratio, the bokeh intensity. You're not picking from templates — you're directing a shoot.\n\nDezygn generates hero shots at up to 4K resolution, which means your images hold up on billboard-scale web banners and retina displays alike. The AI preserves fine detail — label text stays sharp, textures remain intact, edges stay clean even at dramatic angles. This is the shot that goes on your homepage, so it needs to be flawless at every size.",
+      "The hero shot has a known camera recipe, and Dezygn applies it instead of guessing. 85mm is the money-maker lens: it isolates the subject, compresses the background, and makes everything look slightly more expensive — it's what luxury brands actually use. Pair it with f/1.8-f/2.8 for the beautiful blur: creamy bokeh, isolated subject, everything feels elevated. Frame at a slight 3/4 angle — the most flattering, most professional default. For ultra-premium drama, step up to 135mm: extreme compression, magazine feel. Use it sparingly; it's a power move.\n\nStyle is editorial or moody: dramatic directional lighting, rich shadows, premium aesthetic. Scene stays minimal — a styled surface, a hint of environment, nothing competing with the subject. Think of AI attention like a budget: the hero shot spends almost all of it on the subject and the light.\n\nBrand is the quiet ingredient that makes a hero shot feel like yours: exact hex colors in the palette, the right color temperature, one or two identity textures. 'Navy blue' means different things to different AIs. Your hex code means exactly one thing.",
     tips: [
       {
-        title: "Use a low camera angle for premium products",
+        title: "When in doubt for premium work, go 85mm",
         description:
-          "Shooting from slightly below eye level — around 15-30 degrees — makes products feel monumental and aspirational. This is why luxury brands almost always photograph from below. Specify 'low angle, camera tilted up slightly' in your prompt for this effect.",
+          "Out of dozens of focal lengths, three matter: 50mm feels honest, 85mm feels premium, 135mm feels cinematic. The hero shot almost always wants 85mm with shallow depth. If the image feels flat or 'catalog,' the lens choice is usually the culprit, not the styling.",
       },
       {
-        title: "One light source creates more drama than three",
+        title: "Moody lighting needs a matte product",
         description:
-          "Hero shots thrive on contrast. A single key light with deep shadows is more compelling than flat, evenly-lit product photography. Think Apple product launches — that single spotlight on a dark stage. Less light, more impact.",
+          "The single strong key light that makes moody hero shots cinematic also creates dark voids on reflective surfaces. If the product is glass, metal or polished acetate, keep the drama in the background and light the product itself with soft fill.",
       },
       {
-        title: "Generate at maximum resolution",
+        title: "Front-load what matters in the prompt",
         description:
-          "Your hero image will be displayed at full-width on desktops (1920px+), used in print materials, and cropped for social. Generate at the highest resolution Dezygn offers and export multiple crops. Starting big gives you flexibility; starting small locks you in.",
+          "The AI pays more attention to the beginning of your prompt than the end. If the brand's burgundy keeps coming out generic red, move the brand block to the top and repeat the critical detail. The default ingredient order works for most shots — you break it when something isn't coming through.",
       },
       {
-        title: "Color contrast between product and background",
+        title: "One hero, many crops",
         description:
-          "Your product needs to pop against its background. Light product on dark background (classic Apple aesthetic) or dark product on a bright, colored surface. Avoid backgrounds that are the same value or hue as your product — it'll blend in instead of standing out.",
-      },
-      {
-        title: "Leave space for text overlay",
-        description:
-          "If this hero image is going on a landing page or ad, you'll need room for a headline. Compose with negative space on one side — left third or right third — so your design team can drop in copy without covering the product.",
+          "Compose with negative space so the same hero survives a 1:1 feed crop, a 9:16 story crop and a wide web banner. Generating the hero at the final aspect ratio always beats cropping after the fact — composition never survives the scissors.",
       },
     ],
-    relatedShotTypes: ["studio", "lifestyle", "detail-close-ups"],
-    relatedUseCases: ["electronics", "fitness", "fashion-accessories"],
+    relatedShotTypes: ["studio", "lifestyle", "brand-atmosphere"],
+    relatedUseCases: ["jewelry", "eyewear", "beauty"],
   },
+
+  // ──────────────────────────────────────────────
+  // FLAT LAY
+  // ──────────────────────────────────────────────
   {
     slug: "flat-lay",
     title: "Flat Lay Photography",
-    metaTitle: "Flat Lay Photography with AI | Dezygn",
+    metaTitle: "AI Flat Lay Product Photography | Dezygn",
     metaDescription:
-      "Generate beautiful flat lay product arrangements with AI. Birds-eye compositions, curated layouts, and Instagram-ready images without the styling hassle.",
-    heroHeadline:
-      "Every Product Tells a Story — Flat Lays Tell the Whole Collection",
+      "Engineer styled flat lays with AI: overhead framing, deliberate prop systems, brand-consistent surfaces. The recipe for kits, bundles, and social grids.",
+    heroHeadline: "Styled Chaos Is Still Engineering",
     image: "/images/seo/shot-types/flat-lay.webp",
-    imageAlt: "Flat lay product photography example with curated top-down arrangement on styled surface",
+    imageAlt: "Overhead AI flat lay with products and props arranged on a styled surface",
     definition:
-      "Flat lay photography is a top-down, birds-eye composition where products and props are arranged on a flat surface and photographed from directly above. It's the signature style of Instagram, Pinterest, and editorial brand content. A good flat lay doesn't just show products — it curates a world around them, telling a story through deliberate arrangement, color coordination, and negative space.",
+      "A flat lay is shot from directly overhead: products and props arranged on a surface, composed like a small still life. It reads as effortless, which is exactly why it's hard — every object in frame is a deliberate choice, and one off-brand prop breaks the spell. Flat lays shine when the story is 'what's in the set': bundles, routines, kits, ingredients, everything-you-get shots.",
     whenToUse: [
-      "When showcasing a product collection, bundle, or kit where customers need to see everything that's included in a single, organized frame",
-      "When creating Instagram or Pinterest content where flat lays consistently earn higher engagement than other composition styles",
-      "When you need to show complementary products together — the skincare routine, the desk setup, the travel essentials — to drive cross-sells",
-      "When building seasonal or themed marketing campaigns (back-to-school, holiday gift guides, summer essentials) that need a curated editorial feel",
+      "Bundles and kits, where one image has to show every item a customer receives",
+      "Social grids — flat lays are a native Instagram and Pinterest format and sit well next to lifestyle shots",
+      "Routine and ritual storytelling: the skincare shelf, the morning setup, the travel kit",
+      "Collection launches where products need to appear together with consistent styling",
     ],
     howDezygn:
-      "Flat lay photography is one of the hardest styles to execute well because every millimeter of spacing matters, and the camera angle must be perfectly perpendicular to the surface. With Dezygn, you skip the hours of physical arranging and re-arranging. Describe the products, the surface, the props, and the overall mood — Awa handles the spatial composition.\n\nThe Visual Syntax framework breaks flat lays into layers: surface material (marble, wood, linen, concrete), primary products, secondary props, and accent elements. You control the density of the arrangement (minimal with lots of white space vs. abundant and overflowing) and the organizational style (grid, organic scatter, diagonal flow). Awa understands composition principles like visual weight and color balance, so the arrangement feels intentional, not random.\n\nColor coordination is where AI-generated flat lays surpass most manual attempts. Describe your color palette — 'warm neutrals with a pop of terracotta' — and every element in the frame will be harmonized. The linen backdrop, the dried flowers, the ceramic dish, the product packaging — all pulled from the same tonal family. This kind of color cohesion takes a professional stylist hours to achieve with physical props.",
+      "The flat lay recipe fixes Camera and frees Scene. Camera: overhead, f/8-style sharpness — every item in focus, because a flat lay with a blurry corner just looks like a mistake. Style: compositional, artistic, soft natural light.\n\nThe real engineering is in the prop system, and this is where brand identity earns its keep. Every brand vibe has a coherent material world: luxury wants marble, brass, silk and fresh peonies; natural-organic wants raw wood, linen, botanicals and stone; bold-playful wants saturated paper backdrops and graphic shapes. In Dezygn you define that world once — surface, palette, prop families, light — and Awa styles every flat lay inside it. The props change per shot; the world doesn't. That's how ten flat lays across a season still read as one brand.\n\nProducts go in as real source images, not descriptions, so labels and proportions survive. Props can be generated; the product can't be guessed.",
     tips: [
       {
-        title: "Choose your surface texture deliberately",
+        title: "Pick a hero, even overhead",
         description:
-          "The surface is your largest visual element and sets the entire mood. Marble reads luxury. Raw wood reads artisan. White linen reads clean and feminine. Concrete reads modern and masculine. Match the surface to your brand positioning — it's doing more work than you think.",
+          "A flat lay without a focal point is clutter. Give the primary product the visual weight — center-adjacent placement, the most contrast, the cleanest negative space around it — and let props orbit it. The eye should land on the thing for sale within a second.",
       },
       {
-        title: "Use the grid vs. organic spectrum",
+        title: "Props must pass the brand filter",
         description:
-          "Grid-aligned flat lays (items in neat rows, parallel edges) feel organized and professional — great for tech, stationery, and supplements. Organic arrangements (items at slight angles, overlapping, casual) feel warm and editorial — better for beauty, food, and lifestyle brands.",
+          "Before any prop goes in frame, it answers to the brand identity: would this object exist in the brand's world? Eucalyptus and travertine belong to a wellness brand; a neon stapler doesn't. The fastest way to make a flat lay look cheap is one prop from the wrong universe.",
       },
       {
-        title: "Odd numbers create better compositions",
+        title: "Odd numbers, deliberate gaps",
         description:
-          "Three items, five items, seven items — odd groupings are more visually interesting than even numbers. It's a fundamental design principle. If you're arranging four products, add a fifth element (a prop, a plant sprig, a texture swatch) to break the symmetry.",
+          "Three or five supporting objects compose better than four or six, and negative space is a styling element, not wasted room. If the layout feels crowded, remove a prop before you shrink anything.",
       },
       {
-        title: "Control your negative space ratio",
+        title: "Keep the surface consistent across a series",
         description:
-          "For a premium, minimalist feel, leave 40-50% of the frame as empty surface. For an abundant, lifestyle feel, fill 70-80% of the frame. The ratio between product and space completely changes the perceived value and vibe of the shot.",
-      },
-      {
-        title: "Add a hand or partial hand for scale and warmth",
-        description:
-          "A hand entering the frame — reaching for a product, holding a cup, adjusting an item — adds a human element that makes flat lays feel less sterile. Keep it to a single hand at the edge of the frame, not centered. It's a supporting actor, not the star.",
+          "If the campaign's flat lays jump from marble to walnut to concrete, the set falls apart on a grid. Lock the surface and light as part of the brand definition and vary the arrangement instead.",
       },
     ],
-    relatedShotTypes: ["lifestyle", "detail-close-ups", "packaging"],
-    relatedUseCases: ["skincare", "jewelry", "candles"],
+    relatedShotTypes: ["studio", "packaging", "detail-close-ups"],
+    relatedUseCases: ["skincare", "food-beverage", "fashion-accessories"],
   },
+
+  // ──────────────────────────────────────────────
+  // MODEL SHOTS
+  // ──────────────────────────────────────────────
   {
     slug: "model-shots",
-    title: "Model Photography",
-    metaTitle: "Model Photography with AI | Dezygn",
+    title: "Model Shot Photography",
+    metaTitle: "AI Model Shots & Dedicated AI Models | Dezygn",
     metaDescription:
-      "Generate product photos with AI models — worn, held, or styled on diverse virtual models. No casting calls, no bookings, no day rates.",
-    heroHeadline: "Every Product Looks Better on Someone. Now You Don't Need to Book Them.",
+      "Engineer on-brand AI model shots: dedicated models, comp cards, clean portraits, and the compositing rule that saves hours. From real client eyewear work.",
+    heroHeadline: "Your Brand Deserves a Dedicated Model — Not a Different Face Every Image",
     image: "/images/seo/shot-types/model-shots.webp",
-    imageAlt: "Model shot product photography showing wearable products styled on a person",
+    imageAlt: "AI model shot showing a consistent dedicated model wearing a product",
     definition:
-      "Model photography shows your product being worn, held, or used by a person. It's how fashion, beauty, accessories, and lifestyle brands help customers visualize themselves with the product. In e-commerce, model shots reduce return rates by showing fit, scale, and use — and they drive higher conversion than product-only images because they trigger the brain's mirror neurons: 'That could be me.'",
+      "Model shots put the product on a person — worn, held, used. For entire categories they aren't optional: eyewear, jewelry and apparel barely sell without a face or a body in frame, because fit is the purchase question. The professional standard is the dedicated model: one consistent, brand-matched face that appears across the whole campaign, so your store doesn't look like it hired a different person for every photo. The amateur standard is whatever face the slot machine spits out today.",
     whenToUse: [
-      "When selling apparel, accessories, or wearable products where fit, drape, and scale on a human body directly impacts the buying decision",
-      "When your product needs to show a use case — headphones being worn, a bag slung over a shoulder, sunscreen applied to skin — to communicate its function",
-      "When you want to represent diverse body types, skin tones, and ages in your marketing without the cost of booking multiple models for every shoot",
-      "When running social ads where images with people consistently outperform product-only images in click-through rate and engagement",
+      "Eyewear, jewelry and apparel PDPs, where customers need to see fit and scale on a person before buying",
+      "Ad creative — faces stop thumbs, and model variations are the fastest way to refresh fatigued campaigns",
+      "Brand campaigns where the same recognizable model carries a season of content",
+      "Size and fit storytelling: the same garment on different body types, the same frame on different face shapes",
     ],
     howDezygn:
-      "Traditional model photography is expensive: casting, booking, day rates, wardrobe, makeup, location, photographer. For a small e-commerce brand, a single model shoot can cost $2,000-$10,000. Dezygn eliminates all of that by generating photorealistic AI models that interact naturally with your product.\n\nAwa, our AI creative director, handles the hardest part of model photography — making the interaction between model and product look natural. Hands grip products with the right pressure. Fabric drapes correctly on different body types. Facial expressions match the brand mood. You describe the model (age range, body type, skin tone, style) and the pose, and Awa generates a composition where the product-model interaction looks authentic, not pasted-on.\n\nDezygn lets you generate the same product on multiple models in minutes. Show your sunglasses on six different face shapes. Put your jacket on three different body types. Display your jewelry across diverse skin tones. This kind of inclusive representation used to require a full day of shooting with multiple models — now it's a batch generation that costs a handful of credits.",
+      "Dezygn's model workflow comes straight from agency delivery work. First, the model brief is generated from the brand identity — not 'attractive woman,' but the client's actual customer: 'age 35-60, elegant, understated, confident with calm presence, never demonstrative; matte collarless dark sweaters, neutral expressions.' The subject IS the customer avatar. Choose deliberately.\n\nThen comp cards: a grid of poses and angles per candidate model, used to pick the face. And here's the rule that separates pros from people who lose afternoons: the comp card is for selection only — never use it as a compositing source. On a real eyewear project, a comp card showed sunglasses pushed above the model's eyebrows. Every attempt to composite prescription glasses onto that model put them above the eyebrows too, because the source image wins over the prompt. Always. Three hours lost. The fix took one generation: a clean portrait — white background, plain tee, zero accessories — paired with the clean product image. Glasses sat correctly on the first try.\n\nSo the pipeline is: brief → comp cards → clean portraits → composite with the real product photo. Mise en place, but for photography.",
     tips: [
       {
-        title: "Describe the model's energy, not just their appearance",
+        title: "Generate the clean portrait before you need it",
         description:
-          "Instead of just specifying demographics, describe the vibe: 'confident, relaxed posture, slight smile, looking off-camera' gives Awa more to work with than '25-year-old woman.' The model's energy should match your brand personality — playful, authoritative, serene, bold.",
+          "For every selected model, produce portrait variants on white with neutral clothing and no accessories, in 2-3 angles. These are your prepped ingredients — every future composite starts from them, and they're the reason your composites work on the first try instead of the fifteenth.",
       },
       {
-        title: "Keep the product as the hero, not the model",
+        title: "Stack features to escape the generic AI face",
         description:
-          "In e-commerce model photography, the product is the star and the model is the supporting cast. Frame the shot so the product occupies the visual center of gravity. Crop tight enough that the product is prominent but loose enough to show it in context on the body.",
+          "Vague model prompts produce the same averaged face everyone else gets. Specify structure: face shape, chin, cheekbones, eyes, lips. 'Oblong face, pointed chin, high cheekbones, hooded eyes' renders a person; 'beautiful model' renders a stock photo.",
       },
       {
-        title: "Match lighting on model and product",
+        title: "Control emotion with volume adjectives",
         description:
-          "The fastest way to spot a bad composite is when the light direction on the model doesn't match the light direction on the product. In Dezygn, specify a single, consistent light source direction for the entire scene. 'Key light from upper left' applies to everything in the frame.",
+          "Raw emotions render theatrical. 'Happy' gives you a toothpaste ad; 'quiet joy' or 'subtle smile' gives you editorial. Same with 'restrained anxious look' over 'anxious.' Direct the dial, not the label.",
       },
       {
-        title: "Use model shots and studio shots as a pair",
+        title: "Know the rendering quirks",
         description:
-          "The most effective product pages use both: a clean studio shot for the primary image (what the product looks like) paired with model shots in the gallery (what the product looks like on you). Generate both in the same session so the product rendering stays consistent.",
+          "Models aged 18-24 need the keyword 'youthful' or they render late-twenties. Adult male models default to stubble — specify 'clean-shaven' if that's not the brand. These aren't style choices, they're known model behaviors you work around.",
+      },
+      {
+        title: "Match the model's energy to the shot type",
+        description:
+          "The same product supports opposite directions. For one Parisian eyewear client, the paparazzi set needed 'busy, arrogant, never poses' energy, and the fashion set needed 'dressed for the kill.' For a Japanese titanium brand, the direction was the reverse: calm, still, composed — the eye goes to the frames, not the model. Action is an ingredient; direct it.",
       },
     ],
-    relatedShotTypes: ["lifestyle", "ugc", "hero-shots"],
-    relatedUseCases: ["fashion-accessories", "fitness", "beauty"],
+    relatedShotTypes: ["ugc", "paparazzi", "lifestyle"],
+    relatedUseCases: ["eyewear", "fashion-accessories", "jewelry"],
   },
+
+  // ──────────────────────────────────────────────
+  // UGC
+  // ──────────────────────────────────────────────
   {
     slug: "ugc",
     title: "UGC-Style Photography",
-    metaTitle: "UGC-Style Photography with AI | Dezygn",
+    metaTitle: "AI UGC-Style Product Photos for Ads | Dezygn",
     metaDescription:
-      "Create authentic, user-generated content style product photos with AI. Casual compositions, natural lighting, phone-camera aesthetic. Scroll-stopping UGC at scale.",
-    heroHeadline:
-      "The 'Real Person' Look. Generated in Seconds. No Influencers Required.",
+      "Engineer UGC-style product photos with AI: iPhone aesthetic, candid framing, authentic imperfection. The ad format that beats polish — done deliberately.",
+    heroHeadline: "Engineered to Look Unengineered",
     image: "/images/seo/shot-types/ugc.webp",
-    imageAlt: "UGC-style product photography with authentic casual look for social media marketing",
+    imageAlt: "Authentic UGC-style AI photo of a person holding a product in casual lighting",
     definition:
-      "UGC-style photography mimics the casual, authentic aesthetic of photos taken by real customers — slightly imperfect composition, natural ambient lighting, a phone-camera look and feel. It's the antithesis of polished studio photography, and that's exactly why it converts. On platforms like TikTok, Instagram Stories, and Meta ads, UGC-style imagery outperforms professional photography because it feels trustworthy, relatable, and native to the feed.",
+      "UGC-style shots imitate what a happy customer would post: iPhone aesthetic, imperfect lighting, candid framing, real-life clutter. In feeds and ad placements they routinely outperform polished studio work because they don't pattern-match to 'advertisement' — they pattern-match to 'person like me.' The paradox is that good UGC is deliberately engineered: the imperfection is specified, not accidental. Random sloppiness reads as low quality; designed authenticity reads as trust.",
     whenToUse: [
-      "When running paid social ads on Meta or TikTok where native-looking content outperforms polished creative by 2-4x in click-through rate",
-      "When you need social proof imagery for your product pages but don't have enough real customer photos to work with yet",
-      "When building TikTok Shop or Instagram Shopping content where overly-produced imagery actually hurts performance because it looks like an ad",
-      "When launching a new product and need day-one social content that looks like real customers already love it",
+      "Meta and TikTok ad creative, where native-looking content beats studio polish and you need volume — fresh variations beat optimized single winners under Meta's current ranking",
+      "Review sections, email and organic social, where studio shots would feel out of place",
+      "Testing new angles cheaply: UGC variations are fast to produce and fast to read in the data",
+      "Brands whose buying trigger is relatability rather than aspiration",
     ],
     howDezygn:
-      "UGC-style is surprisingly difficult to create intentionally because it requires imperfection — and most AI tools default to perfection. Dezygn specifically trains Awa to understand the UGC aesthetic: slightly warm white balance, a touch of grain, casual composition that's slightly off-center, natural window light instead of studio strobes.\n\nThe Visual Syntax framework includes UGC-specific parameters. Set the 'camera type' to smartphone, and the output mimics the depth of field, lens distortion, and dynamic range of a phone camera. Add descriptors like 'bathroom mirror selfie with product,' 'kitchen table overhead shot,' or 'car dashboard POV' — these are the real contexts where UGC lives, and Awa knows how to recreate them convincingly.\n\nThe real power here is scale. A single influencer might deliver 3-5 UGC images for $500-$2,000. With Dezygn, you can generate 50 UGC-style variations in an afternoon — different settings, different hands, different lighting conditions — and A/B test them in your ad campaigns to find the winners. At $99/month with 2,500 credits, the cost per image is cents, not dollars.",
+      "The UGC recipe inverts the usual rules on purpose. Style: 'authentic UGC photography, shot on iPhone, candid feel' — that phrase does heavy lifting. Scene: a real home environment with natural, slightly imperfect light; a bathroom counter beats a marble pedestal. Camera: 50mm-equivalent, deeper aperture around f/4, casual framing — selfie distance, slightly off-center, the kind of crop a person makes with one hand.\n\nAction is the ingredient that makes UGC breathe: mid-application, mid-sip, caught-in-the-moment, gaze off-camera or into a mirror rather than locked on the lens. Candid interaction reads authentic; posed presentation reads like an ad wearing a costume.\n\nThe one thing that never goes casual is the Subject. The product photo is still the real product, transferred accurately — label legible, proportions true. Authenticity in the styling, accuracy in the product. People can smell AI from a mile away now, and when they smell it, they close their wallet — the UGC frame only works if the product in it is unmistakably real.",
     tips: [
       {
-        title: "Imperfection is the whole point",
+        title: "Specify the imperfection",
         description:
-          "Don't over-prompt UGC shots. Resist the urge to specify perfect lighting or precise composition. The magic of UGC is that it looks unplanned. 'Product on a messy desk, afternoon light from a window, phone camera perspective' works better than a highly detailed composition brief.",
+          "Don't hope for authentic — direct it: 'natural imperfect lighting,' 'candid bathroom selfie,' 'slightly off-center framing.' If you leave authenticity to chance, you get either studio gloss or unusable mess. The imperfections are ingredients.",
       },
       {
-        title: "Include environmental context clues",
+        title: "Make volume your strategy",
         description:
-          "Real UGC happens in real spaces: a gym locker room, a bathroom counter with other products visible, a kitchen with dishes in the background. These contextual details signal authenticity. A product floating in a perfectly clean space doesn't read as UGC no matter how casual the lighting is.",
+          "UGC is the format where creative fatigue bites fastest and where testing pays best. Produce batches — different models, rooms, times of day, hooks — and let the ad account tell you which 'person' your customers believe. One UGC winner repeated for a month dies; ten variants rotating don't.",
       },
       {
-        title: "Shoot for vertical (9:16) first",
+        title: "Keep the gaze off the camera (usually)",
         description:
-          "UGC lives on Stories, Reels, and TikTok — all vertical formats. Generate your UGC-style shots at 9:16 (1080x1920) as the primary format. You can always crop to square for feed posts, but you can't convincingly extend a square image to vertical.",
+          "Looking at the product or into a mirror reads candid. Direct eye contact reads like a presenter. Save to-camera gaze for testimonial-style frames where the 'creator' is talking to you.",
       },
       {
-        title: "Vary the scenarios for ad testing",
+        title: "Casual scene, accurate product",
         description:
-          "Generate the same product in 10 different UGC scenarios: hand-held in a car, on a nightstand, in a gym bag, on a bathroom shelf. Run each as a separate ad creative. You'll be surprised which scenario resonates — it's rarely the one you'd guess. This kind of creative volume is only possible with AI generation.",
-      },
-      {
-        title: "Add subtle motion cues",
-        description:
-          "Real phone photos often have slight motion artifacts — a hand that's not perfectly still, a slight directional blur. While you can't add actual motion to a still image, you can prompt for compositions that imply movement: 'hand reaching for the product,' 'product being pulled out of a bag,' 'mid-application on skin.' These action-oriented compositions feel more candid than static poses.",
+          "The cluttered counter can be generated; the product cannot. Always anchor the product with its real photo so the label, colors and shape survive the casual treatment. A relatable photo of the wrong product is a refund with good engagement.",
       },
     ],
-    relatedShotTypes: ["lifestyle", "model-shots", "before-after"],
-    relatedUseCases: ["skincare", "supplements", "food-beverage"],
+    relatedShotTypes: ["model-shots", "lifestyle", "paparazzi"],
+    relatedUseCases: ["skincare", "supplements", "beauty"],
   },
+
+  // ──────────────────────────────────────────────
+  // BEFORE / AFTER
+  // ──────────────────────────────────────────────
   {
     slug: "before-after",
     title: "Before & After Photography",
-    metaTitle: "Before & After Photography with AI | Dezygn",
+    metaTitle: "AI Before & After Product Imagery | Dezygn",
     metaDescription:
-      "Create compelling before and after product images with AI. Show transformations, results, and impact — perfect for skincare, cleaning, fitness, and home products.",
-    heroHeadline:
-      "Show the Transformation. Let the Results Do the Selling.",
+      "Engineer honest before/after and comparison visuals with AI: matched framing, matched lighting, accurate products. Persuasion without the refund risk.",
+    heroHeadline: "Comparison Sells — If Both Frames Are Honest",
     image: "/images/seo/shot-types/before-after.webp",
-    imageAlt: "Before and after product photography comparison showing transformation results",
+    imageAlt: "Side-by-side before and after comparison frames with matched lighting",
     definition:
-      "Before-and-after photography is the most persuasive format in e-commerce — it visually demonstrates the value of your product by showing a clear transformation. Whether it's a skincare product clearing skin, a cleaning product restoring a surface, or a supplement changing body composition, these side-by-side (or stacked) images let results speak louder than any copywriter ever could. Done right, they're the closest thing to a product demo in a static image.",
+      "Before/after and comparison shots show contrast: the problem state and the solved state, the messy desk and the organized one, the dull surface and the polished one. They're among the highest-converting formats in e-commerce because they sell the outcome, not the object. They're also where trust goes to die when done dishonestly. The rule from running real client work: the AI image must respect physical reality. 'Close enough' isn't a style choice — close enough is a refund, and refunds kill businesses. Use this format to dramatize a real difference, never to manufacture one.",
     whenToUse: [
-      "When your product delivers a visible, tangible result — clearer skin, whiter teeth, restored surfaces, organized spaces — and you need to show that transformation visually",
-      "When building product pages for results-driven categories like skincare, supplements, cleaning products, or home improvement where 'does it actually work?' is the primary purchase objection",
-      "When creating testimonial-style content for social ads that pairs a transformation image with a customer quote or review text overlay",
-      "When competing in a crowded market and need to differentiate by showing proof of efficacy rather than just listing ingredients or features",
+      "Cleaning, organization, restoration and tool products, where the transformation is the entire pitch",
+      "Ad creative — the split-frame format is a proven scroll-stopper on Meta",
+      "Landing pages demonstrating use: with/without, day/night, packed/unpacked, assembled/unassembled",
+      "Comparison content that contrasts contexts (product in drawer chaos vs. in its organizer) rather than claiming physical results",
     ],
     howDezygn:
-      "Before-and-after shots require careful consistency between the two frames — same angle, same lighting, same framing — with only the 'transformation' changing. This is where most brands fail: the before and after look like they were taken in completely different conditions, which undermines credibility. Dezygn locks the camera position, lighting setup, and background across both frames so the only variable is the result.\n\nAwa understands the visual language of transformation across categories. For skincare, it's about skin texture and tone changes under consistent lighting. For cleaning products, it's surface restoration with the same camera angle. For fitness supplements, it's body composition shifts with matched poses. You describe the before state and the after state, and Awa generates a matched pair that looks like a genuine documentation of results.\n\nThe Visual Syntax framework includes a 'consistency lock' parameter for before-and-after work. Set your environment once — lighting direction, background, camera distance, color temperature — and it persists across both generations. You can also generate the transition in a single frame (split-screen or gradient reveal) for social media formats where a single image performs better than a carousel.",
+      "The craft of a before/after is sameness. The two frames must match in everything except the change: same scene, same camera position, same focal length, same light. Any drift between frames reads as manipulation — because it is. In Dezygn you build the scene once as a standalone asset, lock the camera recipe, and generate both states inside that fixed container. Sequential construction is what makes the discipline possible; one-shotting two matching frames is a coin flip.\n\nVisual Syntax-wise: Scene and Camera are frozen across both frames. Subject changes state. Style stays documentary-clean — bright, even, f/8 sharpness — because stylized drama undermines the 'this is evidence' read that makes the format convert.\n\nWhere the line is: staging contexts is legitimate (the cluttered counter, the tidy shelf). Fabricating product performance is not — especially body-results claims in skincare and supplements, which platform policies restrict and which violate the accuracy principle this whole system is built on. Show the product's real difference dramatically; don't invent a difference.",
     tips: [
       {
-        title: "Consistency is credibility",
+        title: "Lock everything except the change",
         description:
-          "The number one rule of before-and-after photography: every variable except the result must stay identical. Same lighting, same angle, same distance, same background. The moment anything else changes between frames, viewers assume the 'improvement' is just better photography, not a better product.",
+          "Generate the scene as a reusable asset and produce both frames from it with identical camera language. If the camera moves or the light shifts between frames, viewers sense the trick even when they can't name it.",
       },
       {
-        title: "Use the split-screen format for social",
+        title: "Let the 'before' be genuinely ugly",
         description:
-          "On Instagram and Facebook, a single split-screen image (left/right or top/bottom with a clear dividing line) performs better than a two-image carousel for before-and-after content. People process the comparison instantly without swiping. Generate these as single frames at 1:1 for feed or 9:16 for Stories.",
+          "The instinct to art-direct the before frame kills the format. The before should be believably bad — dim, cluttered, unflattering — and the after should win on the merits of the same honest camera.",
       },
       {
-        title: "Subtle results are more believable",
+        title: "Use it for context, not claims",
         description:
-          "An overly dramatic transformation looks fake and can trigger ad platform policy issues. Slightly understated results — a noticeable but realistic improvement — are more credible and more compliant. This is especially critical for skincare, health, and beauty categories where platforms actively flag exaggerated claims.",
+          "The safe, durable version of this format contrasts situations: without the organizer vs. with it, before the candle is lit vs. the lit ambiance. Physical-results claims (skin, hair, body) are a policy and trust minefield — sell those products with texture, ritual and lifestyle instead.",
       },
       {
-        title: "Label clearly but don't overdesign",
+        title: "Label the frames",
         description:
-          "Simple 'Before' and 'After' labels in clean, small text are all you need. Don't add arrows, circles, starbursts, or heavy graphics — they make the image look like a late-night infomercial. Let the visual transformation speak for itself. If you need to draw attention to a specific area, a subtle transparent highlight is enough.",
+          "A small 'before / after' label improves comprehension at feed speed and signals confidence. If the comparison needs studying to be noticed, the shot failed — contrast should land in half a second.",
       },
     ],
-    relatedShotTypes: ["ugc", "model-shots", "detail-close-ups"],
-    relatedUseCases: ["skincare", "supplements", "fitness"],
+    relatedShotTypes: ["studio", "lifestyle", "detail-close-ups"],
+    relatedUseCases: ["home-decor", "fitness", "pet-products"],
   },
+
+  // ──────────────────────────────────────────────
+  // SCALE SHOTS
+  // ──────────────────────────────────────────────
   {
     slug: "scale-shots",
     title: "Scale Shot Photography",
-    metaTitle: "Scale Shot Photography with AI | Dezygn",
+    metaTitle: "AI Scale Shots — Show True Product Size | Dezygn",
     metaDescription:
-      "Generate product scale reference photos with AI. Show exact product size with hands, coins, and everyday objects. Reduce returns caused by size surprises.",
-    heroHeadline:
-      "Show Them Exactly How Big It Is. Kill the #1 Reason for Returns.",
+      "Engineer scale shots with AI: hands, props and environments that communicate true product size. The accuracy shot that prevents 'smaller than expected' refunds.",
+    heroHeadline: "If the Pendant Is 2cm, It Must Look 2cm",
     image: "/images/seo/shot-types/scale-shots.webp",
-    imageAlt: "Scale shot product photography with size reference objects for accurate product dimensions",
+    imageAlt: "AI scale shot showing a product held in a hand for size reference",
     definition:
-      "Scale photography places your product alongside familiar reference objects — a human hand, a coin, a smartphone, a standard mug — so customers can instantly understand its real-world size. Size misperception is the leading cause of e-commerce returns: 'I didn't realize it was that small' or 'this is way bigger than I expected.' A single well-executed scale shot can cut size-related returns by 20-30% and save you thousands in reverse logistics.",
+      "A scale shot communicates true size by placing the product against a universal reference — a hand, a face, a table, a doorway. It exists because photographs lie about size by default: a 30ml jar and a 100ml jar look identical on white. 'Smaller than expected' is one of the most common reasons for returns and 1-star reviews, and it's entirely preventable. This is the most literal expression of the accuracy principle: if the pendant is 2cm, it must look 2cm. If the texture is matte, it cannot be glossy. The image is a promise the physical product has to keep.",
     whenToUse: [
-      "When selling products where size isn't immediately obvious from photos alone — jewelry, supplements, small electronics, miniature items, or oversized home goods",
-      "When your return data shows that 'not as expected' or 'wrong size' is a top return reason, indicating customers can't gauge dimensions from your current imagery",
-      "When listing products on marketplaces where you can't add interactive 3D models or AR try-on, and static images are your only tool for communicating scale",
-      "When selling internationally where measurement systems differ and a visual reference communicates size faster than listing centimeters or inches",
+      "Jewelry, accessories and any product whose photos zoom past its real size — the categories where size disappointment drives returns",
+      "PDP image sets: at least one image in every listing should answer 'how big is it?' without the customer reading specs",
+      "Furniture and home goods, where room context is the size reference",
+      "Ads for products whose size IS the selling point — oversized blankets, compact gadgets, travel-sized kits",
     ],
     howDezygn:
-      "Scale shots seem simple but they're surprisingly tricky to execute well. The reference object needs to be universally recognizable, properly proportioned relative to your product, and styled so it doesn't distract from the product itself. Dezygn handles all three challenges through Awa's understanding of spatial relationships and common reference objects.\n\nThe Visual Syntax framework lets you specify the scale reference type: 'held in hand,' 'next to a standard coffee mug,' 'beside a smartphone,' or 'on a ruler/measuring tape.' Awa ensures the proportions are accurate — a product described as 3 inches tall will look 3 inches tall next to a hand, not arbitrarily sized. This dimensional accuracy is critical because an inaccurate scale shot is worse than no scale shot at all.\n\nFor product lines with multiple sizes (S/M/L, different capacities, kit vs. individual), Dezygn can generate a single frame showing all size variants lined up with a consistent reference object. This comparison format is incredibly effective for upselling — customers see the larger size and think 'I might as well go bigger.' It's a conversion optimization trick that most brands miss.",
+      "Scale accuracy starts before generation: document the product's real dimensions during product prep, because the AI doesn't know what your product looks like — and it certainly doesn't know how big it is. Vague inputs get guessed proportions; the guess won't match reality.\n\nThe engineering has two parts. First, the anchor: hands are the universal reference (everyone subconsciously knows hand size), faces work for eyewear and earrings, furniture and rooms work for decor. Second, honest camera language: 50mm, the focal length closest to human perception — it feels honest because it is. Avoid extreme close-up framing for the size-reference image; macro is for craftsmanship, not scale.\n\nIn the composite, the real product photo anchors proportions while the model or scene provides the reference. State dimensions explicitly in the subject block ('a 50ml frosted glass bottle,' 'a 16-inch chain') — specificity in, accuracy out.",
     tips: [
       {
-        title: "The human hand is the universal reference",
+        title: "Hands are the universal ruler",
         description:
-          "Nothing communicates scale faster than a hand holding or touching the product. Everyone knows how big a hand is. Specify 'product held in an adult hand, fingers visible for scale' for the most intuitive size reference possible. For small items like jewelry or supplements, show the product pinched between two fingers.",
+          "A product held, cradled or pinched between fingers communicates size faster than any dimension diagram. Match the hand to the customer (the model brief still applies) and keep the grip natural — how a person actually holds a serum bottle, not how a robot presents one.",
       },
       {
-        title: "Use common objects, not obscure ones",
+        title: "Put dimensions in the prompt, not just the spec sheet",
         description:
-          "A coin, a credit card, a smartphone, a standard pencil — these are objects with universally understood dimensions. Don't use a reference object that varies in size (like 'a book' or 'a bowl') or that your audience might not be familiar with. When in doubt, a hand is always the safest reference.",
+          "Write '30ml amber glass dropper bottle' rather than 'small bottle.' Capacity, length and counts are subject-block information, and they're the difference between a render that respects proportions and one that improvises them.",
       },
       {
-        title: "Product stays the hero even in scale shots",
+        title: "One honest size image per listing",
         description:
-          "The reference object should be visually secondary — slightly out of focus, partially visible, or in a neutral color that doesn't compete with the product. A bright red coffee mug next to your minimalist white speaker draws the eye to the wrong object. Keep reference items neutral and understated.",
+          "Let the hero shot seduce and the packshot document — but make sure one image in every set exists purely to set size expectations. It's the cheapest returns-reduction tool in e-commerce.",
       },
       {
-        title: "Show the product in its intended space",
+        title: "Don't let flattering angles inflate the product",
         description:
-          "Instead of abstract scale references, show the product where it'll actually live: the supplement bottle on a kitchen shelf between other bottles, the wireless earbud case in a jeans pocket, the wall art above a standard sofa. Contextual scale is more intuitive than measurement-based scale because customers are imagining the product in their own space.",
+          "Low angles and tight crops make products look grander — great for hero shots, dangerous for scale truth. Keep the scale shot at eye level with natural perspective. Save the drama for frames whose job is drama.",
       },
     ],
-    relatedShotTypes: ["studio", "detail-close-ups", "packaging"],
-    relatedUseCases: ["jewelry", "electronics", "supplements"],
+    relatedShotTypes: ["studio", "model-shots", "detail-close-ups"],
+    relatedUseCases: ["jewelry", "baby-products", "electronics"],
   },
+
+  // ──────────────────────────────────────────────
+  // PACKAGING
+  // ──────────────────────────────────────────────
   {
     slug: "packaging",
     title: "Packaging Photography",
-    metaTitle: "Packaging Photography with AI | Dezygn",
+    metaTitle: "AI Packaging Photography — Legible Labels, Real Boxes | Dezygn",
     metaDescription:
-      "Create professional packaging and unboxing product photos with AI. Showcase boxes, labels, and the full unboxing experience without a single prototype.",
-    heroHeadline:
-      "The Box Is Part of the Product. Make It Look Like It.",
+      "Engineer packaging shots with AI: legible labels, accurate boxes, unboxing moments. The 2K source rule that keeps brand text sharp.",
+    heroHeadline: "If the Label Says 'Botanica,' It Needs to Say 'Botanica'",
     image: "/images/seo/shot-types/packaging.webp",
-    imageAlt: "Packaging product photography showcasing unboxing experience and brand presentation",
+    imageAlt: "AI packaging photography showing a branded box with crisp, legible label text",
     definition:
-      "Packaging photography showcases the product's box, label, wrapping, or container as a selling point in its own right. In an era where unboxing videos generate billions of views, how a product arrives matters almost as much as the product itself. Packaging shots cover everything from the outer shipping box to the inner tissue paper to the label design — every touchpoint of the physical experience that customers encounter before they ever use what's inside.",
+      "Packaging shots make the box, jar, pouch or tube the subject — the printed object a customer receives. For premium brands the packaging IS part of the product, and unboxing is part of the purchase. This is the hardest accuracy test in AI photography because it's full of text, and text is where generation fails loudest: one mangled letter on a label and the image is unusable. The brands that get this right treat label fidelity as an engineering problem with known rules, not a lottery.",
     whenToUse: [
-      "When your packaging design is a competitive advantage — premium boxes, custom tissue paper, embossed labels — and you want to showcase the full unboxing experience",
-      "When selling gift-ready products where the packaging is a key part of the purchase decision and customers need to see that it arrives presentation-ready",
-      "When launching a rebrand or new packaging design and need marketing assets before the physical packaging is manufactured",
-      "When creating Amazon A+ Content or Shopify product pages where showing the packaging builds trust by proving the customer receives a complete, professional product",
+      "PDP sets for products where the packaging signals the positioning — skincare, supplements, food, fragrance",
+      "Unboxing and gifting moments for ads and social, especially in Q4",
+      "Subscription and bundle marketing, where the delivered box is the product experience",
+      "Retail and wholesale materials where buyers evaluate shelf presence",
     ],
     howDezygn:
-      "Packaging photography is a unique challenge because it involves complex surfaces — reflective foils, matte laminates, embossed textures, transparent windows — that each interact with light differently. Awa understands these material properties and adjusts the virtual lighting to make each surface look its best. Foil stamping catches the light with a realistic gleam. Matte boxes show subtle shadow gradations. Clear windows reveal the product inside.\n\nThe Visual Syntax framework supports multi-stage packaging compositions. Generate the closed box first, then the lid-off reveal, then the product nestled in its insert — creating a visual unboxing sequence from a single prompt session. Each frame maintains consistent lighting and perspective so the sequence feels cohesive, like frames from an unboxing video frozen in time.\n\nOne of Dezygn's most powerful use cases for packaging is pre-production visualization. If you're designing new packaging, you can generate photorealistic mockups before spending money on printing and manufacturing. Test how different box colors look in a lifestyle setting. See how your label reads on a shelf. Validate the design with your audience before committing to a production run. This alone can save thousands in wasted prototyping costs.",
+      "The packaging workflow is built around one fact: the AI cannot add information that isn't in the source. So the source does the work. Photograph or export the packaging at 2,000px minimum on the long edge, with critical text at least ~100px tall in the source file. Then the production rule discovered the expensive way on client work: output resolution must match or exceed input. A 2K source rendered at 1K output downscales the label into mush — if brand text looks consistently wrong, it's a resolution problem, not a prompt problem.\n\nFrom there it's product transfer, not description: attach the real packaging image and Awa recreates it in the new scene without guessing the typography. Describe materials in the subject block — 'matte kraft box with embossed gold foil logo,' 'frosted glass jar with rose gold lid' — because finish determines how light behaves on the pack.\n\nCamera: 85mm, f/8, straight-on or slight 3/4 — the catalog recipe, since packaging shots are documentation first. For texture and foil moments, switch to the macro recipe and let the type fill the frame.",
     tips: [
       {
-        title: "Show the full unboxing narrative",
+        title: "The 'if it's blurry to you' rule",
         description:
-          "Don't just show the closed box. Create a 3-5 image sequence: sealed package, box opening, tissue/filler reveal, product in insert, product removed with packaging behind it. This narrative arc builds anticipation and justifies premium pricing — customers see the care and thought in every layer.",
+          "Zoom into your source image. If you can't read the label crisply, the generated image will be worse, never better. Fix legibility at the source — re-photograph, upscale with a dedicated tool, or export from the label artwork directly.",
       },
       {
-        title: "Light packaging from above and slightly behind",
+        title: "Use a real upscaler for text, not a general editor",
         description:
-          "Packaging surfaces are tricky — direct front lighting creates harsh reflections on glossy finishes and washes out matte textures. Light from a 45-degree angle above and behind the package creates dimension, shows embossing and texture, and avoids blown-out reflections on foil or laminate surfaces.",
+          "On real client packshots, a general-purpose AI editor smeared label text where a dedicated upscaling tool preserved it on the same image. For fine type and logos, the tool choice is part of the recipe.",
       },
       {
-        title: "Include the label details",
+        title: "Test at 1K, deliver at 2K+",
         description:
-          "If your product has important label information — ingredients, certifications, usage instructions — generate a dedicated shot where this text is legible. Customers buying supplements, skincare, and food products actively look for label shots. A close-up of the back label at a slight angle (not perfectly flat) looks natural and readable.",
+          "Iterate compositions fast at low resolution, then render the chosen frames at 2K or higher for delivery. Brand text is the canary: when it sharpens, the settings are right.",
       },
       {
-        title: "Context sells the packaging story",
+        title: "Shoot the pack like it ships",
         description:
-          "A beautifully wrapped product box on a gift-wrapping surface with ribbon and scissors nearby tells customers 'this is gift-ready.' The same box on a doorstep tells them 'this is what arrives.' Choose the context based on what you're trying to communicate — gift potential, premium unboxing, shelf presence, or doorstep first impression.",
+          "Customers compare the delivered box to the photos. Show the real closure, the real finish, the real print quality — an embellished render of the packaging is the 'item not as pictured' review waiting to happen.",
       },
     ],
-    relatedShotTypes: ["detail-close-ups", "flat-lay", "hero-shots"],
-    relatedUseCases: ["candles", "beauty", "food-beverage"],
+    relatedShotTypes: ["studio", "flat-lay", "detail-close-ups"],
+    relatedUseCases: ["food-beverage", "supplements", "candles"],
   },
+
+  // ──────────────────────────────────────────────
+  // DETAIL CLOSE-UPS
+  // ──────────────────────────────────────────────
   {
     slug: "detail-close-ups",
-    title: "Detail & Close-Up Photography",
-    metaTitle: "Detail & Close-Up Photography with AI | Dezygn",
+    title: "Detail Close-Up Photography",
+    metaTitle: "AI Macro & Detail Close-Up Photography | Dezygn",
     metaDescription:
-      "Generate high-resolution close-up product photos with AI. Show textures, stitching, ingredients, and fine details that build buyer confidence.",
-    heroHeadline:
-      "Zoom In. Show the Quality. Let the Details Close the Sale.",
+      "Engineer macro detail shots with AI: texture, stitching, materials and craft. How material research turns close-ups into proof of quality.",
+    heroHeadline: "Craftsmanship Doesn't Survive a Wide Shot",
     image: "/images/seo/shot-types/detail-close-ups.webp",
-    imageAlt: "Detail close-up product photography highlighting texture materials and craftsmanship",
+    imageAlt: "Extreme close-up AI shot showing product texture and material detail",
     definition:
-      "Detail and close-up photography captures the textures, materials, craftsmanship, and fine features of a product that aren't visible in standard product shots. The grain of the leather, the precision of the stitching, the shimmer in a skincare formula, the weave of a fabric — these macro-level details are what separate a $20 product from a $200 product in the customer's mind. When shoppers can't touch and feel your product, close-up shots become a proxy for the in-store tactile experience.",
+      "The detail close-up fills the frame with one square inch of the product: the hinge, the stitching, the milling, the weave. Its job is proof. Anyone can claim 'premium materials' in copy; the macro shot is where the claim gets checked. For premium products this is the conversion shot — customers paying $300 for titanium frames or $200 for a leather bag want to inspect the thing they can't touch. It's also the shot that punishes lazy sourcing hardest, because at macro distance every hallucinated detail is visible.",
     whenToUse: [
-      "When selling products where material quality is a key differentiator — leather goods, textiles, jewelry, handmade items — and customers need to see the craftsmanship to justify the price",
-      "When your product has unique features, textures, or functional details (zipper pulls, clasp mechanisms, ingredient particles) that don't show up in full-product shots",
-      "When competing against cheaper alternatives and need to visually communicate superior build quality, finer materials, or more precise manufacturing",
-      "When creating product pages for high-consideration purchases where customers zoom in on images before buying — furniture, electronics, premium accessories",
+      "Premium and craft positioning — jewelry settings, watch crowns, frame hinges, fabric weaves, wood grain",
+      "PDP sets as the 'quality proof' image after the packshot and hero have done their jobs",
+      "Ads targeting consideration-stage buyers comparing your build quality against cheaper lookalikes",
+      "Editorial and brand content celebrating materials and process",
     ],
     howDezygn:
-      "Detail photography requires extreme precision in focus, lighting, and rendering — and this is where AI generation has made remarkable strides. Awa renders surface textures with photorealistic accuracy: the way light catches individual leather grain, the tiny air bubbles in a glass bottle, the metallic flake in a nail polish. You describe the detail you want to highlight, and Awa generates a macro-style close-up with the right depth of field and lighting to make that detail sing.\n\nThe Visual Syntax framework includes material-specific rendering parameters. Specify the material type — brushed metal, woven fabric, matte ceramic, polished wood — and Awa adjusts the micro-texture rendering, specular highlights, and subsurface scattering to match. This material awareness is what makes Dezygn's close-ups look like they were shot with a $3,000 macro lens rather than generated by AI.\n\nFor brands that import their product specifications into Dezygn, the AI can emphasize the details that matter most for that category. Supplement brands get capsule transparency and powder texture. Fashion brands get stitching precision and fabric weave. Jewelry brands get stone clarity and metal finish. The close-ups aren't generic — they're category-intelligent, highlighting the details that your specific customers care about.",
+      "Detail shots are where source quality and material knowledge converge. The source rule is absolute at macro distance: shoot or upscale the product area you'll feature, and pick a source angle close to the output angle — every degree of difference between source and output is information the AI must hallucinate. Minimize that gap and the render stays true.\n\nThen the part most people skip: understand the material before you light it. For a Japanese titanium eyewear client we researched titanium itself — how it looks raw, how its matte surface takes light — and studied how the category's top brands photograph it: the angles, the reflections, the surface treatment. That research set the lighting recipe: uniform diffused cool studio light, controlled reflections, nothing hiding the surface. This is what separates $10/image work from $100/image work — research the materials, the culture, the story.\n\nCamera recipe: macro framing or 85mm at f/2.8, extreme close-up, shallow focus pulling the eye to the featured detail. Style: clean catalog or editorial depending on whether the shot is documentation or seduction.",
     tips: [
       {
-        title: "Use extreme shallow depth of field",
+        title: "Match source angle to output angle",
         description:
-          "Close-up shots should have a razor-thin plane of focus — the texture or detail you're highlighting is sharp, and everything else falls off into a smooth blur. Specify 'macro lens, very shallow depth of field, f/2.8 or wider equivalent' in your prompt. This focuses the viewer's eye exactly where you want it.",
+          "Featuring the side seam? Use a side-view source. The less the AI has to invent about geometry, the more accurate the fine detail. This rule, discovered on apparel client work, does more for macro fidelity than any prompt tweak.",
       },
       {
-        title: "Side lighting reveals texture best",
+        title: "Crop the source to the signal",
         description:
-          "Light coming from directly in front of a surface flattens texture. Light raking across a surface from the side — at a 75-90 degree angle — creates shadows in every groove, stitch, and grain line, making the texture three-dimensional and tactile. For fabric, leather, wood, and any textured surface, side light is non-negotiable.",
+          "Before compositing, crop the source image to the region that matters. Everything else in the source is noise the AI must either reproduce or suppress — both cost quality. A focused source gives a clean transfer.",
       },
       {
-        title: "Show the detail customers will zoom into anyway",
+        title: "Micro-iterate on stubborn details",
         description:
-          "Look at your product reviews and customer questions. What do people ask about? The stitching quality? The clasp mechanism? The ingredient texture? Those are the details that deserve their own dedicated close-up shot. Don't guess — let your customer data tell you which details to highlight.",
+          "When one feature keeps rendering wrong — a low-profile frame shape, an unusual clasp — don't re-roll the same prompt. Vary only the words describing the problem feature ('oval' → 'elongated oval'), keeping all else stable. Out of 10-15 micro-iterations, 2-3 will nail it; work from those.",
       },
       {
-        title: "Pair close-ups with full-product shots",
+        title: "Light for the material, not the mood",
         description:
-          "A close-up of beautiful stitching means nothing if the customer can't see where that stitching lives on the overall product. Use a visual callout strategy: full product shot with a subtle circle or line indicating the area, followed by the close-up of that area. Dezygn can generate both in the same session with matched lighting.",
-      },
-      {
-        title: "Include a sense of scale in macro shots",
-        description:
-          "When you zoom in very close, viewers can lose sense of how big the detail actually is. Include a partial fingertip, a thread, or another micro-scale reference to ground the close-up in reality. A watch crown next to a fingertip tells you more about size than the crown alone ever could.",
+          "Matte fabric wants broad soft light to show weave; polished metal wants controlled reflections with fill; transparent glass wants edge or backlight to show form. At macro distance, wrong lighting doesn't just look off — it misrepresents the material, and that's an accuracy failure.",
       },
     ],
-    relatedShotTypes: ["studio", "scale-shots", "hero-shots"],
-    relatedUseCases: ["jewelry", "fashion-accessories", "outdoor-gear"],
+    relatedShotTypes: ["studio", "packaging", "scale-shots"],
+    relatedUseCases: ["eyewear", "jewelry", "outdoor-gear"],
+  },
+
+  // ──────────────────────────────────────────────
+  // BRAND / ATMOSPHERE (new)
+  // ──────────────────────────────────────────────
+  {
+    slug: "brand-atmosphere",
+    title: "Brand & Atmosphere Photography",
+    metaTitle: "AI Brand & Atmosphere Shots — Build a Brand World | Dezygn",
+    metaDescription:
+      "Engineer brand atmosphere shots with AI: scenes, places and textures that build your brand's world. How real geographic research becomes visual identity.",
+    heroHeadline: "The Shots Where the Product Isn't the Point",
+    image: "/images/seo/shot-types/lifestyle.webp",
+    imageAlt: "Atmospheric AI brand photography showing an evocative scene that defines a brand world",
+    definition:
+      "Brand and atmosphere shots are the images where the product is secondary or absent entirely: the workshop, the coastline, the material in raw form, the place the brand comes from. They build the world the products live in. Commodity brands skip them; premium brands are made of them — because a customer who buys into a world pays world prices, and a customer comparing isolated products pays commodity prices. These shots are also the hardest to fake with generic prompting, because 'aesthetic background' isn't a world. A world is specific.",
+    whenToUse: [
+      "Campaign sets — agencies deliver 2-3 atmosphere shots in a typical 12-image campaign to glue the set together",
+      "Website fabric: heroes, section backgrounds, about pages, collection headers",
+      "Email and social interstitials that maintain presence between product pushes",
+      "Brand storytelling: origin, materials, craft and place",
+    ],
+    howDezygn:
+      "Atmosphere shots are built from brand-world research, and the research is the product. Real example from client work: a premium Japanese titanium eyewear brand. Instead of prompting 'Japanese aesthetic background,' we traced the craft's likely origin to Sabae, Japan — the eyewear capital of the world — then found Ono Castle nearby, 'the castle in the sky,' whose lightness and precision matched the brand's lightweight-luxury promise, and pulled visual references from the surrounding Fukui region. Those discoveries became the scene library. You're building a story: where does this brand come from? What place in the world does it belong to?\n\nIn Dezygn, moodboard research becomes creative material directly — real reference photos get uploaded and transformed into brand-universe shots, which beats describing a place from scratch. The deeper your moodboard, the more specific and compelling your final images, and the moodboard itself often becomes source material during creation.\n\nVisual Syntax-wise, this is the one shot type where Scene and Brand carry everything: locations, materials and light from the brand identity; exact hex palette; consistent color temperature. Camera follows the brand archetype — minimal brands shoot atmosphere clean and still, heritage brands shoot it warm and timeless.",
+    tips: [
+      {
+        title: "Research a place, not a vibe",
+        description:
+          "'Coastal aesthetic' produces the same image for every brand that types it. Tracing your brand to real geography — a manufacturing town, a coastline, a craft tradition — produces scenes no competitor can accidentally copy. Even if the final images never show the landmark, the research shapes every decision.",
+      },
+      {
+        title: "Generate scenes empty, then reuse them everywhere",
+        description:
+          "Atmosphere scenes do double duty: standalone brand shots today, composite backgrounds for product and model shots tomorrow. Build each location in 3-4 angles with matching light and the campaign assembles itself.",
+      },
+      {
+        title: "Let materials be subjects",
+        description:
+          "Raw titanium, beeswax, linen in afternoon light — material studies are the most credible atmosphere shots a product brand can run, because they connect directly back to what the customer buys.",
+      },
+      {
+        title: "Keep one palette across the set",
+        description:
+          "Atmosphere shots earn their keep by making the whole grid cohere. Define the brand block once — hex colors, temperature, textures — and apply it to every scene. Style, scene and subject change; brand stays constant. That constancy is what reads as identity.",
+      },
+    ],
+    relatedShotTypes: ["lifestyle", "hero-shots", "detail-close-ups"],
+    relatedUseCases: ["candles", "eyewear", "outdoor-gear"],
+  },
+
+  // ──────────────────────────────────────────────
+  // PAPARAZZI (new)
+  // ──────────────────────────────────────────────
+  {
+    slug: "paparazzi",
+    title: "Paparazzi-Style Photography",
+    metaTitle: "AI Paparazzi-Style Product Photography | Dezygn",
+    metaDescription:
+      "Engineer paparazzi-style shots with AI: flash photography, stolen-moment energy, celebrity attitude. The editorial format from real eyewear campaign work.",
+    heroHeadline: "Make the Product Look Famous",
+    image: "/images/seo/shot-types/model-shots.webp",
+    imageAlt: "Paparazzi-style AI photo with hard flash and candid celebrity energy",
+    definition:
+      "The paparazzi shot stages a stolen moment: hard direct flash, candid framing, a subject who looks photographed against their will — and glamorous because of it. It borrows the visual grammar of celebrity culture to make a product feel famous by association. Fashion and eyewear brands have used the format for decades because it solves aspiration differently than the polished hero shot: instead of 'this is beautiful,' it says 'people who matter wear this.' It's a niche tool with a strong flavor — wrong for calm minimalist brands, lethal in the right campaign.",
+    whenToUse: [
+      "Eyewear, fashion and accessories campaigns built on attitude and status",
+      "Editorial sets and lookbooks that want magazine energy, including black-and-white treatments",
+      "Social and ad creative that needs to stop the feed with something that doesn't look like an ad at all",
+      "Street-culture and nightlife-adjacent brands where polish would read as inauthentic",
+    ],
+    howDezygn:
+      "This recipe comes from a real campaign for a Parisian eyewear brand whose set mixed paparazzi shots with fashion editorial. The ingredient that makes or breaks it is Action — specifically attitude. The working direction was: they're busy, they're arrogant, they don't have time, they never pose for pictures — and if they decide to pose, their style and attitude screams 'I own the world.' That sentence did more for the set than any lighting keyword. Static images are forgettable; action creates desire.\n\nThe rest of the recipe: Style is flash photography — hard direct light, deep shadows, that slightly blown editorial look; black-and-white pushes it further into magazine territory. Scene is urban and incidental: café exits, cobblestone courtyards, car doors, metro entrances — locations generated as standalone assets first, then composited. Camera is candid grammar: mid-stride framing, imperfect crops, the geometry of a shot grabbed in two seconds. Subject follows the dedicated-model workflow — model brief from brand identity, comp cards for selection, clean portraits for compositing — with the product (anchored by its real photo) worn, never presented.",
+    tips: [
+      {
+        title: "Direct the attitude, not the pose",
+        description:
+          "Posed paparazzi is a contradiction the viewer feels instantly. Write the energy — 'doesn't have time, never poses, owns the world' — and let the stride, the glance and the hand placement follow from character. Casting the right model matters more here than in any other shot type.",
+      },
+      {
+        title: "Hard flash is the style — commit to it",
+        description:
+          "Soft flattering light kills the format. Specify direct on-camera flash with hard shadows and bright falloff. The harshness is the authenticity signal; cleaning it up turns the shot back into an ad.",
+      },
+      {
+        title: "Keep the product readable in the chaos",
+        description:
+          "Candid framing still has a job: the glasses, the bag, the jacket must be sharp and identifiable. Anchor the product with its real photo and frame mid-shot so the 'stolen moment' doesn't steal the product too.",
+      },
+      {
+        title: "Use it as the spike, not the system",
+        description:
+          "In a 12-image campaign, 2-4 paparazzi frames electrify the set; twelve of them exhaust it. Pair them with packshots, details and atmosphere shots so the attitude has a calm world to disrupt.",
+      },
+    ],
+    relatedShotTypes: ["model-shots", "ugc", "hero-shots"],
+    relatedUseCases: ["eyewear", "fashion-accessories", "beauty"],
   },
 ];
+
+export function getShotTypeBySlug(slug: string): ShotType | undefined {
+  return shotTypes.find((shotType) => shotType.slug === slug);
+}

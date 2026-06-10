@@ -978,7 +978,7 @@ function LeadMagnetSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#EDEBE6] px-5 py-20 sm:py-28">
+    <section id="cheatsheet" className="relative overflow-hidden bg-[#EDEBE6] px-5 py-20 sm:py-28">
       <span aria-hidden className={`${serif} pointer-events-none absolute -right-4 top-12 hidden rotate-12 text-[120px] italic leading-none text-[#8B5CF6]/15 lg:block`}>
         ✦
       </span>

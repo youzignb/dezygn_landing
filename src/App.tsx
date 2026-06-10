@@ -104,6 +104,12 @@ function App() {
         <Route path="/compare/:slug" element={<ComparisonPage />} />
         <Route path="/alternatives/:slug" element={<AlternativePage />} />
         <Route path="/resources" element={<ResourceIndexPage />} />
+        {/* Retired guides — equity flows to the rewritten pillar guides */}
+        <Route path="/resources/ai-product-photography-guide-2026" element={<Navigate to="/resources/ai-product-photography-guide" replace />} />
+        <Route path="/resources/shopify-product-photography" element={<Navigate to="/resources/ai-product-photography-guide" replace />} />
+        <Route path="/resources/ecommerce-photography-roi" element={<Navigate to="/resources/ai-photography-pricing" replace />} />
+        <Route path="/resources/conversion-photography" element={<Navigate to="/resources/visual-syntax" replace />} />
+        <Route path="/resources/brand-consistency-ai" element={<Navigate to="/resources/visual-syntax" replace />} />
         <Route path="/resources/:slug" element={<ResourcePage />} />
         <Route path="/industries" element={<IndustryIndexPage />} />
         <Route path="/industries/:slug" element={<IndustryPage />} />
