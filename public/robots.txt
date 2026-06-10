@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /cheatsheet
+Disallow: /success
+Disallow: /v3
+Disallow: /landing-v3
+Disallow: /v4
+Disallow: /landing-v4
+Disallow: /home-old
+Disallow: /home-archive
+Disallow: /landing
+Disallow: /landing-new
+
+Sitemap: https://dezygn.com/sitemap.xml

@@ -1,16 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import HomePage from './pages/HomePage';
-import HomeArchivePage from './pages/HomeArchivePage';
-import SpecialPage from './pages/SpecialPage';
-import ShortcutsPage from './pages/ShortcutsPage';
 import PricingPage from './pages/PricingPage';
-import ReportPage from './pages/ReportPage';
-import ReportDownloadPage from './pages/ReportDownloadPage';
 import PlaybookPage from './pages/PlaybookPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
-import UpgradePage from './pages/UpgradePage';
 import SuccessPage from './pages/SuccessPage';
 import AuditPage from './pages/AuditPage';
 import AboutPage from './pages/AboutPage';
@@ -19,29 +12,30 @@ import ContactPage from './pages/ContactPage';
 import HelpPage from './pages/HelpPage';
 import FeaturesPage from './pages/FeaturesPage';
 import AccessibilityPage from './pages/AccessibilityPage';
-import V1AccessPage from './pages/V1AccessPage';
-import LandingPage from './pages/LandingPage';
-import LandingPageNew from './pages/LandingPageNew';
 import LandingPageV3 from './pages/LandingPageV3';
+import LandingPageV4 from './pages/LandingPageV4';
+import WebinarPage from './pages/WebinarPage';
+import CheatsheetThankYouPage from './pages/CheatsheetThankYouPage';
+import ClientSystemPage from './pages/ClientSystemPage';
 import AipaPage from './pages/AipaPage';
 import EarningsDisclaimerPage from './pages/EarningsDisclaimerPage';
 import CookieBanner from './components/CookieBanner';
-import PromptographyPage from './pages/PromptographyPage';
-import PromptographyPageV2 from './pages/PromptographyPageV2';
-import BusinessPage from './pages/BusinessPage';
-import AgencyPage from './pages/AgencyPage';
 import CaseStudiesPage from './pages/CaseStudiesPage';
-import CoursePage from './pages/CoursePage';
 import CommunityPage from './pages/CommunityPage';
 import AwaAgentPage from './pages/features/AwaAgentPage';
 import StudioPage from './pages/features/StudioPage';
 import BrandImportPage from './pages/features/BrandImportPage';
 import RecipesPage from './pages/features/RecipesPage';
+import OutreachPage from './pages/features/OutreachPage';
+import OpportunitiesPage from './pages/features/OpportunitiesPage';
+import ConceptsPage from './pages/features/ConceptsPage';
+import FeatureFeedbackPage from './pages/features/FeedbackPage';
 
 // Programmatic SEO pages
 import UseCasePage from './pages/seo/UseCasePage';
 import UseCaseIndexPage from './pages/seo/UseCaseIndexPage';
 import ShotTypePage from './pages/seo/ShotTypePage';
+import ShotTypeIndexPage from './pages/seo/ShotTypeIndexPage';
 import ComparisonPage from './pages/seo/ComparisonPage';
 import ComparisonIndexPage from './pages/seo/ComparisonIndexPage';
 import AlternativePage from './pages/seo/AlternativePage';
@@ -58,49 +52,53 @@ function App() {
     <HelmetProvider>
       <Router>
       <Routes>
-        <Route path="/" element={<LandingPageV3 />} />
-        <Route path="/home-old" element={<HomePage />} />
-        <Route path="/landing" element={<LandingPage />} />
-        <Route path="/landing-new" element={<LandingPageNew />} />
+        <Route path="/" element={<LandingPageV4 />} />
+        {/* Temporary archive of the previous homepage */}
         <Route path="/v3" element={<LandingPageV3 />} />
-        <Route path="/landing-v3" element={<LandingPageV3 />} />
+        <Route path="/v4" element={<Navigate to="/" replace />} />
         <Route path="/aipa" element={<AipaPage />} />
         <Route path="/earnings-disclaimer" element={<EarningsDisclaimerPage />} />
-        <Route path="/business" element={<BusinessPage />} />
-        <Route path="/agency" element={<AgencyPage />} />
+        {/* Retired pages — SEO equity flows to their hub equivalents */}
+        <Route path="/business" element={<Navigate to="/industries/ecommerce" replace />} />
+        <Route path="/agency" element={<Navigate to="/industries/agencies" replace />} />
         <Route path="/case-studies" element={<CaseStudiesPage />} />
-        <Route path="/promptography" element={<PromptographyPage />} />
-        <Route path="/secrets" element={<PromptographyPageV2 />} />
+        <Route path="/promptography" element={<Navigate to="/resources" replace />} />
+        <Route path="/secrets" element={<Navigate to="/resources" replace />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/help" element={<HelpPage />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/accessibility" element={<AccessibilityPage />} />
-        <Route path="/special" element={<SpecialPage />} />
-        <Route path="/shortcuts" element={<ShortcutsPage />} />
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/report" element={<ReportPage />} />
+        <Route path="/report" element={<Navigate to="/resources" replace />} />
         <Route path="/playbook" element={<PlaybookPage />} />
-        <Route path="/state-of-ai" element={<ReportDownloadPage />} />
+        <Route path="/state-of-ai" element={<Navigate to="/resources" replace />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/terms" element={<TermsPage />} />
-        <Route path="/upgrade" element={<UpgradePage />} />
-        <Route path="/home-archive" element={<HomeArchivePage />} />
+        <Route path="/upgrade" element={<Navigate to="/pricing" replace />} />
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/audit" element={<AuditPage />} />
-        <Route path="/v1" element={<V1AccessPage />} />
-        <Route path="/course" element={<CoursePage />} />
+        <Route path="/webinar" element={<WebinarPage />} />
+        <Route path="/cheatsheet" element={<CheatsheetThankYouPage />} />
+        <Route path="/client-system" element={<ClientSystemPage />} />
+        {/* Course is retired — its SEO equity flows to the webinar funnel. */}
+        <Route path="/course" element={<Navigate to="/webinar" replace />} />
         <Route path="/community" element={<CommunityPage />} />
         <Route path="/apply" element={<ApplyPage />} />
         <Route path="/features/awa" element={<AwaAgentPage />} />
         <Route path="/features/studio" element={<StudioPage />} />
         <Route path="/features/brand-import" element={<BrandImportPage />} />
         <Route path="/features/recipes" element={<RecipesPage />} />
+        <Route path="/features/outreach" element={<OutreachPage />} />
+        <Route path="/features/opportunities" element={<OpportunitiesPage />} />
+        <Route path="/features/concepts" element={<ConceptsPage />} />
+        <Route path="/features/feedback" element={<FeatureFeedbackPage />} />
 
         {/* Programmatic SEO routes */}
         <Route path="/use-cases" element={<UseCaseIndexPage />} />
         <Route path="/use-cases/:slug" element={<UseCasePage />} />
+        <Route path="/shot-types" element={<ShotTypeIndexPage />} />
         <Route path="/shot-types/:slug" element={<ShotTypePage />} />
         <Route path="/compare" element={<ComparisonIndexPage />} />
         <Route path="/compare/:slug" element={<ComparisonPage />} />
