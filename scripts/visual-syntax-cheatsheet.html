@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>The Visual Syntax Cheatsheet — Dezygn</title>
+<style>
+  /* Dezygn v4 editorial tokens: ink #1A1A1A · paper #EDEBE6 · vellum #F7F5F0 · accent #8B5CF6 */
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #1A1A1A; --ink-warm: #2B2B2B; --paper: #EDEBE6; --vellum: #F7F5F0;
+    --muted: #6B6459; --dim: #8B867B; --accent: #8B5CF6; --accent-deep: #7C3AED;
+    --on-dark: #E8E4DB;
+  }
+  body { font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: var(--ink); background: var(--vellum); }
+  .serif { font-family: 'Instrument Serif', Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 400; }
+  .mono { font-family: 'IBM Plex Mono', Menlo, 'Courier New', monospace; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; page-break-after: always; background: var(--vellum); display: flex; flex-direction: column; }
+  .page:last-child { page-break-after: avoid; }
+
+  /* ---------- header band ---------- */
+  .band { background: var(--ink); color: var(--on-dark); padding: 11mm 14mm 9mm; position: relative; overflow: hidden; }
+  .band .glyph { position: absolute; right: 6mm; top: -6mm; font-size: 46mm; color: rgba(139,92,246,.22); }
+  .band-tag { font-size: 7.5pt; letter-spacing: .18em; text-transform: uppercase; color: rgba(232,228,219,.65); display: flex; align-items: center; gap: 2mm; }
+  .band-tag b { color: var(--accent); font-weight: 600; }
+  .band h1 { font-size: 27pt; font-weight: 650; letter-spacing: -.02em; margin-top: 4mm; line-height: 1.04; }
+  .band h1 .serif { color: var(--accent); }
+  .band p.sub { margin-top: 3mm; font-size: 10pt; color: rgba(232,228,219,.7); max-width: 130mm; line-height: 1.5; }
+
+  .body { padding: 9mm 14mm 0; flex: 1; }
+
+  .eyebrow { display: inline-block; font-size: 7pt; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-deep); border: 1px solid rgba(26,26,26,.12); background: #fff; border-radius: 99px; padding: 1.6mm 3.5mm; font-weight: 600; transform: rotate(-1.2deg); }
+  h2 { font-size: 14.5pt; font-weight: 650; letter-spacing: -.01em; margin: 3mm 0 4mm; }
+
+  /* ---------- rules row ---------- */
+  .rules { display: flex; gap: 4mm; }
+  .rule { flex: 1; background: #fff; border: 1px solid rgba(26,26,26,.12); border-radius: 4mm; padding: 4.5mm 5mm; box-shadow: 0 2mm 5mm rgba(26,26,26,.07); }
+  .rule .num { font-size: 7pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent-deep); font-weight: 700; }
+  .rule h3 { font-size: 10.5pt; font-weight: 650; margin: 1.6mm 0 1.4mm; letter-spacing: -.01em; }
+  .rule p { font-size: 8.5pt; color: var(--muted); line-height: 1.45; }
+
+  /* ---------- ingredients table ---------- */
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 4mm; overflow: hidden; box-shadow: 0 2mm 5mm rgba(26,26,26,.07); }
+  .tablewrap { border: 1px solid rgba(26,26,26,.12); border-radius: 4mm; overflow: hidden; }
+  th { background: var(--ink); color: var(--on-dark); text-align: left; font-size: 7pt; letter-spacing: .14em; text-transform: uppercase; padding: 3mm 4mm; font-weight: 600; }
+  td { padding: 3.1mm 4mm; font-size: 9pt; border-top: 1px solid rgba(26,26,26,.08); vertical-align: top; line-height: 1.4; }
+  td.ing { white-space: nowrap; font-weight: 700; letter-spacing: .04em; }
+  td.ing .n { display: inline-block; width: 5.4mm; height: 5.4mm; border-radius: 50%; background: var(--accent); color: #fff; font-size: 7.5pt; text-align: center; line-height: 5.4mm; margin-right: 2.2mm; font-weight: 700; }
+  td.q { color: var(--ink-warm); font-style: italic; }
+  td.def { color: var(--muted); }
+
+  .section { margin-top: 7mm; }
+
+  /* ---------- page 2 grids ---------- */
+  .grid2 { display: flex; gap: 5mm; }
+  .col { flex: 1; min-width: 0; }
+
+  .promptcard { background: var(--ink); color: var(--on-dark); border-radius: 4mm; padding: 5mm 5.5mm; font-size: 8.4pt; line-height: 1.62; }
+  .promptcard .k { color: var(--accent); font-weight: 700; }
+  .promptcard .c { color: rgba(232,228,219,.78); }
+
+  .tip { display: flex; gap: 2.5mm; align-items: flex-start; background: #fff; border: 1px solid rgba(26,26,26,.12); border-radius: 3mm; padding: 3mm 3.6mm; margin-bottom: 2.4mm; }
+  .tip .arrow { color: var(--accent-deep); font-weight: 700; font-size: 9pt; }
+  .tip p { font-size: 8.6pt; line-height: 1.45; color: var(--ink-warm); }
+  .tip p b { color: var(--ink); }
+
+  .critical { background: #F6EFD9; border: 1px solid rgba(134,105,26,.25); color: #6B5413; border-radius: 3mm; padding: 3.2mm 4mm; font-size: 8.6pt; line-height: 1.5; margin-top: 3mm; }
+  .critical b { text-transform: uppercase; letter-spacing: .08em; font-size: 7.5pt; }
+
+  /* ---------- footer CTA ---------- */
+  .cta { margin-top: auto; background: var(--accent-deep); color: #fff; padding: 7mm 14mm 8mm; display: flex; justify-content: space-between; align-items: center; gap: 8mm; }
+  .cta h3 { font-size: 12.5pt; font-weight: 650; letter-spacing: -.01em; }
+  .cta p { font-size: 8.6pt; color: rgba(255,255,255,.82); margin-top: 1.4mm; line-height: 1.5; max-width: 120mm; }
+  .cta .pill { white-space: nowrap; background: var(--ink); color: var(--on-dark); border-radius: 99px; padding: 3.4mm 6mm; font-size: 9.5pt; font-weight: 650; }
+
+  .pagefoot { padding: 4mm 14mm; display: flex; justify-content: space-between; font-size: 7pt; letter-spacing: .14em; text-transform: uppercase; color: var(--dim); background: var(--paper); }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+  <div class="band">
+    <div class="glyph serif">&#10038;</div>
+    <div class="band-tag mono"><b>&#10022;</b> dezygn &middot; The Conversion Photography System</div>
+    <h1>The Visual Syntax <span class="serif">Cheatsheet.</span></h1>
+    <p class="sub">Every client-ready AI photo is engineered from the same six ingredients. Stop gambling with prompts — control the ingredients, control the outcome.</p>
+  </div>
+
+  <div class="body">
+    <span class="eyebrow mono">The 3 Rules</span>
+    <div class="rules" style="margin-top:4mm;">
+      <div class="rule">
+        <div class="num mono">Rule 1</div>
+        <h3>Every image has 6 ingredients</h3>
+        <p>Style, Subject, Action, Scene, Camera, Brand. Control these, control the outcome.</p>
+      </div>
+      <div class="rule">
+        <div class="num mono">Rule 2</div>
+        <h3>Each ingredient = words or pictures</h3>
+        <p>Use reference images for accuracy. Use text where you want the model to interpret.</p>
+      </div>
+      <div class="rule">
+        <div class="num mono">Rule 3</div>
+        <h3>Order matters — first is strongest</h3>
+        <p>The model pays the most attention to what comes first. Lead with what matters most.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="eyebrow mono">The 6 Ingredients</span>
+      <div class="tablewrap" style="margin-top:4mm;">
+        <table>
+          <tr><th style="width:30mm;">Ingredient</th><th style="width:52mm;">The question</th><th>What to define</th></tr>
+          <tr><td class="ing"><span class="n">1</span>STYLE</td><td class="q">What kind of photo is this?</td><td class="def">Editorial, UGC, catalog, luxury, vintage, paparazzi&hellip;</td></tr>
+          <tr><td class="ing"><span class="n">2</span>SUBJECT</td><td class="q">What or who is the hero?</td><td class="def">Product details, model demographics, key features</td></tr>
+          <tr><td class="ing"><span class="n">3</span>ACTION</td><td class="q">What's happening?</td><td class="def">Pose, expression, interaction type</td></tr>
+          <tr><td class="ing"><span class="n">4</span>SCENE</td><td class="q">Where are we + how's it lit?</td><td class="def">Environment, props, light source &amp; direction</td></tr>
+          <tr><td class="ing"><span class="n">5</span>CAMERA</td><td class="q">How are we shooting it?</td><td class="def">Lens, aperture, framing, angle</td></tr>
+          <tr><td class="ing"><span class="n">6</span>BRAND</td><td class="q">How does it feel like them?</td><td class="def">Hex colors, temperature, visual identity</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="eyebrow mono">Prompt Structure</span>
+      <div class="promptcard mono" style="margin-top:4mm;">
+        <span class="k">[STYLE]</span> <span class="c">Editorial photography, luxury aesthetic&hellip;</span><br/>
+        <span class="k">[SUBJECT]</span> <span class="c">Woman in her 20s holding the cream jar [image1]&hellip;</span><br/>
+        <span class="k">[ACTION]</span> <span class="c">Applying to cheek, eyes closed, serene expression&hellip;</span><br/>
+        <span class="k">[SCENE]</span> <span class="c">Marble bathroom, soft window light from left&hellip;</span><br/>
+        <span class="k">[CAMERA]</span> <span class="c">85mm, f/1.8, medium close-up, shallow depth of field&hellip;</span><br/>
+        <span class="k">[BRAND]</span> <span class="c">Warm palette, #B59C7E tan, organic textures&hellip;</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="pagefoot mono"><span>&copy; Dezygn &middot; Wosho LLC</span><span>Page 1 of 2</span></div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+  <div class="body" style="padding-top:11mm;">
+    <div class="grid2">
+      <div class="col">
+        <span class="eyebrow mono">Camera Recipes &middot; the 80/20</span>
+        <div class="tablewrap" style="margin-top:4mm;">
+          <table>
+            <tr><th>Goal</th><th>Recipe</th></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Premium hero</td><td class="def">85mm + f/1.8 + soft studio</td></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Authentic lifestyle</td><td class="def">50mm + f/1.8 + window light</td></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Catalog / detail</td><td class="def">85mm + f/8 + soft studio</td></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Ultra-luxury</td><td class="def">135mm + f/2.8 + studio</td></tr>
+          </table>
+        </div>
+      </div>
+      <div class="col">
+        <span class="eyebrow mono">The 3 Lighting Setups</span>
+        <div class="tablewrap" style="margin-top:4mm;">
+          <table>
+            <tr><th>Setup</th><th>Feel</th><th>Best for</th></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Natural window</td><td class="def">Authentic, real</td><td class="def">Lifestyle, UGC</td></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Soft studio</td><td class="def">Professional</td><td class="def">Products, reflective</td></tr>
+            <tr><td class="def" style="font-weight:600;color:var(--ink);">Golden hour</td><td class="def">Warm, aspirational</td><td class="def">Beauty, fashion</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="critical">
+      <b>Critical</b> &middot; Reflective products (glasses, jewelry, metal) = always soft studio with fill light. Golden hour ruins reflective surfaces.
+    </div>
+
+    <div class="section">
+      <span class="eyebrow mono">Multimodal Anchoring &middot; words vs pictures</span>
+      <div style="margin-top:4mm;">
+        <div class="tip"><span class="arrow">&rarr;</span><p><b>Product accuracy:</b> anchor with a reference image <span class="mono">[image1]</span> — never describe a product you can show.</p></div>
+        <div class="tip"><span class="arrow">&rarr;</span><p><b>Specific pose:</b> use a pose reference photo instead of describing limbs and angles.</p></div>
+        <div class="tip"><span class="arrow">&rarr;</span><p><b>Style consistency across a set:</b> reuse one style anchor image for the whole batch.</p></div>
+        <div class="tip"><span class="arrow">&rarr;</span><p><b>Golden rule:</b> don't over-describe what your images already show. Text fights references.</p></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="eyebrow mono">Before you generate</span>
+      <div style="margin-top:4mm;">
+        <div class="tip"><span class="arrow">1</span><p>Write the six ingredients down <b>before</b> opening the tool. Most failures happen before generation.</p></div>
+        <div class="tip"><span class="arrow">2</span><p>Decide words vs pictures for each ingredient (Rule 2).</p></div>
+        <div class="tip"><span class="arrow">3</span><p>Put the ingredient that matters most for this shot <b>first</b> (Rule 3).</p></div>
+        <div class="tip"><span class="arrow">4</span><p>Generate, then QA against the source: materials, texture, colors, proportions, scale.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div>
+      <h3>Put Visual Syntax to work.</h3>
+      <p>Awa, the AI creative assistant inside Dezygn, speaks Visual Syntax natively — you describe the shot, it engineers the prompt. Free plan, 50 credits, no card required.</p>
+    </div>
+    <div class="pill">chat.dezygn.com/signup</div>
+  </div>
+  <div class="pagefoot mono"><span>&copy; Dezygn &middot; Wosho LLC</span><span>Page 2 of 2</span></div>
+</div>
+
+</body>
+</html>
