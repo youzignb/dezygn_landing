@@ -69,3 +69,5 @@ jspm_packages/
 
 # Turbo
 .turbo
+# Claude Code local settings
+.claude/
