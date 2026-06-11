@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Check, Lock, PlayCircle, X } from 'lucide-react';
+import { ArrowRight, Bell, Check, Lock, PlayCircle, X } from 'lucide-react';
 import Logo from '../components/Logo';
 
 /**
@@ -42,98 +41,54 @@ const notForYou = [
 ];
 
 function RegistrationForm({ compact = false }: { compact?: boolean }) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (status === 'loading') return;
-    setStatus('loading');
-
-    try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-      if (!supabaseUrl || !supabaseAnonKey) throw new Error('Missing Supabase environment variables.');
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/lead-magnet-capture`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${supabaseAnonKey}`,
-          apikey: supabaseAnonKey,
-        },
-        body: JSON.stringify({ name, email, lead_magnet: 'webinar_registration' }),
-      });
-      if (!response.ok) throw new Error('Request failed');
-      setStatus('success');
-    } catch {
-      setStatus('error');
-    }
-  };
-
-  if (status === 'success') {
-    return (
-      <div className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.12)] sm:p-10">
-        <span className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-[#E3F0E6]">
-          <Check className="h-6 w-6 text-[#1F6B3A]" />
-        </span>
-        <h3 className="mt-5 text-2xl font-semibold tracking-tight text-[#1A1A1A]">You're registered.</h3>
-        <p className="mt-3 text-sm leading-6 text-[#6B6459]">
-          Check your inbox for the details. One thing before the training: create your free Dezygn account so you can
-          follow along live.
-        </p>
-        <a
-          href="https://chat.dezygn.com/signup"
-          className="mt-6 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-6 text-sm font-semibold text-white transition hover:bg-[#7C3AED]"
-        >
-          Create My Free Account
-          <ArrowRight className="h-4 w-4" />
-        </a>
-      </div>
-    );
-  }
-
   return (
-    <form
-      onSubmit={handleSubmit}
-      className={`grid gap-4 rounded-3xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.12)] ${compact ? 'p-6 sm:p-8' : 'p-8 sm:p-10'}`}
-    >
-      <p className={`${mono} text-[10px] font-medium uppercase tracking-[0.12em] text-[#7C3AED]`}>
-        ✦ Reserve your seat — it's free
-      </p>
+    <div className={`grid gap-4 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white shadow-[0_24px_60px_rgba(26,26,26,0.12)] ${compact ? 'p-6 sm:p-8' : 'p-8 sm:p-10'}`}>
+      <div className="flex items-center justify-between gap-3">
+        <p className={`${mono} text-[10px] font-medium uppercase tracking-[0.12em] text-[#7C3AED]`}>
+          ✦ Free training
+        </p>
+        <span className={`${mono} rounded-full border border-[#8B5CF6]/30 bg-[#8B5CF6]/10 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-[#7C3AED]`}>
+          Coming soon
+        </span>
+      </div>
+      <div className="rounded-2xl border border-[#1A1A1A]/10 bg-[#F7F5F0] p-5">
+        <span className="grid h-11 w-11 place-items-center rounded-full bg-[#8B5CF6] text-white">
+          <Bell className="h-5 w-5" />
+        </span>
+        <h3 className="mt-4 text-2xl font-semibold tracking-tight text-[#1A1A1A]">Registration opens soon.</h3>
+        <p className="mt-3 text-sm leading-6 text-[#6B6459]">
+          The training is being finalized before seats open. For now, create your free Dezygn account and I will announce
+          the first session when it is ready.
+        </p>
+      </div>
       <input
         type="text"
-        required
-        value={name}
-        onChange={(event) => setName(event.target.value)}
+        disabled
         placeholder="First name"
-        className="h-12 rounded-xl border border-[#1A1A1A]/12 bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
+        className="h-12 cursor-not-allowed rounded-xl border border-[#1A1A1A]/10 bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] opacity-55 placeholder:text-[#8B867B]"
       />
       <input
         type="email"
-        required
-        value={email}
-        onChange={(event) => setEmail(event.target.value)}
+        disabled
         placeholder="Best email address"
-        className="h-12 rounded-xl border border-[#1A1A1A]/12 bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
+        className="h-12 cursor-not-allowed rounded-xl border border-[#1A1A1A]/10 bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] opacity-55 placeholder:text-[#8B867B]"
       />
       <button
-        type="submit"
-        disabled={status === 'loading'}
-        className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-6 text-[15px] font-semibold text-white transition hover:bg-[#7C3AED] disabled:opacity-60"
+        type="button"
+        disabled
+        className="inline-flex min-h-[52px] cursor-not-allowed items-center justify-center gap-2 rounded-full bg-[#8B5CF6]/45 px-6 text-[15px] font-semibold text-white"
       >
-        {status === 'loading' ? 'Saving your seat…' : 'Save My Seat'}
-        <ArrowRight className="h-4 w-4" />
+        Registration Opens Soon
+        <Lock className="h-4 w-4" />
       </button>
-      {status === 'error' ? (
-        <p className="text-sm text-[#B3261E]">Something went wrong. Please try again.</p>
-      ) : (
-        <p className={`${mono} flex items-center gap-1.5 text-[10px] leading-4 text-[#8B867B]`}>
-          <Lock className="h-3 w-3" /> No spam. Unsubscribe anytime.
-        </p>
-      )}
-    </form>
+      <a
+        href="https://chat.dezygn.com/signup"
+        className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-[#1A1A1A]/[0.12] bg-white px-6 text-sm font-semibold text-[#1A1A1A] transition hover:bg-[#EDEBE6]"
+      >
+        Start Free With Dezygn
+        <ArrowRight className="h-4 w-4" />
+      </a>
+    </div>
   );
 }
 
@@ -222,7 +177,7 @@ const WebinarPage = () => {
             {secrets.map((secret, index) => (
               <article
                 key={secret.title}
-                className={`rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0 ${
+                className={`rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0 ${
                   index % 2 === 0 ? 'sm:rotate-1' : 'sm:-rotate-1'
                 }`}
               >
