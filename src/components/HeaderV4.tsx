@@ -13,11 +13,11 @@ const SIGNUP_URL = 'https://chat.dezygn.com/signup';
 const HeaderV4 = () => {
   const [open, setOpen] = useState(false);
 
+  // Free Training and AIPA live in the footer — the header pushes the lead magnet.
   const nav = [
     ['Product', '/#flows'],
     ['Pricing', '/#pricing'],
-    ['Free Training', '/webinar'],
-    ['AIPA', '/aipa'],
+    ['Free Report', '/free-report'],
   ];
 
   return (

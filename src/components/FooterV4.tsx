@@ -43,6 +43,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Learn & Programs',
     links: [
+      { label: 'Free Report', href: '/free-report' },
       { label: 'Free Training', href: '/webinar' },
       { label: 'AIPA Launchpad', href: '/aipa' },
       { label: 'Community', href: '/community' },

@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import {
   ArrowRight,
@@ -22,6 +21,7 @@ import {
 } from 'lucide-react';
 import HeaderV4 from '../components/HeaderV4';
 import FooterV4 from '../components/FooterV4';
+import ReportCaptureForm from '../components/ReportCaptureForm';
 
 /**
  * Dezygn v2 tokens (docs/v2-style-guide.md):
@@ -944,41 +944,10 @@ function FounderSection() {
   );
 }
 
-/** Email-capture lead magnet — posts to the existing Supabase lead-magnet-capture function. */
+/** Email-capture lead magnet — form logic lives in the shared ReportCaptureForm. */
 function LeadMagnetSection() {
-  const navigate = useNavigate();
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    if (status === 'loading') return;
-    setStatus('loading');
-
-    try {
-      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
-      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
-      if (!supabaseUrl || !supabaseAnonKey) throw new Error('Missing Supabase environment variables.');
-
-      const response = await fetch(`${supabaseUrl}/functions/v1/lead-magnet-capture`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${supabaseAnonKey}`,
-          apikey: supabaseAnonKey,
-        },
-        body: JSON.stringify({ name, email, lead_magnet: 'visual_syntax_cheatsheet' }),
-      });
-      if (!response.ok) throw new Error('Request failed');
-      navigate('/cheatsheet');
-    } catch {
-      setStatus('error');
-    }
-  };
-
   return (
-    <section id="cheatsheet" className="relative overflow-hidden bg-[#EDEBE6] px-5 py-20 sm:py-28">
+    <section id="report" className="relative overflow-hidden bg-[#EDEBE6] px-5 py-20 sm:py-28">
       <span aria-hidden className={`${serif} pointer-events-none absolute -right-4 top-12 hidden rotate-12 text-[120px] italic leading-none text-[#8B5CF6]/15 lg:block`}>
         ✦
       </span>
@@ -986,21 +955,22 @@ function LeadMagnetSection() {
         <Reveal>
           <div>
             <p className={`${mono} inline-flex -rotate-2 items-center gap-2 rounded-full border border-[#1A1A1A]/10 bg-white px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED] shadow-sm`}>
-              Free download
+              Free report
             </p>
             <h2 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-tight text-[#1A1A1A] sm:text-5xl">
-              Steal the Visual Syntax <span className={`${serif} italic font-normal`}>Cheatsheet.</span>
+              How to Make Money Selling AI <span className={`${serif} italic font-normal`}>Images.</span>
             </h2>
             <p className="mt-5 max-w-xl text-[15px] leading-7 text-[#6B6459] sm:text-base">
-              Every client-ready AI photo is built from the same 6 ingredients: Style, Subject, Action, Scene, Camera,
-              and Brand. This one-page cheatsheet is the framework we use on real client work at Fairway Creatives —
-              so you stop gambling with prompts and start engineering images.
+              One client pays me $639/month for 12 AI-generated images — and I landed him with a brand-new Upwork
+              account. No portfolio, no reviews, no sales skills. This free report walks you through Proof Before
+              Pitch: you create a sample of the client's actual product before you ever talk to them, and the
+              sample does the selling.
             </p>
             <ul className="mt-6 space-y-3">
               {[
-                'The 6 ingredients, with examples for each',
-                'When to use words vs reference images (multimodal anchoring)',
-                'Why ingredient order changes your output',
+                'The exact Upwork search where problem-aware clients post daily',
+                'The 3 ingredients of a sample that sells itself — pulled straight from the job post',
+                'The word-for-word scripts, plus the Quality Gate checklist',
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] leading-6 text-[#2B2B2B]">
                   <Check className="mt-1 h-4 w-4 shrink-0 text-[#7C3AED]" />
@@ -1012,40 +982,7 @@ function LeadMagnetSection() {
         </Reveal>
         <Reveal delay={120}>
           <div className="rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.12)] transition-transform duration-500 ease-out hover:rotate-0 sm:p-10">
-            <form onSubmit={handleSubmit} className="grid gap-4">
-                <p className={`${mono} text-[10px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>
-                  Get the cheatsheet
-                </p>
-                <input
-                  type="text"
-                  required
-                  value={name}
-                  onChange={(event) => setName(event.target.value)}
-                  placeholder="First name"
-                  className="h-12 rounded-xl border border-[#1A1A1A]/[0.12] bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
-                />
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(event) => setEmail(event.target.value)}
-                  placeholder="Email address"
-                  className="h-12 rounded-xl border border-[#1A1A1A]/[0.12] bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  disabled={status === 'loading'}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#1A1A1A] px-6 text-sm font-semibold text-[#EDEBE6] transition hover:bg-black disabled:opacity-60"
-                >
-                  {status === 'loading' ? 'Sending…' : 'Send Me the Cheatsheet'}
-                  <ArrowRight className="h-4 w-4" />
-                </button>
-                {status === 'error' ? (
-                  <p className="text-sm text-[#B3261E]">Something went wrong. Please try again.</p>
-                ) : (
-                  <p className={`${mono} text-[10px] leading-4 text-[#8B867B]`}>No spam. Unsubscribe anytime.</p>
-                )}
-              </form>
+            <ReportCaptureForm />
           </div>
         </Reveal>
       </div>
@@ -1116,6 +1053,8 @@ const LandingPageV4 = () => {
 
         <MarqueeBand />
 
+        <LeadMagnetSection />
+
         <div id="flows">
           {featureBlocks.map((block, index) => (
             <ProductShowcase key={block.eyebrow} block={block} index={index} tinted={index % 2 === 1} />
@@ -1151,8 +1090,6 @@ const LandingPageV4 = () => {
         </section>
 
         <FounderSection />
-
-        <LeadMagnetSection />
 
         <section className="bg-[#F7F5F0] px-5 py-20 sm:py-28">
           <Reveal>

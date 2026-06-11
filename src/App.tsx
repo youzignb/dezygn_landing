@@ -15,8 +15,10 @@ import AccessibilityPage from './pages/AccessibilityPage';
 import LandingPageV3 from './pages/LandingPageV3';
 import LandingPageV4 from './pages/LandingPageV4';
 import WebinarPage from './pages/WebinarPage';
-import CheatsheetThankYouPage from './pages/CheatsheetThankYouPage';
-import ClientSystemPage from './pages/ClientSystemPage';
+import ReportThankYouPage from './pages/ReportThankYouPage';
+import FreeReportPage from './pages/FreeReportPage';
+import ScrollToTop from './components/ScrollToTop';
+import ExitIntentReportModal from './components/ExitIntentReportModal';
 import AipaPage from './pages/AipaPage';
 import EarningsDisclaimerPage from './pages/EarningsDisclaimerPage';
 import CookieBanner from './components/CookieBanner';
@@ -51,6 +53,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPageV4 />} />
         {/* Temporary archive of the previous homepage */}
@@ -82,8 +85,13 @@ function App() {
         <Route path="/success" element={<SuccessPage />} />
         <Route path="/audit" element={<AuditPage />} />
         <Route path="/webinar" element={<WebinarPage />} />
-        <Route path="/cheatsheet" element={<CheatsheetThankYouPage />} />
-        <Route path="/client-system" element={<ClientSystemPage />} />
+        {/* Lead magnet squeeze + thank-you pages (Proof Before Pitch report; /cheatsheet was its old home) */}
+        <Route path="/free-report" element={<FreeReportPage />} />
+        <Route path="/proof-before-pitch" element={<ReportThankYouPage />} />
+        <Route path="/cheatsheet" element={<Navigate to="/proof-before-pitch" replace />} />
+        {/* TEMPORARY: /client-system tripwire page is not ready — redirect to the lead magnet
+            thank-you page until the real checkout page ships. Restore ClientSystemPage then. */}
+        <Route path="/client-system" element={<Navigate to="/proof-before-pitch" replace />} />
         {/* Course is retired — its SEO equity flows to the webinar funnel. */}
         <Route path="/course" element={<Navigate to="/webinar" replace />} />
         <Route path="/community" element={<CommunityPage />} />
@@ -118,6 +126,7 @@ function App() {
         <Route path="/glossary" element={<GlossaryIndexPage />} />
         <Route path="/glossary/:slug" element={<GlossaryPage />} />
       </Routes>
+      <ExitIntentReportModal />
       <CookieBanner />
     </Router>
     </HelmetProvider>

@@ -20,7 +20,8 @@ const staticRoutes = [
   '/features/concepts',
   '/features/feedback',
   '/webinar',
-  '/client-system',
+  '/free-report',
+  // '/client-system', // TEMPORARY: redirects to /proof-before-pitch until the tripwire page ships
   '/aipa',
   '/apply',
   '/community',

@@ -35,9 +35,9 @@ export const resources: Resource[] = [
     publishedAt: "2026-06-10",
     updatedAt: "2026-06-10",
     cta: {
-      label: "Get the Visual Syntax Cheatsheet (free)",
-      href: "/#cheatsheet",
-      subtext: "The full framework on two pages — the same reference we use on client work.",
+      label: "Get the free report: How to Make Money Selling AI Images",
+      href: "/#report",
+      subtext: "The Proof Before Pitch method for landing your first AI photography client.",
     },
     sections: [
       {

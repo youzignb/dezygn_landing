@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>How to Make Money Selling AI Images — Proof Before Pitch</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* ============ V4 "Paper & Ink" tokens ============ */
+:root {
+  --ink: #1A1A1A;
+  --ink-warm: #2B2B2B;
+  --paper: #EDEBE6;
+  --vellum: #F7F5F0;
+  --muted: #6B6459;
+  --dim: #8B867B;
+  --accent: #8B5CF6;
+  --accent-deep: #7C3AED;
+  --paper-on-dark: #E8E4DB;
+}
+
+@page { size: A4; margin: 16mm 16mm 18mm; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  background: var(--vellum);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.75;
+  color: var(--ink);
+}
+
+.serif { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; font-weight: 400; }
+.mono { font-family: 'IBM Plex Mono', ui-monospace, monospace; }
+
+a { color: var(--accent-deep); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+p { margin: 0 0 11pt; }
+strong { font-weight: 600; }
+
+/* ============ Cover ============ */
+.cover {
+  height: 261mm;
+  background: var(--ink);
+  border-radius: 24px;
+  color: var(--paper-on-dark);
+  padding: 22mm 18mm 18mm;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  break-after: page;
+}
+.cover .glyph {
+  position: absolute;
+  top: 8mm;
+  right: 4mm;
+  font-size: 130pt;
+  line-height: 1;
+  color: rgba(139, 92, 246, 0.22);
+  transform: rotate(12deg);
+}
+.cover .glyph2 {
+  position: absolute;
+  bottom: 30mm;
+  left: -6mm;
+  font-size: 110pt;
+  line-height: 1;
+  color: rgba(139, 92, 246, 0.14);
+  transform: rotate(-8deg);
+}
+.cover-eyebrow {
+  display: inline-block;
+  align-self: flex-start;
+  transform: rotate(-2deg);
+  background: var(--vellum);
+  color: var(--accent-deep);
+  border-radius: 999px;
+  padding: 5pt 12pt;
+  font-size: 8pt;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.cover-title {
+  margin-top: 26mm;
+  font-size: 34pt;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+.cover-title .serif { color: var(--accent); font-weight: 400; letter-spacing: 0; }
+.cover-sub {
+  margin-top: 12mm;
+  font-size: 15pt;
+  line-height: 1.45;
+  color: rgba(232, 228, 219, 0.7);
+  max-width: 125mm;
+}
+.cover-method {
+  margin-top: 8mm;
+  font-size: 8.5pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.cover-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid rgba(232, 228, 219, 0.15);
+  padding-top: 8mm;
+}
+.cover-footer .who { font-size: 10.5pt; font-weight: 600; }
+.cover-footer .who span { display: block; font-weight: 400; font-size: 8.5pt; color: rgba(232,228,219,0.55); margin-top: 2pt; }
+.cover-footer .site { font-size: 8.5pt; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(232,228,219,0.55); }
+
+/* ============ Chapters ============ */
+.chapter { break-before: page; }
+.chapter-head { margin-bottom: 9mm; }
+.eyebrow {
+  display: inline-block;
+  transform: rotate(-2deg);
+  background: #FFFFFF;
+  color: var(--accent-deep);
+  border: 1px solid rgba(26, 26, 26, 0.1);
+  border-radius: 999px;
+  padding: 4pt 11pt;
+  font-size: 8pt;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  box-shadow: 0 1px 2px rgba(26,26,26,0.06);
+}
+h2 {
+  margin-top: 7mm;
+  font-size: 22pt;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+h2 .serif { color: var(--accent-deep); font-weight: 400; letter-spacing: 0; }
+h3 {
+  font-size: 13pt;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 16pt 0 8pt;
+  break-after: avoid;
+}
+.kicker {
+  font-size: 8pt;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--dim);
+  margin-bottom: 3pt;
+}
+
+ul.plain, ol.plain { margin: 0 0 11pt 16pt; }
+ul.plain li, ol.plain li { margin-bottom: 4pt; }
+
+/* tick list */
+ul.ticks { list-style: none; margin: 0 0 11pt; }
+ul.ticks li { padding-left: 16pt; position: relative; margin-bottom: 5pt; }
+ul.ticks li::before { content: '✓'; position: absolute; left: 0; top: 0; color: var(--accent-deep); font-weight: 600; }
+
+/* checkbox list (quality gate) */
+ul.boxes { list-style: none; margin: 0 0 11pt; }
+ul.boxes li { padding-left: 18pt; position: relative; margin-bottom: 7pt; }
+ul.boxes li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 3.5pt;
+  width: 9pt;
+  height: 9pt;
+  border: 1.4px solid var(--accent-deep);
+  border-radius: 2.5pt;
+}
+
+/* ============ Cards ============ */
+.card {
+  background: #FFFFFF;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  border-radius: 14pt;
+  padding: 14pt 16pt;
+  margin: 14pt 0;
+  box-shadow: 0 8px 24px rgba(26, 26, 26, 0.06);
+  break-inside: avoid;
+}
+.card .card-label {
+  font-size: 8pt;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+  margin-bottom: 7pt;
+}
+.card p:last-child, .card ul:last-child, .card ol:last-child { margin-bottom: 0; }
+
+.action { background: var(--ink); color: var(--paper-on-dark); border: none; }
+.action .card-label { color: var(--accent); }
+.action a { color: #C4B5FD; }
+
+/* script / letter quote */
+.script {
+  background: #FFFFFF;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+  border-left: 3px solid var(--accent);
+  border-radius: 10pt;
+  padding: 12pt 14pt;
+  margin: 12pt 0;
+  font-size: 9.8pt;
+  break-inside: avoid;
+}
+.script p { margin-bottom: 7pt; }
+.script p:last-child { margin-bottom: 0; }
+
+/* code-ish keyword block */
+.keywords {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 8.6pt;
+  line-height: 1.6;
+  background: var(--ink);
+  color: var(--paper-on-dark);
+  border-radius: 10pt;
+  padding: 11pt 13pt;
+  margin: 12pt 0;
+  break-inside: avoid;
+}
+
+/* figures */
+figure { margin: 14pt 0; break-inside: avoid; }
+figure img {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid rgba(26, 26, 26, 0.12);
+}
+figure.narrow img { width: 78%; margin: 0 auto; }
+figure.mid img { width: 88%; margin: 0 auto; }
+figcaption {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  font-size: 7.6pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--dim);
+  text-align: center;
+  margin-top: 6pt;
+}
+
+/* pull quote */
+.pull {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  font-size: 16pt;
+  line-height: 1.35;
+  color: var(--accent-deep);
+  text-align: center;
+  max-width: 130mm;
+  margin: 18pt auto;
+  break-inside: avoid;
+}
+
+.muted { color: var(--muted); }
+.big-stat { font-size: 13pt; font-weight: 600; }
+
+/* final CTA banner */
+.cta-banner {
+  background: var(--accent-deep);
+  color: #FFFFFF;
+  border-radius: 18pt;
+  padding: 18pt 20pt;
+  margin: 16pt 0;
+  break-inside: avoid;
+}
+.cta-banner .card-label { color: rgba(255,255,255,0.7); font-size: 8pt; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; margin-bottom: 7pt; }
+.cta-banner p { margin-bottom: 8pt; }
+.cta-banner p:last-child { margin-bottom: 0; }
+.cta-banner a { color: #FFFFFF; font-weight: 600; }
+
+hr.spacer { border: none; border-top: 1px solid rgba(26,26,26,0.12); margin: 16pt 0; }
+
+.sig { margin-top: 14pt; }
+.ps { font-size: 9.3pt; color: var(--muted); font-style: italic; margin-top: 12pt; }
+</style>
+</head>
+<body>
+
+<!-- ==================== COVER ==================== -->
+<div class="cover">
+  <span class="glyph serif">✦</span>
+  <span class="glyph2 serif">✳</span>
+  <span class="cover-eyebrow mono">Free Report · Dezygn</span>
+  <h1 class="cover-title">
+    How to Make Money Selling AI&nbsp;Images — Without a Website, a Portfolio, or Any <span class="serif">Sales&nbsp;Skills.</span>
+  </h1>
+  <p class="cover-sub serif">The Proof Before Pitch method for landing your first AI photography client.</p>
+  <p class="cover-method mono">Find · Create · Send</p>
+  <div class="cover-footer">
+    <p class="who">Bertrand<span>Founder, Dezygn · AI photographer with real, paying clients</span></p>
+    <p class="site mono">dezygn.com</p>
+  </div>
+</div>
+
+<!-- ==================== INTRO ==================== -->
+<section>
+  <div class="chapter-head">
+    <span class="eyebrow mono">Introduction</span>
+    <h2>The $639/Month <span class="serif">Email.</span></h2>
+  </div>
+
+  <p>Let me start with real numbers.</p>
+  <p>Right now, one single client pays me $639/month for 12 AI-generated images.</p>
+  <p>That's $7,668 per year. From ONE client.</p>
+  <p>That's $53.25 per AI-generated image.</p>
+  <p class="big-stat">I repeat: $53 per AI generated image.</p>
+
+  <figure>
+    <img src="img/milestone-639.png" alt="Upwork fixed-price milestone: Month 1 deliverables, R&D + 12 images, $639.00" />
+    <figcaption>The actual Upwork milestone. 12 images, $639. Every month.</figcaption>
+  </figure>
+
+  <p>That's crazy. Because right now, most people think AI images are slop.</p>
+  <p>Let me tell you something: if you know what you do, it's not.</p>
+  <p>And here's the part that matters for you:</p>
+  <p>I started with a brand-new Upwork account. No history. No reviews. No portfolio. I hadn't sold a service to anyone since 2009, when I was a student doing web design in Manchester.</p>
+  <p>I had no sales skills. I still don't, really.</p>
+  <p>So how did I land that client?</p>
+  <p>Not with a portfolio. Not with a pitch. Not with "10 tips to write better proposals."</p>
+  <p>I used something I call <strong>Proof Before Pitch</strong>.</p>
+  <p>Here's the core idea:</p>
+  <p>Portfolios and sales skills exist for one reason — to make a stranger trust you BEFORE you do the work.</p>
+  <p>Proof Before Pitch skips all of that. You do the work first. You create a sample visual for the client's actual product, in their actual style, before they pay you anything.</p>
+  <p>When they open your message, they don't have to imagine anything. They don't have to click a portfolio link and hope you "get" their brand. They SEE their product, done right.</p>
+  <p class="pull">The sample IS the sales conversation.</p>
+  <p>That's it. That's the method. The rest of this guide shows you exactly how to run it.</p>
+
+  <h3>Why this opportunity exists</h3>
+  <p>Small businesses selling physical products online (e-com stores on Shopify, Amazon, WordPress) live and die by two things:</p>
+  <ol class="plain">
+    <li>Their copy / brand / offer</li>
+    <li>Their visuals</li>
+  </ol>
+  <p>Until recently, the only way to get great visuals was studio photography. Expensive, slow, a ton of organisation. So most small businesses just made do with basic product pics.</p>
+  <p>Now AI can take a boring iPhone photo of a product and turn it into lifestyle photography. More engagement, higher conversions, more sales. Every smart e-com business knows this by now.</p>
+  <p>So you might be wondering...</p>
+
+  <h3>"Can't they just use ChatGPT themselves?"</h3>
+  <p>Believe me, most try.</p>
+  <p>I was chatting with a client the other day. He owns a toy company. He's a marketer. He knows how to use AI image tools.</p>
+  <p>He still paid me $100 for a couple images.</p>
+  <p>Why? Because when he used a sloppy AI image that embellished his product, a customer left him a 2-star review on TrustPilot. "Item not as pictured."</p>
+
+  <figure class="narrow">
+    <img src="img/slop-warning.jpg" alt="Facebook post warning sellers not to use AI for product photos because they mislead buyers" />
+    <figcaption>Buyers notice. Sloppy AI product photos get called out — publicly.</figcaption>
+  </figure>
+
+  <p>In e-commerce, "close enough" is a refund.</p>
+  <p>Here's what actually matters in AI photography, and why most business owners fail at it:</p>
+  <ol class="plain">
+    <li><strong>ACCURACY</strong> — does the AI image accurately represent the product? Dimensions, texture, colors?</li>
+    <li><strong>REALISM</strong> — if there's a human model, do they look real? Or plastic AI skin?</li>
+    <li><strong>BRANDING</strong> — is the image on-brand? Right audience, right colors, right environments?</li>
+  </ol>
+  <p>Getting all three right is a skill. And skills get paid.</p>
+  <p>So when the e-com owner tries it himself with Gemini, ChatGPT, Midjourney... and inevitably fails... guess where he goes?</p>
+  <p><strong>Upwork.</strong> To ask for help. Every single day, dozens of them.</p>
+  <p>That's where you come in.</p>
+  <p>One honest warning before we start: this is not for everybody. You need a bit of creative fibre in you. If you've done graphic design, web design, photography, content — you'll love this. If not, this might not be fun for you. This is not for accountants lol.</p>
+
+  <div class="card">
+    <p class="card-label mono">The Plan</p>
+    <ul class="ticks">
+      <li><strong>Step 1:</strong> Find one problem-aware client (today)</li>
+      <li><strong>Step 2:</strong> Create the proof</li>
+      <li><strong>Step 3:</strong> Send the pitch that isn't a pitch</li>
+    </ul>
+  </div>
+  <p>Let's go.</p>
+</section>
+
+<!-- ==================== STEP 1 ==================== -->
+<section class="chapter">
+  <div class="chapter-head">
+    <span class="eyebrow mono">Step 1</span>
+    <h2>Find One Problem-Aware Client <span class="serif">(Today).</span></h2>
+  </div>
+
+  <p>Forget cold outreach for now. Forget DMing strangers who've never thought about AI photography.</p>
+  <p>We start on Upwork, for one simple reason:</p>
+  <p><strong>On Upwork, the clients are already looking for you.</strong></p>
+  <p>They've already posted a job. They already know they have a problem. They already have a payment method connected. These are not cold leads. These are problem-aware clients with their hand up.</p>
+  <p>Most of them are exactly the failed-DIY business owners from the intro. They tried ChatGPT. They got slop. Now they're paying for help.</p>
+
+  <h3>The exact search</h3>
+  <p>Open Upwork and search these keywords:</p>
+  <div class="keywords">("AI photography" OR "ai photo" OR "ai image" OR "Stable Diffusion" OR "Midjourney AI" OR "StarryAI" OR "Leonardo Ai" OR "AI-Generated Image" OR "Image Prompt Engineering" OR "AI Image Editing") NOT video NOT photoshop</div>
+  <p><a href="https://www.upwork.com/nx/search/jobs/?nbs=1&amp;q=%28%22AI%20photography%22%20OR%20%22ai%20photo%22%20OR%20%22ai%20image%22%20OR%20%22Stable%20Diffusion%22%20OR%20%22Midjourney%20AI%22%20OR%20%22StarryAI%22%20OR%20%22Leonardo%20Ai%22%20OR%20%22AI-Generated%20Image%22%20OR%20%22Image%20Prompt%20Engineering%22%20OR%20%22AI%20Image%20Editing%22%29%20NOT%20video%20NOT%20photoshop">→ Or click here to open this exact search on Upwork</a></p>
+  <p>You will see posts from e-com business owners who need product visuals, lifestyle images, models holding their products, ad creatives, Amazon listing images.</p>
+
+  <figure class="mid">
+    <img src="img/upwork-jobs.jpg" alt="Upwork search results showing AI image generation job posts" />
+    <figcaption>A random day on Upwork. These jobs post daily — at least one per hour.</figcaption>
+  </figure>
+
+  <p>There are dozens of these every day. At least one per hour. No single freelancer can take all these clients.</p>
+
+  <h3>What a good job post looks like</h3>
+  <p>A good job post gives you at least these details:</p>
+  <ul class="plain">
+    <li>the product type</li>
+    <li>the visual style they want</li>
+  </ul>
+  <p>A great job post (these are rarer) will give you:</p>
+  <ul class="plain">
+    <li>the brand name</li>
+    <li>product images</li>
+  </ul>
+  <p>Example of a good one:</p>
+  <div class="script">
+    <p>"We need AI lifestyle images for a skincare product with a realistic model in a clean bathroom setting."</p>
+  </div>
+  <p>That's more than enough. We can work with that.</p>
+  <p>A bad one says "I need pretty AI images" with no details. Skip those for now (or apply and ask for details — more on that in Step 3).</p>
+
+  <h3>Prioritize recent jobs</h3>
+  <p>Apply to jobs posted TODAY. Ideally within the last few hours. Less competition, the client is still active, and you get in before dozens of other freelancers.</p>
+
+  <div class="card action">
+    <p class="card-label mono">✓ Your 15-minute action</p>
+    <p>Open Upwork right now. Set up an account if you haven't got one and run the searches above. Find <strong>3 recent job posts</strong> that fit the "good enough" description above. Save them.</p>
+    <p>That's it. Don't apply yet. Just find them.</p>
+  </div>
+</section>
+
+<!-- ==================== STEP 2 ==================== -->
+<section class="chapter">
+  <div class="chapter-head">
+    <span class="eyebrow mono">Step 2</span>
+    <h2>Create the <span class="serif">Proof.</span></h2>
+  </div>
+
+  <p>This is the heart of Proof Before Pitch.</p>
+  <p>Select ONE of the 3 jobs you saved, and we're going to create a sample visual of THEIR product before you ever talk to them.</p>
+
+  <h3>The 3 ingredients</h3>
+  <p>Every sample is built from 3 ingredients, and you pull all of them straight from the job post:</p>
+  <ol class="plain">
+    <li><strong>The product type</strong> — this is the only one you truly need, and almost every post has it. Sportswear, skincare, tabletop games, candles. Most brands won't reveal their name or post product images (maybe 10% do). Doesn't matter. "We're a sportswear brand" is enough to work with.</li>
+    <li><strong>The output they want</strong> — what kind of shots, for what purpose. Lifestyle with models? Clean product shots for Amazon? Ad creatives? Most posts tell you. If they don't, default to a lifestyle shot with a model or a hero product shot — it's what sells the dream best.</li>
+    <li><strong>The brand world</strong> — who their customer is and what vibe fits. If they shared their website, use it. If not (most of the time), infer it from the post: a "premium skincare brand" and a "fun tabletop game company" live in completely different worlds. Pick the world and commit to it.</li>
+  </ol>
+  <p>Now feed those into the AI and create the sample.</p>
+  <p>If all you have is "we're a sportswear brand and we want sportswear lifestyle visuals" — that's more than enough. You create exactly that: a realistic athlete, in motion, in a setting that matches the brand's level. The client looks at it and thinks: <em>"That's exactly what we meant."</em></p>
+  <p>And on the rare job where they DID share their brand and product images? Jackpot. Now the sample shows THEIR actual product in THEIR actual style, and the reaction becomes: <em>"That's MY product. How did they do that?"</em></p>
+  <p>Either way, that's the wow moment. That's what no portfolio link can do.</p>
+
+  <h3>The quality bar</h3>
+  <p>Before you send anything, remember the triad from the intro. Your sample must pass all three:</p>
+  <ul class="ticks">
+    <li><strong>Accurate</strong> — looks like the real product</li>
+    <li><strong>Realistic</strong> — no plastic AI people</li>
+    <li><strong>On-brand</strong> — matches their visual identity</li>
+  </ul>
+  <p>If your image fails any of these, it's slop, and slop gets ignored (or worse, remembered).</p>
+
+  <figure class="mid">
+    <img src="img/jacket-before-after.jpg" alt="A plain product shot of a blue jacket transformed into a realistic on-course lifestyle photo" />
+    <figcaption>The bar: from flat product shot to a lifestyle photo that passes all three checks.</figcaption>
+  </figure>
+
+  <h3>How I actually do it</h3>
+  <p>You can do this with any AI image tool. Gemini, ChatGPT, Fal — whatever wrapper you like. The method doesn't depend on the tool.</p>
+  <p>But I'll be honest: doing it manually means juggling brand research, prompt writing, product prep, and a lot of trial and error. I got tired of that workflow, so I built it into a tool.</p>
+  <p>It's called <a href="https://chat.dezygn.com/signup"><strong>Dezygn</strong></a>, and it has an agent (her name is Awa) that runs this exact workflow:</p>
+  <ol class="plain">
+    <li>Tell Awa the brief: product type, what output they want, who the brand seems to be for</li>
+    <li>If they shared their website, paste the URL → it extracts their colors, personality, and visual style automatically</li>
+    <li>If they shared product images, upload them</li>
+    <li>Awa fills in the rest and generates the sample</li>
+  </ol>
+
+  <figure>
+    <img src="img/awa-bare-skin.jpg" alt="The Dezygn interface with Awa generating an on-brand campaign for a nail polish brand" />
+    <figcaption>Awa running a brief inside Dezygn — brand world, product, output, all in one place.</figcaption>
+  </figure>
+
+  <p>What takes an hour manually takes about 10-15 minutes this way.</p>
+  <p>This is exactly how I won this job below:</p>
+
+  <figure>
+    <img src="img/won-job.jpg" alt="Three panels: Awa generates the visuals, the samples are sent to the client, the client accepts the offer" />
+    <figcaption>Awa generates the visuals → send them with the application → hired.</figcaption>
+  </figure>
+
+  <p>Think about it: 99% of applications in jobs never include a sample. If you are the one that does, you stand apart.</p>
+  <p class="pull">"While 40 Freelancers Beg for the Job, One Quietly Hands Over the Finished Work."</p>
+
+  <div class="card action">
+    <p class="card-label mono">✓ Your 30-minute action</p>
+    <ol class="plain">
+      <li>Sign up for Dezygn free at <a href="https://chat.dezygn.com/signup">dezygn.com</a> — free plan, 50 credits, no card required</li>
+      <li>Pick ONE of your 3 saved jobs</li>
+      <li>Copy paste the job description into Dezygn</li>
+      <li>Generate your first samples</li>
+    </ol>
+    <p style="margin-top:8pt;">One rule: <strong>don't spend more than 10 minutes per sample.</strong> This is a numbers game, not a perfection game. Good enough to wow beats perfect-but-never-sent.</p>
+  </div>
+</section>
+
+<!-- ==================== STEP 3 ==================== -->
+<section class="chapter">
+  <div class="chapter-head">
+    <span class="eyebrow mono">Step 3</span>
+    <h2>Send the Pitch That Isn't a <span class="serif">Pitch.</span></h2>
+  </div>
+
+  <p>Now the part everyone overthinks: the application.</p>
+  <p>Here's the thing. You're not going to sell anything. The image does the selling. Your message just delivers it.</p>
+
+  <h3>The cover letter</h3>
+  <p>Keep it stupidly short. Something like:</p>
+  <div class="script">
+    <p>Hi [name],</p>
+    <p>I read your post about needing [what they asked for] for your [product type] brand.</p>
+    <p>Instead of sending you a portfolio, I went ahead and created a sample of exactly that and attached it.</p>
+    <p>If the direction feels right, send me your product photos and I'll create one with YOUR actual product, free. Then if you like it, we take it from there.</p>
+    <p>[Your name]</p>
+  </div>
+  <p>(And on the rare job where they did share their product images? Even better — your attached sample already shows their actual product, and the free-sample line becomes "tell me what to change and I'll send another version.")</p>
+  <p>That's it. No "I'm a passionate creative professional with 10 years of experience." No bullet list of skills. The sample is attached. The sample does the talking.</p>
+
+  <h3>For vague job posts</h3>
+  <p>If the post doesn't even tell you the product type (rare, but it happens), use this instead:</p>
+  <div class="script">
+    <p>Hi [name],</p>
+    <p>I can help with this. Want me to create a free sample for your product first, so you can judge my work on YOUR product instead of a portfolio?</p>
+    <p>Just send me a product photo and your website and I'll have something for you within a day.</p>
+  </div>
+  <p>"Want me to create a free sample for you?" gets an insanely high response rate. Because who says no to free?</p>
+
+  <h3>When they reply</h3>
+  <p>Collect their brief, create the image in Dezygn, send it. From there the conversation is about scope and price, not about whether you're good enough. The sample already settled that.</p>
+
+  <h3>The math</h3>
+  <p>Here's how this compounds:</p>
+  <ul class="ticks">
+    <li>Dedicate <strong>60 minutes per day</strong> to applications</li>
+    <li>That's <strong>3 to 6 applications</strong> per day sent</li>
+    <li>Every week, you have <strong>15-30 applications</strong> out there, each with a personalized sample</li>
+    <li>Every sample you create builds your skills (and your portfolio, as a side effect)</li>
+    <li>Out of those samples, you get hired</li>
+  </ul>
+  <p>This is exactly how I started, and it's the same strategy I use till this day. And once you have one client and one testimonial, the second is 10x easier. The third is basically automatic. It snowballs.</p>
+
+  <div class="card action">
+    <p class="card-label mono">✓ Your action</p>
+    <p>Send your sample to the job from Step 2. Then apply to your other 2 saved jobs (create samples if they have details, offer a free sample if they don't).</p>
+    <p>Three applications out the door. You're no longer thinking about doing this. You're doing it.</p>
+  </div>
+</section>
+
+<!-- ==================== BONUS 1 ==================== -->
+<section class="chapter">
+  <div class="chapter-head">
+    <span class="eyebrow mono">Bonus #1</span>
+    <h2>The Quality Gate <span class="serif">(Don't Skip This).</span></h2>
+  </div>
+
+  <p>True story.</p>
+  <p>Early on, I created an outreach sample for a prospect. Nice image. Good composition. Brand colors on point.</p>
+  <p>One problem.</p>
+  <p>The model in the image had six fingers.</p>
+  <p><strong>SIX. FINGERS.</strong></p>
+  <p>I was excited, I didn't check, I hit send. Never heard back. Obviously.</p>
+  <p>That's when I built the Quality Gate. Now every single image goes through this checklist before it leaves my desktop:</p>
+
+  <div class="card">
+    <p class="card-label mono">The Quality Gate</p>
+    <ul class="boxes">
+      <li><strong>Brand check</strong> — does the vibe actually match their brand? Right colors, right audience, right world?</li>
+      <li><strong>Realism check</strong> — does the person look real? Skin, eyes, and above all: <strong>THE HANDS.</strong> AI still struggles with hands. Every. Single. Time. Count the fingers.</li>
+      <li><strong>Product check</strong> — does the product look like the REAL product? Shape, proportions, label, texture?</li>
+    </ul>
+  </div>
+
+  <p>It takes 10-15 minutes. That's nothing compared to the cost of sending a six-fingered image to a potential $500/month client.</p>
+  <p>Learn from my mistake lol.</p>
+</section>
+
+<!-- ==================== BONUS 2 ==================== -->
+<section class="chapter">
+  <div class="chapter-head">
+    <span class="eyebrow mono">Bonus #2</span>
+    <h2>This Works Outside Upwork <span class="serif">Too.</span></h2>
+  </div>
+
+  <p>One more thing.</p>
+  <p>After you've run this method on Upwork a few times, you'll notice something:</p>
+  <p><strong>Nothing about Proof Before Pitch is Upwork-specific.</strong></p>
+  <p>Upwork is just where the problem-aware clients raise their hands. But for every brand posting a job there, thousands of e-com brands never will. They're on Instagram, TikTok, running Shopify stores, buying ads — and quietly settling for mediocre visuals.</p>
+  <p>You can reach them with the exact same method. Except this time, YOU pick the brand:</p>
+  <ol class="plain">
+    <li><strong>Find a brand</strong> — scroll Instagram or TikTok ads in a niche you like, browse Shopify stores, google "[niche] + [country]". Pick one whose visuals you know you can beat.</li>
+    <li><strong>Analyze their brand</strong> — and here's the beautiful part: unlike Upwork, you now have EVERYTHING. Their full website. Their socials. Their actual product images. Every single prospect is the jackpot scenario from Step 2.</li>
+    <li><strong>Create the visual</strong> — their actual product, their actual style. The full wow moment, every time.</li>
+    <li><strong>Email it to them</strong> — find the founder's email and send something like:</li>
+  </ol>
+
+  <div class="script">
+    <p>Hi [name],</p>
+    <p>I came across [brand] on Instagram and loved [specific product]. I create AI lifestyle photography for e-com brands, and instead of explaining it, I made a sample with your actual product — it's right below.</p>
+    <p>[IMAGE EMBEDDED IN THE EMAIL — not a link, not an attachment they have to open]</p>
+    <p>If you'd like more in this direction, happy to create a few options. No charge for the first ones.</p>
+    <p>[Your name]</p>
+  </div>
+
+  <p>The image must be IN the email, visible the second they open it. The moment they have to click something, you've lost half of them.</p>
+  <p>Why does this work when normal cold email gets ignored? Because every other cold email asks the brand to do work — click a portfolio, book a call, imagine the result. Yours does the opposite. They open it and their own product is staring back at them, looking better than anything on their site.</p>
+  <p>Text-only cold emails get a 2% response rate on a good day. Personalized visuals change the math completely.</p>
+  <p>Doing this one brand at a time is exactly how I'd start. And when you're ready to do it at scale, this workflow — find brands, analyze them, prep personalized visuals in batches — is built into <a href="https://chat.dezygn.com">Dezygn</a> as the Outreach Factory.</p>
+  <p>One channel where clients come to you (Upwork). One channel where you go to them (email). Same method. That's a complete client acquisition system.</p>
+</section>
+
+<!-- ==================== CONCLUSION ==================== -->
+<section class="chapter">
+  <div class="chapter-head">
+    <span class="eyebrow mono">Conclusion</span>
+    <h2>The Job Goes to Whoever Shows Up With the Work Already <span class="serif">Done.</span></h2>
+  </div>
+
+  <p>Quick recap of the whole method:</p>
+  <ol class="plain">
+    <li><strong>Find</strong> — search Upwork for problem-aware clients posting AI photography jobs daily. Apply to recent posts.</li>
+    <li><strong>Create</strong> — build a sample of exactly what they asked for: their product type, their brand world, their output. 20-30 minutes max. Pass the Accuracy / Realism / Branding bar.</li>
+    <li><strong>Send</strong> — a 4-line message with the sample attached. The image does the selling. Offer a free sample when you can't make one upfront.</li>
+  </ol>
+  <p>No portfolio needed. No sales skills needed. The proof comes before the pitch.</p>
+  <p>The opportunity is real, the demand is daily, and the competition is still low — because most people send text-only proposals and portfolio links, and those get deleted.</p>
+  <p>Don't be most people.</p>
+  <p><strong>Your move today:</strong> one brand, one hour, one email. That's the whole assignment.</p>
+
+  <div class="cta-banner">
+    <p class="card-label mono">Go deeper</p>
+    <p>When you're ready to go deeper — how I turn one-off jobs into $639/month retainers, how I price, how the full system works end to end — I teach the complete method in my free live training:</p>
+    <p><a href="https://dezygn.com/webinar">→ Register for the free Proof Before Pitch training</a></p>
+    <p>And if you want the exact workflow I use to create these samples in 10 minutes instead of an hour:</p>
+    <p><a href="https://chat.dezygn.com/signup">→ Try Dezygn free — 50 credits, no card required</a></p>
+  </div>
+
+  <div style="break-inside: avoid;">
+    <p>If you have questions, just reply to the email this came with. I read everything.</p>
+    <p>Let's go land some clients.</p>
+    <p class="sig"><strong>Bertrand</strong></p>
+
+    <hr class="spacer" />
+    <p class="ps">P.S. — You now know more about getting AI photography clients than 95% of the people fighting over $5 logo gigs. The method only works if you run it. Remember: The Job Goes to Whoever Shows Up With the Work Already Done.</p>
+  </div>
+</section>
+
+</body>
+</html>

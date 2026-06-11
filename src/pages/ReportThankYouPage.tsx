@@ -1,6 +1,5 @@
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Download, PlayCircle, Sparkles } from 'lucide-react';
+import { ArrowRight, Download, Search, Sparkles } from 'lucide-react';
 import HeaderV4 from '../components/HeaderV4';
 import FooterV4 from '../components/FooterV4';
 
@@ -8,16 +7,16 @@ const mono = "font-['IBM_Plex_Mono','SFMono-Regular',ui-monospace,monospace]";
 const sans = "font-['Inter','Helvetica_Neue',ui-sans-serif,sans-serif]";
 const serif = "font-['Instrument_Serif',Georgia,serif]";
 
-const PDF_URL = '/assets/downloads/visual-syntax-cheatsheet.pdf';
+const PDF_URL = '/downloads/proof-before-pitch.pdf';
 const SIGNUP_URL = 'https://chat.dezygn.com/signup';
 
-/** Delivery page for the Visual Syntax Cheatsheet lead magnet. */
-const CheatsheetThankYouPage = () => {
+/** Delivery page for the Proof Before Pitch report lead magnet. */
+const ReportThankYouPage = () => {
   return (
     <div className={`${sans} min-h-screen bg-[#F7F5F0] text-[#1A1A1A] antialiased selection:bg-[#8B5CF6]/25`}>
       <Helmet>
-        <title>Your Visual Syntax Cheatsheet | Dezygn</title>
-        <meta name="description" content="Download the Visual Syntax Cheatsheet — the 6-ingredient framework for client-ready AI photography." />
+        <title>Your Proof Before Pitch Report | Dezygn</title>
+        <meta name="description" content="Download How to Make Money Selling AI Images — the Proof Before Pitch method for landing your first AI photography client." />
         <meta name="robots" content="noindex" />
       </Helmet>
 
@@ -33,11 +32,11 @@ const CheatsheetThankYouPage = () => {
               ✦ Delivered
             </p>
             <h1 className="mt-8 text-4xl font-semibold leading-[1.05] tracking-tight sm:text-6xl">
-              The Cheatsheet Is <span className={`${serif} font-normal italic text-[#7C3AED]`}>Yours.</span>
+              The Report Is <span className={`${serif} font-normal italic text-[#7C3AED]`}>Yours.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-[#6B6459]">
-              A copy is also on its way to your inbox. Print it, pin it next to your screen, and run every shot
-              through the six ingredients before you generate.
+              A copy is also on its way to your inbox. Read it today — the whole method is three steps, and the
+              first one takes 15 minutes.
             </p>
             <a
               href={PDF_URL}
@@ -45,7 +44,7 @@ const CheatsheetThankYouPage = () => {
               className="mt-10 inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-[#8B5CF6] px-8 text-[15px] font-semibold text-white transition hover:bg-[#7C3AED]"
             >
               <Download className="h-4 w-4" />
-              Download the Cheatsheet (PDF)
+              Download the Report (PDF)
             </a>
           </div>
         </section>
@@ -61,10 +60,10 @@ const CheatsheetThankYouPage = () => {
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                 <Sparkles className="h-5 w-5" />
               </span>
-              <h3 className="mt-5 text-xl font-semibold tracking-tight">Put it to work in Dezygn</h3>
+              <h3 className="mt-5 text-xl font-semibold tracking-tight">Set up your sample machine</h3>
               <p className="mt-3 text-[15px] leading-7 text-[#6B6459]">
-                Awa, the AI creative assistant inside Dezygn, speaks Visual Syntax natively. Describe the shot — it
-                engineers the prompt. Free plan, 50 credits.
+                Step 2 of the report runs on Dezygn: paste the job post, and Awa engineers an on-brand sample of
+                the client's product in 10-15 minutes. Free plan, 50 credits, no card required.
               </p>
               <a href={SIGNUP_URL} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#7C3AED] hover:text-[#8B5CF6]">
                 Start Free <ArrowRight className="h-4 w-4" />
@@ -72,16 +71,16 @@ const CheatsheetThankYouPage = () => {
             </article>
             <article className="-rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#1A1A1A] text-[#EDEBE6]">
-                <PlayCircle className="h-5 w-5" />
+                <Search className="h-5 w-5" />
               </span>
-              <h3 className="mt-5 text-xl font-semibold tracking-tight">See the client-getting side</h3>
+              <h3 className="mt-5 text-xl font-semibold tracking-tight">Do Step 1 right now</h3>
               <p className="mt-3 text-[15px] leading-7 text-[#6B6459]">
-                The cheatsheet makes the images good. The free training shows how those images win paying clients —
-                the Proof Before Pitch method behind my $700+/month retainers.
+                Don't let the PDF sit in your downloads folder. Open the report, run the Upwork search from
+                Step 1, and save 3 recent job posts. That's the whole first assignment — 15 minutes.
               </p>
-              <Link to="/webinar" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#7C3AED] hover:text-[#8B5CF6]">
-                Save My Seat <ArrowRight className="h-4 w-4" />
-              </Link>
+              <a href={PDF_URL} download className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#7C3AED] hover:text-[#8B5CF6]">
+                Open the Report <ArrowRight className="h-4 w-4" />
+              </a>
             </article>
           </div>
         </section>
@@ -92,4 +91,4 @@ const CheatsheetThankYouPage = () => {
   );
 };
 
-export default CheatsheetThankYouPage;
+export default ReportThankYouPage;
