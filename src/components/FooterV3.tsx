@@ -37,7 +37,7 @@ const FOOTER_COLUMNS = [
       { label: 'Photography ROI', to: '/resources/ecommerce-photography-roi' },
       { label: 'Glossary', to: '/glossary' },
       { label: 'Compare Tools', to: '/compare' },
-      { label: 'Help Center', to: 'https://intercom.help/dezygn/en/', external: true },
+      { label: 'Help Center', to: '/help' },
     ],
   },
   {

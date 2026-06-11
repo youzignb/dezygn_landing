@@ -29,6 +29,7 @@ const staticRoutes = [
   '/about',
   '/contact',
   '/faq',
+  '/help',
   '/shot-types',
   '/use-cases',
   '/industries',
@@ -50,6 +51,7 @@ const dynamicSources = {
   'alternatives.ts': '/alternatives',
   'resources.ts': '/resources',
   'glossary.ts': '/glossary',
+  'help.ts': '/help',
 };
 
 const urls = [...staticRoutes];

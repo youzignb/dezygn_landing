@@ -122,7 +122,7 @@ export default function SuccessPage() {
           {/* Support */}
           <div className="text-center mt-6">
             <p className="text-gray-500 text-sm">
-              Need help? <a href="mailto:support@youzign.com" className="text-blue-600 hover:text-blue-800 font-medium">Contact us</a> or visit our <a href="https://intercom.help/dezygn/en/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 font-medium">helpdesk</a>
+              Need help? <a href="mailto:support@youzign.com" className="text-blue-600 hover:text-blue-800 font-medium">Contact us</a> or visit our <Link to="/help" className="text-blue-600 hover:text-blue-800 font-medium">help center</Link>
             </p>
           </div>
         </div>

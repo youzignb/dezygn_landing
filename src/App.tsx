@@ -9,7 +9,7 @@ import AuditPage from './pages/AuditPage';
 import AboutPage from './pages/AboutPage';
 import FAQPage from './pages/FAQPage';
 import ContactPage from './pages/ContactPage';
-import HelpPage from './pages/HelpPage';
+import HelpCenterPage from './pages/HelpCenterPage';
 import FeaturesPage from './pages/FeaturesPage';
 import AccessibilityPage from './pages/AccessibilityPage';
 import LandingPageV3 from './pages/LandingPageV3';
@@ -67,7 +67,9 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/faq" element={<FAQPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        <Route path="/help" element={<HelpPage />} />
+        {/* Help center / knowledge base (replaces the retired Intercom helpdesk) */}
+        <Route path="/help" element={<HelpCenterPage />} />
+        <Route path="/help/:slug" element={<HelpCenterPage />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/accessibility" element={<AccessibilityPage />} />
         <Route path="/pricing" element={<PricingPage />} />

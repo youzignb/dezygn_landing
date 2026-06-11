@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MessageCircle, Clock, Globe, ExternalLink, Mail, BookOpen, ArrowRight } from 'lucide-react';
+import { MessageCircle, Clock, Globe, Mail, BookOpen, ArrowRight } from 'lucide-react';
 import HeaderV4 from '../components/HeaderV4';
 import FooterV4 from '../components/FooterV4';
 
@@ -54,7 +54,7 @@ function ContactPage() {
               href="https://chat.dezygn.com/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="-rotate-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0"
+              className="-rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0"
             >
               <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                 <MessageCircle className="h-5 w-5" />
@@ -72,7 +72,7 @@ function ContactPage() {
             {/* Email Support */}
             <a
               href="mailto:support@dezygn.com"
-              className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0 md:rotate-1"
+              className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0 md:rotate-1"
             >
               <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-[#1A1A1A] text-[#EDEBE6]">
                 <Mail className="h-5 w-5" />
@@ -88,31 +88,29 @@ function ContactPage() {
             </a>
 
             {/* Help Center */}
-            <a
-              href="https://intercom.help/dezygn"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="-rotate-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0"
+            <Link
+              to="/help"
+              className="-rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0"
             >
               <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                 <BookOpen className="h-5 w-5" />
               </span>
               <h2 className="mt-4 text-lg font-semibold tracking-tight text-[#1A1A1A]">Help Center</h2>
               <p className="mt-2 text-sm leading-6 text-[#6B6459]">
-                Tutorials, guides, and FAQs. Most questions are answered here.
+                Guides and documentation for every part of Dezygn. Most questions are answered here.
               </p>
               <div className={`${mono} mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#EEE8FF] px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.08em] text-[#7C3AED]`}>
-                <ExternalLink className="h-3.5 w-3.5" />
+                <ArrowRight className="h-3.5 w-3.5" />
                 Browse articles
               </div>
-            </a>
+            </Link>
           </div>
         </section>
 
         {/* Support Info */}
         <section className="px-5 py-20 sm:py-24">
           <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+            <div className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
               <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-[#1A1A1A] text-[#EDEBE6]">
                 <Clock className="h-5 w-5" />
               </span>
@@ -123,7 +121,7 @@ function ContactPage() {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+            <div className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
               <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                 <Globe className="h-5 w-5" />
               </span>

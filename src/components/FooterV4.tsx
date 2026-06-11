@@ -15,7 +15,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
       { label: 'Pricing', href: '/pricing' },
       { label: 'Start Free', href: SIGNUP_URL, external: true },
       { label: 'Sign In', href: 'https://chat.dezygn.com', external: true },
-      { label: 'Help Center', href: 'https://intercom.help/dezygn/en/', external: true },
+      { label: 'Help Center', href: '/help' },
     ],
   },
   {
