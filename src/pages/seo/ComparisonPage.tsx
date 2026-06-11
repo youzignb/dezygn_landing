@@ -145,7 +145,7 @@ const ComparisonPage = () => {
               <EditorialTitle text="Feature Comparison." />
             </h2>
 
-            <div className="overflow-hidden rounded-3xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+            <div className="overflow-hidden rounded-3xl border border-[#1A1A1A]/[0.12] bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
               <div className="overflow-x-auto">
                 <table className="w-full">
                   <thead>
@@ -171,7 +171,7 @@ const ComparisonPage = () => {
                     {comparison.comparisonTable.map((row, i) => (
                       <tr
                         key={i}
-                        className={`border-b border-[#1A1A1A]/8 last:border-b-0 ${
+                        className={`border-b border-[#1A1A1A]/[0.08] last:border-b-0 ${
                           i % 2 === 1 ? 'bg-[#F7F5F0]/50' : ''
                         }`}
                       >
@@ -203,7 +203,7 @@ const ComparisonPage = () => {
               {comparison.dezgnPros.map((pro, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-4 rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="flex items-start gap-4 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <Check className="mt-0.5 h-5 w-5 shrink-0 text-[#7C3AED]" />
                   <span className="leading-7 text-[#2B2B2B]">{pro}</span>
@@ -225,7 +225,7 @@ const ComparisonPage = () => {
               {comparison.competitorCons.map((con, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-4 rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="flex items-start gap-4 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <Minus className="mt-0.5 h-5 w-5 shrink-0 text-[#8B867B]" />
                   <span className="leading-7 text-[#2B2B2B]">{con}</span>

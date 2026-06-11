@@ -166,7 +166,7 @@ const IndustryPage = () => {
               {industry.painPoints.map((point) => (
                 <div
                   key={point.title}
-                  className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <span className="mb-4 grid h-10 w-10 place-items-center rounded-xl bg-[#1A1A1A] text-[#EDEBE6]">
                     <AlertTriangle className="h-5 w-5" />
@@ -193,7 +193,7 @@ const IndustryPage = () => {
               {industry.howDezygn.map((solution) => (
                 <div
                   key={solution.title}
-                  className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <span className="mb-4 grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                     <CheckCircle2 className="h-5 w-5" />
@@ -220,7 +220,7 @@ const IndustryPage = () => {
               {industry.results.map((stat) => (
                 <div
                   key={stat.label}
-                  className="min-w-[200px] flex-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="min-w-[200px] flex-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <TrendingUp className="mx-auto mb-4 h-6 w-6 text-[#7C3AED]" />
                   <div className={`${serif} mb-2 text-4xl italic tracking-tight text-[#7C3AED] sm:text-5xl`}>

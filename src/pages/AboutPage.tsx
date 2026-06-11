@@ -160,7 +160,7 @@ function AboutPage() {
                   ))}
                 </div>
                 {chapter.callout ? (
-                  <div className="mt-8 -rotate-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
+                  <div className="mt-8 -rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
                     <p className="text-xl font-semibold tracking-tight text-[#1A1A1A]">{chapter.callout.lead}</p>
                     <p className="mt-3 leading-7 text-[#6B6459]">{chapter.callout.body}</p>
                   </div>
@@ -188,7 +188,7 @@ function AboutPage() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
               >
                 <div className="flex items-center gap-3">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#8B5CF6] text-white">
@@ -214,7 +214,7 @@ function AboutPage() {
             </h2>
             <div className="mt-14 grid grid-cols-2 gap-6 md:grid-cols-4">
               {numbers.map((stat) => (
-                <div key={stat.label} className="rounded-3xl border border-[#E8E4DB]/14 bg-[#2B2B2B] p-6 text-center">
+                <div key={stat.label} className="rounded-3xl border border-[#E8E4DB]/[0.14] bg-[#2B2B2B] p-6 text-center">
                   <div className={`${serif} text-4xl italic tracking-tight text-[#8B5CF6] md:text-5xl`}>{stat.value}</div>
                   <div className={`${mono} mt-2 text-[11px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>{stat.label}</div>
                 </div>

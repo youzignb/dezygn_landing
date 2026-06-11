@@ -131,7 +131,7 @@ const CommunityPage = () => {
             {BENEFITS.map((benefit) => (
               <div
                 key={benefit.title}
-                className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
               >
                 <div className="flex items-center gap-3">
                   <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-[#8B5CF6] text-white">

@@ -55,12 +55,13 @@ Scale: hero `text-4xl sm:text-6xl` (homepage up to ~7xl), section titles `text-3
 ## 4. Recurring components & patterns
 
 - **Eyebrow pill** (`eyebrowPill`): white rounded-full pill, `-rotate-2`, mono uppercase 11px, purple-deep text, hairline ink border, `shadow-sm`. Opens nearly every section. The slight rotation is deliberate — print-sticker energy.
-- **Cards** (`card` / `cardLink`): white, `rounded-3xl`, hairline border `border-[#1A1A1A]/12`, heavy soft shadow `shadow-[0_24px_60px_rgba(26,26,26,0.08)]`. Interactive cards lift on hover (`hover:-translate-y-1` + deeper shadow).
+- **Cards** (`card` / `cardLink`): white, `rounded-3xl`, hairline border `border-[#1A1A1A]/[0.12]`, heavy soft shadow `shadow-[0_24px_60px_rgba(26,26,26,0.08)]`. Interactive cards lift on hover (`hover:-translate-y-1` + deeper shadow).
 - **CTA button** (`ctaButton`): `rounded-full bg-[#8B5CF6] hover:bg-[#7C3AED]`, white semibold sm text, `min-h-12 px-8`. Primary CTA label across the site is **"Start Free"** → `SIGNUP_URL` (`https://chat.dezygn.com/signup`); hero microcopy: *"Free plan · 50 credits · No card required."* On dark/purple surfaces the button inverts to `bg-[#1A1A1A] text-[#EDEBE6]`.
 - **Decorative glyphs:** oversized serif italic marks (`✦`, `✳`) positioned absolutely at section corners, rotated, at 10–15% accent opacity, `aria-hidden`, hidden below `lg`. One per section maximum.
 - **Breadcrumbs** (`crumbNav`): mono 11px uppercase, dim color, on every SEO subpage.
 - **Stats rows:** big numbers in serif italic or semibold Inter with mono uppercase labels beneath.
-- **Header (`HeaderV4`):** floating pill, `bg-[#1A1A1A]/92 backdrop-blur-md`, rounded-full, hairline `#E8E4DB/15` border, heavy drop shadow. Nav: Product · Pricing · Free Training (/webinar) · AIPA + Start Free button.
+- **Header (`HeaderV4`):** floating pill, `bg-[#1A1A1A]/[0.92] backdrop-blur-md`, rounded-full, hairline `#E8E4DB/15` border, heavy drop shadow. Nav: Product · Pricing · Free Training (/webinar) · AIPA + Start Free button. The dark pill is deliberate: it guarantees the white nav stays readable over both the dark hero and light sections.
+- **⚠️ Tailwind alpha rule:** on arbitrary hex colors, slash opacities that aren't multiples of 5 (`/12`, `/92`, `/88`…) are **silently dropped** by Tailwind 3.4 — no CSS is generated and the style falls back to defaults (this once left the header pill fully transparent in production). Use bracket form for off-scale values: `border-[#1A1A1A]/[0.12]`, `bg-[#1A1A1A]/[0.92]`. Multiples of 5 (`/10`, `/15`, `/25`…) are safe bare.
 - **Footer (`FooterV4`):** `#1A1A1A`, 4 link columns + brand column, legal row, then the **giant wordmark** — "Dezygn" at `text-[24vw] lg:text-[20rem]` in `#E8E4DB` at 7% opacity, cropped by the bottom edge (`-mb-[0.23em]`).
 - **Radii:** cards `rounded-3xl`; hero/banner panels `rounded-[32px]`; pills/buttons `rounded-full`. Images inside cards `rounded-[10px]`.
 

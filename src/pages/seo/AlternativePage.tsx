@@ -137,7 +137,7 @@ const AlternativePage = () => {
                 <div
                   key={alt.name}
                   className={`rounded-3xl border bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] ${
-                    isFirst ? 'border-[#8B5CF6]/40' : 'border-[#1A1A1A]/12'
+                    isFirst ? 'border-[#8B5CF6]/40' : 'border-[#1A1A1A]/[0.12]'
                   }`}
                 >
                   <div className="flex items-start gap-6">

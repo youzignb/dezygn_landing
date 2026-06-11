@@ -57,7 +57,7 @@ const CheatsheetThankYouPage = () => {
             </h2>
           </div>
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
-            <article className="rotate-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
+            <article className="rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                 <Sparkles className="h-5 w-5" />
               </span>
@@ -70,7 +70,7 @@ const CheatsheetThankYouPage = () => {
                 Start Free <ArrowRight className="h-4 w-4" />
               </a>
             </article>
-            <article className="-rotate-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
+            <article className="-rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0">
               <span className="grid h-10 w-10 place-items-center rounded-xl bg-[#1A1A1A] text-[#EDEBE6]">
                 <PlayCircle className="h-5 w-5" />
               </span>

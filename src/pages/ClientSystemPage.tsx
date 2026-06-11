@@ -149,7 +149,7 @@ const ClientSystemPage = () => {
             {mechanism.map((item, index) => (
               <article
                 key={item.step}
-                className={`rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0 ${index % 2 === 0 ? 'sm:rotate-1' : 'sm:-rotate-1'}`}
+                className={`rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out hover:rotate-0 ${index % 2 === 0 ? 'sm:rotate-1' : 'sm:-rotate-1'}`}
               >
                 <p className={`${mono} text-xs font-medium text-[#7C3AED]`}>{item.step}</p>
                 <h3 className="mt-3 text-xl font-semibold tracking-tight">{item.title}</h3>
@@ -186,7 +186,7 @@ const ClientSystemPage = () => {
           </div>
           <div className="mx-auto mt-12 max-w-3xl space-y-3">
             {stack.map((item) => (
-              <div key={item.name} className="flex items-start justify-between gap-4 rounded-2xl border border-[#1A1A1A]/12 bg-white p-5 shadow-[0_12px_30px_rgba(26,26,26,0.06)]">
+              <div key={item.name} className="flex items-start justify-between gap-4 rounded-2xl border border-[#1A1A1A]/[0.12] bg-white p-5 shadow-[0_12px_30px_rgba(26,26,26,0.06)]">
                 <div className="flex items-start gap-3">
                   <Check className="mt-1 h-4 w-4 shrink-0 text-[#7C3AED]" />
                   <div>
@@ -236,7 +236,7 @@ const ClientSystemPage = () => {
             <h2 className="text-center text-3xl font-semibold leading-[1.1] tracking-tight sm:text-4xl">
               Fair <span className={`${serif} italic font-normal`}>Questions.</span>
             </h2>
-            <div className="mt-10 divide-y divide-[#1A1A1A]/12 border-y border-[#1A1A1A]/12">
+            <div className="mt-10 divide-y divide-[#1A1A1A]/[0.12] border-y border-[#1A1A1A]/[0.12]">
               {faq.map((item, index) => (
                 <details key={item.q} className="group py-5" open={index === 0}>
                   <summary className="flex cursor-pointer items-baseline gap-4 text-[16px] font-semibold text-[#1A1A1A] [&::-webkit-details-marker]:hidden">

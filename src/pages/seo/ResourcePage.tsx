@@ -218,7 +218,7 @@ const ResourcePage = () => {
 
         {/* Mobile TOC */}
         <div className="mx-auto mb-10 max-w-6xl px-5 lg:hidden">
-          <div className="overflow-hidden rounded-2xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+          <div className="overflow-hidden rounded-2xl border border-[#1A1A1A]/[0.12] bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
             <button
               onClick={() => setTocOpen(!tocOpen)}
               className={`${mono} flex w-full items-center justify-between px-5 py-4 text-[11px] font-medium uppercase tracking-[0.12em] text-[#2B2B2B]`}
@@ -267,7 +267,7 @@ const ResourcePage = () => {
           <div className="lg:flex lg:gap-12">
             {/* Desktop TOC Sidebar */}
             <aside className="hidden flex-shrink-0 lg:block lg:w-64">
-              <nav className="sticky top-28 rounded-2xl border border-[#1A1A1A]/12 bg-white p-4 shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+              <nav className="sticky top-28 rounded-2xl border border-[#1A1A1A]/[0.12] bg-white p-4 shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
                 <p
                   className={`${mono} mb-3 px-2 text-[11px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}
                 >

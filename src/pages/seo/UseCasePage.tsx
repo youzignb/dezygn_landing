@@ -173,7 +173,7 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
                 return (
                   <div
                     key={feature.title}
-                    className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                    className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                   >
                     <span className="mb-4 grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
                       <IconComponent className="h-5 w-5" />
@@ -198,7 +198,7 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
               {useCase.stats.map((stat) => (
                 <div
                   key={stat.label}
-                  className="min-w-[180px] rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="min-w-[180px] rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 text-center shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <p className={`${serif} mb-2 text-4xl italic tracking-tight text-[#7C3AED] sm:text-5xl`}>
                     {stat.value}
@@ -281,7 +281,7 @@ function UseCaseContent({ useCase }: { useCase: UseCase }) {
                     <Link
                       key={shotSlug}
                       to={`/shot-types/${shotSlug}`}
-                      className={`${mono} rounded-full border border-[#1A1A1A]/12 bg-white px-5 py-2.5 text-sm text-[#2B2B2B] shadow-sm transition-colors hover:border-[#8B5CF6]/40 hover:text-[#7C3AED]`}
+                      className={`${mono} rounded-full border border-[#1A1A1A]/[0.12] bg-white px-5 py-2.5 text-sm text-[#2B2B2B] shadow-sm transition-colors hover:border-[#8B5CF6]/40 hover:text-[#7C3AED]`}
                     >
                       {shotSlug
                         .split('-')

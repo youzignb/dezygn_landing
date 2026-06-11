@@ -22,7 +22,7 @@ const HeaderV4 = () => {
 
   return (
     <header className="fixed left-1/2 top-4 z-50 w-[calc(100%-2rem)] max-w-3xl -translate-x-1/2">
-      <div className="flex h-14 items-center justify-between rounded-full border border-[#E8E4DB]/15 bg-[#1A1A1A]/92 pl-2 pr-2 shadow-[0_16px_44px_rgba(0,0,0,0.35)] backdrop-blur-md">
+      <div className="flex h-14 items-center justify-between rounded-full border border-[#E8E4DB]/15 bg-[#1A1A1A]/[0.92] pl-2 pr-2 shadow-[0_16px_44px_rgba(0,0,0,0.35)] backdrop-blur-md">
         <Link to="/" className="flex items-center gap-2.5 pl-1" aria-label="Dezygn home">
           <span className="grid h-9 w-9 place-items-center rounded-full bg-[#EDEBE6]">
             <Logo variant="dark" size="sm" showText={false} />

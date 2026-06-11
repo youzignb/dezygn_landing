@@ -337,7 +337,7 @@ function ScreenshotFrame({
     <div
       className={`rounded-2xl border p-1.5 sm:p-2 ${
         tone === 'dark'
-          ? 'border-[#E8E4DB]/14 bg-[#2B2B2B] shadow-[0_40px_90px_rgba(0,0,0,0.42)]'
+          ? 'border-[#E8E4DB]/[0.14] bg-[#2B2B2B] shadow-[0_40px_90px_rgba(0,0,0,0.42)]'
           : 'border-[#1A1A1A]/10 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.12)]'
       }`}
     >
@@ -356,7 +356,7 @@ function PlaceholderVisual({
   return (
     <ScreenshotFrame>
       <div className="bg-[#FBFAF7]">
-        <div className="flex items-center justify-between border-b border-[#1A1A1A]/8 px-4 py-2.5">
+        <div className="flex items-center justify-between border-b border-[#1A1A1A]/[0.08] px-4 py-2.5">
           <span className={`${mono} text-[10px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>Dezygn Studio</span>
           <span className={`${mono} text-[10px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>Preview</span>
         </div>
@@ -526,7 +526,7 @@ function PlaceholderVisual({
           )}
         </div>
 
-        <div className={`${mono} border-t border-[#1A1A1A]/8 px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>{label}</div>
+        <div className={`${mono} border-t border-[#1A1A1A]/[0.08] px-4 py-2.5 text-[10px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>{label}</div>
       </div>
     </ScreenshotFrame>
   );
@@ -819,7 +819,7 @@ function PricingSection() {
                 className={`relative flex h-full flex-col rounded-3xl border p-8 transition-transform duration-500 ease-out sm:p-10 sm:hover:rotate-0 ${
                   featured
                     ? 'border-[#1A1A1A] bg-[#1A1A1A] text-[#E8E4DB] shadow-[0_32px_80px_rgba(26,26,26,0.28)] sm:-rotate-1'
-                    : 'border-[#1A1A1A]/12 bg-white sm:rotate-1'
+                    : 'border-[#1A1A1A]/[0.12] bg-white sm:rotate-1'
                 }`}
               >
                 {plan.badge ? (
@@ -848,7 +848,7 @@ function PricingSection() {
                   <span className={`${mono} text-sm ${featured ? 'text-[#E8E4DB]/60' : 'text-[#6B6459]'}`}>{plan.suffix}</span>
                 </div>
 
-                <div className={`mt-8 rounded-2xl border p-5 ${featured ? 'border-[#E8E4DB]/14 bg-[#2B2B2B]' : 'border-[#1A1A1A]/10 bg-[#F7F5F0]'}`}>
+                <div className={`mt-8 rounded-2xl border p-5 ${featured ? 'border-[#E8E4DB]/[0.14] bg-[#2B2B2B]' : 'border-[#1A1A1A]/10 bg-[#F7F5F0]'}`}>
                   <p className={`text-lg font-semibold ${featured ? 'text-[#E8E4DB]' : 'text-[#1A1A1A]'}`}>{plan.credits}</p>
                   <p className={`${mono} mt-2 text-[11px] leading-5 ${featured ? 'text-[#8B867B]' : 'text-[#6B6459]'}`}>{plan.output}</p>
                   <p className={`${mono} mt-1.5 text-[11px] leading-5 ${featured ? 'text-[#A78BFA]' : 'text-[#7C3AED]'}`}>✦ {plan.scale}</p>
@@ -869,7 +869,7 @@ function PricingSection() {
                   className={`mt-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition ${
                     featured
                       ? 'bg-[#8B5CF6] text-white hover:bg-[#7C3AED]'
-                      : 'border border-[#1A1A1A]/16 text-[#1A1A1A] hover:bg-[#EDEBE6]'
+                      : 'border border-[#1A1A1A]/[0.16] text-[#1A1A1A] hover:bg-[#EDEBE6]'
                   }`}
                 >
                   Get Started Free
@@ -898,7 +898,7 @@ function FounderSection() {
         <Reveal>
           <div className="mx-auto w-fit lg:mx-0 lg:pt-2">
             {/* Polaroid-style mount, same matte language as the screenshots. */}
-            <div className="-rotate-2 rounded-2xl border border-[#E8E4DB]/14 bg-white p-2.5 pb-0 shadow-[0_32px_80px_rgba(0,0,0,0.45)] transition-transform duration-500 ease-out hover:rotate-0">
+            <div className="-rotate-2 rounded-2xl border border-[#E8E4DB]/[0.14] bg-white p-2.5 pb-0 shadow-[0_32px_80px_rgba(0,0,0,0.45)] transition-transform duration-500 ease-out hover:rotate-0">
               <img
                 src={FOUNDER_IMAGE}
                 alt="Bertrand, founder of Dezygn"
@@ -1011,7 +1011,7 @@ function LeadMagnetSection() {
           </div>
         </Reveal>
         <Reveal delay={120}>
-          <div className="rotate-1 rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.12)] transition-transform duration-500 ease-out hover:rotate-0 sm:p-10">
+          <div className="rotate-1 rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.12)] transition-transform duration-500 ease-out hover:rotate-0 sm:p-10">
             <form onSubmit={handleSubmit} className="grid gap-4">
                 <p className={`${mono} text-[10px] font-medium uppercase tracking-[0.12em] text-[#8B867B]`}>
                   Get the cheatsheet
@@ -1022,7 +1022,7 @@ function LeadMagnetSection() {
                   value={name}
                   onChange={(event) => setName(event.target.value)}
                   placeholder="First name"
-                  className="h-12 rounded-xl border border-[#1A1A1A]/12 bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
+                  className="h-12 rounded-xl border border-[#1A1A1A]/[0.12] bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
                 />
                 <input
                   type="email"
@@ -1030,7 +1030,7 @@ function LeadMagnetSection() {
                   value={email}
                   onChange={(event) => setEmail(event.target.value)}
                   placeholder="Email address"
-                  className="h-12 rounded-xl border border-[#1A1A1A]/12 bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
+                  className="h-12 rounded-xl border border-[#1A1A1A]/[0.12] bg-[#F7F5F0] px-4 text-[15px] text-[#1A1A1A] placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
                 />
                 <button
                   type="submit"
@@ -1128,7 +1128,7 @@ const LandingPageV4 = () => {
           <Reveal>
             <SimpleHeader title="Questions Creatives Ask." />
           </Reveal>
-          <div className="mx-auto mt-14 max-w-3xl divide-y divide-[#1A1A1A]/12 border-y border-[#1A1A1A]/12">
+          <div className="mx-auto mt-14 max-w-3xl divide-y divide-[#1A1A1A]/[0.12] border-y border-[#1A1A1A]/[0.12]">
             {faq.map((item, index) => (
               <button
                 key={item.q}

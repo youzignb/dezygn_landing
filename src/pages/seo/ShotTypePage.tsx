@@ -167,7 +167,7 @@ const ShotTypePage = () => {
               {shotType.tips.map((tip, index) => (
                 <div
                   key={index}
-                  className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-6 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <p className={`${mono} mb-3 text-xs font-medium text-[#7C3AED]`}>
                     {String(index + 1).padStart(2, '0')}

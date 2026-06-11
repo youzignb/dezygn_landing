@@ -81,7 +81,7 @@ function CaseStudyCard({ study, index }: { study: CaseStudy; index: number }) {
 
   return (
     <div
-      className={`overflow-hidden rounded-3xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out sm:hover:rotate-0 ${
+      className={`overflow-hidden rounded-3xl border border-[#1A1A1A]/[0.12] bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)] transition-transform duration-500 ease-out sm:hover:rotate-0 ${
         index % 2 === 0 ? 'sm:rotate-[0.6deg]' : 'sm:-rotate-[0.6deg]'
       }`}
     >
@@ -293,7 +293,7 @@ const CaseStudiesPage = () => {
               ].map((step) => (
                 <div
                   key={step.num}
-                  className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <div className="mb-5 flex items-center gap-4">
                     <div className="grid h-10 w-10 place-items-center rounded-xl bg-[#8B5CF6] text-white">
@@ -349,7 +349,7 @@ const CaseStudiesPage = () => {
               ].map((technique, i) => (
                 <div
                   key={i}
-                  className="rounded-3xl border border-[#1A1A1A]/12 bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
+                  className="rounded-3xl border border-[#1A1A1A]/[0.12] bg-white p-8 shadow-[0_24px_60px_rgba(26,26,26,0.08)]"
                 >
                   <div className="flex items-start gap-5">
                     <div className="grid h-12 w-12 flex-shrink-0 place-items-center rounded-xl bg-[#1A1A1A] text-[#EDEBE6]">

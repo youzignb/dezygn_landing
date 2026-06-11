@@ -110,7 +110,7 @@ const PricingPage = () => {
                   className={`relative flex h-full flex-col rounded-3xl border p-8 transition-transform duration-500 ease-out sm:p-10 sm:hover:rotate-0 ${
                     featured
                       ? 'border-[#1A1A1A] bg-[#1A1A1A] text-[#E8E4DB] shadow-[0_32px_80px_rgba(26,26,26,0.28)] sm:-rotate-1'
-                      : 'border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)] sm:rotate-1'
+                      : 'border-[#1A1A1A]/[0.12] bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)] sm:rotate-1'
                   }`}
                 >
                   {plan.badge ? (
@@ -139,7 +139,7 @@ const PricingPage = () => {
                     <span className={`${mono} text-sm ${featured ? 'text-[#E8E4DB]/60' : 'text-[#6B6459]'}`}>{plan.suffix}</span>
                   </div>
 
-                  <div className={`mt-8 rounded-2xl border p-5 ${featured ? 'border-[#E8E4DB]/14 bg-[#2B2B2B]' : 'border-[#1A1A1A]/10 bg-[#F7F5F0]'}`}>
+                  <div className={`mt-8 rounded-2xl border p-5 ${featured ? 'border-[#E8E4DB]/[0.14] bg-[#2B2B2B]' : 'border-[#1A1A1A]/10 bg-[#F7F5F0]'}`}>
                     <p className={`text-lg font-semibold ${featured ? 'text-[#E8E4DB]' : 'text-[#1A1A1A]'}`}>{plan.credits}</p>
                     <p className={`${mono} mt-2 text-[11px] leading-5 ${featured ? 'text-[#8B867B]' : 'text-[#6B6459]'}`}>{plan.output}</p>
                     <p className={`${mono} mt-1.5 text-[11px] leading-5 ${featured ? 'text-[#A78BFA]' : 'text-[#7C3AED]'}`}>✦ {plan.scale}</p>
@@ -160,7 +160,7 @@ const PricingPage = () => {
                     className={`mt-10 inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-semibold transition ${
                       featured
                         ? 'bg-[#8B5CF6] text-white hover:bg-[#7C3AED]'
-                        : 'border border-[#1A1A1A]/16 text-[#1A1A1A] hover:bg-[#EDEBE6]'
+                        : 'border border-[#1A1A1A]/[0.16] text-[#1A1A1A] hover:bg-[#EDEBE6]'
                     }`}
                   >
                     Get Started Free

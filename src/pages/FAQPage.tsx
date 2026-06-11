@@ -13,7 +13,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="overflow-hidden rounded-3xl border border-[#1A1A1A]/12 bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
+    <div className="overflow-hidden rounded-3xl border border-[#1A1A1A]/[0.12] bg-white shadow-[0_24px_60px_rgba(26,26,26,0.08)]">
       <button
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
@@ -443,7 +443,7 @@ We ensure you have everything needed to build a successful creative business.`
                 placeholder="Search for answers..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full rounded-full border border-[#1A1A1A]/12 bg-white py-4 pl-12 pr-4 text-[15px] text-[#1A1A1A] shadow-sm placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
+                className="w-full rounded-full border border-[#1A1A1A]/[0.12] bg-white py-4 pl-12 pr-4 text-[15px] text-[#1A1A1A] shadow-sm placeholder:text-[#8B867B] focus:border-[#8B5CF6] focus:outline-none"
               />
             </div>
           </div>
@@ -461,7 +461,7 @@ We ensure you have everything needed to build a successful creative business.`
                   className={`${mono} inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-medium uppercase tracking-[0.08em] transition-all ${
                     selectedCategory === category.id
                       ? 'border-[#7C3AED] bg-[#8B5CF6] text-white shadow-md'
-                      : 'border-[#1A1A1A]/12 bg-white text-[#6B6459] hover:border-[#8B5CF6]/40 hover:text-[#1A1A1A]'
+                      : 'border-[#1A1A1A]/[0.12] bg-white text-[#6B6459] hover:border-[#8B5CF6]/40 hover:text-[#1A1A1A]'
                   }`}
                 >
                   <category.icon className="h-4 w-4" />
