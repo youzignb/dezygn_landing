@@ -117,11 +117,11 @@ function App() {
         <Route path="/features/concepts" element={<ConceptsPage />} />
         <Route path="/features/feedback" element={<FeatureFeedbackPage />} />
 
-        {/* Compiler-generated feature pages (pilot 4) — must come after existing static /features/* routes */}
-        <Route path="/features/prompt-canvas" element={<GeneratedFeaturePage />} />
-        <Route path="/features/awa-chat" element={<GeneratedFeaturePage />} />
-        <Route path="/features/new-brand-import" element={<GeneratedFeaturePage />} />
-        <Route path="/features/gallery-share" element={<GeneratedFeaturePage />} />
+        {/* Compiler-generated feature pages — one dynamic route covers every generated slug
+           (prompt-canvas, awa-chat, awa-video, brands, gallery, recipes, …). Static /features/*
+           routes above take precedence (React Router ranks static > dynamic); GeneratedFeaturePage
+           redirects unknown slugs to /features. */}
+        <Route path="/features/:slug" element={<GeneratedFeaturePage />} />
 
         {/* Programmatic SEO routes */}
         <Route path="/use-cases" element={<UseCaseIndexPage />} />

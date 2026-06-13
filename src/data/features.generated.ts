@@ -121,6 +121,68 @@ export const generatedFeaturePages: Record<string, FeaturePageProps> = {
       "ctaHeadline": "Hire a creative director that never sleeps.",
       "ctaBody": "Describe what you want, attach a reference, ask for variations. Awa runs the shoot — you call the shots."
   },
+  "awa-video": {
+      "slug": "awa-video",
+      "metaTitle": "Awa Video — Storyboard Ads & Image-to-Video | Dezygn",
+      "metaDescription": "Awa turns your images into short cinematic clips with audio — a single-image animate or a full storyboard ad (brief → character sheet → labeled panels → one clip), powered by Seedance 2.0.",
+      "eyebrow": "Awa · Video",
+      "headline": "Bring your best shots to life.",
+      "intro": "Ask Awa to animate an image or direct a storyboard ad — a cinematic clip with audio, generated and played right in the chat.",
+      "image": {
+          "src": "/assets/images/landing-v4/awa-video/hero.png",
+          "alt": "Awa's inline video player showing a storyboard ad with labeled panels in the workspace"
+      },
+      "stepsHeading": "From a still to a story.",
+      "stepsBody": "Tell Awa what you want; she plans the storyboard, shows the cost, and brings it to life.",
+      "steps": [
+          {
+              "title": "Ask Awa to animate",
+              "body": "Say \\\"animate this\\\" or \\\"make a 15s ad for this product.\\\" Awa always shows a plan + the credit cost first — video is the most expensive operation, so nothing runs until you confirm."
+          },
+          {
+              "title": "She directs the storyboard",
+              "body": "For an ad she runs the director workflow: a creative brief, a character reference sheet, then burned-label panels (SCENE | TIME | ROLE) composited into one cinematic clip with audio."
+          },
+          {
+              "title": "Watch it inline",
+              "body": "The finished clip plays right in the chat with its own player — no download needed to review it."
+          },
+          {
+              "title": "Take it further",
+              "body": "From there, cut a 9:16 Reels/TikTok version, rebuild with new panels, generate a still hero shot, or have Awa draft the proposal copy to go with it."
+          }
+      ],
+      "capabilities": {
+          "heading": "What Awa can make.",
+          "body": "Two modes, both conversational — no timeline to learn.",
+          "items": [
+              "Animate a single image into a short clip (with first→last-frame keyframing)",
+              "Direct a full storyboard ad: brief → character sheet → labeled panels → one cinematic clip",
+              "Automatic audio — music, SFX, and voice",
+              "Up to 15s, 9 reference panels (@Image1..@Image9), any aspect ratio",
+              "Plays inline in the chat; then cut a 9:16 version, rebuild panels, or draft the pitch"
+          ]
+      },
+      "related": [
+          {
+              "label": "Awa",
+              "description": "Awa is the conversational AI creative director inside every campaign — she writes the prompts, runs the shoot, critiques the results, and remembers your brand, so you direct in plain English.",
+              "to": "/features/awa-chat"
+          },
+          {
+              "label": "Gallery",
+              "description": "Every frame from every campaign lands here — filter to the ones you want, star the keepers, then share a clean review room with your client or export them in one zip.",
+              "to": "/features/gallery"
+          },
+          {
+              "label": "Prompt Canvas",
+              "description": "The prompt behind every frame, made readable — compare two frames word-by-word, edit the exact text, and resend it verbatim. Awa writes the words; you direct.",
+              "to": "/features/prompt-canvas"
+          }
+      ],
+      "ctaHeadline": "Make the ad, not just the photo.",
+      "ctaBody": "Win the brief with a moving proof-of-work — generated in the same chat as your stills."
+  },
   "brands": {
       "slug": "brands",
       "metaTitle": "Brands — Organize Every Client in Dezygn | Dezygn",
@@ -932,6 +994,12 @@ export const generatedFeatureIndex: { slug: string; title: string; eyebrow: stri
       "title": "Awa",
       "eyebrow": "Awa · AI creative director",
       "subhead": "Awa is the conversational AI creative director inside every campaign — she writes the prompts, runs the shoot, critiques the results, and remembers your brand, so you direct in plain English."
+    },
+    {
+      "slug": "awa-video",
+      "title": "Awa Video",
+      "eyebrow": "Awa · Video",
+      "subhead": "Ask Awa to animate an image or direct a storyboard ad — a cinematic clip with audio, generated and played right in the chat."
     },
     {
       "slug": "brands",

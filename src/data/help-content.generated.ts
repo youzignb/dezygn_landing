@@ -47,6 +47,55 @@ export const generatedHelpArticles: Record<string, HelpArticle[]> = {
       ], related: ["prompt-canvas"],
     }
   ],
+  "creating": [
+    {
+      slug: "awa-video",
+      title: "Awa Video",
+      description: "Ask Awa to animate an image or direct a storyboard ad — a cinematic clip with audio, generated and played right in the chat.",
+      updatedAt: "2026-06-13",
+      blocks: [
+      { type: 'img', src: "/assets/images/landing-v4/awa-video/hero.png", alt: "Awa's inline video player showing a storyboard ad with labeled panels in the workspace", caption: "A 15s storyboard ad, generated and playing inline." },
+      { type: 'h2', text: "Overview" },
+      { type: 'p', text: "Awa can turn your images into short cinematic videos. Powered by ByteDance Seedance 2.0, she produces clips up to 15 seconds with automatically generated audio (music, sound effects, even voice) — without you ever touching a timeline. It's all conversational: you ask, she plans, you confirm, and the clip plays right in the chat." },
+      { type: 'h2', text: "How it works" },
+      { type: 'p', text: "There are two modes, and Awa picks the right one from what you ask:" },
+      { type: 'ul', items: ["Animate a single image — \"animate this\" turns one frame into a short clip, with optional first→last-frame keyframing.","Storyboard ad (the director workflow) — \"make me a 15s ad\" runs the full pipeline: a creative brief, a character reference sheet, a set of burned-label panels (SCENE | TIME | ROLE), and finally one cinematic clip that references up to 9 panels as @Image1..@Image9, with a music arc and an end card."] },
+      { type: 'p', text: "Awa always shows a plan and the credit cost and waits for your go — video is the most expensive operation. After she's generated an animatable image, she'll also offer, once, to bring it to life." },
+      { type: 'h2', text: "After the clip" },
+      { type: 'p', text: "The video plays inline in the chat. From there you can cut a 9:16 version for Reels/TikTok, rebuild with new panels or a different story arc, generate a matching still hero shot, or have Awa draft the proposal copy to send with all the assets. You can also multi-select 2–9 gallery frames and hit Make video to seed the whole thing from existing shots." }
+      ], related: ["awa-chat","gallery","prompt-canvas"],
+    },
+    {
+      slug: "prompt-canvas",
+      title: "Prompt Canvas",
+      description: "The prompt behind every frame, made readable — compare two frames word-by-word, edit the exact text, and resend it verbatim. Awa writes the words; you direct.",
+      updatedAt: "2026-06-13",
+      blocks: [
+      { type: 'img', src: "/assets/images/landing-v4/prompt-canvas/hero.png", alt: "Prompt Canvas reading view inside the workspace", caption: "The prompt, on the canvas." },
+      { type: 'h2', text: "Overview" },
+      { type: 'p', text: "The Prompt Canvas makes the prompt a first-class citizen — the idea we call *the Tao of the Prompt*. Instead of a prompt buried in a chat bubble, it occupies the canvas: readable, comparable, editable, and resendable. You stay in control of the exact words behind every image, while Awa still does the heavy lifting of writing them." },
+      { type: 'h2', text: "How It Works" },
+      { type: 'ul', items: ["Open it. Use the *Prompt* toggle in the workspace action rail, or click the prompt excerpt in a frame's info drawer.","Read it. The prompt is laid out one sentence per line in a serif reading view; [image1]-style reference tokens render as inline chips. A *Raw* toggle shows the byte-exact text for copying.","Compare two frames. Select a second frame from the strip — the canvas shows both thumbnails and a single merged prompt with a word-level diff (green additions, red deletions), so you can see exactly what changed between two shots.","Edit and resend. Edit the raw text directly. The send button surfaces an \"N words changed\" badge and dispatches your wording verbatim, with prompt enhancement off, so what you wrote is what runs."] },
+      { type: 'callout', variant: "tip", text: "Use *Compare* whenever two frames look close but one is clearly better — the diff usually reveals the one or two words doing the work." }
+      ], related: ["awa-chat"],
+    },
+    {
+      slug: "variant-board",
+      title: "Variant Board",
+      description: "A/B testing for your shots: lock the frame that's winning, spin off variants that each change a single ingredient or setting, then compare the grid and crown a new champion.",
+      updatedAt: "2026-06-13",
+      blocks: [
+      { type: 'img', src: "/assets/images/landing-v4/variant-board/hero.png", alt: "Variant Board with a locked champion frame", caption: "Champion locked, ready for variants." },
+      { type: 'h2', text: "Overview" },
+      { type: 'p', text: "The Variant Board turns the control-vs-variant method into a workspace surface. Instead of generating ten frames and hoping one lands, you pick the frame that's already winning, lock it as your champion (the control), and spin off variants that each change exactly *one* thing. It's A/B testing for image generation: a clean control, a single variable, and a grid that actually tells you what's better." },
+      { type: 'h2', text: "How it works" },
+      { type: 'ul', items: ["Open the board. Select a frame, then hit the grid icon in the frame's action rail. The board opens to a contact sheet of every frame in the campaign — starred frames are badged.","Crown a champion. Pick the frame that's clearly working and *Promote to Champion*. It locks on the left as your control: the image plus an editable control prompt derived from how it was made.","Add variant rows. The composer is a one-variable chip picker — Lighting, Background/Surface, Action, Subject, Camera, Style, Brand accent — plus a one-line change description. Pick one variable, describe the change concretely (real ratios beat vague words).","Generate the grid. Each row regenerates from the champion frame, changing only its single clause. Fresh results auto-link to the oldest pending row, and any chat-side run can be pulled onto the board with one click.","Crown the winner. Compare the variants against the locked control. When one wins, *Save champion as Recipe* to reuse that look anywhere — or promote a stronger frame to champion and run another round."] },
+      { type: 'callout', variant: "tip", text: "Change one variable per row. If you swap the lighting *and* the background in the same variant, you won't know which one moved the needle." },
+      { type: 'h2', text: "When to use it" },
+      { type: 'p', text: "Reach for the Variant Board once you have a frame that's *close* — the composition works but you're not sure about the lighting, the surface, or the camera angle. It's the disciplined alternative to re-rolling the whole prompt: keep everything that's right, isolate the one thing you're unsure about, and let the side-by-side decide. When you've found the winning combination, consolidate it into a Recipe so the look becomes repeatable." }
+      ], related: ["prompt-canvas","awa-chat"],
+    }
+  ],
   "feedback": [
     {
       slug: "feedback",
@@ -134,38 +183,6 @@ export const generatedHelpArticles: Record<string, HelpArticle[]> = {
       { type: 'ul', items: ["Colors — primary and secondary, pulled from the actual site and normalized to clean hex.","Fonts — the typographic style and feel of your brand.","Personality — a brand archetype (e.g. *Luxury / Premium*, *Disruptor / Edgy*, *Professional / Established*, *Value / Accessible*).","Target audience — who the brand speaks to, in plain language.","Visual style — a generation-ready description of your look: key materials, lighting, mood, and recurring visual elements, written so Awa can reproduce it.","Key visual elements — the signature details that make your photography recognizably yours."] },
       { type: 'p', text: "Everything imported is a starting point, not a verdict — it all stays editable in the preview before you save, and you can revise the brand anytime afterward." }
       ], related: ["awa-chat"],
-    }
-  ],
-  "creating": [
-    {
-      slug: "prompt-canvas",
-      title: "Prompt Canvas",
-      description: "The prompt behind every frame, made readable — compare two frames word-by-word, edit the exact text, and resend it verbatim. Awa writes the words; you direct.",
-      updatedAt: "2026-06-13",
-      blocks: [
-      { type: 'img', src: "/assets/images/landing-v4/prompt-canvas/hero.png", alt: "Prompt Canvas reading view inside the workspace", caption: "The prompt, on the canvas." },
-      { type: 'h2', text: "Overview" },
-      { type: 'p', text: "The Prompt Canvas makes the prompt a first-class citizen — the idea we call *the Tao of the Prompt*. Instead of a prompt buried in a chat bubble, it occupies the canvas: readable, comparable, editable, and resendable. You stay in control of the exact words behind every image, while Awa still does the heavy lifting of writing them." },
-      { type: 'h2', text: "How It Works" },
-      { type: 'ul', items: ["Open it. Use the *Prompt* toggle in the workspace action rail, or click the prompt excerpt in a frame's info drawer.","Read it. The prompt is laid out one sentence per line in a serif reading view; [image1]-style reference tokens render as inline chips. A *Raw* toggle shows the byte-exact text for copying.","Compare two frames. Select a second frame from the strip — the canvas shows both thumbnails and a single merged prompt with a word-level diff (green additions, red deletions), so you can see exactly what changed between two shots.","Edit and resend. Edit the raw text directly. The send button surfaces an \"N words changed\" badge and dispatches your wording verbatim, with prompt enhancement off, so what you wrote is what runs."] },
-      { type: 'callout', variant: "tip", text: "Use *Compare* whenever two frames look close but one is clearly better — the diff usually reveals the one or two words doing the work." }
-      ], related: ["awa-chat"],
-    },
-    {
-      slug: "variant-board",
-      title: "Variant Board",
-      description: "A/B testing for your shots: lock the frame that's winning, spin off variants that each change a single ingredient or setting, then compare the grid and crown a new champion.",
-      updatedAt: "2026-06-13",
-      blocks: [
-      { type: 'img', src: "/assets/images/landing-v4/variant-board/hero.png", alt: "Variant Board with a locked champion frame", caption: "Champion locked, ready for variants." },
-      { type: 'h2', text: "Overview" },
-      { type: 'p', text: "The Variant Board turns the control-vs-variant method into a workspace surface. Instead of generating ten frames and hoping one lands, you pick the frame that's already winning, lock it as your champion (the control), and spin off variants that each change exactly *one* thing. It's A/B testing for image generation: a clean control, a single variable, and a grid that actually tells you what's better." },
-      { type: 'h2', text: "How it works" },
-      { type: 'ul', items: ["Open the board. Select a frame, then hit the grid icon in the frame's action rail. The board opens to a contact sheet of every frame in the campaign — starred frames are badged.","Crown a champion. Pick the frame that's clearly working and *Promote to Champion*. It locks on the left as your control: the image plus an editable control prompt derived from how it was made.","Add variant rows. The composer is a one-variable chip picker — Lighting, Background/Surface, Action, Subject, Camera, Style, Brand accent — plus a one-line change description. Pick one variable, describe the change concretely (real ratios beat vague words).","Generate the grid. Each row regenerates from the champion frame, changing only its single clause. Fresh results auto-link to the oldest pending row, and any chat-side run can be pulled onto the board with one click.","Crown the winner. Compare the variants against the locked control. When one wins, *Save champion as Recipe* to reuse that look anywhere — or promote a stronger frame to champion and run another round."] },
-      { type: 'callout', variant: "tip", text: "Change one variable per row. If you swap the lighting *and* the background in the same variant, you won't know which one moved the needle." },
-      { type: 'h2', text: "When to use it" },
-      { type: 'p', text: "Reach for the Variant Board once you have a frame that's *close* — the composition works but you're not sure about the lighting, the surface, or the camera angle. It's the disciplined alternative to re-rolling the whole prompt: keep everything that's right, isolate the one thing you're unsure about, and let the side-by-side decide. When you've found the winning combination, consolidate it into a Recipe so the look becomes repeatable." }
-      ], related: ["prompt-canvas","awa-chat"],
     }
   ],
   "account-billing": [
