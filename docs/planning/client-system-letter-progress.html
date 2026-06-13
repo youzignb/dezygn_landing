@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>/client-system Letter — Focus-Group Optimization Progress</title>
+<style>
+  :root { --ink:#1A1A1A; --vellum:#F7F5F0; --paper:#EDEBE6; --muted:#6B6459; --dim:#8B867B; --accent:#8B5CF6; --accent-deep:#7C3AED; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--vellum); color:var(--ink); font-family:'Inter',-apple-system,sans-serif; line-height:1.55; }
+  .wrap { max-width:880px; margin:0 auto; padding:48px 24px 96px; }
+  .eyebrow { display:inline-block; font-family:ui-monospace,'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.13em; text-transform:uppercase; color:var(--accent-deep); background:#fff; border:1px solid rgba(26,26,26,0.12); border-radius:999px; padding:4px 12px; transform:rotate(-2deg); }
+  h1 { font-size:34px; font-weight:600; letter-spacing:-0.02em; margin:16px 0 8px; }
+  h1 em { font-family:Georgia,'Instrument Serif',serif; font-style:italic; font-weight:400; }
+  .sub { color:var(--muted); font-size:14.5px; max-width:64ch; }
+  .scoreboard { display:flex; gap:12px; flex-wrap:wrap; margin-top:18px; }
+  .score { background:#fff; border:1px solid rgba(26,26,26,0.1); border-radius:14px; padding:10px 18px; }
+  .score .n { font-size:24px; font-weight:700; }
+  .score .n em { font-family:Georgia,serif; font-style:italic; font-weight:400; }
+  .score .l { font-family:ui-monospace,monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dim); }
+  .score.target { border-color:var(--accent); }
+  .entry { background:#fff; border:1px solid rgba(26,26,26,0.08); border-radius:20px; padding:24px 28px; margin-top:24px; box-shadow:0 18px 40px -30px rgba(26,26,26,0.35); }
+  .entry .ts { font-family:ui-monospace,'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--dim); }
+  .entry h2 { font-size:19px; font-weight:600; margin:6px 0 8px; }
+  .entry p, .entry li { font-size:14px; color:#3a362f; }
+  .entry .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:14px; }
+  .entry .shots figure { margin:0; }
+  .entry .shots img { width:100%; border:1px solid rgba(26,26,26,0.1); border-radius:12px; display:block; }
+  .entry .shots figcaption { font-size:11px; color:var(--dim); margin-top:4px; font-family:ui-monospace,monospace; }
+  .tag { display:inline-block; font-size:11px; font-weight:600; border-radius:999px; padding:2px 10px; margin-left:8px; vertical-align:2px; }
+  .tag.done { background:#DDE8D9; color:#3D5A35; }
+  .tag.wip { background:#EFE6FB; color:var(--accent-deep); }
+  .tag.bench { background:#F8EBD9; color:#8A5A1E; }
+  code { background:var(--paper); border-radius:6px; padding:1px 6px; font-size:12.5px; }
+  table.votes { border-collapse:collapse; width:100%; margin-top:10px; font-size:13px; }
+  table.votes th, table.votes td { text-align:left; padding:5px 10px; border-bottom:1px solid rgba(26,26,26,0.08); }
+  table.votes th { font-family:ui-monospace,monospace; font-size:10px; letter-spacing:0.1em; text-transform:uppercase; color:var(--dim); }
+  .v { font-family:ui-monospace,monospace; font-size:11px; font-weight:700; border-radius:6px; padding:1px 8px; }
+  .v.buy { background:#DDE8D9; color:#3D5A35; }
+  .v.maybe { background:#F8EBD9; color:#8A5A1E; }
+  .v.no { background:#F6DEDB; color:#8C3A30; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="eyebrow">Live progress log</span>
+  <h1>/client-system Letter — <em>Focus-Group Optimization.</em></h1>
+  <p class="sub">Simulated 20-persona JVZoo-buyer panel + 5 deep cynics evaluate the $37 tripwire letter each round; we fix the top objections and re-run until ≥10% panel conversion (≥2/20 BUY). Goal: <code>client-system-letter-goal.md</code> · Personas: <code>client-system-personas.json</code> · Page: <code>/client-system-preview</code> · Newest entries first.</p>
+
+  <div class="scoreboard">
+    <div class="score target"><div class="n">10%</div><div class="l">Target conversion</div></div>
+    <div class="score"><div class="n">35% <em>(7/20)</em></div><div class="l">R0 panel</div></div>
+    <div class="score"><div class="n">40% <em>(8/20)</em></div><div class="l">R1 panel</div></div>
+    <div class="score"><div class="n">35% <em>(7/20)</em></div><div class="l">R2 panel</div></div>
+    <div class="score target"><div class="n">2/5</div><div class="l">Cynics BUY (final)</div></div>
+  </div>
+
+  <!-- APPEND NEW ENTRIES BELOW THIS LINE (newest first) -->
+
+  <article class="entry">
+    <span class="ts">2026-06-13 · 11:00 · FINAL round (r4) + JVZoo / Deiss / HyperFrames research</span><span class="tag done">Cynics broke through: 2/5 BUY</span>
+    <h2>Final test: 2 of the 5 hardened cynics flipped to BUY (first time ever) · panel 35% · lowest NO count yet</h2>
+    <p><strong>Panel (20):</strong> 7 BUY (Priya, Tunde, Ahmed, Kevin, Grace, Dmitri, Nadia) · 9 MAYBE · 4 NO (Janet, Carol, Lisa, Bob) — the lowest NO count across all rounds; Tunde &amp; Dmitri moved up to BUY. <strong>Cynics (5): 2 BUY, 3 MAYBE, 0 NO.</strong></p>
+    <ul>
+      <li><strong>Greg (time-skeptic) → BUY:</strong> the week-1 hour cadence + real before/after photos closed the quality-bar doubt. "I enter card details."</li>
+      <li><strong>Vince (funnel pro) → BUY:</strong> "the value stack, the announcement bar, the layout consistency… add up to a page I'd charge a client to build." Only remaining blocker to PUBLIC sharing = ship the product cover.</li>
+      <li>Walt/Donna/Eleanor held at MAYBE, all warmer. Recurring unmet asks unchanged: <strong>(1) product cover</strong> (now the single loudest gap — Vince, Raj, Lisa), <strong>(2) one real SYSTEM student result</strong> (Milan reads as "using Dezygn," not "ran the system" — Walt/Donna), <strong>(3) the VSL video</strong> (still placeholder — Dale almost bounced on it, Steve/Eleanor want it).</li>
+      <li>New tactical notes: Brigitte/Frank will test the countdown in incognito — <strong>the deadline must be genuinely honored</strong> (real date, no reset). Vince: <strong>move the guarantee block to immediately above the final CTA.</strong> Carol/Bob/Mei keep bouncing because <strong>Door 2 (own-shop) / Door 3 (local) are too buried.</strong></li>
+    </ul>
+    <p><strong>Research delivered (3 streams):</strong></p>
+    <ol>
+      <li><strong>Top JVZoo pages — the big gap: there's no funnel.</strong> Flat one-product page, checkout still a TODO. Tripwire + order-bump + OTO ≈ <em>3× revenue per lead</em> vs front-end alone. Plan: $37 front-end → <strong>$27 order bump</strong> (DFY Sample Vault) → <strong>$97–197 OTO1</strong> (accelerator/DFY templates) → <strong>$47 downsell</strong> → <strong>AIPA</strong> as application-gated backend. Sell native on JVZoo/W+ (1-click OTOs + affiliates), not a bare Stripe link. Glue trust lines + card badges under every CTA; add a fast-action bonus as a second urgency lever.</li>
+      <li><strong>Ryan Deiss VSL framework</strong> — 12-beat formula (open → problem+promise → video scarcity → agitate → reveal → features/benefits → CTA1-desire → credentials → guarantee → CTA2-logic → warnings → CTA3-fear), 3-CTA escalation, 12–24min long-form but <strong>3–5 min for a $37 tripwire</strong>; hook in 3s, captions, talking-head intercut with proof, add a unique-mechanism beat (we own "Proof Before Pitch").</li>
+      <li><strong>HyperFrames</strong> = open-source HTML→MP4 render engine (NOT an avatar tool). Voice/likeness = separate HeyGen product (clone voice + photo avatar → talking-head MP4), then composite in HyperFrames with B-roll/screenshots/captions.</li>
+    </ol>
+    <p><strong>VSL deliverables shipped:</strong> the full 12-beat VSL script (<code>docs/landingpage.v4/vsl/client-system-vsl-script.md</code>), the <code>frames.md</code> motion style guide, HyperFrames cloned + a scaffolded <code>vsl-project/</code> (design tokens + 13 real assets wired in), and <code>hyperframes-setup.md</code> pipeline.</p>
+  </article>
+
+  <article class="entry">
+    <span class="ts">2026-06-13 · 08:10 · layout/UX pass (founder feedback)</span><span class="tag done">3 fixes shipped</span>
+    <h2>Width-rhythm fix + timer → announcement bar + real value stack</h2>
+    <ul>
+      <li><strong>Width oscillation killed.</strong> Root cause: running prose was centered-floating (<code>mx-auto max-w-[42rem]</code>) while figures went full-bleed — so the page swung narrow↔wide ~8×. Fix: one consistent <code>max-w-6xl</code> frame with a 12-col grid; all running text is now LEFT-anchored at <code>col-span-7</code> (same left edge every section), companions at <code>col-span-5</code> (real screenshots / stat cards), full-width figures at <code>col-span-12</code>. Three consistent modes, no centered tube.</li>
+      <li><strong>Timer → sticky announcement bar.</strong> The floating dark lozenge above the CTAs is gone; the countdown is now a slim sticky top bar (dark, purple numbers), condensing on mobile. Both inline timers removed.</li>
+      <li><strong>Real value stack.</strong> Each of the 7 items now shows a visible "$197 value" + a numbered purple badge (replacing the dashed "COVER" gray boxes the cynics flagged), then a <strong>TOTAL VALUE $649</strong> row, then the $37 price. Math unchanged (197+147+97+67+67+47+27=649).</li>
+      <li>Verified: tsc + build clean, copy preserved (3,759 words, one authorized deletion of the redundant "Add it up and that's $649" line), 0 overflow at 375px, all images render (desktop), mobile stacks cleanly.</li>
+    </ul>
+  </article>
+
+  <article class="entry">
+    <span class="ts">2026-06-13 · 06:30 · round 3 — real assets + wide redesign</span><span class="tag done">Cynics warmed: 5/5 MOVED</span>
+    <h2>Wide two-column redesign + real client photos + Milan testimonial → all 5 cynics moved (still 0 BUY, but NO→MAYBE and cold→warm)</h2>
+    <p>Founder directives this round: (1) pull the real Milan testimonial + real client before/after images off <code>/v3</code>; (2) keep the $649 value stack (justified by the $3,000+ Upwork earnings); (3) make the design <strong>wider</strong> — two-column image/text sections, JVZoo energy, less "Greek column." Done: page rebuilt to <code>max-w-6xl</code> with prose at <code>max-w-[42rem]</code>; new full-bleed dark <strong>"Raw Assets In. Client-Ready Photos Out."</strong> showcase (3 real before→after pairs + lifestyle gallery); mechanism / backstory / retainer / empty-profile / offer-stack all converted to two-column; Milan card added inside a reframed (still-honest) "Where Are The Student Results?". 10 real client images downloaded + optimized locally. tsc + build clean, 0 overflow at 375px, ~3,760 rendered words.</p>
+    <p><strong>Cynic re-test (the 0/5 honest signal): every one moved up.</strong> R2 was 4 MAYBE + 1 NO (Donna). R3 is <strong>5 MAYBE, 0 NO</strong> — Donna NO→MAYBE, the other four cold-MAYBE→warm-MAYBE, all five self-reported MOVED: YES.</p>
+    <ul>
+      <li><strong>The showcase won universally.</strong> "The photos did what three pages of writing could not" (Eleanor). "Best thing that's happened to this page… $200-an-image result" (Vince). "First time I believed the skill was learnable, not just that HE had it" (Donna). This was Vince's old "show me one stunning image" flip condition — now met.</li>
+      <li><strong>The wider layout fixed the congruence gap</strong> (Vince): "reads like a creative operation, not a Gumroad template."</li>
+      <li><strong>Milan moved them but didn't close them</strong> — sharp catch from Walt & Donna: the quote says "using <em>Dezygn</em>" (the tool), not "using The Client System" (the product). A Dezygn user ≠ a system buyer who started from zero. Honest, but not the student proof they want.</li>
+    </ul>
+    <p><strong>The remaining blocker to cynic-BUY is now crisp and unanimous — and it's ASSETS, not copy:</strong></p>
+    <ol>
+      <li><strong>The 7 product covers are still gray placeholders</strong> — now the LOUDEST thing on the page because the showcase made everything around them sharper (Vince: "dressed the window, left the shelves empty"). Cheapest highest-leverage next win.</li>
+      <li><strong>One real result attributed to the SYSTEM</strong> (not the tool) — a testimonial naming the method, or a true from-zero student with a date + dollar. Milan is close but tool-attributed.</li>
+      <li>The VSL video (lower weight).</li>
+    </ol>
+    <p>Net: the redesign round validated the direction — real product photography is the single strongest asset on the page, and the warm-MAYBE cynics are now one asset-drop (product covers) from BUY. Copy is no longer the lever; production is.</p>
+    <div class="shots">
+      <figure><img src="client-system-shots/r3-2.png" alt="Dark showcase"><figcaption>r3 — "Raw Assets In. Client-Ready Out." showcase</figcaption></figure>
+      <figure><img src="client-system-shots/r3-1.png" alt="Mechanism two-column"><figcaption>r3 — mechanism, two-column (raw→client-ready)</figcaption></figure>
+      <figure><img src="client-system-shots/r3-5.png" alt="Offer two-column"><figcaption>r3 — offer stack, two-column JVZoo</figcaption></figure>
+      <figure><img src="client-system-shots/r3-7.png" alt="Milan card"><figcaption>r3 — Milan testimonial + honest student-results section</figcaption></figure>
+    </div>
+  </article>
+
+  <article class="entry">
+    <span class="ts">2026-06-13 · 03:55 · round 2 results + plateau call</span><span class="tag done">Copy ceiling reached</span>
+    <h2>Round 2: panel 35% (7/20), cynics still 0/5 — copy has plateaued; remaining gains need ASSETS, not words</h2>
+    <p>Applied 6 surgical patches (the $2,623-vs-$1,480 clarification, an honest hours-to-first-paycheck paragraph, a named Day-1 tool + a disclosure that Dezygn is Bertrand's own software, a US-reassurance line, the Fiverr exit-ramp line, and a Door-1-is-the-beginner-door clarifier), then 3 zero-downside nits (Day-1 tool now inside the day-plan box, "ecom" → "ecommerce — online shops" in the hero, three countdown timers trimmed to two). Letter is now <strong>3,617 words</strong> (was 1,505 at R0). Re-ran the identical 20-panel + 5-cynic group.</p>
+    <p><strong>The patches worked exactly where aimed — and revealed a ceiling.</strong></p>
+    <ul>
+      <li><strong>Greg (cynic) flipped NO → MAYBE</strong>, quoting the new hours-to-first-dollar paragraph verbatim as the line that won him: "it didn't exist before… that's the biggest improvement."</li>
+      <li><strong>Mei flipped NO → MAYBE</strong> (Door clarity). <strong>Eleanor</strong>: the Day-1 Dezygn name "almost got me" (now moved into the day box). <strong>Walt warmed</strong> — flip condition narrowed to "show me one third person."</li>
+      <li><strong>But it's now zero-sum:</strong> <strong>Donna flipped MAYBE → NO</strong> reading the <em>same</em> new ramp-honesty ("a month or two of evenings") and doing the Connects math herself; <strong>Grace BUY → MAYBE</strong> (international caveat surfaced the PH-payout fear); <strong>Bob MAYBE → NO</strong> (wanted Door 3 expanded, not just labeled).</li>
+      <li>Panel arc across rounds: <strong>35% → 40% → 35%</strong> — noise around ~37%, not a trend. Two rounds without net gain = the goal doc's plateau stop-condition.</li>
+    </ul>
+    <p><strong>Every surviving MAYBE/NO converges on three flip conditions that are NOT copy:</strong></p>
+    <ol>
+      <li><strong>One real student result</strong> — most-cited unmet condition (Marcus, Dale, Raj, Walt, Donna, Grace, Vince). Must be <em>earned</em> from a beta user, not written. Highest leverage item by far.</li>
+      <li><strong>Real VSL video + real product-cover image</strong> — the gray placeholders are now Vince's and Walt's hard blockers ("ship the cover — worth more than three timers"). Eleanor and Donna read "unfinished."</li>
+      <li><strong>The $649 → $37 value stack</strong> — Walt, Vince, and Steve (who is literally this audience) all flag it as the one fake note breaking an otherwise honest page. Copy-fixable, but a real creative tradeoff → flagged for Bertrand, not changed unilaterally.</li>
+    </ol>
+    <p>Structural non-buyers who can't be flipped without breaking the core: Lisa (design-snob, the "no experience needed" framing insults her by design), Sandra (self-identified won't-implement), Mei/Carol-as-client (they're the buyer of the service, not the seller). These are correct exclusions, not failures.</p>
+    <p><strong>Recommendation: stop the copy loop here.</strong> Target (≥10%) is met 3.5×. The honest path from ~37% panel / 0% cynic-BUY runs through assets and social proof: (1) land one beta student + screenshot their first job, (2) shoot the VSL and a real product cover, (3) decide the value-stack question, then a final measurement round. None of that is more words.</p>
+    <div class="shots">
+      <figure><img src="client-system-shots/r2-0.png" alt="R2 hero"><figcaption>r2 — hero + VSL placeholder</figcaption></figure>
+      <figure><img src="client-system-shots/r2-2.png" alt="R2 timeline"><figcaption>r2 — real timeline + pull-quotes</figcaption></figure>
+      <figure><img src="client-system-shots/r2-3.png" alt="R2 offer"><figcaption>r2 — stack + price (cover still placeholder)</figcaption></figure>
+      <figure><img src="client-system-shots/r2-4.png" alt="R2 costs/profile"><figcaption>r2 — costs ledger + empty-profile</figcaption></figure>
+    </div>
+  </article>
+
+  <article class="entry">
+    <span class="ts">2026-06-13 · 00:25 · round 0 results</span><span class="tag bench">Benchmark</span>
+    <h2>Round 0: 35% panel conversion (7/20 BUY) — but cynics went 0/5 and the objections cluster hard</h2>
+    <p><strong>Panel votes:</strong> BUY ×7 (Priya, Steve, Ahmed, Kevin, Grace, Frank, Nadia) · MAYBE ×7 (Dale, Tunde, Mei, Raj, Sandra, Dmitri, Paula) · NO ×6 (Marcus, Janet, Carol, Lisa, Brigitte, Bob). <strong>Deep cynics:</strong> Walt NO · Donna NO · Greg MAYBE · Eleanor NO · Vince MAYBE.</p>
+    <p>The warm panel clears the 10% bar at benchmark — so the working target shifts to <strong>holding ≥35% while converting MAYBEs and flipping cynics</strong> (the panel skews agreeable; the cynics are the honest signal). What won people: the 24/3/1 proposals disclosure (cited by 6), "She doesn't want a freelancer. She wants her images.", the keep-the-bonuses guarantee, the meta-guarantee move, "$90 an hour". What's broken — recurring objection clusters (3-of-5 rule triggers on A–D):</p>
+    <ul>
+      <li><strong>A. Only Bertrand's results</strong> (Walt, Raj, Dale, Vince): no third-party proof; "two clients is a story, not a system."</li>
+      <li><strong>B. Zero-reviews cold start ignored</strong> (Walt, Donna, Nadia, Grace, Paula): "you had a Top Rated badge; I start from profile zero."</li>
+      <li><strong>C. Hidden costs &amp; ramp-up hours</strong> (Donna, Greg, Sandra, Marcus): Connects fees, tool costs, "5 hours/week vs 24 proposals/week" math, no month-one timeline.</li>
+      <li><strong>D. Never shows a single image</strong> (Vince, Grace, Eleanor): "2,000 words about AI photos without one jaw-dropping photo."</li>
+      <li><strong>E. Beginner doors closing</strong> (Eleanor, Janet, Paula): Upwork/retainer/prompt never explained; letter assumes a working freelancer.</li>
+      <li><strong>F. Wrong-door readers bounce</strong> (Carol, Bob, Mei): own-shop owners and local-client owners hear "this isn't for me."</li>
+      <li><strong>G. International doubt</strong> (Priya, Tunde, Brigitte): does this work outside the US?</li>
+    </ul>
+    <p><strong>Round 1 plan:</strong> meaty rewrite to ~3,200–3,800 words (also fixes the known "too short/too thin" feedback): honest ramp timeline with real dates, "what it really costs to run" block, zero-reviews section, beginner on-ramp + plain-English terms, "three doors" section (freelancer / own shop / existing local clients), international paragraph, founding-buyer honesty block (no fake student testimonials — say so), real client review pull-quotes, real AI shots strip, FAQ resurrection, recap box, wider/heavier layout.</p>
+  </article>
+
+  <article class="entry">
+    <span class="ts">2026-06-12 · 23:59 · kickoff</span><span class="tag wip">Round 0 running</span>
+    <h2>Goal locked, panel built, benchmark snapshot taken</h2>
+    <ul>
+      <li>Goal doc written: meaty long-form rewrite + iterate via simulated focus groups to ≥10% panel conversion. Stop on target, plateau (&lt;1 vote gain twice), or 4 rounds/session.</li>
+      <li>Fixed panel created: 20 JVZoo-buyer personas (serial buyers, broke skeptics, international hustlers, tech-averse boomers, an affiliate who swipes funnels, a design snob…) + 5 deep cynics. Same personas every round.</li>
+      <li>Benchmark snapshot: current letter is <strong>1,505 words</strong> (known-light vs the 3,000–5,000 JVZoo norm), Belcher skeleton + real Upwork proof shots, VSL/illustration/product-cover still placeholders, narrow <code>max-w-2xl</code> column.</li>
+      <li>Round 0 focus group dispatched: 5×4-persona panel sessions + 5 separate deep-cynic sessions, all voting BUY/MAYBE/NO with objections and flip conditions.</li>
+    </ul>
+    <div class="shots">
+      <figure><img src="client-system-shots/r0-hero.png" alt="Round 0 hero"><figcaption>r0 — hero + VSL frame</figcaption></figure>
+      <figure><img src="client-system-shots/r0-mechanism.png" alt="Round 0 mechanism"><figcaption>r0 — mechanism + backstory</figcaption></figure>
+      <figure><img src="client-system-shots/r0-proof.png" alt="Round 0 proof"><figcaption>r0 — retainer proof</figcaption></figure>
+      <figure><img src="client-system-shots/r0-offer.png" alt="Round 0 offer"><figcaption>r0 — stack + price</figcaption></figure>
+      <figure><img src="client-system-shots/r0-close.png" alt="Round 0 close"><figcaption>r0 — guarantee + close</figcaption></figure>
+    </div>
+  </article>
+
+</div>
+</body>
+</html>

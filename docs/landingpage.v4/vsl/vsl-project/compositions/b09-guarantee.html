@@ -1,0 +1,224 @@
+<template id="b09-guarantee-template">
+  <div data-composition-id="b09-guarantee" data-width="1920" data-height="1080">
+    <!-- ============================================================
+         BEAT 9 — GUARANTEE · PAPER (light) scene · warm/trustworthy
+         VO 21.70s · scene 22.4s
+         ============================================================ -->
+    <div class="beat-fade">
+      <div class="bg"></div>
+
+      <!-- decoratives -->
+      <div class="glow" data-layout-ignore></div>
+      <div class="glyph" data-layout-ignore>✳</div>
+      <div class="ghost" data-layout-ignore>dezygn</div>
+
+      <div class="scene-content">
+        <div id="b09-eyebrow" class="clip eyebrow" data-start="0.2" data-duration="22.2" data-track-index="2">
+          MY GUARANTEE
+        </div>
+
+        <div class="shield-headline-row">
+          <div id="b09-shield" class="clip shield-seal" data-start="0.5" data-duration="21.9" data-track-index="3">
+            ✓
+          </div>
+          <div id="b09-headline" class="clip headline" data-start="1.2" data-duration="21.2" data-track-index="4">
+            Take <span class="serif-accent">30 days.</span>
+          </div>
+        </div>
+
+        <div id="b09-subhead" class="clip subhead" data-start="2.5" data-duration="19.9" data-track-index="5">
+          Try everything. Use every strategy.
+        </div>
+
+        <div class="chips-row">
+          <div id="b09-chip1" class="clip mono-chip" data-start="4.0" data-duration="18.4" data-track-index="6">
+            30 DAYS
+          </div>
+          <div id="b09-chip2" class="clip mono-chip" data-start="4.4" data-duration="18.0" data-track-index="7">
+            FULL REFUND
+          </div>
+          <div id="b09-chip3" class="clip mono-chip" data-start="4.8" data-duration="17.6" data-track-index="8">
+            KEEP THE BONUSES
+          </div>
+        </div>
+
+        <div id="b09-closing" class="clip closing-line" data-start="14.0" data-duration="8.4" data-track-index="10">
+          I'm running the method on you <span class="serif-accent-closing">right now.</span>
+        </div>
+      </div>
+
+      <!-- VO -->
+      <audio id="b09-vo" class="clip" src="../assets/b09.wav" data-start="0.3" data-duration="21.70" data-track-index="9"></audio>
+    </div>
+
+    <style>
+      @font-face {
+        font-family: "Instrument Serif";
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+        src: url("../assets/fonts/instrument-serif-italic.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Instrument Serif";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("../assets/fonts/instrument-serif-regular.woff2") format("woff2");
+      }
+      [data-composition-id="b09-guarantee"] {
+        --vellum: #f7f5f0;
+        --paper: #edebe6;
+        --ink: #1a1a1a;
+        --inkWarm: #2b2b2b;
+        --muted: #6b6459;
+        --dim: #8b867b;
+        --accent: #8b5cf6;
+        --accentDeep: #7c3aed;
+        --paperOnDark: #e8e4db;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      [data-composition-id="b09-guarantee"] .beat-fade { position: absolute; inset: 0; }
+      [data-composition-id="b09-guarantee"] .bg {
+        position: absolute; inset: 0; z-index: 0;
+        background: #edebe6;
+      }
+      /* warm soft purple radial glow */
+      [data-composition-id="b09-guarantee"] .glow {
+        position: absolute; z-index: 1;
+        width: 1200px; height: 1200px;
+        left: 50%; top: 50%; transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(139,92,246,0.10) 0%, rgba(139,92,246,0.04) 40%, rgba(139,92,246,0) 68%);
+        pointer-events: none;
+      }
+      [data-composition-id="b09-guarantee"] .glyph {
+        position: absolute; z-index: 1;
+        right: 60px; top: 40px;
+        font-family: "Instrument Serif", serif;
+        font-size: 360px; line-height: 1;
+        color: rgba(26,26,26,0.08);
+        pointer-events: none;
+      }
+      [data-composition-id="b09-guarantee"] .ghost {
+        position: absolute; z-index: 1;
+        left: -20px; bottom: 30px;
+        font-family: "Inter", sans-serif; font-weight: 900;
+        font-size: 300px; letter-spacing: -0.04em;
+        color: rgba(26,26,26,0.03);
+        pointer-events: none;
+      }
+
+      [data-composition-id="b09-guarantee"] .scene-content {
+        position: absolute; inset: 0; z-index: 5;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 34px;
+        width: 100%; height: 100%;
+        padding: 70px 120px;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="b09-guarantee"] .eyebrow {
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.18em;
+        font-size: 22px; color: var(--muted);
+      }
+
+      [data-composition-id="b09-guarantee"] .shield-headline-row {
+        display: flex; flex-direction: row;
+        align-items: center; justify-content: center;
+        gap: 48px;
+      }
+
+      [data-composition-id="b09-guarantee"] .shield-seal {
+        width: 180px; height: 180px;
+        background: var(--accent);
+        border-radius: 24px;
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 20px 60px rgba(139,92,246,0.5);
+        font-size: 90px; line-height: 1;
+        color: #ffffff;
+        font-family: "Inter", sans-serif; font-weight: 700;
+        flex-shrink: 0;
+      }
+
+      [data-composition-id="b09-guarantee"] .headline {
+        font-family: "Inter", sans-serif; font-weight: 800;
+        font-size: 80px; letter-spacing: -0.02em;
+        color: var(--ink);
+        line-height: 1.05;
+      }
+
+      [data-composition-id="b09-guarantee"] .headline .serif-accent {
+        font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400;
+        color: var(--accent);
+      }
+
+      [data-composition-id="b09-guarantee"] .subhead {
+        font-family: "Inter", sans-serif; font-weight: 500;
+        font-size: 34px; letter-spacing: -0.01em;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      [data-composition-id="b09-guarantee"] .chips-row {
+        display: flex; flex-direction: row;
+        align-items: center; justify-content: center;
+        gap: 24px;
+      }
+
+      [data-composition-id="b09-guarantee"] .mono-chip {
+        background: var(--vellum);
+        border: 1.5px solid rgba(26,26,26,0.12);
+        border-radius: 14px;
+        padding: 18px 32px;
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.16em;
+        font-size: 22px;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      [data-composition-id="b09-guarantee"] .closing-line {
+        font-family: "Inter", sans-serif; font-weight: 700;
+        font-size: 34px; letter-spacing: -0.01em;
+        color: var(--ink);
+        text-align: center;
+      }
+
+      [data-composition-id="b09-guarantee"] .closing-line .serif-accent-closing {
+        font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400;
+        color: var(--accent);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 22.4;
+
+      // crossfade IN (the whole beat), never out
+      tl.fromTo(".beat-fade", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+
+      // ambient (finite repeats, no repeat:-1)
+      tl.to(".glyph", { rotation: -6, y: 20, duration: D, ease: "sine.inOut" }, 0);
+      tl.to(".glow",  { scale: 1.08, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      tl.to(".ghost", { x: -30, duration: D, ease: "sine.inOut" }, 0);
+
+      // entrances
+      tl.fromTo("#b09-eyebrow",  { y: -28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#b09-shield",   { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(2.5)" }, 0.5);
+      tl.fromTo("#b09-headline", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.65, ease: "power4.out" }, 1.2);
+      tl.fromTo("#b09-subhead",  { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power2.out" }, 2.5);
+      tl.fromTo("#b09-chip1",    { y: 30, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 4.0);
+      tl.fromTo("#b09-chip2",    { y: 30, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 4.4);
+      tl.fromTo("#b09-chip3",    { y: 30, opacity: 0, scale: 0.92 }, { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 4.8);
+      tl.fromTo("#b09-closing",  { y: 25, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: "expo.out" }, 14.0);
+
+      window.__timelines["b09-guarantee"] = tl;
+    </script>
+  </div>
+</template>

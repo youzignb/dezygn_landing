@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "node scripts/generate-sitemap.mjs && tsc && vite build && node scripts/prerender.mjs",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "stripe:setup": "node scripts/stripe-setup-funnel.mjs"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
     "@microsoft/clarity": "^1.0.2",
+    "@stripe/react-stripe-js": "^6.6.0",
+    "@stripe/stripe-js": "^9.8.0",
     "@supabase/supabase-js": "^2.97.0",
     "lucide-react": "^0.294.0",
     "react": "^18.2.0",
@@ -32,6 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.32",
     "puppeteer": "^25.1.0",
+    "stripe": "^22.2.1",
     "tailwindcss": "^3.3.6",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"

@@ -1,0 +1,11 @@
+# HyperFrames engine clone (107M — re-clone: git clone --depth 1 https://github.com/heygen-com/hyperframes.git)
+hyperframes/
+# scaffold deps + regenerable render artifacts (kept out of git)
+vsl-project/node_modules/
+vsl-project/.hyperframes/
+vsl-project/output*.mp4
+vsl-project/client-system-vsl-v1.mp4
+vsl-project/preview-frames/
+vsl-project/transcript.json
+*.wav
+vsl-project/renders/

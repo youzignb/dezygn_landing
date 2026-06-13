@@ -5,7 +5,9 @@ import { useState } from 'react';
 
 export default function SuccessPage() {
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const emailAddress = "payments@checkoutpage.com";
+  // Stripe sends the card receipt from this sender; access/license details come
+  // from Dezygn (bertrand@dezygn.com).
+  const emailAddress = "receipts@stripe.com";
 
   const copyToClipboard = async (text: string) => {
     try {
@@ -18,9 +20,9 @@ export default function SuccessPage() {
   };
 
   const emailServices = [
-    { name: 'Gmail', url: 'https://mail.google.com/mail/u/0/#search/payments%40checkoutpage.com' },
+    { name: 'Gmail', url: 'https://mail.google.com/mail/u/0/#search/receipts%40stripe.com' },
     { name: 'Outlook', url: 'https://outlook.live.com/mail/' },
-    { name: 'Yahoo', url: 'https://mail.yahoo.com/d/search/keyword=payments%40checkoutpage.com' },
+    { name: 'Yahoo', url: 'https://mail.yahoo.com/d/search/keyword=receipts%40stripe.com' },
     { name: 'Apple Mail', url: 'mailto:' }
   ];
 
@@ -56,7 +58,7 @@ export default function SuccessPage() {
                 <h3 className="font-bold text-blue-900">Check Your Email</h3>
               </div>
               
-              <p className="text-blue-800 text-sm mb-3">Look for an email from:</p>
+              <p className="text-blue-800 text-sm mb-3">Look for your Stripe receipt from:</p>
               
               <div className="bg-white border border-blue-200 rounded-lg p-2 mb-3 flex items-center justify-between">
                 <span className="font-mono text-xs text-gray-700">{emailAddress}</span>
@@ -85,7 +87,7 @@ export default function SuccessPage() {
                 ))}
               </div>
 
-              <p className="text-blue-700 text-xs mb-2">This email contains your license keys.</p>
+              <p className="text-blue-700 text-xs mb-2">That's your payment receipt. Your access details arrive separately from Dezygn — activate below.</p>
             </div>
 
             {/* Next Steps */}

@@ -1,0 +1,119 @@
+<template id="b11-warnings-template">
+  <div data-composition-id="b11-warnings" data-width="1920" data-height="1080">
+    <!-- ============================================================
+         BEAT 11 — WARNINGS · VELLUM scene · honest disqualifier + real urgency
+         VO 13.23s · scene 13.9s
+         ============================================================ -->
+    <div class="beat-fade">
+      <div class="bg"></div>
+
+      <div class="glow" data-layout-ignore></div>
+      <div class="glyph" data-layout-ignore>✳</div>
+      <div class="ghost" data-layout-ignore>dezygn</div>
+
+      <div class="scene-content">
+        <div id="b11-eyebrow" class="clip eyebrow" data-start="0.2" data-duration="13.7" data-track-index="2">
+          THE HONEST PART
+        </div>
+
+        <div class="headline-block">
+          <div id="b11-hl1" class="clip headline-line" data-start="0.4" data-duration="13.5" data-track-index="3">
+            This is
+          </div>
+          <div id="b11-hl2" class="clip headline-line serif" data-start="0.7" data-duration="13.2" data-track-index="4">
+            work.
+          </div>
+        </div>
+
+        <div id="b11-sub" class="clip subline" data-start="2.0" data-duration="11.9" data-track-index="5">
+          Apply. Make samples. Some clients won't reply. If you want push-button money
+          while you sleep — this isn't it. Please don't buy it.
+        </div>
+
+        <div id="b11-pricecard" class="clip price-card" data-start="6.5" data-duration="7.4" data-track-index="6">
+          <span class="pc-label">BUT THE GAP IS WIDE OPEN TODAY</span>
+          <span class="pc-step">Launch price rises to <em class="pc-after">$67</em> on <span class="pc-date">[DATE]</span></span>
+        </div>
+      </div>
+
+      <audio id="b11-vo" class="clip" src="../assets/b11.wav" data-start="0.3" data-duration="13.23" data-track-index="9"></audio>
+    </div>
+
+    <style>
+      @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; font-display: block; src: url("../assets/fonts/instrument-serif-italic.woff2") format("woff2"); }
+      @font-face { font-family: "Instrument Serif"; font-style: normal; font-weight: 400; font-display: block; src: url("../assets/fonts/instrument-serif-regular.woff2") format("woff2"); }
+      [data-composition-id="b11-warnings"] {
+        --vellum:#f7f5f0; --paper:#edebe6; --ink:#1a1a1a; --inkWarm:#2b2b2b;
+        --muted:#6b6459; --dim:#8b867b; --accent:#8b5cf6; --accentDeep:#7c3aed; --paperOnDark:#e8e4db;
+        position:absolute; inset:0; overflow:hidden;
+      }
+      [data-composition-id="b11-warnings"] .beat-fade { position:absolute; inset:0; }
+      [data-composition-id="b11-warnings"] .bg { position:absolute; inset:0; z-index:0; background:var(--vellum); }
+      [data-composition-id="b11-warnings"] .glow {
+        position:absolute; z-index:1; width:1100px; height:1100px; left:50%; top:46%; transform:translate(-50%,-50%);
+        background:radial-gradient(circle, rgba(139,92,246,0.10) 0%, rgba(139,92,246,0.03) 42%, rgba(139,92,246,0) 70%); pointer-events:none;
+      }
+      [data-composition-id="b11-warnings"] .glyph {
+        position:absolute; z-index:1; right:70px; top:30px; font-family:"Instrument Serif",serif;
+        font-size:300px; line-height:1; color:rgba(139,92,246,0.06); pointer-events:none;
+      }
+      [data-composition-id="b11-warnings"] .ghost {
+        position:absolute; z-index:1; left:-20px; bottom:30px; font-family:"Inter",sans-serif; font-weight:900;
+        font-size:280px; letter-spacing:-0.04em; color:rgba(26,26,26,0.025); pointer-events:none;
+      }
+      [data-composition-id="b11-warnings"] .scene-content {
+        position:absolute; inset:0; z-index:5; display:flex; flex-direction:column; align-items:center; justify-content:center;
+        gap:30px; width:100%; height:100%; padding:70px 200px; box-sizing:border-box; text-align:center;
+      }
+      [data-composition-id="b11-warnings"] .eyebrow {
+        font-family:"IBM Plex Mono",monospace; font-weight:600; text-transform:uppercase; letter-spacing:0.18em;
+        font-size:22px; color:var(--accent);
+      }
+      [data-composition-id="b11-warnings"] .headline-block { display:flex; align-items:baseline; gap:22px; }
+      [data-composition-id="b11-warnings"] .headline-line {
+        font-family:"Inter",sans-serif; font-weight:800; font-size:96px; letter-spacing:-0.025em; color:var(--ink); line-height:1.0;
+      }
+      [data-composition-id="b11-warnings"] .serif {
+        font-family:"Instrument Serif",serif; font-style:italic; font-weight:400; font-size:104px; color:var(--accent);
+      }
+      [data-composition-id="b11-warnings"] .subline {
+        font-family:"Inter",sans-serif; font-weight:500; font-size:34px; line-height:1.5; color:var(--inkWarm); max-width:1180px;
+      }
+      [data-composition-id="b11-warnings"] .price-card {
+        display:flex; flex-direction:column; align-items:center; gap:14px; margin-top:10px;
+        background:#fff; border:1px solid rgba(26,26,26,0.12); border-radius:24px; padding:30px 56px;
+        box-shadow:0 18px 50px rgba(26,26,26,0.10);
+      }
+      [data-composition-id="b11-warnings"] .pc-label {
+        font-family:"IBM Plex Mono",monospace; font-weight:600; text-transform:uppercase; letter-spacing:0.16em;
+        font-size:18px; color:var(--accentDeep);
+      }
+      [data-composition-id="b11-warnings"] .pc-step {
+        font-family:"Inter",sans-serif; font-weight:600; font-size:38px; color:var(--ink); font-variant-numeric:tabular-nums;
+      }
+      [data-composition-id="b11-warnings"] .pc-after { font-family:"Instrument Serif",serif; font-style:italic; color:var(--accent); font-size:46px; }
+      [data-composition-id="b11-warnings"] .pc-date { color:var(--muted); }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 13.9;
+
+      tl.fromTo(".beat-fade", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+
+      tl.to("[data-composition-id='b11-warnings'] .glyph", { rotation: -5, y: 16, duration: D, ease: "sine.inOut" }, 0);
+      tl.to("[data-composition-id='b11-warnings'] .glow",  { scale: 1.06, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      tl.to("[data-composition-id='b11-warnings'] .ghost", { x: 28, duration: D, ease: "sine.inOut" }, 0);
+
+      tl.fromTo("#b11-eyebrow", { y: -24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#b11-hl1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.4);
+      tl.fromTo("#b11-hl2", { y: 36, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.55, ease: "expo.out" }, 0.7);
+      tl.fromTo("#b11-sub", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power2.out" }, 2.0);
+      tl.fromTo("#b11-pricecard", { y: 30, opacity: 0, scale: 0.94 }, { y: 0, opacity: 1, scale: 1, duration: 0.6, ease: "back.out(1.7)" }, 6.5);
+
+      window.__timelines["b11-warnings"] = tl;
+    </script>
+  </div>
+</template>

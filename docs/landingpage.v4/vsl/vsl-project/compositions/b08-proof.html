@@ -1,0 +1,283 @@
+<template id="b08-proof-template">
+  <div data-composition-id="b08-proof" data-width="1920" data-height="1080">
+    <!-- ============================================================
+         BEAT 8 — PROOF · DARK scene · top-rated profile + funnel + testimonial
+         VO 26.77s · scene 27.5s
+         ============================================================ -->
+    <div class="beat-fade">
+      <div class="bg"></div>
+
+      <!-- decoratives -->
+      <div class="glow" data-layout-ignore></div>
+      <div class="glyph" data-layout-ignore>✳</div>
+      <div class="ghost" data-layout-ignore>dezygn</div>
+
+      <div class="scene-content">
+
+        <!-- EYEBROW — centered, appears first -->
+        <div id="b08-eyebrow" class="clip eyebrow" data-start="0.2" data-duration="27.3" data-track-index="2">
+          WHO'S SAYING THIS
+        </div>
+
+        <!-- MIDDLE ROW: left = phase 1 (profile), right = phase 2 (funnel) -->
+        <div class="mid-row">
+
+          <!-- LEFT: Phase 1 — Profile card + tag + belgium line -->
+          <div class="phase-left">
+            <div id="b08-profile-card" class="clip shot-card" data-start="0.3" data-duration="17.2" data-track-index="3">
+              <img src="../assets/profile-top-rated.png" alt="Top Rated Upwork profile" />
+            </div>
+            <div id="b08-top-rated-tag" class="clip mono-tag" data-start="1.0" data-duration="16.5" data-track-index="4">
+              TOP RATED · 100% JSS
+            </div>
+            <div id="b08-belgium-line" class="clip belgium-line" data-start="1.8" data-duration="15.7" data-track-index="5">
+              Software guy from <span class="serif-accent">Belgium.</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: Phase 2 — Funnel card + tag -->
+          <div class="phase-right">
+            <div id="b08-funnel-card" class="clip shot-card" data-start="9.0" data-duration="18.5" data-track-index="6">
+              <img src="../assets/proposals-funnel.png" alt="Proposals funnel last 7 days" />
+            </div>
+            <div id="b08-funnel-tag" class="clip mono-tag" data-start="10.0" data-duration="17.5" data-track-index="7">
+              LAST 7 DAYS
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PHASE 3 — Testimonial card (appears after profile/funnel gone) -->
+        <div id="b08-testimonial" class="clip testimonial-card" data-start="18.0" data-duration="9.5" data-track-index="8">
+          <div id="b08-stars" class="clip stars" data-start="18.5" data-duration="9.0" data-track-index="10">
+            &#9733;&#9733;&#9733;&#9733;&#9733;
+          </div>
+          <div id="b08-quote" class="clip quote-text" data-start="19.2" data-duration="8.3" data-track-index="3">
+            "Just landed a $2,000+ product photography contract using Dezygn."
+          </div>
+          <div id="b08-footer" class="clip testimonial-footer" data-start="20.5" data-duration="7.0" data-track-index="4">
+            <img class="avatar" src="../assets/milan.jpg" alt="Milan" />
+            <span class="author-name">Milan</span>
+            <span class="author-label">DEZYGN USER</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VO -->
+      <audio id="b08-vo" class="clip" src="../assets/b08.wav" data-start="0.3" data-duration="26.77" data-track-index="9"></audio>
+    </div>
+
+    <style>
+      @font-face {
+        font-family: "Instrument Serif";
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+        src: url("../assets/fonts/instrument-serif-italic.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Instrument Serif";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("../assets/fonts/instrument-serif-regular.woff2") format("woff2");
+      }
+      [data-composition-id="b08-proof"] {
+        --vellum: #f7f5f0;
+        --paper: #edebe6;
+        --ink: #1a1a1a;
+        --inkWarm: #2b2b2b;
+        --muted: #6b6459;
+        --dim: #8b867b;
+        --accent: #8b5cf6;
+        --accentDeep: #7c3aed;
+        --paperOnDark: #e8e4db;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      [data-composition-id="b08-proof"] .beat-fade { position: absolute; inset: 0; }
+      [data-composition-id="b08-proof"] .bg {
+        position: absolute; inset: 0; z-index: 0;
+        background: #161616;
+      }
+      [data-composition-id="b08-proof"] .glow {
+        position: absolute; z-index: 1;
+        width: 1300px; height: 1300px;
+        left: 50%; top: 46%; transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(139,92,246,0.22) 0%, rgba(139,92,246,0.08) 38%, rgba(139,92,246,0) 68%);
+        pointer-events: none;
+      }
+      [data-composition-id="b08-proof"] .glyph {
+        position: absolute; z-index: 1;
+        right: 60px; top: 40px;
+        font-family: "Instrument Serif", serif;
+        font-size: 360px; line-height: 1;
+        color: rgba(139,92,246,0.10);
+        pointer-events: none;
+      }
+      [data-composition-id="b08-proof"] .ghost {
+        position: absolute; z-index: 1;
+        left: -20px; bottom: 30px;
+        font-family: "Inter", sans-serif; font-weight: 900;
+        font-size: 300px; letter-spacing: -0.04em;
+        color: rgba(232,228,219,0.035);
+        pointer-events: none;
+      }
+
+      [data-composition-id="b08-proof"] .scene-content {
+        position: absolute; inset: 0; z-index: 5;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 28px;
+        width: 100%; height: 100%;
+        padding: 70px 120px;
+        box-sizing: border-box;
+      }
+
+      [data-composition-id="b08-proof"] .eyebrow {
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.18em;
+        font-size: 22px; color: var(--accent);
+        flex-shrink: 0;
+      }
+
+      [data-composition-id="b08-proof"] .mid-row {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 60px;
+        width: 100%;
+        flex-shrink: 0;
+      }
+
+      [data-composition-id="b08-proof"] .phase-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        flex-shrink: 0;
+      }
+
+      [data-composition-id="b08-proof"] .phase-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        flex-shrink: 0;
+      }
+
+      [data-composition-id="b08-proof"] .shot-card {
+        position: relative;
+        background: #ffffff; border-radius: 20px;
+        padding: 14px;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.06) inset;
+        flex-shrink: 0;
+      }
+      [data-composition-id="b08-proof"] .shot-card img {
+        display: block; border-radius: 10px;
+      }
+      [data-composition-id="b08-proof"] #b08-profile-card img {
+        width: 620px; height: auto;
+      }
+      [data-composition-id="b08-proof"] #b08-funnel-card img {
+        width: 720px; height: auto;
+      }
+
+      [data-composition-id="b08-proof"] .mono-tag {
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.16em;
+        font-size: 20px; color: var(--accent);
+      }
+
+      [data-composition-id="b08-proof"] .belgium-line {
+        font-family: "Inter", sans-serif; font-weight: 700;
+        font-size: 36px; letter-spacing: -0.01em;
+        color: var(--paperOnDark);
+      }
+      [data-composition-id="b08-proof"] .belgium-line .serif-accent {
+        font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400;
+        font-size: 42px; color: var(--accent);
+      }
+
+      [data-composition-id="b08-proof"] .testimonial-card {
+        background: rgba(255,255,255,0.06);
+        border-left: 4px solid var(--accent);
+        border-radius: 20px;
+        padding: 32px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        max-width: 860px;
+        width: 100%;
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+
+      [data-composition-id="b08-proof"] .stars {
+        font-size: 28px;
+        color: var(--accent);
+        letter-spacing: 0.04em;
+        line-height: 1;
+      }
+
+      [data-composition-id="b08-proof"] .quote-text {
+        font-family: "Inter", sans-serif; font-weight: 500;
+        font-size: 28px; line-height: 1.45;
+        color: var(--paperOnDark);
+      }
+
+      [data-composition-id="b08-proof"] .testimonial-footer {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      [data-composition-id="b08-proof"] .testimonial-footer .avatar {
+        width: 56px; height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      [data-composition-id="b08-proof"] .testimonial-footer .author-name {
+        font-family: "Inter", sans-serif; font-weight: 700;
+        font-size: 24px; color: var(--paperOnDark);
+      }
+      [data-composition-id="b08-proof"] .testimonial-footer .author-label {
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.16em;
+        font-size: 18px; color: var(--accent);
+        margin-left: 4px;
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 27.5;
+
+      // crossfade IN — never out
+      tl.fromTo(".beat-fade", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+
+      // ambient (finite repeats)
+      tl.to(".glyph", { rotation: 8, y: 26, duration: D, ease: "sine.inOut" }, 0);
+      tl.to(".glow",  { scale: 1.06, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      tl.to(".ghost", { x: 40, duration: D, ease: "sine.inOut" }, 0);
+
+      // entrances
+      tl.fromTo("#b08-eyebrow",      { y: -28, opacity: 0 },             { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#b08-profile-card", { y: 60, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 0.3);
+      tl.fromTo("#b08-top-rated-tag",{ x: -30, opacity: 0 },             { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 1.0);
+      tl.fromTo("#b08-belgium-line", { y: 20, opacity: 0 },              { y: 0, opacity: 1, duration: 0.55, ease: "power2.out" }, 1.8);
+      tl.fromTo("#b08-funnel-card",  { y: 60, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power4.out" }, 9.0);
+      tl.fromTo("#b08-funnel-tag",   { x: 30, opacity: 0 },              { x: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, 10.0);
+      tl.fromTo("#b08-testimonial",  { y: 50, opacity: 0, scale: 0.97 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.5)" }, 18.0);
+      tl.fromTo("#b08-stars",        { scale: 0, opacity: 0 },           { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" }, 18.5);
+      tl.fromTo("#b08-quote",        { y: 20, opacity: 0 },              { y: 0, opacity: 1, duration: 0.55, ease: "power2.out" }, 19.2);
+      tl.fromTo("#b08-footer",       { y: 15, opacity: 0 },              { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 20.5);
+
+      window.__timelines["b08-proof"] = tl;
+    </script>
+  </div>
+</template>

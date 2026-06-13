@@ -1,0 +1,91 @@
+<template id="b04-agitate-template">
+  <div data-composition-id="b04-agitate" data-width="1920" data-height="1080">
+    <div class="beat-fade">
+      <div class="bg"></div>
+      <div class="glow" data-layout-ignore></div>
+      <div class="glyph" data-layout-ignore>✳</div>
+      <div class="ghost" data-layout-ignore>dezygn</div>
+      <div class="scene-content">
+
+        <div id="b04-eyebrow" class="clip eyebrow" data-start="0.2" data-duration="24.1" data-track-index="2">THE COST OF STAYING INVISIBLE</div>
+
+        <div id="b04-h1" class="clip hline" data-start="0.3" data-duration="24.0" data-track-index="3">You wrote the perfect proposal.</div>
+        <div id="b04-h2" class="clip hline" data-start="2.5" data-duration="21.8" data-track-index="4">You dropped your price.</div>
+        <div id="b04-h3" class="clip hline" data-start="5.0" data-duration="19.3" data-track-index="5">You waited.</div>
+
+        <div class="chips-row">
+          <div id="b04-chip1" class="clip chip" data-start="8.0" data-duration="16.3" data-track-index="6">VIEWED</div>
+          <div id="b04-chip2" class="clip chip" data-start="8.4" data-duration="15.9" data-track-index="7">NO REPLY</div>
+          <div id="b04-chip3" class="clip chip" data-start="8.8" data-duration="15.5" data-track-index="8">WAITING</div>
+        </div>
+
+        <div class="race-row">
+          <div id="b04-race-label" class="clip race-label" data-start="10.0" data-duration="14.3" data-track-index="13">RACE TO THE BOTTOM</div>
+          <div id="b04-price-hi" class="clip price-hi" data-start="10.2" data-duration="14.1" data-track-index="14">$90</div>
+          <div id="b04-arrow" class="clip price-arrow" data-start="10.5" data-duration="13.8" data-track-index="15">→</div>
+          <div id="b04-price-lo" class="clip price-lo" data-start="10.8" data-duration="13.5" data-track-index="16">$40</div>
+          <div id="b04-price-unit" class="clip price-unit" data-start="11.0" data-duration="13.3" data-track-index="17">/image</div>
+        </div>
+
+        <div id="b04-punch1" class="clip punch" data-start="16.0" data-duration="8.3" data-track-index="10">You're not losing because you're <span class="serif-bad">bad.</span></div>
+        <div id="b04-punch2" class="clip punch" data-start="18.0" data-duration="6.3" data-track-index="11">You're losing because you're <span class="serif-invisible">invisible.</span></div>
+
+      </div>
+      <audio id="b04-vo" class="clip" src="../assets/b04.wav" data-start="0.3" data-duration="23.62" data-track-index="9"></audio>
+    </div>
+    <style>
+      @font-face { font-family:"Instrument Serif"; font-style:italic; font-weight:400; font-display:block; src:url("../assets/fonts/instrument-serif-italic.woff2") format("woff2"); }
+      @font-face { font-family:"Instrument Serif"; font-style:normal; font-weight:400; font-display:block; src:url("../assets/fonts/instrument-serif-regular.woff2") format("woff2"); }
+      [data-composition-id="b04-agitate"] {
+        --vellum:#f7f5f0; --paper:#edebe6; --ink:#1a1a1a; --inkWarm:#2b2b2b;
+        --muted:#6b6459; --dim:#8b867b; --accent:#8b5cf6; --accentDeep:#7c3aed; --paperOnDark:#e8e4db;
+        position:absolute; inset:0; overflow:hidden;
+      }
+      [data-composition-id="b04-agitate"] .beat-fade { position:absolute; inset:0; }
+      [data-composition-id="b04-agitate"] .bg { position:absolute; inset:0; z-index:0; background:#141414; }
+      [data-composition-id="b04-agitate"] .glow { position:absolute; z-index:1; width:1300px; height:1300px; left:50%; top:46%; transform:translate(-50%,-50%); background:radial-gradient(circle,rgba(139,92,246,0.22) 0%,rgba(139,92,246,0.08) 38%,rgba(139,92,246,0) 68%); pointer-events:none; }
+      [data-composition-id="b04-agitate"] .glyph { position:absolute; z-index:1; right:60px; top:40px; font-family:"Instrument Serif",serif; font-size:340px; line-height:1; color:rgba(139,92,246,0.10); pointer-events:none; }
+      [data-composition-id="b04-agitate"] .ghost { position:absolute; z-index:1; left:-20px; bottom:30px; font-family:"Inter",sans-serif; font-weight:900; font-size:280px; letter-spacing:-0.04em; color:rgba(232,228,219,0.035); pointer-events:none; }
+      [data-composition-id="b04-agitate"] .scene-content { position:absolute; inset:0; z-index:5; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; gap:24px; width:100%; height:100%; padding:100px 120px; box-sizing:border-box; }
+      [data-composition-id="b04-agitate"] .eyebrow { font-family:"IBM Plex Mono","Courier New",monospace; font-weight:600; font-size:20px; text-transform:uppercase; letter-spacing:0.18em; color:var(--accent); }
+      [data-composition-id="b04-agitate"] .hline { font-family:"Inter",sans-serif; font-weight:800; font-size:72px; letter-spacing:-0.02em; color:var(--paperOnDark); line-height:1.05; }
+      [data-composition-id="b04-agitate"] .chips-row { display:flex; flex-direction:row; align-items:center; gap:16px; }
+      [data-composition-id="b04-agitate"] .chip { font-family:"IBM Plex Mono","Courier New",monospace; font-size:18px; text-transform:uppercase; letter-spacing:0.16em; color:var(--dim); border:1px solid rgba(139,132,123,0.3); border-radius:9999px; padding:10px 24px; background:rgba(255,255,255,0.04); }
+      [data-composition-id="b04-agitate"] .race-row { display:flex; flex-direction:row; align-items:center; gap:16px; }
+      [data-composition-id="b04-agitate"] .race-label { font-family:"IBM Plex Mono","Courier New",monospace; font-weight:600; font-size:18px; text-transform:uppercase; letter-spacing:0.18em; color:var(--dim); }
+      [data-composition-id="b04-agitate"] .price-hi { font-family:"Inter",sans-serif; font-weight:900; font-size:56px; color:rgba(232,228,219,0.4); text-decoration:line-through; line-height:1; }
+      [data-composition-id="b04-agitate"] .price-arrow { font-family:"Inter",sans-serif; font-weight:400; font-size:40px; color:var(--dim); line-height:1; }
+      [data-composition-id="b04-agitate"] .price-lo { font-family:"Instrument Serif",serif; font-style:italic; font-size:64px; color:var(--accent); line-height:1; }
+      [data-composition-id="b04-agitate"] .price-unit { font-family:"IBM Plex Mono","Courier New",monospace; font-size:20px; color:var(--dim); }
+      [data-composition-id="b04-agitate"] .punch { font-family:"Inter",sans-serif; font-weight:800; font-size:76px; letter-spacing:-0.02em; color:var(--paperOnDark); line-height:1.05; }
+      [data-composition-id="b04-agitate"] .serif-bad { font-family:"Instrument Serif",serif; font-style:italic; font-weight:400; color:var(--accent); }
+      [data-composition-id="b04-agitate"] .serif-invisible { font-family:"Instrument Serif",serif; font-style:italic; font-weight:400; color:var(--accent); display:inline-block; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 24.3;
+      tl.fromTo(".beat-fade",{opacity:0},{opacity:1,duration:0.5,ease:"power2.out"},0);
+      tl.to(".glyph",{rotation:8,y:24,duration:D,ease:"sine.inOut"},0);
+      tl.to(".glow",{scale:1.07,duration:D/2,ease:"sine.inOut",yoyo:true,repeat:1},0);
+      tl.to(".ghost",{x:36,duration:D,ease:"sine.inOut"},0);
+      tl.fromTo("#b04-eyebrow",{y:-28,opacity:0},{y:0,opacity:1,duration:0.5,ease:"power3.out"},0.2);
+      tl.fromTo("#b04-h1",{y:40,opacity:0},{y:0,opacity:1,duration:0.6,ease:"expo.out"},0.35);
+      tl.fromTo("#b04-h2",{y:40,opacity:0},{y:0,opacity:1,duration:0.6,ease:"expo.out"},2.6);
+      tl.fromTo("#b04-h3",{y:40,opacity:0},{y:0,opacity:1,duration:0.6,ease:"power4.out"},5.1);
+      tl.fromTo("#b04-chip1",{x:-30,opacity:0},{x:0,opacity:1,duration:0.45,ease:"power2.out"},8.1);
+      tl.fromTo("#b04-chip2",{x:-30,opacity:0},{x:0,opacity:1,duration:0.45,ease:"power2.out"},8.5);
+      tl.fromTo("#b04-chip3",{x:-30,opacity:0},{x:0,opacity:1,duration:0.45,ease:"power2.out"},8.9);
+      tl.fromTo("#b04-race-label",{opacity:0},{opacity:1,duration:0.4,ease:"power2.out"},10.1);
+      tl.fromTo("#b04-price-hi",{y:20,opacity:0},{y:0,opacity:1,duration:0.4,ease:"power3.out"},10.3);
+      tl.fromTo("#b04-arrow",{opacity:0},{opacity:1,duration:0.3,ease:"power2.out"},10.6);
+      tl.fromTo("#b04-price-lo",{scale:0.7,opacity:0},{scale:1,opacity:1,duration:0.55,ease:"back.out(2)"},10.9);
+      tl.fromTo("#b04-price-unit",{opacity:0},{opacity:1,duration:0.35,ease:"power2.out"},11.1);
+      tl.fromTo("#b04-punch1",{y:60,opacity:0},{y:0,opacity:1,duration:0.7,ease:"power4.out"},16.1);
+      tl.fromTo("#b04-punch2",{y:60,opacity:0},{y:0,opacity:1,duration:0.7,ease:"expo.out"},18.1);
+      tl.to("#b04-punch2 .serif-invisible",{scale:1.05,duration:0.3,ease:"power2.out",yoyo:true,repeat:1},18.9);
+      window.__timelines["b04-agitate"] = tl;
+    </script>
+  </div>
+</template>

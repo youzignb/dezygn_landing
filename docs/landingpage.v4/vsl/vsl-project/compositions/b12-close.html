@@ -1,0 +1,136 @@
+<template id="b12-close-template">
+  <div data-composition-id="b12-close" data-width="1920" data-height="1080">
+    <!-- ============================================================
+         BEAT 12 — CLOSE · DARK scene · fear/loss CTA + sign-off
+         VO 14.78s · scene 15.5s · FINAL scene (exit anim allowed)
+         ============================================================ -->
+    <div class="beat-fade">
+      <div class="bg"></div>
+
+      <div class="glow" data-layout-ignore></div>
+      <div class="glyph" data-layout-ignore>✳</div>
+
+      <div class="scene-content">
+        <div id="b12-eyebrow" class="clip eyebrow" data-start="0.2" data-duration="15.3" data-track-index="2">
+          WHILE YOU'RE READING THIS
+        </div>
+
+        <div class="headline-block">
+          <div id="b12-hl1" class="clip headline-line" data-start="0.4" data-duration="15.1" data-track-index="3">
+            A brand just posted
+          </div>
+          <div id="b12-hl2" class="clip headline-line" data-start="0.6" data-duration="14.9" data-track-index="4">
+            the job.
+          </div>
+        </div>
+
+        <!-- callback: ghosted "I can do this." promise chips -->
+        <div class="chips">
+          <div id="b12-chip1" class="clip chip" data-start="2.4" data-duration="13.1" data-track-index="5">"I can do this."</div>
+          <div id="b12-chip2" class="clip chip" data-start="2.7" data-duration="12.8" data-track-index="6">"I'm an expert."</div>
+          <div id="b12-chip3" class="clip chip" data-start="3.0" data-duration="12.5" data-track-index="7">"Check my portfolio."</div>
+        </div>
+
+        <div id="b12-punch" class="clip punch" data-start="4.6" data-duration="10.9" data-track-index="8">
+          The only question is whether the sample she opens is <em class="serif">yours.</em>
+        </div>
+
+        <div id="b12-btn" class="clip cta-btn" data-start="8.5" data-duration="7.0" data-track-index="10">
+          GET THE CLIENT SYSTEM — $37
+        </div>
+
+        <div id="b12-signoff" class="clip signoff" data-start="11.5" data-duration="4.0" data-track-index="11">
+          Talk soon, <em class="serif-sm">Bertrand.</em>
+        </div>
+      </div>
+
+      <audio id="b12-vo" class="clip" src="../assets/b12.wav" data-start="0.3" data-duration="14.78" data-track-index="14"></audio>
+    </div>
+
+    <style>
+      @font-face { font-family: "Instrument Serif"; font-style: italic; font-weight: 400; font-display: block; src: url("../assets/fonts/instrument-serif-italic.woff2") format("woff2"); }
+      @font-face { font-family: "Instrument Serif"; font-style: normal; font-weight: 400; font-display: block; src: url("../assets/fonts/instrument-serif-regular.woff2") format("woff2"); }
+      [data-composition-id="b12-close"] {
+        --ink:#1a1a1a; --inkWarm:#2b2b2b; --muted:#6b6459; --dim:#8b867b;
+        --accent:#8b5cf6; --accentDeep:#7c3aed; --paperOnDark:#e8e4db;
+        position:absolute; inset:0; overflow:hidden;
+      }
+      [data-composition-id="b12-close"] .beat-fade { position:absolute; inset:0; }
+      [data-composition-id="b12-close"] .bg { position:absolute; inset:0; z-index:0; background:var(--ink); }
+      [data-composition-id="b12-close"] .glow {
+        position:absolute; z-index:1; width:1300px; height:1300px; left:50%; top:50%; transform:translate(-50%,-50%);
+        background:radial-gradient(circle, rgba(139,92,246,0.20) 0%, rgba(139,92,246,0.06) 40%, rgba(139,92,246,0) 70%); pointer-events:none;
+      }
+      [data-composition-id="b12-close"] .glyph {
+        position:absolute; z-index:1; left:-30px; top:-40px; font-family:"Instrument Serif",serif;
+        font-size:340px; line-height:1; color:rgba(139,92,246,0.10); pointer-events:none;
+      }
+      [data-composition-id="b12-close"] .scene-content {
+        position:absolute; inset:0; z-index:5; display:flex; flex-direction:column; align-items:center; justify-content:center;
+        gap:26px; width:100%; height:100%; padding:60px 180px; box-sizing:border-box; text-align:center;
+      }
+      [data-composition-id="b12-close"] .eyebrow {
+        font-family:"IBM Plex Mono",monospace; font-weight:600; text-transform:uppercase; letter-spacing:0.18em;
+        font-size:22px; color:var(--accent);
+      }
+      [data-composition-id="b12-close"] .headline-block { display:flex; flex-direction:column; align-items:center; gap:2px; }
+      [data-composition-id="b12-close"] .headline-line {
+        font-family:"Inter",sans-serif; font-weight:800; font-size:82px; letter-spacing:-0.025em; color:var(--paperOnDark); line-height:1.02;
+      }
+      [data-composition-id="b12-close"] .chips { display:flex; gap:18px; flex-wrap:wrap; justify-content:center; }
+      [data-composition-id="b12-close"] .chip {
+        font-family:"Inter",sans-serif; font-style:italic; font-weight:500; font-size:24px;
+        color:rgba(232,228,219,0.45);
+        background:rgba(232,228,219,0.05); border:1px solid rgba(232,228,219,0.12);
+        border-radius:9999px; padding:12px 26px;
+      }
+      [data-composition-id="b12-close"] .punch {
+        font-family:"Inter",sans-serif; font-weight:700; font-size:46px; line-height:1.25; color:var(--paperOnDark); max-width:1280px;
+      }
+      [data-composition-id="b12-close"] .serif {
+        font-family:"Instrument Serif",serif; font-style:italic; font-weight:400; font-size:54px; color:var(--accent);
+      }
+      [data-composition-id="b12-close"] .cta-btn {
+        font-family:"Inter",sans-serif; font-weight:700; font-size:34px; letter-spacing:0.01em; color:#fff;
+        background:var(--accent); border-radius:9999px; padding:26px 60px;
+        box-shadow:0 14px 50px rgba(139,92,246,0.55), 0 2px 0 rgba(255,255,255,0.18) inset; white-space:nowrap;
+      }
+      [data-composition-id="b12-close"] .signoff {
+        font-family:"Inter",sans-serif; font-weight:500; font-size:28px; color:var(--dim); margin-top:4px;
+      }
+      [data-composition-id="b12-close"] .serif-sm {
+        font-family:"Instrument Serif",serif; font-style:italic; font-weight:400; font-size:34px; color:var(--paperOnDark);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 15.5;
+
+      tl.fromTo(".beat-fade", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+
+      tl.to("[data-composition-id='b12-close'] .glyph", { rotation: 6, y: 20, duration: D, ease: "sine.inOut" }, 0);
+      tl.to("[data-composition-id='b12-close'] .glow",  { scale: 1.08, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+
+      tl.fromTo("#b12-eyebrow", { y: -24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#b12-hl1", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.4);
+      tl.fromTo("#b12-hl2", { y: 36, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "power3.out" }, 0.6);
+
+      tl.fromTo("#b12-chip1", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 2.4);
+      tl.fromTo("#b12-chip2", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 2.7);
+      tl.fromTo("#b12-chip3", { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power2.out" }, 3.0);
+
+      tl.fromTo("#b12-punch", { y: 28, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 4.6);
+      tl.fromTo("#b12-btn", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(2)" }, 8.5);
+      tl.to("#b12-btn", { scale: 1.03, duration: 0.6, ease: "sine.inOut", yoyo: true, repeat: 5 }, 9.2);
+      tl.fromTo("#b12-signoff", { y: 14, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power2.out" }, 11.5);
+
+      // FINAL scene — exit fade is permitted here only
+      tl.to(".beat-fade", { opacity: 0, duration: 0.6, ease: "power2.in" }, D - 0.6);
+
+      window.__timelines["b12-close"] = tl;
+    </script>
+  </div>
+</template>

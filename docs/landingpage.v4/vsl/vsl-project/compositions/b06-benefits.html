@@ -1,0 +1,267 @@
+<template id="b06-benefits-template">
+  <div data-composition-id="b06-benefits" data-width="1920" data-height="1080">
+    <!-- ============================================================
+         BEAT 6 — BENEFITS · DARK scene · client work trio + retainer receipt + stat card
+         VO 26.15s · scene 26.8s
+         Phase 1 (0.3–12): three white client-work cards across the row
+         Phase 2 (12–20): retainer receipt card + accent ring highlight
+         Phase 3 (18–26): stat card side-by-side with receipt
+         ============================================================ -->
+    <div class="beat-fade">
+      <div class="bg"></div>
+
+      <!-- decoratives -->
+      <div class="glow" data-layout-ignore></div>
+      <div class="glyph" data-layout-ignore>✳</div>
+      <div class="ghost" data-layout-ignore>dezygn</div>
+
+      <div class="scene-content">
+        <!-- Eyebrow -->
+        <div id="b06-eyebrow" class="clip eyebrow" data-start="0.2" data-duration="26.6" data-track-index="2">
+          FROM GIGS TO INSTALLED INCOME
+        </div>
+
+        <!-- Phase 1: three client-work cards -->
+        <div class="trio-row">
+          <div id="b06-card-pendant" class="clip shot-card trio-card" data-start="0.4" data-duration="26.4" data-track-index="3">
+            <img src="../assets/pendant-after.jpg" alt="Pendant — client-ready" style="width:340px;height:340px;object-fit:cover;" />
+            <div class="client-tag">CLIENT WORK</div>
+          </div>
+          <div id="b06-card-toy" class="clip shot-card trio-card" data-start="0.8" data-duration="26.0" data-track-index="4">
+            <img src="../assets/toy-after.jpg" alt="Toy — client-ready" style="width:340px;height:auto;max-height:340px;object-fit:cover;" />
+            <div class="client-tag">CLIENT WORK</div>
+          </div>
+          <div id="b06-card-pet" class="clip shot-card trio-card" data-start="1.2" data-duration="25.6" data-track-index="5">
+            <img src="../assets/pet-after.jpg" alt="Pet — client-ready" style="width:340px;height:auto;object-fit:cover;" />
+            <div class="client-tag">CLIENT WORK</div>
+          </div>
+        </div>
+
+        <!-- Phase 2 + 3: Receipt + Stat side-by-side -->
+        <div class="bottom-row">
+          <!-- Receipt card -->
+          <div id="b06-receipt-card" class="clip shot-card receipt-card" data-start="12.0" data-duration="14.8" data-track-index="6">
+            <img src="../assets/offer-780.png" alt="Retainer receipt" style="height:320px;width:auto;" />
+            <!-- accent ring highlight over the lower portion of the receipt -->
+            <div id="b06-ring" class="clip accent-ring" data-start="13.0" data-duration="13.8" data-track-index="7"></div>
+            <div class="receipt-tag">$780/mo RETAINER</div>
+          </div>
+
+          <!-- Stat card -->
+          <div id="b06-stat-card" class="clip stat-card" data-start="18.0" data-duration="8.8" data-track-index="8">
+            <div class="stat-main">
+              <span class="stat-num serif-num">$700</span>
+              <span class="stat-plus">+</span>
+              <span class="stat-num serif-num">$780</span>
+              <span class="stat-slash">/ mo</span>
+            </div>
+            <div class="stat-sub">~8 hrs each · <span class="stat-accent">≈ $90/hr</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VO -->
+      <audio id="b06-vo" class="clip" src="../assets/b06.wav" data-start="0.3" data-duration="26.15" data-track-index="10"></audio>
+    </div>
+
+    <style>
+      @font-face {
+        font-family: "Instrument Serif";
+        font-style: italic;
+        font-weight: 400;
+        font-display: block;
+        src: url("../assets/fonts/instrument-serif-italic.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Instrument Serif";
+        font-style: normal;
+        font-weight: 400;
+        font-display: block;
+        src: url("../assets/fonts/instrument-serif-regular.woff2") format("woff2");
+      }
+      [data-composition-id="b06-benefits"] {
+        --vellum: #f7f5f0;
+        --paper: #edebe6;
+        --ink: #1a1a1a;
+        --inkWarm: #2b2b2b;
+        --muted: #6b6459;
+        --dim: #8b867b;
+        --accent: #8b5cf6;
+        --accentDeep: #7c3aed;
+        --paperOnDark: #e8e4db;
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+      [data-composition-id="b06-benefits"] .beat-fade { position: absolute; inset: 0; }
+      [data-composition-id="b06-benefits"] .bg {
+        position: absolute; inset: 0; z-index: 0;
+        background: #161616;
+      }
+      [data-composition-id="b06-benefits"] .glow {
+        position: absolute; z-index: 1;
+        width: 1300px; height: 1300px;
+        left: 50%; top: 46%; transform: translate(-50%, -50%);
+        background: radial-gradient(circle, rgba(139,92,246,0.20) 0%, rgba(139,92,246,0.07) 40%, rgba(139,92,246,0) 68%);
+        pointer-events: none;
+      }
+      [data-composition-id="b06-benefits"] .glyph {
+        position: absolute; z-index: 1;
+        right: 60px; top: 40px;
+        font-family: "Instrument Serif", serif;
+        font-size: 360px; line-height: 1;
+        color: rgba(139,92,246,0.09);
+        pointer-events: none;
+      }
+      [data-composition-id="b06-benefits"] .ghost {
+        position: absolute; z-index: 1;
+        left: -20px; bottom: 30px;
+        font-family: "Inter", sans-serif; font-weight: 900;
+        font-size: 300px; letter-spacing: -0.04em;
+        color: rgba(232,228,219,0.03);
+        pointer-events: none;
+      }
+
+      [data-composition-id="b06-benefits"] .scene-content {
+        position: absolute; inset: 0; z-index: 5;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        gap: 28px;
+        width: 100%; height: 100%;
+        padding: 55px 100px 60px;
+        box-sizing: border-box;
+      }
+      [data-composition-id="b06-benefits"] .eyebrow {
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.18em;
+        font-size: 22px; color: var(--accent);
+      }
+
+      /* Trio row */
+      [data-composition-id="b06-benefits"] .trio-row {
+        display: flex; align-items: flex-start; justify-content: center;
+        gap: 28px;
+      }
+      [data-composition-id="b06-benefits"] .shot-card {
+        position: relative;
+        background: #ffffff; border-radius: 20px;
+        padding: 14px;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.55), 0 2px 0 rgba(255,255,255,0.06) inset;
+      }
+      [data-composition-id="b06-benefits"] .shot-card img {
+        display: block; border-radius: 10px;
+      }
+      [data-composition-id="b06-benefits"] .trio-card img {
+        width: 340px; height: 340px; object-fit: cover;
+      }
+      [data-composition-id="b06-benefits"] .client-tag {
+        position: absolute; bottom: -16px; left: 50%;
+        transform: translateX(-50%);
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.12em; font-size: 15px;
+        white-space: nowrap;
+        padding: 5px 14px; border-radius: 9999px;
+        background: var(--accent); color: #fff;
+        box-shadow: 0 6px 16px rgba(139,92,246,0.45);
+      }
+
+      /* Bottom row: receipt + stat */
+      [data-composition-id="b06-benefits"] .bottom-row {
+        display: flex; align-items: center; justify-content: center;
+        gap: 36px;
+      }
+      [data-composition-id="b06-benefits"] .receipt-card {
+        position: relative;
+      }
+      [data-composition-id="b06-benefits"] .accent-ring {
+        position: absolute;
+        bottom: 64px; left: 14px; right: 14px;
+        height: 56px;
+        border: 3px solid var(--accent);
+        border-radius: 10px;
+        box-shadow: 0 0 18px rgba(139,92,246,0.5);
+        pointer-events: none;
+      }
+      [data-composition-id="b06-benefits"] .receipt-tag {
+        position: absolute; top: -18px; left: 50%;
+        transform: translateX(-50%);
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.12em; font-size: 16px;
+        white-space: nowrap;
+        padding: 6px 16px; border-radius: 9999px;
+        background: var(--accent); color: #fff;
+        box-shadow: 0 6px 18px rgba(139,92,246,0.45);
+      }
+
+      /* Stat card */
+      [data-composition-id="b06-benefits"] .stat-card {
+        background: #1e1e1e;
+        border: 1px solid rgba(139,92,246,0.35);
+        border-radius: 20px;
+        padding: 36px 44px;
+        display: flex; flex-direction: column; align-items: center;
+        gap: 16px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.45);
+        min-width: 380px;
+      }
+      [data-composition-id="b06-benefits"] .stat-main {
+        display: flex; align-items: baseline; justify-content: center;
+        gap: 10px;
+        font-variant-numeric: tabular-nums;
+      }
+      [data-composition-id="b06-benefits"] .stat-num {
+        font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400;
+        font-size: 64px; color: var(--paperOnDark);
+        line-height: 1;
+      }
+      [data-composition-id="b06-benefits"] .stat-plus {
+        font-family: "Inter", sans-serif; font-weight: 800;
+        font-size: 40px; color: var(--dim);
+      }
+      [data-composition-id="b06-benefits"] .stat-slash {
+        font-family: "Inter", sans-serif; font-weight: 700;
+        font-size: 28px; color: var(--dim);
+      }
+      [data-composition-id="b06-benefits"] .stat-sub {
+        font-family: "IBM Plex Mono", monospace; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.14em;
+        font-size: 20px; color: var(--dim);
+        font-variant-numeric: tabular-nums;
+      }
+      [data-composition-id="b06-benefits"] .stat-accent {
+        color: var(--accent);
+      }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const D = 26.8;
+
+      // crossfade IN
+      tl.fromTo(".beat-fade", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+
+      // ambient — finite
+      tl.to("[data-composition-id='b06-benefits'] .glyph", { rotation: 8, y: 26, duration: D, ease: "sine.inOut" }, 0);
+      tl.to("[data-composition-id='b06-benefits'] .glow",  { scale: 1.06, duration: D / 2, ease: "sine.inOut", yoyo: true, repeat: 1 }, 0);
+      tl.to("[data-composition-id='b06-benefits'] .ghost", { x: 40, duration: D, ease: "sine.inOut" }, 0);
+
+      // Phase 1 — eyebrow + trio cards staggered
+      tl.fromTo("#b06-eyebrow", { y: -24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 0.2);
+      tl.fromTo("#b06-card-pendant", { y: 60, opacity: 0, scale: 0.95 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 0.4);
+      tl.fromTo("#b06-card-toy",     { y: 70, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.65, ease: "expo.out"   }, 0.8);
+      tl.fromTo("#b06-card-pet",     { y: 80, opacity: 0, scale: 0.94 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.4)" }, 1.2);
+
+      // Phase 2 — receipt card slides up
+      tl.fromTo("#b06-receipt-card", { y: 50, opacity: 0, scale: 0.96 }, { y: 0, opacity: 1, scale: 1, duration: 0.7, ease: "power3.out" }, 12.0);
+      // accent ring scales/fades in
+      tl.fromTo("#b06-ring", { scaleX: 0.4, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.45, ease: "back.out(2)" }, 13.0);
+
+      // Phase 3 — stat card slides in from right
+      tl.fromTo("#b06-stat-card", { x: 80, opacity: 0, scale: 0.96 }, { x: 0, opacity: 1, scale: 1, duration: 0.65, ease: "expo.out" }, 18.0);
+
+      window.__timelines["b06-benefits"] = tl;
+    </script>
+  </div>
+</template>

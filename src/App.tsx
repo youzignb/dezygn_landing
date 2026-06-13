@@ -32,6 +32,7 @@ import OutreachPage from './pages/features/OutreachPage';
 import OpportunitiesPage from './pages/features/OpportunitiesPage';
 import ConceptsPage from './pages/features/ConceptsPage';
 import FeatureFeedbackPage from './pages/features/FeedbackPage';
+import GeneratedFeaturePage from './pages/features/GeneratedFeaturePage';
 
 // Programmatic SEO pages
 import UseCasePage from './pages/seo/UseCasePage';
@@ -48,6 +49,10 @@ import GlossaryIndexPage from './pages/seo/GlossaryIndexPage';
 import ResourceIndexPage from './pages/seo/ResourceIndexPage';
 import IndustryIndexPage from './pages/seo/IndustryIndexPage';
 import ApplyPage from './pages/ApplyPage';
+import ClientSystemPage from './pages/ClientSystemPage';
+import OrderPage from './pages/funnel/OrderPage';
+import Upsell1Page from './pages/funnel/Upsell1Page';
+import Upsell2Page from './pages/funnel/Upsell2Page';
 
 function App() {
   return (
@@ -92,6 +97,13 @@ function App() {
         {/* TEMPORARY: /client-system tripwire page is not ready — redirect to the lead magnet
             thank-you page until the real checkout page ships. Restore ClientSystemPage then. */}
         <Route path="/client-system" element={<Navigate to="/proof-before-pitch" replace />} />
+        {/* Review/preview URL — the real /client-system still redirects to /proof-before-pitch */}
+        <Route path="/client-system-preview" element={<ClientSystemPage />} />
+        {/* Stripe order page ($37 + optional $27 bump; saves card for 1-click OTOs). */}
+        <Route path="/order" element={<OrderPage />} />
+        {/* Post-purchase upsell funnel (OTO 1 → OTO 2 → /success). Order token rides ?t=. */}
+        <Route path="/oto/fulfillment" element={<Upsell1Page />} />
+        <Route path="/oto/credits" element={<Upsell2Page />} />
         {/* Course is retired — its SEO equity flows to the webinar funnel. */}
         <Route path="/course" element={<Navigate to="/webinar" replace />} />
         <Route path="/community" element={<CommunityPage />} />
@@ -104,6 +116,12 @@ function App() {
         <Route path="/features/opportunities" element={<OpportunitiesPage />} />
         <Route path="/features/concepts" element={<ConceptsPage />} />
         <Route path="/features/feedback" element={<FeatureFeedbackPage />} />
+
+        {/* Compiler-generated feature pages (pilot 4) — must come after existing static /features/* routes */}
+        <Route path="/features/prompt-canvas" element={<GeneratedFeaturePage />} />
+        <Route path="/features/awa-chat" element={<GeneratedFeaturePage />} />
+        <Route path="/features/new-brand-import" element={<GeneratedFeaturePage />} />
+        <Route path="/features/gallery-share" element={<GeneratedFeaturePage />} />
 
         {/* Programmatic SEO routes */}
         <Route path="/use-cases" element={<UseCaseIndexPage />} />
