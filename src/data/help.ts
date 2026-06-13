@@ -1,3 +1,4 @@
+import { generatedHelpArticles } from './help-content.generated';
 /**
  * Dezygn Help Center content — data-driven, like every other src/data file.
  * Pages are dumb renderers; rewrite/expand articles here without touching layout.
@@ -1023,6 +1024,11 @@ export const helpCategories: HelpCategory[] = [
 ];
 
 /** Flat, ordered list of all articles (sidebar order = prev/next order). */
+for (const cat of helpCategories) {
+  const extra = generatedHelpArticles[cat.id];
+  if (extra) cat.articles.push(...extra);
+}
+
 export const allHelpArticles: { article: HelpArticle; category: HelpCategory }[] =
   helpCategories.flatMap((category) => category.articles.map((article) => ({ article, category })));
 

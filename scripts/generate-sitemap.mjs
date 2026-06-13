@@ -19,6 +19,11 @@ const staticRoutes = [
   '/features/opportunities',
   '/features/concepts',
   '/features/feedback',
+  // Compiler-generated pilot feature pages
+  '/features/prompt-canvas',
+  '/features/awa-chat',
+  '/features/new-brand-import',
+  '/features/gallery-share',
   '/webinar',
   '/free-report',
   // '/client-system', // TEMPORARY: redirects to /proof-before-pitch until the tripwire page ships
@@ -53,6 +58,7 @@ const dynamicSources = {
   'resources.ts': '/resources',
   'glossary.ts': '/glossary',
   'help.ts': '/help',
+  'help-content.generated.ts': '/help',
 };
 
 const urls = [...staticRoutes];
