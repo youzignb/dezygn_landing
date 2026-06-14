@@ -12,6 +12,7 @@ const columns: { title: string; links: FooterLink[] }[] = [
     title: 'Product',
     links: [
       { label: 'Platform Tour', href: '/#flows' },
+      { label: 'Features', href: '/features' },
       { label: 'Pricing', href: '/pricing' },
       { label: 'Start Free', href: SIGNUP_URL, external: true },
       { label: 'Sign In', href: 'https://chat.dezygn.com', external: true },

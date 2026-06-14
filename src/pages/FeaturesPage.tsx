@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, ClipboardCheck, GalleryHorizontalEnd, Globe, Image, Mail, MessageSquare, Search } from 'lucide-react';
+import { ArrowRight, Brain, ClipboardCheck, GalleryHorizontalEnd, Globe, Image, Mail, MessageSquare, Search, Sparkles } from 'lucide-react';
 import HeaderV4 from '../components/HeaderV4';
 import FooterV4 from '../components/FooterV4';
 import { CtaBand, EditorialTitle, Eyebrow, StartFreeButton, mono, sans } from './features/FeaturePageLayout';
+import { generatedFeatureIndex } from '../data/features.generated';
 
 const features = [
   {
@@ -114,6 +115,27 @@ const FeaturesPage = () => {
                   <p className={`${mono} mt-6 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED]`}>{feature.tag}</p>
                   <h2 className="mt-2 text-lg font-semibold tracking-tight text-[#1A1A1A]">{feature.title}</h2>
                   <p className="mt-2.5 flex-grow text-sm leading-6 text-[#6B6459]">{feature.description}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[#7C3AED]">
+                    Learn more
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              ))}
+              {generatedFeatureIndex.map((feature, index) => (
+                <Link
+                  key={feature.slug}
+                  to={`/features/${feature.slug}`}
+                  className="group flex flex-col rounded-3xl border border-[#1A1A1A]/10 bg-white p-7 shadow-[0_16px_40px_rgba(26,26,26,0.06)] transition hover:border-[#8B5CF6]/40"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#8B5CF6]/10 text-[#7C3AED]">
+                      <Sparkles className="h-5 w-5" />
+                    </span>
+                    <span className={`${mono} text-xs font-medium text-[#8B867B]`}>{String(features.length + index + 1).padStart(2, '0')}</span>
+                  </div>
+                  <p className={`${mono} mt-6 text-[11px] font-medium uppercase tracking-[0.14em] text-[#7C3AED]`}>{feature.eyebrow}</p>
+                  <h2 className="mt-2 text-lg font-semibold tracking-tight text-[#1A1A1A]">{feature.title}</h2>
+                  <p className="mt-2.5 flex-grow text-sm leading-6 text-[#6B6459]">{feature.subhead}</p>
                   <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-[#7C3AED]">
                     Learn more
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

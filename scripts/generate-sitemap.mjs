@@ -19,6 +19,21 @@ const staticRoutes = [
   '/features/opportunities',
   '/features/concepts',
   '/features/feedback',
+  // Compiler-generated feature pages (Feature Content System)
+  '/features/prompt-canvas',
+  '/features/awa-chat',
+  '/features/awa-video',
+  '/features/new-brand-import',
+  '/features/gallery-share',
+  '/features/brands',
+  '/features/gallery',
+  '/features/home',
+  '/features/settings',
+  '/features/ingredients',
+  '/features/product-prep',
+  '/features/variant-board',
+  '/features/apply-kit',
+  '/features/outreach-factory',
   '/webinar',
   '/free-report',
   // '/client-system', // TEMPORARY: redirects to /proof-before-pitch until the tripwire page ships
@@ -53,6 +68,7 @@ const dynamicSources = {
   'resources.ts': '/resources',
   'glossary.ts': '/glossary',
   'help.ts': '/help',
+  'help-content.generated.ts': '/help',
 };
 
 const urls = [...staticRoutes];
