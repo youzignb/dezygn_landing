@@ -32,6 +32,7 @@ import OutreachPage from './pages/features/OutreachPage';
 import OpportunitiesPage from './pages/features/OpportunitiesPage';
 import ConceptsPage from './pages/features/ConceptsPage';
 import FeatureFeedbackPage from './pages/features/FeedbackPage';
+import GeneratedFeaturePage from './pages/features/GeneratedFeaturePage';
 
 // Programmatic SEO pages
 import UseCasePage from './pages/seo/UseCasePage';
@@ -104,6 +105,11 @@ function App() {
         <Route path="/features/opportunities" element={<OpportunitiesPage />} />
         <Route path="/features/concepts" element={<ConceptsPage />} />
         <Route path="/features/feedback" element={<FeatureFeedbackPage />} />
+
+        {/* Compiler-generated feature pages — one dynamic route covers every generated slug
+           (prompt-canvas, awa-chat, awa-video, brands, gallery, recipes, …). Static /features/*
+           routes above take precedence; GeneratedFeaturePage redirects unknown slugs to /features. */}
+        <Route path="/features/:slug" element={<GeneratedFeaturePage />} />
 
         {/* Programmatic SEO routes */}
         <Route path="/use-cases" element={<UseCaseIndexPage />} />
