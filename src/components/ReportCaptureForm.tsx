@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { track } from '../lib/growthAnalytics';
 
 const mono = "font-['IBM_Plex_Mono','SFMono-Regular',ui-monospace,monospace]";
 
@@ -45,6 +46,12 @@ const ReportCaptureForm = ({
         body: JSON.stringify({ name, email, lead_magnet: 'proof_before_pitch' }),
       });
       if (!response.ok) throw new Error('Request failed');
+      // Fire-and-forget analytics. Domain-only (no raw email/PII); track() is
+      // internally try/catch'd so a failure here can never break the form.
+      track('lead_magnet_submit', {
+        lead_magnet: 'proof_before_pitch',
+        email_domain: email.includes('@') ? email.split('@')[1].toLowerCase() : undefined,
+      });
       onSubmitted?.();
       navigate('/proof-before-pitch');
     } catch {
