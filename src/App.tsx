@@ -1,5 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { trackPageView } from './lib/growthAnalytics';
 import PricingPage from './pages/PricingPage';
 import PlaybookPage from './pages/PlaybookPage';
 import PrivacyPage from './pages/PrivacyPage';
@@ -50,10 +52,20 @@ import ResourceIndexPage from './pages/seo/ResourceIndexPage';
 import IndustryIndexPage from './pages/seo/IndustryIndexPage';
 import ApplyPage from './pages/ApplyPage';
 
+/** Fires a first-party page-view event on initial mount and on every route change. */
+function PageViewTracker() {
+  const location = useLocation();
+  useEffect(() => {
+    trackPageView();
+  }, [location.pathname]);
+  return null;
+}
+
 function App() {
   return (
     <HelmetProvider>
       <Router>
+      <PageViewTracker />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<LandingPageV4 />} />
